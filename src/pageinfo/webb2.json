@@ -1,0 +1,66 @@
+{
+  "pageName": "Webbutveckling 2",
+  "pageLink": "webb1",
+  "headings": [
+    {
+      "title": "Om kursen",
+      "subpages": [
+        {
+          "subPageName": "Veckoplanering",
+          "subPageLink": "planering"
+        },
+        {
+          "subPageName": "Betygskriterier",
+          "subPageLink": "betygskriterier"
+        }
+      ]
+    },
+    {
+      "title": "HTML/CSS",
+      "subpages": [
+        {
+          "subPageName": "Grunderna i HTML",
+          "subPageLink": "htmlgrunder"
+        }
+      ]
+    },
+    {
+      "title": "JavaScript/JQuery",
+      "subpages": [
+        {
+          "subPageName": "JavaScript",
+          "subPageLink": "javascript"
+        },
+        {
+          "subPageName": "jQuery",
+          "subPageLink": "jquery"
+        }
+      ]
+    },
+    {
+      "title": "Teori",
+      "subpages": [
+        {
+          "subPageName": "Historia",
+          "subPageLink": "historia"
+        },
+        {
+          "subPageName": "Hur internet fungerar",
+          "subPageLink": "internet"
+        },
+        {
+          "subPageName": "World Wide Web",
+          "subPageLink": "www"
+        },
+        {
+          "subPageName": "Lagar och regler",
+          "subPageLink": "lagaroregler"
+        },
+        {
+          "subPageName": "Begrepp",
+          "subPageLink": "begrepp"
+        }
+      ]
+    }
+  ]
+}
