@@ -1,0 +1,32 @@
+---
+title: "Övningar"
+date: "2017-08-10"
+---
+
+I samtliga övningar så använder ni Visual Studio Code. För övningarna innan DOM-manipulering använder ni dessutom tillägget Code Runner.
+
+##Övning 1: Hello World
+Det klassiska programmet som traditionellt alla programmerare börjar med på ett eller annat sätt; att skriva ett program/script som skriver ut _"Hello World"_.
+
+Övningen går alltså ut på att skriva ett script som skriver ut en mening (förlagsvis "Hello World") i konsollen genom att använda metoden Console.log().
+
+Klar med övningen? Testa att skapa en [variabel](www.resurs.se) och skriv ut dess innehåll i konsollen.
+
+###Lösning:
+
+```javascript
+Console.log("Hello World")
+
+// Med variabel:
+var output = "Hej hej!"
+Console.log(output)
+```
+
+##Övning 2: If programming == fun
+Dags för variabler och kontrollsatser.
+
+##Övning 3: Vem är vad?
+
+##Övning 4: Lagerlokane
+
+##Övning 5: Looping Around

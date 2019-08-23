@@ -1,0 +1,36 @@
+{
+  "pageName": "Programmering 1",
+  "pageLink": "prog1",
+  "headings": [
+    {
+      "title": "Om kursen",
+      "subpages": [
+        {
+          "subPageName": "Veckoplanering",
+          "subPageLink": "planering"
+        },
+        {
+          "subPageName": "Betygskriterier",
+          "subPageLink": "betygskriterier"
+        },
+        {
+          "subPageName": "Övningar",
+          "subPageLink": "ovningar"
+        }
+      ]
+    },
+    {
+      "title": "Uppgifter",
+      "subpages": [
+        {
+          "subPageName": "Uppgift1",
+          "subPageLink": "uppgift1"
+        },
+        {
+          "subPageName": "Uppgift2",
+          "subPageLink": "uppgift2"
+        }
+      ]
+    }
+  ]
+}
