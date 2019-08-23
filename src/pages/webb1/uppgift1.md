@@ -10,7 +10,9 @@ Första uppgiften går ut på att bekanta dig med HTML och internets historia.
 - [Wikipediasidan om Internets historia](https://sv.wikipedia.org/wiki/Internets_historia)
 
 ###Inlämning
-Skapa en hemsida som förklarar en viktig del av internets historia. Innehållet ska vara strukturerat med minst en h1-tagg, och paragraf-taggar. till exempel så här:
+Skapa en hemsida som förklarar en viktig del av internets historia.
+
+Innehållet ska vara strukturerat med minst en h1-tagg, och paragraf-taggar. till exempel så här:
 
 ```html{numberLines: true}
 <!DOCTYPE html>

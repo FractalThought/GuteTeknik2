@@ -5,6 +5,12 @@ date: "2017-08-10"
 
 Här följer veckoplaneringen för kursen. **Uppgiften ska vara klar till nästa lektionspass om inget annat anges.**
 
+##Kursöversikt Webb1
+
+- **v34-38:** Grunderna i HTML och CSS
+- **39-43:** Layout och Design
+- **v45-51:** Publicering
+
 | Vecka | Moment                                                                                                 | Uppgift                                |
 | ----- | ------------------------------------------------------------------------------------------------------ | -------------------------------------- |
 | 1     | Introduktion och innehåll. Vi går igenom grunderna i hur webben fungerar, och första uppgiften ges ut. | [Uppgift 1](/webbutveckling1/uppgift1) |
