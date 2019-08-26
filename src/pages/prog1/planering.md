@@ -28,6 +28,57 @@ v35-43 och v45-51
 
 #Uppgifter
 
-##Uppgift 1
+##Lektion 2
 
-##Uppgift 2
+###IfElseIf
+Flera ifsatser ihop.
+Flera åldrar:
+
+- Körkort
+- Pensionsålder
+- Skola
+
+Du ska registrera ålder vid en mässa. Beroende på ålder så ska besökarna få olika färger på sin bricka. Skriv ett program som svarar med rätt färg enligt tabellen:
+-0-12, vit
+-13-18, grön
+-19-25, röd
+-26-99, blå
+Övrig ålder, skriv ut "Ogiltig ålder"
+
+###Enhance
+Förbättra genom att istället för flera ifsatser, använd && och ||.
+
+###WhileIWait och ForTheGreaterLoop
+Loopa igenom en counter
+Om svaret är JA så ska du använda en for-sats.
+
+Om svaret är NEJ så ska du använda en while-sats.
+
+```javascript
+//Typisk for-sats
+for(int i=0; i < 10; i++)
+{
+}
+
+//Går att skriva som en while sats
+int i=0;
+while(i < 10)
+{
+    //sist i loop'en:
+    i++;
+}
+
+//Typisk while-sats
+while(i != 0)
+{
+}
+
+//Går att skriva som en for-sats
+for( ; i != 0; )
+{
+}
+```
+
+Skriv ett program som skriver ut talen 1 till 100 på skärmen. Använd en while-loop.
+
+Skapa ett program som ber dig skriva in ett lösenord. Om du matar in fel så ska det meddelas och man får försöka på nytt. Programmet avslutas först då rätt lösenord matats in. Du kan sen utöka programmet med att tala om hur många gånger du har försökt att logga in.
