@@ -80,5 +80,3 @@ for( ; i != 0; )
 ```
 
 Skriv ett program som skriver ut talen 1 till 100 på skärmen. Använd en while-loop.
-
-Skapa ett program som ber dig skriva in ett lösenord. Om du matar in fel så ska det meddelas och man får försöka på nytt. Programmet avslutas först då rätt lösenord matats in. Du kan sen utöka programmet med att tala om hur många gånger du har försökt att logga in.

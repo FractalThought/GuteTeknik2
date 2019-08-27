@@ -1,20 +1,22 @@
----
-title: "Uppgift 1"
-date: "2017-08-10"
----
+# Uppgift 1
 
 Första uppgiften går ut på att bekanta dig med HTML och internets historia.
-###Läs först:
+
+### Läs först:
 
 - [MDN Web Docs introduktionssida för HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
 - [Wikipediasidan om Internets historia](https://sv.wikipedia.org/wiki/Internets_historia)
+- [Internetmuseum om internets historia](https://www.internetmuseum.se/berattelsen-om-internets-historia/)
 
-###Inlämning
+### Inlämning
+
 Skapa en hemsida som förklarar en viktig del av internets historia.
 
-Innehållet ska vara strukturerat med minst en h1-tagg, och paragraf-taggar. till exempel så här:
+Innehållet ska vara strukturerat med minst en h1-tagg, och paragraf-taggar. Du ska också ha med en länk och en strong-tagg.
 
-```html{numberLines: true}
+till exempel så här:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,9 +27,13 @@ Innehållet ska vara strukturerat med minst en h1-tagg, och paragraf-taggar. til
   </head>
   <body>
     <h1>Detta är en rubrik</h1>
-    <p>Detta är en paragraf.</p>
+    <p>Detta är en <strong>paragraf.</strong></p>
+    <p>
+      Internets historia hittar du på
+      </a href="https://www.ne.se/uppslagsverk/encyklopedi/l%C3%A5ng/internet">NEs hemsida</a>
+    </p>
   </body>
 </html>
 ```
 
-Ladda upp html-filen till SchoolSoft på din portfolio för kursen. Markera uppladdningen som _Webb1 Uppgift1_.
+Ladda upp html-filen till SchoolSoft på din portfolio för kursen. Markera uppladdningen som **Förnamn Webb1 Uppgift1**.
