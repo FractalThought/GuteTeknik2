@@ -1,8 +1,3 @@
----
-title: "Uppgift 2"
-date: "2017-08-10"
----
-
 # Uppgift 2
 
 I den här uppgiften ska du använda länkar till andra sidor och lägger in bilder.
@@ -27,4 +22,4 @@ Innehållet i hemsidan ska vara att skriva om vad vi använder webben till.
 - Hur fungerar en Toppdomän?
 - Historien om den första datasändningen
 
-Ladda upp zip-filen till SchoolSoft på din portfolio för kursen. Markera uppladdningen som _Webb1 Uppgift3_. Zip-filen ska alltså innehålla html-filerna för första och andra uppgiften, samt bilden du använde.
+Ladda upp zip-filen till SchoolSoft på din portfolio för kursen. Markera uppladdningen som _Webb1 Uppgift2_. Zip-filen ska alltså innehålla html-filerna för första och andra uppgiften, samt bilden du använde.
