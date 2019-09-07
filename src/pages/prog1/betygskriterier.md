@@ -1,28 +1,33 @@
-#Bedömningspunkter
+---
+title: "Betygskriterier"
+date: "2017-08-10"
+---
 
-###Planering:
+# Bedömningspunkter
+
+### Planering:
 
 - Psuedokod och diagramteknik
 - Val av kontrollstruktur, variabler, datastruktur, algoritmer, metoder.
 
-###Kodstil
+### Kodstil
 
 - Konsekvent
 - Tydlig namngivning
 - Strukturerad och kommenterad kod
 - Performant
 
-###Felsökning
+### Felsökning
 
 - Anpassar planeringen utifrån förändringar
 - Felsöker syntaxfel
 
-###Färdigt program
+### Färdigt program
 
 - Bra interaktion med användaren.
 - Färdigt program gör det den ska.
 
-###Övrigt
+### Övrigt
 
 - Kommunicerar uppgiften och utvärderingen av resultatet
 - Använder datavetenskapliga begrepp
