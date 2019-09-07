@@ -30,7 +30,9 @@ till exempel så här:
     <p>Detta är en <strong>paragraf.</strong></p>
     <p>
       Internets historia hittar du på
-      </a href="https://www.ne.se/uppslagsverk/encyklopedi/l%C3%A5ng/internet">NEs hemsida</a>
+      <a href="https://www.ne.se/uppslagsverk/encyklopedi/l%C3%A5ng/internet"
+        >NEs hemsida</a
+      >
     </p>
   </body>
 </html>
