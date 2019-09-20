@@ -3,7 +3,7 @@ title: "Kodstandard"
 date: "2019-09-20"
 ---
 
-#### Variabler
+# Variabler
 
 - Alla variabler ni skapar ska vara **let**-variabler, inte var.
 - Namn på variabler och funktioner ska vara beskrivande för vad de gör.
@@ -27,7 +27,7 @@ function GETLASTNAME(y) {
 }
 ```
 
-#### Block och brackets
+# Block och brackets
 
 Block ska vara indenterade korrekt, och blockens öppningsbracket ska vara på samma rad som blockets deklaration.
 
@@ -46,7 +46,7 @@ while (true)
 }
 ```
 
-#### Kommentering
+# Kommentering
 Koden ska kommenteras enligt följande standard:
 - Single-line comment (//) används i ställen där det räcker med en rad för att kommentera, annars ska multi-line comment (/**/) användas.
 - Det ska finnas ett mellanslag mellan kommenteringstecknena (// och /**/).
