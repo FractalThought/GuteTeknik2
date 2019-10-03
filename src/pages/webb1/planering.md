@@ -12,23 +12,22 @@ date: "2017-08-10"
 
 ## Per vecka
 
-| Vecka | Förmiddagslektionen               | Eftermiddagslektionen      |
-| ----- | --------------------------------- | -------------------------- |
-| 34    | Kursintro och verktygsorientering | Grunderna i HTML           |
-| 35    | HTML fortsättning                 | Grunderna i CSS            |
-| 36    | CSS Class och ID selectors        | Listor och CSS inheritance |
-| 37    | CSS Flexbox                       | Tabeller och Designmönster |
-| 38    | HTML Forms och Input              | CSS Grid                   |
-| 39    | Layout                            | Design                     |
-| 40    | Planering                         | Dokumentation              |
-| 41    | DOM-modellen                      | javaScript på webben       |
-| 42    | Standard och praxis               | Tillgänglighet             |
-| 43    | Tester och validering             | Säkerhet                   |
-| 44    | **_LOV_**                         | **_LOV_**                  |
-| 45-48 | React                             | React                      |
-| 49    | Bilder                            | Lagar och etik             |
-| 50    | Publicering                       | Publicering                |
-| 51    | Publicering                       | Publicering                |
+| Vecka | Förmiddagslektionen                         | Eftermiddagslektionen              |
+| ----- | ------------------------------------------- | ---------------------------------- |
+| 34    | Kursintro och verktygsorientering           | Grunderna i HTML                   |
+| 35    | HTML fortsättning                           | Grunderna i CSS                    |
+| 36    | CSS Class och ID selectors                  | Listor och CSS inheritance         |
+| 37    | CSS Flexbox                                 | Tabeller och Designmönster         |
+| 38    | HTML Forms och Input                        | Flexbox                            |
+| 39    | Repetitionsuppgift                          | Repetitionsuppgift                 |
+| 40    | Introduktion Figma                          | Figma                              |
+| 41    | Design och layout, värderingar i webbdesign | Planerad HTML och CSS              |
+| 42    | Arbeta med bilder i Figma                   | Arbeta med texter (och webbfonter) |
+| 43    | CSS Grid                                    | Validering                         |
+| 44    | **_LOV_**                                   | **_LOV_**                          |
+| 45-49 | React                                       | React                              |
+| 50    | Publiceringsverktyg                         | Lagar och etik                     |
+| 51    | Publicering                                 | Publicering                        |
 
 ## Koncept att gå igenom
 
