@@ -3,7 +3,30 @@ import { graphql } from "gatsby"
 import Container from "../components/Container"
 
 export default ({ data }) => {
-  const page = data.markdownRemark;
+  const page = data.markdownRemark
+
+  const allInfo = data.allMarkdownRemark
+
+  /*
+  
+  TODO:
+  Filter all pages on
+  slugs where first part of current slug = first part of that slug
+  This retrieves everything inside 
+
+  Will need to add more fields and then filter it even more to divide it up into
+  headers. If no header: unlisted page
+
+  This does make it more dynamic, no need to use or update the json-files.
+
+  */
+
+  // allInfo.edges.map(({ node }) => (
+  // node.id
+  // node.excerpt
+  // node.fields.slug
+  // node.frontmatter.title
+  // ));
 
   return (
     <Container url={page.fields.slug}>
@@ -24,6 +47,20 @@ export const query = graphql`
       }
       fields {
         slug
+      }
+    }
+    allMarkdownRemark {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+          }
+          excerpt
+          fields {
+            slug
+          }
+        }
       }
     }
   }
