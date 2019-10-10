@@ -1,8 +1,18 @@
 import React, { useEffect } from "react"
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 import SidebarHeading from "./SidebarHeading"
 
 function Sidebar({ urlData }) {
+  const data = useStaticQuery(graphql`
+    query HeaderQuery {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+
   let topPage = "index"
   let currentPage = topPage
 

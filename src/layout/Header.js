@@ -1,9 +1,9 @@
-import React from "react";
-import { Link } from "gatsby";
+import React from "react"
+import { Link } from "gatsby"
 
 function Header() {
   return (
-    <React.Fragment>
+    <header>
       <nav className="navbar bg-dark">
         <h1>
           <Link to="/">
@@ -25,8 +25,8 @@ function Header() {
           </li>
         </ul>
       </nav>
-    </React.Fragment>
-  );
+    </header>
+  )
 }
 
-export default Header;
+export default Header
