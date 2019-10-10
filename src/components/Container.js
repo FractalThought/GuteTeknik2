@@ -2,7 +2,7 @@ import React from "react"
 import Header from "../layout/Header"
 import Sidebar from "../layout/Sidebar"
 
-function Container({ url, children }) {
+function Container({ url, pages, children }) {
   // Use string split for url
 
   let urlData = null
@@ -19,7 +19,7 @@ function Container({ url, children }) {
       <Header />
       <div id="main-wrapper">
         <aside>
-          <Sidebar urlData={urlData} />
+          <Sidebar urlData={urlData} pages={pages} />
         </aside>
         <main>
           {children}

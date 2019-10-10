@@ -2,31 +2,48 @@ import React, { useEffect } from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import SidebarHeading from "./SidebarHeading"
 
-function Sidebar({ urlData }) {
-  const data = useStaticQuery(graphql`
-    query HeaderQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+function extractTopPage(url) {
+  let topPage,
+    currentPage = "index"
 
-  let topPage = "index"
-  let currentPage = topPage
-
-  if (typeof urlData !== "undefined" && urlData != null) {
+  if (typeof url !== "undefined" && url != null) {
     if (urlData.length >= 1) {
-      topPage = urlData[0]
+      topPage = url[0]
 
-      if (urlData.length > 1) {
-        currentPage = urlData[1]
+      if (url.length > 1) {
+        currentPage = url[1]
       } else {
         currentPage = topPage
       }
     }
   }
+
+  return [topPage, currentPage]
+}
+
+function Sidebar({ urlData, pages }) {
+  let [topPage, currentPage] = extractPages(urlData)
+
+  let printPages = pages
+    .filter(page => {
+      // page.id
+      // page.excerpt
+      // page.fields.slug
+
+      let [currentTopPage, actualPage] = extractPages(page.fields.slug)
+      page.topPage = currentTopPage
+      page.actualPage = actualPage
+
+      // page.frontmatter.title
+      // page.frontmatter.heading
+
+      /*
+    
+    Filter out only the pages needed and with it, sort them into headings
+    
+    */
+    })
+    .map(page => {})
 
   let pageData = require("../pageinfo/" + topPage + ".json")
 
