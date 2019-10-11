@@ -1,6 +1,7 @@
 ---
 title: "Betygskriterier"
 date: "2017-08-10"
+heading: "Om kursen"
 ---
 
 # Bedömningspunkter

@@ -29,7 +29,7 @@ export default ({ data }) => {
   // ));
 
   return (
-    <Container url={page.fields.slug} pages={allInfo.edges.map}>
+    <Container url={page.fields.slug} pages={allInfo.edges}>
       <div>
         <h1>{page.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: page.html }} />
@@ -55,6 +55,7 @@ export const query = graphql`
           id
           frontmatter {
             title
+            heading
           }
           excerpt
           fields {
