@@ -1,23 +1,21 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import Container from "../components/Container";
+import Container from "../components/Container"
 
 export default ({ data }) => {
   console.log(data)
   return (
-    <Container>
-      <div>
-        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-            <h3>
-              <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
-            </h3>
-            <p>{node.excerpt}</p>
-          </div>
-        ))}
-      </div>
-    </Container>
+    <div>
+      <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+      {data.allMarkdownRemark.edges.map(({ node }) => (
+        <div key={node.id}>
+          <h3>
+            <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+          </h3>
+          <p>{node.excerpt}</p>
+        </div>
+      ))}
+    </div>
   )
 }
 

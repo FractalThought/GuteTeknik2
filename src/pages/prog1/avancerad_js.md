@@ -1,3 +1,9 @@
+---
+title: "Avancerad javaScript"
+date: "2017-08-10"
+heading: "Koncept i javaScript"
+---
+
 # Djupdykning i javaScript
 
 ## Ternary (Conditional Operator)
@@ -9,14 +15,14 @@ En så kallad ternary är ett snabbt sätt att skapa en enkel kontrollsats, ist�
 För att skapa en sådan så använder vi följande syntax:
 
 ```js
-condition ? doIfTrue : doIfNotTrue;
+condition ? doIfTrue : doIfNotTrue
 ```
 
 Exempel:
 
 ```js
-let age = 19;
-let myndig = age >= 18 ? "Ja" : "Nej";
+let age = 19
+let myndig = age >= 18 ? "Ja" : "Nej"
 ```
 
 Jämförelse med if-else:
@@ -37,13 +43,13 @@ Ternary använder vi framförallt när vi behöver göra små if-else-satser, of
 En ternary fungerar på samma sätt som den här funktionen:
 
 ```js
-ternaryFunction(age >= 18, "Ja", "Nej");
+ternaryFunction(age >= 18, "Ja", "Nej")
 
 function ternaryFunction(condition, isTrue, isFalse) {
   if (condition) {
-    return isTrue;
+    return isTrue
   } else {
-    return isFalse;
+    return isFalse
   }
 }
 ```

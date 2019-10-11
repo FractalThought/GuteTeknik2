@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import { Link } from "gatsby"
 import SidebarHeading from "./SidebarHeading"
 
-function extractPages(url) {
+function extractUrlData(url) {
   let topPage,
     currentPage = "index"
 
@@ -11,7 +11,7 @@ function extractPages(url) {
       topPage = url[0]
 
       if (url.length > 1) {
-        currentPage = url[1]
+        currentPage = url[url.length - 1]
       } else {
         currentPage = topPage
       }
@@ -21,22 +21,27 @@ function extractPages(url) {
   return [topPage, currentPage]
 }
 
+function extractPageSlug(slug) {
+  let urlData = slug.split("/")
+  urlData = urlData.filter(part => part !== "")
+  return extractUrlData(urlData)
+  // Split /webb1/htmlgrunder/
+  // And get first and last
+}
+
 function Sidebar({ urlData, pages }) {
-  let [topPage, currentPage] = extractPages(urlData)
+  let [topPage, currentPage] = extractUrlData(urlData)
   let headingData = {}
 
   pages.map(page => {
-    // page.id
-    // page.excerpt
-    // page.fields.slug
     let node = page.node
+    let [topPageOfSubpage, actualPage] = extractPageSlug(node.fields.slug)
 
-    let [topPageOfSubpage, actualPage] = extractPages(node.fields.slug)
-    if (topPageOfSubpage) {
+    if (topPageOfSubpage === topPage) {
       // The subpages' top page is the same as the current pages top page.
       node.topPage = topPageOfSubpage
       node.actualPage = actualPage
-      node.isActive = actualPage === currentPage
+      node.isActive = actualPage === currentPage ? true : false
       if (
         node.frontmatter.heading !== "" &&
         typeof node.frontmatter.heading !== "undefined" &&
