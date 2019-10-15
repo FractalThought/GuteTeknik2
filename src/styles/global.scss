@@ -43,8 +43,7 @@ p {
 }
 
 // Navbar
-
-nav {
+header nav {
   display: flex;
   align-items: center;
   padding: 0.5rem;
@@ -77,24 +76,27 @@ nav {
   background-color: $gray-color;
 
   aside {
+    // Add mixins for placing this in display:none on small screen
+
     padding: 1rem;
     min-width: 15%;
+    nav {
+      a {
+        color: $primary-color;
+      }
 
-    a {
-      color: $primary-color;
-    }
+      a.active {
+        color: #333;
+        font-weight: bold;
+      }
 
-    a.active {
-      color: #333;
-      font-weight: bold;
-    }
-
-    h1 {
-      font-size: 1.2rem;
-    }
-    ul {
-      margin-left: 0.5rem;
-      list-style-type: none;
+      h1 {
+        font-size: 1.2rem;
+      }
+      ul {
+        margin-left: 0.5rem;
+        list-style-type: none;
+      }
     }
   }
   main {

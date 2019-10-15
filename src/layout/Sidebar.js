@@ -82,7 +82,7 @@ function Sidebar({ urlData, pages }) {
   let headings = Object.values(headingData) // gets the array of headings only
 
   return (
-    <React.Fragment>
+    <nav>
       <section>
         <h1>{pageData.pageName}</h1>
         <Link to={"/" + pageData.pageLink}>{pageData.pageName}</Link>
@@ -90,7 +90,7 @@ function Sidebar({ urlData, pages }) {
       {headings.map((heading, index) => (
         <SidebarHeading key={index} heading={heading} />
       ))}
-    </React.Fragment>
+    </nav>
   )
 
   // return (
