@@ -1,4 +1,4 @@
-# Dynamiskt innehåll med JS
+# Levande sida med JS
 
 Du ska skapa en webbsida som demonstrerar olika tekniker i JavaScript som gör sidan interaktiv, dynamisk, och "levande".
 
@@ -8,7 +8,26 @@ Under processen övar du på att lösa fel som uppstår och har möjlighet att k
 
 I slutet av uppgiften ska du kunna förklara vad din kod gör och hur den fungerar.
 
-## Bedömning
+## Utförande
+
+Efter genomgången arbetar du med projektet. Du får ta hjälp av andra, men inlämningen är individuell och du behöver kunna förklara vad koden gör.
+
+**Rättning sker torsdag eftermiddag v47 (21/11)**. Lämna in hela projektet i en zip-fil på SchoolSoft, eller skicka på Discord.
+
+Observera dock att du kommer få ett projekt till under vecka 47.
+
+## Hjälpsamma länkar:
+
+- [Event-binding](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+- [Event reference (alla events\)](https://developer.mozilla.org/en-US/docs/Web/Events)
+- [ClassList referens (hur du lägger till och tar bort klasser\)](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
+- [Exempel på ClassList-användning](https://alligator.io/js/classlist/)
+- [Back to basics: CSS transitions](https://alligator.io/css/back-to-basics-css-transitions/)
+- [setTimeOut and setInterval](https://javascript.info/settimeout-setinterval)
+- [Using the Intersection Observer API to Trigger Animations and Transitions](https://alligator.io/js/intersection-observer/)
+- [MDN: IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
+
+<h2 style="page-break-before: always;">Bedömning</h2>
 
 **I den här uppgiften ingår nästan alla kunskapskrav för kursen;**
 
@@ -32,15 +51,7 @@ I slutet av uppgiften ska du kunna förklara vad din kod gör och hur den funger
 
 > Eleven kommunicerar om programmeringsuppgiften och dess utvärdering och använder då med viss säkerhet **datavetenskapliga begrepp**.
 
-## Utförande
-
-Efter genomgången arbetar du med projektet. Du får ta hjälp av andra, men inlämningen är individuell och du behöver kunna förklara vad koden gör.
-
-**Rättning sker torsdag eftermiddag v47 (21/11)**. Lämna in hela projektet i en zip-fil på SchoolSoft, eller skicka på Discord.
-
-Observera dock att du kommer få ett projekt till under vecka 47).
-
-## Uppgiften
+<h2 style="page-break-before: always;">Uppgiften</h2>
 
 Du ska göra en webbsida som demonstrerar följande tekniker:
 
@@ -79,14 +90,3 @@ Dessutom ska du använda följande:
 - Skriv ner eventuella källor i kommentarer där du använder dem.
 - Ge exempel på användningsområden för de olika funktionerna i kommentarer.
 - Förbättra din kod, och skriv i kommentarer var du förbättrat.
-
-## Hjälpsamma länkar:
-
-- [Event-binding](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
-- [Event reference (alla events\)](https://developer.mozilla.org/en-US/docs/Web/Events)
-- [ClassList referens (hur du lägger till och tar bort klasser\)](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
-- [Exempel på ClassList-användning](https://alligator.io/js/classlist/)
-- [Back to basics: CSS transitions](https://alligator.io/css/back-to-basics-css-transitions/)
-- [setTimeOut and setInterval](https://javascript.info/settimeout-setinterval)
-- [Using the Intersection Observer API to Trigger Animations and Transitions](https://alligator.io/js/intersection-observer/)
-- [MDN: IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
