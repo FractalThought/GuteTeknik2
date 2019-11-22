@@ -84,7 +84,7 @@ function Sidebar({ urlData, pages }) {
   return (
     <nav>
       <section>
-        <h1>{pageData.pageName}</h1>
+        <h1>Navigering</h1>
         <Link to={"/" + pageData.pageLink}>{pageData.pageName}</Link>
       </section>
       {headings.map((heading, index) => (

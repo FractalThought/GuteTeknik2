@@ -10,6 +10,8 @@ https://www.gatsbyjs.org/docs/centralizing-your-sites-navigation/
 
 */
 
+var path = require("path")
+
 module.exports = {
   siteMetadata: {
     title: `Title from siteMetadata`,
@@ -31,6 +33,13 @@ module.exports = {
       options: {
         name: `src`,
         path: `${__dirname}/src/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
       },
     },
     {
@@ -78,9 +87,20 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-sass`,
+      options: {
+        useResolveUrlLoader: true,
+      },
     },
     {
       resolve: `gatsby-plugin-sitemap`,
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // Add any options here
+      },
     },
   ],
 }

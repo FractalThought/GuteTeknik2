@@ -4,7 +4,7 @@ date: "2017-08-10"
 heading: "Om kursen"
 ---
 
-# Bedömningspunkter
+Jag kommer bedömma utifrån följande punkter:
 
 ### Planering:
 

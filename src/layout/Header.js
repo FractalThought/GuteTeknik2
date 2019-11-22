@@ -4,11 +4,9 @@ import { Link } from "gatsby"
 function Header() {
   return (
     <header>
-      <nav className="navbar bg-dark">
+      <nav>
         <h1>
-          <Link to="/">
-            <i className="fas fa-code"> GuteTeknik</i>
-          </Link>
+          <Link to="/">GuteTeknik</Link>
         </h1>
         <ul>
           <li>

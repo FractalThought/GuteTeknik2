@@ -18,13 +18,14 @@ function Container({ url, pages, children }) {
     <React.Fragment>
       <Header />
       <div id="main-wrapper">
-        <aside>
+        <aside className="left">
           <Sidebar urlData={urlData} pages={pages} />
         </aside>
         <main>
           {children}
           <script async src="https://static.codepen.io/assets/embed/ei.js" />
         </main>
+        <aside className="right">Information</aside>
       </div>
     </React.Fragment>
   )
