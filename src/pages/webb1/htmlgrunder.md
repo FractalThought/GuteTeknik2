@@ -1,6 +1,7 @@
 ---
 title: "Grunderna i HTML"
 date: "2017-08-10"
+heading: "HTML"
 ---
 
 HTML står för HyperText Markup Language och är ett språk för att skriva instruktioner för hur en hemsida och dess innehåll ska visas. Det innehåller egentligen ingen . Mer om HTML hittar ni på [Mozilla Developer Network (MDN)](https://developer.mozilla.org/sv-SE/docs/Web/HTML).
