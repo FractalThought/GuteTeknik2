@@ -100,21 +100,42 @@ När arbetet är utfört gör eleven en enkel dokumentation av de moment som har
 
 ## v2 - v8
 
-### v2:
+### v2, Lektion 1:
 
 - Kursintroduktion och installation
+- Genomgång webbens tidiga historia
 - Introduktion till HTML
+  - p,
 
-### v3:
+### v2, Lektion 2:
 
-- Introduktion till CSS
-- Uppgift: Återskapa hemsida utifrån utseende
+- Genomgång webbens sena historia
+- Validering
+- Listor
+
+### v3, lektion 3:
 
 ### v4:
 
+- Genomgång webbtekniker (länkar)
+- Introduktion till CSS
+
+### v5:
+
+- CSS Boxmodellen
+  - Margin, padding, border
+
+### v6:
+
 Tabeller
+Övning: Presentera data (behöver data)
+
 Layout med Flexbox
+Övning: Skapa en testsida som visar några saker man kan skapa med flexbox
+
 Figma
+
+Uppgift: Återskapa hemsida utifrån utseende
 
 Receptsida
 Introduktion till HTML och CSS
