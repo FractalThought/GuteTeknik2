@@ -100,30 +100,55 @@ När arbetet är utfört gör eleven en enkel dokumentation av de moment som har
 
 ## v2 - v8
 
-### v2, Lektion 1:
+### Lektion 1:
 
-- Kursintroduktion och installation
+- Kursintroduktion och installation av Visual Studio Code
+- Extension: Live Server
 - Genomgång webbens tidiga historia
 - Introduktion till HTML
-  - p,
+  - h1, p
 
-### v2, Lektion 2:
+### Lektion 2:
 
 - Genomgång webbens sena historia
+- Extension: Prettier, format on save
 - Validering
 - Listor
 
-### v3, lektion 3:
+Övningar:
 
-### v4:
+- ul-lista
+- ol-lista
+
+### Lektion 3:
+
+### Lektion 4:
 
 - Genomgång webbtekniker (länkar)
 - Introduktion till CSS
 
-### v5:
+### Lektion 5:
+
+Strukturella HTML-element (div, span)
 
 - CSS Boxmodellen
   - Margin, padding, border
+
+Övningar: Hantera margin, padding, border
+
+### Lektion 6
+
+Hur man hittar information
+Utvecklingsmetodik
+CSS-metodik class, id
+
+### Lektion 7
+
+Hur man felsöker HTML och CSS
+
+- Prettier
+- Specificitet
+- ?
 
 ### v6:
 
