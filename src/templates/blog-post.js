@@ -31,7 +31,7 @@ export default ({ data }) => {
   return (
     <Container url={page.fields.slug} pages={allInfo.edges}>
       <div>
-        <h1>{page.frontmatter.title}</h1>
+        <h1 className="page-heading">{page.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: page.html }} />
       </div>
     </Container>
