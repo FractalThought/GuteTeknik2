@@ -102,5 +102,6 @@ module.exports = {
         // Add any options here
       },
     },
+    `gatsby-plugin-breadcrumb`,
   ],
 }

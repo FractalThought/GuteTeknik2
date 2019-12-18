@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Container from "../components/Container"
+import { Breadcrumb } from "gatsby-plugin-breadcrumb"
 
 export default ({ data }) => {
   const page = data.markdownRemark
@@ -30,10 +31,8 @@ export default ({ data }) => {
 
   return (
     <Container url={page.fields.slug} pages={allInfo.edges}>
-      <div>
-        <h1 className="page-heading">{page.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: page.html }} />
-      </div>
+      <h1 className="page-heading">{page.frontmatter.title}</h1>
+      <div dangerouslySetInnerHTML={{ __html: page.html }} />
     </Container>
   )
 }
