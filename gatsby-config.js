@@ -14,18 +14,8 @@ var path = require("path")
 
 module.exports = {
   siteMetadata: {
-    title: `Title from siteMetadata`,
+    title: `GuteTeknik`,
     siteUrl: `https://guteteknik.netlify.com`,
-    menuLinks: [
-      {
-        name: "home",
-        link: "/",
-      },
-      {
-        name: "page2",
-        link: "/page-2",
-      },
-    ],
   },
   plugins: [
     {

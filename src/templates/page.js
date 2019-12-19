@@ -3,10 +3,10 @@ import { graphql } from "gatsby"
 import Container from "../components/Container"
 import { Breadcrumb } from "gatsby-plugin-breadcrumb"
 
-export default ({ data, location }) => {
+export default ({ pageContext, data, location }) => {
   const {
     breadcrumb: { crumbs },
-  } = data
+  } = pageContext
 
   const page = data.markdownRemark
 
