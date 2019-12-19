@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.6",
-    "gatsby": "^2.18.14",
     "gatsby-background-image": "^0.8.18",
     "gatsby-image": "^2.2.32",
     "gatsby-plugin-breadcrumb": "^6.2.3",
@@ -28,8 +27,6 @@
     "gatsby-transformer-sharp": "^2.3.4",
     "node-sass": "^4.12.0",
     "prismjs": "^1.16.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
     "styled-components": "^4.4.1"
   },
   "devDependencies": {
