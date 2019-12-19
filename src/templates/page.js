@@ -39,8 +39,8 @@ export default ({ pageContext, data, location }) => {
     <Container url={page.fields.slug} pages={allInfo.edges}>
       <Breadcrumb
         crumbs={crumbs}
-        crumbSeparator=" - "
-        crumbLabel={customCrumbLabel}
+        crumbSeparator=" > "
+        crumbLabel={page.frontmatter.title}
       />
       <h1 className="page-heading">{page.frontmatter.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: page.html }} />
