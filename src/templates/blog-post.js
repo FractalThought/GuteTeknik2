@@ -3,7 +3,11 @@ import { graphql } from "gatsby"
 import Container from "../components/Container"
 import { Breadcrumb } from "gatsby-plugin-breadcrumb"
 
-export default ({ data }) => {
+export default ({ data, location }) => {
+  const {
+    breadcrumb: { crumbs },
+  } = data
+
   const page = data.markdownRemark
 
   const allInfo = data.allMarkdownRemark
@@ -29,8 +33,15 @@ export default ({ data }) => {
   // node.frontmatter.title
   // ));
 
+  const customCrumbLabel = location.pathname.toLowerCase().replace("-", " ")
+
   return (
     <Container url={page.fields.slug} pages={allInfo.edges}>
+      <Breadcrumb
+        crumbs={crumbs}
+        crumbSeparator=" - "
+        crumbLabel={customCrumbLabel}
+      />
       <h1 className="page-heading">{page.frontmatter.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: page.html }} />
     </Container>

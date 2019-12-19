@@ -102,6 +102,24 @@ module.exports = {
         // Add any options here
       },
     },
-    `gatsby-plugin-breadcrumb`,
+    {
+      resolve: `gatsby-plugin-breadcrumb`,
+      options: {
+        // useAutoGen: required 'true' to use autogen
+        useAutoGen: true,
+        // autoGenHomeLabel: optional 'Home' is default
+        autoGenHomeLabel: `Start`,
+        // exlude: optional, include to overwrite these default excluded pages
+        exclude: [
+          `/dev-404-page`,
+          `/404`,
+          `/404.html`,
+          `/offline-plugin-app-shell-fallback`,
+        ],
+        // optional: switch to className styling
+        // see `useClassNames example with `AutoGen` below
+        useClassNames: true,
+      },
+    },
   ],
 }
