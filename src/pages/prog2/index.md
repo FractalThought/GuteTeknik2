@@ -5,7 +5,16 @@ date: "2017-08-10"
 
 Den här kursen ingår i ämnet Programmering och är en del av inriktningen Information- och Medieteknik i Teknikprogrammet. I kursen går vi igenom grunderna i programmering med språket JavaScript, tittar på arbetsmetodiker och värderingar inom programmering, och skapar program som är användarvänliga och funktionella.
 
-# OBS! Sidan är under uppbyggnad och innehållet är inte aktuellt.
+# OBS! Sidan är under uppbyggnad och allt innehåll är inte aktuellt.
+
+## Kunskapskrav (Betyg C)
+Eleven formulerar och planerar efter samråd med handledare programmeringsuppgifter och väljer med viss säkerhet lämpliga programspråk.
+
+Eleven analyserar och modellerar uppgifter efter samråd med handledare. Eleven designar med viss säkerhet utifrån den analyserade uppgiften en lösning och dokumenterar denna med ett klassdiagram. Eleven väljer med viss säkerhet ett uttryckssätt och ett gränssnitt som är anpassat för att på ett tillfredsställande sätt interagera med den avsedda användaren. Eleven skapar någon lösning där programmet kommunicerar över internet.
+
+Eleven skapar med viss säkerhet enklare program med klasser där arv används. I sin programmering skriver eleven med konsekvent kodningsstil och tydlig namngivning en korrekt, strukturerad och noggrant kommenterad källkod med tillfredsställande resultat. Eleven använder med viss säkerhet några generiska klasser. Produkten är av tillfredsställande kvalitet i ett eller flera programspråk och innehåller objektorienterad programmering som är stabil och robust.
+
+Eleven anpassar med viss säkerhet sin planering av programutvecklingsprocessen och utför på ett systematiskt sätt felsökning av syntaxfel, körtidsfel och programmeringslogiska fel. Innan programutvecklingen avslutas utvärderar eleven med nyanserade omdömen programmets prestanda och ändamålsenlighet i några situationer och sammanhang. Eleven kommunicerar om programutvecklingen och dess utvärdering och använder då med viss säkerhet datavetenskapliga begrepp.
 
 ## Centralt innehåll
 
