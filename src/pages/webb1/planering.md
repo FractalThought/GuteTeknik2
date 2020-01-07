@@ -4,6 +4,8 @@ date: "2017-08-10"
 heading: "Om kursen"
 ---
 
+## OBS! EJ AKTUELL
+
 ## Kursöversikt
 
 - **v34-38:** Grunderna i HTML och CSS
