@@ -81,35 +81,35 @@ function Sidebar({ urlData, pages }) {
 
   let headings = Object.values(headingData) // gets the array of headings only
 
+  // return (
+  //   <nav>
+  //     <section>
+  //       <h1>Navigering</h1>
+  //       <Link to={"/" + pageData.pageLink}>{pageData.pageName}</Link>
+  //     </section>
+  //     {headings.map((heading, index) => (
+  //       <SidebarHeading key={index} heading={heading} />
+  //     ))}
+  //   </nav>
+  // )
+
   return (
     <nav>
       <section>
-        <h1>Navigering</h1>
+        <h1>{pageData.pageName}</h1>
         <Link to={"/" + pageData.pageLink}>{pageData.pageName}</Link>
       </section>
-      {headings.map((heading, index) => (
-        <SidebarHeading key={index} heading={heading} />
+      {pageData.headings.map((heading, index) => (
+        <SidebarHeading
+          key={index}
+          mainPage={pageData.pageLink}
+          title={heading.title}
+          subpages={heading.subpages}
+          currentPage={currentPage}
+        />
       ))}
     </nav>
   )
-
-  // return (
-  //   <React.Fragment>
-  //     <section>
-  //       <h1>{pageData.pageName}</h1>
-  //       <Link to={"/" + pageData.pageLink}>{pageData.pageName}</Link>
-  //     </section>
-  //     {pageData.headings.map((heading, index) => (
-  //       <SidebarHeading
-  //         key={index}
-  //         mainPage={pageData.pageLink}
-  //         title={heading.title}
-  //         subpages={heading.subpages}
-  //         currentPage={currentPage}
-  //       />
-  //     ))}
-  //   </React.Fragment>
-  // )
 }
 
 export default Sidebar

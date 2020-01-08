@@ -16,15 +16,23 @@
       ]
     },
     {
-      "title": "Uppgifter",
+      "title": "Introduktionsuppgiften",
       "subpages": [
         {
-          "subPageName": "Uppgift1",
-          "subPageLink": "uppgift1"
+          "subPageName": "Introduktionsprojektet",
+          "subPageLink": "introprojektet"
         },
         {
-          "subPageName": "Uppgift2",
-          "subPageLink": "uppgift2"
+          "subPageName": "1. Intro",
+          "subPageLink": "introprojektet/intro"
+        },
+        {
+          "subPageName": "2. CSS",
+          "subPageLink": "introprojektet/css"
+        },
+        {
+          "subPageName": "3. Bilder",
+          "subPageLink": "introprojektet/bilder"
         }
       ]
     },

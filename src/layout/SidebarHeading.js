@@ -1,19 +1,41 @@
 import React from "react"
 import { Link } from "gatsby"
 
-function SidebarHeading({ heading }) {
+// function SidebarHeading({ heading }) {
+//   return (
+//     <section>
+//       <h1>{heading.title}</h1>
+//       <ul>
+//         {heading.pages.map((subpage, index) => (
+//           <li key={index}>
+//             <Link
+//               title={subpage.excerpt}
+//               to={subpage.fields.slug}
+//               className={subpage.isActive ? "active" : "inactive"}
+//             >
+//               {subpage.frontmatter.title}
+//             </Link>
+//           </li>
+//         ))}
+//       </ul>
+//     </section>
+//   )
+// }
+
+function SidebarHeading({ title, subpages, mainPage, currentPage }) {
   return (
     <section>
-      <h1>{heading.title}</h1>
+      <h1>{title}</h1>
       <ul>
-        {heading.pages.map((subpage, index) => (
+        {subpages.map((subpage, index) => (
           <li key={index}>
             <Link
-              title={subpage.excerpt}
-              to={subpage.fields.slug}
-              className={subpage.isActive ? "active" : "inactive"}
+              to={"/" + mainPage + "/" + subpage.subPageLink}
+              className={
+                currentPage === subpage.subPageLink ? "active" : "inactive"
+              }
             >
-              {subpage.frontmatter.title}
+              {subpage.subPageName}
             </Link>
           </li>
         ))}
