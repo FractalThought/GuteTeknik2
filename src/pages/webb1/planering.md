@@ -1,7 +1,6 @@
 ---
 title: "Veckoplanering"
 date: "2017-08-10"
-heading: "Om kursen"
 ---
 
 ## OBS! EJ AKTUELL
