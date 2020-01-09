@@ -1,5 +1,5 @@
 ---
-title: "Bilder"
+title: "Layout"
 date: "2017-08-10"
 heading: "Introduktionsprojektet"
 ---

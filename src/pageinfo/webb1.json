@@ -23,16 +23,20 @@
           "subPageLink": "introprojektet"
         },
         {
-          "subPageName": "1. Intro",
-          "subPageLink": "introprojektet/intro"
+          "subPageName": "1. HTML",
+          "subPageLink": "introprojektet/html"
         },
         {
           "subPageName": "2. CSS",
           "subPageLink": "introprojektet/css"
         },
         {
-          "subPageName": "3. Bilder",
-          "subPageLink": "introprojektet/bilder"
+          "subPageName": "3. Layout",
+          "subPageLink": "introprojektet/layout"
+        },
+        {
+          "subPageName": "4. Bilder",
+          "subPageLink": "introprojektet/bilder_publicering"
         }
       ]
     },

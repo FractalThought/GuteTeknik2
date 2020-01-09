@@ -1,12 +1,10 @@
 ---
-title: "Intro"
+title: "HTML"
 date: "2017-08-10"
 heading: "Introduktionsprojektet"
 ---
 
-Första uppgiften i Webbutveckling 1 går ut på att skriva om webbens historia och teknik, genom att använda HTML.
-
-Ni ska skapa 2 sidor, en om historia och en om teknik.
+Första uppgiften i Webbutveckling 1 går ut på att skriva om webbens historia och teknik, genom att använda HTML. Under den här uppgiften skriver ni dessutom om webbens historia.
 
 Följande taggar ska användas:
 
@@ -16,6 +14,7 @@ Följande taggar ska användas:
 - ul och ol
 - li
 - a
+- table, td, tr, th, tbody, thead
 
 Kunskap som redovisas:
 
