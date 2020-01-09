@@ -51,6 +51,12 @@ p {
   margin: 0 0 1rem 0;
 }
 
+hr {
+  margin: 3em 0;
+  border-top: 0.5em solid $font-color;
+  opacity: 0.1;
+}
+
 .gatsby-highlight {
   background-color: transparent !important;
   border-radius: 0 !important;
