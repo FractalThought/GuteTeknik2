@@ -27,7 +27,7 @@ Titta på en av följande filmer om Etik, och en om Säkerhet. De är alla ca 15
 
 # Uppgift
 
-Lägg till en undersida till din hemsida som heter något i stil med etik_sakerhet.html. Du måste inte ha den länkad från någon annan sida.
+Lägg till en undersida till din hemsida. Du måste inte ha den länkad från någon annan sida.
 
 ## På sidan ska du ha med följande:
 

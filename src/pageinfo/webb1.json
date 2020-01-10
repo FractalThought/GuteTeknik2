@@ -86,6 +86,23 @@
           "subPageLink": "begrepp"
         }
       ]
+    },
+    {
+      "title": "Individuellt Val",
+      "subpages": [
+        {
+          "subPageName": "Etik och lagar",
+          "subPageLink": "etik_och_lagar"
+        },
+        {
+          "subPageName": "Etik och lagar uppgift",
+          "subPageLink": "etik_och_lagar_uppgift"
+        },
+        {
+          "subPageName": "Slutprojektet",
+          "subPageLink": "iv_slutprojekt"
+        }
+      ]
     }
   ]
 }
