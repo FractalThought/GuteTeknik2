@@ -12,9 +12,7 @@ Hemsidan får handla om vad ni vill, men ni behöver följa praxis och arbeta ut
 
 Under projektets gång så kommer vi ha några genomgångar och vissa saker kommer att tillkomma i er process. Det som tillkommer är följande:
 
-- Lagar och etik på nätet
 - Bildoptimisering och användning
-- 
 
 ## Uppgiften är uppdelad i tre faser:
 
