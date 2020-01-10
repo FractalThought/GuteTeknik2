@@ -1,35 +1,12 @@
 ---
-title: "Veckplanering"
+title: "Veckoplanering"
 date: "2017-08-10"
 heading: "Om kursen"
 ---
 
 ## Kursöversikt
 
-- **v34-38:** Grunderna i HTML och CSS
-- **39-43:** Layout och Design
-- **v45-48:** Ramverket React
-- **v49-51:** Publicering
-
-## Per vecka
-
-| Vecka | Förmiddagslektionen                                   | Eftermiddagslektionen              |
-| ----- | ----------------------------------------------------- | ---------------------------------- |
-| 34    | Kursintro och verktygsorientering                     | Grunderna i HTML                   |
-| 35    | HTML fortsättning                                     | Grunderna i CSS                    |
-| 36    | CSS Class och ID selectors                            | Listor och CSS inheritance         |
-| 37    | CSS Flexbox                                           | Tabeller och Designmönster         |
-| 38    | HTML Forms och Input                                  | Flexbox                            |
-| 39    | Repetitionsuppgift                                    | Repetitionsuppgift                 |
-| 40    | Introduktion Figma                                    | Figma                              |
-| 41    | Ta reda på en teknik i Figma, presentera för de andra |                                    |
-| 42    | Design och layout, värderingar i webbdesign           | Planerad HTML och CSS              |
-| 43    | Arbeta med bilder i Figma                             | Arbeta med texter (och webbfonter) |
-| 44    | **_LOV_**                                             | **_LOV_**                          |
-| 45-49 | React                                                 | React                              |
-| 50    | Publiceringsverktyg                                   | Lagar och etik                     |
-| 51    | Publicering                                           | Publicering                        |
-## v2: Kursintro + intro CSS custom properties (1 lektion)
+## v3: Kursintro + intro CSS custom properties (1 lektion)
 
 - Vad är custom properties?
 - Användningsområde
@@ -43,7 +20,7 @@ heading: "Om kursen"
 Fortsätt löpande med CSS variabler under kursen (de ska använda det hedanefter)
 Detta blir en del av designsystemet de bygger upp, och är en del av kunskapskraven (planera sin kod)
 
-## v3-v5: CSS Grid (3 lektioner)
+## v4-v6: CSS Grid (3 lektioner)
 
 - Introduktion CSS Grid, skapa vår grundläggande layout med grid (header, main, aside, footer)
   - grid-template-rows och columns
@@ -54,7 +31,7 @@ Detta blir en del av designsystemet de bygger upp, och är en del av kunskapskra
 - Grid i Figma -> Grid i CSS (planera och implementera layouten)
 - Få en layout som de ska implementera (mosaic layout)
 
-## v6-8: CSS Animations (2 lektioner)
+## v7-8: CSS Animations (2 lektioner)
 
 - Transitions
 - Keyframes
@@ -67,7 +44,7 @@ Detta blir en del av designsystemet de bygger upp, och är en del av kunskapskra
 - Jobba med att skapa en struktur (designsystem)
 - Färglära som del av CSS
 
-## Anpassa bilder och media till webben: 2 lektioner (använda Figma)
+## Anpassa bilder och media till webben: 2 lektioner (använda Figma och Squoosh)
 ## Arbeta med SVG: 3 lektioner (SVGOMG för optimering)
 
 - Introduktion SVG
