@@ -19,7 +19,7 @@ Ni använder taggarna h1 och h2 för att skapa rubriker, p-taggen för att skriv
 
 Den färdiga sidan ska minst innehålla följande:
 
-- 4 rubriker
+- 2 rubriker
 - 5 paragrafer
 - 1 lista (ordnad eller oordnad) med minst 3 list-items.
 - 1 tabell med minst 3 rader och 2 kolumner
