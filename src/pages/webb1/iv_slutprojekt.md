@@ -6,13 +6,14 @@ heading: "IV"
 
 Detta är det sista projektet ni gör i kursen, och har som syfte att låta er redovisa era färdigheter i utvecklingsprocessen av ett webbprojekt.
 
-Uppgiften går ut på att skapa en hemsida, i HTML&CSS eller genom att använda Wordpress. I uppgiften går ni igenom hela utvecklingsprocessen av att planera, utföra, och dokumentera.
+Uppgiften går ut på att skapa en hemsida, i HTML&CSS eller genom att använda ett webbpubliceringssystem (Wordpress, Wix, Webflow). I uppgiften går ni igenom hela utvecklingsprocessen av att planera, utföra, och dokumentera.
 
 Hemsidan får handla om vad ni vill, men ni behöver följa praxis och arbeta utifrån utvecklingsprocessen.
 
 Under projektets gång så kommer vi ha några genomgångar och vissa saker kommer att tillkomma i er process. Det som tillkommer är följande:
 
 - Bildoptimisering och användning
+- Etik och lagar på nätet
 
 ## Uppgiften är uppdelad i tre faser:
 
@@ -27,7 +28,7 @@ I den här fasen ska du göra följande:
 Under utförandefasen gör du webbsidan i sin helhet. Du anpassar ditt arbetssätt utifrån de extra genomgångarna vi går igenom, och gör klart en slutprodukt.
 
 I den här fasen ska du göra följande:
-- Skapa hemsidan och ladda upp den till ett webbhotell (Wordpress har en webbvärd [hosting] via wordpress.com, använd Netlify för HTML&CSS).
+- Skapa hemsidan och ladda upp den till ett webbhotell (Wordpress/Wix/Webflow har en webbvärd [hosting], använd Netlify för HTML&CSS).
 - Testa sidan kontinuerligt i flera webbläsare.
 
 ### Dokumentering

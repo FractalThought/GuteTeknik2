@@ -27,7 +27,9 @@ Titta på en av följande filmer om Etik, och en om Säkerhet. De är alla ca 15
 
 # Uppgift
 
-Lägg till en undersida till din hemsida. Du måste inte ha den länkad från någon annan sida.
+Lägg till en undersida till din hemsida i slutprojektet. Du måste inte ha den länkad från någon annan sida, men jag behöver i så fall få länken till den sidan.
+
+Sidan ska vara klar när du lämnar in slutprojektet.
 
 ## På sidan ska du ha med följande:
 
