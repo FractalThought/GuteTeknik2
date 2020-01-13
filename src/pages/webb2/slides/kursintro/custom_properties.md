@@ -6,10 +6,7 @@
 
 ## Vad är det?
 
-- Sätt att skapa en variabel i CSS
-- Kan överskrivas
-- Möjliggör skalbarhet
-- Används för att skapa designsystem
+Ett sätt att skapa en variabel i CSS som kan återanvändas, ändras, och överskrivas
 
 ---
 
@@ -68,6 +65,32 @@ root.addEventListener("click", e => {
   root.style.setProperty("--text-color", "var(--light)")
 })
 ```
+
+---
+
+## Bakgrund
+
+- Tillägg till CSS tar tid och mycket arbete
+- CSS Preprocessors lade till variabler
+- Finns numera i CSS (level 1, betyder "i sin första implementering")
+
+---
+
+## Kort om CSS variables
+
+- Är till skillnad från mycket annat CaseSensitive
+- Funkar i de allra flesta webbläsare, dock inte IE11
+- Börjar alltid med --
+- Används med var() eller env()
+
+---
+
+## Användningsområden
+
+- Designsystem
+- Skapa olika versioner av samma grundkomponent
+- Skapa teman
+- Snygga till ens kod
 
 ---
 
