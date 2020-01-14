@@ -22,20 +22,40 @@
 <li>Batman</li>
 ```
 
+- Iron Man
+- Captain America
+- Superman
+- Batman
+
+---
+
 ## List-items behöver kapslas in
 
 1. **OL:** Ordered list
 
 - **UL:** Unordered list
 
+---
+
 ```html
-<ol></ol>
-<li>Superman</li>
-<li>Wonder Woman</li>
-<li>Batman</li>
+<ol>
+  <li>Superman</li>
+  <li>Wonder Woman</li>
+  <li>Batman</li>
+</ol>
 <ul>
   <li>Iron Man</li>
   <li>Captain America</li>
   <li>Spider-Man</li>
 </ul>
 ```
+
+---
+
+1. Superman
+2. Wonder Woman
+3. Batman
+
+- Iron Man
+- Captain America
+- Spider-man

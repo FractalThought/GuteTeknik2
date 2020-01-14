@@ -3,33 +3,11 @@ title: "Veckoplanering"
 date: "2017-08-10"
 ---
 
-## OBS! EJ AKTUELL
-
 ## Kursöversikt
 
-- **v34-38:** Grunderna i HTML och CSS
-- **39-43:** Layout och Design
-- **v45-48:** Ramverket React
-- **v49-51:** Publicering
-
-## Per vecka
-
-| Vecka | Förmiddagslektionen                                   | Eftermiddagslektionen              |
-| ----- | ----------------------------------------------------- | ---------------------------------- |
-| 34    | Kursintro och verktygsorientering                     | Grunderna i HTML                   |
-| 35    | HTML fortsättning                                     | Grunderna i CSS                    |
-| 36    | CSS Class och ID selectors                            | Listor och CSS inheritance         |
-| 37    | CSS Flexbox                                           | Tabeller och Designmönster         |
-| 38    | HTML Forms och Input                                  | Flexbox                            |
-| 39    | Repetitionsuppgift                                    | Repetitionsuppgift                 |
-| 40    | Introduktion Figma                                    | Figma                              |
-| 41    | Ta reda på en teknik i Figma, presentera för de andra |                                    |
-| 42    | Design och layout, värderingar i webbdesign           | Planerad HTML och CSS              |
-| 43    | Arbeta med bilder i Figma                             | Arbeta med texter (och webbfonter) |
-| 44    | **_LOV_**                                             | **_LOV_**                          |
-| 45-49 | React                                                 | React                              |
-| 50    | Publiceringsverktyg                                   | Lagar och etik                     |
-| 51    | Publicering                                           | Publicering                        |
+- **v2-8:** Introduktionsprojektet
+- **v9:** Sportlov
+- **v10-:**
 
 ## Koncept att gå igenom
 
@@ -47,7 +25,6 @@ date: "2017-08-10"
 - CSS Flexbox
 - CSS Grid
 - JavaScript DOM
-- JS ramverket React
 - Planera en hemsida
 - Layout
 - Webbdesign
@@ -59,3 +36,22 @@ date: "2017-08-10"
 - Använda devTools
 - Anpassning för användningsområde
 - Unicode binary to characters
+
+## Veckoplanering
+
+| Vecka | Uppgift       | Moment                                                    |
+| ----- | ------------- | --------------------------------------------------------- |
+| 2     | 1. HTML       | Kursintroduktion och introduktion till HTML               |
+| 2     | 1. HTML       | Webbens första historia, eget arbete                      |
+| 3     | 1. HTML       | Listor, webbens sena historia                             |
+| 3     | 1. HTML       | Tabeller, eget arbete                                     |
+| 4     | 2. CSS        | Introduktion till CSS (användning, tagg-selektor, regler) |
+| 4     | 2. CSS        | Webbens teknik, CSS fortsättning (angränsande selektor)   |
+| 5     | 2. CSS        | CSS class och ID selektorer, eget arbete                  |
+| 5     | 2. CSS        | Fortsättning Webbens teknik, eget arbete                  |
+| 6     | 3. Layout     | Genomgång om Flexbox (layout)                             |
+| 6     | 3. Layout     | Genomgång om webbens användning, fortsättning flexbox     |
+| 7     | 4. Reflektion | Användning och optimisering av bilder                     |
+| 7     | 4. Reflektion | Publicering och eget arbete                               |
+| 8     | 4. Reflektion | Eget arbete                                               |
+| 8     | 4. Reflektion | Eget arbete                                               |
