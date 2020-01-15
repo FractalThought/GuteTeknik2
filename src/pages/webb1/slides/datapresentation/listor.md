@@ -14,6 +14,12 @@
 ## List-item
 
 ```html
+<li>Spider-man</li>
+```
+
+---
+
+```html
 <h2>Characters</h2>
 <li>Iron Man</li>
 <li>Captain America</li>
@@ -21,6 +27,8 @@
 <li>Superman</li>
 <li>Batman</li>
 ```
+
+## Characters
 
 - Iron Man
 - Captain America

@@ -99,7 +99,7 @@ Netscape open-sourcar till Mozilla Foundation, vilket resulterar i Phoenix (sena
 - Apple skapar Safari, baserat på WebKit
 - Google skapar Chrome, baserat på WebKit med V8 JS-motor
 - Microsoft skapar Edge
-- HTML5 & CSS3
+- HTML5 & CSS3 senare (~2014)
 
 ---
 
@@ -127,6 +127,7 @@ Numera är majoriteten av webbanvändandet från mobilwebbläsare
 - Majoriteten av webben sker genom mobilwebbläsare
 - Chrome är den mest använda webbläsaren
 - Edge skrivs om till Chromium
+- Webbens tekniker är standardiserade (HTML, CSS, JS)
 
 ---
 
