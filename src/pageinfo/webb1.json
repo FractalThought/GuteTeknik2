@@ -103,6 +103,31 @@
           "subPageLink": "iv_slutprojekt"
         }
       ]
+    },
+    {
+      "title": "Slides",
+      "subpages": [
+        {
+          "subPageName": "Kursintro",
+          "subPageLink": "slides/kursintro/kursintro"
+        },
+        {
+          "subPageName": "Tidiga historia",
+          "subPageLink": "slides/kursintro/historia"
+        },
+        {
+          "subPageName": "Sena historia",
+          "subPageLink": "slides/datapresentation/historia"
+        },
+        {
+          "subPageName": "Listor",
+          "subPageLink": "slides/datapresentation/listor"
+        },
+        {
+          "subPageName": "Tabeller",
+          "subPageLink": "slides/datapresentation/tabeller"
+        }
+      ]
     }
   ]
 }

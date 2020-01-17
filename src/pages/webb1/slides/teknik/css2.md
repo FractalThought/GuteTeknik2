@@ -1,0 +1,115 @@
+# Tabeller
+
+---
+
+| Vecka | Uppgift | Moment                                      |
+| ----- | ------- | ------------------------------------------- |
+| 2     | 1. HTML | Kursintroduktion och introduktion till HTML |
+| 2     | 1. HTML | Webbens första historia, eget arbete        |
+| 3     | 1. HTML | Listor, webbens sena historia               |
+| 3     | 1. HTML | Tabeller, eget arbete                       |
+
+---
+
+## Tabell består av rader och kolumner
+
+| Col1     | Col2     | Col2     |
+| -------- | -------- | -------- |
+| Rad1Col1 | Rad1Col2 | Rad1Col3 |
+| Rad2Col1 | Rad2Col2 | Rad2Col3 |
+
+---
+
+# Syntax
+
+```html
+<table>
+  <tr>
+    <td>Cell i rad 1</td>
+    <td>Cell i rad 1</td>
+  </tr>
+  <tr>
+    <td>Cell i rad 2</td>
+    <td>Cell i rad 2</td>
+  </tr>
+</table>
+```
+
+---
+
+## Taggar
+
+- **td:** Table Data Cell
+- **tr:** Table Row
+- **table:** Behållaren för tabellen, likt ul/ol
+- **th:** Table Header
+
+---
+
+## Table Header
+
+```html
+<table>
+  <tr>
+    <th scope="col">Header för col1</td>
+    <th scope="col">Header för col2</td>
+    <th scope="col">Header för col3</td>
+  </tr>
+  <tr>
+    <th scope="row">Header för rad 1</th>
+    <td>Cell i rad 1</td>
+    <td>Cell i rad 1</td>
+  </tr>
+</table>
+```
+
+---
+
+```html
+<table>
+  <tr>
+    <th scope="col">Hero</td>
+    <th scope="col">Strength</td>
+    <th scope="col">Intelligence</td>
+  </tr>
+  <tr>
+    <th scope="row">Iron Man</th>
+    <td>3</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <th scope="row">Captain America</th>
+    <td>8</td>
+    <td>4</td>
+  </tr>
+</table>
+```
+
+---
+
+<table>
+  <tr>
+    <th scope="col">Hero</td>
+    <th scope="col">Strength</td>
+    <th scope="col">Intelligence</td>
+  </tr>
+  <tr>
+    <th scope="row">Iron Man</th>
+    <td>3</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <th scope="row">Captain America</th>
+    <td>8</td>
+    <td>4</td>
+  </tr>
+</table>
+
+---
+
+## HTML attribut
+
+```html
+    <th scope="col">Hero</td>
+    <th scope="row">Captain America</th>
+```
