@@ -1,5 +1,13 @@
 # Introduktion till Listor
 
+Specificity
+
+Cascading
+
+Class
+
+ID
+
 ---
 
 ## Rubriker och paragrafer

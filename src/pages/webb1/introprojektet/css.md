@@ -29,3 +29,9 @@ Stilmallen ska minst innehålla följande:
 - Stilregel som ändrar någon stil utifrån en angränsande selektor
 
 Tips: Skriv din stilmall först och testa på historia.html-sidan, och skapa sedan teknik.html-sidan.
+
+## Hjälpsamma länkar
+
+- [Mozilla Developer Network: Styling text](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text)
+- [Mozilla Developer Network: Fundamental text and font styling](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+- [Mozilla Developer Network: CSS references](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)

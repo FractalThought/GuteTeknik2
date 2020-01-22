@@ -30,3 +30,7 @@ Den färdiga sidan (och de andra sidorna) ska ha följande:
 - En layout skapad med display: flex, samt använder margin och padding.
 
 Tips: Skapa ditt innehåll först, och boxa sedan in innehållet i de strukturella taggarna (main, aside, header, osv).
+
+## Hjälpsamma länkar:
+
+- [Mozilla Developer Network: CSS Layout](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout)

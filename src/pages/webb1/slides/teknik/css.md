@@ -179,7 +179,7 @@ p {
 ```css
 /* Stilar body-elementet, font-family och color ärvs */
 body {
-  font-family: Verdana, san-serif;
+  font-family: Verdana, sans-serif;
   color: gray;
 }
 
@@ -187,6 +187,14 @@ body {
 * {
 }
 ```
+
+---
+
+## Det finns mängder med egenskaper (properties), och varje property har olika värden
+
+För att göra det enklare för oss så använder vi en referens, som till exempel [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference).
+
+Och som med mycket i teknik, om du inte kan det - googla det!
 
 ---
 
@@ -291,3 +299,10 @@ Hue, Saturation, Lightness, Alpha
   Ändra minst storleken och färgen
 - Stila alla paragrafer på valfritt sätt
 - Stila tabellcellernas bakgrund
+
+---
+
+## Källor:
+
+- [Mozilla Developer Network: CSS reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
+- [Mozilla Developer Network: CSS Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference)
