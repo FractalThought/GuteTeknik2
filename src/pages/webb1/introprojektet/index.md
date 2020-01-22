@@ -18,22 +18,22 @@ I slutet av projektet ska du kunna:
 
 ## Planering under projektet:
 
-| Vecka | Uppgift       | Moment                                                    |
-| ----- | ------------- | --------------------------------------------------------- |
-| 2     | 1. HTML       | Kursintroduktion och introduktion till HTML               |
-| 2     | 1. HTML       | Webbens första historia, eget arbete                      |
-| 3     | 1. HTML       | Listor, webbens sena historia                             |
-| 3     | 1. HTML       | Tabeller, eget arbete                                     |
-| 4     | 2. CSS        | Introduktion till CSS (användning, tagg-selektor, regler) |
-| 4     | 2. CSS        | Webbens teknik, CSS fortsättning (angränsande selektor)   |
-| 5     | 2. CSS        | CSS class och ID selektorer, eget arbete                  |
-| 5     | 2. CSS        | Fortsättning Webbens teknik, eget arbete                  |
-| 6     | 3. Layout     | Genomgång om Flexbox (layout)                             |
-| 6     | 3. Layout     | Genomgång om webbens användning, fortsättning flexbox     |
-| 7     | 4. Reflektion | Användning och optimisering av bilder                     |
-| 7     | 4. Reflektion | Publicering och eget arbete                               |
-| 8     | 4. Reflektion | Eget arbete                                               |
-| 8     | 4. Reflektion | Eget arbete                                               |
+| Vecka | Uppgift       | Moment                                                       |
+| ----- | ------------- | ------------------------------------------------------------ |
+| 2     | 1. HTML       | Kursintroduktion och introduktion till HTML                  |
+| 2     | 1. HTML       | Webbens första historia, eget arbete                         |
+| 3     | 1. HTML       | Listor, webbens sena historia                                |
+| 3     | 1. HTML       | Tabeller, eget arbete                                        |
+| 4     | 2. CSS        | Introduktion till CSS (användning, element-selektor, regler) |
+| 4     | 2. CSS        | Webbens teknik, CSS fortsättning (angränsande selektor)      |
+| 5     | 2. CSS        | CSS class och ID selektorer, eget arbete                     |
+| 5     | 2. CSS        | Fortsättning Webbens teknik, eget arbete                     |
+| 6     | 3. Layout     | Genomgång om Flexbox (layout)                                |
+| 6     | 3. Layout     | Genomgång om webbens användning, fortsättning flexbox        |
+| 7     | 4. Reflektion | Användning och optimisering av bilder                        |
+| 7     | 4. Reflektion | Publicering och eget arbete                                  |
+| 8     | 4. Reflektion | Eget arbete                                                  |
+| 8     | 4. Reflektion | Eget arbete                                                  |
 
 ### Kunskapskrav vi arbetar med under projektet:
 

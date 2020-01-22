@@ -8,6 +8,7 @@ Den här kursen ingår i ämnet Programmering och är en del av inriktningen Inf
 # OBS! Sidan är under uppbyggnad och allt innehåll är inte aktuellt.
 
 ## Kunskapskrav (Betyg C)
+
 Eleven formulerar och planerar efter samråd med handledare programmeringsuppgifter och väljer med viss säkerhet lämpliga programspråk.
 
 Eleven analyserar och modellerar uppgifter efter samråd med handledare. Eleven designar med viss säkerhet utifrån den analyserade uppgiften en lösning och dokumenterar denna med ett klassdiagram. Eleven väljer med viss säkerhet ett uttryckssätt och ett gränssnitt som är anpassat för att på ett tillfredsställande sätt interagera med den avsedda användaren. Eleven skapar någon lösning där programmet kommunicerar över internet.
@@ -58,7 +59,7 @@ Hur vi kommer arbeta
 
 - Felsöka på systematiskt och effektivt sätt
 - Särskiljer på körtidsfel och programmeringslogiska fel
-- God kvalité
+- Skapa något av god kvalité
 
 ## Du kommer att bedömmas utifrån följande bedömningspunkter
 
