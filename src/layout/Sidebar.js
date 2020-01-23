@@ -79,7 +79,7 @@ function Sidebar({ urlData, pages }) {
     document.title = "GuteTeknik " + pageData.pageName
   })
 
-  let headings = Object.values(headingData) // gets the array of headings only
+  //let headings = Object.values(headingData) // gets the array of headings only
 
   // return (
   //   <nav>

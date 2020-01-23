@@ -150,6 +150,14 @@ header {
     .left {
       grid-row: 2;
       grid-column: 1;
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        section {
+          margin: 10px;
+        }
+      }
     }
 
     .right {
@@ -160,12 +168,7 @@ header {
     main {
       grid-row: 1;
       grid-column: 1;
-    }
-
-    aside {
-      /*
-        What needs to be made here?
-      */
+      margin: 0 2vw;
     }
   }
 }

@@ -33,7 +33,7 @@ export default ({ pageContext, data, location }) => {
   // node.frontmatter.title
   // ));
 
-  const customCrumbLabel = location.pathname.toLowerCase().replace("-", " ")
+  //const customCrumbLabel = location.pathname.toLowerCase().replace("-", " ")
 
   return (
     <Container url={page.fields.slug} pages={allInfo.edges}>
