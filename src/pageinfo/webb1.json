@@ -105,19 +105,11 @@
       ]
     },
     {
-      "title": "Slides",
+      "title": "Intro slides",
       "subpages": [
         {
           "subPageName": "Kursintro",
           "subPageLink": "slides/kursintro/kursintro"
-        },
-        {
-          "subPageName": "Tidiga historia",
-          "subPageLink": "slides/kursintro/historia"
-        },
-        {
-          "subPageName": "Sena historia",
-          "subPageLink": "slides/datapresentation/historia"
         },
         {
           "subPageName": "Listor",
@@ -128,16 +120,29 @@
           "subPageLink": "slides/datapresentation/tabeller"
         },
         {
-          "subPageName": "Internets teknik",
-          "subPageLink": "slides/teknik/internets_teknik"
-        },
-        {
           "subPageName": "Introduktion till CSS",
           "subPageLink": "slides/teknik/css"
         },
         {
           "subPageName": "CSS Box Model",
           "subPageLink": "slides/teknik/cssboxmodel"
+        }
+      ]
+    },
+    {
+      "title": "Teori",
+      "subpages": [
+        {
+          "subPageName": "Tidiga historia",
+          "subPageLink": "slides/kursintro/historia"
+        },
+        {
+          "subPageName": "Sena historia",
+          "subPageLink": "slides/datapresentation/historia"
+        },
+        {
+          "subPageName": "Internets teknik",
+          "subPageLink": "slides/teknik/internets_teknik"
         }
       ]
     }
