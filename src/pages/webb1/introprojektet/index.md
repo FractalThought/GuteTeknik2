@@ -27,7 +27,7 @@ I slutet av projektet ska du kunna:
 | 4     | 2. CSS        | Introduktion till CSS (användning, element/tag selektor, regler)         |
 | 4     | 2. CSS        | Webbens teknik, CSS Box Model                                            |
 | 5     | 2. CSS        | Cascading (specificitet, class, id, angränsande selektorer), eget arbete |
-| 5     | 2. CSS        | Fortsättning Webbens teknik, eget arbete                                 |
+| 5     | 2. CSS        | Användning av Web Developer Tools, eget arbete                           |
 | 6     | 3. Layout     | Genomgång om Flexbox (layout)                                            |
 | 6     | 3. Layout     | Genomgång om webbens användning, fortsättning flexbox                    |
 | 7     | 4. Reflektion | Användning och optimisering av bilder                                    |

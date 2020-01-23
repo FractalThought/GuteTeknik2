@@ -4,12 +4,12 @@ date: "2017-08-10"
 heading: "Introduktionsprojektet"
 ---
 
-Andra uppgiften i Webbutveckling 1 går ut på att stila er webbsida, och skriva om tekniken bakom webben, specifikt om HTML och CSS, samt HTTP-protokollet.
+Andra uppgiften i Webbutveckling 1 går ut på att stila er webbsida, och skriva om tekniken bakom internet och webben.
 
 ## Kunskap som redovisas:
 
 - Grunderna i CSS (selektorer, regler, och boxmodellen)
-- Tekniken bakom webben
+- Tekniken bakom internet och webben
 
 ## Uppgiften
 

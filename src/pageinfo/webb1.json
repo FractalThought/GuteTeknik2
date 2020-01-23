@@ -126,6 +126,18 @@
         {
           "subPageName": "Tabeller",
           "subPageLink": "slides/datapresentation/tabeller"
+        },
+        {
+          "subPageName": "Internets teknik",
+          "subPageLink": "slides/teknik/internets_teknik"
+        },
+        {
+          "subPageName": "Introduktion till CSS",
+          "subPageLink": "slides/teknik/css"
+        },
+        {
+          "subPageName": "CSS Box Model",
+          "subPageLink": "slides/teknik/cssboxmodel"
         }
       ]
     }
