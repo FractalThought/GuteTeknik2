@@ -40,6 +40,7 @@ header {
     ul {
       display: flex;
       list-style-type: none;
+      flex-wrap: wrap;
     }
 
     a {
@@ -83,26 +84,6 @@ header {
     padding-bottom: 3rem;
     a {
       color: $primary-color;
-    }
-  }
-
-  @media screen and (max-width: $large-up) {
-    grid-template-rows: 1fr 2fr 1fr;
-    grid-template-columns: 1fr;
-
-    .left {
-      grid-row: 1;
-      grid-column: 1;
-    }
-
-    .right {
-      grid-row: 2;
-      grid-column: 1;
-    }
-
-    main {
-      grid-row: 3;
-      grid-column: 1;
     }
   }
 
@@ -159,6 +140,32 @@ header {
           font-weight: bold;
         }
       }
+    }
+  }
+
+  @media screen and (max-width: $large-up) {
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-columns: 1fr;
+
+    .left {
+      grid-row: 2;
+      grid-column: 1;
+    }
+
+    .right {
+      grid-row: 3;
+      grid-column: 1;
+    }
+
+    main {
+      grid-row: 1;
+      grid-column: 1;
+    }
+
+    aside {
+      /*
+        What needs to be made here?
+      */
     }
   }
 }
