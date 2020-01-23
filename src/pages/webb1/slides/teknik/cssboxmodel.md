@@ -2,6 +2,12 @@
 
 Hur man använder CSS för att hantera marginal, border, och vaddering
 
+- Vad boxmodellen är
+- Hur man sätter en marginal, border, och vaddering
+- Vad shorthand innebär i CSS
+
+---
+
 ---
 
 <p style="background-color: #af0e12; border: 0.3em solid #fff; padding: 1em">Allt är en box</p>
@@ -141,70 +147,7 @@ p {
 
 ---
 
-## Specifika egenskaper
-
-Vissa element har specifika egenskaper, till exempel tabeller.
-
----
-
-```css
-table {
-  border-collapse: collapse;
-}
-
-table,
-tr {
-  border: 5px solid purple;
-}
-
-th {
-  background: #444;
-}
-```
-
-<style>
-#hero-table {
-  border-collapse: collapse;
-  font-size: 0.75em;
-}
-
-#hero-table,
-#hero-table tr {
-  border: 5px solid purple;
-}
-
-#hero-table th {
-  background: #444;
-}
-</style>
-
-<table id="hero-table">
-  <tr>
-    <th>Hero</th>
-    <th>Alter-ego</th>
-    <th>Power</th>
-  </tr>
-<tr>
-  <th>Iron Man</th>
-  <td>Tony Stark</td>
-  <td>Super-powered suit</td>
-</tr>
-<tr>
-  <th>Captain America</th>
-  <td>Steve Rogers</td>
-  <td>Super-human strength</td>
-</tr>
-<tr>
-  <th>Spider-man</th>
-  <td>Peter Parker</td>
-  <td>Web slingers</td>
-</tr>
-</table>
-
----
-
 ## Källor:
 
 - [Mozilla Developer Network: Selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#Selectors)
 - [Mozilla Developer Network: CSS Box Model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-- [Styling table](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)

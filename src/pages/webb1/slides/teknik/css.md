@@ -7,6 +7,7 @@
 - Vad CSS är och gör
 - Hur man använder CSS-regler
 - Färger i CSS
+- Specifika egenskaper och hur man stilar en tabell
 
 ---
 
@@ -130,7 +131,7 @@ selector {
 
 ---
 
-### Element selector
+### Element/tag selector
 
 Regel för att stila alla element av en viss typ
 
@@ -305,6 +306,68 @@ Hue, Saturation, Lightness, Alpha
 
 ---
 
+## Specifika egenskaper
+
+Vissa element har specifika egenskaper, till exempel tabeller.
+
+---
+
+```css
+table {
+  border-collapse: collapse;
+}
+
+table,
+tr {
+  border: 5px solid purple;
+}
+
+th {
+  background: #444;
+}
+```
+
+<style>
+#hero-table {
+  border-collapse: collapse;
+  font-size: 0.75em;
+}
+
+#hero-table,
+#hero-table tr {
+  border: 5px solid purple;
+}
+
+#hero-table th {
+  background: #444;
+}
+</style>
+
+<table id="hero-table">
+  <tr>
+    <th>Hero</th>
+    <th>Alter-ego</th>
+    <th>Power</th>
+  </tr>
+<tr>
+  <th>Iron Man</th>
+  <td>Tony Stark</td>
+  <td>Super-powered suit</td>
+</tr>
+<tr>
+  <th>Captain America</th>
+  <td>Steve Rogers</td>
+  <td>Super-human strength</td>
+</tr>
+<tr>
+  <th>Spider-man</th>
+  <td>Peter Parker</td>
+  <td>Web slingers</td>
+</tr>
+</table>
+
+---
+
 ### Övningar:
 
 - Stila alla h1-element
@@ -318,3 +381,4 @@ Hue, Saturation, Lightness, Alpha
 
 - [Mozilla Developer Network: CSS reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 - [Mozilla Developer Network: CSS Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference)
+- [Styling table](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
