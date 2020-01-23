@@ -27,6 +27,7 @@ Stilmallen ska minst innehålla följande:
 - Stilregel som ändrar ett elements padding utifrån ID (tex huvudrubriken)
 - Stilregel som ändrar flera elements marginal utifrån deras gemensamma class
 - Stilregel som ändrar någon stil utifrån en angränsande selektor
+- Stilregler som stilar en tabell och dess komponenter
 
 Tips: Skriv din stilmall först och testa på historia.html-sidan, och skapa sedan teknik.html-sidan.
 

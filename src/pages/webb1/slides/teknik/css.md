@@ -190,6 +190,18 @@ body {
 
 ---
 
+## Man kan kombinera element som ska ha samma regel
+
+```css
+p,
+li,
+h2 {
+  color: #444;
+}
+```
+
+---
+
 ## Det finns mängder med egenskaper (properties), och varje property har olika värden
 
 För att göra det enklare för oss så använder vi en referens, som till exempel [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference).
