@@ -1,0 +1,78 @@
+.welcome {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.course-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.course-card {
+  border-radius: 5px;
+  padding: 1em;
+  min-height: 20vh;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+
+  position: relative;
+
+  &[data-course="prog1"] {
+    background: url("../images/prog1_bg.png");
+  }
+  &[data-course="prog2"] {
+    background: url("../images/prog2_bg.png");
+  }
+  &[data-course="webb1"] {
+    background: url("../images/webb1_bg.png");
+  }
+  &[data-course="webb2"] {
+    background: url("../images/webb2_bg.png");
+  }
+  &[data-course="digi1"] {
+    background: url("../images/digi1_bg.png");
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(2px);
+    box-shadow: 0 6px 12px -2px rgba(50, 50, 93, 0.25),
+      0 3px 7px -3px rgba(0, 0, 0, 0.3);
+  }
+
+  .card-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1em;
+
+    .card-planning {
+      background: #444;
+      padding: 0.2em;
+
+      transition: all 0.3s ease-in-out;
+      border-radius: 3px;
+
+      &:hover {
+        background: #fff;
+        color: #444;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .card-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    margin: 0.5em;
+
+    width: 3em;
+    height: 3em;
+  }
+}
