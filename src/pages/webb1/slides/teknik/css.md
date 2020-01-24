@@ -33,6 +33,7 @@ En hemsida är ett sätt att presentera ditt innehåll till världen, genom att 
 
 - Färga text/element
 - Ändra storlek och position
+- Styra utseendet på en hemsida
 - Tillsammans med HTML, skapa en layout
 
 ---
@@ -45,11 +46,11 @@ p {
   font-size: 16px;
 }
 
-p.intro {
+.intro {
   font-weight: bold;
 }
 
-div#container {
+#container {
   background: #000;
 }
 ```
@@ -175,7 +176,7 @@ p {
 
 ---
 
-### Vissa regler ärvs
+### Vissa deklarationer ärvs
 
 ```css
 /* Stilar body-elementet, font-family och color ärvs */
@@ -191,7 +192,7 @@ body {
 
 ---
 
-## Man kan kombinera element som ska ha samma regel
+## Man kan kombinera element som ska ha samma uppsättning av deklarationer
 
 ```css
 p,
