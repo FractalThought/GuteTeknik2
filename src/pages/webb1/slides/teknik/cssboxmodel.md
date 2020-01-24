@@ -8,8 +8,6 @@ Hur man använder CSS för att hantera marginal, border, och vaddering
 
 ---
 
----
-
 <p style="background-color: #af0e12; border: 0.3em solid #fff; padding: 1em">Allt är en box</p>
 
 ---
