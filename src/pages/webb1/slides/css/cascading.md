@@ -1,14 +1,281 @@
-# Introduktion till Cascading
+<style>
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h6, .reveal p, .reveal ul, .reveal ol, .reveal dl {
+  text-align: left;
+}
+
+.reveal ul, .reveal ol {
+  margin: 0;
+  display: block;
+}
+
+</style>
+
+<div class="reveal--fractale">
+
+# Grundläggande koncept i CSS
 
 C i CSS står för Cascading
 
 ---
 
-Specificity
+### CSS bygger på ett antal grundläggande koncept
 
-Cascading
+- Selektorer och deklarationer bildar regler
+- **Inheritance**
+- **Cascading**
+- **Specificity**
 
-Mest grundläggande cascade: två likadana regler i samma dokument - vilken blir det?
+---
+
+## Inheritance (arv)
+
+<style>
+
+#parent-child-element {
+  --base-color: 179;
+}
+
+#parent-child-element span {
+  color: hsl(var(--base-color), 85%, 50%);
+}
+
+#parent-child-element span>span, #parent-child-element .parent {
+  font-weight: bold; background: hsl(var(--base-color), 85%, 25%); color: hsl(var(--base-color), 85%, 95%); padding: 0 0.1em;"
+}
+
+#parent-child-element .child {
+  --base-color: 359;
+}
+
+</style>
+
+<div id="parent-child-element">
+
+- <span>HTML-element som innehåller andra element kallas för ett <span>parent</span>-element</span>
+- <span class="child">HTML-element som är en del av andra HTML-element kallas för <span>child</span>-element.</span>
+
+Vissa deklarationer ärvs från <span class="parent">parent</span>-element till <span class="parent child">child</span>-element
+
+</div>
+
+---
+
+### HTML
+
+```html
+<body>
+  <h3>Lorem Ipsum</h3>
+  <p>Lorem ipsum dolor sit amet.</p>
+</body>
+```
+
+### CSS
+
+```css
+body {
+  color: hsla(359, 85%, 50%, 1);
+  font-size: 30px;
+}
+```
+
+### Resultat
+
+<div style="color: hsla(359, 85%, 50%, 1); font-size: 30px; text-transform: none; text-align:left;">
+<h3 style="color: hsla(359, 85%, 50%, 1); font-size: 30px; text-transform: none; text-align:left;">Lorem Ipsum</h3>
+<p>Lorem ipsum dolor sit amet.</p>
+</div>
+---
+
+```html
+<table>
+  <tr>
+    <th>Hero name</th>
+    <th>Real name</th>
+  </tr>
+  <tr>
+    <th>Iron Man</th>
+    <td>Tony Stark</td>
+  </tr>
+  <tr>
+    <th>Captain Marvel</th>
+    <td>Steve Rogers</td>
+  </tr>
+</table>
+```
+
+```css
+table {
+  font-family: "Comic Sans MS";
+  color: hsl(359, 85%, 37%);
+  font-size: 50px;
+}
+```
+
+---
+
+<table style="font-family: 'Comic Sans MS';
+  color: hsl(359, 85%, 37%); font-size: 50px;">
+  <tr>
+    <th>Hero name</th>
+    <th>Real name</th>
+  </tr>
+  <tr>
+    <th>Iron Man</th>
+    <td>Tony Stark</td>
+  </tr>
+  <tr>
+    <th>Captain Marvel</th>
+    <td>Steve Rogers</td>
+  </tr>
+</table>
+
+---
+
+## Cascading (kaskadar)
+
+_**Kaskad**: Något faller ner från en nivå till en nivå som ligger längre ner_
+
+- Regler från olika källor kombineras
+- Deklarationer från en stilmall kan överskrivas av en senare stilmall
+
+---
+
+## Olika nivåer av stilmallar
+
+1. Webbläsarens stilmall
+2. Användarens stilmall
+3. Författarens stilmall
+
+---
+
+```css
+body {
+  font-family: "Comic Sans MS";
+  color: hsl(189, 85%, 37%);
+}
+
+p {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 35px;
+}
+```
+
+<style>
+#cascading, #cascading h2 {
+  font-family: "Comic Sans MS";
+  color: hsl(189, 85%, 37%);
+}
+
+#cascading p {
+  font-size: 20px;
+}
+
+#cascading h2 {
+  font-size: 35px;
+}
+</style>
+
+<div id="cascading">
+  <h2>Lorem Ipsum</h2>
+  <p>Lorem ipsum dolor sit amet.</p>
+  <p>Consectetur adipisicing elit. Architecto, maxime?</p>
+</div>
+
+---
+
+```css
+body {
+  font-family: "Comic Sans MS";
+  color: hsl(189, 85%, 37%);
+}
+
+p {
+  font-size: 20px;
+  color: hsl(359, 85%, 37%);
+}
+
+h2 {
+  font-size: 35px;
+}
+```
+
+<style>
+#specificity, #specificity h2 {
+  font-family: "Comic Sans MS";
+  color: hsl(189, 85%, 37%);
+}
+
+#specificity p {
+  font-size: 20px;
+  color: hsl(359, 85%, 37%);
+}
+
+#specificity h2 {
+  font-size: 35px;
+}
+</style>
+
+<div id="specificity">
+  <h2>Lorem Ipsum</h2>
+  <p>Lorem ipsum dolor sit amet.</p>
+  <p>Consectetur adipisicing elit. Architecto, maxime?</p>
+</div>
+
+---
+
+## Specificity (specifikhet, specificitet)
+
+---
+
+### Innan vi börjar:
+
+De två icke-semantiska taggarna `div` och `span` används för att kapsla in och boxa in innehåll.
+
+`div`: block
+
+`span`: inline-block
+
+---
+
+```html
+<div>
+  <p>
+    <span>Lorem ipsum</span> dolor sit amet, consectetur adipisicing elit.
+    Fugiat quas officiis maiores <span>exercitationem</span> sunt iusto?
+  </p>
+</div>
+```
+
+<style>
+.example-div {
+  background: #444;
+  color: #fff;
+}
+
+.example-div span {
+  color: #CCC;
+  background: #222;
+}
+</style>
+
+<div class="example-div">
+  <p><span>Lorem ipsum</span> dolor sit amet, consectetur adipisicing elit. Fugiat quas officiis maiores <span>exercitationem</span> sunt iusto?</p>
+</div>
+
+---
+
+Specificitet är ordningen som styr vilken regel som styr
+
+---
+
+```css
+```
+
+---
 
 Class
 
@@ -17,3 +284,5 @@ ID
 Div
 
 Span
+
+</div>
