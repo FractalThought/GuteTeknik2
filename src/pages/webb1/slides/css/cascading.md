@@ -268,11 +268,51 @@ De två icke-semantiska taggarna `div` och `span` används för att kapsla in oc
 
 ---
 
-Specificitet är ordningen som styr vilken regel som styr
+Specificitet är ordningen som **specificerar** vilken regel som styr. Det som är mer specifikt styr det som är mindre specifikt
+
+---
+
+### Abstraktionsexempel
+
+Du är en person som bor på Gotland, som ligger i Sverige.
+
+För att benämna dig så kan vi beskriva dig med/som:
+
+- Ditt namn
+- Boende på Gotland
+- Boende i Sverige
+- Boende på Jorden
+- Människa
+
+---
+
+### Uttryckt i "HTML"
+
+```html
+<earth>
+  <sweden>
+    <gotland>
+      <human id="Felix"></human>
+    </gotland>
+  </sweden>
+</earth>
+```
 
 ---
 
 ```css
+earth {
+}
+```
+
+```css
+sweden {
+}
+```
+
+```css
+gotland human {
+}
 ```
 
 ---
