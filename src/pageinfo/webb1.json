@@ -126,6 +126,10 @@
         {
           "subPageName": "CSS Box Model",
           "subPageLink": "slides/teknik/cssboxmodel"
+        },
+        {
+          "subPageName": "CSS Grundläggande koncept",
+          "subPageLink": "slides/css/css_concepts"
         }
       ]
     },
