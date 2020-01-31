@@ -1,12 +1,12 @@
 ---
 title: "Veckoplanering"
-date: "2017-08-10"
+date: "2020-01-31"
 heading: "Om kursen"
 ---
 
 ## Kursöversikt
 
-## v3: Kursintro + intro CSS custom properties (1 lektion)
+## Kursintro + intro CSS custom properties (1 lektion)
 
 - Vad är custom properties?
 - Användningsområde
@@ -20,7 +20,7 @@ heading: "Om kursen"
 Fortsätt löpande med CSS variabler under kursen (de ska använda det hedanefter)
 Detta blir en del av designsystemet de bygger upp, och är en del av kunskapskraven (planera sin kod)
 
-## v4-v6: CSS Grid (3 lektioner)
+## CSS Grid (3 lektioner)
 
 - Introduktion CSS Grid, skapa vår grundläggande layout med grid (header, main, aside, footer)
   - grid-template-rows och columns
@@ -31,13 +31,13 @@ Detta blir en del av designsystemet de bygger upp, och är en del av kunskapskra
 - Grid i Figma -> Grid i CSS (planera och implementera layouten)
 - Få en layout som de ska implementera (mosaic layout)
 
-## v7-8: CSS Animations (2 lektioner)
+## CSS Animations (2 lektioner)
 
 - Transitions
 - Keyframes
 - Vad man kan animera, vad man inte kan animera (satta värden)
 
-## v10 -> v23:
+## Fram till kursavslut
 
 ## CSS generering från Figma: 2 lektioner (box shadow, text, border-radius)
 
@@ -45,6 +45,7 @@ Detta blir en del av designsystemet de bygger upp, och är en del av kunskapskra
 - Färglära som del av CSS
 
 ## Anpassa bilder och media till webben: 2 lektioner (använda Figma och Squoosh)
+
 ## Arbeta med SVG: 3 lektioner (SVGOMG för optimering)
 
 - Introduktion SVG
@@ -69,8 +70,6 @@ Planering
 - Introduktion media queries
 - CSS Grid och media queries
 - Custom properties och media queries
-
-
 
 Projekt: Reponsiv hemsida
 Projekt: Webbapplikation
