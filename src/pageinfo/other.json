@@ -1,0 +1,25 @@
+{
+    "title": "Teori",
+    "subpages": [
+      {
+        "subPageName": "Historia",
+        "subPageLink": "historia"
+      },
+      {
+        "subPageName": "Hur internet fungerar",
+        "subPageLink": "internet"
+      },
+      {
+        "subPageName": "World Wide Web",
+        "subPageLink": "www"
+      },
+      {
+        "subPageName": "Lagar och regler",
+        "subPageLink": "lagaroregler"
+      },
+      {
+        "subPageName": "Begrepp",
+        "subPageLink": "begrepp"
+      }
+    ]
+  },
