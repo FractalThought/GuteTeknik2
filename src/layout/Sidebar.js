@@ -1,6 +1,20 @@
 import React, { useEffect } from "react"
-import { Link } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
 import SidebarHeading from "./SidebarHeading"
+/*
+https://itnext.io/reading-data-from-a-json-file-with-gatsby-graphql-572b18ab98a
+*/
+
+// graphql`
+//   query SidebarHeading {
+//     allSidebarItemsJson {
+//       edges {
+//         node {
+
+//         }
+//       }
+//     }
+//   }`
 
 function extractUrlData(url) {
   let topPage,

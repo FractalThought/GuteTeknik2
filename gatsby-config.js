@@ -21,8 +21,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `src`,
-        path: `${__dirname}/src/`,
+        path: `${__dirname}/src/pages`,
+        name: `pages`,
       },
     },
     {
@@ -109,6 +109,14 @@ module.exports = {
         // optional: switch to className styling
         // see `useClassNames example with `AutoGen` below
         useClassNames: true,
+      },
+    },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pageinfo`,
+        path: `${__dirname}/src/pageinfo`,
       },
     },
   ],

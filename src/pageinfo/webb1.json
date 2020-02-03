@@ -50,19 +50,6 @@
       ]
     },
     {
-      "title": "JavaScript/JQuery",
-      "subpages": [
-        {
-          "subPageName": "JavaScript",
-          "subPageLink": "javascript"
-        },
-        {
-          "subPageName": "jQuery",
-          "subPageLink": "jquery"
-        }
-      ]
-    },
-    {
       "title": "Individuellt Val",
       "subpages": [
         {
