@@ -111,13 +111,13 @@ module.exports = {
         useClassNames: true,
       },
     },
-    `gatsby-transformer-json`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `pageinfo`,
-        path: `${__dirname}/src/pageinfo`,
-      },
-    },
+    // `gatsby-transformer-json`,
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `pageinfo`,
+    //     path: `${__dirname}/src/pageinfo`,
+    //   },
+    // },
   ],
 }

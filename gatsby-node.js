@@ -16,34 +16,67 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       name: `slug`,
       value: slug,
     })
+
+    const parent = getNode(node.parent)
+
+    createNodeField({
+      node,
+      name: "collection",
+      value: parent.sourceInstanceName,
+    })
   }
 }
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
-  return graphql(`
-    {
-      allMarkdownRemark {
-        edges {
-          node {
-            fields {
-              slug
+
+  return new Promise((resolve, reject) => {
+    graphql(`
+      {
+        allMarkdownRemark {
+          edges {
+            node {
+              fields {
+                slug
+              }
             }
           }
         }
       }
-    }
-  `).then(result => {
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
-        path: node.fields.slug,
-        component: path.resolve(`./src/templates/page.js`),
-        context: {
-          // Data passed to context is available
-          // in page queries as GraphQL variables.
-          slug: node.fields.slug,
-        },
+    `).then(results => {
+      const allEdges = results.data.allMarkdownRemark.edges
+
+      const slideEdges = allEdges.filter(
+        edge => edge.node.fields.collection === `slides`
+      )
+      const pageEdges = allEdges.filter(
+        edge => edge.node.fields.collection === `pages`
+      )
+
+      slideEdges.forEach(({ node }) => {
+        createPage({
+          path: node.fields.slug,
+          component: path.resolve(`./src/templates/slide.js`),
+          context: {
+            // Data passed to context is available
+            // in page queries as GraphQL variables.
+            slug: `slides/${node.fields.slug}`,
+          },
+        })
+      })
+
+      pageEdges.forEach(({ node }) => {
+        createPage({
+          path: node.fields.slug,
+          component: path.resolve(`./src/templates/page.js`),
+          context: {
+            // Data passed to context is available
+            // in page queries as GraphQL variables.
+            slug: node.fields.slug,
+          },
+        })
       })
     })
   })
+  resolve()
 }
