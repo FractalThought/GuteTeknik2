@@ -35,17 +35,7 @@ export default ({ pageContext, data, location }) => {
 
   //const customCrumbLabel = location.pathname.toLowerCase().replace("-", " ")
 
-  return (
-    <Container url={page.fields.slug} pages={allInfo.edges}>
-      <Breadcrumb
-        crumbs={crumbs}
-        crumbSeparator=" > "
-        crumbLabel={page.frontmatter.title}
-      />
-      <h1 className="page-heading">{page.frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: page.html }} />
-    </Container>
-  )
+  return <Container url={page.fields.slug}></Container>
 }
 
 export const query = graphql`
