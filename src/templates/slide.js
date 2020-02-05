@@ -10,8 +10,6 @@ export default ({ pageContext, data, location }) => {
 
   const page = data.markdownRemark
 
-  const allInfo = data.allMarkdownRemark
-
   /*
   
   TODO:
@@ -47,21 +45,6 @@ export const query = graphql`
       }
       fields {
         slug
-      }
-    }
-    allMarkdownRemark {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            heading
-          }
-          excerpt
-          fields {
-            slug
-          }
-        }
       }
     }
   }
