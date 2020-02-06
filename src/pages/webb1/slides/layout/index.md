@@ -71,7 +71,7 @@ För detta ska fungera så behöver du ofta skapa ett element. Dessa brukar kall
 
 Detta gör att Main och Aside kommer vara lika breda, och tillsammans göra upp hela bredden av content-wrapper.
 
-# Övningar
+# "Övning" (detta ska vara med på din hemsida)
 
 Läs följande artiklar på Mozilla Developer Network:
 
@@ -79,7 +79,7 @@ Läs följande artiklar på Mozilla Developer Network:
 - [Normal flow](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)
 - [FLexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
 
-Samt
+Samt kika in [CSS-Tricks: A guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
 
 Gör sedan följande:
 
