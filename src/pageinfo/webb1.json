@@ -92,6 +92,10 @@
         {
           "subPageName": "CSS Grundläggande koncept",
           "subPageLink": "slides/css/css_concepts"
+        },
+        {
+          "subPageName": "Layout",
+          "subPageLink": "slides/layout"
         }
       ]
     },
