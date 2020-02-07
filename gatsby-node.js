@@ -1,4 +1,5 @@
-const path = require(`path`)
+const Promise = require("bluebird")
+const path = require("path")
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 /*
@@ -10,19 +11,21 @@ https://chipcullen.com/making-multiple-content-types-in-gatsby/
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `pages` })
-    createNodeField({
-      node,
-      name: `slug`,
-      value: slug,
-    })
-
     const parent = getNode(node.parent)
 
     createNodeField({
       node,
       name: "collection",
       value: parent.sourceInstanceName,
+    })
+
+    const slug = createFilePath({ node, getNode })
+
+    //console.log(slug)
+    createNodeField({
+      node,
+      name: `slug`,
+      value: slug,
     })
   }
 }
@@ -37,6 +40,7 @@ exports.createPages = ({ graphql, actions }) => {
           edges {
             node {
               fields {
+                collection
                 slug
               }
             }
@@ -52,6 +56,10 @@ exports.createPages = ({ graphql, actions }) => {
       const pageEdges = allEdges.filter(
         edge => edge.node.fields.collection === `pages`
       )
+
+      console.log(allEdges)
+      console.log(slideEdges)
+      console.log(pageEdges)
 
       slideEdges.forEach(({ node }) => {
         createPage({

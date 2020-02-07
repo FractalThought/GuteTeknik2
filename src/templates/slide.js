@@ -33,7 +33,7 @@ export default ({ pageContext, data, location }) => {
 
   //const customCrumbLabel = location.pathname.toLowerCase().replace("-", " ")
 
-  return <Container url={page.fields.slug}></Container>
+  return <React.Fragment>Hello</React.Fragment>
 }
 
 export const query = graphql`
