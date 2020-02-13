@@ -1,4 +1,5 @@
 # Användning av bilder
+
 - Hitta användbara bilder
 - Vad innebär optimering?
 - Varför ska man optimera bilder för webben?
@@ -6,6 +7,7 @@
 ---
 
 # Hitta bilder, att tänka på
+
 - Vilka bilder får jag använda?
 - Hur får de användas?
 - Behöver jag bilder?
@@ -13,6 +15,7 @@
 ---
 
 # Vad får man inte göra med bilder?
+
 - Ta direkt från någon annan utan tillstånd (inklusive bilder publicerade på internet)
 - Ladda upp bilder på personer utan deras tillstånd
 - Ladda upp kränkande bilder på andra (får inte ens ta dem)
@@ -20,6 +23,7 @@
 ---
 
 # Vilka bilder får man använda?
+
 - Google: Verktyg > Användningsrättigheter
 - Gratis bildresursverktyg, tex Unsplash
 - Egna bilder, eller andras bilder med rätt tillstånd
@@ -27,17 +31,54 @@
 ---
 
 # Licensiering och akreditering
+
 - Bilder kan publiceras under en licens
 - Licensen kan påverka hur bilden får användas
 - Ibland kan akreditering behövas, alltså att du berättar varifrån bilden kommer och vem som skapat/tagit bilden, i sammanhang där den används
 
 ---
 
+# Allmänt vett vid bildanvändning
+
+- Namnge filerna korrekt, tex `spagetti-carbonara.jpg` inte `DSC3298.jpg`
+- Lägg filerna i en egen mapp, tex `img/`
+
+---
+
+## HTML-taggen för bilder:
+
+```html
+<img src="img/spagetti-carbonara.jpg" alt="Spagetti Carbonara" />
+```
+
+**Noteringar:**
+
+- `src` används för att säga vart filer är. Du kan använda en webbadress.
+- Man måste alltid ha med en `alt` som förklarar vad bilden är.
+  _"Picture of"_ eller _"bild av"_ behövs inte.
+
+---
+
 # Bildoptimering
-- 
+
+Mål: Minska filstorleken på bilden, helst utan att försämra bildkvalitén märkningsvärt.
+
+Tumregel på filstorlek: under 70kb.
+
+- Minska bildstorleken (upplösningen) till användningssyfte
+- Ändra filformat (jpg, png, gif, osv)
+- Ta bort metadata som inte behövs
 
 ---
 
 # Squoosh.app
 
 Skapat av Google Chrome Labs, [Squoosh](https://squoosh.app/) är en webbapplikation som optimerar bilder.
+
+---
+
+# Källor
+
+- https://noor.se/digitalskolan/on-page/bildoptimering/
+- http://www.webbmekanikern.se/artiklar/optimera-bilder-for-webben
+- https://kinsta.com/se/blog/optimerar-bilder-for-webb/
