@@ -1,6 +1,42 @@
-.welcome {
-  width: 80vw;
-  margin: 0 auto;
+.hero {
+  height: 80vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  &hero__info {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2em;
+
+    h1 {
+      font-size: 5em;
+    }
+
+    p {
+      font-size: 2em;
+    }
+  }
+}
+
+.course-item-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.course-item {
+  display: flex;
+
+  &__info {
+    a {
+      color: #444;
+    }
+
+    &__link {
+    }
+  }
 }
 
 .course-card-container {

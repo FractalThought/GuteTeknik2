@@ -35,10 +35,12 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/src/images`,
         name: `images`,
-        path: path.join(__dirname, `src`, `images`),
       },
     },
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -118,13 +120,11 @@ module.exports = {
         useClassNames: true,
       },
     },
-    // `gatsby-transformer-json`,
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `pageinfo`,
-    //     path: `${__dirname}/src/pageinfo`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-transformer-json`,
+      options: {
+        typeName: `Json`,
+      },
+    },
   ],
 }

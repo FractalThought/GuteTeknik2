@@ -10,16 +10,16 @@ function Header() {
         </h1>
         <ul>
           <li>
-            <Link to="webb1">Webbutveckling 1</Link>
+            <Link to="/webb1">Webbutveckling 1</Link>
           </li>
           <li>
-            <Link to="webb2">Webbutveckling 2</Link>
+            <Link to="/webb2">Webbutveckling 2</Link>
           </li>
           <li>
-            <Link to="prog1">Programmering 1</Link>
+            <Link to="/prog1">Programmering 1</Link>
           </li>
           <li>
-            <Link to="prog2">Programmering 2</Link>
+            <Link to="/prog2">Programmering 2</Link>
           </li>
         </ul>
       </nav>
