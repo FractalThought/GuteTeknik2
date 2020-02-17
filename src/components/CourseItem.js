@@ -16,8 +16,9 @@ function CourseItem({ courseName, courseLink, info }) {
   const imgSource = `${courseLink}.png`
   return (
     <div className="course-item">
-      <MyImg src={imgSource} />
-
+      <div style={{ width: "100%" }}>
+        <MyImg src={imgSource} />
+      </div>
       <div className="course-item__info">
         <Link title={courseName} to={actualLink}>
           <h1>{courseName}</h1>

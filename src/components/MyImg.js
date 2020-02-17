@@ -4,23 +4,15 @@ import { useStaticQuery, graphql } from "gatsby"
 
 const MyImg = function({ src }) {
   const data = useStaticQuery(graphql`
-
-  fragment MyImageSharp on ImageSharpFluid {
-    base64
-    aspectRatio
-    src
-    srcSet
-    sizes
-    originalName
-  }
-
     query {
       allImageSharp {
         edges {
           node {
             id
-            fluid(maxWidth: 250, maxHeight: 250) {
-              ...MyImageSharp
+            fluid {
+              originalName
+              presentationWidth
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -32,8 +24,15 @@ const MyImg = function({ src }) {
     return edge.node.fluid.originalName === src
   })
 
+  const style = {
+    maxWidth: selectedImage.node.fluid.presentationWidth,
+    margin: "0 auto",
+  }
+
   if (selectedImage) {
-    return <Img fluid={selectedImage.node.fluid} />
+    return (
+      <Img fluid={selectedImage.node.fluid} style={style} loading="eager" />
+    )
   }
   return <React.Fragment></React.Fragment>
 }
