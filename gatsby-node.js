@@ -57,10 +57,6 @@ exports.createPages = ({ graphql, actions }) => {
         edge => edge.node.fields.collection === `pages`
       )
 
-      console.log(allEdges)
-      console.log(slideEdges)
-      console.log(pageEdges)
-
       slideEdges.forEach(({ node }) => {
         createPage({
           path: `slides/${node.fields.slug}`,
