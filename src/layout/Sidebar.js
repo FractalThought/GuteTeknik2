@@ -90,7 +90,7 @@ function Sidebar({ urlData, pages }) {
   let pageData = require("../pageinfo/" + topPage + ".json") // Still need this for top page info
 
   useEffect(() => {
-    document.title = "GuteTeknik " + pageData.pageName
+    document.title = `GuteTeknik  ${pageData.pageName}`
   })
 
   //let headings = Object.values(headingData) // gets the array of headings only

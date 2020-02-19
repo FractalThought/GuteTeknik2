@@ -1,5 +1,6 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { useEffect } from "react"
+import { Img, graphql } from "gatsby"
 import CourseItem from "../components/CourseItem"
 
 const courses = [
@@ -36,7 +37,9 @@ const courses = [
 ]
 
 export default ({ data }) => {
-  // console.log(data)
+  useEffect(() => {
+    document.title = "GuteTeknik"
+  })
 
   return (
     <React.Fragment>
@@ -45,6 +48,7 @@ export default ({ data }) => {
           <h1>GuteTeknik</h1>
           <p>IT-kurserna på Gutegymnasiet</p>
         </div>
+        <MyImg src="hero.png" width="500" />
         <img src="images/hero.svg" alt="Hero" width="500" />
       </section>
 
