@@ -31,7 +31,9 @@ const MyImg = function({ src }) {
 
   if (selectedImage) {
     return (
-      <Img fluid={selectedImage.node.fluid} style={style} loading="eager" />
+      <div className="image-wrapper">
+        <Img fluid={selectedImage.node.fluid} style={style} loading="eager" />
+      </div>
     )
   }
   return <React.Fragment></React.Fragment>
