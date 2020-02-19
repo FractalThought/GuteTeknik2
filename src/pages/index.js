@@ -1,7 +1,8 @@
 import React from "react"
 import { useEffect } from "react"
-import { Img, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import CourseItem from "../components/CourseItem"
+import MyImg from "../components/MyImg"
 
 const courses = [
   {
