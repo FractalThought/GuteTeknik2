@@ -50,7 +50,6 @@ export default ({ data }) => {
           <p>IT-kurserna på Gutegymnasiet</p>
         </div>
         <MyImg src="hero.png" width="500" />
-        <img src="images/hero.svg" alt="Hero" width="500" />
       </section>
 
       <section className="course-item-container">
