@@ -1,37 +1,61 @@
 .hero {
-  height: 80vh;
+  height: 50vh;
+  padding: 3em 0;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 
-  &hero__info {
+  .hero__info {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     margin-right: 2em;
 
     h1 {
-      font-size: 5em;
+      font-size: 3em;
+      color: $primary-6;
+      margin-top: 0;
     }
 
     p {
-      font-size: 2em;
+      font-size: 1em;
+      color: $primary-3;
     }
   }
 }
 
 .course-item-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: block;
+  width: 75vw;
+  margin: 0 auto;
+  padding: 3em 0;
 }
 
 .course-item {
+  &:nth-child(odd) {
+    background: $light-color;
+  }
+  &:nth-child(even) {
+    background: $gray-1;
+  }
+
+  padding: 20px;
   display: flex;
 
   &__info {
+    margin-left: 20px;
+    width: calc(100% - 250px);
+
+    h1 {
+      margin-top: 0;
+    }
+
     a {
-      color: #444;
+      color: $primary-6;
+
+      &:hover {
+        color: $primary-4;
+      }
     }
 
     &__link {

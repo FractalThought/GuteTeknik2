@@ -10,30 +10,35 @@ const courses = [
     courseLink: "prog1",
     info:
       "Introduktion till programmering. Vi jobbar i JavaScript med NodeJS och i webbläsaren.",
+    shortcuts: [{ name: "", link: "" }],
   },
   {
     courseName: "Programmering 2",
     courseLink: "prog2",
     info:
       "Fortsättning på programmering. Vi jobbar med Unity och språket C#, samt JavaScript med NodeJS.",
+    shortcuts: [{ name: "", link: "" }],
   },
   {
     courseName: "Webbutveckling 1",
     courseLink: "webb1",
     info:
       "Introduktion till webbutveckling. Vi går igenom grunderna i HTML och CSS.",
+    shortcuts: [{ name: "Introprojektet", link: "introprojektet" }],
   },
   {
     courseName: "Webbutveckling 2",
     courseLink: "webb2",
     info:
       "Fortsättning på webbutveckling. Vi skapar webbapplikationer och arbetar bland annat med animationer, SVG, och responsiv design.",
+    shortcuts: [{ name: "", link: "" }],
   },
   {
     courseName: "Digitalt skapande 1",
     courseLink: "digi1",
     info:
       "Skapa en digital produkt från idé till färdig produkt. Vi jobbar med Unity och skapar spel under kursen.",
+    shortcuts: [{ name: "", link: "" }],
   },
 ]
 
@@ -49,7 +54,7 @@ export default ({ data }) => {
           <h1>GuteTeknik</h1>
           <p>IT-kurserna på Gutegymnasiet</p>
         </div>
-        <MyImg src="hero.png" width="500" />
+        <MyImg src="hero.png" width="250" />
       </section>
 
       <section className="course-item-container">

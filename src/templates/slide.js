@@ -1,14 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Container from "../components/Container"
-import { Breadcrumb } from "gatsby-plugin-breadcrumb"
 
 export default ({ pageContext, data, location }) => {
-  const {
-    breadcrumb: { crumbs },
-  } = pageContext
+  // const {
+  //   breadcrumb: { crumbs },
+  // } = pageContext
 
-  const page = data.markdownRemark
+  // const page = data.markdownRemark
 
   /*
   
