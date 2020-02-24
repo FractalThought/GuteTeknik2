@@ -3,8 +3,6 @@ title: "CSS Custom Properties"
 date: "2017-08-10"
 ---
 
-# Custom properties (css variables)
-
 ## Vad är det?
 
 - Sätt att skapa en variabel i CSS
@@ -17,6 +15,7 @@ date: "2017-08-10"
 ### Skapande:
 
 ```css
+/* Root gör att alla element kommer åt variabeln */
 :root {
   --primary-color: #af0e12;
 }
@@ -44,21 +43,56 @@ p {
   color: var(--text-color);
 }
 
-.important-container {
-  --text-color: var(--secondary-color);
+.info-card {
+  --primary-weight: 400;
+  --bold-weight: 600;
 }
+
+.info-card__heading {
+  font-weight: var(--primary-weight);
+}
+
 ```
 
 # Kan ändras live med JavaScript
 
 ```javascript
-let root = document.documentElement
+// Hämta root-elementet
+let root = document.documentElement;
 
+let isDark = false;
+
+// Registera ett klick-event till root
 root.addEventListener("click", e => {
-  root.style.setProperty("--background-color", "var(--dark)")
-  root.style.setProperty("--text-color", "var(--light)")
+
+  // Ifall temat är mörkt, sätt till ljust, annars sätt till mörkt.
+  isDark ? root.style.setProperty("--text-color", "var(--light)") : root.style.setProperty("--background-color", "var(--dark)");
+
+  // Ställ om isDark-variabeln
+  isDark = !isDark;
+  
 })
 ```
+
+## Kan överskrivas precis som andra properties
+
+```css
+:root {
+  --primary-color: #af0e12;
+  --secondary-color: #0eafab;
+  --text-color: var(--primary-color);
+  --accent-color: var(--secondary-color);
+}
+
+.important-container {
+  --text-color: var(--secondary-color);
+}
+
+.warning {
+  --primary-color: #af0e12;
+}
+```
+
 
 ## Källor:
 

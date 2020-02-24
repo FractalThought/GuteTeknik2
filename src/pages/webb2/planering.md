@@ -4,9 +4,24 @@ date: "2020-01-31"
 heading: "Om kursen"
 ---
 
+| 10    | Introduktion     | Introduktion och CSS custom properties                                                |
+| 11    | CSS Grid          | CSS Grid                                   |
+| 12    | ?      | ?                        |
+| 13    | ?              | ?                                                         |
+| 14    | ?              | ?                                                         |
+| 15    | **Lov**        | **Lov**                                                   |
+| 16    | ?              | ?                                                         |
+| 17    | ?              | ?                                                         |
+| 18    | ?    | ?                                                |
+| 19    | ?              | ?                                                         |
+| 20    | Lediga tisdag              | ?                                                         |
+| 21    | ?     | ?                                                |
+| 22    | ?              | ?                                                         |
+| 23    | **Avslutning** | **Avslutning**                                            |
+
 ## Kursöversikt
 
-## Kursintro + intro CSS custom properties (1 lektion)
+## Kursintro + intro CSS custom properties + BEM (3 lektioner)
 
 - Vad är custom properties?
 - Användningsområde
@@ -16,6 +31,8 @@ heading: "Om kursen"
   - Scoping och omdeklarering
 - Code along genomgång
 - Eget arbete
+
+Förklaring hur man använder Block Element Modifier.
 
 Fortsätt löpande med CSS variabler under kursen (de ska använda det hedanefter)
 Detta blir en del av designsystemet de bygger upp, och är en del av kunskapskraven (planera sin kod).
