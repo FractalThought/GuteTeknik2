@@ -96,6 +96,10 @@
         {
           "subPageName": "Layout",
           "subPageLink": "slides/layout"
+        },
+        {
+          "subPageName": "FTP",
+          "subPageLink": "slides/other/ftp"
         }
       ]
     },
