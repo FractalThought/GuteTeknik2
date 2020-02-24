@@ -16,49 +16,15 @@
       ]
     },
     {
-      "title": "HTML/CSS",
+      "title": "Custom properties",
       "subpages": [
         {
-          "subPageName": "Grunderna i HTML",
-          "subPageLink": "htmlgrunder"
-        }
-      ]
-    },
-    {
-      "title": "JavaScript/JQuery",
-      "subpages": [
-        {
-          "subPageName": "JavaScript",
-          "subPageLink": "javascript"
+          "subPageName": "Om custom properties",
+          "subPageLink": "customproperties"
         },
         {
-          "subPageName": "jQuery",
-          "subPageLink": "jquery"
-        }
-      ]
-    },
-    {
-      "title": "Teori",
-      "subpages": [
-        {
-          "subPageName": "Historia",
-          "subPageLink": "historia"
-        },
-        {
-          "subPageName": "Hur internet fungerar",
-          "subPageLink": "internet"
-        },
-        {
-          "subPageName": "World Wide Web",
-          "subPageLink": "www"
-        },
-        {
-          "subPageName": "Lagar och regler",
-          "subPageLink": "lagaroregler"
-        },
-        {
-          "subPageName": "Begrepp",
-          "subPageLink": "begrepp"
+          "subPageName": "Laborationer",
+          "subPageLink": "customproperties/labb"
         }
       ]
     }

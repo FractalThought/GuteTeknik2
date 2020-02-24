@@ -18,7 +18,7 @@ heading: "Om kursen"
 - Eget arbete
 
 Fortsätt löpande med CSS variabler under kursen (de ska använda det hedanefter)
-Detta blir en del av designsystemet de bygger upp, och är en del av kunskapskraven (planera sin kod)
+Detta blir en del av designsystemet de bygger upp, och är en del av kunskapskraven (planera sin kod).
 
 ## CSS Grid (3 lektioner)
 
@@ -56,6 +56,7 @@ Detta blir en del av designsystemet de bygger upp, och är en del av kunskapskra
 
 - Add/Remove/Toggle classList
 - Add/Remove elements
+- Template literals
 
 ## Animera SVG med Shape Shifter och CSS: 3 lektioner
 

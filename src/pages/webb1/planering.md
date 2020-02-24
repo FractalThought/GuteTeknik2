@@ -55,3 +55,4 @@ date: "2017-08-10"
 | 7     | 4. Reflektion | Publicering och eget arbete                               |
 | 8     | 4. Reflektion | Eget arbete                                               |
 | 8     | 4. Reflektion | Eget arbete                                               |
+| 15    | Lov           | Lov                                                       |
