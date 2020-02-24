@@ -37,8 +37,6 @@ Detta blir en del av designsystemet de bygger upp, och är en del av kunskapskra
 - Keyframes
 - Vad man kan animera, vad man inte kan animera (satta värden)
 
-## Fram till kursavslut
-
 ## CSS generering från Figma: 2 lektioner (box shadow, text, border-radius)
 
 - Jobba med att skapa en struktur (designsystem)

@@ -19,12 +19,25 @@
       "title": "Custom properties",
       "subpages": [
         {
-          "subPageName": "Om custom properties",
+          "subPageName": "Introduktion",
           "subPageLink": "customproperties"
         },
         {
           "subPageName": "Laborationer",
           "subPageLink": "customproperties/labb"
+        }
+      ]
+    },
+    {
+      "title": "CSS Grid",
+      "subpages": [
+        {
+          "subPageName": "Introduktion",
+          "subPageLink": "cssgrid"
+        },
+        {
+          "subPageName": "Laborationer",
+          "subPageLink": "cssgrid/labb"
         }
       ]
     }
