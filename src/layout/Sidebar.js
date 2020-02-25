@@ -110,7 +110,7 @@ function Sidebar({ urlData, pages }) {
   return (
     <nav>
       <section>
-        <h1>{pageData.pageName}</h1>
+        <h2>{pageData.pageName}</h2>
         <Link to={"/" + pageData.pageLink}>{pageData.pageName}</Link>
       </section>
       {pageData.headings.map((heading, index) => (

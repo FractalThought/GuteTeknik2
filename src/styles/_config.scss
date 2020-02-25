@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500|Open+Sans:400,600&display=swap");
+
 $primary-color: #366bd3;
 $dark-color: #343a40;
 $light-color: #f4f4f4;
@@ -78,5 +80,6 @@ $accent_green_8: rgba(95.000001937151, 109.00000110269, 24.000000469387, 1);
 $accent_green_9: rgba(63.000000044703, 72.000003308058, 16.000000946224, 1);
 
 @mixin heading-font-regular {
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
 }

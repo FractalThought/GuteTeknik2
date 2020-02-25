@@ -22,6 +22,7 @@ function Container({ url, pages, children }) {
           <Sidebar urlData={urlData} pages={pages} />
         </aside>
         <main>
+          <h1 className="printheader">GuteTeknik</h1>
           {children}
           <script async src="https://static.codepen.io/assets/embed/ei.js" />
         </main>

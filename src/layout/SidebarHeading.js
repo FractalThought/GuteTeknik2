@@ -25,7 +25,7 @@ import { Link } from "gatsby"
 function SidebarHeading({ title, subpages, mainPage, currentPage }) {
   return (
     <section>
-      <h1>{title}</h1>
+      <h2>{title}</h2>
       <ul>
         {subpages.map((subpage, index) => (
           <li key={index}>

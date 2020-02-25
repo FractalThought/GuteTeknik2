@@ -82,8 +82,14 @@ header {
     background-color: white;
     padding: 3rem;
     padding-bottom: 3rem;
+
     a {
       color: $primary-color;
+      text-decoration: underline;
+    }
+
+    .printheader {
+      display: none;
     }
   }
 
@@ -95,6 +101,7 @@ header {
       * {
         transition: all 0.3s ease-in-out;
         color: $gray_2;
+        font-family: "Open Sans", sans-serif;
       }
 
       a {
@@ -105,24 +112,25 @@ header {
           color: $primary_6;
           font-weight: 600;
         }
+
+        &.active {
+          color: $primary_3;
+          font-weight: 600;
+        }
       }
 
-      a.active {
-        color: $primary_3;
-        font-weight: 600;
-      }
-
-      h1 {
-        font-size: 1.2rem;
+      h2 {
+        font-size: 1.1rem;
         font-weight: 500;
       }
+
       ul {
         margin-left: 0.5rem;
         list-style-type: none;
       }
       &:hover {
         * {
-          color: $gray_4;
+          color: $gray_5;
         }
 
         a {
@@ -130,14 +138,14 @@ header {
           font-weight: 400;
 
           &:hover {
-            color: $primary_8;
+            color: $primary_9;
+            text-decoration: underline;
+          }
+
+          &.active {
+            color: $primary_9;
             font-weight: 600;
           }
-        }
-
-        a.active {
-          color: $primary_8;
-          font-weight: bold;
         }
       }
     }
@@ -185,3 +193,5 @@ header {
 .page-heading {
   margin-top: 0;
 }
+
+@import "print";

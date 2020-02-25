@@ -1,0 +1,31 @@
+@page {
+  margin: 1cm;
+}
+
+@media print {
+  header {
+    display: none;
+  }
+
+  #main-wrapper {
+    display: block;
+    background: none;
+    padding: 0;
+
+    .left,
+    .right {
+      display: none;
+    }
+
+    main {
+      box-shadow: none;
+      margin: 0;
+      padding: 0;
+
+      .printheader {
+        display: block;
+        color: $primary_8;
+      }
+    }
+  }
+}
