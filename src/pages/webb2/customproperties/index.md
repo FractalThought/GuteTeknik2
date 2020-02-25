@@ -98,5 +98,6 @@ root.addEventListener("click", e => {
 
 - [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
 - [Using CSS Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
-- [CSS Variable Secrets](https://www.youtube.com/watch?v=UQRSaG1hQ20)
-- [CSS Variables Tutorial](https://www.youtube.com/watch?v=sQUB039MG0I)
+- [CSS Variables explained with 5 examples](https://codeburst.io/css-variables-explained-with-5-examples-84adaffaa5bd)
+- [CSS Variables Tutorial (video)](https://www.youtube.com/watch?v=sQUB039MG0I)
+- [CSS Variable Secrets (video)](https://www.youtube.com/watch?v=UQRSaG1hQ20)

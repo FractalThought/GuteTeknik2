@@ -56,7 +56,7 @@ Detta blir en del av designsystemet de bygger upp, och är en del av kunskapskra
 
 ## CSS generering från Figma: 2 lektioner (box shadow, text, border-radius)
 
-- Jobba med att skapa en struktur (designsystem)
+- Jobba med att skapa en struktur (designsystem, färger)
 - Färglära som del av CSS
 
 ## Anpassa bilder och media till webben: 2 lektioner (använda Figma och Squoosh)
