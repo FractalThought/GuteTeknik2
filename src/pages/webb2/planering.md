@@ -4,94 +4,70 @@ date: "2020-01-31"
 heading: "Om kursen"
 ---
 
-| 10    | Introduktion     | Introduktion och CSS custom properties                                                |
-| 11    | CSS Grid          | CSS Grid                                   |
-| 12    | ?      | ?                        |
-| 13    | ?              | ?                                                         |
-| 14    | ?              | ?                                                         |
-| 15    | **Lov**        | **Lov**                                                   |
-| 16    | ?              | ?                                                         |
-| 17    | ?              | ?                                                         |
-| 18    | ?    | ?                                                |
-| 19    | ?              | ?                                                         |
-| 20    | Lediga tisdag              | ?                                                         |
-| 21    | ?     | ?                                                |
-| 22    | ?              | ?                                                         |
-| 23    | **Avslutning** | **Avslutning**                                            |
-
-## Kursöversikt
-
-## Kursintro + intro CSS custom properties + BEM (3 lektioner)
-
-- Vad är custom properties?
-- Användningsområde
-- Syntax
-  - Deklaration
-  - Användning
-  - Scoping och omdeklarering
-- Code along genomgång
-- Eget arbete
-
-Förklaring hur man använder Block Element Modifier.
-
-Fortsätt löpande med CSS variabler under kursen (de ska använda det hedanefter)
-Detta blir en del av designsystemet de bygger upp, och är en del av kunskapskraven (planera sin kod).
-
-## CSS Grid (3 lektioner)
-
-- Introduktion CSS Grid, skapa vår grundläggande layout med grid (header, main, aside, footer)
-  - grid-template-rows och columns
-  - grid-row och grid-row (# / # och span #)
-  - grid-gap
-  - template-areas
-  - Implicit
-- Grid i Figma -> Grid i CSS (planera och implementera layouten)
-- Få en layout som de ska implementera (mosaic layout)
-
-## CSS Animations (2 lektioner)
-
-- Transitions
-- Keyframes
-- Vad man kan animera, vad man inte kan animera (satta värden)
-
-## CSS generering från Figma: 2 lektioner (box shadow, text, border-radius)
-
-- Jobba med att skapa en struktur (designsystem, färger)
-- Färglära som del av CSS
-
-## Anpassa bilder och media till webben: 2 lektioner (använda Figma och Squoosh)
-
-## Arbeta med SVG: 3 lektioner (SVGOMG för optimering)
-
-- Introduktion SVG
-- SVG Mask & Clip
-- Repetition
-
-## Repetition av JavaScript: 2 lektioner
-
-- Add/Remove/Toggle classList
-- Add/Remove elements
-- Template literals
-
-## Animera SVG med Shape Shifter och CSS: 3 lektioner
-
-## Animera SVG med GreenSock: 2 lektion
-
-Effektiv UI-design
-Planering
-
-## Media queries och responsivitet: 3 lektioner
-
-- Repetition CSS Grid
-- Introduktion media queries
-- CSS Grid och media queries
-- Custom properties och media queries
-
-Projekt: Reponsiv hemsida
-Projekt: Webbapplikation
-
-Småprojekt/Övningar:
-
-- Återskapa rörliga reklamskyltar
-- Interaktiv karta
-- Presentera information på ett bättre sätt (lockers available)
+<table>
+<thead>
+<tr>
+<th>Vecka</th>
+<th>Dag</th>
+<th>Moment</th>
+<th>Beskrivning</th>
+</tr>
+</thead>
+<tbody>
+ <tr>
+  <th rowspan="3">10</th>
+  <td>Måndag</td>
+  <td>Intro till kursen</td>
+  <td>Genomgång om vad vi kommer gå igenom i kursen och kursens upplägg samt Introduktion till CSS custom properties</td>
+ </tr>
+ <tr>
+  <td>Tisdag</td>
+  <td colspan="2">Övningar i CSS properties (eget arbete)</td>
+ </tr>
+ <tr>
+  <td>Onsdag</td>
+  <td>Användning av CSS custom properties</td>
+  <td>Vi använder CSS custom properties i praktiken, och går in i några mer avancerade tekniker i CSS.</td>
+ </tr>
+ <tr>
+  <th rowspan="3">11</th>
+  <td>Måndag</td>
+  <td>BEM och CSS generering</td>
+  <td>Introduktion till BEM (Block Element Modifier), ett sätt för att strukturera CSS. Vi arbetar även i Figma, och använder det för att generera CSS, så vi inte behöver skriva det själva.</td>
+ </tr>
+ <tr>
+  <td>Tisdag</td>
+  <td colspan="2">Övningar i BEM och CSS generering</td>
+ </tr>
+ <tr>
+  <td>Onsdag</td>
+  <td>Designsystem</td>
+  <td>Vi använder CSS custom properties, BEM, och CSS generering för att skapa ett designsystem som vi kan använda i framtiden.</td>
+ </tr>
+ <tr>
+  <th rowspan="3">12</th>
+  <td>Måndag</td>
+  <td>Projekt: Metodik och designsystem</td>
+  <td>Ni använder designsystemet ni skapat, och använder teknikerna vi har gått igenom för att skapa ett projekt.</td>
+ </tr>
+ <tr><td>Tisdag</td></tr>
+ <tr><td>Onsdag</td></tr>
+ <tr><th rowspan="3">13</th><td>Måndag</td><td>Introduktion till SVG</td><td>Vi går igenom SVG (Scalable Vector Graphics), skapar grafik i Figma, exporterar till SVG, och använder det på en hemsida.</td></tr>
+ <tr><td>Tisdag</td><td colspan="2">Övningar i SVG (eget arbete)</td></tr>
+ <tr><td>Onsdag</td><td>SVG animation</td><td>Vi använder ShapeShifter och GreenSock för att animera SVG, och kontrollerar det med JavaScript. </td></tr>
+ <tr><th rowspan="3">14</th><td>Måndag</td><td>Projekt:  SVG</td><td>Ni använder det ni lärt er för att skapa ett webbprojekt.</td></tr>
+ <tr><td>Tisdag</td></tr>
+ <tr><td>Onsdag</td></tr>
+ <tr><th rowspan="3">15</th><td colspan="3" rowspan="3" style="text-align:center">LOV</td></tr>
+ <tr></tr>
+ <tr></tr>
+ <tr><th rowspan="3">16</th><td>Måndag</td><td>Introduktion till responsiv design</td><td>Vi går igenom vad responsiv design innebär, hur det fungerar, och vilka tekniker som man använder för att skapa responsiv design (media queries).</td></tr>
+ <tr><td>Tisdag</td><td>Övningar i responsiv design</td></tr>
+ <tr><td>Onsdag</td><td>CSS Grid</td></tr>
+ <tr><th rowspan="3">17</th><td>Måndag</td><td>Bildoptimering och textanpassning</td></tr>
+ <tr><td>Tisdag</td></tr>
+ <tr><td>Onsdag</td><td>Request minimering</td><td>Vi tittar på alternativ för att minska antalet requests som behöver skickas för att visa en hemsida. Vi går igenom Data-URI, inline-SVG, och alternativ till bilder.</td></tr>
+ <tr><th rowspan="3">18</th><td>Måndag</td><td>Projekt: Responsive landing page</td><td>Ni använder det ni lärt er för att skapa ett webbprojekt.</td></tr>
+ <tr><td>Tisdag</td></tr>
+ <tr><td>Onsdag</td><td></td></tr>
+</tbody></table>
