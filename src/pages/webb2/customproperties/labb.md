@@ -76,6 +76,7 @@ body {
 
 .card-wrapper {
   display: flex;
+  justify-content: center;
 }
 
 .card {
@@ -127,6 +128,12 @@ footer {
 
 1. Stila din knapp så att den minst får en liten border-radius (3-5px), en bakgrundsfärg, en textfärg, och lite padding och eventuellt marginal.
 2. Skapa en variabel för border-radius och ge både din knapp och .card samma border-radius.
+
+Tips: Lägg till `display: inline-block` för att få a-taggen att se mer ut som en knapp (block).
+
+### Bonus:
+
+- Lägg till ett hover-state (`.button:hover`) till din knapp som ändras dess bakgrundsfärg till en annan färg.
 
 ## Variabel som refererar till en annan variabel
 
