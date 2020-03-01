@@ -25,9 +25,14 @@ Lägg även in gradient och calc samt @import?
 
 -->
 
-## Skapa en grund
+Ni ska arbeta med dessa laborationer under lektionstid, eller under egen tid.
+Det är ingen inlämning, men att ni har gjort laborationerna kommer hjälpa er när ni gör projekten.
+
+## 1. Skapa en grund
 
 Skapa en grundläggande hemsida som har följande i body-taggen:
+
+### HTML
 
 ```html
 <div class="wrapper">
@@ -40,36 +45,37 @@ Skapa en grundläggande hemsida som har följande i body-taggen:
     </nav>
   </header>
   <main>
-    <h1>CSS variabler</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-    <p>Fugiat nobis placeat perferendis cum perspiciatis blanditiis?</p>
-    <p>Suscipit, deserunt. Sunt possimus quos nobis voluptatum.</p>
-
     <div class="card-wrapper">
       <div class="card">
-        <h2 class="card__name"></h2>
-        <h3 class="card__price"></h3>
-        <p class="card__desc"></p>
+        <h2 class="card__name">Starter</h2>
+        <h3 class="card__price">$0</h3>
+        <p class="card__desc">Custom properties är ett sätt att skapa variabler i CSS som kan återanvändas.</p>
+        <a class="button button--secondary">Select</a>
+      </div>
+      <div class="card card--suggested">
+        <h2 class="card__name">Business</h2>
+        <h3 class="card__price">$20 / Month</h3>
+        <p class="card__desc">Custom properties kan överskrivas precis som vanliga properties.</p>
+        <a class="button">Select</a>
       </div>
       <div class="card">
-        <h2 class="card__name"></h2>
-        <h3 class="card__price"></h3>
-        <p class="card__desc"></p>
+        <h2 class="card__name">Enterprise</h2>
+        <h3 class="card__price">$100 / Month</h3>
+        <p class="card__desc">Custom properties används för att skapa designsystem.</p>
+        <a class="button button--secondary" href="#">Select</a>
       </div>
-      <div class="card">
-        <h2 class="card__name"></h2>
-        <h3 class="card__price"></h3>
-        <p class="card__desc"></p>
-      </div>
-    </div>
   </main>
-  <footer>Copyright 2020</footer>
+    <footer><p>Copyright 2020</p></footer>
 </div>
 ```
+
+### CSS
 
 ```css
 body {
   font-family: Verdana, sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 .wrapper {
@@ -77,19 +83,40 @@ body {
   margin: 0 auto;
 }
 
+header>h1 {
+  margin: 0 0 20px 0;
+}
+
+main {
+  min-height: 75vh;
+}
+
 .card-wrapper {
   display: flex;
+  margin: 20px 0px;
+  padding: 0;
   justify-content: center;
 }
 
 .card {
-  border-top: 2px solid black;
-  padding: 10px;
-  margin: 10px;
+  width: 20vw;
+  border-top: 20px solid black;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+.card>* {
+  margin: 0;
 }
 ```
 
-## Lägg till färger
+## 2. Lägg till färger
 
 Lägg till följande CSS variabler:
 
@@ -106,6 +133,7 @@ Lägg till följande CSS variabler:
 }
 ```
 
+### Använd färgerna
 Använd sedan variablerna för att stila följande (ersätt -- i var med din valda variabel):
 
 ```css
@@ -115,7 +143,8 @@ body {
 
 header,
 footer {
-  background: var(--);
+  /* Sätt ut 3 olika färger för att skapa en linear-gradient */
+  background: linear-gradient(45deg, var(--), var(--), var(--));
 }
 
 .card {
@@ -127,7 +156,7 @@ footer {
 }
 ```
 
-## Stila button
+## 3. Stila button
 
 1. Stila din knapp så att den minst får en liten border-radius (3-5px), en bakgrundsfärg, en textfärg, och lite padding och eventuellt marginal.
 2. Skapa en variabel för border-radius och ge både din knapp och .card samma border-radius.
@@ -135,17 +164,17 @@ footer {
 
 Tips: Lägg till `display: inline-block` för att få a-taggen att se mer ut som en knapp (block).
 
-## Variabel som refererar till en annan variabel
+## 4. Variabel som refererar till en annan variabel
 
 1. Skapa två nya varibler, `text-color` och `bg-color`. Sätt dem till `var(--dark-color)`, och `var(--light-color)`.
 2. Ändra om på de ställen där du använder dark-color och light-color som textfärg eller bakgrundsfärg till dina nya variabler.
 3. Testa att byta text-color till något annat, till exempel --primary-color, eller varför inte byta din text-color till din bg-color, och vice versa.u
 
-## Kontrollera marginal och padding med CSS variabler
+## 5. Kontrollera marginal och padding med CSS variabler
 
 Korten behöver stilas, det behövs mer utrymme. Skapa en variabel för utrymme och använd det för att skapa ett utrymme mellan elementen i kortet.
 
-## Dark-mode button
+## 6. Dark-mode button (JS)
 
 Skapa en knapp (`<button>`) i headern och bind den till ett javascript event med följande:
 
@@ -163,30 +192,12 @@ Inuti funktionen SwitchDarkMode lägger du till kod som ändrar din mains bakgru
 - Gör att när du trycker på Dark Mode knappen igen så ändras det tillbaka till ljus.
 - Gör så att texten på knappen ändras till Light Mode när Dark mode är aktiverad.
 
-## Avslutande rensning
+## 7. Avslutande rensning
 
 Skapa stilar för de andra elementen på hemsidan. Försök identifiera ställen där du kan återanvända variabler.
 
+Vill du så kan du testa på att använda till exempel [transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) för att göra övergången till dark mode snyggare.
+
 Avsluta med att försöka ta bort så mycket CSS du kan, utan att en slutliga stilen ändras.
 
-# Tailwind defaults
-
-- [color palette](https://tailwindcss.com/docs/customizing-colors/#default-color-palette)
-- [Spacing](https://tailwindcss.com/docs/customizing-spacing/#default-spacing-scale)
-- [Font size](https://tailwindcss.com/docs/font-size/)
-- [Border radius](https://tailwindcss.com/docs/border-radius/)
-- [Box shadow](https://tailwindcss.com/docs/box-shadow/)
-
 # [Codepen](https://codepen.io/GuteFelix/pen/xxGrqgB)
-
-Skapa CSS variabler för följande, och sätt deras värden:
-
-- Primär färg
-- Accentfärg
-- Textfärg
-- Mörk färg (tex svart)
-- Ljus färg (tex vit)
-- Margin
-- Padding
-- Box-shadow
-- Border-radius

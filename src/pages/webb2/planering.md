@@ -47,27 +47,40 @@ heading: "Om kursen"
  <tr>
   <th rowspan="3">12</th>
   <td>Måndag</td>
-  <td>Projekt: Metodik och designsystem</td>
-  <td>Ni använder designsystemet ni skapat, och använder teknikerna vi har gått igenom för att skapa ett projekt.</td>
+  <td rowspan="3"><strong>Projekt: Metodik och designsystem</strong></td>
+  <td rowspan="3">Ni använder designsystemet ni skapat, och använder teknikerna vi har gått igenom för att skapa ett projekt.</td>
  </tr>
  <tr><td>Tisdag</td></tr>
  <tr><td>Onsdag</td></tr>
  <tr><th rowspan="3">13</th><td>Måndag</td><td>Introduktion till SVG</td><td>Vi går igenom SVG (Scalable Vector Graphics), skapar grafik i Figma, exporterar till SVG, och använder det på en hemsida.</td></tr>
  <tr><td>Tisdag</td><td colspan="2">Övningar i SVG (eget arbete)</td></tr>
  <tr><td>Onsdag</td><td>SVG animation</td><td>Vi använder ShapeShifter och GreenSock för att animera SVG, och kontrollerar det med JavaScript. </td></tr>
- <tr><th rowspan="3">14</th><td>Måndag</td><td>Projekt:  SVG</td><td>Ni använder det ni lärt er för att skapa ett webbprojekt.</td></tr>
+ <tr>
+ <th rowspan="3">14</th>
+ <td>Måndag</td>
+ <td rowspan="3"><strong>Projekt:  SVG</strong></td><td rowspan="3">Ni använder det ni lärt er för att skapa ett webbprojekt.</td>
+ </tr>
  <tr><td>Tisdag</td></tr>
  <tr><td>Onsdag</td></tr>
  <tr><th rowspan="3">15</th><td colspan="3" rowspan="3" style="text-align:center">LOV</td></tr>
  <tr></tr>
  <tr></tr>
- <tr><th rowspan="3">16</th><td>Måndag</td><td>Introduktion till responsiv design</td><td>Vi går igenom vad responsiv design innebär, hur det fungerar, och vilka tekniker som man använder för att skapa responsiv design (media queries).</td></tr>
+ <tr>
+ <th rowspan="3">16</th><td>Måndag</td><td>Introduktion till responsiv design</td>
+ <td>Vi går igenom vad responsiv design innebär, hur det fungerar, och vilka tekniker som man använder för att skapa responsiv design (media queries).</td>
+ </tr>
  <tr><td>Tisdag</td><td>Övningar i responsiv design</td></tr>
  <tr><td>Onsdag</td><td>CSS Grid</td></tr>
  <tr><th rowspan="3">17</th><td>Måndag</td><td>Bildoptimering och textanpassning</td></tr>
  <tr><td>Tisdag</td></tr>
- <tr><td>Onsdag</td><td>Request minimering</td><td>Vi tittar på alternativ för att minska antalet requests som behöver skickas för att visa en hemsida. Vi går igenom Data-URI, inline-SVG, och alternativ till bilder.</td></tr>
- <tr><th rowspan="3">18</th><td>Måndag</td><td>Projekt: Responsive landing page</td><td>Ni använder det ni lärt er för att skapa ett webbprojekt.</td></tr>
+ <tr><td>Onsdag</td><td>Request minimering</td>
+ <td>Vi tittar på alternativ för att minska antalet requests som behöver skickas för att visa en hemsida. Vi går igenom Data-URI, inline-SVG, och alternativ till bilder.</td></tr>
+ <tr>
+ <th rowspan="3">18</th>
+ <td>Måndag</td>
+ <td rowspan="3"><strong>Projekt: Responsive landing page</strong></td><td rowspan="3">Ni använder det ni lärt er för att skapa ett webbprojekt.</td>
+ </tr>
  <tr><td>Tisdag</td></tr>
  <tr><td>Onsdag</td><td></td></tr>
-</tbody></table>
+</tbody>
+</table>

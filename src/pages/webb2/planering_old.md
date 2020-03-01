@@ -97,3 +97,12 @@ Småprojekt/Övningar:
 - Återskapa rörliga reklamskyltar
 - Interaktiv karta
 - Presentera information på ett bättre sätt (lockers available)
+
+
+# Tailwind defaults
+
+- [color palette](https://tailwindcss.com/docs/customizing-colors/#default-color-palette)
+- [Spacing](https://tailwindcss.com/docs/customizing-spacing/#default-spacing-scale)
+- [Font size](https://tailwindcss.com/docs/font-size/)
+- [Border radius](https://tailwindcss.com/docs/border-radius/)
+- [Box shadow](https://tailwindcss.com/docs/box-shadow/)

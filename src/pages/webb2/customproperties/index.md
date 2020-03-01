@@ -119,4 +119,8 @@ root.addEventListener("click", e => {
 - [CSS Variables explained with 5 examples](https://codeburst.io/css-variables-explained-with-5-examples-84adaffaa5bd)
 - [CSS Variables Tutorial (video)](https://www.youtube.com/watch?v=sQUB039MG0I)
 - [CSS Variable Secrets (video)](https://www.youtube.com/watch?v=UQRSaG1hQ20)
+- [CSS Tricks: HSL is great for programmatic color control](https://css-tricks.com/hsl-hsla-is-great-for-programmatic-color-control/)
+- [HSL Color Picker](http://hslpicker.com/)
 - [CSS Calc](https://developer.mozilla.org/en-US/docs/Web/CSS/calc)
+- [CSS Linear Gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient)
+- [CSS Radial Gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/radial-gradient)
