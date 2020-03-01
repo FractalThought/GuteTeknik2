@@ -3,15 +3,10 @@
 @import "startpage";
 
 .gatsby-highlight {
-  background-color: transparent !important;
-  border-radius: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-
-  background-color: #fdf6e3;
+  background-color: #272822;
   border-radius: 0.3em;
   margin: 0.5em 0;
-  padding: 1em;
+  padding: 0.5em;
   overflow: auto;
 }
 
