@@ -19,6 +19,9 @@ Lesson 2: Laborations
 Lesson 3: Intro to BEM + custom variables
 
 
+Inte bara custom properties
+Lägg även in gradient och calc samt @import?
+
 
 -->
 
@@ -128,18 +131,19 @@ footer {
 
 1. Stila din knapp så att den minst får en liten border-radius (3-5px), en bakgrundsfärg, en textfärg, och lite padding och eventuellt marginal.
 2. Skapa en variabel för border-radius och ge både din knapp och .card samma border-radius.
+3. Lägg till ett hover-state (`.button:hover`) till din knapp som ändras dess bakgrundsfärg till en annan färg, men du får inte ändra propertyn för bakgrunden på elementet.
 
 Tips: Lägg till `display: inline-block` för att få a-taggen att se mer ut som en knapp (block).
-
-### Bonus:
-
-- Lägg till ett hover-state (`.button:hover`) till din knapp som ändras dess bakgrundsfärg till en annan färg.
 
 ## Variabel som refererar till en annan variabel
 
 1. Skapa två nya varibler, `text-color` och `bg-color`. Sätt dem till `var(--dark-color)`, och `var(--light-color)`.
 2. Ändra om på de ställen där du använder dark-color och light-color som textfärg eller bakgrundsfärg till dina nya variabler.
-3. Testa att byta text-color till något annat, till exempel --primary-color, eller varför inte byta din text-color till din bg-color, och vice versa.
+3. Testa att byta text-color till något annat, till exempel --primary-color, eller varför inte byta din text-color till din bg-color, och vice versa.u
+
+## Kontrollera marginal och padding med CSS variabler
+
+Korten behöver stilas, det behövs mer utrymme. Skapa en variabel för utrymme och använd det för att skapa ett utrymme mellan elementen i kortet.
 
 ## Dark-mode button
 
@@ -158,6 +162,12 @@ Inuti funktionen SwitchDarkMode lägger du till kod som ändrar din mains bakgru
 
 - Gör att när du trycker på Dark Mode knappen igen så ändras det tillbaka till ljus.
 - Gör så att texten på knappen ändras till Light Mode när Dark mode är aktiverad.
+
+## Avslutande rensning
+
+Skapa stilar för de andra elementen på hemsidan. Försök identifiera ställen där du kan återanvända variabler.
+
+Avsluta med att försöka ta bort så mycket CSS du kan, utan att en slutliga stilen ändras.
 
 # Tailwind defaults
 
