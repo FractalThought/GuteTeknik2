@@ -147,7 +147,7 @@ Tips: Lägg till `display: inline-block` för att få a-taggen att se mer ut som
 
 1. Skapa två nya varibler, `text-color` och `bg-color`. Sätt dem till `var(--dark-color)`, och `var(--light-color)`.
 2. Ändra om på de ställen där du använder dark-color och light-color som textfärg eller bakgrundsfärg till dina nya variabler.
-3. Testa att byta text-color till något annat, till exempel --primary-color, eller varför inte byta din text-color till din bg-color, och vice versa.u
+3. Testa att byta text-color till något annat, till exempel --primary-color, eller varför inte byta din text-color till din bg-color, och vice versa.
 
 ## 5. Kontrollera marginal och padding med CSS variabler
 

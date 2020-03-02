@@ -27,7 +27,7 @@ heading: "Om kursen"
  <tr>
   <td>Onsdag</td>
   <td>Användning av CSS-koncept</td>
-  <td>Vi använder CSS-koncepten vi gått igenom i praktiken, och går in i några fler tekniker i CSS.</td>
+  <td>Vi använder CSS-koncepten vi gått igenom i praktiken, och går igenom i några fler tekniker i CSS.</td>
  </tr>
  <tr>
   <th rowspan="3">11</th>
