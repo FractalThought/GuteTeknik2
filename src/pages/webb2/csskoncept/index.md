@@ -1,0 +1,246 @@
+---
+title: "CSS Koncept"
+date: "2017-08-10"
+---
+
+# RGB och HSL
+
+Det finns två vanliga sätt att lägga till färger i CSS:
+
+- **Färgnamn:** Moderna webbläsare har 140 färger fördefinierade. De är namngivna och specifika till den färgen (så green är alltid samma typ av grön).
+- **Hexfärg:** Hexadecimal-värdet för en färg. Hexadecimal-talsystemet använder siffror 0 till 9, och sedan A till F för att få till 16 olika siffror. Hex-värde som färg använder ett 6-siffrigt tal.
+
+Man kan dessutom använda funktionerna RGB/RGBA eller HSL/HSLA.
+
+## RGB
+
+Står för Red, Green, Blue, och är det sätt som
+RGB går ut på att man sätter varje del av färgen individuellt, där då Röd, Grön, och Blå är de individuella komponenterna i färgen.
+
+## Syntax
+
+```css
+aside {
+  /* Helt röd färg */
+  background: rgb(255, 0, 0);
+}
+```
+
+## HSL
+
+Står för Hue, Saturation, Light. HSL är lättare för människor att läsa.
+
+- **Hue:** Är den nyans som färgen har, utifrån ett 360-graders hjul där 0 är röd, 60grader är gul, grön är 120grader, osv.
+- **Saturation:** Hur saturerad färgen är. Mindre saturering gör att färgen blir gråare ("mindre färgig"). Mäts i procent är 100% är full satuering och 0% är ingen satuering (grå).
+- **Light:** Hur ljus/mörk färgen är. Mäts i procent där 100% är vit, och 0% är svart.
+
+### Syntax
+
+```css
+aside {
+  /* Röd, 50% satuering, 50% ljus */
+  background: hsl(0, 50%, 50%);
+}
+```
+
+## Alpha
+
+Både RGB- och HSL-funktionerna kan lägga till en alpha mellan 0 och 1, vilket är hur transparent färgen är. För att göra detta, lägg till A i slutet av funktionsnamnet, och ett till värde mellan 0 och 1 (till exempel 0.5 för halvtransparent.).
+
+## Källor
+
+- [HTMLColors](https://htmlcolorcodes.com/)
+- [HTML Color Names](https://htmlcolorcodes.com/color-names/)
+- [CSS Tricks: HSL is great for programmatic color control](https://css-tricks.com/hsl-hsla-is-great-for-programmatic-color-control/)
+- [HSL Color Picker](http://hslpicker.com/)
+
+# Gradients
+
+En gradient är vanligtvis en färg som går över i en annan på något sätt. Man kan dock definiera flera färger som går över i varandra.
+
+CSS har två olika typer av gradients (linear och radial), och dessa kan appliceras på en bakgrund.
+
+## Linear gradient
+
+Linear är helt enkelt en gradient i en linje, så den går från en färg till en annan i en linje. Syntaxen för Linear gradient är att man först sätter åt vilket håll gradienten ska gå mot, och sedan lägger man till färger i den följd man vill ha dem i.
+
+<div style="background: linear-gradient(90deg, #AF0E12, #0EAFAB); width: 100%; height: 10vh;"></div>
+
+```css
+div {
+  background: linear-gradient(90deg, #af0e12, #0eafab);
+}
+```
+
+## Radial gradient
+
+Radial gradient fungerar så att en färg börjar i mitten, och går sedan utåt i alla riktningar. Till skillnad från linear gradient så behöver radial därför inte någon riktning, och syntaxen för en radial gradient är alltså att bara definiera färger i den ordning man vill ha, där den första färgen är den färg man vill ska vara i mitten.
+
+<div style="background: radial-gradient(#AF0E12, #0EAFAB); width: 100%; height: 20vh;"></div>
+
+```css
+div {
+  background: radial-gradient(#af0e12, #0eafab);
+}
+```
+
+## Källor
+
+- [CSS Linear Gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient)
+- [CSS Radial Gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/radial-gradient)
+- [CSS Tricks: CSS Gradients](https://css-tricks.com/css3-gradients/)
+
+# Box-sizing
+
+Box-sizing har med hur en box hanteras, och om huruvida bordern räknas som en del av boxen som ett element innehåller.
+
+Om man inte sätter något till egenskapen box-sizing så räknas storleken på boxen ut med följande kalkylation:
+
+`width + padding + border = renderar bredd av elementets box`.
+
+Det betyder att bredden på elementet inte är den faktiska bredden som man specificerar med `width`-egenskapen. Detta kan ändras på genom att sätta `box-sizing`-egenskapen för elementet.
+
+Box-sizing har två olika lägen som man kan använda; `content-box` (default), och `border-box`.
+
+- `content-box` ger dig standardbeteende för CSS-rutans storlek. Om du ställer in ett elements bredd till 100 pixlar, kommer elementets innehållsruta att vara 100 pixlar bred, och bredden på valfri kant eller stoppning läggs till den slutliga återgivna bredden, vilket gör elementet bredare än 100px.
+- `border-box` berättar för webbläsaren att redovisa eventuella gränser och utfyllningar i värdena du anger för elementets bredd och höjd. Om du ställer in ett elements bredd till 100 pixlar, kommer 100 pixlar att inkludera vilken kant som helst som du har lagt till, och innehållsrutan kommer att krympa för att absorbera den extra bredden. Detta gör det vanligtvis mycket lättare att dimensionera element.
+
+## Källor:
+
+- [MDN: Box-sizing](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)
+- [CSS Tricks: Box-sizing](https://css-tricks.com/box-sizing/)
+
+# Calc
+
+Funktionen calc används för att räkna ut ett resultat mellan två värden i CSS. Man kan använda det för att räkna med addition (+), subtraktion (-), multiplikation (/), och division (\*), och man kan blanda enheter (till exempel 20px - 1em).
+
+## Syntax
+
+```css
+main {
+  width: calc(100% - 20px);
+}
+```
+
+## Källor
+
+- [CSS Calc](https://developer.mozilla.org/en-US/docs/Web/CSS/calc)
+
+# CSS Custom Properties (variables)
+
+## Vad är det?
+
+- Sätt att skapa en variabel i CSS
+- Kan överskrivas
+- Möjliggör skalbarhet
+- Används för att skapa designsystem
+
+## Syntax:
+
+### Skapande:
+
+```css
+/* Root gör att alla element kommer åt variabeln */
+:root {
+  --primary-color: #af0e12;
+}
+```
+
+### Användning
+
+```css
+p {
+  color: var(--primary-color);
+}
+```
+
+## Exempel
+
+```css
+:root {
+  --primary-color: #af0e12;
+  --secondary-color: #0eafab;
+  --text-color: var(--primary-color);
+  --accent-color: var(--secondary-color);
+}
+
+p {
+  color: var(--text-color);
+}
+
+.info-card {
+  --primary-weight: 400;
+  --bold-weight: 600;
+}
+
+.info-card__heading {
+  font-weight: var(--primary-weight);
+}
+```
+
+## Kan överskrivas precis som andra properties
+
+```css
+:root {
+  --primary-color: #af0e12;
+  --secondary-color: #0eafab;
+  --text-color: var(--primary-color);
+  --accent-color: var(--secondary-color);
+}
+
+.important-container {
+  --text-color: var(--secondary-color);
+}
+
+.warning {
+  --primary-color: #af0e12;
+}
+```
+
+## Kan även användas i andra CSS-funktioner
+
+```css
+:root {
+  --padding: 20;
+}
+
+/*
+
+calc används för att göra en uträkning med två tal
+Talen kan ha olika enheter, till exempel calc(70% - 20px) räknar ut 70% av totala bredden, minus 20 pixlar.
+Det gör också att vi kan göra en custom property som inte har en specifik enhet, och sedan multiplicera med 1 av den enheten vi vill använda.
+
+*/
+
+.card {
+  padding: calc(var(--padding) * 1px);
+}
+```
+
+# Kan ändras live med JavaScript
+
+```javascript
+// Hämta root-elementet
+let root = document.documentElement
+
+let isDark = false
+
+// Registera ett klick-event till root
+root.addEventListener("click", e => {
+  // Ifall temat är mörkt, sätt till ljust, annars sätt till mörkt.
+  isDark
+    ? root.style.setProperty("--text-color", "var(--light)")
+    : root.style.setProperty("--background-color", "var(--dark)")
+
+  // Ställ om isDark-variabeln
+  isDark = !isDark
+})
+```
+
+## Källor:
+
+- [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
+- [Using CSS Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+- [CSS Variables explained with 5 examples](https://codeburst.io/css-variables-explained-with-5-examples-84adaffaa5bd)
+- [CSS Variables Tutorial (video)](https://www.youtube.com/watch?v=sQUB039MG0I)
+- [CSS Variable Secrets (video)](https://www.youtube.com/watch?v=UQRSaG1hQ20)

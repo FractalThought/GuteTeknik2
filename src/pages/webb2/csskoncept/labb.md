@@ -1,29 +1,7 @@
 ---
-title: "CSS Custom Properties Laborationer"
+title: "CSS Koncept Laborationer"
 date: "2017-08-10"
 ---
-
-<!--
-
-Really want a semi-small project where they create a mini-site and uses the following techniques:
-
-- CSS custom variables
-- BEM
-- Color system
-
-Project: Create sales cards
-Have that as a mini-project?
-
-Lesson 1: Intro to CSS custom variables + some laborations
-Lesson 2: Laborations
-Lesson 3: Intro to BEM + custom variables
-
-
-Inte bara custom properties
-Lägg även in gradient och calc samt @import?
-
-
--->
 
 Ni ska arbeta med dessa laborationer under lektionstid, eller under egen tid.
 Det är ingen inlämning, men att ni har gjort laborationerna kommer hjälpa er när ni gör projekten.
@@ -83,7 +61,7 @@ body {
   margin: 0 auto;
 }
 
-header>h1 {
+header > h1 {
   margin: 0 0 20px 0;
 }
 
@@ -111,7 +89,7 @@ footer {
   justify-content: center;
 }
 
-.card>* {
+.card > * {
   margin: 0;
 }
 ```
@@ -134,6 +112,7 @@ Lägg till följande CSS variabler:
 ```
 
 ### Använd färgerna
+
 Använd sedan variablerna för att stila följande (ersätt -- i var med din valda variabel):
 
 ```css
@@ -199,5 +178,3 @@ Skapa stilar för de andra elementen på hemsidan. Försök identifiera ställen
 Vill du så kan du testa på att använda till exempel [transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) för att göra övergången till dark mode snyggare.
 
 Avsluta med att försöka ta bort så mycket CSS du kan, utan att en slutliga stilen ändras.
-
-# [Codepen](https://codepen.io/GuteFelix/pen/xxGrqgB)

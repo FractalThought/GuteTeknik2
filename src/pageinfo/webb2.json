@@ -16,15 +16,15 @@
       ]
     },
     {
-      "title": "Custom properties",
+      "title": "CSS-koncept",
       "subpages": [
         {
           "subPageName": "Introduktion",
-          "subPageLink": "customproperties"
+          "subPageLink": "csskoncept"
         },
         {
           "subPageName": "Laborationer",
-          "subPageLink": "customproperties/labb"
+          "subPageLink": "csskoncept/labb"
         }
       ]
     },

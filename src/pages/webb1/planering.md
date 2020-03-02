@@ -55,12 +55,13 @@ date: "2017-08-10"
 | 7     | 4. Reflektion      | Publicering och eget arbete                               |
 | 8     | 4. Reflektion      | Eget arbete                                               |
 | 8     | 4. Reflektion      | Eget arbete                                               |
+| 9     | Sportlov           | Sportlov                                                  |
 | 10    | Repetition         | Repetition                                                |
 | 11    | Figma              | Introduktion och arbete med Figma                         |
 | 12    | Planering          | Planera ett webbutvecklingsprojekt och designa i Figma    |
 | 13    | Utvecklingsmetodik | Arbete i Figma & Översätta design till HTML&CSS           |
 | 14    | Eget arbete        | Eget arbete                                               |
-| 15    | **Lov**            | **Lov**                                                   |
+| 15    | **Påsklov**        | **Påsklov**                                               |
 | 16    | Eget arbete        | Eget arbete                                               |
 | 17    | Formulär           | Använda formulär och input-fält                           |
 | 18    | **Valborg**        | **Lediga**                                                |
@@ -73,6 +74,7 @@ date: "2017-08-10"
 # v10 och framåt
 
 ## Koncept att arbeta med:
+
 - Repetition
 - Design i Figma
 - Planering
@@ -80,4 +82,3 @@ date: "2017-08-10"
 - Formulär
 - JavaScript
 - Dokumentation och reflektion
-

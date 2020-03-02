@@ -18,16 +18,16 @@ heading: "Om kursen"
   <th rowspan="3">10</th>
   <td>Måndag</td>
   <td>Intro till kursen</td>
-  <td>Genomgång om vad vi kommer gå igenom i kursen och kursens upplägg samt Introduktion till CSS custom properties</td>
+  <td>Genomgång om vad vi kommer gå igenom i kursen och kursens upplägg samt Introduktion till nya CSS-koncept</td>
  </tr>
  <tr>
   <td>Tisdag</td>
-  <td colspan="2">Övningar i CSS properties (eget arbete)</td>
+  <td colspan="2">Övningar i CSS-tekniker (eget arbete)</td>
  </tr>
  <tr>
   <td>Onsdag</td>
-  <td>Användning av CSS custom properties</td>
-  <td>Vi använder CSS custom properties i praktiken, och går in i några mer avancerade tekniker i CSS.</td>
+  <td>Användning av CSS-koncept</td>
+  <td>Vi använder CSS-koncepten vi gått igenom i praktiken, och går in i några fler tekniker i CSS.</td>
  </tr>
  <tr>
   <th rowspan="3">11</th>
