@@ -12,23 +12,15 @@
         {
           "subPageName": "Betygskriterier",
           "subPageLink": "betygskriterier"
-        },
-        {
-          "subPageName": "Övningar",
-          "subPageLink": "ovningar"
         }
       ]
     },
     {
-      "title": "Uppgifter",
+      "title": "Planering",
       "subpages": [
         {
-          "subPageName": "Uppgift1",
-          "subPageLink": "uppgift1"
-        },
-        {
-          "subPageName": "Uppgift2",
-          "subPageLink": "uppgift2"
+          "subPageName": "Planering",
+          "subPageLink": "planering"
         }
       ]
     }
