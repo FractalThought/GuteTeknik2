@@ -29,6 +29,19 @@
       ]
     },
     {
+      "title": "BEM metodiken",
+      "subpages": [
+        {
+          "subPageName": "Introduktion",
+          "subPageLink": "bem"
+        },
+        {
+          "subPageName": "Laboration",
+          "subPageLink": "bem/labb"
+        }
+      ]
+    },
+    {
       "title": "CSS Grid",
       "subpages": [
         {
@@ -38,6 +51,15 @@
         {
           "subPageName": "Laborationer",
           "subPageLink": "cssgrid/labb"
+        }
+      ]
+    },
+    {
+      "title": "Projekt",
+      "subpages": [
+        {
+          "subPageName": "Metodik och Designsystem",
+          "subPageLink": "projekt/metodiksystem"
         }
       ]
     }
