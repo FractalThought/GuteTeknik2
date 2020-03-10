@@ -3,16 +3,32 @@ title: "BEM laboration"
 date: "2020-03-10"
 ---
 
-https://dribbble.com/tags/cardx
+I den här laborationen ska du använda BEM för att skapa en produktsida för ett valfritt företag.
 
-https://dribbble.com/tags/ui_card
+Produktsidan ska innehålla en lista med produkter, där varje produkt ska vara ett eget kort.
 
-Vad ska de skapa?
+Du får välja själv vad för produkter det är, och det kan vara saker så som mat, leksaker, tjänster, eller spel.
 
-Hitta designinspiration (som de länkar tillbaka till)
+En produkt kan ha olika information beroende på vad du väljer, men du ska minst ha med namn och pris.
 
-Designa ett kort och en knapp, eller använd existerande design?
+Det viktigaste är att du använder [BEM](https://guteteknik.netlify.com/webb2/bem) som metodik för att skapa hemsidan.
 
-Knapp
+## Vad ska du skapa?
 
-Card
+- Ett produktkort med minst namn och pris
+- En Köp-knapp som ska ligga
+- En produktlista med flera olika produkter i listan som använder ditt produktkort
+
+## Utvecklingsprocessen
+
+Din utvecklingsprocess bör vara följande, men du väljer själv hur du vill lägga upp ditt arbete:
+
+1. Val av produkter och research om dessa.
+2. Design (Figma)
+3. HTML och CSS, genom att använda BEM.
+
+## Designinspiration
+
+- [Dribbble: Product shots](https://dribbble.com/shots/popular/web-design?tag=product)
+- [Dribbble: Card shots](https://dribbble.com/tags/card)
+- [Dribbble: UI Card shots](https://dribbble.com/tags/ui_card)
