@@ -92,3 +92,5 @@ Se ett mer utförligt [exempel på CodePen](https://codepen.io/GuteFelix/pen/QWb
 - [BEM.info](https://en.bem.info/)
 - [Kevin Powell: Why I use BEM naming convention for CSS (video)](https://www.youtube.com/watch?v=SLjHSVwXYq4)
 - [dcode: The Block Element Modifier (BEM) Naming Convention (Methodology) - CSS Tutorial (video)](https://www.youtube.com/watch?v=u-XKw585KqY)
+- [Card UI Design: Fundamentals and examples](https://www.justinmind.com/blog/cards-ui-design/)
+- [15 Examples of popular card UI designs](https://www.mockplus.com/blog/post/card-ui-design)
