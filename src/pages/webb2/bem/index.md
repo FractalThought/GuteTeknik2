@@ -83,7 +83,10 @@ Ibland vill man skapa alternativa delar som ser annorlunda ut från
 
 Se ett mer utförligt [exempel på CodePen](https://codepen.io/GuteFelix/pen/QWbaJqV).
 
+
 [Presentationen för BEM (Figma)](https://www.figma.com/proto/Vn47JszfXWFq5OGxtYGHoz/BEM?node-id=1%3A2&viewport=357%2C371%2C0.41383543610572815&scaling=min-zoom)
+
+[Source till presentationsfilen](https://www.figma.com/file/Vn47JszfXWFq5OGxtYGHoz/BEM?node-id=7%3A71)
 
 ## Källor:
 
