@@ -58,6 +58,18 @@ p {
   margin: 0 0 1rem 0;
 }
 
+blockquote {
+  box-sizing: border-box;
+  margin: 1rem;
+  background: lightgray;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+blockquote > * {
+  margin: 0;
+}
+
 hr {
   margin: 3em 0;
   border-top: 0.5em solid $font-color;
