@@ -12,14 +12,14 @@
     margin-right: 2em;
 
     h1 {
-      font-size: 3em;
-      color: $primary-6;
+      font-size: 3rem;
+      color: $color-primary-600;
       margin-top: 0;
     }
 
     p {
-      font-size: 1em;
-      color: $primary-3;
+      font-size: 1rem;
+      color: $color-primary-300;
     }
   }
 }
@@ -27,20 +27,29 @@
 .course-item-container {
   display: block;
   width: 75vw;
-  margin: 0 auto;
-  padding: 3em 0;
+  margin: 3rem auto;
+  margin-top: 0;
+  padding: 3rem;
+  background: white;
+  box-shadow: $box-shadow-lg;
+  border-radius: $border-radius-md;
 }
 
 .course-item {
   &:nth-child(odd) {
-    background: $light-color;
+    background: $color-primary-100;
   }
   &:nth-child(even) {
-    background: $gray-1;
+    background: $color-gray-100;
+  }
+  & + * {
+    margin-top: 2rem;
   }
 
   padding: 20px;
   display: flex;
+  box-shadow: $box-shadow-md;
+  border-radius: $border-radius-md;
 
   &__info {
     margin-left: 20px;
@@ -48,17 +57,15 @@
 
     h1 {
       margin-top: 0;
+      font-size: 2rem;
     }
 
     a {
-      color: $primary-6;
+      color: $color-primary-600;
 
       &:hover {
-        color: $primary-4;
+        color: $color-primary-400;
       }
-    }
-
-    &__link {
     }
   }
 }
@@ -71,9 +78,9 @@
 
 .course-card {
   border-radius: 5px;
-  padding: 1em;
+  padding: 1rem;
   min-height: 20vh;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: $box-shadow-md;
   transition: all 0.3s ease-in-out;
 
   position: relative;
@@ -100,27 +107,26 @@
 
   &:active {
     transform: translateY(2px);
-    box-shadow: 0 6px 12px -2px rgba(50, 50, 93, 0.25),
-      0 3px 7px -3px rgba(0, 0, 0, 0.3);
+    box-shadow: $box-shadow-lg;
   }
 
   .card-info {
     position: absolute;
     bottom: 0;
     left: 0;
-    padding: 1em;
+    padding: 1rem;
 
     .card-planning {
-      background: #444;
-      padding: 0.2em;
+      background: $color-gray-700;
+      padding: 0.2rem;
 
       transition: all 0.3s ease-in-out;
-      border-radius: 3px;
+      border-radius: $border-radius-sm;
 
       &:hover {
-        background: #fff;
-        color: #444;
-        border-radius: 5px;
+        background: $color-gray-100;
+        color: $color-gray-700;
+        border-radius: $border-radius-md;
       }
     }
   }
@@ -130,9 +136,9 @@
     top: 0;
     right: 0;
 
-    margin: 0.5em;
+    margin: 0.5rem;
 
-    width: 3em;
-    height: 3em;
+    width: 3rem;
+    height: 3rem;
   }
 }

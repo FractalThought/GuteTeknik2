@@ -59,6 +59,8 @@ Du väljer själv vilka färger du vill använda, men det är rekommenderat att 
 
 > Du behöver inte vara begränsad av SchoolSofts storlek, eller den layout som de valt (men din dashboard ska lämna viss rum för en potentiell sidmeny på sidan). Igen, fundera kring vad som är mest relevant - se till att det syns tydligast.
 
+Det är viktigare att designa dina komponenter, än att få till layouten för hela dashboarden. Detta kommer vi återkomma till. Vill du försöka redan nu, kolla in [CSS Grid](https://guteteknik.netlify.com/webb2/cssgrid) (sidan är inte klar, men källor finns).
+
 ## 3. Utföra (HTML&CSS)
 När du känner dig hyfsat klar med din design så är det dags att ta in det i HTML och CSS.
 

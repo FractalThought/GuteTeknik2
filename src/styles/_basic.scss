@@ -38,15 +38,19 @@ h6 {
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.6;
-  background-color: white;
-  color: #333;
+  background-color: $color-gray-100;
+  color: $color-gray-800;
 }
 
 a {
   text-decoration: none;
-  color: $white-color;
+  color: $color-gray-100;
+}
+
+a:hover {
+  color: $color-primary-700;
 }
 
 ul,
@@ -61,7 +65,7 @@ p {
 blockquote {
   box-sizing: border-box;
   margin: 1rem;
-  background: lightgray;
+  background: $color-gray-100;
   padding: 0.5rem;
   border-radius: 5px;
 }
@@ -72,7 +76,7 @@ blockquote > * {
 
 hr {
   margin: 3em 0;
-  border-top: 0.5em solid $font-color;
+  border-top: 0.5em solid $color-gray-500;
   opacity: 0.1;
 }
 
@@ -94,21 +98,20 @@ table {
 
   tbody {
     tr {
-      border-bottom: 1px solid #ddd;
-      border-top: 1px solid #ddd;
+      border-bottom: 1px solid $color-gray-100;
+      border-top: 1px solid $color-gray-100;
 
       td {
         padding: 0.75rem;
 
         a {
-          color: $primary-color;
           text-decoration: none;
           display: inline-block;
           margin: 0 0.5em 0 0;
           &:hover,
           &:active,
           &:focus {
-            color: darken($primary-color, 10%);
+            color: $color-primary-700;
             border: none;
           }
         }
@@ -132,12 +135,12 @@ table {
     width: 100%;
 
     thead {
-      border-bottom: 3px solid $primary-color;
+      border-bottom: 3px solid $color-primary-500;
     }
 
     tbody {
       tr {
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid $color-gray-100;
       }
     }
   }

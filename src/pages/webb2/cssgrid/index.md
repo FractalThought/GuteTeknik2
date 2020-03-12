@@ -1,68 +1,14 @@
 ---
-title: "CSS Custom Properties"
+title: "CSS Grid"
 date: "2017-08-10"
 ---
 
-# Custom properties (css variables)
-
-## Vad är det?
-
-- Sätt att skapa en variabel i CSS
-- Kan överskrivas
-- Möjliggör skalbarhet
-- Används för att skapa designsystem
-
-## Syntax:
-
-### Skapande:
-
-```css
-:root {
-  --primary-color: #af0e12;
-}
-```
-
-### Användning
-
-```css
-p {
-  color: var(--primary-color);
-}
-```
-
-## Exempel
-
-```css
-:root {
-  --primary-color: #af0e12;
-  --secondary-color: #0eafab;
-  --text-color: var(--primary-color);
-  --accent-color: var(--secondary-color);
-}
-
-p {
-  color: var(--text-color);
-}
-
-.important-container {
-  --text-color: var(--secondary-color);
-}
-```
-
-# Kan ändras live med JavaScript
-
-```javascript
-let root = document.documentElement
-
-root.addEventListener("click", e => {
-  root.style.setProperty("--background-color", "var(--dark)")
-  root.style.setProperty("--text-color", "var(--light)")
-})
-```
-
 ## Källor:
 
-- [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
-- [Using CSS Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
-- [CSS Variable Secrets](https://www.youtube.com/watch?v=UQRSaG1hQ20)
-- [CSS Variables Tutorial](https://www.youtube.com/watch?v=sQUB039MG0I)
+- [MDN: CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)
+- [CSS Tricks: A complete guide to CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+- [Video: Traversy Media: CSS Grid Crash Course](https://www.youtube.com/watch?v=jV8B24rSN5o)
+- [Video: CSS Grid in 45 minutes](https://www.youtube.com/watch?v=DCZdCKjnBCs)
+- [Spellista: Wes Bos: CSS Grid Course](https://www.youtube.com/watch?v=T-slCsOrLcc&list=PLu8EoSxDXHP5CIFvt9-ze3IngcdAc2xKG)
+- [Spellista: Kevin Powell: CSS Grid](https://www.youtube.com/watch?v=plRcoRqLriw&list=PL4-IK0AVhVjPv5tfS82UF_iQgFp4Bl998)
+- [Video: Progression of CSS layouts (historia)](https://www.youtube.com/watch?v=R7gqJkdc5dM)
