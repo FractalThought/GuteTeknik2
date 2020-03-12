@@ -36,12 +36,7 @@
 }
 
 .course-item {
-  &:nth-child(odd) {
-    background: $color-primary-100;
-  }
-  &:nth-child(even) {
-    background: $color-gray-100;
-  }
+  background: $color-gray-100;
   & + * {
     margin-top: 2rem;
   }
