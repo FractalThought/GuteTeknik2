@@ -40,17 +40,17 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.6;
-  background-color: $color-gray-100;
-  color: $color-gray-800;
+  background-color: $color-gray-900;
+  color: $color-gray-200;
 }
 
 a {
   text-decoration: none;
-  color: $color-gray-100;
+  color: $color-gray-900;
 }
 
 a:hover {
-  color: $color-primary-700;
+  color: $color-primary-300;
 }
 
 ul,
@@ -65,7 +65,7 @@ p {
 blockquote {
   box-sizing: border-box;
   margin: 1rem;
-  background: $color-gray-100;
+  background: $color-gray-900;
   padding: 0.5rem;
   border-radius: 5px;
 }
@@ -98,8 +98,8 @@ table {
 
   tbody {
     tr {
-      border-bottom: 1px solid $color-gray-100;
-      border-top: 1px solid $color-gray-100;
+      border-bottom: 1px solid $color-gray-900;
+      border-top: 1px solid $color-gray-900;
 
       td {
         padding: 0.75rem;
@@ -111,7 +111,7 @@ table {
           &:hover,
           &:active,
           &:focus {
-            color: $color-primary-700;
+            color: $color-primary-300;
             border: none;
           }
         }
@@ -140,7 +140,7 @@ table {
 
     tbody {
       tr {
-        border-bottom: 1px solid $color-gray-100;
+        border-bottom: 1px solid $color-gray-900;
       }
     }
   }
