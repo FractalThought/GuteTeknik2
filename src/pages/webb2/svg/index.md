@@ -3,4 +3,34 @@ title: "Introduktion till SVG"
 date: "2017-08-10"
 ---
 
+SVG står för [Scalable Vector Graphics](https://sv.wikipedia.org/wiki/Scalable_Vector_Graphics), och är ett dokumentformat (och filformat) för vektorgrafik, särskilt gjord för webben. Specifikationen för SVG skapades av W3C redan 1999, och alla moderna webbläsare stödjer rendering av SVG.
+
+SVG används för att skapa vektorgrafik, och kan användas i allt från animationer, logotyper och grafer, till ikoner, symboler, spel, och mycket mer.
+
+Vi kommer använda SVG för att skapa logotyper, använda symboler som andra skapat, och skapa några animationer med hjälp av både CSS och JavaScript.
+
+SVG är ett eget ämne i sig själv, och man kan gotta ner sig och bli expert i endast SVG om man vill. Vi kommer gå igenom SVG ganska ytligt, och fokusera på **skapande**, **användning**, och **animation**.
+
+## Fördelar med vektorgrafik jämfört med rasterad grafik (rasterbild)
+I datorgrafik är rasterad grafik är det vi traditionellt kallar bilder; Pixlar i olika färg uppbyggda på ett rutnät som gemensamt skapar grafik.
+
+Vektorgrafik däremot är uppbyggd av matematiska funktioner för att skapa linjer och symboler så som rektangler och cirklar som gemensamt skapar grafiken.
+
+En rasterbild har en satt storlek i pixlar. Detta gör att bilden inte är skalbar, och detta ser vi när man förstorar upp bilden, som då blir "pixilerad" och ful. Filstorleken på rastergrafik är också ofta stora, eftersom det behövs mycket information för att återge bilden då vi behöver information om varje pixel.
+
+Vektorgrafik däremot innehåller mycket mindre information, och är strukturerat på ett liknande sätt som HTML.
+
 ## Källor:
+- [MDN om SVG](https://developer.mozilla.org/en-US/docs/Web/SVG)
+- [CSS Tricks: Everything you need to know about SVG](https://css-tricks.com/lodge/svg/)
+- [CSS Tricks: Using SVG](https://css-tricks.com/using-svg/)
+- [CSS Tricks: SVG Properties and CSS](https://css-tricks.com/svg-properties-and-css/)
+- [CSS Tricks: SVG Compendium (links about SVG)](https://css-tricks.com/mega-list-svg-information/)
+- [Video: Animate with ShapeShifter](https://www.youtube.com/watch?v=P35hQOsW0xU)
+
+### Kevin Powells introduktion till SVG
+- [Part 1: Introduction](https://www.youtube.com/watch?v=ZJSCl6XEdP8)
+- [Part 2: Create shapes](https://www.youtube.com/watch?v=9Y4P3FvZ5bg)
+- [Part 3: Viewport and Viewbox](https://www.youtube.com/watch?v=TBYJ2V1jAlA)
+- [Part 4: Clean and optimize](https://www.youtube.com/watch?v=cWh0de8IhX4)
+- [Part 5: Animate with GSAP](https://www.youtube.com/watch?v=4XJ8yS0zpa4)

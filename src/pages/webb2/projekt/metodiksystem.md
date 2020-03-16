@@ -94,12 +94,20 @@ Dashboarden och dokumentationen ska vara uppladdad i slutet av veckan, och skick
 - Språk med stöd för variabler för att förenkla CSS-generering.
 - Riktlinjer för god praxis inom webbutveckling.
 
-## Bedömning:
+## Bedömning
 
-- Eleven gör en enkel projektplan för en tänkt produkt. Utifrån projektplanen utvecklar eleven i samråd med handledare produkten där logiker som styr innehåll, design och beteende i begränsad utsträckning är åtskilda.
--  I arbetet utvecklar eleven kod som med tillfredsställande resultat följer standarder och som omfattar någon teknik för märkspråk och stilmallar där eleven i begränsad utsträckning använder tekniker för att generera stilmallskod.
--  I arbetet bearbetar eleven med tillfredsställande resultattext, bild och eventuell annan media så att de blir anpassade för att fungera i produkten.
-- När arbetet är utfört gör eleven en enkel dokumentation av de moment som har utförts samt utvärderar med enkla omdömen sitt arbete och resultat.
+### C-nivå:
+
+- Eleven gör en genomarbetad projektplan för en tänkt produkt. Utifrån projektplanen utvecklar eleven efter samråd med handledare produkten där logiker som styr innehåll, design och beteende är åtskilda.
+-  I arbetet utvecklar eleven kod som med tillfredsställande resultat följer standarder och som omfattar några tekniker för märkspråk och stilmallar där eleven använder tekniker för att generera stilmallskod.
+-  I arbetet bearbetar eleven med tillfredsställande resultat och via flera moment text, bild och eventuell annan media så att de blir anpassade för att fungera i produkten.
+- När arbetet är utfört gör eleven en noggrann dokumentation av de moment som har utförts samt utvärderar med nyanserade omdömen sitt arbete och resultat. I utvärderingen resonerar eleven kring eventuella avvikelser samt motiverar översiktligt de val som har gjorts.
+
+### A-nivå:
+- Eleven gör en genomarbetad projektplan för en tänkt produkt, vid behov reviderar eleven planen. Utifrån projektplanen utvecklar eleven efter samråd med handledare produkten där logiker som styr innehåll, design och beteende i omfattande utsträckning är åtskilda.
+-  I arbetet utvecklar eleven kod som med gott resultat följer standarder och som omfattar flera tekniker för märkspråk och stilmallar där eleven i omfattande utsträckning använder tekniker för att generera stilmallskod.
+-  I arbetet bearbetar eleven med gott resultat och via flera moment text, bild och eventuell annan media så att de blir anpassade för att fungera i produkten.
+- När arbetet är utfört gör eleven en noggrann och utförlig dokumentation av de moment som har utförts med koppling till generella principer och testresultat samt utvärderar med utförliga och nyanserade omdömen sitt arbete och resultat samt ger förslag på hur arbetet kan förbättras. I utvärderingen resonerar eleven kring eventuella avvikelser samt motiverar utförligt de val som har gjorts.
 
 # SchoolSoft dashboard:
 
