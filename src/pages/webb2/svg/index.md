@@ -12,6 +12,7 @@ Vi kommer använda SVG för att skapa logotyper, använda symboler som andra ska
 SVG är ett eget ämne i sig själv, och man kan gotta ner sig och bli expert i endast SVG om man vill. Vi kommer gå igenom SVG ganska ytligt, och fokusera på **skapande**, **användning**, och **animation**.
 
 ## Fördelar med vektorgrafik jämfört med rasterad grafik (rasterbild)
+
 I datorgrafik är rasterad grafik är det vi traditionellt kallar bilder; Pixlar i olika färg uppbyggda på ett rutnät som gemensamt skapar grafik.
 
 Vektorgrafik däremot är uppbyggd av matematiska funktioner för att skapa linjer och symboler så som rektangler och cirklar som gemensamt skapar grafiken.
@@ -20,17 +21,25 @@ En rasterbild har en satt storlek i pixlar. Detta gör att bilden inte är skalb
 
 Vektorgrafik däremot innehåller mycket mindre information, och är strukturerat på ett liknande sätt som HTML.
 
+# Att göra 23/3:
+
+Kolla igenom del 1, 2, och 3 av Kevin Powells introduktion till SVG (se nedan).
+
+### Kevin Powells introduktion till SVG
+
+- [Part 1: Introduction](https://www.youtube.com/watch?v=ZJSCl6XEdP8)
+- [Part 2: Create shapes](https://www.youtube.com/watch?v=9Y4P3FvZ5bg)
+- [Part 3: Viewport and Viewbox](https://www.youtube.com/watch?v=TBYJ2V1jAlA)
+- [Part 4: Clean and optimize](https://www.youtube.com/watch?v=cWh0de8IhX4)
+- [Part 5: Animate with GSAP](https://www.youtube.com/watch?v=4XJ8yS0zpa4)
+
 ## Källor:
+
 - [MDN om SVG](https://developer.mozilla.org/en-US/docs/Web/SVG)
 - [CSS Tricks: Everything you need to know about SVG](https://css-tricks.com/lodge/svg/)
 - [CSS Tricks: Using SVG](https://css-tricks.com/using-svg/)
 - [CSS Tricks: SVG Properties and CSS](https://css-tricks.com/svg-properties-and-css/)
 - [CSS Tricks: SVG Compendium (links about SVG)](https://css-tricks.com/mega-list-svg-information/)
 - [Video: Animate with ShapeShifter](https://www.youtube.com/watch?v=P35hQOsW0xU)
-
-### Kevin Powells introduktion till SVG
-- [Part 1: Introduction](https://www.youtube.com/watch?v=ZJSCl6XEdP8)
-- [Part 2: Create shapes](https://www.youtube.com/watch?v=9Y4P3FvZ5bg)
-- [Part 3: Viewport and Viewbox](https://www.youtube.com/watch?v=TBYJ2V1jAlA)
-- [Part 4: Clean and optimize](https://www.youtube.com/watch?v=cWh0de8IhX4)
-- [Part 5: Animate with GSAP](https://www.youtube.com/watch?v=4XJ8yS0zpa4)
+- [Video: Creating icons in Figma](https://www.youtube.com/watch?v=B_KeOTlDdSQ)
+- [Video: Learn to build in SVG animation in CSS](https://www.youtube.com/watch?v=gWai7fYp9PY)
