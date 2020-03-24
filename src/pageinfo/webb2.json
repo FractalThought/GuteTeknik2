@@ -55,6 +55,19 @@
       ]
     },
     {
+      "title": "SVG",
+      "subpages": [
+        {
+          "subPageName": "Introduktion",
+          "subPageLink": "svg"
+        },
+        {
+          "subPageName": "Laboration",
+          "subPageLink": "svg/labb"
+        }
+      ]
+    },
+    {
       "title": "Projekt",
       "subpages": [
         {
