@@ -1,0 +1,83 @@
+---
+title: "Projekt: Metodik och designsystem"
+date: "2020-02-26"
+---
+
+
+I det här projektet ska ni animera era assets (3 symboler och en illustration) som ni skapade förra veckan. Om du inte har skapat dessa, så behöver du göra det.
+
+Era symboler animerar ni med CSS, och er illustration ska animeras med biblioteket GSAP.
+
+Animation ger ofta det där lilla extra till en hemsida, och vi kan använda det för att till exempel påkalla uppmärksamhet eller visa interaktion i en applikation (se [Google Material: Understanding Motion](https://material.io/design/motion/))
+
+Det finns två sätt att animera något på webben, med CSS, eller med JavaScript. Vad jag menar med detta är vad som faktiskt hanterar animationen, om det sker via det inbyggda animationssystemet i CSS, eller via till exempel en while-loop i JavaScript.
+Det går att kombinera JavaScript med CSS animationer, genom att till exempel använda transitions.
+
+# Vad ni ska göra
+Ni ska animera tre symboler/ikoner med hjälp av CSS, och göra en lite mer avancerad animation på en illustration med hjälp av JavaScript-biblioteket GSAP.
+
+Era assets kan behöva viss förberedelse för animation, och ska sedan exporteras från Figma.
+
+## Symbolernas CSS animering
+Använd tekniken `@keyframes` i CSS för att animera symbolerna på valfritt sätt. Du kan välja att animera delar av symbolen, eller hela.
+
+## Illustrationens animation
+För illustrationens animation så ska ni animera flera delar, och använda GSAP's tween-funktioner (to eller from-funktionen).
+
+# Till er hjälp
+
+## Hur du "installerar" GSAP
+För det här projektet så har du två val: Antingen använder du [Codepen](https://codepen.io/pen) (registrering krävs), eller så använder du VS Code.
+
+### Codepen
+I en Pen, gå till Settings och sedan JS. Under rubriken Add Externa Scripts/Pens, sök efter GSAP och välj GSAP som kommer upp som alternativ. Klicka på Save & Close, och så är du redo.
+
+### VS Code
+För att lägga in GSAP till ett vanligt HTML-projekt så behöver du ladda in biblioteket som en extern skriptresurs till hemsidan.
+Längst ner på din sida, inuti body-taggen, lägg till följande: `<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>`
+
+Detta är en länk till ett CDN, ett [Content Delivery Network](https://www.ipeer.se/fordelar-cdn.php), som levererar biblioteket. Du behöver vara ansluten till internet för att det ska fungera.
+
+## Resurser
+Du får i princip allt från att följa följande tutorials, och GSAPs dokumentation:
+
+- [Video: Learn to build in SVG animation in CSS](https://www.youtube.com/watch?v=gWai7fYp9PY)
+- [Part 5: Animate with GSAP](https://www.youtube.com/watch?v=4XJ8yS0zpa4)
+- [GSAPs dokumentation](https://greensock.com/docs/)
+- [Getting started with GSAP](https://greensock.com/get-started/)
+- [GSAP Docs: Tween](https://greensock.com/docs/v3/GSAP/Tween)
+
+# Inlämning
+Om du använder Codepen, lämna in länken till din pen. Om du använder VS Code, zippa ihop projektet och lämna in det.
+Ditt projekt ska vara inlämnat innan veckan är slut.
+
+Sen inlämning påverkar betyget negativt (betyder att du inte planerat din tid, vilket är en del av utvecklingsprocessen, som är ett centralt innehåll i kursen).
+
+# Moment i kursplanen som berörs:
+
+- Fördjupning i märkspråk där det huvudsakliga innehållet är standarderna för HTML och CSS...
+- Ramverk eller klassbibliotek inom design eller skriptspråk.
+- Skriptspråk för webbutveckling på klientsidan och dokumentobjektsmodell.
+- Bilder, ljud, video och två- eller tredimensionell interaktiv grafik för webbapplikationer.
+
+# Bedömning
+
+## E-nivå
+För godkänt så ska du ha animerat alla symboler, och minst två delar av illustrationen.
+
+## C-nivå
+För C-nivå ska du animera alla symboler på olika sätt, och använda procent-baserad keyframes, inte bara to & from.
+Dessutom ska du animera minst tre delar av illustrationen.
+
+## A-nivå
+För A-nivå så ska du (förutom C-nivå) använda GSAPs Timeline-funktion för att dela in illustrationens animation i delar.
+
+## Förslag på andra saker du kan göra:
+- Kontrollera animationen med click-event.
+- Animera flera delar av symbolerna.
+
+## Kunskapskraven (E-nivå):
+
+> Eleven utvecklar med **tillfredsställande** funktionalitet inom något eller några av områdena domskript, interaktiv 2D-grafik, 3D-grafik eller animationer.
+
+> I sitt arbete inkluderar eleven **någon enkel** funktion från ett klassbibliotek eller ramverk inom områdena design eller skript.

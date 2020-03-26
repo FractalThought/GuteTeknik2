@@ -40,6 +40,5 @@ Kolla igenom del 1, 2, och 3 av Kevin Powells introduktion till SVG (se nedan).
 - [CSS Tricks: Using SVG](https://css-tricks.com/using-svg/)
 - [CSS Tricks: SVG Properties and CSS](https://css-tricks.com/svg-properties-and-css/)
 - [CSS Tricks: SVG Compendium (links about SVG)](https://css-tricks.com/mega-list-svg-information/)
-- [Video: Animate with ShapeShifter](https://www.youtube.com/watch?v=P35hQOsW0xU)
 - [Video: Creating icons in Figma](https://www.youtube.com/watch?v=B_KeOTlDdSQ)
 - [Video: Learn to build in SVG animation in CSS](https://www.youtube.com/watch?v=gWai7fYp9PY)
