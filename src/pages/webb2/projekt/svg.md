@@ -11,7 +11,7 @@ Era symboler animerar ni med CSS, och er illustration ska animeras med bibliotek
 Animation ger ofta det där lilla extra till en hemsida, och vi kan använda det för att till exempel påkalla uppmärksamhet eller visa interaktion i en applikation (se [Google Material: Understanding Motion](https://material.io/design/motion/))
 
 Det finns två sätt att animera något på webben, med CSS, eller med JavaScript. Vad jag menar med detta är vad som faktiskt hanterar animationen, om det sker via det inbyggda animationssystemet i CSS, eller via till exempel en while-loop i JavaScript.
-Det går att kombinera JavaScript med CSS animationer, genom att till exempel använda transitions.
+Det går att kombinera JavaScript med CSS animationer, genom att till exempel lägga till och ta bort klasser, och använda transitions.
 
 # Vad ni ska göra
 Ni ska animera tre symboler/ikoner med hjälp av CSS, och göra en lite mer avancerad animation på en illustration med hjälp av JavaScript-biblioteket GSAP.
@@ -34,6 +34,7 @@ I en Pen, gå till Settings och sedan JS. Under rubriken Add Externa Scripts/Pen
 
 ### VS Code
 För att lägga in GSAP till ett vanligt HTML-projekt så behöver du ladda in biblioteket som en extern skriptresurs till hemsidan.
+
 Längst ner på din sida, inuti body-taggen, lägg till följande: `<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>`
 
 Detta är en länk till ett CDN, ett [Content Delivery Network](https://www.ipeer.se/fordelar-cdn.php), som levererar biblioteket. Du behöver vara ansluten till internet för att det ska fungera.
@@ -49,6 +50,7 @@ Du får i princip allt från att följa följande tutorials, och GSAPs dokumenta
 
 # Inlämning
 Om du använder Codepen, lämna in länken till din pen. Om du använder VS Code, zippa ihop projektet och lämna in det.
+
 Ditt projekt ska vara inlämnat innan veckan är slut.
 
 Sen inlämning påverkar betyget negativt (betyder att du inte planerat din tid, vilket är en del av utvecklingsprocessen, som är ett centralt innehåll i kursen).

@@ -1,7 +1,7 @@
 # Webbens historia
 
 <div style="display: flex; align-items: center; justify-content: center;">
-    <img src="welcome-to-the-internet.jpeg" height="500">
+    ![Welcome to the internet](welcome-to-the-internet.jpeg)
 </div>
 ---
 

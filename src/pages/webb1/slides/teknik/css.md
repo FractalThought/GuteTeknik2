@@ -59,7 +59,7 @@ p {
 
 ## CSS regel
 
-<img src="http://girldevelopit.github.io/gdi-featured-html-css-intro/img/cssrule.png" alt="CSS regel">
+![CSS rule](cssrule.png)
 
 Bildkälla: [Girl Develop It](http://girldevelopit.github.io/gdi-featured-html-css-intro/class2.html#/9)
 
@@ -272,7 +272,9 @@ Hue, Saturation, Lightness, Alpha
 
 ### Hue (nyans): Vilken nyans som används, utifrån ett färghjul
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/RGB_color_circle.png" alt="HSL color wheel">
+![HSL Color Wheel](hsl.png)
+
+Bildkälla: [Wikimedia](https://upload.wikimedia.org/wikipedia/commons/a/a4/RGB_color_circle.png)
 
 ---
 
