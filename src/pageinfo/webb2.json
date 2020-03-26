@@ -73,6 +73,10 @@
         {
           "subPageName": "Metodik och Designsystem",
           "subPageLink": "projekt/metodiksystem"
+        },
+        {
+          "subPageName": "SVG",
+          "subPageLink": "projekt/svg"
         }
       ]
     }
