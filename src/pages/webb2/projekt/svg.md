@@ -1,5 +1,5 @@
 ---
-title: "Projekt: Metodik och designsystem"
+title: "Projekt: SVG animation"
 date: "2020-02-26"
 ---
 
