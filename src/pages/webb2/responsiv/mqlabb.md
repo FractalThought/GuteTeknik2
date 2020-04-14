@@ -3,7 +3,7 @@ title: "Media queries laboration"
 date: "2017-08-10"
 ---
 
-Innan du börjar, kolla in [sidan om Responsiv design](https://guteteknik.netlify.com/webb2/mediaqueries) där det finns introduktionsfilmer och källor för hur man arbetar med responsiv design, media queries, och breakpoints.
+Innan du börjar, kolla in [sidan om Responsiv design](https://guteteknik.netlify.com/webb2/responsiv/) där det finns introduktionsfilmer och källor för hur man arbetar med responsiv design, media queries, och breakpoints.
 
 # Laborationen
 
