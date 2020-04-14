@@ -68,6 +68,19 @@
       ]
     },
     {
+      "title": "Responsiv",
+      "subpages": [
+        {
+          "subPageName": "Introduktion",
+          "subPageLink": "responsiv"
+        },
+        {
+          "subPageName": "Media queries labb",
+          "subPageLink": "responsiv/mqlabb"
+        }
+      ]
+    },
+    {
       "title": "Projekt",
       "subpages": [
         {
