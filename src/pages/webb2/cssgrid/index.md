@@ -22,10 +22,12 @@ Grid däremot ger dig både rader och kolumner där dina element kan läggas ut.
 För att skapa vissa designs med endast Flexbox så behöver vi ofta använda flera behållare.
 
 Säg att vi har följande layout:
-![Desktop exempel](desktop_exempel.png)
+![Desktop exempel](desktop_example.png)
 
 För att skapa denna layout i Flexbox så behöver vi kapsla in FEATURE1 och FEATURE2 i en flexbox-behållare så de läggs bredvid varandra.
 Sedan behöver vi kapsla in MAIN, Feature-behållaren, och EXTRAINFO i en behållare, och HEADER och ASIDE i en behållare, för att sedan lägga in båda dessa behållare i en flexbox-behållare så de läggs bredvid varandra.
+
+![Desktop exempel förklaring](desktop_example_explanation.png.png)
 
 I CSS Grid så kan vi istället säga åt varje element att lägga sig på de platser där de ska vara, utan att behöva skapa några behållare alls. Svårigheterna då blir istället att definiera hur stora raderna och kolumnerna ska vara.
 
