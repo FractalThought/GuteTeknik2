@@ -30,6 +30,9 @@ Sedan behöver vi kapsla in MAIN och Extra-behållaren i en behållare, för att
 ![Desktop exempel förklaring](desktop_example_explanation.png)
 
 I CSS Grid så kan vi istället säga åt varje element att lägga sig på de platser där de ska vara, utan att behöva skapa några behållare alls. Svårigheterna då blir istället att definiera hur stora raderna och kolumnerna ska vara.
+Fördelen med Grid jämfört med flexbox kommer även om vi vill ändra om hela layouten, eller ett elements plats. Flexbox kan ändra ordningen av elementen, men inte var varje element ska vara.
+Dessutom kräver flexbox att vi kapslar in våra element, vilket gör att får svårare att ändra layouten med till exempel media queries, och ofta måste vi flytta element med JavaScript istället.
+Med Grid kan vi generellt skriva mindre kod, både HTML och CSS, men oftast med bättre resultat.
 
 För mer information om skillnader och likheter mellan Flexbox och Grid, kolla in [denna videon som förklarar det](https://www.youtube.com/watch?v=HYji_V2aYa0). Videon i sig är en del av en hel kurs om CSS Grid av Wes Bos.
 
