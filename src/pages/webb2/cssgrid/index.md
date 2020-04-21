@@ -10,6 +10,11 @@ CSS Tricks har skrivit en [väldigt bra artikel om hur CSS Grid fungerar](https:
 En notering om Grid är att det är svårt att lära sig precis allt om hur Grid fungerar, och mycket av kunskapen om grid kommer vara utifrån specifika användningsområden.
 Därför begränsar jag också vad jag lär ut, och fokuserar på det viktigaste med grid, nämligen att lägga ut en övergripande layout på hemsidor och komponenter.
 
+## Videogenomgångar
+
+- [Del 1: Introduktion](https://youtu.be/QUozc9PFXNI)
+- [Del 2: Layoutexempel](https://youtu.be/OJo8gCHVODc)
+
 ## Skillnader från Flexbox
 
 Den främst skillnaden mellan Flexbox och Grid är att där Flexbox använder en dimension, så använder Grid två dimensioner för att lägga ut elementen.
@@ -39,6 +44,8 @@ För mer information om skillnader och likheter mellan Flexbox och Grid, kolla i
 ## Källor:
 
 - [MDN: CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)
+- [Mozilla Developer Playground: CSS Grid tutorial](https://mozilladevelopers.github.io/playground/css-grid)
+- [Mozilla Developer Playground video 1: Terminology](https://www.youtube.com/watch?v=s-sYjp9-K6E)
 - [CSS Tricks: A complete guide to CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
 - [Video: Traversy Media: CSS Grid Crash Course](https://www.youtube.com/watch?v=jV8B24rSN5o)
 - [Video: CSS Grid in 45 minutes](https://www.youtube.com/watch?v=DCZdCKjnBCs)
