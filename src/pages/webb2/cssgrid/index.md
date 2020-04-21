@@ -5,7 +5,7 @@ date: "2017-08-10"
 
 CSS Grid är ett relativt nytt sätt att skapa layouter med hjälp av CSS. Grid på svenska är Rutnät, och innebär alltså att du lägger ut dina element utifrån ett satt rutnät som du har definierat.
 
-CSS Tricks har skrivit en [väldigt bra artikel om hur CSS Grid fungerar](https://css-tricks.com/snippets/css/complete-guide-grid/). Kolla in den, samt min genomgång om CSS Grid.
+CSS Tricks har skrivit en [väldigt bra artikel om hur CSS Grid fungerar](https://css-tricks.com/snippets/css/complete-guide-grid/). Kolla in den, samt mina genomgångar om CSS Grid.
 
 En notering om Grid är att det är svårt att lära sig precis allt om hur Grid fungerar, och mycket av kunskapen om grid kommer vara utifrån specifika användningsområden.
 Därför begränsar jag också vad jag lär ut, och fokuserar på det viktigaste med grid, nämligen att lägga ut en övergripande layout på hemsidor och komponenter.
