@@ -41,16 +41,16 @@
       ]
     },
     {
-      "title": "HTML/CSS",
+      "title": "Slutprojektet",
       "subpages": [
         {
-          "subPageName": "Grunderna i HTML",
-          "subPageLink": "htmlgrunder"
+          "subPageName": "Introduktion",
+          "subPageLink": "slutprojektet"
         }
       ]
     },
     {
-      "title": "Individuellt Val",
+      "title": "Etik och lagar",
       "subpages": [
         {
           "subPageName": "Etik och lagar",
@@ -59,10 +59,6 @@
         {
           "subPageName": "Etik och lagar uppgift",
           "subPageLink": "etik_och_lagar_uppgift"
-        },
-        {
-          "subPageName": "Slutprojektet",
-          "subPageLink": "iv_slutprojekt"
         }
       ]
     },
