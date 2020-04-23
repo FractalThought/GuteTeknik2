@@ -10,6 +10,7 @@ Kom dock ihåg att v18 är det valborg, och v21 är det lovdag, så faktiska tid
 
 Under dessa fyra veckor kommer jag ha några genomgångar som kommer hjälpa er i utvecklingsarbetet, och jag räknar med att ert arbete omfattar ungefär 16 timmar totalt.
 
+
 Hör gärna av dig om det är något särskilt ni har svårigheter med, så jag kan hjälpa till.
 
 Inlämningen är individuellt, men ni får jättegärna arbeta tillsammans och hjälpa varandra genom att posta i Teams-grupprummet, där jag också har möjlighet att både hjälpa er och se hur ni hjälper varandra.
@@ -22,6 +23,8 @@ Du får själv bestämma vad din hemsida ska handla om, men den behöver ha med 
    Textinnehållet skapar du själv, bilderna behöver vara lagligt framskaffade (till exempel via Unsplash där du ger erkännande för vem som tagit bilden, eller egna bilder).
 2. Samtliga sidor förutom startsidan ska ha samma grundlayout. Din startsida kan se annorlunda ut, eller se likadan ut.
 3. Minst 3 bilder som är optimerade för webben (använd ett optimeringsverktyg så som [Squoosh.app](https://squoosh.app/) för att minska både bildstorleken och filstorleken).
+
+**Utöver detta ska du även göra [Etik och Lagar uppgiften](https://guteteknik.netlify.app/webb1/etik_och_lagar_uppgift/).**
 
 ## Förutom hemsidan behöver du göra följande:
 
@@ -46,6 +49,12 @@ Din dokumentation behöver förklara övergripande din arbetsprocess, och ungef�
 Hemsidan publicerar du på [Netlify.com](https://www.netlify.com/) och inlämning sker genom att lämna in länken till din hemsida, samt eventuella andra resurser (planering och dokumentation).
 
 [Videogenomgång om hur man publicerar på Netlify](https://www.youtube.com/watch?v=9RfU6KGNkfE)
+
+# För er som fått komplettering från introprojektet
+För att komplettera någon av delarna i introprojektet (historia, teknik, användning, reflektion) så lägger du till sidor för de du behöver komplettera, till din hemsida.
+Vad du behöver komplettera finns i feedbacken jag skrivit i kursmatrisen för kursen.
+
+**Dessa måste vara med för ett godkänt betyg i kursen!**
 
 # För högre betyg än D
 
