@@ -5,7 +5,16 @@ date: "2020-04-22"
 
 I det sista projektet förfinar du den kunskap du anskaffat dig under tidigare projekt, och tar det till nästa nivå.
 
-## Vad du ska göra
+Detta projekt jobbar du på fram till och med vecka 22 och lämnar in senast 29e maj.
+Kom dock ihåg att v18 är det valborg, och v21 är det lovdag, så faktiska tiden projektet är 4 veckor.
+
+Under dessa fyra veckor kommer jag ha några genomgångar som kommer hjälpa er i utvecklingsarbetet, och jag räknar med att ert arbete omfattar ungefär 16 timmar totalt.
+
+Hör gärna av dig om det är något särskilt ni har svårigheter med, så jag kan hjälpa till.
+
+Inlämningen är individuellt, men ni får jättegärna arbeta tillsammans och hjälpa varandra genom att posta i Teams-grupprummet, där jag också har möjlighet att både hjälpa er och se hur ni hjälper varandra.
+
+# Vad du ska göra
 
 Du får själv bestämma vad din hemsida ska handla om, men den behöver ha med följande:
 
@@ -14,13 +23,13 @@ Du får själv bestämma vad din hemsida ska handla om, men den behöver ha med 
 2. Samtliga sidor förutom startsidan ska ha samma grundlayout. Din startsida kan se annorlunda ut, eller se likadan ut.
 3. Minst 3 bilder som är optimerade för webben (använd ett optimeringsverktyg så som [Squoosh.app](https://squoosh.app/) för att minska både bildstorleken och filstorleken).
 
-### Förutom hemsidan behöver du göra följande:
+## Förutom hemsidan behöver du göra följande:
 
 1. **Planera ditt arbete**. Du visar detta genom att skicka med en länk till din Figma-design, eller skickar med en skriven planering i ett Word-dokument (minst 300 ord).
 2. **Dokumentera ditt arbete**. Du visar detta genom att skriva en dokumentation om vad du gjort, hur du tänkte, och en reflektion om vad du tyckte om ditt arbete och ditt resultat.
    Din dokumentation kan vara ett HTML-dokument eller och ska motsvara ungefär en A4-sida.
 
-### Vad du behöver visa
+## Vad du behöver visa
 
 Din hemsida behöver visa att du kan använda HTML och CSS för att skapa en hemsida utifrån följande kriterier:
 
@@ -32,7 +41,7 @@ Din hemsida behöver visa att du kan använda HTML och CSS för att skapa en hem
 
 Din dokumentation behöver förklara övergripande din arbetsprocess, och ungefär svara på frågorna "Vad gick bra? Vad gick mindre bra/dåligt? Vad har du lärt dig som du tar med dig till nästa gång?"
 
-### Inlämning
+# Inlämning
 
 Hemsidan publicerar du på [Netlify.com](https://www.netlify.com/) och inlämning sker genom att lämna in länken till din hemsida, samt eventuella andra resurser (planering och dokumentation).
 
@@ -50,7 +59,7 @@ JavaScript körs lokalt i webbläsaren och kan påverka hemsidans struktur, utse
 Jag kommer inte ha några genomgångar specifikt om JavaScript, men för ett betyg högre än D krävs ändå att du använder minst ett enkelt script på din hemsida.
 Det finns mängder med tutorials om JavaScript, och nedan har jag samlat några. Jag rekommenderar specifikt Fredrik Johanssons genomgångar på svenska som ger dig allt du behöver.
 
-### Betygskriterier
+## Betygskriterier
 
 För betyget C och högre behöver du skapa något enklare script, till exempel en Alert som sker när du trycker på en knapp eller laddar hemsidan.
 
