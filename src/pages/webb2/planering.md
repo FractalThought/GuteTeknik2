@@ -71,10 +71,6 @@ heading: "Om kursen"
  </tr>
  <tr><td>Tisdag</td><td>Övningar i responsiv design</td></tr>
  <tr><td>Onsdag</td><td>CSS Grid</td></tr>
- <tr><th rowspan="3">17</th><td>Måndag</td><td>Bildoptimering och textanpassning</td></tr>
- <tr><td>Tisdag</td></tr>
- <tr><td>Onsdag</td><td>Request minimering</td>
- <td>Vi tittar på alternativ för att minska antalet requests som behöver skickas för att visa en hemsida. Vi går igenom Data-URI, inline-SVG, och alternativ till bilder.</td></tr>
  <tr>
  <th rowspan="3">18</th>
  <td>Måndag</td>
@@ -82,5 +78,32 @@ heading: "Om kursen"
  </tr>
  <tr><td>Tisdag</td></tr>
  <tr><td>Onsdag</td><td></td></tr>
+ <tr><th rowspan="3">19</th><td>Måndag</td><td>Bildoptimering och textanpassning</td></tr>
+ <tr><td>Tisdag</td></tr>
+ <tr><td>Onsdag</td><td>Request minimering</td>
+ <td>Vi tittar på alternativ för att minska antalet requests som behöver skickas för att visa en hemsida. Vi går igenom Data-URI, inline-SVG, och alternativ till bilder.</td></tr>
+ <tr>
+ <th rowspan="3">20</th>
+    <td>Måndag</td>
+    <td>Micro-interactions</td>
+    <td>Vi tittar på så kallade micro-interactions, alltså feedback som sker genom småsaker som händer i UIt som förbättrar användarupplevelsen</td>
+ </tr>
+ <tr>
+    <td>Tisdag</td>
+    <td>Intro till Webbutveckling för webbapplikationer</td>
+    <td>Vi kollar på vad som skiljer en hemsida från en applikation, och går igenom hur vi kan skapa något sådant.</td>
+ </tr>
+ <tr>
+    <td>Onsdag</td>
+    <td><strong>Projekt: Webbapplikation</strong></td>
+    <td>Ni använder det ni lärt er för att skapa en liten webbapplikation.</td>
+ </tr>
+  <tr>
+ <th rowspan="3">21</th>
+ <td>Måndag</td>
+ <td rowspan="3"><strong>Projekt: Webbapplikation</strong></td><td rowspan="3">Arbete på projektet.</td>
+ </tr>
+ <tr><td>Tisdag</td></tr>
+ <tr><td>Onsdag</td></tr>
 </tbody>
 </table>
