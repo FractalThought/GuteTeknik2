@@ -3,76 +3,81 @@ title: "Projekt: Responsiv hemsida"
 date: "2020-02-26"
 ---
 
-I det här projektet ska du skapa en responsiv hemsida 
+I det här projektet ska du skapa en responsiv hemsida genom att använda Media Queries och CSS Grid. **Projektet ska vara inlämnat 8 maj.**
 
+# Innehåll
+Din sida ska minst innehålla följande:
+- En Hero-sektion med en rubrik, eventuellt en underrubrik, och minst en "call to action"-knapp.
+- En huvudmeny
+- Element som ligger bredvid varandra och innehåller text.
+- Text och bild som ligger bredvid varandra.
+- Något element som byter ordning vid en mindre/större skärm.
 
+Du kan använda [Gutegymnasiet.se](https://gutegymnasiet.se/) som guide i hur du kan lägga upp ditt innehåll.
 
+## Andra inspirationskällor:
+- [Doom Eternal](https://bethesda.net/en/game/doom)
+- [Cyberpunk 2077](https://www.cyberpunk.net/se/en/)
+- [Zelda: Breath of the Wild](https://www.zelda.com/breath-of-the-wild/)
+- [Outstriders](https://outriders.square-enix-games.com/en-us/)
 
+> OBS! För er som går i TE18 så ska ni göra en hemsida om ert spel, komplett med screenshots och information om spelet. För er andra så är innehållet valfritt.
 
-Ett Dashboard är ett typ av grafiskt användargränssnitt som har som syfte att visa information "at a glance". Dashboards kan även kallas Översikt eller Rapport. Dashboard kommer från intrumentbrädan på bilar, där föraren behöver snabbt hämta in information om bilens olika instrument (så som hastighetsmätaren, klockan, varvmätaren, osv). [(Källa: Wikipedia)](https://en.wikipedia.org/wiki/Dashboard_(business))
+# Upplägg
 
-Ett exempel på ett Dashboard är startsidan som ni kommer till när ni loggar in på SchoolSoft. **Och det är denna dashboard som ni ska designa om i det här projektet**.
+# Utvecklingsprocessen
 
-Kolla in inspiration till [Dashboard på Dribbble](https://dribbble.com/tags/dashboard), och, om du vill, kolla in mer information om [Dashboards (svenska)](https://www.metamatrix.se/vad-ar-en-dashboard/).
+## Skriftlig planering
+Du ska i din utvecklingsprocess göra en skriftlig planering där du skriver vad som är viktigt att du lyfter på hemsidan, och några idéer om hur du vill att din hemsida ska se ut och fungera. Detta kan läggas i en textruta i ditt Figma-dokument som du använder för din design.
 
-# Vad ni ska göra
-Ni ska använda er av Figma och HTML&CSS för att skapa en ny version av översiktsidan (dashboarden) ni ser när ni loggar in på SchoolSoft.
+## Design i Figma
+Förutom den skriftliga planeringen så ska du göra en design i Figma till din hemsida. Du behöver bara skapa en design för din Desktopvy, men **för högre betyg än C så ska du skapa designen för din tablet- och mobilvy också**.
 
-**I er utvecklingsprocess så ska ni göra följande:**
+Tänk på att försöka göra det så lätt som möjligt att skapa kolumner och rader i din design, och om du känner dig osäker på grid och media queries, gör det lätt för dig med design så du inte behöver göra så mycket.
 
-## 1. Researcha och hämta inspiration
+## Skapande av innehållet
+Din hemsida ska innehålla riktigt innehåll. Du behöver alltså skapa texter och tillhandlahålla bilder som du själv tagit. Texten ska vara anpassad för webben, och bilderna ska vara optimerade för webben (bara vara så stora som de behöver vara, och använd ett verktyg så som [Squoosh](https://squoosh.app/) för att minska filstorleken).
 
-1. Logga in på SchoolSoft och undersök översiktssidan
-2. Identifiera dashboardens olika block och element, och om du kan hitta några modifiers.
-3. Skriv ner vad för information som du får från dashboarden, och fundera kring vilken information du tycker är viktig och vilken information som bör presenteras. Saknas något? Är något överflödigt? Anteckna och skissa!
-4. Gå in på [Dribbble](https://dribbble.com/tags/dashboard) och hämta inspiration till dashboards. Du kan söka efter andra källor också.
+## Faktiska hemsidan
+- Du skapar den faktiska hemsidan med HTML och CSS. Du får använda JavaScript för att skapa effekter och liknande, men du får inte påverka layouten med JavaScript, det ska ske med CSS Grid och Media Queries.
+- Förutom Media Queries och CSS Grid så bör du använda BEM och CSS Variabler. För er som fick komplettering på BEM/Variabler **måste** använda dessa i detta projektet. **För högre betyg än C ska du oavsett komplettering eller inte använda BEM och variabler.**
+- Du behöver bara skapa en sida (index.html), men sidan kan innehålla fler.
+- Du ska validera din hemsida och försökt lösa eventuella valideringsproblem. [Valideringsverktyget hittar du här](https://validator.w3.org/), använd [Validate by File Upload](https://validator.w3.org/#validate_by_upload) för att kolla innan du laddar upp hemsidan.
 
+## Publicering
+Din hemsida ska publiceras på [Netlify.com](https://www.netlify.com/).
 
-**OBS! Du behöver inte ha med menyn eller headern. Endast dashboarden är en del av projektet. Vill du lägga in det så får du, men är inget krav.**
+[Videogenomgång om hur man publicerar på Netlify](https://www.youtube.com/watch?v=9RfU6KGNkfE)
 
-## 2. Designa
-Skapa en design för din dashboard i Figma. **Du bör använda components och styles**.
+## Dokumentation
+Du avslutar ditt projekt med att skriva en kort dokumentation, som vanligt skriver du minst om vad som gick bra, vad som gick mindre bra, och vad du ska tänka på tills nästa gång. **Dokumentationen ska motsvara minst ett halvt A4 med 12pt textstorlek och vanligt radavstånd.**
 
-Tänk på hur du delar upp din information och den visuella hirarkin. Du ska dela in informationen i kort, där varje kort innehåller en gruppering av information och dess (om det finns några) actions.
+# Inlämning
+Inlämning sker på SchoolSoft i uppgiften senast **8 maj.**.
+Du ska lämna in följande:
+- Länk till din hemsida
+- Länk till din Figma-fil
+- Länk eller fil på din dokumentation (minst ett halvt A4).
 
-Du väljer själv vilka färger du vill använda, men det är rekommenderat att du väljer en primär färg, en sekundär färg, och en grå färg, samt en vit och en svart färg.
+# Tips
+- Mobile first är oftast enklare att arbeta utifrån, alltså att när du skriver din HTML och CSS så börjar du med mobilsidan, och bygger sedan uppåt
+- Namnge dina variabler och klasser med beskrivande namn. Till exempel skriv inte item3 för en feature, skriv 
+- Försök använda metodiken [DRY (Don't Repeat Yourself)](https://www.youtube.com/watch?v=0px6YH-cauQ) när du skriver din CSS, alltså att du inte upprepar saker. Ha till exempel inte två klasser som gör samma sak, utan använd bara en.
 
-> Du behöver inte vara begränsad av SchoolSofts storlek, eller den layout som de valt (men din dashboard ska lämna viss rum för en potentiell sidmeny på sidan). Igen, fundera kring vad som är mest relevant - se till att det syns tydligast.
+# Hjälpmedel
+Ditt främsta hjälpmedel förutom att be om hjälp från mig eller dina klasskompisar, är genomgångarna på YouTube och informationen på GuteTeknik.
 
-Det är viktigare att designa dina komponenter, än att få till layouten för hela dashboarden. Detta kommer vi återkomma till. Vill du försöka redan nu, kolla in [CSS Grid](https://guteteknik.netlify.com/webb2/cssgrid) (sidan är inte klar, men källor finns).
+## Genomgångar
+- [Responsiv Design: Intro och Teori](https://www.youtube.com/watch?v=WWnmQdaHYAc)
+- [Responsiv Design: Media Queries och Breakpoints](https://www.youtube.com/watch?v=_U5eTVb0vyY)
+- [CSS Grid: Introduktion](https://www.youtube.com/watch?v=QUozc9PFXNI)
+- [CSS Grid: Layoutexempel](https://www.youtube.com/watch?v=OJo8gCHVODc)
 
-## 3. Utföra (HTML&CSS)
-När du känner dig hyfsat klar med din design så är det dags att ta in det i HTML och CSS.
+## Länkar
+I följande länkar finns information samt källor/ytterligare resurser.
 
-I den här fasen ska du använda [CSS variabler](https://guteteknik.netlify.com/webb2/csskoncept) och [BEM](https://guteteknik.netlify.com/webb2/bem/).
-
-Identifiera vad som är Block, Element, och om du har några varianter som ska läggas in som Modifiers.
-
-I övrigt arbetar du som vanligt med din HTML och CSS.
-
-## 4. Dokumentera och reflektera
-Skriv en kort dokumentation om vad du gjort. Här kan du highlighta vad du identifierade som viktig information, vad du gillar och inte gillar med SchoolSofts nuvarande dashboard, och vad du tänkte på när du gjorde din omdesign.
-
-Slutligen skriver du en kort reflektion om ditt arbete. Du ska minst svara på följande frågor, men det måste inte vara upplagt som "fråga -> svar":
-- Vad gick bra?
-- Vad gick mindre bra?
-- Vad kan du göra bättre nästa gång?
-
-Förslagsvis så skriver du din dokumentation i en egen sektion under din dashboard, eller på en egen hemsida.
-
-## 5. Lämna in
-Ni kommer få tillgång till webbhotellet så ni kan ladda upp er dashboard.
-
-Jag går igenom hur ni gör på onsdagen, men det finns även en [guide på kurshemsidan för Webb1](https://guteteknik.netlify.com/webb1/slides/other/ftp).
-
-Dashboarden och dokumentationen ska vara uppladdad i slutet av veckan, och skicka länken till hemsidan och din Figmafil (via Share-knappen i övre högra hörnet i Figma) till mig på kursportfolion.
-
-## Moment i kursplanen som berörs:
-
-- Utvecklingsprocessen för ett webbtekniskt projekt med målsättningar, planering, specifikation av struktur och design, kodning, optimering, testning, dokumentation och uppföljning.
-- Fördjupning i märkspråk där det huvudsakliga innehållet är standarderna för HTML och CSS...
-- Språk med stöd för variabler för att förenkla CSS-generering.
-- Riktlinjer för god praxis inom webbutveckling.
+- [Responsiv design](https://guteteknik.netlify.app/webb2/responsiv/)
+- [CSS Grid](https://guteteknik.netlify.app/webb2/cssgrid/)
 
 ## Bedömning
 
@@ -88,7 +93,3 @@ Dashboarden och dokumentationen ska vara uppladdad i slutet av veckan, och skick
 -  I arbetet utvecklar eleven kod som med gott resultat följer standarder och som omfattar flera tekniker för märkspråk och stilmallar där eleven i omfattande utsträckning använder tekniker för att generera stilmallskod.
 -  I arbetet bearbetar eleven med gott resultat och via flera moment text, bild och eventuell annan media så att de blir anpassade för att fungera i produkten.
 - När arbetet är utfört gör eleven en noggrann och utförlig dokumentation av de moment som har utförts med koppling till generella principer och testresultat samt utvärderar med utförliga och nyanserade omdömen sitt arbete och resultat samt ger förslag på hur arbetet kan förbättras. I utvärderingen resonerar eleven kring eventuella avvikelser samt motiverar utförligt de val som har gjorts.
-
-# SchoolSoft dashboard:
-
-![SchoolSoft Dashboard](schoolsoft_dashboard.png)

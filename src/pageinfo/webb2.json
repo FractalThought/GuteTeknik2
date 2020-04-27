@@ -90,6 +90,10 @@
         {
           "subPageName": "SVG",
           "subPageLink": "projekt/svg"
+        },
+        {
+          "subPageName": "Responsiv",
+          "subPageLink": "projekt/responsiv"
         }
       ]
     }
