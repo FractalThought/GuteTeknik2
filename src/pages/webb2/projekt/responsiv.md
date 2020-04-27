@@ -21,7 +21,7 @@ Du kan använda [Gutegymnasiet.se](https://gutegymnasiet.se/) som guide i hur du
 - [Zelda: Breath of the Wild](https://www.zelda.com/breath-of-the-wild/)
 - [Outstriders](https://outriders.square-enix-games.com/en-us/)
 
-> OBS! För er som går i TE18 så ska ni göra en hemsida om ert spel, komplett med screenshots och information om spelet. För er andra så är innehållet valfritt.
+> OBS! För er som går i TE17 så ska ni göra en hemsida om ert spel, komplett med screenshots och information om spelet. För er andra så är innehållet valfritt.
 
 # Upplägg
 
