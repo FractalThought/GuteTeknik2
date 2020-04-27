@@ -23,8 +23,6 @@ Du kan använda [Gutegymnasiet.se](https://gutegymnasiet.se/) som guide i hur du
 
 > OBS! För er som går i TE17 så ska ni göra en hemsida om ert spel, komplett med screenshots och information om spelet. För er andra så är innehållet valfritt.
 
-# Upplägg
-
 # Utvecklingsprocessen
 
 ## Skriftlig planering
@@ -78,6 +76,14 @@ I följande länkar finns information samt källor/ytterligare resurser.
 
 - [Responsiv design](https://guteteknik.netlify.app/webb2/responsiv/)
 - [CSS Grid](https://guteteknik.netlify.app/webb2/cssgrid/)
+
+# Vad kan jag göra om jag är klar?
+Dessa saker kan du lägga till om du blir klar:
+
+- Logotyp gjord i SVG
+- Animerade HTML-element eller SVG-element med GSAP
+- Skapa någon micro interaction
+Information om micro interactions hittar du [här](https://www.youtube.com/watch?v=EN7nu8hrcN4) och [här](https://www.youtube.com/watch?v=FJ2rb1O70To).
 
 ## Bedömning
 
