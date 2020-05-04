@@ -49,15 +49,15 @@ export default ({ data }) => {
 
   return (
     <React.Fragment>
-      <section className="hero">
+      <section className="hero-section">
         <div className="hero__info">
           <h1>GuteTeknik</h1>
           <p>IT-kurserna på Gutegymnasiet</p>
         </div>
-        <MyImg src="hero.png" width="250" />
+        <MyImg src="techthings.png" alt="blob of tech symbols" width="450" />
       </section>
 
-      <section className="course-item-container">
+      <section className="course-card-container">
         {courses.map((course, key) => (
           <CourseItem
             key={key}
@@ -69,20 +69,6 @@ export default ({ data }) => {
       </section>
     </React.Fragment>
   )
-
-  // return (
-  //   <div className="welcome">
-  //     <h1>Välkommen till GuteTeknik!</h1>
-  //     <section className="course-card-container">
-  //       {courses.map(course => (
-  //         <CourseCard
-  //           courseName={course.courseName}
-  //           courseLink={course.courseLink}
-  //         />
-  //       ))}
-  //     </section>
-  //   </div>
-  // )
 
   // return (
   //   <div>

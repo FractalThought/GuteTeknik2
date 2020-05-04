@@ -2,7 +2,7 @@ import React from "react"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 
-const MyImg = function({ src, width }) {
+const MyImg = function({ src, width, alt }) {
   const data = useStaticQuery(graphql`
     query {
       allImageSharp {
@@ -36,7 +36,12 @@ const MyImg = function({ src, width }) {
   if (selectedImage) {
     return (
       <div style={containerStyle}>
-        <Img fluid={selectedImage.node.fluid} style={style} loading="eager" />
+        <Img
+          fluid={selectedImage.node.fluid}
+          style={style}
+          loading="eager"
+          alt={alt}
+        />
       </div>
     )
   }
