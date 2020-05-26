@@ -1,0 +1,46 @@
+---
+title: "Shots"
+date: "2019-12-02"
+---
+
+Ett av de bästa sätten att fortsätta utvecklas som webbutvecklare är att hålla igång kunskapen genom att göra småprojekt och tester. För att göra detta behöver man identifiera något hos sig själv - något man har svårt för, vill bli bättre på, eller känner att man saknar kunskap om.
+
+På till exempel Dribbble kallas alla dessa för Shots. CodePen har Weekly Challenges, och det finns även andra sidor så som Code Wars som har liknande utmaningar. En intressant (men lite avancerad) YouTubeserie är [KeyFramers](https://www.youtube.com/channel/UCtmYk7H-NNYLEe_LgBRYomA) till exempel, som regelbundet kör livesändningar där de skapar riktiga saker från svåra designs.
+
+Jag brukar dela in det i **Övningar**, **Lärdomar**, och **Utmaningar**.
+
+### Övning
+En övning är att använda något man redan kan och öva på det för att hålla kunskapen färsk. Till exempel öva på BEM, hur man designar ett formulär, eller hur man skapar en snygg landing page.
+
+### Lärdom
+En lärdom är att lära sig något nytt. Till exempel så kan man få höra om ett JS-bibliotek eller en ny grej i CSS och vill utforska den. Det kan vara sådant som D3.js, Three.js, eller som ni har gjort med CSS Grid.
+
+### Utmaning
+En utmaning är att antingen skapa en egen design, eller hitta en existerande design, och skapa den.
+
+
+## Uppgiften
+Utmana dig själv att hitta något du känner att du vill försöka lära dig, bli bättre på, eller utmana dig själv i, och skapa det. En bra utgångspunkt hittar du i länkarna längre ner.
+
+Denna uppgiften är inte obligatorisk, och ditt betyg kommer inte påverkas negativt om du gör den eller inte.
+
+Släng upp det du skapat i Teams-kanalen för Webbutveckling 2.
+
+## Inspiration
+Välj en design och försök återskapa den i antingen Figma eller HTML, CSS & JS.
+
+- [Figmafil: Exercise ideas](https://www.figma.com/file/0y9dMySp9IQ2SWIjppgdXI/Exercise-ideas?node-id=0%3A1)
+- [Dribbble: Easy](https://dribbble.com/tags/easy)
+- [Dribbble: Easy to use](https://dribbble.com/tags/easy_to_use)
+- [Dribbble: Simple](https://dribbble.com/tags/simple)
+- [Dribbble: Website](https://dribbble.com/tags/website)
+- [Land-book: Gallery](https://land-book.com/gallery)
+
+
+## Video-resurser (spellistor)
+Välj en teknik och försök skapa ett projekt som nyttjar den tekniken.
+
+[kevin Powell: Having fun with CSS](https://www.youtube.com/watch?v=f3mwKLXpOLk&list=PL4-IK0AVhVjMI45H5E9oE47wj-7AZLNnK)
+[Kevin Powell: Design tips and tricks](https://www.youtube.com/watch?v=NB1mn2YVF8Q&list=PL4-IK0AVhVjMuTtgTiNXNddTNkYZeoqU4)
+[DesignCourse: Latest Dev Tuts](https://www.youtube.com/watch?v=iMbb0qSat8U&list=PL0lNJEnwfVVPxODR0xh37s_SsSD4A-sJy)
+[DesignCourse: Latest design tuts](https://www.youtube.com/watch?v=pvPZKk0NeRo&list=PL0lNJEnwfVVM80SBgWyC_1DQqyBYfiXeF&index=2)
