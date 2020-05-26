@@ -40,7 +40,7 @@ Välj en design och försök återskapa den i antingen Figma eller HTML, CSS & J
 ## Video-resurser (spellistor)
 Välj en teknik och försök skapa ett projekt som nyttjar den tekniken.
 
-[kevin Powell: Having fun with CSS](https://www.youtube.com/watch?v=f3mwKLXpOLk&list=PL4-IK0AVhVjMI45H5E9oE47wj-7AZLNnK)
-[Kevin Powell: Design tips and tricks](https://www.youtube.com/watch?v=NB1mn2YVF8Q&list=PL4-IK0AVhVjMuTtgTiNXNddTNkYZeoqU4)
-[DesignCourse: Latest Dev Tuts](https://www.youtube.com/watch?v=iMbb0qSat8U&list=PL0lNJEnwfVVPxODR0xh37s_SsSD4A-sJy)
-[DesignCourse: Latest design tuts](https://www.youtube.com/watch?v=pvPZKk0NeRo&list=PL0lNJEnwfVVM80SBgWyC_1DQqyBYfiXeF&index=2)
+- [kevin Powell: Having fun with CSS](https://www.youtube.com/watch?v=f3mwKLXpOLk&list=PL4-IK0AVhVjMI45H5E9oE47wj-7AZLNnK)
+- [Kevin Powell: Design tips and tricks](https://www.youtube.com/watch?v=NB1mn2YVF8Q&list=PL4-IK0AVhVjMuTtgTiNXNddTNkYZeoqU4)
+- [DesignCourse: Latest Dev Tuts](https://www.youtube.com/watch?v=iMbb0qSat8U&list=PL0lNJEnwfVVPxODR0xh37s_SsSD4A-sJy)
+- [DesignCourse: Latest design tuts](https://www.youtube.com/watch?v=pvPZKk0NeRo&list=PL0lNJEnwfVVM80SBgWyC_1DQqyBYfiXeF&index=2)
