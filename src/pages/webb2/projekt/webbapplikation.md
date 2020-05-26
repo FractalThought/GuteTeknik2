@@ -8,7 +8,7 @@ I det här projektet ska du skapa en liten webbapplikation. **Projektet ska vara
 # Innehåll
 Slutprojektet är att skapa en liten liten webbapplikation, till exempel en to-do lista, miniräknare, shoppinglista, timer, quizapp, mini-spel, cookie-clicker, eller liknande. Du får själv välja vilken typ av mini-app du vill göra.
 
-Projektet ska innehålla HTML, CSS, och JavaScript. Fokuset ligger på att skapa en användarupplevelse, inte nödvändigtvis att skapa själva funktionaliteten i appen. Som minst behöver ni att man ska kunna interagera med appen på något sätt som gör att något händer, och det behövs någon form av microinteraktion, till exempel när man hovrar över en knapp och klickar på den.
+Projektet ska innehålla HTML, CSS, och JavaScript. **Fokuset ligger på att skapa en användarupplevelse, inte nödvändigtvis att skapa själva funktionaliteten i appen**. Som minst behöver ni att man ska kunna interagera med appen på något sätt som gör att något händer, och det behövs någon form av microinteraktion, till exempel när man hovrar över en knapp och klickar på den.
 
 # Utvecklingsprocessen
 
@@ -29,16 +29,17 @@ Kom ihåg att gå till bygginställningarna på Netlify och checka i så att den
 Du avslutar ditt projekt med att skriva en kort dokumentation, som vanligt skriver du minst om vad som gick bra, vad som gick mindre bra, och vad du ska tänka på tills nästa gång. **Dokumentationen ska motsvara minst ett halvt A4 med 12pt textstorlek och vanligt radavstånd.**
 
 # Inlämning
-Inlämning sker på SchoolSoft i uppgiften senast **24e maj.**.
+Inlämning sker på SchoolSoft i uppgiften senast **24e maj**.
+
 Du ska lämna in följande:
 - Länk till din webbapplikation.
 - Länk till din Figma-fil.
 - Länk eller fil på din planering och dokumentation (minst ett halvt A4).
 
 # Tips
-- Du kommer inte bli betygsatt utifrån hur mycket Javascript du skrivit eller hur bra koden är, det är viktigare att använda.
+- Du kommer inte bli betygsatt utifrån hur mycket Javascript du skrivit eller hur bra koden är, det är viktigare att skapa själva mikrointeraktionen som gör applikationen "trevligare" att använda.
 - Använd GSAP eller vanlig JavaScript tillsammans med SVG för att skapa mer avancerade animationer som följd av mikrointeraktioner.
-- Namnge dina variabler och klasser med beskrivande namn. Till exempel skriv inte item3 för en feature, skriv 
+- Namnge dina variabler och klasser med beskrivande namn. Till exempel skriv inte item3 för en feature, skriv till exempel Clear.
 - Försök använda metodiken [DRY (Don't Repeat Yourself)](https://www.youtube.com/watch?v=0px6YH-cauQ) när du skriver din CSS, alltså att du inte upprepar saker. Ha till exempel inte två klasser som gör samma sak, utan använd bara en.
 
 # Hjälpmedel
