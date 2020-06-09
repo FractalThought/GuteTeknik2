@@ -224,7 +224,7 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     graphql(`
       {
-        allMarkdownRemark {
+        allMdx {
           edges {
             node {
               fields {
@@ -236,7 +236,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `).then(results => {
-      const allEdges = results.data.allMarkdownRemark.edges
+      const allEdges = results.data.allMdx.edges
 
       const slideEdges = allEdges.filter(
         edge => edge.node.fields.collection === `slides`

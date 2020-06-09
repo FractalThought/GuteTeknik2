@@ -51,12 +51,16 @@ module.exports = {
           {
             resolve: `gatsby-remark-vscode`,
             options: {
-              theme: `Dark+ (default dark)`,
-              classPrefix: "language-",
-              inlineCodeMarker: null,
-              aliases: {},
-              showLineNumbers: true,
-              noInlineHighlight: false,
+              theme: `Default Dark+`,
+            },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 900,
             },
           },
         ],
@@ -67,13 +71,9 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-prismjs`,
+            resolve: `gatsby-remark-vscode`,
             options: {
-              classPrefix: "language-",
-              inlineCodeMarker: null,
-              aliases: {},
-              showLineNumbers: true,
-              noInlineHighlight: false,
+              theme: `Default Dark+`,
             },
           },
           {
