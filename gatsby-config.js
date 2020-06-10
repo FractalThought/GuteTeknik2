@@ -22,14 +22,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/pages`,
-        name: `pages`,
+        name: `page`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/slides`,
-        name: `slides`,
+        name: `slide`,
       },
     },
     {
@@ -47,6 +47,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
+        extensions: [`.mdx`, `.md`],
         plugins: [
           {
             resolve: `gatsby-remark-vscode`,
