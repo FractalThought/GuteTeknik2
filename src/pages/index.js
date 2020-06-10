@@ -1,6 +1,5 @@
 import React from "react"
 import { useEffect } from "react"
-import { graphql } from "gatsby"
 import CourseItem from "../components/CourseItem"
 import MyImg from "../components/MyImg"
 
@@ -69,41 +68,7 @@ export default ({ data }) => {
       </section>
     </React.Fragment>
   )
-
-  // return (
-  //   <div>
-  //     <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-  //     {data.allMarkdownRemark.edges.map(({ node }) => (
-  //       <div key={node.id}>
-  //         <h3>
-  //           <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
-  //         </h3>
-  //         <p>{node.excerpt}</p>
-  //       </div>
-  //     ))}
-  //   </div>
-  // )
 }
 
 // Query not really used
 // TODO: Change to using json (pageinfo)
-
-export const query = graphql`
-  query {
-    allMarkdownRemark {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-          }
-          excerpt
-          fields {
-            slug
-          }
-        }
-      }
-    }
-  }
-`

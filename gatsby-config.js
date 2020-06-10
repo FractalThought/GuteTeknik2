@@ -15,7 +15,8 @@ var path = require("path")
 module.exports = {
   siteMetadata: {
     title: `GuteTeknik`,
-    siteUrl: `https://guteteknik.netlify.com`,
+    siteUrl: `https://guteteknik.netlify.app`,
+    author: `Felix Thålin`,
   },
   plugins: [
     {
@@ -47,8 +48,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        extensions: [`.mdx`, `.md`],
-        plugins: [
+        gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-vscode`,
             options: {
@@ -58,9 +58,6 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              // It's important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
               maxWidth: 900,
             },
           },

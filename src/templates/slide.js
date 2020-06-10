@@ -1,49 +1,37 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
-export default ({ pageContext, data, location }) => {
-  // const {
-  //   breadcrumb: { crumbs },
-  // } = pageContext
-
-  // const page = data.markdownRemark
-
-  /*
-  
-  TODO:
-  Filter all pages on
-  slugs where first part of current slug = first part of that slug
-  This retrieves everything inside 
-
-  Will need to add more fields and then filter it even more to divide it up into
-  headers. If no header: unlisted page
-
-  This does make it more dynamic, no need to use or update the json-files.
-
-  */
-
-  // allInfo.edges.map(({ node }) => (
-  // node.id
-  // node.excerpt
-  // node.fields.slug
-  // node.frontmatter.title
-  // ));
-
-  //const customCrumbLabel = location.pathname.toLowerCase().replace("-", " ")
-
-  return <React.Fragment>Hello</React.Fragment>
-}
-
-export const query = graphql`
+export const pageQuery = graphql`
   query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    mdx(fields: { slug: { eq: $slug } }) {
+      id
+      excerpt
+      fileAbsolutePath
       frontmatter {
         title
       }
-      fields {
-        slug
-      }
+      body
     }
   }
 `
+
+function SlideTemplate({ data: { mdx: slide }, scope, slideContext }) {
+  if (!slide) {
+    return <p>No slide Found? This should be a 404</p>
+  }
+
+  return (
+    <>
+      <h1 className="slide-heading">{slide.frontmatter.title}</h1>
+      <MDXRenderer scope={{ ...scope }}>{slide.body}</MDXRenderer>
+    </>
+  )
+}
+
+export default SlideTemplate

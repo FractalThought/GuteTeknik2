@@ -15,7 +15,7 @@ function Container({ url, pages, children }) {
   }
 
   return (
-    <React.Fragment>
+    <>
       <Header />
       <div id="main-wrapper">
         <aside className="left">
@@ -28,7 +28,7 @@ function Container({ url, pages, children }) {
         </main>
         <aside className="right">Information</aside>
       </div>
-    </React.Fragment>
+    </>
   )
 }
 

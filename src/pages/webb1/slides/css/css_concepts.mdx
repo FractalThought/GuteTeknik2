@@ -1,16 +1,3 @@
-<style>
-
-.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h6, .reveal p, .reveal ul, .reveal ol, .reveal dl {
-  text-align: left;
-}
-
-.reveal ul, .reveal ol {
-  margin: 0;
-  display: block;
-}
-
-</style>
-
 <div class="reveal--fractale">
 
 # Grundläggande koncept i CSS
@@ -38,26 +25,6 @@ C i CSS står för Cascading
 ---
 
 ## Inheritance (arv)
-
-<style>
-
-#parent-child-element {
-  --base-color: 179;
-}
-
-#parent-child-element span {
-  color: hsl(var(--base-color), 85%, 50%);
-}
-
-#parent-child-element span>span, #parent-child-element .parent {
-  font-weight: bold; background: hsl(var(--base-color), 85%, 25%); color: hsl(var(--base-color), 85%, 95%); padding: 0 0.1em;"
-}
-
-#parent-child-element .child {
-  --base-color: 359;
-}
-
-</style>
 
 <div id="parent-child-element">
 
@@ -174,21 +141,6 @@ h2 {
 }
 ```
 
-<style>
-#cascading, #cascading h2 {
-  font-family: "Comic Sans MS";
-  color: hsl(189, 85%, 37%);
-}
-
-#cascading p {
-  font-size: 20px;
-}
-
-#cascading h2 {
-  font-size: 35px;
-}
-</style>
-
 <div id="cascading">
   <h2>Lorem Ipsum</h2>
   <p>Lorem ipsum dolor sit amet.</p>
@@ -212,22 +164,6 @@ h2 {
   font-size: 35px;
 }
 ```
-
-<style>
-#specificity, #specificity h2 {
-  font-family: "Comic Sans MS";
-  color: hsl(189, 85%, 37%);
-}
-
-#specificity p {
-  font-size: 20px;
-  color: hsl(359, 85%, 37%);
-}
-
-#specificity h2 {
-  font-size: 35px;
-}
-</style>
 
 <div id="specificity">
   <h2>Lorem Ipsum</h2>
@@ -337,32 +273,6 @@ human {
 
 ---
 
-<style>
-
-#spec-country * {
-  padding: 20px;
-}
-
-#spec-country .earth .sweden .gotland {
-  background: lightgray;
-  color: green;
-  font-weight: bold;
-}
-
-#spec-country .earth .sweden {
-  background: blue;
-  color: yellow;
-}
-
-#spec-country .gotland .human {
-  color: red;
-}
-
-#-spec-country .human {
-  color: yellow;
-}
-
-</style>
 
 ```css
 earth sweden gotland {
@@ -446,17 +356,6 @@ De två icke-semantiska taggarna `div` och `span` används för att kapsla in oc
 </div>
 ```
 
-<style>
-.example-div {
-  background: #444;
-  color: #fff;
-}
-
-.example-div span {
-  color: #CCC;
-  background: #222;
-}
-</style>
 
 <div class="example-div">
   <p><span>Lorem ipsum</span> dolor sit amet, consectetur adipisicing elit. Fugiat quas officiis maiores <span>exercitationem</span> sunt iusto?</p>
@@ -514,25 +413,6 @@ De två icke-semantiska taggarna `div` och `span` används för att kapsla in oc
 }
 ```
 
-<style>
-#gotland .gamer {
-  background: #af0e12;
-  padding: 10px;
-  font-size: 20px;
-}
-
-#gotland--second .gamer {
-  font-size: 20px;
-}
-
-.teacher {
-  font-weight: bold;
-}
-
-#gotland .father, #gotland--second .father {
-  font-size: 30px;
-}
-</style>
 
 <div id="gotland" class="county">
   <span id="felix" class="gamer teacher father">Felix</span>
@@ -565,19 +445,6 @@ De två icke-semantiska taggarna `div` och `span` används för att kapsla in oc
 }
 ```
 
-<style>
-#gotland--second .gamer {
-  background: hsl(359, 85%, 37%);
-  padding: 10px;
-}
-
-#gotland--second .teacher {
-  border-radius: 10px;
-}
-.father {
-  background: hsl(179, 85%, 37%);
-}
-</style>
 
 <div id="gotland--second" class="county">
   <span id="felix" class="gamer teacher father">Felix</span>

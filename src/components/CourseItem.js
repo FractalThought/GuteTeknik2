@@ -1,14 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import MyImg from "./MyImg"
-
-{
-  /* <img
-        className="course-item__icon"
-        fluid={data.file.childImageSharp.fluid}
-        alt={courseLink}
-      /> */
-}
+// import MyImg from "./MyImg"
 
 function CourseItem({ courseName, courseLink, info }) {
   const actualLink = `/${courseLink}`
