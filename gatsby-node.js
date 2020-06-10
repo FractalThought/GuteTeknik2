@@ -2,84 +2,6 @@ const Promise = require("bluebird")
 const path = require("path")
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-// My stuff here:
-
-// exports.onCreateNode = ({ node, getNode, actions }) => {
-//   const { createNodeField } = actions
-//   if (node.internal.type === `MarkdownRemark`) {
-//     const parent = getNode(node.parent)
-
-//     createNodeField({
-//       node,
-//       name: "collection",
-//       value: parent.sourceInstanceName,
-//     })
-
-//     const slug = createFilePath({ node, getNode })
-
-//     //console.log(slug)
-//     createNodeField({
-//       node,
-//       name: `slug`,
-//       value: slug,
-//     })
-//   }
-// }
-
-// exports.createPages = ({ graphql, actions }) => {
-//   const { createPage } = actions
-
-//   return new Promise((resolve, reject) => {
-//     graphql(`
-//       {
-//         allMdx {
-//           edges {
-//             node {
-//               fields {
-//                 collection
-//                 slug
-//               }
-//             }
-//           }
-//         }
-//       }
-//     `).then(results => {
-//       const allEdges = results.data.allMdx.edges
-
-//       const slideEdges = allEdges.filter(
-//         edge => edge.node.fields.collection === `slides`
-//       )
-//       const pageEdges = allEdges.filter(
-//         edge => edge.node.fields.collection === `pages`
-//       )
-
-//       slideEdges.forEach(({ node }) => {
-//         createPage({
-//           path: `slides/${node.fields.slug}`,
-//           component: path.resolve(`./src/templates/slide.js`),
-//           context: {
-//             slug: `slides/${node.fields.slug}`,
-//           },
-//         })
-//       })
-
-//       pageEdges.forEach(({ node }) => {
-//         createPage({
-//           path: node.fields.slug,
-//           component: path.resolve(`./src/templates/page.js`),
-//           context: {
-//             slug: node.fields.slug,
-//           },
-//         })
-//       })
-
-//       resolve()
-//     })
-//   })
-// }
-
-// New:
-
 async function makePagesFromMdx({ graphql, actions }) {
   const pageTemplate = path.resolve("./src/templates/page.js")
   const { errors, data } = await graphql(
@@ -184,14 +106,5 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       node,
       value: getNode(node.parent).sourceInstanceName,
     })
-  }
-}
-
-exports.onCreatePage = ({ page, actions }) => {
-  const { createPage } = actions
-
-  if (page.path.match(/thumbnail/)) {
-    page.context.layout = "thumbnail"
-    createPage(page)
   }
 }

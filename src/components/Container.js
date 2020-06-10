@@ -19,7 +19,7 @@ function Container({ url, pages, children }) {
       <Header />
       <div id="main-wrapper">
         <aside className="left">
-          <Sidebar urlData={urlData} pages={pages} />
+          {/* <Sidebar urlData={urlData} pages={pages} /> */}
         </aside>
         <main>
           <h1 className="printheader">GuteTeknik</h1>

@@ -40,12 +40,11 @@ export const pageQuery = graphql`
 `
 
 function PageTemplate({
-  data: { mdx: page, allInfo: allMdx },
+  data: { mdx: page, allMdx: allInfo },
   scope,
   pageContext,
 }) {
-  console.log(allMdx)
-  const allInfo = null
+  console.log(allInfo)
   // const allInfo = allMdx.edges
   const {
     breadcrumb: { crumbs },
