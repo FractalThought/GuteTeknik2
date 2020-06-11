@@ -23,7 +23,7 @@ export const pageQuery = graphql`
       }
       body
     }
-    allMdx(filter: { fields: { collection: { eq: "page" } } }) {
+    allMdx(filter: { fields: { collection: { eq: "pages" } } }) {
       edges {
         node {
           body
@@ -62,7 +62,7 @@ function PageTemplate({
         crumbLabel={page.frontmatter.title}
       />
       <h1 className="page-heading">{page.frontmatter.title}</h1>
-      <MDXRenderer scope={scope}>{page.body}</MDXRenderer>
+      <MDXRenderer>{page.body}</MDXRenderer>
     </Container>
   )
 }

@@ -23,14 +23,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/pages`,
-        name: `page`,
+        name: `pages`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/slides`,
-        name: `slide`,
+        name: `slides`,
       },
     },
     {
@@ -48,7 +48,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
+        root: __dirname,
         gatsbyRemarkPlugins: [
+          `gatsby-remark-embedder`,
+          `gatsby-remark-copy-linked-files`,
           {
             resolve: `gatsby-remark-vscode`,
             options: {
@@ -68,6 +71,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          `gatsby-remark-embedder`,
           {
             resolve: `gatsby-remark-vscode`,
             options: {
@@ -83,6 +87,7 @@ module.exports = {
               maxWidth: 900,
             },
           },
+          "gatsby-remark-smartypants",
         ],
       },
     },
