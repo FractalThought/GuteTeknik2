@@ -6,7 +6,6 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === `Mdx`) {
     const parent = getNode(node.parent)
-
     createNodeField({
       node,
       name: "collection",
@@ -15,7 +14,6 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
     const slug = createFilePath({ node, getNode })
 
-    //console.log(slug)
     createNodeField({
       node,
       name: `slug`,
@@ -45,32 +43,45 @@ exports.createPages = ({ graphql, actions }) => {
     `).then(results => {
       const allEdges = results.data.allMdx.edges
 
-      const slideEdges = allEdges.filter(
-        edge => edge.node.fields.collection === `slides`
-      )
-      const pageEdges = allEdges.filter(
-        edge => edge.node.fields.collection === `pages`
-      )
+      // const slideEdges = allEdges.filter(
+      //   edge => edge.node.fields.collection === `slides`
+      // )
+      // const pageEdges = allEdges.filter(
+      //   edge => edge.node.fields.collection === `pages`
+      // )
 
-      slideEdges.forEach(({ node }) => {
+      allEdges.forEach(({ node }) => {
+        console.log("---------------- Node: ----------------")
+        console.log(node)
+        console.log("---------------------------------------")
         createPage({
-          path: `slides/${node.fields.slug}`,
-          component: path.resolve(`./src/templates/slide.js`),
-          context: {
-            slug: `slides/${node.fields.slug}`,
-          },
-        })
-      })
-
-      pageEdges.forEach(({ node }) => {
-        createPage({
-          path: node.fields.slug,
+          path: `pages/${node.fields.slug}`,
           component: path.resolve(`./src/templates/page.js`),
           context: {
-            slug: node.fields.slug,
+            slug: `pages/${node.fields.slug}`,
           },
         })
       })
+
+      // slideEdges.forEach(({ node }) => {
+      //   createPage({
+      //     path: `slides/${node.fields.slug}`,
+      //     component: path.resolve(`./src/templates/slide.js`),
+      //     context: {
+      //       slug: `slides/${node.fields.slug}`,
+      //     },
+      //   })
+      // })
+
+      // pageEdges.forEach(({ node }) => {
+      //   createPage({
+      //     path: node.fields.slug,
+      //     component: path.resolve(`./src/templates/page.js`),
+      //     context: {
+      //       slug: node.fields.slug,
+      //     },
+      //   })
+      // })
 
       resolve()
     })

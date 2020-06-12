@@ -49,6 +49,7 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         root: __dirname,
+        // extensions: [".mdx", ".md"],
         gatsbyRemarkPlugins: [
           `gatsby-remark-embedder`,
           `gatsby-remark-copy-linked-files`,
@@ -68,46 +69,15 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          `gatsby-remark-embedder`,
-          {
-            resolve: `gatsby-remark-vscode`,
-            options: {
-              theme: `Default Dark+`,
-            },
-          },
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              // It's important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
-              maxWidth: 900,
-            },
-          },
-          "gatsby-remark-smartypants",
-        ],
-      },
-    },
-    {
       resolve: `gatsby-plugin-sass`,
       options: {
         useResolveUrlLoader: true,
       },
     },
-    {
-      resolve: `gatsby-plugin-sitemap`,
-    },
+    `gatsby-plugin-sitemap`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-styled-components`,
-      options: {
-        // Add any options here
-      },
-    },
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-breadcrumb`,
       options: {
