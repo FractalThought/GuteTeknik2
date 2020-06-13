@@ -51,14 +51,13 @@ module.exports = {
         root: __dirname,
         // extensions: [".mdx", ".md"],
         gatsbyRemarkPlugins: [
-          `gatsby-remark-embedder`,
           `gatsby-remark-copy-linked-files`,
-          {
-            resolve: `gatsby-remark-vscode`,
-            options: {
-              theme: `Default Dark+`,
-            },
-          },
+          // {
+          //   resolve: `gatsby-remark-vscode`, //causes the crash...
+          //   options: {
+          //     theme: `Default Dark+`,
+          //   },
+          // },
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -75,8 +74,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-sitemap`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-breadcrumb`,

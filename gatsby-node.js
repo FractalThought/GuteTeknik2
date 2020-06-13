@@ -4,6 +4,7 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
+  console.log(node.internal.type)
   if (node.internal.type === `Mdx`) {
     const parent = getNode(node.parent)
     createNodeField({
@@ -24,6 +25,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
+  const pagePath = path.resolve(`./src/templates/page.js`)
+  const slidePath = path.resolve(`./src/templates/slide.js`)
+
+  console.log(pagePath)
+  console.log(slidePath)
 
   return new Promise((resolve, reject) => {
     graphql(`
@@ -40,51 +46,64 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
-    `).then(results => {
-      const allEdges = results.data.allMdx.edges
+    `).then(
+      results => {
+        const allEdges = results.data.allMdx.edges
 
-      // const slideEdges = allEdges.filter(
-      //   edge => edge.node.fields.collection === `slides`
-      // )
-      // const pageEdges = allEdges.filter(
-      //   edge => edge.node.fields.collection === `pages`
-      // )
+        // allEdges.forEach(({ node }) => {
+        //   console.log("---------------- Node: ----------------")
+        //   console.log(node)
+        //   console.log("---------------------------------------")
+        //   createPage({
+        //     path: `pages/${node.fields.slug}`,
+        //     component: pagePath,
+        //     context: {
+        //       slug: `pages/${node.fields.slug}`,
+        //     },
+        //   })
+        // })
 
-      allEdges.forEach(({ node }) => {
-        console.log("---------------- Node: ----------------")
-        console.log(node)
-        console.log("---------------------------------------")
-        createPage({
-          path: `pages/${node.fields.slug}`,
-          component: path.resolve(`./src/templates/page.js`),
-          context: {
-            slug: `pages/${node.fields.slug}`,
-          },
+        allEdges.forEach(edge => {
+          // console.table(edge.node.fields)
         })
-      })
 
-      // slideEdges.forEach(({ node }) => {
-      //   createPage({
-      //     path: `slides/${node.fields.slug}`,
-      //     component: path.resolve(`./src/templates/slide.js`),
-      //     context: {
-      //       slug: `slides/${node.fields.slug}`,
-      //     },
-      //   })
-      // })
+        const slideEdges = allEdges.filter(edge => {
+          // console.log("Slide")
+          // console.table(edge.node.fields)
+          return edge.node.fields.collection === `slides`
+        })
+        const pageEdges = allEdges.filter(edge => {
+          // console.log("Page")
+          // console.table(edge.node.fields)
+          return edge.node.fields.collection === `pages`
+        })
 
-      // pageEdges.forEach(({ node }) => {
-      //   createPage({
-      //     path: node.fields.slug,
-      //     component: path.resolve(`./src/templates/page.js`),
-      //     context: {
-      //       slug: node.fields.slug,
-      //     },
-      //   })
-      // })
+        slideEdges.forEach(({ node }) => {
+          createPage({
+            path: `slides/${node.fields.slug}`,
+            component: slidePath,
+            context: {
+              slug: `slides/${node.fields.slug}`,
+            },
+          })
+        })
 
-      resolve()
-    })
+        pageEdges.forEach(({ node }) => {
+          createPage({
+            path: node.fields.slug,
+            component: pagePath,
+            context: {
+              slug: node.fields.slug,
+            },
+          })
+        })
+
+        resolve()
+      },
+      reason => {
+        console.log(reason)
+      }
+    )
   })
 }
 
