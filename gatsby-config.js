@@ -48,6 +48,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
+        // Need to add default-layout for each view
+        // Views needs to be outside of pages-directory, pages-directory defaults to "default"
+        // Need to check how a layout works with mdx
+
         root: __dirname,
         // extensions: [".mdx", ".md"],
         gatsbyRemarkPlugins: [
