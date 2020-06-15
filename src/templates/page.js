@@ -1,6 +1,9 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
+import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+
+const shortcodes = { Link } // Provide common components here
 import Container from "../components/Container"
 import { Breadcrumb } from "gatsby-plugin-breadcrumb"
 
@@ -62,7 +65,9 @@ function PageTemplate({
         crumbLabel={page.frontmatter.title}
       />
       <h1 className="page-heading">{page.frontmatter.title}</h1>
-      <MDXRenderer>{page.body}</MDXRenderer>
+      <MDXProvider components={shortcodes}>
+        <MDXRenderer>{page.body}</MDXRenderer>
+      </MDXProvider>
     </Container>
   )
 }
