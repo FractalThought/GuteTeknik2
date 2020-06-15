@@ -51,6 +51,7 @@ module.exports = {
         // Need to add default-layout for each view
         // Views needs to be outside of pages-directory, pages-directory defaults to "default"
         // Need to check how a layout works with mdx
+        // https://www.digitalocean.com/community/tutorials/gatsbyjs-mdx-in-gatsby
 
         root: __dirname,
         // extensions: [".mdx", ".md"],
