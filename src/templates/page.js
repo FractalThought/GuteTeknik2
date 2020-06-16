@@ -42,10 +42,8 @@ export const pageQuery = graphql`
   }
 `
 
-function PageTemplate({
-  data: { mdx: page, allMdx: allInfo },
-  scope,
-  pageContext,
+export default function PageTemplate({
+  data: { site: site, mdx: page, allMdx: allInfo },
 }) {
   console.log(allInfo)
   // const allInfo = allMdx.edges
@@ -58,18 +56,19 @@ function PageTemplate({
   }
 
   return (
-    <Container url={page.fields.slug} pages={allInfo}>
-      <Breadcrumb
-        crumbs={crumbs}
-        crumbSeparator=" > "
-        crumbLabel={page.frontmatter.title}
-      />
-      <h1 className="page-heading">{page.frontmatter.title}</h1>
-      <MDXProvider components={shortcodes}>
-        <MDXRenderer>{page.body}</MDXRenderer>
-      </MDXProvider>
-    </Container>
+    <>
+      <h3>COMPONENT</h3>
+      <Container url={page.fields.slug} pages={allInfo}>
+        <Breadcrumb
+          crumbs={crumbs}
+          crumbSeparator=" > "
+          crumbLabel={page.frontmatter.title}
+        />
+        <h1 className="page-heading">{page.frontmatter.title}</h1>
+        <MDXProvider components={shortcodes}>
+          <MDXRenderer>{page.body}</MDXRenderer>
+        </MDXProvider>
+      </Container>
+    </>
   )
 }
-
-export default PageTemplate

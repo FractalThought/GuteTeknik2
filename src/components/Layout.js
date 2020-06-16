@@ -14,6 +14,7 @@ function Layout({
   if (pageContext.layout === "thumbnail") return children
   return (
     <>
+      <h2>LAYOUT</h2>
       <MDXProvider components={mdxComponents}>{children}</MDXProvider>
     </>
   )

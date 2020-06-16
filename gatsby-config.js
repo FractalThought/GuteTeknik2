@@ -56,9 +56,7 @@ module.exports = {
         // Need to check how a layout works with mdx
         // https://www.digitalocean.com/community/tutorials/gatsbyjs-mdx-in-gatsby
         // Check this instead: https://www.gatsbyjs.org/docs/mdx/programmatically-creating-pages/
-
-        root: __dirname,
-        // extensions: [".mdx", ".md"],
+        extensions: [".mdx", ".md"],
         gatsbyRemarkPlugins: [
           `gatsby-remark-copy-linked-files`,
           // {
