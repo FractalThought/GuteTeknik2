@@ -8,16 +8,14 @@ import Container from "../components/Container"
 import { Breadcrumb } from "gatsby-plugin-breadcrumb"
 
 export const pageQuery = graphql`
-  query($slug: String!) {
+  query pageQuery($id: String) {
     site {
       siteMetadata {
         title
       }
     }
-    mdx(fields: { slug: { eq: $slug } }) {
+    mdx(id: { eq: $id }) {
       id
-      excerpt
-      fileAbsolutePath
       fields {
         slug
       }
@@ -42,9 +40,7 @@ export const pageQuery = graphql`
   }
 `
 
-export default function PageTemplate({
-  data: { site: site, mdx: page, allMdx: allInfo },
-}) {
+export default function PageTemplate({ data: { mdx: page, allMdx: allInfo } }) {
   console.log(allInfo)
   // const allInfo = allMdx.edges
   const {

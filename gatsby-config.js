@@ -49,7 +49,8 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         // defaultLayouts: {
-        //   default: require.resolve(`./src/components/layout.js`),
+        //   slides: require.resolve("./src/templates/slide-template.js"),
+        //   default: require.resolve("./src/templates/page-template.js"),
         // },
         // Need to add default-layout for each view
         // Views needs to be outside of pages-directory, pages-directory defaults to "default"

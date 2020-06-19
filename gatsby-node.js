@@ -22,13 +22,13 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
-exports.createPages = async ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
   const pagePath = path.resolve(`./src/templates/page.js`)
   const slidePath = path.resolve(`./src/templates/slide.js`)
 
   const results = await graphql(`
-    {
+    query {
       allMdx {
         edges {
           node {
@@ -43,6 +43,11 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
+
+  if (results.errors) {
+    reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
+  }
+
   const allEdges = results.data.allMdx.edges
 
   // const slideEdges = allEdges.filter(edge => {
@@ -55,8 +60,9 @@ exports.createPages = async ({ graphql, actions }) => {
   allEdges.forEach(({ node }) => {
     if (node.fields.collection === `slides`) {
       console.log("creating slide")
+      console.log(node.fields.slug)
       createPage({
-        path: `slides/${node.fields.slug}`,
+        path: `/slides/${node.fields.slug}`,
         component: slidePath,
         context: {
           slug: `slides/${node.fields.slug}`,
@@ -67,7 +73,7 @@ exports.createPages = async ({ graphql, actions }) => {
       console.log("creating page")
       createPage({
         path: node.fields.slug,
-        component: pagePath,
+        component: path.resolve(`./src/templates/page.js`),
         context: {
           slug: node.fields.slug,
           id: node.id,
