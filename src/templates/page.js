@@ -2,10 +2,10 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-
-const shortcodes = { Link } // Provide common components here
 import Container from "../components/Container"
 import { Breadcrumb } from "gatsby-plugin-breadcrumb"
+
+const shortcodes = { Link } // Provide common components here
 
 export const pageQuery = graphql`
   query pageQuery($id: String) {

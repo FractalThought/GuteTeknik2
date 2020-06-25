@@ -22,14 +22,14 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pages`,
+        path: `${__dirname}/content/pages`,
         name: `pages`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/slides`,
+        path: `${__dirname}/content/slides`,
         name: `slides`,
       },
     },
@@ -48,15 +48,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        // defaultLayouts: {
-        //   slides: require.resolve("./src/templates/slide-template.js"),
-        //   default: require.resolve("./src/templates/page-template.js"),
-        // },
-        // Need to add default-layout for each view
-        // Views needs to be outside of pages-directory, pages-directory defaults to "default"
-        // Need to check how a layout works with mdx
-        // https://www.digitalocean.com/community/tutorials/gatsbyjs-mdx-in-gatsby
-        // Check this instead: https://www.gatsbyjs.org/docs/mdx/programmatically-creating-pages/
+        defaultLayouts: {
+          slides: require.resolve("./src/templates/slide-template.js"),
+          default: require.resolve("./src/templates/page-template.js"),
+        },
         extensions: [".mdx", ".md"],
         gatsbyRemarkPlugins: [
           `gatsby-remark-copy-linked-files`,
@@ -81,7 +76,7 @@ module.exports = {
         useResolveUrlLoader: true,
       },
     },
-    `gatsby-plugin-sitemap`,
+    // `gatsby-plugin-sitemap`,
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-breadcrumb`,
@@ -97,8 +92,6 @@ module.exports = {
           `/404.html`,
           `/offline-plugin-app-shell-fallback`,
         ],
-        // optional: switch to className styling
-        // see `useClassNames example with `AutoGen` below
         useClassNames: true,
       },
     },
