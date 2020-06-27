@@ -43,7 +43,7 @@ export const pageQuery = graphql`
 
 export default function PageTemplate({ pageContext, data }) {
   const page = data.mdx
-  const allInfo = data.allMdx
+  const allInfo = data.allMdx.edges
   console.log(data)
   console.log(pageContext)
   // const allInfo = allMdx.edges

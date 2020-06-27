@@ -42,12 +42,13 @@ module.exports = {
     },
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
-    /*
-    https://www.gatsbyjs.org/packages/gatsby-plugin-mdx/
-    */
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
+        root: __dirname,
+        inlineCode: {
+          marker: '•'
+        },
         defaultLayouts: {
           slides: require.resolve("./src/templates/slide-template.js"),
           default: require.resolve("./src/templates/page-template.js"),
@@ -55,12 +56,12 @@ module.exports = {
         extensions: [".mdx", ".md"],
         gatsbyRemarkPlugins: [
           `gatsby-remark-copy-linked-files`,
-          // {
-          //   resolve: `gatsby-remark-vscode`, //causes the crash...
-          //   options: {
-          //     theme: `Default Dark+`,
-          //   },
-          // },
+          {
+            resolve: `gatsby-remark-vscode`, //causes the crash...
+            options: {
+              theme: `Default Dark+`,
+            },
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -76,7 +77,7 @@ module.exports = {
         useResolveUrlLoader: true,
       },
     },
-    // `gatsby-plugin-sitemap`,
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-breadcrumb`,
