@@ -44,8 +44,8 @@ export const pageQuery = graphql`
 export default function PageTemplate({ pageContext, data }) {
   const page = data.mdx
   const allInfo = data.allMdx.edges
-  console.log(data)
-  console.log(pageContext)
+  // console.log(data)
+  // console.log(pageContext)
   // const allInfo = allMdx.edges
   const {
     breadcrumb: { crumbs },

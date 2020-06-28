@@ -8,8 +8,6 @@ function Container({ url, pages, children }) {
   let urlData = null
 
   if (typeof url !== "undefined") {
-    // the variable is defined
-
     const urlArray = url.split("/")
     urlData = urlArray.filter(data => data !== "")
   }
