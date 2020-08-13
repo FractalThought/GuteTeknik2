@@ -7,6 +7,8 @@ import Code from "./code"
 // import Table from './table';
 import Pre from "./pre"
 
+import PracticeContainer from "./PracticeContainer"
+
 /* eslint-disable */
 export default {
   // h1: props => <H as="h1" {...props} />,
@@ -23,5 +25,6 @@ export default {
   // TODO add `a`
   // TODO add `img`
   // TODO add `ul`
-  // TODO add `li`
+  // TODO add `li`,
+  PracticeContainer: PracticeContainer,
 }

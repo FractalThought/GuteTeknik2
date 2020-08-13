@@ -1,6 +1,8 @@
 import React from "react"
 import Header from "../layout/Header"
 import Sidebar from "../layout/Sidebar"
+import { MDXProvider } from "@mdx-js/react"
+import mdxComponents from "./mdxComponents"
 
 function Container({ url, pages, children }) {
   // Use string split for url
@@ -23,7 +25,7 @@ function Container({ url, pages, children }) {
         </aside>
         <main>
           <h1 className="printheader">GuteTeknik</h1>
-          {children}
+          <MDXProvider components={mdxComponents}>{children}</MDXProvider>
           <script async src="https://static.codepen.io/assets/embed/ei.js" />
         </main>
         <aside className="right">Information</aside>
