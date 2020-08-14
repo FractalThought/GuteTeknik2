@@ -64,8 +64,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
     allEdges.forEach(({ node }) => {
       if (node.fields.collection === `slides`) {
-        console.log("creating slide")
-        console.log(node.fields.slug)
         createPage({
           path: `/slides${node.fields.slug}`,
           component: slidePath,
@@ -75,7 +73,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           },
         })
       } else if (node.fields.collection === `pages`) {
-        console.log("creating page")
         createPage({
           path: node.fields.slug,
           component: pagePath,

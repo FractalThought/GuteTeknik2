@@ -33,6 +33,13 @@ const courses = [
     shortcuts: [{ name: "", link: "" }],
   },
   {
+    courseName: "Dator- och nätverksteknik",
+    courseLink: "daona",
+    info:
+      "Vi går igenom hur den dator och nätverk fungerar, både i teorin, och i praktiken.",
+    shortcuts: [{ name: "", link: "" }],
+  },
+  {
     courseName: "Digitalt skapande 1",
     courseLink: "digi1",
     info:
