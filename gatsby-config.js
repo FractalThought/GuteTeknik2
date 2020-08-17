@@ -10,6 +10,15 @@ https://www.gatsbyjs.org/docs/centralizing-your-sites-navigation/
 
 */
 
+/*
+
+Reading data from JSON
+https://itnext.io/reading-data-from-a-json-file-with-gatsby-graphql-572b18ab98a
+https://dimitr.im/using-json-with-gatsby
+https://www.gatsbyjs.com/docs/sourcing-content-from-json-or-yaml/
+
+*/
+
 var path = require("path")
 
 module.exports = {
@@ -47,7 +56,7 @@ module.exports = {
       options: {
         root: __dirname,
         inlineCode: {
-          marker: '•'
+          marker: "•",
         },
         defaultLayouts: {
           slides: require.resolve("./src/templates/slide-template.js"),
