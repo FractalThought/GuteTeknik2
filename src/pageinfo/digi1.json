@@ -1,0 +1,19 @@
+{
+  "pageName": "Digitalt skapande 1",
+  "pageLink": "daona",
+  "headings": [
+    {
+      "title": "Om kursen",
+      "subpages": [
+        {
+          "subPageName": "Veckoplanering",
+          "subPageLink": "planering"
+        },
+        {
+          "subPageName": "Betygskriterier",
+          "subPageLink": "betygskriterier"
+        }
+      ]
+    }
+  ]
+}
