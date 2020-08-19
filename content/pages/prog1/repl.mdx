@@ -1,0 +1,51 @@
+---
+title: "REPL-programmering"
+date: "2020-08-19"
+---
+
+### REPL-programmering
+
+Vi kommer börja med att skriva enkla rader i terminalen för NodeJS. När du installerade NodeJS så skapades det även ett program på din dator som heter Node.js, som vi ska starta nu.
+
+Starta startmenyn i Windows med Windowstangenten och börja skriva "Node.js" för att söka efter den terminalen. Innan du öppnar den så rekommenderar jag att du högerklickar på den och väljer Lägg till Start för att lägga till den till startmenyn så du snabbare kan komma åt den senare.
+
+När du startat NodeJS så ser du en terminal, även kallad konsol (console). Inuti detta så körs ramverket (programmet) NodeJS, i så kallad REPL-mode. REPL står för Read, Evaluate, Print, Loop och betyder att programmet lyssnar efter ett input från någon extern källa (till exempel dig själv), och när den får någon input så ska programmet utvärdera och agera utifrån detta input, och sedan skriva ut om det kommer något resultat från denna utvärdering. Slutligen loopar hela processen, vilket betyder att programmet går tillbaka till att lyssna efter input från en extern källa.
+
+Du skickar input (och därmed startar REPL-processen) genom att skriva något och sedan trycker på Entertangenten.
+
+### Hello world
+
+Vi kan börja med att skriva `"hello world"`. Kom ihåg citattecknen, detta är för att vi vill skriva ut en hel mening, och programmet behöver veta var den meningen börjar, och var den slutar. Vi kommer gå igenom mer om hur detta fungerar senare.
+
+Tryck nu på Enter, och du bör se att nästa rad fylls med texten 'hello world', precis det som vi skrev.
+
+Vad programmet gjorde är att den läste ditt input ("hello world"), utvärderade vad detta var, vilket bara är en mening som den inte skulle göra något med, och skrev sedan ut resultatet, vilket är meningen (eftersom den inte skulle göra något med den), och slutligen gick den tillbaka till att lyssna efter nästa input.
+
+Nu kan du testa att skriva något annat, till exempel `"How are you?".`
+
+Om du vill gå tillbaka till något du skrivit tidigare, så behöver du bara trycka på upp på piltangenterna för att gå igenom varje kommando du skrivit tidigare.
+
+### Expressions och operators
+
+Expressions, eller uttryck på svenska, är en grundpelare i programmering, och innebär helt enkelt att vi använder en operator (operand på svenska) i kombination med ett eller fler värden och låter datorn utvärdera det till ett resultat.
+
+Vi kan börja med ett enkelt uttryck; `1+2`. Skriv in det i Node.js-terminalen och tryck på Entertangenten. Resultatet blir, kanske ganska självklart, **3**.
+
+Vad vi gjorde nu är att använda värdet 1, tillsammans med operanden + (addition operand), och slutligen värdet 2. Datorn utvärderar detta sedan som en matematisk uträkning (addition, eftersom vi använde +).
+
+För matematiska uttryck så kan vi använda de flesta operanderna som du är van vid; addition (+), subtraktion (-), multiplikation (\*), och division (/), samt några du kanske inte använt, till exempel modulo (%) som används för att få fram resten efter en division mellan två tal.
+
+Testa de olika operanderna med olika värden, till exempel - vad blir:
+
+- 78 + 9?
+- 36 - 48?
+- 64 / 20?
+- 64 % 20?
+
+Om vi tar exemplet 64/20 så får vi 3.2, det går alltså att dela 64 med 20 tre hela gånger, men det blir något över. Vad det är kan vi ta reda på med operanden modulo.
+
+### Lägga ihop meningar
+
+Vi kan också lägga ihop meningar eller ord tillsammans, testa till exempel att skriva `"hello" + "world"`. Resultatet blir att datorn skriver ut "helloworld". Det blir så eftersom datorn behöver tydliga instruktioner, och förstår inte att vi vill sätta ihop en mening, så den sätter bara ihop bokstäverna som våra ord består av.
+
+För att få den att skriva "hello world" så behöver vi alltså lägga till ett mellanslag. Det kan vi göra så här: `"hello" + " " + "world"`, eller `"hello" + " world"`. Observera att det alltså är ett mellanslag i början av "world".
