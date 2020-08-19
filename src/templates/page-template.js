@@ -44,9 +44,6 @@ export const pageQuery = graphql`
 export default function PageTemplate({ pageContext, data }) {
   const page = data.mdx
   const allInfo = data.allMdx.edges
-  console.log(data)
-  console.log(pageContext)
-  // const allInfo = allMdx.edges
   const {
     breadcrumb: { crumbs },
   } = pageContext
@@ -57,7 +54,6 @@ export default function PageTemplate({ pageContext, data }) {
 
   return (
     <>
-      {/* <h3>SLIDE COMPONENT</h3> */}
       <Container url={page.fields.slug} pages={allInfo}>
         <Breadcrumb
           crumbs={crumbs}
