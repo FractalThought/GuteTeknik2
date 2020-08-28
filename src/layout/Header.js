@@ -21,6 +21,9 @@ function Header() {
           <li>
             <Link to="/prog2">Programmering 2</Link>
           </li>
+          <li>
+            <Link to="/daona">Dator- och nätverksteknik</Link>
+          </li>
         </ul>
       </nav>
     </header>
