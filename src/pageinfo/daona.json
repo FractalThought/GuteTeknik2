@@ -14,6 +14,15 @@
           "subPageLink": "betygskriterier"
         }
       ]
+    },
+    {
+      "title": "Uppgifter",
+      "subpages": [
+        {
+          "subPageName": "Uppgift 1",
+          "subPageLink": "uppgift1"
+        }
+      ]
     }
   ]
 }
