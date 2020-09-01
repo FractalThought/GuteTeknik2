@@ -1,6 +1,8 @@
 import React from "react"
 import styled, { css } from "styled-components"
 import { useState } from "react"
+import { MDXProvider } from "@mdx-js/react"
+import code from "./code"
 
 const Hidden = styled.section`
   font-size: 16px;
@@ -63,7 +65,9 @@ function PracticeContainer({ children }) {
       <ShowButton expanded={!isHidden} onClick={() => show()}>
         {isHidden ? "Visa" : "Dölj"} lösning
       </ShowButton>
-      <HiddenDiv isHidden={isHidden}>{children}</HiddenDiv>
+      <HiddenDiv isHidden={isHidden}>
+        <MDXProvider components={code}>{children}</MDXProvider>
+      </HiddenDiv>
     </>
   )
 }
