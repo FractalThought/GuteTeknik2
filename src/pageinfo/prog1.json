@@ -25,6 +25,14 @@
         {
           "subPageName": "Folders, flöde, och variabler",
           "subPageLink": "flow"
+        },
+        {
+          "subPageName": "Operatorer",
+          "subPageLink": "operatorer"
+        },
+        {
+          "subPageName": "Kontrollsatser",
+          "subPageLink": "kontrollsatser"
         }
       ]
     }
