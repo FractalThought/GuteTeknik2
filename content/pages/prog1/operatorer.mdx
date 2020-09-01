@@ -30,7 +30,7 @@ Förändringsoperatorer används för att ändra värdet på en variabel med 1, 
 ## Relationsoperatorer (jämförelseoperatorer, comparison)
 
 ```jsx
-== ≠ < > ≤ ≥
+== != < > <= >=
 ```
 
 Relationsoperatorer (relationship eller comparison) används för att jämföra två värden med varandra. Resultatet från detta är antingen sant eller falskt, beroende på värdena.
@@ -42,3 +42,11 @@ Relationsoperatorer (relationship eller comparison) används för att jämföra 
 ```
 
 Logiska operatorer används för att lägga ihop eller förändra andra operatorer.
+
+`!` används för att omvända ett statement. Så till exempel `!true` är samma som `false`.
+
+`&&` och `||` används för att lägga ihop två statements, och kollar om dessa är sant eller falskt, och beroende på operand så ger dem resultatet sant eller flaskt.
+
+För `&&` så behöver båda statements vara sanna för att operanden ska resultera i sant, annars är det falskt.
+
+För `||` så räcker det om ett av statements är sant för att operanden ska resultera i sant, annars är det falskt.
