@@ -46,10 +46,12 @@ let height = 100;
 ```javascript
 age += 5;
 
-if(age > summerCampAge) {
-  console.log("Jag får gå på sommarläger!")
+if(age >= summerCampAge) {
+  console.log("Jag får gå på sommarläger!");
 }
+```javascript
 ```
+
 </PracticeContainer>
 
 ## Får Kalle Kanin åka Berg- och Dalbana?
@@ -58,8 +60,9 @@ För att få åka berg- och dalbana så behöver man vara minst 11 år, och öve
 Skapa en kontrollsats som kollar både Kalles ålder och höjd, och skriver ut om han får åka berg- och dalbana.
 
 <PracticeContainer>
+
 ```javascript
-if(age > 11 && height > 90) {
+if(age >= 11 && height > 90) {
   console.log("Kalle får åka berg- och dalbana!")
 }
 ```
@@ -67,14 +70,14 @@ if(age > 11 && height > 90) {
 
 # Får Kalle åka stora vattenrutchkanan?
 
-För att få åka vattenrutchkana så behöver man antingen vara minst 10 år gammal, eller vara över 120cm.
+För att få åka vattenrutchkana så behöver man antingen vara minst 10 år gammal, eller vara 120cm eller över.
 
 Skapa en kontrollsats som kollar både Kalles ålder och höjd, och skriver ut om han får åka berg- och dalbana.
 
 <PracticeContainer>
 ```javascript
-if(age > 10 || height > 120) {
-  console.log("Kalle får åka vattenrutchkanan!")
+if(age >= 10 || height >= 120) {
+  console.log("Kalle får åka vattenrutchkanan!");
 }
 ```
 </PracticeContainer>
