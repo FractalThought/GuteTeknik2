@@ -27,12 +27,17 @@
           "subPageLink": "flow"
         },
         {
-          "subPageName": "Operatorer",
-          "subPageLink": "operatorer"
-        },
-        {
           "subPageName": "Kontrollsatser",
           "subPageLink": "kontrollsatser"
+        }
+      ]
+    },
+    {
+      "title": "Kunskapsbank",
+      "subpages": [
+        {
+          "subPageName": "Operatorer",
+          "subPageLink": "operatorer"
         }
       ]
     }
