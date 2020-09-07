@@ -38,6 +38,14 @@
         {
           "subPageName": "Operatorer",
           "subPageLink": "operatorer"
+        },
+        {
+          "subPageName": "Kodstandard",
+          "subPageLink": "kodstandard"
+        },
+        {
+          "subPageName": "Problemlösning och felsökning",
+          "subPageLink": "problemlosning-och-felsokning"
         }
       ]
     }
