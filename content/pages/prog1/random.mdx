@@ -1,0 +1,55 @@
+---
+title: "Random"
+date: "2020-09-07"
+---
+
+Slumpmässighet är ett sätt för datorn att göra ett "val". Verkligheten är dock att en dator kan inte till exempel välja en siffra mellan 1 till 10.
+Det som egentligen sker när vi kör en slumpmässighetsgenerator är att datorn hämtar in värden från olika källor och lägger ihop dem på olika sätt och räknar ut ett värde utifrån detta.
+Källor kan till exempel vara tiden, temperaturen på datorns CPU, och, operativsystemets versionsnummer. Eftersom värdet egentligen inte är slumpmässigt, så kallas det pseudo-random. Pseudo betyder typ "fusk/fake".
+
+# Random i JavaScript
+
+För att generera ett slumpmässigt värde i JavaScript så använder vi funktionen `Math.random()`.
+
+Math.random ger ett slumpmässigt tal mellan 0 och 1 och är alltså oftast ett decimaltal med flera decimaler. Resultatet från Math.random kan bli 0, men aldrig 1.
+Tyvärr är det inte så användbart. Helst vill vi kunna få ett tal mellan 0 och något specifikt tal, eller ett som ligger mellan två tal.
+
+## Slumpmässigt tal mellan 0 och ett specifikt nummer
+
+För det första så kan vi multiplicera resultatet av Math.random med det nummer vi vill använda.
+
+```js
+let randomTal = Math.random() * 10; // randomTal blir satt till en siffra mellan 0 och 10
+```
+
+En notering här är att alla decimaler kommer med, vilket ofta är något vi sällan behöver. För att få heltal så använder vi funktionen Math.floor (alltså runda nedåt).
+
+```js
+let randomTal = Math.floor(Math.random() * 10); // randomTal blir satt till ett heltal mellan 0 och 10
+```
+
+Observera att som med vanliga Math.random så kan resultatet aldrig bli exakt det högre talet (i koden ovan kan resultatet bli 0, men inte 10).
+
+## Slumpmässigt tal mellan två tal
+
+För att få fram ett heltal som ligger mellan två tal som vi själva satt, så behöver vi lite ytterligare matte:
+
+```js
+let min = 5;
+let max = 10;
+let randomTal = Math.random() * (max - min) + min; // randomTal blir satt till ett heltal mellan 5 och 10
+```
+
+Åter igen så kan resultatet inte bli exakt det högre talet (i koden ovan kan resultatet bli 5, men inte 10).
+
+## Slumpmässigt tal mellan två tal där det genererade talet kan vara båda talen
+
+Vi behöver en lite annorlunda uträkning för att få att resultatet kan bli det högre talet:
+
+```js
+let min = 5;
+let max = 10;
+let randomTal = Math.floor(Math.random() * (max - min + 1) + min); // randomTal blir satt till ett heltal mellan 5 eller 10, och kan bli 5 eller 10
+```
+
+Mer om [Math.random() kan du läsa på Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random).

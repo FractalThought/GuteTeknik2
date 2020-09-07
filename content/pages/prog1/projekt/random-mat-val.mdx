@@ -1,0 +1,37 @@
+---
+title: "Restaurangväljare"
+date: "2020-09-07"
+---
+
+En dator är ett verktyg som vi kan lägga över arbete till. Till exempel så kan vi använda en dators möjlighet att generera slumpmässiga tal för att göra ett val vi inte vill behöva göra.
+
+Säg till exempel att skolmaten idag inte är något du gillar, så du tänkte äta lunchen någon annanstans, men vart? Vem orkar välja?
+
+Vårt mål är alltså att skapa ett skript som kan slumpa fram namnet på en restaurang i Visby där du kan äta lunch.
+
+För detta behöver vi veta hur man slumpar fram slumpade tal. Läs på om [Math.random() på Random-sidan i kunskapsbanken](https://guteteknik.netlify.app/prog1/random).
+
+Sedan behöver vi använda kontrollsatsen `if` för att kolla resultatet från det slumpade talet.
+
+Försök själv med dessa ledtrådar innan du kollar på lösningen nedan.
+
+
+<PracticeContainer>
+
+```javascript
+let randomTal = Math.floor(Math.random() * 3);
+
+if(randomTal == 0) {
+    console.log("Circle K");
+}
+
+if(randomTal == 1) {
+    console.log("Max");
+}
+
+if(randomTal == 2) {
+    console.log("McDonalds");
+}
+```
+
+</PracticeContainer>

@@ -29,6 +29,19 @@
         {
           "subPageName": "Kontrollsatser",
           "subPageLink": "kontrollsatser"
+        },
+        {
+          "subPageName": "Restaurangväljare",
+          "subPageLink": "projekt/random-mat-val"
+        }
+      ]
+    },
+    {
+      "title": "Projekt",
+      "subpages": [
+        {
+          "subPageName": "Restaurangväljare",
+          "subPageLink": "projekt/random-mat-val"
         }
       ]
     },
@@ -42,6 +55,10 @@
         {
           "subPageName": "Kodstandard",
           "subPageLink": "kodstandard"
+        },
+        {
+          "subPageName": "Random",
+          "subPageLink": "random"
         },
         {
           "subPageName": "Problemlösning och felsökning",

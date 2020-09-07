@@ -52,7 +52,7 @@ function HiddenDiv({ isHidden, children }) {
   return <>{!isHidden && <Hidden>{children}</Hidden>}</>
 }
 
-function PracticeContainer({ children }) {
+function PracticeContainer({ children, title }) {
   const show = () => {
     console.log("showing")
     setHidden(!isHidden)
@@ -63,7 +63,7 @@ function PracticeContainer({ children }) {
   return (
     <>
       <ShowButton expanded={!isHidden} onClick={() => show()}>
-        {isHidden ? "Visa" : "Dölj"} lösning
+        {isHidden ? "Visa" : "Dölj"} {title || "lösning"}
       </ShowButton>
       <HiddenDiv isHidden={isHidden}>
         <MDXProvider components={code}>{children}</MDXProvider>
