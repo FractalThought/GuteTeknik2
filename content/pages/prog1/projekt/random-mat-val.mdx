@@ -35,3 +35,65 @@ if(randomTal == 2) {
 ```
 
 </PracticeContainer>
+
+# Version 2: Olika chans på olika restauranger
+
+Säg att du föredrar att datorn väljer vissa saker lite oftare än andra, hur ändrar du skriptet så att det blir större chans att välja det?
+
+Skriv om skriptet så att en av restaurangerna har högre chans än av de andra två (eller fler, om du har lagt till fler restauranger).
+
+<PracticeContainer title="ledtråd">
+
+Om du följer exemplet ovan så genererar du nu en siffra som antingen är 0, 1, eller 2.
+Sedan kollar skriptet vilken siffra det blev, och väljer restaurang utifrån det. Varje restaurang har lika stor chans (33%) att hända.
+
+För att ändra så att en restaurang har högre chans så behöver du höja siffran som genereras, och få en restaurang att bli vald på fler siffror.
+
+Tex om siffran som genereras är mellan 0 och 5, och så kan du få att en restaurang blir vald om talet som genereras blir 2 eller mer (`>=2`).
+Följden blir då att den restaurangen blir vald om talet blir antingen 2, 3, eller 4.
+
+</PracticeContainer>
+
+</PracticeContainer>
+
+```js
+
+let randomTal = Math.floor(Math.random() * 5);
+
+if(randomTal == 0) {
+    console.log("Circle K");
+}
+
+if(randomTal == 1) {
+    console.log("Max");
+}
+
+if(randomTal >= 2) {
+    console.log("McDonalds");
+}
+
+```
+
+<PracticeContainer>
+
+# Fler restauranger med olika chans
+
+Testa nu att göra så att fler restauranger har olika chans. Du behöver alltså kolla om det slumpmässigt genererade talet är inom vissa räckvidd.
+
+<PracticeContainer title="ledtråd">
+
+För att kolla om något är inom en räckvidd av siffror så behöver du använda `&&`
+
+Till exempel:
+
+```js
+
+if(randomTal > 3 && randomTal < 6) {
+    console.log("Max");
+    // Detta händer om randomTal är mer än 3, och samtidigt mindre än 6
+    // Alltså händer detta om randomTal är antingen 4 eller 5
+}
+
+```
+
+</PracticeContainer>
