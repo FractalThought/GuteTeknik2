@@ -37,7 +37,7 @@ För att få fram ett heltal som ligger mellan två tal som vi själva satt, så
 ```js
 let min = 5;
 let max = 10;
-let randomTal = Math.random() * (max - min) + min; // randomTal blir satt till ett heltal mellan 5 och 10
+let randomTal = Math.floor(Math.random() * (max - min) + min); // randomTal blir satt till ett heltal mellan 5 och 10
 ```
 
 Åter igen så kan resultatet inte bli exakt det högre talet (i koden ovan kan resultatet bli 5, men inte 10).
