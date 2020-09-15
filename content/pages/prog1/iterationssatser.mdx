@@ -34,7 +34,8 @@ Ett snabbt sätt att säga detta är `Om condition är sant, kör statement och 
 
 Något att tänka på med en loop är att den pausar hela flödet tills den avslutas (oftast genom att dess condition inte längre blir uppfyllt).
 
-För att vi inte ska få en oändlig loop så behöver vi se till att dess condition förändras inuti while-loopens statement till att bli falskt. Vanligt är att använda en counter för att köra loopen ett antal gånger, så här;
+För att vi inte ska få en oändlig loop så behöver vi se till att dess condition förändras inuti while-loopens statement till att bli falskt.
+Vanligt är att använda en counter för att köra loopen ett antal gånger, så här;
 
 ```javascript
 let counter = 0;
@@ -48,6 +49,25 @@ while(counter < 5) { // Kolla om counter är mindre än 5
 
 En annan loop vi vanligtvis använder är for-loopen.
 
+Det som skiljer en for-loop mot en while-loop är att i en for-loop skapar du alltid en counter som en del av själva syntaxen för att skapa loopen, så här;
+
+```javascript
+
+for(let i = 0; i <= 5; i++) {
+  console.log("Detta körs 5 gånger, detta är gång nr " + i);
+}
+
+```
+
+`for` är nyckelordet för att skapa en for-loop.
+
+`let i = 0` skapar en variabel som är begränsad till loopen, och som vanligtvis används som counter. Detta körs innan loopens övriga kod körs.
+
+`i <= 5` är loopens *condition*. Loopen körs så länge detta är sant. Detta körs innan loopens statement körs.
+
+`i++` ändrar loopens counter. Detta körs alltid efter loopens statement är över, men innan dess condition kollas igen.
+
+`{ }` är loopens statement, det som finns inuti körs om loopens condition är sant.
 
 # Övningar
 Vi fortsätter med Kaninen Kalle, men för enkelhetens skull, skapa en ny skriptfil, förslagsvis döpt till iterationssats.js så du lätt kan hitta den.
