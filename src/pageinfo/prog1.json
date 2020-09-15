@@ -49,6 +49,10 @@
       "title": "Kunskapsbank",
       "subpages": [
         {
+          "subPageName": "Begrepp",
+          "subPageLink": "begrepp"
+        },
+        {
           "subPageName": "Operatorer",
           "subPageLink": "operatorer"
         },

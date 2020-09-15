@@ -26,7 +26,7 @@ function Container({ url, pages, children }) {
           <MDXProvider components={mdxComponents}>{children}</MDXProvider>
           <script async src="https://static.codepen.io/assets/embed/ei.js" />
         </main>
-        <aside className="right">Information</aside>
+        <aside className="right"></aside>
       </div>
     </>
   )
