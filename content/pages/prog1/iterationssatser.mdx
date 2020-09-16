@@ -25,6 +25,8 @@ Som du ser så är satsen uppbyggd i delar;
 
 `{ }` används för att kapsla in den kod som ska köras om while-loopens condition är sant. Detta kallas *statement*.
 
+## Hur While-loopen fungerar
+
 Så du kan tänka är att denna typ av loop fungerar på följande sätt:
 1. Loopen kollar om dess condition fortfarande är sant. Om det inte är sant, avsluta loopen och fortsätt koden efter statementet.
 2. Kör statementet om condition är sant.
@@ -32,9 +34,10 @@ Så du kan tänka är att denna typ av loop fungerar på följande sätt:
 
 Ett snabbt sätt att säga detta är `Om condition är sant, kör statement och repetera tills condition inte är sant.`.
 
-Något att tänka på med en loop är att den pausar hela flödet tills den avslutas (oftast genom att dess condition inte längre blir uppfyllt).
+> Något att tänka på med en loop är att den pausar hela flödet tills den avslutas (oftast genom att dess condition inte längre blir uppfyllt).
 
-För att vi inte ska få en oändlig loop så behöver vi se till att dess condition förändras inuti while-loopens statement till att bli falskt.
+> För att vi inte ska få en oändlig loop så behöver vi se till att dess condition förändras inuti while-loopens statement till att bli falskt.
+ 
 Vanligt är att använda en counter för att köra loopen ett antal gånger, så här;
 
 ```javascript
@@ -45,6 +48,23 @@ while(counter < 5) { // Kolla om counter är mindre än 5
 }
 ```
 
+## Do-while
+En variant av while-loopen är Do-while. I en vanlig While-loop så kollas loopens condition innan statementet körs. I en Do-while är detta omvänt.
+
+Om vi säger att en While-loop är att säga till datorn "om detta stämmer, gör detta om och om igen tills dess att det inte längre stämmer", så är en Do-while loop istället att säga till datorn "gör detta om och om igen, så länge detta stämmer".
+
+Så här ser en Do-while loop ut:
+
+```javascript
+let counter = 0;
+do {
+  console.log("Counter är nu " + counter);
+  counter++;
+} while (counter < 5);
+```
+
+Ovanstående kod kör alltså först console.log och ökar counter, sen kollar den om counter är mindre än 5. Om counter är mindre än 5 så körs loopen om.
+
 ## For-loop
 
 En annan loop vi vanligtvis använder är for-loopen.
@@ -53,11 +73,18 @@ Det som skiljer en for-loop mot en while-loop är att i en for-loop skapar du al
 
 ```javascript
 
-for(let i = 0; i <= 5; i++) {
+for(let i = 0; i < 5; i++) {
   console.log("Detta körs 5 gånger, detta är gång nr " + i);
 }
 
 ```
+
+> Resultat:
+> Detta körs 5 gånger, detta är gång nr 0
+> Detta körs 5 gånger, detta är gång nr 1
+> Detta körs 5 gånger, detta är gång nr 2
+> Detta körs 5 gånger, detta är gång nr 3
+> Detta körs 5 gånger, detta är gång nr 4
 
 `for` är nyckelordet för att skapa en for-loop.
 
@@ -70,7 +97,7 @@ for(let i = 0; i <= 5; i++) {
 `{ }` är loopens statement, det som finns inuti körs om loopens condition är sant.
 
 # Övningar
-Vi fortsätter med Kaninen Kalle, men för enkelhetens skull, skapa en ny skriptfil, förslagsvis döpt till iterationssats.js så du lätt kan hitta den.
+Vi fortsätter med Kaninen Kalle, men för enkelhetens skull, skapa en ny skriptfil, förslagsvis döpt till *iterationssats.js* så du lätt kan hitta den.
 
 ## Loopande tågbana
 Kalle är på tivoli och vill åka Tågbana. Runt tågbanan finns några träd, en tunnel, och två vattenfall. Tågbanan åker runt fem gånger, och Kalle ropar "Titta träd!" varje gång han ser ett träd, och "tunnel!" varje gång han kommer till tunneln, och "blött!" varje gång han kommer till vattenfallet. Slutligen ska han ropa ut hur många gånger tåget har åkt runt.
@@ -88,7 +115,7 @@ Använd en while-loop och en counter för att hålla koll på antalet loopar som
 
 ```javascript
 let counter = 0;
-while(counter >= 5) {
+while(counter < 5) {
   console.log("titta träd!");
   console.log("titta träd!");
   console.log("titta träd!");
@@ -115,4 +142,27 @@ console.log("titta träd!");
 console.log("titta träd!");
 ```
 
-## 
+## Kasta groda
+Kalle vill spela Kasta groda. Kasta groda går ut på att man kastar en groda och försöker få den att landa på ett näckrosblad. Man får fem försök att få den att landa. Kalle är hyfsat bra på att kasta groda, och han tror han kan träffa ungefär hälften av gångerna han kastar.
+
+Skriv ett skript som använder en loop som skiver ut varje gång Kalle kastar en groda, och om den träffar eller inte. Använd [Random-funktionen](https://guteteknik.netlify.app/prog1/random/) i JavaScript för att slumpa om grodan träffar eller inte.
+
+<PracticeContainer>
+```javascript
+for(let i = 0; i < 5; i++) {
+
+}
+```
+
+</PracticeContainer>
+
+### Pris för bra kast
+Desto fler grodor som träffar näckrosorna, desto bättre pris får Kalle.
+
+- 1 till 2 gånger så får han en plastgroda.
+- 3 gånger så får han ett grodgossedjur.
+- 4 till 5 gånger får han en radiostyrd groda.
+
+Förbättra din kod och lägg till följande funktionalitet:
+1. Använd en variabel för att hålla koll på hur många gånger Kalle träffar.
+2. Skriv ut vad Kalle vinner, utifrån listan ovan.
