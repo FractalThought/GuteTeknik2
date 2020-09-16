@@ -6,6 +6,7 @@ const Code = styled.code`
   border-radius: 4px;
   padding: 2px 6px;
   font-size: 0.9375em;
+  font-family: "Fira code", monospace;
 `
 
 export default Code
