@@ -148,15 +148,14 @@ Skriv ett skript som använder en loop som skiver ut varje gång Kalle kastar en
   <PracticeContainer>
 
 ```javascript
-let counter = 0;
-while(counter < 5) {
-  counter++;
-}
-```
-
-```javascript
 for(let i = 0; i < 5; i++) {
-  console.log("lol");
+  console.log("Kalle kastar en groda...");
+  let testThrow = Math.floor(Math.random() * 2);
+  if(testThrow == 1) {
+    console.log("Grodan landar på ett näckrosblad!");
+  } else {
+    console.log("Miss.");
+  }
 }
 ```
 
