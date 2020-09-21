@@ -1,0 +1,62 @@
+---
+title: "Arrayer"
+date: "2020-09-21"
+---
+
+En Array är en variabel som innehåller flera värden av samma typ. På svenska kan vi också kalla detta för Fält, men Array går lika bra och är det jag använder. Vi kan skapa en array så här:
+
+```javascript
+let names = [];
+```
+
+I det här fallet skapar vi alltså en ny int-array som ska kunna hålla 20st värden. En array kan vara bra att använda i fall där vi ska lägga in mycket data, som när vi ska hantera flera namn.
+
+Varje värde kan vi sedan komma åt genom att skriva variabelnamnet[#] där # är positionen i arrayen där värdet ska ligga. Dock ska vi komma ihåg att arrayer börjar på 0, så första värdet i en array med 20 värde i har sitt första värde på [0], och sista värde på [19].
+
+Vill vi till exempel komma åt värdet på position 5 i arrayen age så använder vi  `age[4]`.
+
+Vi kan använda det precis som när vi använder en vanlig variabel, till exempel kan vi göra följande:
+
+```javascript
+
+let age = [20];
+age[4] = 27;
+
+console.log("Age[4] har värdet " + age[4]);
+
+```
+
+
+## Använda loopar för att populera och hämta värden i arrayer
+
+Vi kan också skapa en loop för att både populera (sätta värden, från engelskas populate) en array, eller för att komma åt dem. Vi kan börja med att skapa en int-array som ska ta 3 värden, och vi vill hålla resultatet från några ekvationer;
+
+let results = new int[3];
+Sedan vill vi sätta de värdena till dess position, plus 1, gånger 6. Så vi skapar en while-loop för att populera arrayen med dessa värden. Vi kan använda .Length-värdet för att ta reda på hur stor vår array är, ifall vi skulle ha dynamiskt satt dess storlek:
+int counter = 0;
+while (counter < results.Length)
+{
+//Lägg in mer här
+counter++;
+}
+I vår while-loop kan vi alltså lägga in värden, och vi kan använda det faktum att vi måste öka counter varje gång i vår loop, så värdet kommer att förändras hela tiden. Ersätt //Lägg in mer här med följande kod:
+results[counter] = (counter+1)*6;
+Vi sätter alltså värdet på position [counter] till counter+1*6. Vi använder parantes så additionen sker först. Från mattematiken kan vi komma ihåg operationsprioriteten, alltså i vilken ordning saker sker, som bestämmer att multiplikation och division sker före addition och subtraktion – men med parenteser så ändras den ordningen till att det som är i parenteserna sker först.
+Vi kan ta och testa vilket värde vi får genom att eka ut det i konsolen (eka kommer från kommandot echo som är vad funktionen console.log gör när den skriver ut i konsolen) precis innan counter++; :
+
+```javascript
+console.log(results[counter]);
+```
+
+Utanför loopen kan vi då komma åt värdena genom att anropa positionen i arrayen, eller använda en ny loop;
+
+Console.WriteLine("Results[0]: " + results[0]);
+Console.WriteLine("Results[1]: " + results[1]);
+Console.WriteLine("Results[2]: " + results[2]);
+counter = 0; //Eftersom vi redan har en counter så räcker det med att nollställa den
+while (counter < results.Length)
+{
+Console.WriteLine("Results[" + counter.ToString() + "]: " + results[counter]);
+counter++;
+}
+Detta skriver alltså samma sak i konsolen.
