@@ -174,7 +174,7 @@ main li {
 
 @media screen and (min-width: $large-up) {
   #main-wrapper {
-    grid-template-columns: 1fr minmax(500px, 45vw) 1fr;
+    grid-template-columns: 1fr minmax(500px, 50em) 1fr;
     grid-template-areas: "left main right";
 
     .left {
