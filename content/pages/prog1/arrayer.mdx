@@ -102,6 +102,32 @@ while (counter < results.Length)
 
 Detta skriver alltså samma sak i konsolen.
 
+<PracticeContainer title="Visa hela koden">
+
+```javascript
+let results = [];
+
+let counter = 0;
+while(counter < 3) {
+    results[counter] = (counter+2)*6;
+    console.log(results[counter]);
+    counter++;
+}
+
+console.log("Results[0]: " + results[0]);
+console.log("Results[1]: " + results[1]);
+console.log("Results[2]: " + results[2]);
+counter = 0; //Eftersom vi redan har en counter så räcker det med att nollställa den
+while (counter < results.Length)
+{
+    console.log("Results[" + counter + "]: " + results[counter]);
+    counter++;
+}
+
+```
+
+</PracticeContainer>
+
 # Söka i en array
 
 Vi kan loopa igenom en array för att hitta särskilda värden. Då är det bra att vi vet om arrayens storlek, och för det så kan vi använda egenskapen `.length`, som skriver ut hur många element som arrayen har. Arrayens sista element är alltid på positionen `.length - 1`.
