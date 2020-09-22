@@ -13,12 +13,54 @@ Igge, Isabella, Isak, Kalle, Kasper, Klara, Saga, Sture, Sara.
 
 Skapa en array fylld med namnen på alla som står i kön, och skriv sedan ut vad varje person har för plats i kön.
 
+<PracticeContainer>
+
+```javascript
+let peopleInLine = ["Igge", "Isabella", "Isak", "Kalle", "Kasper", "Klara", "Saga", "Sture", "Sara"];
+```
+
+</PracticeContainer>
+
 ---
 
 # 2: Lista på lottorader
 Tivolit behöver skapa en lista på lottorader och spara dem. Tips: Kolla iterationssatser.
 
+<PracticeContainer>
+
+```javascript
+let = numberOfTickets = 5; // Ändra för att få fler lottorader
+let numberInTickets = 5; // ändra för att få fler siffror i varje rad
+let tickets = []; // våra sparade lottorader
+
+// Loopa igenom för att skapa flera tickets
+for (let i = 0; i < numberOfTickets; i++) {
+
+        // Skapa en ticket genom att loopa igenom 5 gånger och lägga till en slumpmässig siffra
+        let ticket = "";
+        for (let j = 0; j < numberInTickets; j++) {
+                ticket += Math.floor(Math.random() * 10) + " ";
+        }
+        // Lagra lottoraden vi skapat
+        tickets[i] = ticket;
+        console.log("Ticket " + i + ": " + tickets[i]);
+}
+```
+
+</PracticeContainer>
+
 ---
 
 # 3: Välja lottorad
 Nu vill tivolit kunna slumpa en lottorad som ska vinna. Slumpa fram en position och skriv ut lottoraden som står på den positionen.
+
+<PracticeContainer>
+
+```javascript
+let chosenTicket = Math.floor(Math.random() * tickets.length);
+console.log("Vinnande lottoraden är rad " + chosenTicket + " med siffrorna " + tickets[chosenTicket]);
+
+```
+
+
+</PracticeContainer>
