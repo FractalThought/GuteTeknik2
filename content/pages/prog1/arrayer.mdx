@@ -3,46 +3,82 @@ title: "Arrayer"
 date: "2020-09-21"
 ---
 
-En Array är en variabel som innehåller flera värden av samma typ. På svenska kan vi också kalla detta för Fält, men Array går lika bra och är det jag använder. Vi kan skapa en array så här:
+
+En **array** är en variabel som innehåller flera värden av samma typ. På svenska kan vi också kalla detta för Fält, men **array** går lika bra och är det begreppet vi kommer fortsätta använda. Ett värde i en array kallas **element**.
+
+Vi kan skapa en array så här:
 
 ```javascript
 let names = [];
 ```
 
-I det här fallet skapar vi alltså en ny int-array som ska kunna hålla 20st värden. En array kan vara bra att använda i fall där vi ska lägga in mycket data, som när vi ska hantera flera namn.
+I det här fallet skapar vi alltså en ny array som ska kunna hålla flera värden.  En array kan vara bra att använda i fall där vi ska lägga in mycket data, som när vi ska hantera flera namn.
+
+> I JavaScript behöver vi inte specificera hur många värden som arrayen kan hålla, men det är vanligt i andra språk att man behöver specificera antal värden i arrayen när man skapar den.
 
 Varje värde kan vi sedan komma åt genom att skriva variabelnamnet[#] där # är positionen i arrayen där värdet ska ligga. Dock ska vi komma ihåg att arrayer börjar på 0, så första värdet i en array med 20 värde i har sitt första värde på [0], och sista värde på [19].
 
-Vill vi till exempel komma åt värdet på position 5 i arrayen age så använder vi  `age[4]`.
+Vill vi till exempel komma åt värdet på position 5 i arrayen names så använder vi  `names[4]`.
 
 Vi kan använda det precis som när vi använder en vanlig variabel, till exempel kan vi göra följande:
 
 ```javascript
 
-let age = [20];
-age[4] = 27;
+let names = [];
+names[4] = "Felix";
 
-console.log("Age[4] har värdet " + age[4]);
+console.log("names[4] har värdet " + names[4]);
 
 ```
 
+> **Notering:** Koden ovan gör att arrayen egentligen är 5 värden stor, men de första 4 värdena är inte definerade. I JavaScript hanteras ett värde som inte är satt som `undefined` (odefinerad). Helst ska man undvika att skapa odefinerade positioner i arrayer, då detta tar upp minne och kan leda till problem längre fram.
+
+# Lägga till värden vid skapande
+Vi kan lägga till värden direkt när vi skapar arrayen, så här;
+
+```javascript
+
+let names = ["Felix", "Anna", "Oliver", "Erik"];
+
+```
+
+Precis som tidigare så kan vi komma åt ett enskilt värde genom att specificera värdets position. Så `Oliver` i det här fallet är på position 2.
+
+> Kom ihåg att arrayer börjar alltid på positionen 0.
 
 ## Använda loopar för att populera och hämta värden i arrayer
 
-Vi kan också skapa en loop för att både populera (sätta värden, från engelskas populate) en array, eller för att komma åt dem. Vi kan börja med att skapa en int-array som ska ta 3 värden, och vi vill hålla resultatet från några ekvationer;
+Vi kan också skapa en loop för att både populera (sätta värden, från engelskas populate) en array, eller för att komma åt dem. Vi kan börja med att skapa en array som ska ta 3 värden, och vi vill hålla resultatet från några ekvationer;
 
-let results = new int[3];
-Sedan vill vi sätta de värdena till dess position, plus 1, gånger 6. Så vi skapar en while-loop för att populera arrayen med dessa värden. Vi kan använda .Length-värdet för att ta reda på hur stor vår array är, ifall vi skulle ha dynamiskt satt dess storlek:
-int counter = 0;
-while (counter < results.Length)
-{
-//Lägg in mer här
-counter++;
+```javascript
+
+let results = [];
+
+```
+
+Ekvationen vi vill spara är dess position (`counter`) plus 2 gånger 6, alltså `(counter+2)*6`. Så vi skapar en while-loop för att populera arrayen med dessa värden;
+
+```javascript
+
+let counter = 0;
+while(counter < 3) {
+    // Lägg in mer här
+    counter++;
 }
-I vår while-loop kan vi alltså lägga in värden, och vi kan använda det faktum att vi måste öka counter varje gång i vår loop, så värdet kommer att förändras hela tiden. Ersätt //Lägg in mer här med följande kod:
-results[counter] = (counter+1)*6;
-Vi sätter alltså värdet på position [counter] till counter+1*6. Vi använder parantes så additionen sker först. Från mattematiken kan vi komma ihåg operationsprioriteten, alltså i vilken ordning saker sker, som bestämmer att multiplikation och division sker före addition och subtraktion – men med parenteser så ändras den ordningen till att det som är i parenteserna sker först.
-Vi kan ta och testa vilket värde vi får genom att eka ut det i konsolen (eka kommer från kommandot echo som är vad funktionen console.log gör när den skriver ut i konsolen) precis innan counter++; :
+
+```
+
+I vår while-loop kan vi alltså lägga in värden, och vi kan använda det faktum att vi måste öka counter varje gång i vår loop, så värdet kommer att förändras hela tiden.
+
+Ersätt `// Lägg in mer här` med följande kod:
+
+`results[counter] = (counter+2)*6;`
+
+Vi sätter alltså värdet på position [counter] till (counter+2)*6.
+
+Vi använder parantes så additionen sker först. Från matematiken kan vi komma ihåg operationsprioriteten, alltså i vilken ordning saker sker, som bestämmer att multiplikation och division sker före addition och subtraktion – men med parenteser så ändras den ordningen till att det som är i parenteserna sker först.
+
+Vi kan ta och testa vilket värde vi får genom att eka ut det i konsolen (eka kommer från kommandot echo som är vad funktionen console.log gör när den skriver ut i konsolen) precis innan `counter++;` :
 
 ```javascript
 console.log(results[counter]);
@@ -50,13 +86,37 @@ console.log(results[counter]);
 
 Utanför loopen kan vi då komma åt värdena genom att anropa positionen i arrayen, eller använda en ny loop;
 
-Console.WriteLine("Results[0]: " + results[0]);
-Console.WriteLine("Results[1]: " + results[1]);
-Console.WriteLine("Results[2]: " + results[2]);
+```javascript
+
+console.log("Results[0]: " + results[0]);
+console.log("Results[1]: " + results[1]);
+console.log("Results[2]: " + results[2]);
 counter = 0; //Eftersom vi redan har en counter så räcker det med att nollställa den
 while (counter < results.Length)
 {
-Console.WriteLine("Results[" + counter.ToString() + "]: " + results[counter]);
-counter++;
+    console.log("Results[" + counter + "]: " + results[counter]);
+    counter++;
 }
+
+```
+
 Detta skriver alltså samma sak i konsolen.
+
+# Söka i en array
+
+Vi kan loopa igenom en array för att hitta särskilda värden. Då är det bra att vi vet om arrayens storlek, och för det så kan vi använda egenskapen `.length`, som skriver ut hur många element som arrayen har. Arrayens sista element är alltid på positionen `.length - 1`.
+
+Något att tänka på är att en array är i sig inte ett värde, utan bara en lista som håller värden. 
+
+```javascript
+
+let names = ["Felix", "Anna", "Oliver", "Erik"];
+let nameToSearch = "Oliver";
+
+for(let i = 0; i < names.length; i++) {
+    if(names[i] == nameToSearch) {
+        console.log("Namn hittat på position " + i);
+    }
+}
+
+```

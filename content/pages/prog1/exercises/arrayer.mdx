@@ -1,0 +1,70 @@
+---
+title: "Övningar i arrayer"
+date: "2020-09-22"
+---
+
+
+# Övning 1 Hitta fler namn
+Skapa en array som användaren själv ska mata in värden till. Programmet ska:
+- Be användaren att mata in tre namn, som ska sparas i en array.
+- - Skriva ut vilka tre namn som användaren skrev.
+
+Det finns flera sätt att lösa den här uppgiften.
+
+# Övning 2 Guessing with Arrays
+Programmet ska be användaren att gissa ett tal som finns i en array, och skriva rätt om talet finns i arrayen, och fel om talet inte finns i arrayen.
+
+# Övning 3 Inloggning
+En List har som sagt många fördelar framför en Array. Med en lista kan vi enklare jämföra variabler och det gör det möjligt att till exempel skapa en enkel inloggning.
+
+## Uppdraget:
+Vi vill skapa en lista med namn, och sedan fråga användaren om dess namn. Om användaren skriver ett namn som är med i listan, då får användaren går vidare. Annars säger vi att det är fel, och användaren får försöka igen.
+
+## Tips:
+Här kan vi då alltså använda Contains i en whileloop, och kolla om användaren skriver rätt. Då vi inte behöver bry oss om vad användaren faktiskt skriver, så kan vi lägga kollen direkt i vår while-loop:
+            //Körs under tiden användaren inte lyckats skriva i rätt namn
+            while (!Names.Contains(Console.ReadLine()))
+            {
+                //Todo: Lägg till en fråga om namn
+            }
+!-operatorn betyder INTE, eller man kan tänka ”motsatsen till”. I det här fallet säger den åt vår whilesats att köras under tiden Names-listan INTE innehåller det användaren skriver.
+!-operatorn är densamma som !=, som då används när man jämför något, och betyder då att man kollar om något ”INTE är lika med” något annat.
+Skriv resten av koden, använd Names som namn och string som list-typ.
+ 
+Projekt: Dynamisk shoppinglista
+Vi kan använda Listors dynamiska storlek till att skapa en shoppinglista. Programmet ska;
+•	Skriva ut vad som finns i listan just nu, och fråga om användaren vill lägga till något eller ta bort något från listan.
+•	Skriver användaren in något som finns i listan, då ska det tas bort, om inte, så ska det läggas till.
+•	Detta ska ske i en loop, som körs oändligt tills användaren avslutar programmet.
+Psuedokod:
+/*Jag kommer hädanefter använda Echo för vad man ska skriva ut i konsolen, istället för att skriva Console.Writeline().*/
+List<string> Items = new List<string>();
+While(true)
+{
+        Echo Hej! Du har detta i din lista:
+        Foreach (string item in items)
+        {
+                Echo item;
+        }
+        Echo Skriv något nytt för att lägga till det, eller något gammalt för att ta bort det.
+        String input = Console.readline;
+        If(items.contains(input)
+        {
+                //Remove input
+        }
+        Else
+        {
+                //Add input
+        }
+}
+
+
+
+
+
+# Övning 4: Generate a card
+Uppgiften är att skapa en applikation som genererar ett Hearthstone-minion-kort med stats och effekt som genereras från applikationen. Användaren ska bara få skriva vilken mana-cost som kortet ska ha.
+
+Effekten kortet har är i text, resten är tal och allt ska skrivas ut i konsolen på ett lämpligt sätt. Ett kort kan ha som mest 3 effekter, och det ska slumpas både hur många effekter kortet ska ha, och vilka effekterna ska vara.
+
+För denna uppgift kräver det att du lär dig hur Random-klassen fungerar, och det får du ta reda på själv, då det är en del av uppgiften att ta reda på sådan information.

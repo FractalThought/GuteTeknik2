@@ -37,6 +37,15 @@
       ]
     },
     {
+      "title": "Övningar",
+      "subpages": [
+        {
+          "subPageName": "Array-övningar",
+          "subPageLink": "exercises/arrayer"
+        }
+      ]
+    },
+    {
       "title": "Projekt",
       "subpages": [
         {
@@ -67,6 +76,10 @@
         {
           "subPageName": "Problemlösning och felsökning",
           "subPageLink": "problemlosning-och-felsokning"
+        },
+        {
+          "subPageName": "Arrayer",
+          "subPageLink": "arrayer"
         }
       ]
     }
