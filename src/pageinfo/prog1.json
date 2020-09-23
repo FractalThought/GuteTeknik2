@@ -51,6 +51,10 @@
         {
           "subPageName": "Restaurangväljare",
           "subPageLink": "projekt/random-mat-val"
+        },
+        {
+          "subPageName": "Introprojektet",
+          "subPageLink": "projekt/intro"
         }
       ]
     },
