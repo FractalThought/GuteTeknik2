@@ -66,13 +66,13 @@ Det finns tre typer av moduler beroende på vilken riktningen som dess rätta v�
 För att bygga labyrinten så behöver tivolit använda **10 moduler** som leder in till labyrintens mitt. Dessa måste slumpas fram för att göra labyrinten rolig.
 
 ## Vad du ska göra
-Din uppgift är att med kod generera en ordning som modulerna ska sättas ihop.
+Din uppgift är att med kod generera en ordning som modulerna ska sättas ihop i.
 
 Tivolit behöver att du levererar en **array med 10 element**. Arrayen ska bestå av en slumpmässig ordning av modulerna som du genererat.
 
 En modul ska alltså innehålla en av tre texter; `"Left"`, `"Right"`, `"Straight"`. Föredrar du så kan du använda svensk text, alltså Höger, Vänster, Rakt fram.
 
-Det ska vara samma chans för en modul att bli av någon av dessa typer.
+Det ska vara samma chans för en modul att bli någon av dessa typer.
 
 Du behöver använda [arrayer](https://guteteknik.netlify.app/prog1/arrayer/), [kontrollsatser](https://guteteknik.netlify.app/prog1/kontrollsatser/), [iterationssatser](https://guteteknik.netlify.app/prog1/iterationssatser/), och [random-funktionen](https://guteteknik.netlify.app/prog1/random/).
 
@@ -88,18 +88,18 @@ Lämna in din skriptfil till uppgiften på SchoolSoft senast **30e september**.
 # Ytterligare funktionalitet för högre betyg
 Om du är klar och vill visa mer förmåga så kan du lägga till ytterligare funktionalitet på följande sätt. Grunduppgiften uppvisar E till D nivå på dessa moment, ytterligare funktionalitet visar att du utvecklat högre färdighet (kunde göra det snabbare och kan mer).
 
-## Roligare labyrint
+## 1. Roligare labyrint
 Tivolit vill göra labyrinten lite roligare och har hittat man kan lägga till särskilda moduler som "checkpoints", men de kostar mycket mer så tivolit har bestämt att beställa in 3st sådana.
 
 Utöka labyrintens storlek till 15, och ändra din kod så att en specialmodul (skriv `"Special"` istället för de vanliga modulerna) sätts in på 5e, 8e, och 12e platsen.
 
-## Jämnare labyrint
+## 2. Jämnare labyrint
 Ibland blir labyrinten väldigt ojämn, och har för många av en modul. Tivolit skulle vilja att det aldrig blir 3 av samma modul i en rad (exklusive specialmodulerna).
 
 Ändra din kod så att det aldrig kan bli mer än 2 av samma modul efter varandra.
 
-## Generera falska vägar
-Använd din genererade labyrint för att skapa en array med falska vägar. Varje falsk väg ska innehålla tre moduler (inga specialmoduler) och första modulen i den vägen får inte vara samma som den riktiga vägen.
+## 3. Generera falska vägar
+Använd din genererade labyrint för att skapa en array med falska vägar. Varje falsk väg ska innehålla **tre moduler** (inga specialmoduler) och första modulen i den vägen får inte vara samma som den riktiga vägen.
 
 Om du har gjort specialmoduler, behandla dessa som Straight/Raka-moduler.
 
