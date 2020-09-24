@@ -1,9 +1,9 @@
 import React from "react"
 import { MDXProvider } from "@mdx-js/react"
-import { Breadcrumb } from "gatsby-plugin-breadcrumb"
 import Header from "../layout/Header"
 import Sidebar from "../layout/Sidebar"
 import mdxComponents from "./mdxComponents"
+import MyCrumbs from "./MyCrumbs"
 
 function Container({ url, pages, crumbData, children }) {
   // Use string split for url
@@ -23,11 +23,7 @@ function Container({ url, pages, crumbData, children }) {
           <Sidebar urlData={urlData} pages={pages} />
         </aside>
         <main>
-          <Breadcrumb
-            crumbs={crumbData.crumbs}
-            crumbSeparator={crumbData.crumbSeparator}
-            crumbLabel={crumbData.crumbLabel}
-          />
+          <MyCrumbs />
           <div className="page">
             <h1 className="printheader">GuteTeknik</h1>
             <MDXProvider components={mdxComponents}>{children}</MDXProvider>
