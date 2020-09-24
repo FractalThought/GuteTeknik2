@@ -3,7 +3,6 @@ import { graphql, Link } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Container from "../components/Container"
-import { Breadcrumb } from "gatsby-plugin-breadcrumb"
 
 const shortcodes = { Link } // Provide common components here
 
@@ -52,14 +51,15 @@ export default function PageTemplate({ pageContext, data }) {
   //   return <p>No page Found? This should be a 404</p>
   // }
 
+  const crumbData = {
+    crumbs: crumbs,
+    crumbSeparator: " > ",
+    crumbLabel: page.frontmatter.title,
+  }
+
   return (
     <>
-      <Container url={page.fields.slug} pages={allInfo}>
-        <Breadcrumb
-          crumbs={crumbs}
-          crumbSeparator=" > "
-          crumbLabel={page.frontmatter.title}
-        />
+      <Container url={page.fields.slug} pages={allInfo} crumbData={crumbData}>
         <h1 className="page-heading">{page.frontmatter.title}</h1>
         <MDXProvider components={shortcodes}>
           <MDXRenderer>{page.body}</MDXRenderer>
