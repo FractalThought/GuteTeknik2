@@ -19,12 +19,20 @@
       "title": "Introduktion",
       "subpages": [
         {
-          "subPageName": "REPL",
+          "subPageName": "REPL-programmering",
           "subPageLink": "repl"
         },
         {
-          "subPageName": "Folders, flöde, och variabler",
+          "subPageName": "Folders och flöde",
           "subPageLink": "flow"
+        },
+        {
+          "subPageName": "Operatorer",
+          "subPageLink": "operatorer"
+        },
+        {
+          "subPageName": "Variabler",
+          "subPageLink": "variabler"
         },
         {
           "subPageName": "Kontrollsatser",
@@ -33,6 +41,10 @@
         {
           "subPageName": "Iterationssatser",
           "subPageLink": "iterationssatser"
+        },
+        {
+          "subPageName": "Arrayer",
+          "subPageLink": "arrayer"
         }
       ]
     },
@@ -66,23 +78,11 @@
           "subPageLink": "begrepp"
         },
         {
-          "subPageName": "Operatorer",
-          "subPageLink": "operatorer"
-        },
-        {
-          "subPageName": "Variabler",
-          "subPageLink": "variabler"
-        },
-        {
-          "subPageName": "Arrayer",
-          "subPageLink": "arrayer"
-        },
-        {
           "subPageName": "Kodstandard",
           "subPageLink": "kodstandard"
         },
         {
-          "subPageName": "Random",
+          "subPageName": "Math.Random()",
           "subPageLink": "random"
         },
         {
