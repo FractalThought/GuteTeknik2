@@ -21,6 +21,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        headings
       }
     }
     allMdx(filter: { fields: { collection: { eq: "pages" } } }) {
@@ -33,6 +34,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            headings
           }
         }
       }
@@ -57,9 +59,22 @@ export default function PageTemplate({ pageContext, data }) {
     crumbLabel: page.frontmatter.title,
   }
 
+  let listOfContent = undefined
+  if (
+    page.frontmatter.headings !== undefined &&
+    page.frontmatter.headings !== null
+  ) {
+    listOfContent = page.frontmatter.headings.split("|")
+  }
+
   return (
     <>
-      <Container url={page.fields.slug} pages={allInfo} crumbData={crumbData}>
+      <Container
+        url={page.fields.slug}
+        pages={allInfo}
+        crumbData={crumbData}
+        listOfContent={listOfContent}
+      >
         <h1 className="page-heading">{page.frontmatter.title}</h1>
         <MDXProvider components={shortcodes}>
           <MDXRenderer>{page.body}</MDXRenderer>

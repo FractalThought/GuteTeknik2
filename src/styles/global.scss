@@ -79,6 +79,21 @@ header {
   aside {
     padding: 0 1rem;
 
+    a {
+      color: $color-primary-200;
+      font-weight: 400;
+
+      &:hover {
+        color: $color-primary-600;
+        font-weight: 600;
+      }
+
+      &.active {
+        color: $color-primary-300;
+        font-weight: 600;
+      }
+    }
+
     nav {
       display: flex;
       flex-direction: row;
@@ -92,21 +107,6 @@ header {
         transition: all 0.3s ease-in-out;
         color: $color-gray-800;
         font-family: "Open Sans", sans-serif;
-      }
-
-      a {
-        color: $color-primary-200;
-        font-weight: 400;
-
-        &:hover {
-          color: $color-primary-600;
-          font-weight: 600;
-        }
-
-        &.active {
-          color: $color-primary-300;
-          font-weight: 600;
-        }
       }
 
       h2 {

@@ -4,8 +4,9 @@ import Header from "../layout/Header"
 import Sidebar from "../layout/Sidebar"
 import mdxComponents from "./mdxComponents"
 import MyCrumbs from "./MyCrumbs"
+import TableOfContent from "./TableOfContent"
 
-function Container({ url, pages, crumbData, children }) {
+function Container({ url, pages, crumbData, listOfContent, children }) {
   // Use string split for url
 
   let urlData = null
@@ -26,11 +27,14 @@ function Container({ url, pages, crumbData, children }) {
           <MyCrumbs crumbData={crumbData} />
           <div className="page">
             <h1 className="printheader">GuteTeknik</h1>
+            <a id="toppen"></a>
             <MDXProvider components={mdxComponents}>{children}</MDXProvider>
             <script async src="https://static.codepen.io/assets/embed/ei.js" />
           </div>
         </main>
-        <aside className="right"></aside>
+        <aside className="right">
+          <TableOfContent listOfContent={listOfContent} />
+        </aside>
       </div>
     </>
   )

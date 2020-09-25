@@ -70,6 +70,14 @@
           "subPageLink": "operatorer"
         },
         {
+          "subPageName": "Variabler",
+          "subPageLink": "variabler"
+        },
+        {
+          "subPageName": "Arrayer",
+          "subPageLink": "arrayer"
+        },
+        {
           "subPageName": "Kodstandard",
           "subPageLink": "kodstandard"
         },
@@ -80,10 +88,6 @@
         {
           "subPageName": "Problemlösning och felsökning",
           "subPageLink": "problemlosning-och-felsokning"
-        },
-        {
-          "subPageName": "Arrayer",
-          "subPageLink": "arrayer"
         }
       ]
     }
