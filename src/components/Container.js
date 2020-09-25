@@ -23,7 +23,7 @@ function Container({ url, pages, crumbData, children }) {
           <Sidebar urlData={urlData} pages={pages} />
         </aside>
         <main>
-          <MyCrumbs />
+          <MyCrumbs crumbData={crumbData} />
           <div className="page">
             <h1 className="printheader">GuteTeknik</h1>
             <MDXProvider components={mdxComponents}>{children}</MDXProvider>
