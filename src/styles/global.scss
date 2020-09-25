@@ -70,27 +70,51 @@ header {
         color: $color-primary-100;
       }
     }
-
-    .printheader {
-      display: none;
-    }
   }
 
   aside {
     padding: 0 1rem;
 
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    ul {
+      margin-top: 0.5rem;
+      margin-left: 0.5rem;
+      list-style-type: none;
+    }
+
+    * {
+      transition: all 0.3s ease-in-out;
+      color: $color-gray-800;
+      font-family: "Open Sans", sans-serif;
+    }
+
     a {
       color: $color-primary-200;
       font-weight: 400;
 
-      &:hover {
-        color: $color-primary-600;
+      &.active {
+        color: $color-primary-900;
         font-weight: 600;
       }
+    }
 
-      &.active {
-        color: $color-primary-300;
-        font-weight: 600;
+    &:hover {
+      * {
+        color: $color-gray-300;
+      }
+
+      a {
+        color: $color-primary-500;
+        font-weight: 400;
+
+        &:hover {
+          color: $color-primary-800;
+          text-decoration: underline;
+        }
       }
     }
 
@@ -101,42 +125,6 @@ header {
 
       section {
         margin: 1rem;
-      }
-
-      * {
-        transition: all 0.3s ease-in-out;
-        color: $color-gray-800;
-        font-family: "Open Sans", sans-serif;
-      }
-
-      h2 {
-        font-size: 1.1rem;
-        font-weight: 500;
-      }
-
-      ul {
-        margin-left: 0.5rem;
-        list-style-type: none;
-      }
-      &:hover {
-        * {
-          color: $color-gray-500;
-        }
-
-        a {
-          color: $color-primary-500;
-          font-weight: 400;
-
-          &:hover {
-            color: $color-primary-900;
-            text-decoration: underline;
-          }
-
-          &.active {
-            color: $color-primary-900;
-            font-weight: 600;
-          }
-        }
       }
     }
   }

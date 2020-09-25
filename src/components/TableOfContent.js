@@ -33,7 +33,7 @@ function TableOfContent({ listOfContent }) {
 
   return (
     <StickyDiv>
-      <h1>Innehåll</h1>
+      <h2>Innehåll</h2>
       <List>
         {renderedContent.map((heading, key) => {
           return (
