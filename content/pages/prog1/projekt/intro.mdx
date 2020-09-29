@@ -1,11 +1,14 @@
 ---
 title: "Introprojektet"
 date: "2020-09-22"
+headings: "Syfte:syfte|Bedömningspunkter:bedomning|Uppgiften:uppgiften|Inlämning:inlamning|För högre betyg:hogre-betyg"
 ---
 
 Introprojektet är första inlämningsprojektet för den här kursen.
 
 **Deadline för den här uppgiften är 30e september**. Ni har arbetstid för projektet under lektionerna 23/9, 29/9 och 30/9.
+
+<a id="syfte"></a>
 
 # Syfte
 
@@ -14,26 +17,32 @@ Detta projekt har som syfte att testa dina kunskaper för grunderna inom program
 Du behöver använda variabler, kontrollsatser, iterationssatser, och arrayer. Du ska dessutom följa [kodstandarden](https://guteteknik.netlify.app/prog1/kodstandard/) och kommentera din kod och bedöms utifrån hur väl du följer den.
 
 **Projektet behandlar följande punkter från kursplanen:**
+
 - Grundläggande kontrollstrukturer, konstruktioner och datatyper.
 - Grundläggande datastrukturer och algoritmer.
 - Strukturerat arbetssätt för problemlösning och programmering.
 - Normer och värden inom programmering, till exempel läsbarhet, dokumentation, testbarhet, rena gränssnitt och nyttan av standard.
 
 **Och följande punkter ur ämnesplanen:**
+
 - Förståelse av och färdigheter i att använda datavetenskapliga begrepp och principer.
 - Kunskaper om programspråk och programmeringsparadigm.
 - Förmåga att skriva, läsa, strukturera, analysera, dokumentera och kommentera programkod.
 - Färdigheter i att skapa program med ett givet syfte och för en avsedd användare.
 - Förmåga att finna, analysera, åtgärda och förhindra syntaxfel, programkörningsfel och programmeringslogiska fel.
 
+<a id="bedomning"></a>
+
 # Bedömningspunkter
 
 **Du bedöms utifrån följande punkter:**
 
 - **Planering**
+
   - Val av kontrollstruktur, variabler, datastruktur, algoritmer, metoder.
 
 - **Kodstil**
+
   - Konsekvent, att din kod ser enhetlig ut.
   - Tydlig namngivning, att du namngivit dina variabler korrekt.
   - Strukturerad och kommenterad kod, att du har strukturerat och kommenterat din kod.
@@ -43,22 +52,27 @@ Du behöver använda variabler, kontrollsatser, iterationssatser, och arrayer. D
   - Färdigt program gör det den ska utifrån uppgiften.
 
 **Dessa reflekterar följande moment i kursplanen:**
+
 - I planeringen **väljer** eleven med **viss säkerhet** **kontrollstrukturer**, metoder, **variabler**, **datastrukturer** och **algoritmer** som är **adekvata** för uppgiften.
 - I sin programmering skapar eleven med **konsekvent kodningsstil** och **tydlig namngivning** **korrekt, strukturerad och enkelt kommenterad källkod** med **tillfredsställande resultat**.
 - Elevens färdiga program eller skript är **utförda med tillfredsställande resultat** i ett eller flera programspråk som är stabila och robusta i **program av enkel karaktär**.
 
 # Nivå
+
 Projektets grund är satt till **E- till D-nivå**. För att nå högre nivå behöver du uppvisa att du kan skapa **ytterligare funktionalitet** till projektet genom att göra en eller flera (fler desto högre nivå).
 
-> **Tips 1:** Ingen minns en fegis, "*You miss 100% of the shots you don't take*", osv. När du är färdig med din grund, kopiera din skriptfil och försök göra en av de för högre nivå. **Lämna in det du har oavsett om du blev färdig eller inte.**
+> **Tips 1:** Ingen minns en fegis, "_You miss 100% of the shots you don't take_", osv. När du är färdig med din grund, kopiera din skriptfil och försök göra en av de för högre nivå. **Lämna in det du har oavsett om du blev färdig eller inte.**
 
 > **Tips 2:** Tidigare övningar bör ha förberett dig för detta projektet. Om det ändå är något du glömt bort eller behöver kolla upp, gör det. De kan hjälpa dig och vara skillnaden mellan om du klarar av det eller inte.
 
 ---
 
+<a id="uppgiften"></a>
+
 # Uppgiften
 
 ## Bakgrund
+
 Tivolit som Kalle besöker håller på att bygga en labyrint. Labyrinten är uppbyggd med moduler som sätts ihop för att först skapa en riktig väg till labyrintens mitt (målet), och sedan kan man bygga falska vägar efter det.
 
 Det finns tre typer av moduler beroende på vilken riktningen som dess rätta väg går; **Höger**, **Vänster**, och **Rakt fram**.
@@ -66,6 +80,7 @@ Det finns tre typer av moduler beroende på vilken riktningen som dess rätta v�
 För att bygga labyrinten så behöver tivolit använda **10 moduler** som leder in till labyrintens mitt. Dessa måste slumpas fram för att göra labyrinten rolig.
 
 ## Vad du ska göra
+
 Din uppgift är att med kod generera en ordning som modulerna ska sättas ihop i.
 
 Tivolit behöver att du levererar en **array med 10 element**. Arrayen ska bestå av en slumpmässig ordning av modulerna som du genererat.
@@ -80,25 +95,34 @@ Du behöver använda [arrayer](https://guteteknik.netlify.app/prog1/arrayer/), [
 
 ---
 
+<a id="inlamning"></a>
+
 # Inlämning
+
 Lämna in din skriptfil till uppgiften på SchoolSoft senast **30e september**.
 
 ---
 
+<a id="hogre-betyg"></a>
+
 # Ytterligare funktionalitet för högre betyg
+
 Om du är klar och vill visa mer förmåga så kan du lägga till ytterligare funktionalitet på följande sätt. Grunduppgiften uppvisar E till D nivå på dessa moment, ytterligare funktionalitet visar att du utvecklat högre färdighet (kunde göra det snabbare och kan mer).
 
 ## 1. Roligare labyrint
+
 Tivolit vill göra labyrinten lite roligare och har hittat man kan lägga till särskilda moduler som "checkpoints", men de kostar mycket mer så tivolit har bestämt att beställa in 3st sådana.
 
 Utöka labyrintens storlek till 15, och ändra din kod så att en specialmodul (skriv `"Special"` istället för de vanliga modulerna) sätts in på 5e, 8e, och 12e platsen.
 
 ## 2. Jämnare labyrint
+
 Ibland blir labyrinten väldigt ojämn, och har för många av en modul. Tivolit skulle vilja att det aldrig blir 3 av samma modul i en rad (exklusive specialmodulerna).
 
 Ändra din kod så att det aldrig kan bli mer än 2 av samma modul efter varandra.
 
 ## 3. Generera falska vägar
+
 Använd din genererade labyrint för att skapa en array med falska vägar. Varje falsk väg ska innehålla **tre moduler** (inga specialmoduler) och första modulen i den vägen får inte vara samma som den riktiga vägen.
 
 Om du har gjort specialmoduler, behandla dessa som Straight/Raka-moduler.
@@ -106,5 +130,5 @@ Om du har gjort specialmoduler, behandla dessa som Straight/Raka-moduler.
 En falsk väg ser till exempel ut så här;
 
 ```javascript
-falseWay[i] = "Left Right Left";
+falseWay[i] = "Left Right Left"
 ```
