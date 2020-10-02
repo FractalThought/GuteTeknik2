@@ -1,0 +1,81 @@
+---
+title: "OSI-modellen"
+date: "2020-10-02"
+headings: "first:hello|second:hello2"
+---
+
+OSI-modellen står för Open System Interconnection.
+
+Modellen delar upp kontakten mellan datorer i lager, och används för att beskriva och kategorisera nätverksprotokoll. Modellen är ett verktyg för felsökning.
+
+# Lagrena i OSI-modellen
+| Lagernamn    | Protokoll                                                                           |
+| ------------ | ----------------------------------------------------------------------------------- |
+| Application  | <ul><li>End user layer</li><li> HTTP, FTP, IRC, SSH, DNS</li></ul>                  |
+| Presentation | <ul><li>Syntax layer</li><li>SSL, SSH, IMAP, FTP, MPEG, JPEG</li></ul>              |
+| Session      | <ul><li>Synch & send to port</li><li>API's, Sockets, WinSock</li></ul>              |
+| Transport    | <ul><li>End-to-end connection</li><li>TCP/UDP</li></ul>                             |
+| Network      | <ul><li>Packets</li><li>IP, ICMP, IPSec, IGMP</li></ul>                             |
+| Data Link    | <ul><li>Frames</li><li>Ethernet, PPP, Switch, Bridge</li></ul>                      |
+| Physical     | <ul><li>Physical structure</li><li>Coax, Fiber, Wireless, Hubs, Repeaters</li></ul> |
+
+
+# Felsökning med OSI-modellen
+
+OSI-modellen använder vi framförallt för att illustrera hur trafik flyter i ett nätverk, men vi använder det också för att felsöka och isolera eventuella fel som uppstår i nätverket.
+
+För att felsöka med OSI-modellen så går vi igenom varje lager och undersöker vart felet kan ha hänt. Vanligtvis börjar man i en ände, alltså antingen på det Fysiska lagret, eller Applikationslagret, och går sedan mot andra änden.
+
+## Till exempel så här:
+
+1. Fysiska: Har enheten ström, rätt kabel, dålig signal, alla kablar anslutna?
+2. Datalänk: Nätverkskortet installerat korrekt? Drivrutiner?
+3. Nätverk: Korrekta IP-inställningar. Använd ping för att testa nätverksanslutningen.
+4. Transport: Brandvägg? Netstat
+5. Applikationslager (Application, Presentation, Session): Går det att ansluta till tjänsten? Fungerar DNS? Används proxy-server? Fungerar krypteringen som den ska? Kan programmet hantera den typen av data from förfrågas/används?
+
+## Felsökningsmetoder
+Vi kan använda olika metoder för att felsöka;
+
+### Bottom up eller Top down
+Den metodik som beskrevs ovan, att börja i en ände och gå igenom lagrena till andra änden, kallas antingen Bottom up, eller Top down, beroende på vilken ände man börjar i.
+
+Bottom up innebär att vi går från det lägsta lagret (fysiska). Top down innebär att bi börjar med det översta lagret (applikation).
+
+### Divide and Conquer
+Till skillnad från Top down och Bottom up, Divide and Conquer innebär att du väljer ett lager, testar det, och om det inte fungerar så väljer du om du går uppåt i lagrena, eller nedåt. Om det lagret inte fungerar så väljer då igen om du går uppåt eller nedåt till ett lager där du inte varit tidigare.
+
+Divide and Conquer är något man blir bättre på med erfarenhet, både att välja vilket lager man börjar med, och sedan vilken riktning man tar. Lagret man börjar på är oftast det man tror är mest troligt att det är, utifrån vilket problem som uppstått, och vilken situation man är i.
+
+>Ockhams rakkniv: Enklaste förklaringen är oftast den rätta. - [Wikipedia](https://sv.wikipedia.org/wiki/Ockhams_rakkniv)
+
+### Trial and Error
+Trial and error innebär helt enkelt att man testar genom att försöka göra något, misslyckas det så vet man att det inte fungerar, då testar man något annat, tills dess att det fungerar.
+
+### Substitution
+Substitution betyder att byta ut, och metodiken innebär att man byter ut delar som man tror är felet. Till exempel, om du har problem att komma åt en hemsida på din dator så kan du testa en annan dator eller på telefonen, då märker du om det är problem med ditt trådlösa, eller datorn. Du kan också byta hemsida som du försöker att komma åt för att se om det är problem med den specifika hemsidan, eller något annat.
+
+## Vanliga fel
+- Fel på IP-inställningarna
+  IP: 169.254.X.X (automatic private IP adressing adress – används för att få en dynamisk IP, har alltså inte fått någon dynamisk IP)
+- Nätmask: 255.255.0.0
+
+# Kommandotolken för att kolla vanliga fel
+Du kan använda kommandotolken, alltså terminalen i operativsystemet, även kallad konsollen, för att hitta och åtgärda olika nätverksfel.
+
+Öppna startmenyn på Windows och börja skriv cmd, då bör Kommandotolken komma upp som förslag. Starta den.
+
+### Kommandot ping
+ping används för att "pinga" en annan adress. Att pinga innebär att man skickar en liten liten bit data i omgångar, som den andra datorn sedan svara på. Med detta kan man få lärdom om huruvida en dator finns på nätverket, om en server eller hemsida är online, eller liknande.
+
+För att pinga så skriver du in följande:
+```bash
+ping 127.0.0.1
+```
+
+127.0.0.1 är hemadressen för varje enskild dator. Datorn pingar alltså sig själv. Ersätt 127.0.0.1 med en ip-adress eller domän som du vill kontakta.
+
+**Exempel på saker man kan få reda på med ping:**
+- Kan pinga en adress men servern svarar inte: Nätverket fungerar, men kan inte komma på den specifika adressen.
+- Kan inte pinga en adress (8.8.8.8 – googles DNS): Har troligtvis inte kontakt till internet.
+- Kan pinga IP-nummer men inte domännamn (google.se): DNS-servern fungerar troligtvis inte.
