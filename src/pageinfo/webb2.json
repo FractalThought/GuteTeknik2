@@ -84,6 +84,10 @@
       "title": "Projekt",
       "subpages": [
         {
+          "subPageName": "Ekologiska",
+          "subPageLink": "projekt/ekologiska"
+        },
+        {
           "subPageName": "Metodik och Designsystem",
           "subPageLink": "projekt/metodiksystem"
         },
