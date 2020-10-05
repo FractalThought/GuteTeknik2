@@ -1,0 +1,173 @@
+---
+title: "Eventbindning i JavaScript"
+date: "2020-10-05"
+headings: "Hello:hello|World:world"
+---
+
+JavaScript har sitt ursprung i webbutveckling, och utvecklades specifikt till att vara ett sätt att skapa interation till hemsidor. Den gör detta genom att manipulera Dokument Objekt Modellen.
+
+Det finns två sätt att lägga in JavaScript i ett html-dokument; Importera en js-fil via script-taggen, eller direkt inuti script-taggen.
+# Events i DOM
+
+Referenser (använd dessa)
+
+- [JavaScript Event Handlers (eng)](https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Event_handlers)
+- [JavaScript Events (sv)](http://htmlhunden.se/dist/04-05-js-events.html)
+- [Mouse Events (sv)](https://dbwebb.se/guide/javascript1/mouseEvent)
+- [Lista på DOM-events (eng)](https://developer.mozilla.org/en-US/docs/Web/Events)
+
+Events är hur vi kan skapa interaktivitet på en hemsida, och låta saker hända när användaren gör något, eller något annat händer.
+
+För att skapa ett event så använder vi event listeners (event-lyssnare), och binder dem till specifika funktioner (kallas att _registrera ett event_).
+
+## Exempel:
+
+HTML:
+
+```html
+<!-- En länk med id't clicker -->
+<a id="clicker" href="#">Click me!</a>
+```
+
+JavaScript:
+
+```javascript
+// Funktionen vi ska binda
+function myEvent(event) {
+  // event är ett argument som alltid skickas med, och innehåller information om eventet
+  // event.target syftar till elementet som eventet kom ifrån
+  alert(event.target.innerText);
+}
+
+/*
+window.onload är i sig en event-bindning.
+Vi binder window.onload till en anonym funktion som körs när fönstret har laddat klart.
+*/
+window.onload = function() {
+  // Hämtar elementet via dess ID
+  // Lägg till en eventlistener av typen 'click',
+  // och binder den till myEvent-funktionen vi deklarerade ovan
+  document.getElementById("clicker").addEventListener("click", myEvent);
+};
+```
+
+Ser det mycket ut? Här är samma JS-kod utan kommentarer:
+
+```javascript
+function myEvent(event) {
+  alert(event.target.innerText);
+}
+window.onload = function() {
+  document.getElementById("clicker").addEventListener("click", myEvent);
+};
+```
+
+Lägg särskilt märke till event.target. Detta innebär att vi kan peka på det specifika elementet som skapade eventet. Det gör också att vi kan använda samma funktion till fler element.
+
+Om vi lägger till en till länk, och ändrar id till class istället, så kan vi binda samma funktion till båda länkarna, så här;
+
+HTML:
+
+```html
+<a class="clicker" href="#">Click me!</a>
+<a class="clicker" href="#">Click me too!</a>
+```
+
+JavaScript:
+
+```javascript
+function myEvent(event) {
+  alert(event.target.innerText);
+}
+window.onload = function() {
+  let links = document.getElementsByClassName("clicker");
+
+  for (let index = 0; index < links.length; index++) {
+    links[index].addEventListener("click", myEvent);
+  }
+};
+```
+
+<h1 style="page-break-before: always;">Övningar</h1>
+
+## Övning 1
+
+Skapa ett HTML-dokument och lägg till de vanlig taggarna (head, body, osv). Fyll bodyn med 5 divar (Emmet Abbr: div\*5). Skapa en extern stilmall (.css), länka in den i ditt HTML-dokument, och lägg till följande CSS:
+
+```css
+body {
+  display: flex;
+}
+
+div {
+  min-height: 100vh;
+  min-width: 20vw;
+  background-color: red;
+}
+```
+
+Slutligen, lägg till ett externt script (.js-fil) och länka in den i ditt HTML-dokument. I skriptet ska du göra så att en div-tagg ändrar färg när du klickar på den.
+
+### Tips:
+
+- Kom ihåg att du kan välja alla element som har samma tagg-namn med getElementsByTagName.
+- event.target syftar till elementet som eventet kom ifrån.
+- För att ändra bakgrundsfärg använder du .style.backgroundColor = "dinfärg";
+- Du kan resetta sidan genom att ladda om den.
+
+## Övning 2:
+
+Lägg till [button-tagg](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) till varje div, och ändra om så att alla button-taggar är de som är bundna till eventet. Vad händer?
+
+Testa nu att istället för att ändra knappens bakgrundsfärg, att ändra divens bakgrundsfärg, genom att använda .parentElement-attributet i button;
+
+```javascript
+event.target.parentElement.style.backgroundColor = "purple";
+```
+
+Det du gjort nu kallas "traversing the DOM", alltså att gå igenom Dokument Objekt Modellens noder för att hitta det du vill påverka.
+
+<h2 style="page-break-before: always;">Övning 3</h3>
+I övning 2 lärde du dig att gå uppåt i DOM. Du kan fortsätta uppåt ända tills det inte finns något ovanför (html-taggen är högst). Du kan också gå nedåt, och byta riktning
+
+Du ska i den här övningen lägga till en paragraf till varje div, och ändra textens innehåll och stil.
+
+Här kommer getElementByTagName, eller querySelector, in igen. Vi har hittills bara använd dem tillsammans med document, men de är alltid relativa till en specifik parentNode i DOM.
+
+Det gör att vi kan använda querySelector från ett element, och bara få ut det elementets child-nodes.
+
+#### Gör följande:
+
+- Skapa en paragraf som ligger över knappen i varje div.
+- Använd querySelector eller getElementsByTagName för att komma åt paragraftaggen i samma div som knappen du klickar på.
+- Sätt om paragrafens innerText.
+
+#### Lösning:
+
+```javascript
+let myParagraf = event.target.parentElement.querySelector("p");
+
+myParagraf.innerText = "Ny-text-här";
+```
+
+## Övning 4
+
+Lek runt med det du har lärt dig;
+
+Lägg till fler paragrafer och försök ändra deras text när du klickar på dem.
+
+Lägg till följande till dina stilregler för dina divar:
+
+```css
+transition: background-color 3s;
+```
+
+Vad händer nu när du klickar på en knapp?
+
+Se [CSS transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) för mer om vad som händer.
+
+Försök göra så att när du klickar på en knapp så ska den öka minimumbredden på den aktuella diven, och minska minimumdiven på alla andra divar.
+
+Försök att skapa en "Toggle"-effekt. Alltså att när du klickar på en knapp så ska diven ändras. Och när du trycker på knappen igen så ska den gå tillbaka till sitt ursprung.
+
+Klar med musevents? Kolla in [Keyboard events (sv)](https://dbwebb.se/guide/javascript1/keyboardEvent) och testa lägga in tangentbordsevents till din hemsida.
