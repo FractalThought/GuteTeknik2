@@ -1,10 +1,15 @@
 ---
 title: "DOM-manipulering"
 date: "2020-10-05"
-headings: "Hello:hello|World:world"
+headings: "Lägga till sida:add-to-page|Välja element:what-to-manipulate|Manipulera element:manipulera-element|Lägga till eller ta bort element:add-and-remove|Övningar:ovningar"
 ---
 
 JavaScript har sitt ursprung i webbutveckling, och utvecklades specifikt till att vara ett sätt att skapa interation till hemsidor. Den gör detta genom att manipulera Dokument Objekt Modellen.
+
+
+<a id="add-to-page"></a>
+
+# Lägga till JavaScript till en hemsida
 
 Det finns två sätt att lägga in JavaScript i ett html-dokument; Importera en js-fil via script-taggen, eller direkt inuti script-taggen.
 
@@ -23,6 +28,8 @@ Det finns två sätt att lägga in JavaScript i ett html-dokument; Importera en 
 </script>
 ```
 
+<a id="what-to-manipulate"></a>
+
 # Välja vad som ska manipuleras
 
 Vi kan välja specifika element som vi vill manipulera, och detta görs på samma sätt som vi väljer element att stila i CSS. I JavaScript använder vi olika funktioner för att välja elementen;
@@ -34,6 +41,8 @@ Vi kan välja specifika element som vi vill manipulera, och detta görs på samm
 | `document.getElementsByClassName("Class")`    | Väljer ett element med hjälp av dess klassnamn              |
 | `document.querySelector("Selector query")`    | Väljer första elementet som matchar den query man skriver i |
 | `document.querySelectorAll("Selector query")` | Väljer alla element som matchar den query man skriver i     |
+
+<a id="manipulera-element"></a>
 
 # Manipulera
 
@@ -48,7 +57,9 @@ Manipulera innebär att förändra ett attribut på ett element, alltså att än
 | element.classList.remove("klassnamn") | Ta bort den specificerade klassen från elementet                                     |
 | element.classList.toggle("klassnamn") | Om elementet saknar den specificerade klassen så läggs den till, annars tas den bort |
 
-# Lägga till och ta bort
+<a id="add-and-remove"></a>
+
+# Lägga till och ta bort element
 
 Vi kan skapa nya element och lägga till dem till vår sida. Det gör vi genom att först skapa elementet, lägga till innehåll i det, och sedan välja ett element som det nya elementets parent element (där det nya elemetet ska ligga inuti), och sedan lägga till elementet.
 
@@ -68,6 +79,8 @@ newParagraph.innerText = "Detta är min nya paragraf!";
 const parentElement = document.querySelector("#parentArticle"); // Det element vi vill lägga det nya elementet i
 parentElement.appendChild(newParagraph);
 ```
+
+<a id="ovningar"></a>
 
 # Övningar
 
