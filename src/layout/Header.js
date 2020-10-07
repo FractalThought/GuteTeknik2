@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 function Header() {
   return (
     <header>
+      <a id="toppen"></a>
       <nav>
         <h1>
           <Link to="/">GuteTeknik</Link>

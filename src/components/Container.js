@@ -27,7 +27,6 @@ function Container({ url, pages, crumbData, listOfContent, children }) {
           <MyCrumbs crumbData={crumbData} />
           <div className="page">
             <h1 className="printheader">GuteTeknik</h1>
-            <a id="toppen"></a>
             <MDXProvider components={mdxComponents}>{children}</MDXProvider>
             <script async src="https://static.codepen.io/assets/embed/ei.js" />
           </div>
