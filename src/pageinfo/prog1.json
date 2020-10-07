@@ -49,6 +49,19 @@
       ]
     },
     {
+      "title": "JS på Webben",
+      "subpages": [
+        {
+          "subPageName": "DOM-manipulering",
+          "subPageLink": "dom-manipulering"
+        },
+        {
+          "subPageName": "Eventbindning",
+          "subPageLink": "dom-eventbindning"
+        }
+      ]
+    },
+    {
       "title": "Övningar",
       "subpages": [
         {
