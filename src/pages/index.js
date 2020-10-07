@@ -77,5 +77,4 @@ export default ({ data }) => {
   )
 }
 
-// Query not really used
 // TODO: Change to using json (pageinfo)
