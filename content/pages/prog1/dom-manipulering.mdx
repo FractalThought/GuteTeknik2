@@ -6,7 +6,6 @@ headings: "Lägga till sida:add-to-page|Välja element:what-to-manipulate|Manipu
 
 JavaScript har sitt ursprung i webbutveckling, och utvecklades specifikt till att vara ett sätt att skapa interation till hemsidor. Den gör detta genom att manipulera Dokument Objekt Modellen.
 
-
 <a id="add-to-page"></a>
 
 # Lägga till JavaScript till en hemsida
@@ -24,7 +23,7 @@ Det finns två sätt att lägga in JavaScript i ett html-dokument; Importera en 
 
 ```html
 <script>
-// Mitt script här
+  // Mitt script här
 </script>
 ```
 
@@ -48,14 +47,14 @@ Vi kan välja specifika element som vi vill manipulera, och detta görs på samm
 
 Manipulera innebär att förändra ett attribut på ett element, alltså att ändra något på en del av sidan. Vi kan ändra ett elements innehåll, stilen, lägga till eller ta bort klasser, och mer.
 
-| Attribut/funktion                     | Förklaring                                                                           |
-| ------------------------------------- | ------------------------------------------------------------------------------------ |
-| element.innerText                     | Ändrar texten inuti elementet                                                        |
-| element.innerHTML                     | Ändrar HTML-koden inuti elementet                                                    |
-| element.style                         | Ett objekt som vi kan läsa/skriva css från/till                                      |
-| element.classList.add("klassnamn")    | Lägg till en specificera klass till elementet                                        |
-| element.classList.remove("klassnamn") | Ta bort den specificerade klassen från elementet                                     |
-| element.classList.toggle("klassnamn") | Om elementet saknar den specificerade klassen så läggs den till, annars tas den bort |
+| Attribut/funktion                       | Förklaring                                                                           |
+| --------------------------------------- | ------------------------------------------------------------------------------------ |
+| `element.innerText`                     | Ändrar texten inuti elementet                                                        |
+| `element.innerHTML`                     | Ändrar HTML-koden inuti elementet                                                    |
+| `element.style`                         | Ett objekt som vi kan läsa/skriva css från/till                                      |
+| `element.classList.add("klassnamn")`    | Lägg till en specificera klass till elementet                                        |
+| `element.classList.remove("klassnamn")` | Ta bort den specificerade klassen från elementet                                     |
+| `element.classList.toggle("klassnamn")` | Om elementet saknar den specificerade klassen så läggs den till, annars tas den bort |
 
 <a id="add-and-remove"></a>
 
@@ -72,12 +71,12 @@ Vi kan skapa nya element och lägga till dem till vår sida. Det gör vi genom a
 ### Till exempel så här:
 
 ```javascript
-let newParagraph = document.createElement("p"); // Det nya elementet vi skapar
+let newParagraph = document.createElement("p") // Det nya elementet vi skapar
 
-newParagraph.innerText = "Detta är min nya paragraf!";
+newParagraph.innerText = "Detta är min nya paragraf!"
 
-const parentElement = document.querySelector("#parentArticle"); // Det element vi vill lägga det nya elementet i
-parentElement.appendChild(newParagraph);
+const parentElement = document.querySelector("#parentArticle") // Det element vi vill lägga det nya elementet i
+parentElement.appendChild(newParagraph)
 ```
 
 <a id="ovningar"></a>
@@ -87,6 +86,7 @@ parentElement.appendChild(newParagraph);
 ## Övning 1
 
 Skapa ett html-dokument med följande element:
+
 - En h1
 - Två p med lite text
 - Två ul-lista med 3 li-element vardera
@@ -104,21 +104,21 @@ händer med hemsidan.
 
 ```html
 <script>
-    let heading = document.querySelector("h1"); // Hämtar bara den första matchningen
-    heading.innerText = "Hej!";
-    
-    let paragraphs = document.getElementsByTagName("p"); // Hämtar alla och lägger in dem i en arr
-    paragraphs[0].innerText = "Vilken konstig text det var här innan";
-    paragraphs[1].innerText = "Andra paragrafen här";
-    
-    let list = document.getElementsByTagName("ul")[0] // Hämtar alla, lägger in dem i en array, o
-    
-    for (let i = 0; i < 5; i++) {
-        // Skapa ett element, sätt dess text, och lägg sedan till den till list
-        let newItem = document.createElement("li");
-        newItem.innerText = i;
-        list.appendChild(newItem);
-    }
+  let heading = document.querySelector("h1") // Hämtar bara den första matchningen
+  heading.innerText = "Hej!"
+
+  let paragraphs = document.getElementsByTagName("p") // Hämtar alla och lägger in dem i en arr
+  paragraphs[0].innerText = "Vilken konstig text det var här innan"
+  paragraphs[1].innerText = "Andra paragrafen här"
+
+  let list = document.getElementsByTagName("ul")[0] // Hämtar alla, lägger in dem i en array, o
+
+  for (let i = 0; i < 5; i++) {
+    // Skapa ett element, sätt dess text, och lägg sedan till den till list
+    let newItem = document.createElement("li")
+    newItem.innerText = i
+    list.appendChild(newItem)
+  }
 </script>
 ```
 
@@ -133,6 +133,7 @@ Lägg till en klass till några av dina li-element och dölj dem med style.displ
 exempel här](http://htmlhunden.se/dist/04-05-js-dom.html).
 
 # Källor:
+
 - [MDN Web Docs sida om Document Object Model](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
 - [Manipulating documents](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
 - [Svensk förklaring om Document Object Model och JavaScript](http://htmlhunden.se/dist/04-05-js-dom.html)
