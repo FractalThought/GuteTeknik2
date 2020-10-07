@@ -23,6 +23,101 @@ Det finns två sätt att lägga in JavaScript i ett html-dokument; Importera en 
 </script>
 ```
 
+# Välja vad som ska manipuleras
+
+Vi kan välja specifika element som vi vill manipulera, och detta görs på samma sätt som vi väljer element att stila i CSS. I JavaScript använder vi olika funktioner för att välja elementen. Dessa är:
+
+## 
+```javascript
+
+```
+
+## 
+```javascript
+
+```
+
+## 
+```javascript
+
+```
+
+
+# Manipulera
+
+Manipulera innebär att förändra ett attribut på ett element, alltså att ändra något på en del av sidan.
+
+# Lägga till och ta bort
+
+Vi kan skapa nya element och lägga till dem till vår sida. Det gör vi genom att först skapa elementet, lägga till innehåll i det, och sedan välja ett element som det nya elementets parent element (där det nya elemetet ska ligga inuti), och sedan lägga till elementet.
+
+> När vi skapar ett element så behöver vi specificera elementets tagg-namn, till exempel `div` eller `p`.
+
+> För att lägga till innehåll till elementet vi skapat så använder vi `.innerText` eller `.innerHTML`, och sedan en sträng (mening). Med `.innerText` så kan vi bara lägga till text, men med `.innerHTML` kan vi lägga till HTML, till exempel element.
+
+> Vi använder `.appendChild()` för att lägga till vårt nya element till dess parent element.
+
+### Till exempel så här:
+
+```javascript
+let newParagraph = document.createElement("p"); // Det nya elementet vi skapar
+
+newParagraph.innerText = "Detta är min nya paragraf!";
+
+const parentElement = document.querySelector("#parentArticle"); // Det element vi vill lägga det nya elementet i
+parentElement.appendChild(newParagraph);
+```
+
+# Övningar
+
+## Övning 1
+
+Skapa ett html-dokument med följande element:
+- En h1
+- Två p med lite text
+- Två ul-lista med 3 li-element vardera
+
+Tips: Du kan använda kommandot `!` för att skapa en tom hemsida.
+Använd sedan följande kommando för att skapa dina element. Klistra in och tryck sedan
+Ctrl+Mellanslag för att få upp kommandot, och sedan Enter för att bekräfta.
+
+```javascript
+h1>lorem5^p*2>lorem10^ul>li*3>lorem3^^ul>li*3>lorem3
+```
+
+Testa sedan att lägga in föjande i slutet av din body-tagg, precis efter din ul-lista. Undersök vad som
+händer med hemsidan.
+
+```html
+<script>
+    let heading = document.querySelector("h1"); // Hämtar bara den första matchningen
+    heading.innerText = "Hej!";
+    
+    let paragraphs = document.getElementsByTagName("p"); // Hämtar alla och lägger in dem i en arr
+    paragraphs[0].innerText = "Vilken konstig text det var här innan";
+    paragraphs[1].innerText = "Andra paragrafen här";
+    
+    let list = document.getElementsByTagName("ul")[0] // Hämtar alla, lägger in dem i en array, o
+    
+    for (let i = 0; i < 5; i++) {
+        // Skapa ett element, sätt dess text, och lägg sedan till den till list
+        let newItem = document.createElement("li");
+        newItem.innerText = i;
+        list.appendChild(newItem);
+    }
+</script>
+```
+
+## Övning 2
+
+- Lägg till ett ID till en av dina paragrafer i HTML.
+- Med JavaScript, ändra stilen på paragrafen. Du behöver välja den med `document.getElementById("ditt-id")`, och stila den med `.style`, och sedan attributet du vill stila, till exempel `color`.
+
+## Övning 3
+
+Lägg till en klass till några av dina li-element och dölj dem med style.display = "none";. [Se ett
+exempel här](http://htmlhunden.se/dist/04-05-js-dom.html).
+
 # Källor:
 - [MDN Web Docs sida om Document Object Model](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
 - [Manipulating documents](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
