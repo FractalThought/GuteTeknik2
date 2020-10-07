@@ -25,27 +25,28 @@ Det finns två sätt att lägga in JavaScript i ett html-dokument; Importera en 
 
 # Välja vad som ska manipuleras
 
-Vi kan välja specifika element som vi vill manipulera, och detta görs på samma sätt som vi väljer element att stila i CSS. I JavaScript använder vi olika funktioner för att välja elementen. Dessa är:
+Vi kan välja specifika element som vi vill manipulera, och detta görs på samma sätt som vi väljer element att stila i CSS. I JavaScript använder vi olika funktioner för att välja elementen;
 
-## 
-```javascript
-
-```
-
-## 
-```javascript
-
-```
-
-## 
-```javascript
-
-```
-
+| Metod                                         | Förklaring                                                  |
+| --------------------------------------------- | ----------------------------------------------------------- |
+| `document.getElementById("ID")`               | Väljer ett element med hjälp av dess ID                     |
+| `document.getElementsByTagName("Tagg")`       | Väljer alla element med hjälp av dess tagnamn               |
+| `document.getElementsByClassName("Class")`    | Väljer ett element med hjälp av dess klassnamn              |
+| `document.querySelector("Selector query")`    | Väljer första elementet som matchar den query man skriver i |
+| `document.querySelectorAll("Selector query")` | Väljer alla element som matchar den query man skriver i     |
 
 # Manipulera
 
-Manipulera innebär att förändra ett attribut på ett element, alltså att ändra något på en del av sidan.
+Manipulera innebär att förändra ett attribut på ett element, alltså att ändra något på en del av sidan. Vi kan ändra ett elements innehåll, stilen, lägga till eller ta bort klasser, och mer.
+
+| Attribut/funktion                     | Förklaring                                                                           |
+| ------------------------------------- | ------------------------------------------------------------------------------------ |
+| element.innerText                     | Ändrar texten inuti elementet                                                        |
+| element.innerHTML                     | Ändrar HTML-koden inuti elementet                                                    |
+| element.style                         | Ett objekt som vi kan läsa/skriva css från/till                                      |
+| element.classList.add("klassnamn")    | Lägg till en specificera klass till elementet                                        |
+| element.classList.remove("klassnamn") | Ta bort den specificerade klassen från elementet                                     |
+| element.classList.toggle("klassnamn") | Om elementet saknar den specificerade klassen så läggs den till, annars tas den bort |
 
 # Lägga till och ta bort
 
