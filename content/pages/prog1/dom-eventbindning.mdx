@@ -35,7 +35,7 @@ JavaScript:
 function myEvent(event) {
   // event är ett argument som alltid skickas med, och innehåller information om eventet
   // event.target syftar till elementet som eventet kom ifrån
-  alert(event.target.innerText);
+  alert(event.target.innerText)
 }
 
 /*
@@ -46,19 +46,19 @@ window.onload = function() {
   // Hämtar elementet via dess ID
   // Lägg till en eventlistener av typen 'click',
   // och binder den till myEvent-funktionen vi deklarerade ovan
-  document.getElementById("clicker").addEventListener("click", myEvent);
-};
+  document.getElementById("clicker").addEventListener("click", myEvent)
+}
 ```
 
 Ser det mycket ut? Här är samma JS-kod utan kommentarer:
 
 ```javascript
 function myEvent(event) {
-  alert(event.target.innerText);
+  alert(event.target.innerText)
 }
 window.onload = function() {
-  document.getElementById("clicker").addEventListener("click", myEvent);
-};
+  document.getElementById("clicker").addEventListener("click", myEvent)
+}
 ```
 
 Lägg särskilt märke till event.target. Detta innebär att vi kan peka på det specifika elementet som skapade eventet. Det gör också att vi kan använda samma funktion till fler element.
@@ -76,19 +76,20 @@ JavaScript:
 
 ```javascript
 function myEvent(event) {
-  alert(event.target.innerText);
+  alert(event.target.innerText)
 }
 window.onload = function() {
-  let links = document.getElementsByClassName("clicker");
+  let links = document.getElementsByClassName("clicker")
 
   for (let index = 0; index < links.length; index++) {
-    links[index].addEventListener("click", myEvent);
+    links[index].addEventListener("click", myEvent)
   }
-};
+}
 ```
 
-
-<h1 id="ovningar" style="page-break-before: always;">Övningar</h1>
+<h1 id="ovningar" style="page-break-before: always;">
+  Övningar
+</h1>
 
 ## Övning 1
 
@@ -122,7 +123,7 @@ Lägg till [button-tagg](https://developer.mozilla.org/en-US/docs/Web/HTML/Eleme
 Testa nu att istället för att ändra knappens bakgrundsfärg, att ändra divens bakgrundsfärg, genom att använda .parentElement-attributet i button;
 
 ```javascript
-event.target.parentElement.style.backgroundColor = "purple";
+event.target.parentElement.style.backgroundColor = "purple"
 ```
 
 Det du gjort nu kallas "traversing the DOM", alltså att gå igenom Dokument Objekt Modellens noder för att hitta det du vill påverka.
@@ -145,9 +146,9 @@ Det gör att vi kan använda querySelector från ett element, och bara få ut de
 #### Lösning:
 
 ```javascript
-let myParagraf = event.target.parentElement.querySelector("p");
+let myParagraf = event.target.parentElement.querySelector("p")
 
-myParagraf.innerText = "Ny-text-här";
+myParagraf.innerText = "Ny-text-här"
 ```
 
 ## Övning 4
