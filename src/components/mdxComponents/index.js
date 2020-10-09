@@ -8,6 +8,7 @@ import Code from "./code"
 import Pre from "./pre"
 
 import PracticeContainer from "./PracticeContainer"
+import Callout, { Warning, Error, Notice, Result } from "./Callout"
 
 /* eslint-disable */
 export default {
@@ -27,4 +28,9 @@ export default {
   // TODO add `ul`
   // TODO add `li`,
   PracticeContainer: PracticeContainer,
+  Callout: Callout,
+  Warning: Warning,
+  Error: Error,
+  Notice: Notice,
+  Result: Result,
 }
