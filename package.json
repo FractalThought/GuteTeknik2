@@ -25,7 +25,7 @@
     "gatsby-plugin-breadcrumb": "^6.3.0",
     "gatsby-plugin-mdx": "^1.2.15",
     "gatsby-plugin-sass": "^2.3.4",
-    "gatsby-plugin-sharp": "^2.6.11",
+    "gatsby-plugin-sharp": "^2.6.39",
     "gatsby-plugin-sitemap": "^2.4.5",
     "gatsby-plugin-styled-components": "^3.3.4",
     "gatsby-remark-autolink-headers": "^2.2.3",
