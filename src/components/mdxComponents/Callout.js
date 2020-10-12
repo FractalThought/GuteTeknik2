@@ -9,6 +9,8 @@ const CalloutBox = styled.div`
   font-size: 1rem;
   margin: 0 0 1.5rem;
   border-radius: 0.2rem;
+  width: 50%;
+  float: left;
 
   color: hsla(${props => props.color || "0"}, 20%, 40%, 1);
   border: 2px solid hsla(${props => props.color || "0"}, 20%, 80%, 1);
