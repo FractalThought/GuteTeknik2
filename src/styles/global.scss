@@ -122,6 +122,11 @@ header {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+      overflow: scroll;
+      max-height: 100vh;
+      position: sticky;
+      top: 1rem;
+      padding-bottom: 1rem;
 
       section {
         margin: 1rem;
