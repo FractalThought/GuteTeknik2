@@ -31,16 +31,32 @@ function Callout({ half, color, children }) {
 }
 
 function Warning({ half, children }) {
-  return <Callout color="50">{children}</Callout>
+  return (
+    <Callout half={half} color="50">
+      {children}
+    </Callout>
+  )
 }
 function Error({ half, children }) {
-  return <Callout color="10">{children}</Callout>
+  return (
+    <Callout half={half} color="10">
+      {children}
+    </Callout>
+  )
 }
 function Notice({ half, children }) {
-  return <Callout color="202">{children}</Callout>
+  return (
+    <Callout half={half} color="202">
+      {children}
+    </Callout>
+  )
 }
 function Result({ half, children }) {
-  return <Callout color="90">{children}</Callout>
+  return (
+    <Callout half={half} color="90">
+      {children}
+    </Callout>
+  )
 }
 
 export default Callout
