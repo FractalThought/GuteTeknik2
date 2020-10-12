@@ -86,35 +86,24 @@ function Sidebar({ urlData, pages, currentPageData }) {
   //let pageData = require("../pageinfo/" + topPage + ".json") // Still need this for top page info
 
   useEffect(() => {
-    document.title = `GuteTeknik  ${currentPageData.pageName}`
+    document.title = `GuteTeknik  ${currentPageData[0].pageName}`
   })
 
-  //let headings = Object.values(headingData) // gets the array of headings only
-
-  // return (
-  //   <nav>
-  //     <section>
-  //       <h1>Navigering</h1>
-  //       <Link to={"/" + pageData.pageLink}>{pageData.pageName}</Link>
-  //     </section>
-  //     {headings.map((heading, index) => (
-  //       <SidebarHeading key={index} heading={heading} />
-  //     ))}
-  //   </nav>
-  // )
+  console.log(currentPageData[0])
+  console.log(currentPageData[0].headings)
 
   return (
     <nav>
       <section>
-        <h2>{currentPageData.pageName}</h2>
-        <Link to={"/" + currentPageData.pageLink}>
-          {currentPageData.pageName}
+        <h2>{currentPageData[0].pageName}</h2>
+        <Link to={"/" + currentPageData[0].pageLink}>
+          {currentPageData[0].pageName}
         </Link>
       </section>
-      {currentPageData.headings.map((heading, index) => (
+      {currentPageData[0].headings.map((heading, index) => (
         <SidebarHeading
           key={index}
-          mainPage={currentPageData.pageLink}
+          mainPage={currentPageData[0].pageLink}
           title={heading.title}
           subpages={heading.subpages}
           currentPage={currentPage}

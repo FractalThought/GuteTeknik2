@@ -74,7 +74,13 @@ export default function PageTemplate({ pageContext, data }) {
     crumbLabel: page.frontmatter.title,
   }
 
-  const pageinfo = data.allPageinfoJson.edges
+  let pageinfo = data.allPageinfoJson.edges
+  console.log(pageinfo)
+
+  // Just remove the .node-intermediate step
+  pageinfo = pageinfo.map(page => {
+    return page.node;
+  })
 
   let listOfContent = undefined
   if (
