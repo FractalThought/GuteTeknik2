@@ -6,9 +6,15 @@ import mdxComponents from "./mdxComponents"
 import MyCrumbs from "./MyCrumbs"
 import TableOfContent from "./TableOfContent"
 
-function Container({ url, pages, crumbData, listOfContent, children }) {
+function Container({
+  url,
+  pages,
+  pageinfo,
+  crumbData,
+  listOfContent,
+  children,
+}) {
   // Use string split for url
-
   let urlData = null
 
   if (typeof url !== "undefined") {
@@ -18,10 +24,10 @@ function Container({ url, pages, crumbData, listOfContent, children }) {
 
   return (
     <>
-      <Header />
+      <Header mainPage={urlData[0]} />
       <div id="main-wrapper">
         <aside className="left">
-          <Sidebar urlData={urlData} pages={pages} />
+          <Sidebar urlData={urlData} pages={pages} pageinfo={pageinfo} />
         </aside>
         <main>
           <MyCrumbs crumbData={crumbData} />

@@ -39,6 +39,21 @@ export const pageQuery = graphql`
         }
       }
     }
+    allPageinfoJson {
+      edges {
+        node {
+          pageName
+          pageLink
+          headings {
+            title
+            subpages {
+              subPageName
+              subPageLink
+            }
+          }
+        }
+      }
+    }
   }
 `
 
@@ -59,6 +74,8 @@ export default function PageTemplate({ pageContext, data }) {
     crumbLabel: page.frontmatter.title,
   }
 
+  const pageinfo = data.allPageinfoJson.edges
+
   let listOfContent = undefined
   if (
     page.frontmatter.headings !== undefined &&
@@ -72,6 +89,7 @@ export default function PageTemplate({ pageContext, data }) {
       <Container
         url={page.fields.slug}
         pages={allInfo}
+        pageinfo={pageinfo}
         crumbData={crumbData}
         listOfContent={listOfContent}
       >

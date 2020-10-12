@@ -43,7 +43,7 @@ function extractPageSlug(slug) {
   // And get first and last
 }
 
-function Sidebar({ urlData, pages }) {
+function Sidebar({ urlData, pages, pageinfo }) {
   let [topPage, currentPage] = extractUrlData(urlData)
   let headingData = {}
 
