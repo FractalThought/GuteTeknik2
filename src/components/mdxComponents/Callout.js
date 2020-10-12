@@ -9,32 +9,37 @@ const CalloutBox = styled.div`
   font-size: 1rem;
   margin: 0 0 1.5rem;
   border-radius: 0.2rem;
-  width: 50%;
-  float: left;
+
+  ${props =>
+    props.half &&
+    css`
+      width: 50%;
+      float: right;
+    `};
 
   color: hsla(${props => props.color || "0"}, 20%, 40%, 1);
   border: 2px solid hsla(${props => props.color || "0"}, 20%, 80%, 1);
   background: hsla(${props => props.color || "0"}, 80%, 98%, 1);
 `
 
-function Callout({ color, children }) {
+function Callout({ half, color, children }) {
   return (
-    <CalloutBox color={color}>
+    <CalloutBox color={color} half={half}>
       <MDXProvider components={code}>{children}</MDXProvider>
     </CalloutBox>
   )
 }
 
-function Warning({ children }) {
+function Warning({ half, children }) {
   return <Callout color="50">{children}</Callout>
 }
-function Error({ children }) {
+function Error({ half, children }) {
   return <Callout color="10">{children}</Callout>
 }
-function Notice({ children }) {
+function Notice({ half, children }) {
   return <Callout color="202">{children}</Callout>
 }
-function Result({ children }) {
+function Result({ half, children }) {
   return <Callout color="90">{children}</Callout>
 }
 
