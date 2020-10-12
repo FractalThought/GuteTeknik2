@@ -22,12 +22,22 @@ function Container({
     urlData = urlArray.filter(data => data !== "")
   }
 
+  const mainPage = urlData[0]
+
+  const currentPageData = pageinfo.filter(pageData => {
+    return pageData.pageLink === mainPage
+  })
+
   return (
     <>
-      <Header mainPage={urlData[0]} />
+      <Header mainPage={mainPage} />
       <div id="main-wrapper">
         <aside className="left">
-          <Sidebar urlData={urlData} pages={pages} pageinfo={pageinfo} />
+          <Sidebar
+            urlData={urlData}
+            pages={pages}
+            currentPageData={currentPageData}
+          />
         </aside>
         <main>
           <MyCrumbs crumbData={crumbData} />

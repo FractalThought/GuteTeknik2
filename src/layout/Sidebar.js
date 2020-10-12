@@ -43,9 +43,18 @@ function extractPageSlug(slug) {
   // And get first and last
 }
 
-function Sidebar({ urlData, pages, pageinfo }) {
+function Sidebar({ urlData, pages, currentPageData }) {
   let [topPage, currentPage] = extractUrlData(urlData)
   let headingData = {}
+
+  /*
+    Filter out only the pages needed and with it, sort them into headings
+    Will need to create an object to hold all, then add a heading-object based on heading-name
+
+    pagesObject["headingName"].pages = array of pages objects
+    pagesObject["headingName"].title = original heading string
+    
+  */
 
   pages.map(page => {
     let node = page.node
@@ -72,25 +81,12 @@ function Sidebar({ urlData, pages, pageinfo }) {
     }
 
     return page
-
-    // page.frontmatter.title
-    // page.frontmatter.heading
-
-    /*
-    
-        Filter out only the pages needed and with it, sort them into headings
-        Will need to create an object to hold all, then add a heading-object based on heading-name
-
-        pagesObject["headingName"].pages = array of pages objects
-        pagesObject["headingName"].title = original heading string
-    
-      */
   })
 
-  let pageData = require("../pageinfo/" + topPage + ".json") // Still need this for top page info
+  //let pageData = require("../pageinfo/" + topPage + ".json") // Still need this for top page info
 
   useEffect(() => {
-    document.title = `GuteTeknik  ${pageData.pageName}`
+    document.title = `GuteTeknik  ${currentPageData.pageName}`
   })
 
   //let headings = Object.values(headingData) // gets the array of headings only
@@ -110,13 +106,15 @@ function Sidebar({ urlData, pages, pageinfo }) {
   return (
     <nav>
       <section>
-        <h2>{pageData.pageName}</h2>
-        <Link to={"/" + pageData.pageLink}>{pageData.pageName}</Link>
+        <h2>{currentPageData.pageName}</h2>
+        <Link to={"/" + currentPageData.pageLink}>
+          {currentPageData.pageName}
+        </Link>
       </section>
-      {pageData.headings.map((heading, index) => (
+      {currentPageData.headings.map((heading, index) => (
         <SidebarHeading
           key={index}
-          mainPage={pageData.pageLink}
+          mainPage={currentPageData.pageLink}
           title={heading.title}
           subpages={heading.subpages}
           currentPage={currentPage}
