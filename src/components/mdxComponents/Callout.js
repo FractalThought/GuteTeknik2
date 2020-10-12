@@ -15,6 +15,7 @@ const CalloutBox = styled.div`
     css`
       width: 50%;
       float: right;
+      clear: both;
     `};
 
   color: hsla(${props => props.color || "0"}, 20%, 40%, 1);
