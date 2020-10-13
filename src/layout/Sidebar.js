@@ -1,20 +1,6 @@
 import React, { useEffect } from "react"
 import { Link } from "gatsby"
 import SidebarHeading from "./SidebarHeading"
-/*
-https://itnext.io/reading-data-from-a-json-file-with-gatsby-graphql-572b18ab98a
-*/
-
-// graphql`
-//   query SidebarHeading {
-//     allSidebarItemsJson {
-//       edges {
-//         node {
-
-//         }
-//       }
-//     }
-//   }`
 
 function extractUrlData(url) {
   let topPage,
@@ -86,24 +72,21 @@ function Sidebar({ urlData, pages, currentPageData }) {
   //let pageData = require("../pageinfo/" + topPage + ".json") // Still need this for top page info
 
   useEffect(() => {
-    document.title = `GuteTeknik  ${currentPageData[0].pageName}`
+    document.title = `GuteTeknik  ${currentPageData.pageName}`
   })
-
-  console.log(currentPageData[0])
-  console.log(currentPageData[0].headings)
 
   return (
     <nav>
       <section>
-        <h2>{currentPageData[0].pageName}</h2>
-        <Link to={"/" + currentPageData[0].pageLink}>
-          {currentPageData[0].pageName}
+        <h2>{currentPageData.pageName}</h2>
+        <Link to={"/" + currentPageData.pageLink}>
+          {currentPageData.pageName}
         </Link>
       </section>
-      {currentPageData[0].headings.map((heading, index) => (
+      {currentPageData.headings.map((heading, index) => (
         <SidebarHeading
           key={index}
-          mainPage={currentPageData[0].pageLink}
+          mainPage={currentPageData.pageLink}
           title={heading.title}
           subpages={heading.subpages}
           currentPage={currentPage}

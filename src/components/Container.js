@@ -28,12 +28,10 @@ function Container({
   // console.log(pageinfo);
 
   const currentPageData = pageinfo.filter(pageData => {
-    console.log(pageData)
-    console.log(pageData.pageLink)
     return pageData.pageLink === mainPage
-  })
+  })[0]
 
-  // console.log(currentPageData);
+  console.log(currentPageData)
 
   return (
     <>
