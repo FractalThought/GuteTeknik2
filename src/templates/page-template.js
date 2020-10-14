@@ -63,10 +63,6 @@ export default function PageTemplate({ pageContext, data }) {
   const {
     breadcrumb: { crumbs },
   } = pageContext
-  // if (!page) {
-  //   console.log("no page found")
-  //   return <p>No page Found? This should be a 404</p>
-  // }
 
   const crumbData = {
     crumbs: crumbs,
@@ -75,11 +71,10 @@ export default function PageTemplate({ pageContext, data }) {
   }
 
   let pageinfo = data.allPageinfoJson.edges
-  console.log(pageinfo)
 
   // Just remove the .node-intermediate step
   pageinfo = pageinfo.map(page => {
-    return page.node;
+    return page.node
   })
 
   let listOfContent = undefined

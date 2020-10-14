@@ -54,7 +54,6 @@ function HiddenDiv({ isHidden, children }) {
 
 function PracticeContainer({ children, title }) {
   const show = () => {
-    console.log("showing")
     setHidden(!isHidden)
   }
 
