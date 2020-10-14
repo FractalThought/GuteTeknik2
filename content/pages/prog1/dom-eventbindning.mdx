@@ -24,8 +24,8 @@ För att skapa ett event så använder vi event listeners (event-lyssnare), och 
 HTML:
 
 ```html
-<!-- En länk med id't clicker -->
-<a id="clicker" href="#">Click me!</a>
+<!-- En knapp med id't clicker -->
+<button id="clicker">Click me!</button>
 ```
 
 JavaScript:
@@ -54,8 +54,9 @@ Ser det mycket ut? Här är samma JS-kod utan kommentarer:
 
 ```javascript
 function myEvent(event) {
-  alert(event.target.innerText)
+  alert(event.target.innerText);
 }
+
 window.onload = function() {
   document.getElementById("clicker").addEventListener("click", myEvent)
 }
@@ -63,13 +64,13 @@ window.onload = function() {
 
 Lägg särskilt märke till event.target. Detta innebär att vi kan peka på det specifika elementet som skapade eventet. Det gör också att vi kan använda samma funktion till fler element.
 
-Om vi lägger till en till länk, och ändrar id till class istället, så kan vi binda samma funktion till båda länkarna, så här;
+Om vi lägger till en till knapp, och ändrar id till class istället, så kan vi binda samma funktion till båda knapparna, så här;
 
 HTML:
 
 ```html
-<a class="clicker" href="#">Click me!</a>
-<a class="clicker" href="#">Click me too!</a>
+<button class="clicker" href="#">Click me!</button>
+<button class="clicker" href="#">Click me too!</button>
 ```
 
 JavaScript:
@@ -79,10 +80,10 @@ function myEvent(event) {
   alert(event.target.innerText)
 }
 window.onload = function() {
-  let links = document.getElementsByClassName("clicker")
+  let buttons = document.getElementsByClassName("clicker")
 
-  for (let index = 0; index < links.length; index++) {
-    links[index].addEventListener("click", myEvent)
+  for (let index = 0; index < buttons.length; index++) {
+    buttons[index].addEventListener("click", myEvent)
   }
 }
 ```
@@ -93,7 +94,7 @@ window.onload = function() {
 
 ## Övning 1
 
-Skapa ett HTML-dokument och lägg till de vanlig taggarna (head, body, osv). Fyll bodyn med 5 divar (Emmet Abbr: div\*5). Skapa en extern stilmall (.css), länka in den i ditt HTML-dokument, och lägg till följande CSS:
+Skapa ett HTML-dokument och lägg till de vanlig taggarna (head, body, osv). Fyll bodyn med 5 divar (Emmet Abbr: `div\*5`). Skapa en extern stilmall (.css), länka in den i ditt HTML-dokument, och lägg till följande CSS:
 
 ```css
 body {
@@ -105,6 +106,11 @@ div {
   min-width: 20vw;
   background-color: red;
 }
+
+.altered {
+  background-color: blue;
+}
+
 ```
 
 Slutligen, lägg till ett externt script (.js-fil) och länka in den i ditt HTML-dokument. I skriptet ska du göra så att en div-tagg ändrar färg när du klickar på den.
@@ -113,7 +119,7 @@ Slutligen, lägg till ett externt script (.js-fil) och länka in den i ditt HTML
 
 - Kom ihåg att du kan välja alla element som har samma tagg-namn med getElementsByTagName.
 - event.target syftar till elementet som eventet kom ifrån.
-- För att ändra bakgrundsfärg använder du .style.backgroundColor = "dinfärg";
+- För att ändra bakgrundsfärg så lägger du till klassen altered till elementets `classList`.
 - Du kan resetta sidan genom att ladda om den.
 
 ## Övning 2:
@@ -123,7 +129,7 @@ Lägg till [button-tagg](https://developer.mozilla.org/en-US/docs/Web/HTML/Eleme
 Testa nu att istället för att ändra knappens bakgrundsfärg, att ändra divens bakgrundsfärg, genom att använda .parentElement-attributet i button;
 
 ```javascript
-event.target.parentElement.style.backgroundColor = "purple"
+event.target.parentElement.classList.add("altered");
 ```
 
 Det du gjort nu kallas "traversing the DOM", alltså att gå igenom Dokument Objekt Modellens noder för att hitta det du vill påverka.
@@ -143,13 +149,15 @@ Det gör att vi kan använda querySelector från ett element, och bara få ut de
 - Använd querySelector eller getElementsByTagName för att komma åt paragraftaggen i samma div som knappen du klickar på.
 - Sätt om paragrafens innerText.
 
-#### Lösning:
+<PracticeContainer>
 
 ```javascript
-let myParagraf = event.target.parentElement.querySelector("p")
+let myParagraf = event.target.parentElement.querySelector("p");
 
-myParagraf.innerText = "Ny-text-här"
+myParagraf.innerText = "Ny-text-här";
 ```
+
+</PracticeContainer>
 
 ## Övning 4
 
@@ -170,5 +178,26 @@ Se [CSS transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transi
 Försök göra så att när du klickar på en knapp så ska den öka minimumbredden på den aktuella diven, och minska minimumdiven på alla andra divar.
 
 Försök att skapa en "Toggle"-effekt. Alltså att när du klickar på en knapp så ska diven ändras. Och när du trycker på knappen igen så ska den gå tillbaka till sitt ursprung.
+
+# Övning 5
+
+Försök nu skapa en ny knapp i din HTML-fil och bind den till en egen funktion.
+
+Din funktion ska göra följande:
+- Skapa en ny div
+- Skapa en ny button och lägg till den till din div
+- Lägg till din div till din hemsida
+
+Undersök vad som händer när du trycker på en knapp.
+
+<PracticeContainer>
+
+Det som händer är att eftersom din knapp skapades efter koden som binder alla knappar, så är den nya knappen inte bunden. För att binda den så behöver du antingen binda den direkt när du skapar knappen, eller köra om koden som binder alla knappar.
+
+Det är mer performant att binda knappen direkt.
+
+</PracticeContainer>
+
+# Övning 6 (aka, gör mer)
 
 Klar med musevents? Kolla in [Keyboard events (sv)](https://dbwebb.se/guide/javascript1/keyboardEvent) och testa lägga in tangentbordsevents till din hemsida.

@@ -1,0 +1,83 @@
+---
+title: "Funktioner"
+date: "2020-09-07"
+headings: "Funktioner i JS:funktioner-i-js|Kalla funktion:kalla|Argument:argument|Returnera:returnera"
+---
+
+En funktion är ett sätt för oss att kapsla in en bit kod som vi sedan kan kalla på för att köra i ett senare läge.
+
+<a id="funktioner-i-js"></a>
+
+# Funktioner i JavaScript
+
+För att skapa en funktion så använder vi nyckelordet `function`, följt av en namngivning av funktionen, två paranteser, och slutligen klamrar. Så här;
+
+```javascript
+function myFunction() {
+    // Kod i funktionen
+}
+```
+
+<a id="kalla"></a>
+
+# Kalla på en funktion
+För att köra koden i en funktion så behöver vi kalla på funktionen.
+
+Detta gör vi genom att helt enkelt anropa funktionens namn, så här;
+
+```javascript
+myFunction(); // detta kör funktionen
+```
+
+Vi har redan använt olika funktioner, till exempel `Math.Random()` och `console.log()`.
+
+<a id="argument"></a>
+
+# Argument
+Ett stort användningsområde för funktioner är argument, vilket är när vi skickar in värden till funktionen, för att åstakomma olika saker. Argumenten skickar vi in inuti parantserna när vi kallar funktionen. För till exempel `console.log()` så skickar vi in ett meddelande som ska skrivas in, så här:
+
+```javascript
+console.log("Mitt meddelande");
+```
+
+För att skapa en funktion som tar in argument, så skriver vi in dem som namn som sedan kan nyttjas i funktionen. Om du har flera argument så använder du ett kommatecken för att separera argumenten. Så här;
+
+```javascript
+function addition(number1, number2) {
+    let result = number1 + number2;
+    console.log(result);
+}
+
+addition(2, 3); // resultatet borde bli att det skrivs ut 5 i konsollen.
+```
+
+<a id="returnera"></a>
+
+# Returnera från funktionen
+När en funktion har kört klart sin kod så hoppar koden tillbaka till den plats där funktionen blev kallad från. Detta kallas att funktionen *returnerar*. Vi kan få funktionen att returnera tidigare än detta genom att använda nyckelordet `return`;
+
+```javascript
+function sendMessage() {
+    return;
+    console.log("Message sent");
+}
+```
+
+<Warning>Notera att ovanstående kod kommer ge en varning som säger att koden under `return` är *Unreachable*, alltså att koden aldrig kommer köras.</Warning>
+
+## Returnera ett värde
+En funktion kan också returnera ett värde när vi använder `return`-nyckelordet. Detta blir resultatet av funktionen, och när vi kör funktionen så kan vi hämta och spara detta värde.
+
+<Notice half="true">Vi har tidigare använt en funktion som returnerar något; `Math.random()`, där vi får ut ett värde mellan 0 och 1.</Notice>
+
+```javascript
+function addition(number1, number2) {
+    let result = number1 + number2;
+    return result;
+}
+
+let myNumber = Addition(2, 3); // myNumber blir satt till 5.
+console.log(myNumber); // Skriver ut 5 i konsollen.
+```
+
+<Notice half="true">En funktion som vi bara kör och inte returnerar något brukar i olika programmeringsspråk kallas för en void-funktion.</Notice>

@@ -45,6 +45,10 @@
         {
           "subPageName": "Arrayer",
           "subPageLink": "arrayer"
+        },
+        {
+          "subPageName": "Funktioner",
+          "subPageLink": "funktioner"
         }
       ]
     },
