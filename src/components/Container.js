@@ -45,6 +45,7 @@ function Container({
             <h1 className="printheader">GuteTeknik</h1>
             <MDXProvider components={mdxComponents}>{children}</MDXProvider>
             <script async src="https://static.codepen.io/assets/embed/ei.js" />
+            <div style="clear:both"></div>
           </div>
         </main>
         <aside className="right">
