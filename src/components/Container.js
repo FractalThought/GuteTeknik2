@@ -1,10 +1,15 @@
 import React from "react"
 import { MDXProvider } from "@mdx-js/react"
+import styled from "styled-components"
 import Header from "../layout/Header"
 import Sidebar from "../layout/Sidebar"
 import mdxComponents from "./mdxComponents"
 import MyCrumbs from "./MyCrumbs"
 import TableOfContent from "./TableOfContent"
+
+const ClearDiv = styled.div`
+  clear: both;
+`
 
 function Container({
   url,
@@ -45,7 +50,7 @@ function Container({
             <h1 className="printheader">GuteTeknik</h1>
             <MDXProvider components={mdxComponents}>{children}</MDXProvider>
             <script async src="https://static.codepen.io/assets/embed/ei.js" />
-            <div style="clear:both"></div>
+            <ClearDiv></ClearDiv>
           </div>
         </main>
         <aside className="right">
