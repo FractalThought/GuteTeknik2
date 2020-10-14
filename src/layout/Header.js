@@ -8,10 +8,6 @@ function Header({ mainPage }) {
       link: "webb1",
     },
     {
-      name: "Webbutveckling 1",
-      link: "webb1",
-    },
-    {
       name: "Webbutveckling 2",
       link: "webb2",
     },
@@ -31,6 +27,24 @@ function Header({ mainPage }) {
 
   // map through, check which is active
 
+  function createHeaderLink(currentLink, link, key) {
+    if (currentLink === link.link) {
+      return (
+        <li key={key}>
+          <a className="active" href={"/" + link.link}>
+            {link.name}
+          </a>
+        </li>
+      )
+    }
+
+    return (
+      <li key={key}>
+        <a href={"/" + link.link}>{link.name}</a>
+      </li>
+    )
+  }
+
   return (
     <header>
       <a id="toppen"></a>
@@ -39,21 +53,9 @@ function Header({ mainPage }) {
           <Link to="/">GuteTeknik</Link>
         </h1>
         <ul>
-          <li>
-            <Link to="/webb1">Webbutveckling 1</Link>
-          </li>
-          <li>
-            <Link to="/webb2">Webbutveckling 2</Link>
-          </li>
-          <li>
-            <Link to="/prog1">Programmering 1</Link>
-          </li>
-          <li>
-            <Link to="/prog2">Programmering 2</Link>
-          </li>
-          <li>
-            <Link to="/daona">Dator- och nätverksteknik</Link>
-          </li>
+          {topPages.map((page, key) => {
+            return createHeaderLink(mainPage, page, key)
+          })}
         </ul>
       </nav>
     </header>

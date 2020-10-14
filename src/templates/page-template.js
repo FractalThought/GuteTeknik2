@@ -93,8 +93,8 @@ export default function PageTemplate({ pageContext, data }) {
         pageinfo={pageinfo}
         crumbData={crumbData}
         listOfContent={listOfContent}
+        pageTitle={page.frontmatter.title}
       >
-        <h1 className="page-heading">{page.frontmatter.title}</h1>
         <MDXProvider components={shortcodes}>
           <MDXRenderer>{page.body}</MDXRenderer>
         </MDXProvider>

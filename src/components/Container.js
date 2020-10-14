@@ -17,6 +17,7 @@ function Container({
   pageinfo,
   crumbData,
   listOfContent,
+  pageTitle,
   children,
 }) {
   // Use string split for url
@@ -46,8 +47,9 @@ function Container({
         </aside>
         <main>
           <MyCrumbs crumbData={crumbData} />
+          <h1 className="page-heading">{pageTitle}</h1>
           <div className="page">
-            <h1 className="printheader">GuteTeknik</h1>
+            <h1 className="printheader">{pageTitle}</h1>
             <MDXProvider components={mdxComponents}>{children}</MDXProvider>
             <script async src="https://static.codepen.io/assets/embed/ei.js" />
             <ClearDiv></ClearDiv>

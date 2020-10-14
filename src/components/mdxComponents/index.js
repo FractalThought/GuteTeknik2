@@ -23,10 +23,6 @@ export default {
   inlineCode: props => <Code {...props} />,
   // table: Table,
   // blockquote: Blockquote,
-  // TODO add `a`
-  // TODO add `img`
-  // TODO add `ul`
-  // TODO add `li`,
   PracticeContainer: PracticeContainer,
   Callout: Callout,
   Warning: Warning,
