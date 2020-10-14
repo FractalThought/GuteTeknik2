@@ -3,7 +3,6 @@ import { graphql, Link } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Container from "../components/Container"
-import { Breadcrumb } from "gatsby-plugin-breadcrumb"
 
 const shortcodes = { Link } // Provide common components here
 
@@ -22,6 +21,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        headings
       }
     }
     allMdx(filter: { fields: { collection: { eq: "pages" } } }) {
@@ -34,6 +34,22 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            headings
+          }
+        }
+      }
+    }
+    allPageinfoJson {
+      edges {
+        node {
+          pageName
+          pageLink
+          headings {
+            title
+            subpages {
+              subPageName
+              subPageLink
+            }
           }
         }
       }
@@ -48,14 +64,36 @@ export default function PageTemplate({ pageContext, data }) {
     breadcrumb: { crumbs },
   } = pageContext
 
+  const crumbData = {
+    crumbs: crumbs,
+    crumbSeparator: " > ",
+    crumbLabel: page.frontmatter.title,
+  }
+
+  let pageinfo = data.allPageinfoJson.edges
+
+  // Just remove the .node-intermediate step
+  pageinfo = pageinfo.map(page => {
+    return page.node
+  })
+
+  let listOfContent = undefined
+  if (
+    page.frontmatter.headings !== undefined &&
+    page.frontmatter.headings !== null
+  ) {
+    listOfContent = page.frontmatter.headings.split("|")
+  }
+
   return (
     <>
-      <Container url={page.fields.slug} pages={allInfo}>
-        <Breadcrumb
-          crumbs={crumbs}
-          crumbSeparator=" > "
-          crumbLabel={page.frontmatter.title}
-        />
+      <Container
+        url={page.fields.slug}
+        pages={allInfo}
+        pageinfo={pageinfo}
+        crumbData={crumbData}
+        listOfContent={listOfContent}
+      >
         <h1 className="page-heading">{page.frontmatter.title}</h1>
         <MDXProvider components={shortcodes}>
           <MDXRenderer>{page.body}</MDXRenderer>
