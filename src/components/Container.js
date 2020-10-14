@@ -24,14 +24,9 @@ function Container({
 
   const mainPage = urlData[0]
 
-  // console.log(mainPage)
-  // console.log(pageinfo);
-
   const currentPageData = pageinfo.filter(pageData => {
     return pageData.pageLink === mainPage
   })[0]
-
-  console.log(currentPageData)
 
   return (
     <>
