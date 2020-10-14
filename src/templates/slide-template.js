@@ -47,10 +47,6 @@ export default function PageTemplate({ pageContext, data }) {
   const {
     breadcrumb: { crumbs },
   } = pageContext
-  // if (!page) {
-  //   console.log("no page found")
-  //   return <p>No page Found? This should be a 404</p>
-  // }
 
   return (
     <>
