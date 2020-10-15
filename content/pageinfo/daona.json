@@ -12,6 +12,15 @@
       ]
     },
     {
+      "title": "Information",
+      "subpages": [
+        {
+          "subPageName": "OSI-modellen",
+          "subPageLink": "osi"
+        }
+      ]
+    },
+    {
       "title": "Uppgifter",
       "subpages": [
         {
