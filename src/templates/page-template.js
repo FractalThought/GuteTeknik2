@@ -86,7 +86,6 @@ export default function PageTemplate({ pageContext, data }) {
   }
 
   return (
-    <>
       <Container
         url={page.fields.slug}
         pages={allInfo}
@@ -99,6 +98,5 @@ export default function PageTemplate({ pageContext, data }) {
           <MDXRenderer>{page.body}</MDXRenderer>
         </MDXProvider>
       </Container>
-    </>
   )
 }
