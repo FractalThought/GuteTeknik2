@@ -1,10 +1,21 @@
 {
-  "pageName": "Programmering 1",
-  "pageLink": "prog1",
-  "headings": [
+  "name": "Programmering 1",
+  "link": "prog1",
+  "references": [
+    {
+      "title": "",
+      "link": ""
+    },
+    {
+      "title": "",
+      "link": ""
+    }
+  ],
+  "chapters": [
     {
       "title": "Om kursen",
-      "subpages": [
+      "link": "",
+      "moment": [
         {
           "subPageName": "Veckoplanering",
           "subPageLink": "planering"

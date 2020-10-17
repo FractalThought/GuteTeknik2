@@ -87,7 +87,7 @@ const Divider = Styled.div`
 
 // Need a container for splitting elements and references
 
-const data = {
+const chapter = {
   title: "",
   baseLink: "",
   elements: [
@@ -105,6 +105,14 @@ const data = {
     },
   ],
 }
+
+/*
+
+Collect all references in the course
+Check for duplicates
+Write out
+
+*/
 
 function ChapterMenu({ course, data }) {
   return (
