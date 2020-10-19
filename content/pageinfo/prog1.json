@@ -3,119 +3,73 @@
   "link": "prog1",
   "references": [
     {
-      "title": "",
-      "link": ""
+      "title": "Begrepp",
+      "link": "begrepp"
     },
     {
-      "title": "",
-      "link": ""
+      "title": "Kodstandard",
+      "link": "kodstandard"
+    },
+    {
+      "title": "Math.Random()",
+      "link": "random"
+    },
+    {
+      "title": "Problemlösning och felsökning",
+      "link": "problemlosning-och-felsokning"
     }
   ],
   "chapters": [
     {
-      "title": "Om kursen",
-      "link": "",
-      "moment": [
-        {
-          "subPageName": "Veckoplanering",
-          "subPageLink": "planering"
-        },
-        {
-          "subPageName": "Betygskriterier",
-          "subPageLink": "betygskriterier"
-        }
-      ]
-    },
-    {
       "title": "Introduktion",
-      "subpages": [
+      "link": "intro",
+      "headings": [
         {
-          "subPageName": "REPL-programmering",
-          "subPageLink": "repl"
+          "title": "REPL-programmering",
+          "link": "repl",
+          "type": "lesson"
         },
         {
-          "subPageName": "Folders och flöde",
-          "subPageLink": "flow"
+          "title": "Folders och flöde",
+          "link": "flow"
         },
         {
-          "subPageName": "Operatorer",
-          "subPageLink": "operatorer"
+          "title": "Operatorer",
+          "link": "operatorer"
         },
         {
-          "subPageName": "Variabler",
-          "subPageLink": "variabler"
+          "title": "Variabler",
+          "link": "variabler"
         },
         {
-          "subPageName": "Kontrollsatser",
-          "subPageLink": "kontrollsatser"
+          "title": "Kontrollsatser",
+          "link": "kontrollsatser"
         },
         {
-          "subPageName": "Iterationssatser",
-          "subPageLink": "iterationssatser"
+          "title": "Iterationssatser",
+          "link": "iterationssatser"
         },
         {
-          "subPageName": "Arrayer",
-          "subPageLink": "arrayer"
+          "title": "Arrayer",
+          "link": "arrayer"
         },
         {
-          "subPageName": "Funktioner",
-          "subPageLink": "funktioner"
+          "title": "Funktioner",
+          "link": "funktioner"
         }
       ]
     },
     {
       "title": "JS på Webben",
-      "subpages": [
+      "link": "webben",
+      "headings": [
         {
-          "subPageName": "DOM-manipulering",
-          "subPageLink": "dom-manipulering"
+          "title": "DOM-manipulering",
+          "link": "dom-manipulering"
         },
         {
-          "subPageName": "Eventbindning",
-          "subPageLink": "dom-eventbindning"
-        }
-      ]
-    },
-    {
-      "title": "Övningar",
-      "subpages": [
-        {
-          "subPageName": "Array-övningar",
-          "subPageLink": "exercises/arrayer"
-        }
-      ]
-    },
-    {
-      "title": "Projekt",
-      "subpages": [
-        {
-          "subPageName": "Restaurangväljare",
-          "subPageLink": "projekt/random-mat-val"
-        },
-        {
-          "subPageName": "Introprojektet",
-          "subPageLink": "projekt/intro"
-        }
-      ]
-    },
-    {
-      "title": "Kunskapsbank",
-      "subpages": [
-        {
-          "subPageName": "Begrepp",
-          "subPageLink": "begrepp"
-        },
-        {
-          "subPageName": "Kodstandard",
-          "subPageLink": "kodstandard"
-        },
-        {
-          "subPageName": "Math.Random()",
-          "subPageLink": "random"
-        },
-        {
-          "subPageName": "Problemlösning och felsökning",
-          "subPageLink": "problemlosning-och-felsokning"
+          "title": "Eventbindning",
+          "link": "dom-eventbindning"
         }
       ]
     }
