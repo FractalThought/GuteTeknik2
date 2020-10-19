@@ -72,21 +72,20 @@ function Sidebar({ urlData, pages, currentPageData }) {
   //let pageData = require("../pageinfo/" + topPage + ".json") // Still need this for top page info
 
   useEffect(() => {
-    document.title = `GuteTeknik  ${currentPageData.pageName}`
+    document.title = `GuteTeknik  ${currentPageData.name}`
   })
 
   return (
     <nav>
       <section>
-        <h2>{currentPageData.pageName}</h2>
-        <Link to={"/" + currentPageData.link}>{currentPageData.pageName}</Link>
+        <h2>{currentPageData.name}</h2>
+        <Link to={"/" + currentPageData.link}>{currentPageData.name}</Link>
       </section>
       {currentPageData.chapters.map((chapter, index) => (
         <SidebarHeading
           key={index}
           mainPage={currentPageData.link}
-          title={chapter.title}
-          pages={chapter.pages}
+          chapter={chapter}
           currentPage={currentPage}
         />
       ))}

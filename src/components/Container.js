@@ -14,7 +14,7 @@ const ClearDiv = styled.div`
 function Container({
   url,
   pages,
-  pageinfo,
+  pageInfo,
   crumbData,
   listOfContent,
   pageTitle,
@@ -30,7 +30,7 @@ function Container({
 
   const mainPage = urlData[0]
 
-  const currentPageData = pageinfo.filter(pageData => {
+  const currentPageData = pageInfo.filter(pageData => {
     return pageData.link === mainPage
   })[0]
 

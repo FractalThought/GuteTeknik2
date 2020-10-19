@@ -1,19 +1,28 @@
 {
-  "pageName": "Digitalt skapande 1",
-  "pageLink": "digi1",
-  "headings": [
+  "name": "Digitalt skapande 1",
+  "link": "digi1",
+  "chapters": [
     {
       "title": "Om kursen",
-      "subpages": [
+      "link": "about",
+      "pages": [
         {
-          "subPageName": "Veckoplanering",
-          "subPageLink": "planering"
+          "title": "Veckoplanering",
+          "link": "planering",
+          "type": "lesson"
         },
         {
-          "subPageName": "Betygskriterier",
-          "subPageLink": "betygskriterier"
+          "title": "Veckoplanering",
+          "link": "planering",
+          "type": "lesson"
         }
       ]
+    }
+  ],
+  "references": [
+    {
+      "title": "title",
+      "link": "link"
     }
   ]
 }

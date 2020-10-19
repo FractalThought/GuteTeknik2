@@ -46,7 +46,8 @@ export const pageQuery = graphql`
           link
           chapters {
             title
-            headings {
+            link
+            pages {
               title
               link
               type
@@ -75,10 +76,8 @@ export default function PageTemplate({ pageContext, data }) {
     crumbLabel: page.frontmatter.title,
   }
 
-  let pageinfo = data.allPageinfoJson.edges
-
   // Just remove the .node-intermediate step
-  pageinfo = pageinfo.map(page => {
+  const pageInfo = data.allPageinfoJson.edges.map(page => {
     return page.node
   })
 
@@ -94,7 +93,7 @@ export default function PageTemplate({ pageContext, data }) {
     <Container
       url={page.fields.slug}
       pages={allInfo}
-      pageinfo={pageinfo}
+      pageInfo={pageInfo}
       crumbData={crumbData}
       listOfContent={listOfContent}
       pageTitle={page.frontmatter.title}

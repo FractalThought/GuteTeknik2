@@ -34,14 +34,20 @@ function Index({ pageContext }) {
       allPageinfoJson {
         edges {
           node {
-            pageName
-            pageLink
-            headings {
+            name
+            link
+            chapters {
               title
-              subpages {
-                subPageName
-                subPageLink
+              link
+              pages {
+                title
+                link
+                type
               }
+            }
+            references {
+              title
+              link
             }
           }
         }
@@ -53,10 +59,8 @@ function Index({ pageContext }) {
 
   const pages = data.allMdx.edges
 
-  let pageinfo = data.allPageinfoJson.edges
-
   // Just remove the .node-intermediate step
-  pageinfo = pageinfo.map(page => {
+  const pageInfo = data.allPageinfoJson.edges.map(page => {
     return page.node
   })
 
@@ -68,32 +72,69 @@ function Index({ pageContext }) {
   //   urlData = urlArray.filter(data => data !== "")
   // }
 
-  const mainPage = "digi1"
-  // const mainPage = urlData[0]
+  const course = "daona"
 
-  // const currentPageData = pageinfo.filter(pageData => {
-  //   return pageData.pageLink === mainPage
-  // })[0]
-
-  return (
-    <>
-      <Header mainPage={mainPage} />
-      <div id="main-wrapper">
-        <aside className="left"></aside>
-        <main>
-          <h1 className="page-heading">Page Title here</h1>
-          <div className="page">
-            <h1 className="printheader">Page Title here</h1>
-            {/* CONTENT GOES HERE */}
-            <p>Hello</p>
-            <script async src="https://static.codepen.io/assets/embed/ei.js" />
-            <ClearDiv></ClearDiv>
-          </div>
-        </main>
-        <aside className="right"></aside>
-      </div>
-    </>
-  )
+  const chapterData = {
+    title: "Kapitel 1",
+    baseLink: "chapter1",
+    elements: [
+      {
+        name: "Moment 1",
+        link: "moment",
+        type: "lesson",
+        typeName: "Lektion",
+      },
+      {
+        name: "Moment 2",
+        link: "exercise",
+        type: "exercise",
+        typeName: "Övning",
+      },
+    ],
+    references: [
+      {
+        name: "Referens 1",
+        link: "reference1",
+      },
+      {
+        name: "Referens 2",
+        link: "reference2",
+      },
+    ],
+  }
+  
+  function Index() {
+    return (
+      <>
+        <Header mainPage={course} />
+        <div id="main-wrapper">
+          <aside className="left"></aside>
+          <main>
+            <h1 className="page-heading">Dator- och nätverksteknik</h1>
+            <div className="page">
+              <h1 className="printheader">Dator- och nätverksteknik</h1>
+              <ul>
+                <li>
+                  <a href="">Introduktion</a>
+                </li>
+                <li>
+                  <a href="">Variabler</a>
+                </li>
+                <li>
+                  <a href="">Kontrollsatser</a>
+                </li>
+              </ul>
+              <script async src="https://static.codepen.io/assets/embed/ei.js" />
+              <ClearDiv></ClearDiv>
+            </div>
+            <ChapterMenu course={course} data={chapterData} />
+            <ChapterMenu data={chapterData} />
+          </main>
+          <aside className="right"></aside>
+        </div>
+      </>
+    )
+  }
 }
 
 export default Index
