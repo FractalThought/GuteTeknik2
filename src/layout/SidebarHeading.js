@@ -1,20 +1,18 @@
 import React from "react"
 import { Link } from "gatsby"
 
-function SidebarHeading({ title, subpages, mainPage, currentPage }) {
+function SidebarHeading({ title, pages, mainPage, currentPage }) {
   return (
     <section>
       <h2>{title}</h2>
       <ul>
-        {subpages.map((subpage, index) => (
+        {pages.map((page, index) => (
           <li key={index}>
             <Link
-              to={"/" + mainPage + "/" + subpage.subPageLink}
-              className={
-                currentPage === subpage.subPageLink ? "active" : "inactive"
-              }
+              to={"/" + mainPage + "/" + page.link}
+              className={currentPage === page.link ? "active" : "inactive"}
             >
-              {subpage.subPageName}
+              {page.title}
             </Link>
           </li>
         ))}

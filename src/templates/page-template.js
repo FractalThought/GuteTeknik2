@@ -42,14 +42,19 @@ export const pageQuery = graphql`
     allPageinfoJson {
       edges {
         node {
-          pageName
-          pageLink
-          headings {
+          name
+          link
+          chapters {
             title
-            subpages {
-              subPageName
-              subPageLink
+            headings {
+              title
+              link
+              type
             }
+          }
+          references {
+            title
+            link
           }
         }
       }
@@ -86,17 +91,17 @@ export default function PageTemplate({ pageContext, data }) {
   }
 
   return (
-      <Container
-        url={page.fields.slug}
-        pages={allInfo}
-        pageinfo={pageinfo}
-        crumbData={crumbData}
-        listOfContent={listOfContent}
-        pageTitle={page.frontmatter.title}
-      >
-        <MDXProvider components={shortcodes}>
-          <MDXRenderer>{page.body}</MDXRenderer>
-        </MDXProvider>
-      </Container>
+    <Container
+      url={page.fields.slug}
+      pages={allInfo}
+      pageinfo={pageinfo}
+      crumbData={crumbData}
+      listOfContent={listOfContent}
+      pageTitle={page.frontmatter.title}
+    >
+      <MDXProvider components={shortcodes}>
+        <MDXRenderer>{page.body}</MDXRenderer>
+      </MDXProvider>
+    </Container>
   )
 }

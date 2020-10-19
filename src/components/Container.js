@@ -31,7 +31,7 @@ function Container({
   const mainPage = urlData[0]
 
   const currentPageData = pageinfo.filter(pageData => {
-    return pageData.pageLink === mainPage
+    return pageData.link === mainPage
   })[0]
 
   return (

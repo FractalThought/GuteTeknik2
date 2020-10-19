@@ -79,16 +79,14 @@ function Sidebar({ urlData, pages, currentPageData }) {
     <nav>
       <section>
         <h2>{currentPageData.pageName}</h2>
-        <Link to={"/" + currentPageData.pageLink}>
-          {currentPageData.pageName}
-        </Link>
+        <Link to={"/" + currentPageData.link}>{currentPageData.pageName}</Link>
       </section>
-      {currentPageData.headings.map((heading, index) => (
+      {currentPageData.chapters.map((chapter, index) => (
         <SidebarHeading
           key={index}
-          mainPage={currentPageData.pageLink}
-          title={heading.title}
-          subpages={heading.subpages}
+          mainPage={currentPageData.link}
+          title={chapter.title}
+          pages={chapter.pages}
           currentPage={currentPage}
         />
       ))}

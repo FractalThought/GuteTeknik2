@@ -23,7 +23,7 @@
     {
       "title": "Introduktion",
       "link": "intro",
-      "headings": [
+      "pages": [
         {
           "title": "REPL-programmering",
           "link": "repl",
@@ -31,45 +31,54 @@
         },
         {
           "title": "Folders och flöde",
-          "link": "flow"
+          "link": "flow",
+          "type": "lesson"
         },
         {
           "title": "Operatorer",
-          "link": "operatorer"
+          "link": "operatorer",
+          "type": "lesson"
         },
         {
           "title": "Variabler",
-          "link": "variabler"
+          "link": "variabler",
+          "type": "lesson"
         },
         {
           "title": "Kontrollsatser",
-          "link": "kontrollsatser"
+          "link": "kontrollsatser",
+          "type": "lesson"
         },
         {
           "title": "Iterationssatser",
-          "link": "iterationssatser"
+          "link": "iterationssatser",
+          "type": "lesson"
         },
         {
           "title": "Arrayer",
-          "link": "arrayer"
+          "link": "arrayer",
+          "type": "lesson"
         },
         {
           "title": "Funktioner",
-          "link": "funktioner"
+          "link": "funktioner",
+          "type": "lesson"
         }
       ]
     },
     {
       "title": "JS på Webben",
       "link": "webben",
-      "headings": [
+      "pages": [
         {
           "title": "DOM-manipulering",
-          "link": "dom-manipulering"
+          "link": "dom-manipulering",
+          "type": "lesson"
         },
         {
           "title": "Eventbindning",
-          "link": "dom-eventbindning"
+          "link": "dom-eventbindning",
+          "type": "lesson"
         }
       ]
     }
