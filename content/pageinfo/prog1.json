@@ -1,24 +1,6 @@
 {
   "name": "Programmering 1",
   "link": "prog1",
-  "references": [
-    {
-      "title": "Begrepp",
-      "link": "begrepp"
-    },
-    {
-      "title": "Kodstandard",
-      "link": "kodstandard"
-    },
-    {
-      "title": "Math.Random()",
-      "link": "random"
-    },
-    {
-      "title": "Problemlösning och felsökning",
-      "link": "problemlosning-och-felsokning"
-    }
-  ],
   "chapters": [
     {
       "title": "Introduktion",
@@ -32,12 +14,12 @@
         {
           "title": "Folders och flöde",
           "link": "flow",
-          "type": "lesson"
+          "type": "exercise"
         },
         {
           "title": "Operatorer",
           "link": "operatorer",
-          "type": "lesson"
+          "type": "project"
         },
         {
           "title": "Variabler",
@@ -64,6 +46,24 @@
           "link": "funktioner",
           "type": "lesson"
         }
+      ],
+      "references": [
+        {
+          "title": "Begrepp",
+          "link": "begrepp"
+        },
+        {
+          "title": "Kodstandard",
+          "link": "kodstandard"
+        },
+        {
+          "title": "Math.Random()",
+          "link": "random"
+        },
+        {
+          "title": "Problemlösning och felsökning",
+          "link": "problemlosning-och-felsokning"
+        }
       ]
     },
     {
@@ -79,6 +79,20 @@
           "title": "Eventbindning",
           "link": "dom-eventbindning",
           "type": "lesson"
+        }
+      ],
+      "references": [
+        {
+          "title": "Begrepp",
+          "link": "begrepp"
+        },
+        {
+          "title": "Kodstandard",
+          "link": "kodstandard"
+        },
+        {
+          "title": "Problemlösning och felsökning",
+          "link": "problemlosning-och-felsokning"
         }
       ]
     }

@@ -25,26 +25,26 @@ const Section = Styled.section`
     margin: 0;
   }
 
-  ul li {
+  li {
     list-style: none;
     margin: 0;
   }
 
-  ul li a {
+  a {
     display: flex;
     justify-content: space-between;
     padding: 1rem 0.5rem;
   }
 
-  ul li:nth-child(odd) {
+  li:nth-child(odd) {
     background: white;
   }
 
-  ul li:nth-child(even) {
+  li:nth-child(even) {
     background: #F9F9FA;
   }
 
-  ul li:hover {
+  li:hover {
     background: #E6E7EA;
   }
 
@@ -85,27 +85,6 @@ const Divider = Styled.div`
   grid-gap: 1rem;
 `
 
-// Need a container for splitting elements and references
-
-const chapter = {
-  title: "",
-  baseLink: "",
-  elements: [
-    {
-      name: "Lektion 1",
-      link: "linktolesson",
-      type: "lesson",
-      typeName: "Lektion",
-    },
-  ],
-  references: [
-    {
-      name: "En referens här",
-      link: "linktoreference",
-    },
-  ],
-}
-
 /*
 
 Collect all references in the course
@@ -114,30 +93,44 @@ Write out
 
 */
 
-function ChapterMenu({ course, data }) {
+function ChapterMenu({ course, chapter }) {
+  function getTypeName(type) {
+    const typeNamePairs = {
+      exercise: "Övning",
+      project: "Projekt",
+      lesson: "Lektion",
+    }
+
+    if (typeNamePairs[type] == undefined || typeNamePairs[type] == null) {
+      return "Lektion"
+    }
+
+    return typeNamePairs[type]
+  }
+
   return (
     <>
-      <ChapterHeading>
-        <Link to={`/${course}/${data.baseLink}`}>{data.title}</Link>
+      <ChapterHeading id={chapter.link}>
+        <Link to={`/${course}/${chapter.link}`}>{chapter.title}</Link>
       </ChapterHeading>
       <Section>
         <Divider>
           <div>
             <h2>Moment</h2>
             <ul>
-              {data.elements.map((element, key) => {
+              {chapter.pages.map((page, key) => {
                 return (
                   <li key={key}>
-                    <Link to={`/${course}/${data.baseLink}/${element.link}`}>
+                    <Link to={`/${course}/${chapter.link}/${page.link}`}>
                       <LinkContainer>
                         <MyImg
-                          src={element.type + ".png"}
-                          alt={element.typeName}
+                          src={page.type + ".png"}
+                          alt={getTypeName(page.type)}
                           width="50"
                         />
-                        <span className="title">{element.name}</span>
+                        <span className="title">{page.title}</span>
                       </LinkContainer>
-                      <span className="type">{element.typeName}</span>
+                      <span className="type">{getTypeName(page.type)}</span>
                     </Link>
                   </li>
                 )
@@ -147,13 +140,13 @@ function ChapterMenu({ course, data }) {
           <div>
             <h2>References</h2>
             <ul>
-              {data.references.map((reference, key) => {
+              {chapter.references.map((reference, key) => {
                 return (
                   <li key={key}>
-                    <Link to={`/${course}/${data.baseLink}/${reference.link}`}>
+                    <Link to={`/${course}/referenser/${reference.link}`}>
                       <LinkContainer>
                         <MyImg src="reference.png" alt="Referens" width="50" />
-                        <span className="title">{reference.name}</span>
+                        <span className="title">{reference.title}</span>
                       </LinkContainer>
                       <span className="type">Referens</span>
                     </Link>

@@ -13,7 +13,6 @@ const ClearDiv = styled.div`
 
 function Container({
   url,
-  pages,
   pageInfo,
   crumbData,
   listOfContent,
@@ -39,11 +38,7 @@ function Container({
       <Header mainPage={mainPage} />
       <div id="main-wrapper">
         <aside className="left">
-          <Sidebar
-            urlData={urlData}
-            pages={pages}
-            currentPageData={currentPageData}
-          />
+          <Sidebar urlData={urlData} currentPageData={currentPageData} />
         </aside>
         <main>
           <MyCrumbs crumbData={crumbData} />
