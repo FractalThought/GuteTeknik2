@@ -28,6 +28,25 @@ function Sidebar({ urlData, currentPageData }) {
     document.title = `GuteTeknik  ${currentPageData.name}`
   })
 
+  const references = removeDuplicates(
+    currentPageData.chapters.map(chapter => {
+      return chapter.references
+    }),
+    "link"
+  )[0]
+
+  /*
+  Need to check through all the chapters, and then all the references
+  Add reference to references-array that is not already there
+
+  */
+
+  function removeDuplicates(myArr, prop) {
+    return myArr.filter((obj, pos, arr) => {
+      return arr.map(mapObj => mapObj[prop]).indexOf(obj[prop]) === pos
+    })
+  }
+
   return (
     <nav>
       <section>
@@ -55,6 +74,25 @@ function Sidebar({ urlData, currentPageData }) {
           currentPage={currentPage}
         />
       ))}
+      <section>
+        <h2>Referenser</h2>
+        <ul>
+          {references.map((reference, index) => (
+            <li key={index}>
+              <Link
+                to={
+                  "/" + currentPageData.link + "/referenser/" + reference.link
+                }
+                className={
+                  currentPage === reference.link ? "active" : "inactive"
+                }
+              >
+                {reference.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
     </nav>
   )
 }

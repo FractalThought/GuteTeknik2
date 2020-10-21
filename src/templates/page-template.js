@@ -52,10 +52,10 @@ export const pageQuery = graphql`
               link
               type
             }
-          }
-          references {
-            title
-            link
+            references {
+              title
+              link
+            }
           }
         }
       }

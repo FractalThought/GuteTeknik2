@@ -1,7 +1,7 @@
 import React from "react"
 import CoursePage from "../../layout/CoursePage"
 
-function Index() {
+export default () => {
   return (
     <CoursePage course="prog1">
       <p>
@@ -14,5 +14,3 @@ function Index() {
     </CoursePage>
   )
 }
-
-export default Index

@@ -14,37 +14,47 @@
         {
           "title": "Folders och flöde",
           "link": "flow",
+          "type": "lesson"
+        },
+        {
+          "title": "Flödesövningar",
+          "link": "ovningar",
           "type": "exercise"
         },
         {
-          "title": "Operatorer",
-          "link": "operatorer",
+          "title": "Introprojektet",
+          "link": "projekt",
           "type": "project"
+        }
+      ],
+      "references": [
+        {
+          "title": "Begrepp",
+          "link": "begrepp"
         },
+        {
+          "title": "Problemlösning och felsökning",
+          "link": "problemlosning-och-felsokning"
+        },
+        {
+          "title": "Operatorer",
+          "link": "operatorer"
+        }
+      ]
+    },
+    {
+      "title": "Variabler",
+      "link": "variabler",
+      "pages": [
         {
           "title": "Variabler",
           "link": "variabler",
           "type": "lesson"
         },
         {
-          "title": "Kontrollsatser",
-          "link": "kontrollsatser",
-          "type": "lesson"
-        },
-        {
-          "title": "Iterationssatser",
-          "link": "iterationssatser",
-          "type": "lesson"
-        },
-        {
-          "title": "Arrayer",
-          "link": "arrayer",
-          "type": "lesson"
-        },
-        {
-          "title": "Funktioner",
-          "link": "funktioner",
-          "type": "lesson"
+          "title": "Övningar",
+          "link": "ovningar",
+          "type": "exercise"
         }
       ],
       "references": [
@@ -59,10 +69,119 @@
         {
           "title": "Math.Random()",
           "link": "random"
+        }
+      ]
+    },
+    {
+      "title": "Kontrollsatser",
+      "link": "kontrollsatser",
+      "pages": [
+        {
+          "title": "Introduktion till kontrollsatser?",
+          "link": "intro",
+          "type": "lesson"
         },
         {
-          "title": "Problemlösning och felsökning",
-          "link": "problemlosning-och-felsokning"
+          "title": "Övningar",
+          "link": "ovningar",
+          "type": "exercise"
+        }
+      ],
+      "references": [
+        {
+          "title": "Begrepp",
+          "link": "begrepp"
+        }
+      ]
+    },
+    {
+      "title": "Iterationssatser",
+      "link": "iterationssatser",
+      "pages": [
+        {
+          "title": "Introduktion till iterationssatser?",
+          "link": "intro",
+          "type": "lesson"
+        },
+        {
+          "title": "While-loopar",
+          "link": "while",
+          "type": "lesson"
+        },
+        {
+          "title": "Övningar med while-loopar",
+          "link": "ovning-med-while",
+          "type": "exercise"
+        },
+        {
+          "title": "For-loopar",
+          "link": "for",
+          "type": "lesson"
+        },
+        {
+          "title": "Övningar med For-loopar",
+          "link": "ovning-med-for",
+          "type": "exercise"
+        }
+      ],
+      "references": [
+        {
+          "title": "Begrepp",
+          "link": "begrepp"
+        }
+      ]
+    },
+    {
+      "title": "Arrayer",
+      "link": "arrayer",
+      "pages": [
+        {
+          "title": "Introduktion till arrayer",
+          "link": "intro",
+          "type": "lesson"
+        },
+        {
+          "title": "Övningar med arrayer",
+          "link": "ovningar-arrayer",
+          "type": "exercise"
+        },
+        {
+          "title": "Använda arrayer och loopar",
+          "link": "ovningar-arrayer-loopar",
+          "type": "exercise"
+        },
+        {
+          "title": "Projekt med arrayer",
+          "link": "projekt",
+          "type": "project"
+        }
+      ],
+      "references": [
+        {
+          "title": "Begrepp",
+          "link": "begrepp"
+        }
+      ]
+    },
+    {
+      "title": "Funktioner",
+      "link": "funktioner",
+      "pages": [
+        {
+          "title": "Introduktion till funktioner",
+          "link": "intro",
+          "type": "lesson"
+        },
+        {
+          "title": "Övningar",
+          "link": "ovningar",
+          "type": "exercise"
+        }
+      ],
+      "references": [
+        {
+          "title": "Begrepp",
+          "link": "begrepp"
         }
       ]
     },

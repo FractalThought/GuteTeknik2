@@ -93,7 +93,7 @@ Write out
 
 */
 
-function ChapterMenu({ course, chapter }) {
+function ChapterMenu({ course, chapter, hideTitle }) {
   function getTypeName(type) {
     const typeNamePairs = {
       exercise: "Övning",
@@ -110,9 +110,12 @@ function ChapterMenu({ course, chapter }) {
 
   return (
     <>
-      <ChapterHeading id={chapter.link}>
-        <Link to={`/${course}/${chapter.link}`}>{chapter.title}</Link>
-      </ChapterHeading>
+      {!hideTitle && (
+        <ChapterHeading id={chapter.link}>
+          <Link to={`/${course}/${chapter.link}`}>{chapter.title}</Link>
+        </ChapterHeading>
+      )}
+
       <Section>
         <Divider>
           <div>
@@ -138,7 +141,7 @@ function ChapterMenu({ course, chapter }) {
             </ul>
           </div>
           <div>
-            <h2>References</h2>
+            <h2>Referenser</h2>
             <ul>
               {chapter.references.map((reference, key) => {
                 return (
