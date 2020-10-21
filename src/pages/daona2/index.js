@@ -48,17 +48,6 @@ function Index() {
           <h1 className="page-heading">Dator- och nätverksteknik</h1>
           <div className="page">
             <h1 className="printheader">Dator- och nätverksteknik</h1>
-            <ul>
-              <li>
-                <a href="">Introduktion</a>
-              </li>
-              <li>
-                <a href="">Variabler</a>
-              </li>
-              <li>
-                <a href="">Kontrollsatser</a>
-              </li>
-            </ul>
             <script async src="https://static.codepen.io/assets/embed/ei.js" />
             <ClearDiv></ClearDiv>
           </div>

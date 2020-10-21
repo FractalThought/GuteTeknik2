@@ -46,8 +46,7 @@ function Header({ mainPage }) {
   }
 
   return (
-    <header>
-      <a id="toppen"></a>
+    <header id="toppen">
       <nav>
         <h1>
           <Link to="/">GuteTeknik</Link>

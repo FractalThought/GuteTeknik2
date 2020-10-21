@@ -1,6 +1,5 @@
 import React from "react"
 import styled, { css } from "styled-components"
-import { useState } from "react"
 import { MDXProvider } from "@mdx-js/react"
 import code from "./code"
 

@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import Header from "./Header"
 import Sidebar from "./Sidebar"
@@ -40,48 +40,6 @@ const QuickList = styled.section`
   }
 `
 
-const ChapterList = styled.section`
-  background: white;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  padding: 1rem;
-  margin-top: 1rem;
-
-  h2 {
-    margin: 0;
-  }
-
-  ul {
-    margin: 0;
-  }
-
-  li {
-    list-style: none;
-    margin: 0;
-  }
-
-  a {
-    color: #366bd3;
-  }
-
-  li:nth-child(odd) {
-    background: white;
-  }
-
-  li:nth-child(even) {
-    background: #f9f9fa;
-  }
-
-  li:hover {
-    background: #e6e7ea;
-  }
-
-  a:hover {
-    text-decoration: underline;
-    color: #244fa3;
-  }
-`
 
 const StickyDiv = styled.div`
   position: sticky;

@@ -101,7 +101,7 @@ function ChapterMenu({ course, chapter, hideTitle }) {
       lesson: "Lektion",
     }
 
-    if (typeNamePairs[type] == undefined || typeNamePairs[type] == null) {
+    if (typeNamePairs[type] === undefined || typeNamePairs[type] === null) {
       return "Lektion"
     }
 
