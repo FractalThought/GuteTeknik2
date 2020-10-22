@@ -22,7 +22,7 @@ function Container({
   // Use string split for url
   let urlData = null
 
-  if (typeof url !== "undefined") {
+  if (typeof url !== "undefined" && url != null) {
     const urlArray = url.split("/")
     urlData = urlArray.filter(data => data !== "")
   }

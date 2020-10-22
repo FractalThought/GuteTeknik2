@@ -81,55 +81,6 @@ header {
   }
 
   aside {
-    padding: 0 1rem;
-
-    h2 {
-      font-size: 1.5rem;
-      font-weight: 500;
-    }
-
-    ul {
-      margin-top: 0.5rem;
-      margin-left: 0.5rem;
-      list-style-type: none;
-    }
-
-    * {
-      transition: all 0.3s ease-in-out;
-      color: $color-gray-800;
-      font-family: "Open Sans", sans-serif;
-    }
-
-    a {
-      color: $color-primary-200;
-      font-weight: 400;
-
-      &.active {
-        color: $color-primary-300;
-        font-weight: 600;
-      }
-    }
-
-    &:hover {
-      * {
-        color: $color-gray-300;
-      }
-
-      a {
-        color: $color-primary-500;
-        font-weight: 400;
-
-        &:hover {
-          color: $color-primary-800;
-          text-decoration: underline;
-        }
-        &.active {
-          color: $color-primary-800;
-          font-weight: 600;
-        }
-      }
-    }
-
     nav {
       display: flex;
       flex-direction: row;
@@ -137,12 +88,7 @@ header {
       overflow: scroll;
       max-height: 100vh;
       position: sticky;
-      top: 1rem;
-      padding-bottom: 1rem;
-
-      section {
-        margin: 1rem;
-      }
+      top: 0;
     }
   }
 }
@@ -199,11 +145,6 @@ main li {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        align-content: center;
-        justify-content: center;
-        section {
-          margin: 10px;
-        }
       }
     }
   }

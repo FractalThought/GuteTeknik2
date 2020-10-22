@@ -40,7 +40,6 @@ const QuickList = styled.section`
   }
 `
 
-
 const StickyDiv = styled.div`
   position: sticky;
   top: 1rem;
@@ -59,7 +58,7 @@ const ClearDiv = styled.div`
   clear: both;
 `
 
-function CoursePage({ course, children }) {
+function CoursePage({ course, children, url }) {
   const data = useStaticQuery(graphql`
     query {
       allPageinfoJson {
@@ -100,12 +99,20 @@ function CoursePage({ course, children }) {
       return node.link === course
     })[0]
 
+  // Use string split for url
+  let urlData = null
+
+  if (typeof url !== "undefined" && url != null) {
+    const urlArray = url.split("/")
+    urlData = urlArray.filter(data => data !== "")
+  }
+
   return (
     <>
       <Header mainPage={course} />
       <div id="main-wrapper">
         <aside className="left">
-          <Sidebar urlData={`/${course}`} currentPageData={pageInfo} />
+          <Sidebar urlData={urlData} currentPageData={pageInfo} />
         </aside>
         <main>
           <h1 className="page-heading">{pageInfo.name}</h1>

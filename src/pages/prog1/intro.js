@@ -1,9 +1,10 @@
 import React from "react"
 import ChapterPage from "../../layout/ChapterPage"
 
-export default () => {
+export default ({ location }) => {
+  console.log(location)
   return (
-    <ChapterPage course="prog1" chapter="intro">
+    <ChapterPage url={location.pathname} course="prog1" chapter="intro">
       <p>
         I det här kapitlet introducerar vi programmering, och går igenom hur vi
         hanterar foldrar och filer, samt hur ett skript fungerar.

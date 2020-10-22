@@ -9,7 +9,7 @@ const ClearDiv = styled.div`
   clear: both;
 `
 
-function ChapterPage({ course, chapter, children }) {
+function ChapterPage({ course, chapter, children, url }) {
   const data = useStaticQuery(graphql`
     query {
       allPageinfoJson {
@@ -54,14 +54,19 @@ function ChapterPage({ course, chapter, children }) {
     return chapterObject.link === chapter
   })[0]
 
-  console.log(chapterInfo)
+  let urlData = null
+
+  if (typeof url !== "undefined" && url != null) {
+    const urlArray = url.split("/")
+    urlData = urlArray.filter(data => data !== "")
+  }
 
   return (
     <>
       <Header mainPage={course} />
       <div id="main-wrapper">
         <aside className="left">
-          <Sidebar urlData={`/${course}`} currentPageData={pageInfo} />
+          <Sidebar urlData={urlData} currentPageData={pageInfo} />
         </aside>
         <main>
           <h1 className="page-heading">{chapterInfo.title}</h1>

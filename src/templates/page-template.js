@@ -63,7 +63,7 @@ export const pageQuery = graphql`
   }
 `
 
-export default function PageTemplate({ pageContext, data }) {
+export default function PageTemplate({ pageContext, data, location }) {
   const page = data.mdx
   const allInfo = data.allMdx.edges
   const {

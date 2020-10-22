@@ -1,51 +1,42 @@
 import React, { useEffect } from "react"
 import { Link } from "gatsby"
 import SidebarHeading from "./SidebarHeading"
+import useProjects from "../components/hooks/useProjects"
+import useReferences from "../components/hooks/useReferences"
 
 function extractUrlData(url) {
-  let topPage,
+  let currentCourse,
+    currentChapter,
     currentPage = "index"
 
-  if (typeof url !== "undefined" && url != null) {
-    if (url.length >= 1) {
-      topPage = url[0]
+  if (url.length >= 1) {
+    currentCourse = url[0]
 
-      if (url.length > 1) {
-        currentPage = url[url.length - 1]
-      } else {
-        currentPage = topPage
+    if (url.length > 1) {
+      if (url.length > 2) {
+        currentChapter = url[1]
       }
+      currentPage = url[url.length - 1]
+    } else {
+      currentPage = currentCourse
     }
   }
 
-  return currentPage
+  return [currentCourse, currentChapter, currentPage]
 }
 
 function Sidebar({ urlData, currentPageData }) {
-  let currentPage = extractUrlData(urlData)
+  let [currentCourse, currentChapter, currentPage] = extractUrlData(urlData)
 
   useEffect(() => {
     document.title = `GuteTeknik  ${currentPageData.name}`
   })
 
-  const references = removeDuplicates(
-    currentPageData.chapters.map(chapter => {
-      return chapter.references
-    }),
-    "link"
-  )[0]
+  const projects = useProjects(currentPageData)
 
-  /*
-  Need to check through all the chapters, and then all the references
-  Add reference to references-array that is not already there
+  const references = useReferences(currentPageData)
 
-  */
-
-  function removeDuplicates(myArr, prop) {
-    return myArr.filter((obj, pos, arr) => {
-      return arr.map(mapObj => mapObj[prop]).indexOf(obj[prop]) === pos
-    })
-  }
+  console.log("CurrentChapter: " + currentChapter)
 
   return (
     <nav>
@@ -71,6 +62,7 @@ function Sidebar({ urlData, currentPageData }) {
           key={index}
           mainPage={currentPageData.link}
           chapter={chapter}
+          currentChapter={currentChapter}
           currentPage={currentPage}
         />
       ))}
@@ -88,6 +80,25 @@ function Sidebar({ urlData, currentPageData }) {
                 }
               >
                 {reference.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+      <section>
+        <h2>Projekt</h2>
+        <ul>
+          {projects.map((project, index) => (
+            <li key={index}>
+              <Link
+                to={`/${currentPageData.link}/${project.link}`}
+                className={
+                  currentPage === project.link.split("/")[1]
+                    ? "active"
+                    : "inactive"
+                }
+              >
+                {project.title}
               </Link>
             </li>
           ))}
