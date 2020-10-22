@@ -69,6 +69,11 @@ const LinkList = styled.section`
     color: rgba(104, 144, 222, 1);
     text-decoration: underline;
   }
+
+  a.active {
+    color: rgba(20, 44, 91, 1);
+    text-decoration: underline;
+  }
 `
 
 function Hidden({ isHidden, children }) {

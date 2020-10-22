@@ -13,14 +13,16 @@ function extractUrlData(url) {
     currentCourse = url[0]
 
     if (url.length > 1) {
-      if (url.length > 2) {
-        currentChapter = url[1]
-      }
+      currentChapter = url[1]
       currentPage = url[url.length - 1]
     } else {
       currentPage = currentCourse
     }
   }
+
+  console.log(currentCourse)
+  console.log(currentChapter)
+  console.log(currentPage)
 
   return [currentCourse, currentChapter, currentPage]
 }

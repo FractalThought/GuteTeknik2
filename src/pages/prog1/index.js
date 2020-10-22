@@ -2,9 +2,8 @@ import React from "react"
 import CoursePage from "../../layout/CoursePage"
 
 export default ({ location }) => {
-  console.log(location)
   return (
-    <CoursePage url={location} course="prog1">
+    <CoursePage url={location.pathname} course="prog1">
       <p>
         Den här kursen ingår i ämnet Programmering och är en del av inriktningen
         Information- och Medieteknik i Teknikprogrammet. I kursen går vi igenom

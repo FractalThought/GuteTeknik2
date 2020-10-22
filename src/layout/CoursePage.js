@@ -95,12 +95,13 @@ function CoursePage({ course, children, url }) {
       return page.node
     })
     .filter(node => {
-      console.log(node.link)
       return node.link === course
     })[0]
 
   // Use string split for url
   let urlData = null
+
+  console.log(url)
 
   if (typeof url !== "undefined" && url != null) {
     const urlArray = url.split("/")

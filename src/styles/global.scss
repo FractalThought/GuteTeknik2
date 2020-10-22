@@ -90,6 +90,17 @@ header {
       position: sticky;
       top: 0;
     }
+
+    ul {
+      margin-top: 0;
+    }
+    li {
+      list-style: none;
+    }
+
+    h2 {
+      margin: 0;
+    }
   }
 }
 
@@ -139,6 +150,7 @@ main li {
   #main-wrapper {
     grid-template-columns: 1fr minmax(500px, 50em) 1fr;
     grid-template-areas: "left main right";
+    grid-gap: 20px;
 
     .left {
       nav {

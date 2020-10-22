@@ -46,7 +46,6 @@ function ChapterPage({ course, chapter, children, url }) {
       return page.node
     })
     .filter(node => {
-      console.log(node.link)
       return node.link === course
     })[0]
 
@@ -60,6 +59,9 @@ function ChapterPage({ course, chapter, children, url }) {
     const urlArray = url.split("/")
     urlData = urlArray.filter(data => data !== "")
   }
+
+  console.log(url)
+  console.log(urlData)
 
   return (
     <>
