@@ -74,6 +74,10 @@ const LinkList = styled.section`
     color: rgba(20, 44, 91, 1);
     text-decoration: underline;
   }
+
+  a.active::before {
+    content: "- ";
+  }
 `
 
 function Hidden({ isHidden, children }) {

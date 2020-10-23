@@ -60,9 +60,6 @@ function ChapterPage({ course, chapter, children, url }) {
     urlData = urlArray.filter(data => data !== "")
   }
 
-  console.log(url)
-  console.log(urlData)
-
   return (
     <>
       <Header mainPage={course} />
