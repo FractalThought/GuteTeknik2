@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Header from "./Header"
 import Sidebar from "./Sidebar"
 import ChapterMenu from "../components/ChapterMenu"
+import RightStickyDiv from "../components/RightStickyDiv"
 
 const QuickList = styled.section`
   background: white;
@@ -38,20 +39,6 @@ const QuickList = styled.section`
     text-decoration: underline;
     color: #244fa3;
   }
-`
-
-const StickyDiv = styled.div`
-  position: sticky;
-  top: 1rem;
-`
-
-const List = styled.ul`
-  margin: 0;
-`
-
-const ListItem = styled.li`
-  list-style: none;
-  margin: 0;
 `
 
 const ClearDiv = styled.div`
@@ -139,21 +126,21 @@ function CoursePage({ course, children, url }) {
           })}
         </main>
         <aside className="right">
-          <StickyDiv>
+          <RightStickyDiv>
             <h2>Innehåll</h2>
-            <List>
-              <ListItem>
+            <ul>
+              <li>
                 <a href="#toppen">Gå till toppen</a>
-              </ListItem>
+              </li>
               {pageInfo.chapters.map((chapter, key) => {
                 return (
-                  <ListItem key={key}>
+                  <li key={key}>
                     <a href={`#${chapter.link}`}>{chapter.title}</a>
-                  </ListItem>
+                  </li>
                 )
               })}
-            </List>
-          </StickyDiv>
+            </ul>
+          </RightStickyDiv>
         </aside>
       </div>
     </>

@@ -2,19 +2,6 @@ import React from "react"
 import styled from "styled-components"
 
 function TableOfContent({ listOfContent }) {
-  const StickyDiv = styled.div`
-    position: sticky;
-    top: 1rem;
-  `
-
-  const List = styled.ul`
-    margin: 0;
-  `
-
-  const ListItem = styled.li`
-    list-style: none;
-    margin: 0;
-  `
 
   let renderedContent = [
     {
@@ -32,18 +19,18 @@ function TableOfContent({ listOfContent }) {
   }
 
   return (
-    <StickyDiv>
+    <>
       <h2>Innehåll</h2>
-      <List>
+      <ul>
         {renderedContent.map((heading, key) => {
           return (
-            <ListItem key={key}>
+            <li key={key}>
               <a href={"#" + heading.link}>{heading.name}</a>
-            </ListItem>
+            </li>
           )
         })}
-      </List>
-    </StickyDiv>
+      </ul>
+    </>
   )
 }
 
