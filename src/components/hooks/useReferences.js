@@ -12,3 +12,10 @@ function removeDuplicates(myArr, prop) {
     return arr.map(mapObj => mapObj[prop]).indexOf(obj[prop]) === pos
   })
 }
+
+
+/*
+  create array
+  map through chapters and map through their references
+  check if reference exists in array, if not, add reference to array (check on reference.link)
+*/
