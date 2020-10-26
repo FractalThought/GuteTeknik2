@@ -116,9 +116,9 @@ Lastly, need courseLink
   return (
     <Section>
       <ChapterTitle onClick={() => toggle()} expanded={!isHidden}>
-        <Link to={"/" + urlData.course + "/" + link}>
+        {link!==null ? <Link to={"/" + urlData.course + "/" + link}>
           <h2>{title}</h2>
-        </Link>
+        </Link> : <h2>{title}</h2>}
         <ExpandButton expanded={!isHidden} onClick={() => toggle()}>
           {isHidden ? ">" : "X"}
         </ExpandButton>
@@ -128,7 +128,7 @@ Lastly, need courseLink
           {pages.map((page, index) => (
             <li key={index}>
               <Link
-                to={"/" + urlData.course + "/" + link + "/" + page.link}
+                to={`/${urlData.course}${link!==null ? `/${link}` : ``}/${page.link}`}
                 className={urlData.page === page.link ? "active" : "inactive"}
               >
                 {page.title}

@@ -1,8 +1,33 @@
 import React, { useEffect } from "react"
 import { Link } from "gatsby"
+import styled from "styled-components"
 import SidebarHeading from "./SidebarHeading"
 import useProjects from "../components/hooks/useProjects"
 import useReferences from "../components/hooks/useReferences"
+
+const CourseSection = styled.section`
+  padding: 0.5rem;
+
+  ul {
+    margin: 0;
+  }
+
+  a>h2 {
+    color: rgba(54,107,211,1);
+  }
+
+  a:hover>h2 {
+    color: #8aa9e5;
+  }
+
+  a {
+    color: rgba(44,96,199,1);
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+`
 
 function extractUrlData(url) {
   let currentCourse,
@@ -20,15 +45,7 @@ function extractUrlData(url) {
     }
   }
 
-  console.log(currentCourse)
-  console.log(currentChapter)
-  console.log(currentPage)
-
   return {course: currentCourse, chapter: currentChapter, page:currentPage}
-}
-
-function fixHeadingData(chapter) {
-  const headingData = {};
 }
 
 function Sidebar({ url, currentPageData }) {
@@ -39,14 +56,14 @@ function Sidebar({ url, currentPageData }) {
   })
 
   const projects = useProjects(currentPageData)
-  const projectData = {title: "Projekt", link:"", pages: projects};
+  const projectData = {title: "Projekt", link:null, pages: projects};
 
   const references = useReferences(currentPageData)
   const referenceData = {title: "Referenser", link:"referenser", pages: references};
 
   return (
     <nav>
-      <section>
+      <CourseSection>
         <Link to={"/" + currentPageData.link}>
           <h2>{currentPageData.name}</h2>
         </Link>
@@ -62,7 +79,7 @@ function Sidebar({ url, currentPageData }) {
             </Link>
           </li>
         </ul>
-      </section>
+      </CourseSection>
       {currentPageData.chapters.map((chapter, index) => (
         <SidebarHeading
           key={index}
