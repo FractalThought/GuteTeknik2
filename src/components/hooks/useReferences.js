@@ -1,10 +1,18 @@
 export default pageData => {
+
+  const references = [];
+
+  pageData.chapters.forEach(chapter => {
+    chapter.references.forEach(reference => {
+      references.push(reference);
+    })
+  })
+
+
   return removeDuplicates(
-    pageData.chapters.map(chapter => {
-      return chapter.references
-    }),
+    references,
     "link"
-  )[0]
+  )
 }
 
 function removeDuplicates(myArr, prop) {

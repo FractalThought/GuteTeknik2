@@ -24,21 +24,25 @@ function extractUrlData(url) {
   console.log(currentChapter)
   console.log(currentPage)
 
-  return [currentCourse, currentChapter, currentPage]
+  return {course: currentCourse, chapter: currentChapter, page:currentPage}
 }
 
-function Sidebar({ urlData, currentPageData }) {
-  let [currentCourse, currentChapter, currentPage] = extractUrlData(urlData)
+function fixHeadingData(chapter) {
+  const headingData = {};
+}
+
+function Sidebar({ url, currentPageData }) {
+  const urlData = extractUrlData(url)
 
   useEffect(() => {
     document.title = `GuteTeknik  ${currentPageData.name}`
   })
 
   const projects = useProjects(currentPageData)
+  const projectData = {title: "Projekt", link:"", pages: projects};
 
   const references = useReferences(currentPageData)
-
-  console.log("CurrentChapter: " + currentChapter)
+  const referenceData = {title: "Referenser", link:"referenser", pages: references};
 
   return (
     <nav>
@@ -62,13 +66,19 @@ function Sidebar({ urlData, currentPageData }) {
       {currentPageData.chapters.map((chapter, index) => (
         <SidebarHeading
           key={index}
-          mainPage={currentPageData.link}
-          chapter={chapter}
-          currentChapter={currentChapter}
-          currentPage={currentPage}
+          headingData={chapter}
+          urlData={urlData}
         />
       ))}
-      <section>
+      <SidebarHeading
+          headingData={referenceData}
+          urlData={urlData}
+        />
+      <SidebarHeading
+          headingData={projectData}
+          urlData={urlData}
+        />
+      {/* <section>
         <h2>Referenser</h2>
         <ul>
           {references.map((reference, index) => (
@@ -86,8 +96,9 @@ function Sidebar({ urlData, currentPageData }) {
             </li>
           ))}
         </ul>
-      </section>
-      <section>
+      </section> */}
+
+      {/* <section>
         <h2>Projekt</h2>
         <ul>
           {projects.map((project, index) => (
@@ -105,7 +116,7 @@ function Sidebar({ urlData, currentPageData }) {
             </li>
           ))}
         </ul>
-      </section>
+      </section> */}
     </nav>
   )
 }

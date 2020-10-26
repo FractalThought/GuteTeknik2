@@ -84,14 +84,27 @@ function Hidden({ isHidden, children }) {
   return <>{!isHidden && <LinkList>{children}</LinkList>}</>
 }
 
-function SidebarHeading({ chapter, mainPage, currentPage, currentChapter }) {
-  const pages = chapter.pages
-  const title = chapter.title
-  const link = chapter.link
+/*
+
+Should take the following:
+headingData, which contains a link, title, and pages
+
+pages has title and link, and the link is the full link (chapterlink or referencelink / pagelink)
+Actual link becomes courseLink/fullLink
+
+Also need urlData, specifically need first, second, and third (if any) page.
+
+Lastly, need courseLink
+
+*/
+
+// function SidebarHeading({ chapter, courseLink, currentPage, currentChapter }) {
+  function SidebarHeading({ headingData, urlData }) {
+  const {pages, title, link} = headingData;
 
   let isCurrentChapter = false
-  if (currentChapter !== undefined || currentChapter !== null) {
-    isCurrentChapter = currentChapter === chapter.link
+  if (urlData.chapter !== undefined || urlData.chapter !== null) {
+    isCurrentChapter = (urlData.chapter === link)
   }
 
   const [isHidden, setHidden] = useState(!isCurrentChapter)
@@ -103,7 +116,7 @@ function SidebarHeading({ chapter, mainPage, currentPage, currentChapter }) {
   return (
     <Section>
       <ChapterTitle onClick={() => toggle()} expanded={!isHidden}>
-        <Link to={"/" + mainPage + "/" + link}>
+        <Link to={"/" + urlData.course + "/" + link}>
           <h2>{title}</h2>
         </Link>
         <ExpandButton expanded={!isHidden} onClick={() => toggle()}>
@@ -115,8 +128,8 @@ function SidebarHeading({ chapter, mainPage, currentPage, currentChapter }) {
           {pages.map((page, index) => (
             <li key={index}>
               <Link
-                to={"/" + mainPage + "/" + link + "/" + page.link}
-                className={currentPage === page.link ? "active" : "inactive"}
+                to={"/" + urlData.course + "/" + link + "/" + page.link}
+                className={urlData.page === page.link ? "active" : "inactive"}
               >
                 {page.title}
               </Link>

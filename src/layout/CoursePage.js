@@ -100,7 +100,7 @@ function CoursePage({ course, children, url }) {
       <Header mainPage={course} />
       <div id="main-wrapper">
         <aside className="left">
-          <Sidebar urlData={urlData} currentPageData={pageInfo} />
+          <Sidebar url={urlData} currentPageData={pageInfo} />
         </aside>
         <main>
           <h1 className="page-heading">{pageInfo.name}</h1>

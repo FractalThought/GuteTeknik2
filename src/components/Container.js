@@ -39,7 +39,7 @@ function Container({
       <Header mainPage={mainPage} />
       <div id="main-wrapper">
         <aside className="left">
-          <Sidebar urlData={urlData} currentPageData={currentPageData} />
+          <Sidebar url={urlData} currentPageData={currentPageData} />
         </aside>
         <main>
           <MyCrumbs crumbData={crumbData} />
