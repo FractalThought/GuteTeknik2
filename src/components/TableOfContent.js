@@ -1,8 +1,7 @@
 import React from "react"
-import styled from "styled-components"
+// import styled from "styled-components"
 
 function TableOfContent({ listOfContent }) {
-
   let renderedContent = [
     {
       name: "Gå till toppen",

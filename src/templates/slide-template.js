@@ -42,13 +42,19 @@ export const pageQuery = graphql`
     allPageinfoJson {
       edges {
         node {
-          pageName
-          pageLink
-          headings {
+          name
+          link
+          chapters {
             title
-            subpages {
-              subPageName
-              subPageLink
+            link
+            pages {
+              title
+              link
+              type
+            }
+            references {
+              title
+              link
             }
           }
         }

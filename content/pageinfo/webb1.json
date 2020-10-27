@@ -1,118 +1,117 @@
 {
-  "pageName": "Webbutveckling 1",
-  "pageLink": "webb1",
-  "headings": [
+  "name": "Webbutveckling 1",
+  "link": "webb1",
+  "chapters": [
     {
-      "title": "Om kursen",
-      "subpages": [
+      "title": "Introduktion",
+      "link": "intro",
+      "pages": [
         {
-          "subPageName": "Veckoplanering",
-          "subPageLink": "planering"
+          "title": "Introduktionsprojektet",
+          "link": "introprojektet",
+          "type": "lesson"
         },
         {
-          "subPageName": "Betygskriterier",
-          "subPageLink": "betygskriterier"
+          "title": "1. HTML",
+          "link": "html",
+          "type": "lesson"
+        },
+        {
+          "title": "2. CSS",
+          "link": "css",
+          "type": "lesson"
+        },
+        {
+          "title": "3. Layout",
+          "link": "layout",
+          "type": "lesson"
+        },
+        {
+          "title": "4. Reflektion",
+          "link": "reflektion",
+          "type": "lesson"
         }
-      ]
-    },
-    {
-      "title": "Introduktionsuppgiften",
-      "subpages": [
+      ],
+      "references": [
         {
-          "subPageName": "Introduktionsprojektet",
-          "subPageLink": "introprojektet"
+          "title": "Kursintro",
+          "link": "kursintro"
         },
         {
-          "subPageName": "1. HTML",
-          "subPageLink": "introprojektet/html"
+          "title": "Listor",
+          "link": "listor"
         },
         {
-          "subPageName": "2. CSS",
-          "subPageLink": "introprojektet/css"
+          "title": "Tabeller",
+          "link": "tabeller"
         },
         {
-          "subPageName": "3. Layout",
-          "subPageLink": "introprojektet/layout"
+          "title": "Introduktion till CSS",
+          "link": "css"
         },
         {
-          "subPageName": "4. Reflektion",
-          "subPageLink": "introprojektet/reflektion"
-        }
-      ]
-    },
-    {
-      "title": "Slutprojektet",
-      "subpages": [
+          "title": "CSS Box Model",
+          "link": "cssboxmodel"
+        },
         {
-          "subPageName": "Introduktion",
-          "subPageLink": "slutprojektet"
+          "title": "CSS Grundläggande koncept",
+          "link": "css_concepts"
+        },
+        {
+          "title": "Layout",
+          "link": "layout"
+        },
+        {
+          "title": "FTP",
+          "link": "ftp"
         }
       ]
     },
     {
       "title": "Etik och lagar",
-      "subpages": [
+      "link": "etik",
+      "pages": [
         {
-          "subPageName": "Etik och lagar",
-          "subPageLink": "etik_och_lagar"
+          "title": "Etik och lagar",
+          "link": "etik_och_lagar",
+          "type": "lesson"
         },
         {
-          "subPageName": "Etik och lagar uppgift",
-          "subPageLink": "etik_och_lagar_uppgift"
-        }
-      ]
-    },
-    {
-      "title": "Intro slides",
-      "subpages": [
-        {
-          "subPageName": "Kursintro",
-          "subPageLink": "slides/kursintro/kursintro"
-        },
-        {
-          "subPageName": "Listor",
-          "subPageLink": "slides/datapresentation/listor"
-        },
-        {
-          "subPageName": "Tabeller",
-          "subPageLink": "slides/datapresentation/tabeller"
-        },
-        {
-          "subPageName": "Introduktion till CSS",
-          "subPageLink": "slides/teknik/css"
-        },
-        {
-          "subPageName": "CSS Box Model",
-          "subPageLink": "slides/teknik/cssboxmodel"
-        },
-        {
-          "subPageName": "CSS Grundläggande koncept",
-          "subPageLink": "slides/css/css_concepts"
-        },
-        {
-          "subPageName": "Layout",
-          "subPageLink": "slides/layout"
-        },
-        {
-          "subPageName": "FTP",
-          "subPageLink": "slides/other/ftp"
+          "title": "Etik och lagar uppgift",
+          "link": "etik_och_lagar_uppgift",
+          "type": "exercise"
         }
       ]
     },
     {
       "title": "Teori",
-      "subpages": [
+      "link": "teori",
+      "pages": [
         {
-          "subPageName": "Tidiga historia",
-          "subPageLink": "slides/kursintro/historia"
+          "title": "Tidiga historia",
+          "link": "tidig-historia",
+          "type": "lesson"
         },
         {
-          "subPageName": "Sena historia",
-          "subPageLink": "slides/datapresentation/historia"
+          "title": "Sena historia",
+          "link": "sen-historia",
+          "type": "lesson"
         },
         {
-          "subPageName": "Internets teknik",
-          "subPageLink": "slides/teknik/internets_teknik"
+          "title": "Internets teknik",
+          "link": "internets-teknik",
+          "type": "lesson"
+        }
+      ]
+    },
+    {
+      "title": "Slutprojektet",
+      "link": "slutprojektet",
+      "pages": [
+        {
+          "title": "Introduktion",
+          "link": "slutprojektet",
+          "type": "lesson"
         }
       ]
     }

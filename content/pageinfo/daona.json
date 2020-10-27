@@ -1,31 +1,15 @@
 {
-  "pageName": "Dator- och nätverksteknik",
-  "pageLink": "daona",
-  "headings": [
-    {
-      "title": "Om kursen",
-      "subpages": [
-        {
-          "subPageName": "Veckoplanering",
-          "subPageLink": "planering"
-        }
-      ]
-    },
+  "name": "Dator- och nätverksteknik",
+  "link": "daona",
+  "chapters": [
     {
       "title": "Information",
-      "subpages": [
+      "link": "info",
+      "pages": [
         {
-          "subPageName": "OSI-modellen",
-          "subPageLink": "osi"
-        }
-      ]
-    },
-    {
-      "title": "Uppgifter",
-      "subpages": [
-        {
-          "subPageName": "Uppgift 1",
-          "subPageLink": "uppgift1"
+          "title": "OSI-modellen",
+          "link": "osi",
+          "type": "lesson"
         }
       ]
     }

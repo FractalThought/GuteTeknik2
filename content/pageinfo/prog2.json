@@ -1,26 +1,25 @@
 {
-  "pageName": "Programmering 2",
-  "pageLink": "prog2",
-  "headings": [
-    {
-      "title": "Om kursen",
-      "subpages": [
-        {
-          "subPageName": "Veckoplanering",
-          "subPageLink": "planering"
-        },
-        {
-          "subPageName": "Betygskriterier",
-          "subPageLink": "betygskriterier"
-        }
-      ]
-    },
+  "name": "Programmering 2",
+  "link": "prog2",
+  "chapters": [
     {
       "title": "Spelplanering",
-      "subpages": [
+      "link": "",
+      "pages": [
         {
-          "subPageName": "Planering",
-          "subPageLink": "spelplanering"
+          "title": "Planering",
+          "link": "spelplanering",
+          "type": "lesson"
+        }
+      ],
+      "references": [
+        {
+          "title": "Begrepp",
+          "link": "begrepp"
+        },
+        {
+          "title": "Unity",
+          "link": "unity"
         }
       ]
     }

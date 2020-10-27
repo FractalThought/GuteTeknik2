@@ -1,107 +1,109 @@
 {
-  "pageName": "Webbutveckling 2",
-  "pageLink": "webb2",
-  "headings": [
-    {
-      "title": "Om kursen",
-      "subpages": [
-        {
-          "subPageName": "Veckoplanering",
-          "subPageLink": "planering"
-        },
-        {
-          "subPageName": "Betygskriterier",
-          "subPageLink": "betygskriterier"
-        }
-      ]
-    },
+  "name": "Webbutveckling 2",
+  "link": "webb2",
+  "chapters": [
     {
       "title": "CSS-koncept",
-      "subpages": [
+      "link": "css-koncept",
+      "pages": [
         {
-          "subPageName": "Introduktion",
-          "subPageLink": "csskoncept"
+          "title": "Introduktion",
+          "link": "intro",
+          "type": "lesson"
         },
         {
-          "subPageName": "Laborationer",
-          "subPageLink": "csskoncept/labb"
+          "title": "Laborationer",
+          "link": "labb",
+          "type": "exercise"
+        },
+        {
+          "title": "Webbapplikation",
+          "link": "projekt",
+          "type": "project"
         }
       ]
     },
     {
       "title": "BEM metodiken",
-      "subpages": [
+      "link": "bem",
+      "pages": [
         {
-          "subPageName": "Introduktion",
-          "subPageLink": "bem"
+          "title": "Introduktion",
+          "link": "bem",
+          "type": "lesson"
         },
         {
-          "subPageName": "Laboration",
-          "subPageLink": "bem/labb"
+          "title": "Laboration",
+          "link": "laboration",
+          "type": "exercise"
+        },
+        {
+          "title": "Metodik och Designsystem",
+          "link": "projekt",
+          "type": "project"
         }
       ]
     },
     {
       "title": "CSS Grid",
-      "subpages": [
+      "link": "grid",
+      "pages": [
         {
-          "subPageName": "Introduktion",
-          "subPageLink": "cssgrid"
+          "title": "Introduktion",
+          "link": "intro",
+          "type": "lesson"
         },
         {
-          "subPageName": "Laborationer",
-          "subPageLink": "cssgrid/labb"
+          "title": "Laborationer",
+          "link": "laboration",
+          "type": "exercise"
+        },
+        {
+          "title": "Ekologiska",
+          "link": "projekt",
+          "type": "project"
         }
       ]
     },
     {
       "title": "SVG",
-      "subpages": [
+      "link": "svg",
+      "pages": [
         {
-          "subPageName": "Introduktion",
-          "subPageLink": "svg"
+          "title": "Introduktion",
+          "link": "intro",
+          "type": "lesson"
         },
         {
-          "subPageName": "Laboration",
-          "subPageLink": "svg/labb"
+          "title": "Laboration",
+          "link": "laboration",
+          "type": "exercise"
+        },
+        {
+          "title": "SVG",
+          "link": "projekt",
+          "type": "project"
         }
       ]
     },
     {
       "title": "Responsiv",
-      "subpages": [
+      "link": "responsiv",
+      "pages": [
         {
-          "subPageName": "Introduktion",
-          "subPageLink": "responsiv"
+          "title": "Introduktion",
+          "link": "intro",
+          "type": "lesson"
         },
         {
-          "subPageName": "Media queries labb",
-          "subPageLink": "responsiv/mqlabb"
-        }
-      ]
-    },
-    {
-      "title": "Projekt",
-      "subpages": [
-        {
-          "subPageName": "Ekologiska",
-          "subPageLink": "projekt/ekologiska"
+          "title": "Media queries labb",
+          "link": "mqlabb",
+          "type": "exercise"
         },
         {
-          "subPageName": "Metodik och Designsystem",
-          "subPageLink": "projekt/metodiksystem"
-        },
-        {
-          "subPageName": "SVG",
-          "subPageLink": "projekt/svg"
-        },
-        {
-          "subPageName": "Responsiv",
-          "subPageLink": "projekt/responsiv"
-        },
-        {
-          "subPageName": "Webbapplikation",
-          "subPageLink": "projekt/webbapplikation"
+          "title": "Responsiv",
+          "link": "projekt",
+          "type": "project"
         }
       ]
     }

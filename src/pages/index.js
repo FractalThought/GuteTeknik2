@@ -60,7 +60,7 @@ export default ({ data }) => {
           <h1>GuteTeknik</h1>
           <p>IT-kurserna på Gutegymnasiet</p>
         </div>
-        <MyImg src="techthings.png" alt="blob of tech symbols" width="450" />
+        <MyImg src="techthings.png" alt="blob of tech symbols" width="250" />
       </section>
 
       <section className="course-card-container">

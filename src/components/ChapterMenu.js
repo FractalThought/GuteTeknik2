@@ -142,21 +142,29 @@ function ChapterMenu({ course, chapter, hideTitle }) {
           </div>
           <div>
             <h2>Referenser</h2>
-            <ul>
-              {chapter.references.map((reference, key) => {
-                return (
-                  <li key={key}>
-                    <Link to={`/${course}/referenser/${reference.link}`}>
-                      <LinkContainer>
-                        <MyImg src="reference.png" alt="Referens" width="50" />
-                        <span className="title">{reference.title}</span>
-                      </LinkContainer>
-                      <span className="type">Referens</span>
-                    </Link>
-                  </li>
-                )
-              })}
-            </ul>
+            {chapter.references !== null ? (
+              <ul>
+                {chapter.references.map((reference, key) => {
+                  return (
+                    <li key={key}>
+                      <Link to={`/${course}/referenser/${reference.link}`}>
+                        <LinkContainer>
+                          <MyImg
+                            src="reference.png"
+                            alt="Referens"
+                            width="50"
+                          />
+                          <span className="title">{reference.title}</span>
+                        </LinkContainer>
+                        <span className="type">Referens</span>
+                      </Link>
+                    </li>
+                  )
+                })}
+              </ul>
+            ) : (
+              <p>Inga referenser</p>
+            )}
           </div>
         </Divider>
       </Section>
