@@ -50,8 +50,6 @@ function ReferencePage({ course, url }) {
   // Use string split for url
   let urlData = null
 
-  console.log(url)
-
   if (typeof url !== "undefined" && url != null) {
     const urlArray = url.split("/")
     urlData = urlArray.filter(data => data !== "")
