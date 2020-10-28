@@ -3,8 +3,8 @@
   "link": "daona",
   "chapters": [
     {
-      "title": "Information",
-      "link": "info",
+      "title": "Felsökning",
+      "link": "felsokning",
       "pages": [
         {
           "title": "OSI-modellen",

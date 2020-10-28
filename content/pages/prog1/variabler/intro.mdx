@@ -1,0 +1,84 @@
+---
+title: "Variabler"
+date: "2020-08-20"
+headings: "Vad är en variabel?:intro|Sätta om en variabel:deklarera-om"
+---
+
+# Variabler
+
+## Vad är en variabel?
+
+Hittills har vi bara låtit datorn ta in ett input, utvärdera den, och skriva ut resultatet. Men vi har inte lagrat något.
+
+För att lagra något så behöver vi skapa en variabel. En variabel består av två saker; Dess namn, och dess värde. Ni kommer kanske ihåg variabler från matematiken, där man oftast säger till exempel att x är lika med ett värde, till exempel 5. Variabler i programmering fungerar på samma sätt.
+
+För att skapa en variabel i javascript så behöver vi använda ett nyckelord som heter "let". Med det ordet så säger vi till datorn att den ska låta det vi namnger variablen till (namnet), att vara det vi sätter variabeln till (värdet).
+
+```jsx
+let name = "Felix";
+let age = 29;
+```
+
+Detta skapar variabeln *name*, som har värdet *"Felix"*, och variabeln *age* med värdet *29*.
+
+När vi använder variabeln så behöver vi då endast använda dess namn, så här:
+
+```jsx
+console.log(name);
+console.log(age);
+```
+
+Ovanstående kod skriver ut värdena som vi satte tidigare.
+
+## Sätta om variabler
+
+En variabel kan "sättas om", alltså att vi kan låta en variabel hålla ett annat värde än det ursprungliga värdet vi satte. Då behöver vi bara använda variabelns namn, utan let-nyckelordet;
+
+```jsx
+name = "Erik";
+age = 30;
+```
+
+## Operand till variabler
+
+Vi kan lägga ihop två variabler, eller en variabel och ett värde. Till exempel:
+
+```jsx
+let numberOne = 5;
+let numberTwo = 10;
+let sum = numberOne + numberTwo;
+```
+
+Detta fungerar främst för nummer, men som vi tidigare upptäckt så kan vi lägga ihop meningar. Detta kallas konkatenering;
+
+```jsx
+let firstName = "Felix";
+let lastName = "Thålin";
+let fullName = firstName + " " + lastName;
+```
+
+Med nummer så kan vi utföra många fler uträkningar, och med variabler så finns det några ytterligare operander som vi kan använda oss av.
+
+Till exempel så har vi `++` som används för incrementering, alltså att lägga till 1 till ett existerande värde. Till exempel så här:
+
+```jsx
+let age = 17;
+age++;
+console.log(age);
+```
+
+Resultatet av ovanstående kod blir att terminalen skriver ut 18.
+
+Vi kan även lägga till specifika värden till en variabel med `+=` operanden (kallas additionstilldelning). Till exempel så här:
+
+```jsx
+let money = 10;
+money += 5;
+console.log(money);
+
+let pay = 10;
+money += pay;
+console.log(money);
+```
+
+Resultatet av ovanstående kod blir att terminalen skriver ut 15, och sedan 25.

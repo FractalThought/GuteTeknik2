@@ -47,8 +47,8 @@
       "link": "variabler",
       "pages": [
         {
-          "title": "Variabler",
-          "link": "variabler",
+          "title": "Introduktion till variabler",
+          "link": "intro",
           "type": "lesson"
         },
         {
@@ -139,21 +139,6 @@
           "title": "Introduktion till arrayer",
           "link": "intro",
           "type": "lesson"
-        },
-        {
-          "title": "Övningar med arrayer",
-          "link": "ovningar-arrayer",
-          "type": "exercise"
-        },
-        {
-          "title": "Använda arrayer och loopar",
-          "link": "ovningar-arrayer-loopar",
-          "type": "exercise"
-        },
-        {
-          "title": "Projekt med arrayer",
-          "link": "projekt",
-          "type": "project"
         }
       ],
       "references": [
@@ -171,11 +156,6 @@
           "title": "Introduktion till funktioner",
           "link": "intro",
           "type": "lesson"
-        },
-        {
-          "title": "Övningar",
-          "link": "ovningar",
-          "type": "exercise"
         }
       ],
       "references": [

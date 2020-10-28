@@ -1,0 +1,36 @@
+---
+title: "For-loopen"
+date: "2020-09-01"
+---
+
+En annan loop vi vanligtvis använder är for-loopen.
+
+Det som skiljer en for-loop mot en while-loop är att i en for-loop skapar du alltid en counter som en del av själva syntaxen för att skapa loopen, så här;
+
+```javascript
+for(let i = 0; i < 5; i++) {
+  console.log("Detta körs 5 gånger, detta är gång nr " + i);
+}
+```
+
+> **Resultat:**
+> 
+> Detta körs 5 gånger, detta är gång nr 0
+> 
+> Detta körs 5 gånger, detta är gång nr 1
+> 
+> Detta körs 5 gånger, detta är gång nr 2
+> 
+> Detta körs 5 gånger, detta är gång nr 3
+> 
+> Detta körs 5 gånger, detta är gång nr 4
+
+`for` är nyckelordet för att skapa en for-loop.
+
+`let i = 0` skapar en variabel som är begränsad till loopen, och som vanligtvis används som counter. Detta körs innan loopens övriga kod körs.
+
+`i <= 5` är loopens *condition*. Loopen körs så länge detta är sant. Detta körs innan loopens statement körs.
+
+`i++` ändrar loopens counter. Detta körs alltid efter loopens statement är över, men innan dess condition kollas igen.
+
+`{ }` är loopens statement, det som finns inuti körs om loopens condition är sant.

@@ -12,16 +12,16 @@ const CourseSection = styled.section`
     margin: 0;
   }
 
-  a>h2 {
-    color: rgba(54,107,211,1);
+  a > h2 {
+    color: rgba(54, 107, 211, 1);
   }
 
-  a:hover>h2 {
+  a:hover > h2 {
     color: #8aa9e5;
   }
 
   a {
-    color: rgba(44,96,199,1);
+    color: rgba(44, 96, 199, 1);
   }
 
   a:hover {
@@ -45,7 +45,7 @@ function extractUrlData(url) {
     }
   }
 
-  return {course: currentCourse, chapter: currentChapter, page:currentPage}
+  return { course: currentCourse, chapter: currentChapter, page: currentPage }
 }
 
 function Sidebar({ url, currentPageData }) {
@@ -56,10 +56,14 @@ function Sidebar({ url, currentPageData }) {
   })
 
   const projects = useProjects(currentPageData)
-  const projectData = {title: "Projekt", link:null, pages: projects};
+  const projectData = { title: "Projekt", link: null, pages: projects }
 
   const references = useReferences(currentPageData)
-  const referenceData = {title: "Referenser", link:"referenser", pages: references};
+  const referenceData = {
+    title: "Referenser",
+    link: "referenser",
+    pages: references,
+  }
 
   return (
     <nav>
@@ -81,59 +85,10 @@ function Sidebar({ url, currentPageData }) {
         </ul>
       </CourseSection>
       {currentPageData.chapters.map((chapter, index) => (
-        <SidebarHeading
-          key={index}
-          headingData={chapter}
-          urlData={urlData}
-        />
+        <SidebarHeading key={index} headingData={chapter} urlData={urlData} />
       ))}
-      <SidebarHeading
-          headingData={referenceData}
-          urlData={urlData}
-        />
-      <SidebarHeading
-          headingData={projectData}
-          urlData={urlData}
-        />
-      {/* <section>
-        <h2>Referenser</h2>
-        <ul>
-          {references.map((reference, index) => (
-            <li key={index}>
-              <Link
-                to={
-                  "/" + currentPageData.link + "/referenser/" + reference.link
-                }
-                className={
-                  currentPage === reference.link ? "active" : "inactive"
-                }
-              >
-                {reference.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </section> */}
-
-      {/* <section>
-        <h2>Projekt</h2>
-        <ul>
-          {projects.map((project, index) => (
-            <li key={index}>
-              <Link
-                to={`/${currentPageData.link}/${project.link}`}
-                className={
-                  currentPage === project.link.split("/")[1]
-                    ? "active"
-                    : "inactive"
-                }
-              >
-                {project.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </section> */}
+      <SidebarHeading headingData={referenceData} urlData={urlData} />
+      <SidebarHeading headingData={projectData} urlData={urlData} />
     </nav>
   )
 }

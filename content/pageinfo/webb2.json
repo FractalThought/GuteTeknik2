@@ -4,7 +4,7 @@
   "chapters": [
     {
       "title": "CSS-koncept",
-      "link": "css-koncept",
+      "link": "csskoncept",
       "pages": [
         {
           "title": "Introduktion",
@@ -12,14 +12,9 @@
           "type": "lesson"
         },
         {
-          "title": "Laborationer",
-          "link": "labb",
+          "title": "Övningar",
+          "link": "ovningar",
           "type": "exercise"
-        },
-        {
-          "title": "Webbapplikation",
-          "link": "projekt",
-          "type": "project"
         }
       ]
     },
@@ -29,17 +24,17 @@
       "pages": [
         {
           "title": "Introduktion",
-          "link": "bem",
+          "link": "intro",
           "type": "lesson"
         },
         {
-          "title": "Laboration",
-          "link": "laboration",
+          "title": "Övningar",
+          "link": "ovningar",
           "type": "exercise"
         },
         {
           "title": "Metodik och Designsystem",
-          "link": "projekt",
+          "link": "metodiksystem",
           "type": "project"
         }
       ]
@@ -54,13 +49,13 @@
           "type": "lesson"
         },
         {
-          "title": "Laborationer",
-          "link": "laboration",
+          "title": "Övningar",
+          "link": "ovningar",
           "type": "exercise"
         },
         {
           "title": "Ekologiska",
-          "link": "projekt",
+          "link": "ekologiska",
           "type": "project"
         }
       ]
@@ -75,8 +70,8 @@
           "type": "lesson"
         },
         {
-          "title": "Laboration",
-          "link": "laboration",
+          "title": "Övningar",
+          "link": "ovningar",
           "type": "exercise"
         },
         {

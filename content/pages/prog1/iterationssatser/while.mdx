@@ -1,0 +1,62 @@
+---
+title: "While-loop"
+date: "2020-09-01"
+---
+
+Den mest grundläggande iterationssatsen är en while-loop;
+
+```javascript
+let condition = true;
+
+while (condition) {
+  console.log("Detta körs tills dess condition inte längre är sant");
+}
+```
+
+Som du ser så är satsen uppbyggd i delar;
+
+`while` är ett nyckelord som används för att visa att detta är en while-loop.
+
+`(condition)` är precis som ifsatser det *condition* som antingen är sant eller falskt. Om det är sant, så körs koden som finns i while-loopen, annars körs den inte.
+
+`{ }` används för att kapsla in den kod som ska köras om while-loopens condition är sant. Detta kallas *statement*.
+
+## Hur While-loopen fungerar
+
+Så du kan tänka är att denna typ av loop fungerar på följande sätt:
+1. Loopen kollar om dess condition fortfarande är sant. Om det inte är sant, avsluta loopen och fortsätt koden efter statementet.
+2. Kör statementet om condition är sant.
+3. Gå tillbaka till 1.
+
+Ett snabbt sätt att säga detta är `Om condition är sant, kör statement och repetera tills condition inte är sant`.
+
+> Något att tänka på med en loop är att den pausar hela flödet tills den avslutas (oftast genom att dess condition inte längre blir uppfyllt).
+
+> För att vi inte ska få en oändlig loop så behöver vi se till att dess condition förändras inuti while-loopens statement till att bli falskt.
+ 
+Vanligt är att använda en counter för att köra loopen ett antal gånger, så här;
+
+```javascript
+let counter = 0;
+while(counter < 5) { // Kolla om counter är mindre än 5
+  console.log("Counter är nu " + counter);
+  counter++; // Lägg till 1 till counter
+}
+```
+
+## Do-while
+En variant av while-loopen är Do-while. I en vanlig While-loop så kollas loopens condition innan statementet körs. I en Do-while är detta omvänt.
+
+Om vi säger att en While-loop är att säga till datorn "om detta stämmer, gör detta om och om igen tills dess att det inte längre stämmer", så är en Do-while loop istället att säga till datorn "gör detta om och om igen, så länge detta stämmer".
+
+Så här ser en Do-while loop ut:
+
+```javascript
+let counter = 0;
+do {
+  console.log("Counter är nu " + counter);
+  counter++;
+} while (counter < 5);
+```
+
+Ovanstående kod kör alltså först console.log och ökar counter, sen kollar den om counter är mindre än 5. Om counter är mindre än 5 så körs loopen om.

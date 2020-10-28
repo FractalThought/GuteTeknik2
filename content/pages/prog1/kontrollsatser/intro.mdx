@@ -1,0 +1,26 @@
+---
+title: "Kontrollsatser"
+date: "2020-09-01"
+---
+
+Kontrollsatser använder vi för att kontrollera flödet utifrån oftast externa variabler. Vad det betyder är att vi kan låta vissa delar av koden köras bara under särskilda förutsättningar.
+
+Den mest grundläggande kontrollsatsen är en ifsats;
+
+```javascript
+if (true) {
+  console.log("Detta körs");
+}
+
+if (false) {
+  console.log("Detta körs inte");
+}
+```
+
+Som du ser så är satsen uppbyggd i delar;
+
+`if` är ett nyckelord som används för att visa att detta är en ifsats.
+
+`(true)` är ett så kallat *condition*, som antingen är sant eller falskt. Om det är sant, så körs koden som finns i ifsatsen, annars körs den inte.
+
+`{ }` används för att kapsla in den kod som ska köras om ifsatsens condition är sant. Detta kallas *statement*.
