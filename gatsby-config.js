@@ -67,13 +67,13 @@ module.exports = {
         name: `pages`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/slides`,
-        name: `slides`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `${__dirname}/content/slides`,
+    //     name: `slides`,
+    //   },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
