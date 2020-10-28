@@ -3,7 +3,7 @@ import ChapterPage from "../../layout/ChapterPage"
 
 export default ({ location }) => {
   return (
-    <ChapterPage url={location.pathname} course="webb1" chapter="spelplanering">
+    <ChapterPage url={location.pathname} course="webb1" chapter="intro">
       <p>
         I det här kapitlet introducerar vi programmering, och går igenom hur vi
         hanterar foldrar och filer, samt hur ett skript fungerar.
