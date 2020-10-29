@@ -3,8 +3,9 @@ export default pageData => {
   pageData.chapters.forEach(chapter => {
     chapter.pages.forEach(page => {
       if (page.type === "project") {
-        page.link = `${chapter.link}/${page.link}`
-        projects.push(page)
+        const projectPage = {...page};
+        projectPage.link = `${chapter.link}/${page.link}`
+        projects.push(projectPage)
       }
     })
   })
