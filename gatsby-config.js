@@ -57,6 +57,20 @@ module.exports = {
               maxWidth: 900,
             },
           },
+          {
+            resolve:"@weknow/gatsby-remark-codepen",
+            options: {
+              theme: "dark",
+              height: 500
+            }
+          },
+          {
+            resolve: "gatsby-remark-embed-youtube",
+            options: {
+              width: 800,
+              height: 400
+            }
+          }
         ],
       },
     },

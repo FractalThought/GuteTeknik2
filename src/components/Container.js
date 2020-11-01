@@ -47,7 +47,6 @@ function Container({
           <div className="page">
             <h1 className="printheader">{pageTitle}</h1>
             <MDXProvider components={mdxComponents}>{children}</MDXProvider>
-            <script async src="https://static.codepen.io/assets/embed/ei.js" />
             <ClearDiv></ClearDiv>
           </div>
         </main>
