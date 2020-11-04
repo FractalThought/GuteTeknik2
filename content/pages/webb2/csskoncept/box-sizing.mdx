@@ -1,0 +1,22 @@
+---
+title: "Box-sizing"
+date: "2020-10-04"
+---
+
+Box-sizing har med hur en box hanteras, och om huruvida bordern räknas som en del av boxen som ett element innehåller.
+
+Om man inte sätter något till egenskapen box-sizing så räknas storleken på boxen ut med följande kalkylation:
+
+`width + padding + border = renderar bredd av elementets box`.
+
+Det betyder att bredden på elementet inte är den faktiska bredden som man specificerar med `width`-egenskapen. Detta kan ändras på genom att sätta `box-sizing`-egenskapen för elementet.
+
+Box-sizing har två olika lägen som man kan använda; `content-box` (default), och `border-box`.
+
+- `content-box` ger dig standardbeteende för CSS-rutans storlek. Om du ställer in ett elements bredd till 100 pixlar, kommer elementets innehållsruta att vara 100 pixlar bred, och bredden på valfri kant eller stoppning läggs till den slutliga återgivna bredden, vilket gör elementet bredare än 100px.
+- `border-box` berättar för webbläsaren att redovisa eventuella gränser och utfyllningar i värdena du anger för elementets bredd och höjd. Om du ställer in ett elements bredd till 100 pixlar, kommer 100 pixlar att inkludera vilken kant som helst som du har lagt till, och innehållsrutan kommer att krympa för att absorbera den extra bredden. Detta gör det vanligtvis mycket lättare att dimensionera element.
+
+## Källor:
+
+- [MDN: Box-sizing](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)
+- [CSS Tricks: Box-sizing](https://css-tricks.com/box-sizing/)

@@ -7,8 +7,18 @@
       "link": "csskoncept",
       "pages": [
         {
-          "title": "Introduktion",
-          "link": "intro",
+          "title": "Box-sizing",
+          "link": "box-sizing",
+          "type": "lesson"
+        },
+        {
+          "title": "CSS-variabler",
+          "link": "css-variabler",
+          "type": "lesson"
+        },
+        {
+          "title": "Färger och gradienter",
+          "link": "farger-och-gradienter",
           "type": "lesson"
         },
         {
