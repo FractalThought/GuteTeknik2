@@ -46,7 +46,7 @@ module.exports = {
         gatsbyRemarkPlugins: [
           `gatsby-remark-copy-linked-files`,
           {
-            resolve: `gatsby-remark-vscode`, //causes the crash...
+            resolve: `gatsby-remark-vscode`,
             options: {
               theme: `Default Dark+`,
             },
