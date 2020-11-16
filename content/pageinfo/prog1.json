@@ -173,6 +173,11 @@
           "title": "Introduktion till objekt",
           "link": "intro",
           "type": "lesson"
+        },
+        {
+          "title": "Övningar och projekt",
+          "link": "ovningar",
+          "type": "project"
         }
       ],
       "references": [
