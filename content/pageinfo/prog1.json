@@ -166,6 +166,23 @@
       ]
     },
     {
+      "title": "Objekt",
+      "link": "objekt",
+      "pages": [
+        {
+          "title": "Introduktion till objekt",
+          "link": "intro",
+          "type": "lesson"
+        }
+      ],
+      "references": [
+        {
+          "title": "Begrepp",
+          "link": "begrepp"
+        }
+      ]
+    },
+    {
       "title": "JS på Webben",
       "link": "webben",
       "pages": [
