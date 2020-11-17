@@ -42,11 +42,33 @@ Lägg in utrustningsarrayen som en egenskap till din karaktär.
 
 Skriv sedan ut hela ditt karaktärsobjekt i konsollen.
 
-## Projekt: DnD Character Creator
+## Projekt: DnD Character Viewer
 
-Använd det du har lärt dig för att skapa ett program som en användare kan använda för att skapa en DnD karaktär med olika egenskaper.
+Använd det du har lärt dig för att skapa ett skript som skriver ut karaktärens olika egenskaper på ett bra sätt.
 
-Du får välja själv hur du gör detta, det kan vara allt från att skriva ett script där du ändrar variabler som sedan skriver ut resultatobjektet i konsollen, till en webbsida som låter användaren fylla i diverse information och sedan presenterar resultatet på sidan, eller en kombination (tex bara hämtar infon från användaren och skriver ut i konsollen, eller tvärtom).
+- Minst ska skriptet skriva ut egenskaperna i konsollen eller med document.write.
+- Helst ska skriptet skriva ut egenskaperna så att de visas på en hemsida (med document.createElement).
+- Bäst ska skripet skriva ut egenskaperna så att de visas snyggt på en hemsida som är stilad med CSS.
+
+<Notice>
+
+Tips: Du kan använda denna funktionen för att få det som skrivs ut till hemsidan att komma in i en paragraf.
+
+```js
+
+function write(stringToWrite) {
+  document.write(`<p>${stringToWrite}</p>`);
+}
+
+write("Det du vill skriva");
+
+```
+
+</Notice>
+
+# Ytterligare funktionalitet: Skapa karaktären
+
+Lägg till funktionalitet och gränssnitt så att användaren kan skapa en karaktär med applikationen som sedan visas.
 
 **Det viktigaste är att du skapar objektet, och presenterar det.**
 
