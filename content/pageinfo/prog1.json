@@ -200,6 +200,11 @@
           "title": "Eventbindning",
           "link": "dom-eventbindning",
           "type": "lesson"
+        },
+        {
+          "title": "Slutuppgift",
+          "link": "slutuppgift",
+          "type": "project"
         }
       ],
       "references": [

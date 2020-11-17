@@ -1,0 +1,92 @@
+---
+title: "Övningar och projekt i objekt"
+date: "2020-11-16"
+---
+
+I den här uppgiften repeterar du vad du har lärt dig, genom att lägga till funktionalitet till en hemsida
+utifrån instruktioner och psuedokod.
+
+Samtidigt får du öva på att följa en kodstruktur, och arbeta med en kodstandard och kommentering.
+
+# Utförande
+- Ni ska följa denna [kodstandarden](https://guteteknik.netlify.app/prog1/referenser/kodstandard).
+- Använd [CodePen](https://codepen.io/your-work)
+- Använd länkarna till hjälp.
+- Uppgiften är personlig, men ni får hjälpa varandra och be om hjälp av både dem och läraren.
+
+# Viktigt i den här uppgiften
+I den här uppgiften är det viktigt att du;
+- Kommenterar din kod.
+- Följer [kodstandarden](https://guteteknik.netlify.app/prog1/referenser/kodstandard).
+- Följer instruktionerna.
+
+# Inlämning
+Lämna in länken till din Codepen till kursportfolion på SchoolSoft.
+
+# Uppgiften
+Du ska lägga till funktionalitet till en existerande webbapplikation.
+
+Webbapplikationen är en lista på personer som håller koll på om personernas namn, ålder, och tilldelar varje person med en emoji, samt markerar om personen är myndig.
+
+<Notice>
+
+[Applikationen finns som CodePen här](https://codepen.io/GuteFelix/pen/ExyMqxw).
+
+</Notice>
+
+## Du ska lägga till följande funktionalitet:
+- Lägga till en person till listan.
+- Ta bort en existerande person från listan.
+- Skriva ut alla möjliga emojis.
+
+## Du behöver använda följande:
+- [Math.random()](https://guteteknik.netlify.app/prog1/referenser/random)
+- [Kontrollsats (if)](https://guteteknik.netlify.app/prog1/kontrollsatser/intro)
+- [Iterationssats (while- eller for-loop)](https://guteteknik.netlify.app/prog1/iterationssatser)
+- [DOM-manipulering](https://guteteknik.netlify.app/prog1/webben/dom-manipulering)
+- [DOM-events](https://guteteknik.netlify.app/prog1/webben/dom-eventbindning)
+
+Du bör även använda funktioner, objekt, och arrayer för att hantera din data.
+
+## Lägga till en person
+När en person läggs till i listan så ska applikationen slumpa fram en emoji från en existerande array av emojis, hämta in namnet och ålder, och sedan lägga till i namnlistan den valda emojin, namnet, åldern.
+
+Om personen är 18år eller äldre så ska det också läggas till ", myndig".
+
+Till exempel, om användaren skriver in Tom i namn-rutan, och 34 i ålder-rutan, så ska det skrivas ut följande (emojin är slumpmässigt vald):
+
+`😎 Tom 34 år, myndig`
+
+I den här versionen behöver den nya personen inte tas bort, och behöver inte en "ta bort"-knappen.
+
+Dessutom, eftersom det är du som skriver koden, så ska applikationen kolla om det är ditt namn som skrivs in, och i så fall ska en särskild emoji väljas (som inte behöver ingå i den existerande arrayen) istället för en slumpmässig.
+
+```js
+/*
+Psuedokod:
+
+Hämta namn och ålder från input
+Är namnet ditt namn?
+    Lägg till särskild emoji
+Annars
+    Lägg till random emoji
+
+Är Åldern >= 18
+    Lägg till Myndig
+
+Lägg till nytt list item i listan, med följande: ValdEmoji Namn ##år (myndig)
+*/
+```
+
+## Ta bort en person
+När man klickar på en "Ta bort"-knapp så ska hela raden i listan för personen tas bort.
+
+# Skriva ut alla möjliga emojis
+Loopa igenom emojiArrayen och skriv ut alla möjliga emojis i varsin span-tagg i possibleEmojisdiven. Du kan lägga till egna emojis genom att kopiera dem från [denna listan på emojis](https://unicode.org/emoji/charts/full-emoji-list.html) (kopiera emojin rakt av och klistra in den i koden).
+
+# Extra funktionalitet
+Du kan lägga till extra funktionalitet till applikationen för högre betyg (gör vad du kan):
+- Gör så att applikationen kollar om personen lägger till sitt helnamn, och om så, bara hämtar ut personens förnamn.
+- Spara alla nya tillägg i en array.
+- Kolla så att åldern som skrivs in är ett nummer. Om den inte är det, visa ett felmeddelande som säger till att skriva in ett nummer.
+- Lägg till så att en ny person som läggs till har en "Ta bort"-knapp som fungerar.
