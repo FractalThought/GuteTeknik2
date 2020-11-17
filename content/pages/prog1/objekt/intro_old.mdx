@@ -1,0 +1,227 @@
+---
+title: "Introduktion till objekt"
+date: "2020-11-16"
+---
+
+# Introduktion till objekt
+
+Objekt är ett sätt att samla variabler/värden i en grupp, utan att använda en array (lista), och göra det lätt att komma åt dem.
+
+## Källor:
+
+- [HTMLHunden om Objekt](http://htmlhunden.se/dist/04-05-js-objekt.html)
+- [Objekt-literalen](https://dbwebb.se/guide/javascript1/object_literal)
+
+# Introduktion
+
+Vi har tidigare använt arrayer för att spara data, specifikt oftast en lista på tal, eller en lista av meningar.
+
+```js
+let names = ["Felix", "Anna", "Oliver", "Erik"];
+
+// Vi kan också blanda typer;
+let person = ["Felix", 29, false];
+```
+
+Men vad händer om vi behöver lagra information mer lättåtkomligt? Säg till exempel att vi vill spara information om en persons namn, ålder, och om huruvida de går i skolan eller inte, och vi vill göra det mer lättläsligt för vår kod.
+
+Vi kan spara datan i flera variabler, till exempel;
+
+```js
+let name = "Felix";
+let age = 29;
+let student = false;
+
+console.log(name + " är " + age + " år");
+```
+
+Eller så kan vi spara det i ett **objekt**;
+
+```js
+let person = {
+  name: "Felix",
+  age: 29,
+  student: false
+};
+
+console.log(person.name + " is " + person.age + " years old.");
+```
+
+Som ni ser så är ett objekt helt enkelt en behållare för variabler. Detta används när vi vill hålla ihop variabler med varandra. Säg att vi vill lägga till ett till objekt för ett husdjur, så kan vi göra följande:
+
+```js
+let pet = {
+  name: "Dexter",
+  age: 9
+};
+
+// Vi kan också lägga in egenskaper senare:
+pet.race = "cat";
+
+console.log(
+  pet.name + " is a " + pet.race + " and is " + pet.age + " years old."
+);
+```
+
+Objektet person och objektet pet har alltså varsitt namn.
+
+Ett värde som finns i ett objekt kallas property (egenskap). Egenskapet har två delar, en nyckel (tex name, race, age), och ett värde.
+
+## DOM-objekt
+
+Vi har tekniskt sett använt ett typ av objekt redan, när vi hämtat ut ett element från en hemsida.
+
+```js
+let myDiv = document.getElementById("");
+console.log(myDiv.innerText);
+```
+
+## Array med objekt
+
+Men säg att vi vill spara fler personer, hur gör vi då? Jo, med en array av objekt helt enkelt.
+
+```js
+let persons = [
+  {
+    name: "Felix",
+    age: 29
+  },
+  {
+    name: "Anna",
+    age: 30
+  }
+];
+
+for (let i = 0; i < persons.length; i++) {
+  console.log(persons[i].name + " is " + persons[i].age + " years old.");
+}
+```
+
+## Array i objekt, objekt i objekt
+
+Ett objekt kan ha en array som attribut, och till och med ett annat objekt;
+
+```js
+let person = {
+  name: "Felix",
+  children: ["Oliver", "Erik"],
+  car: {
+    make: "Ford",
+    model: "Focus"
+  }
+};
+// Skriv ut personens barn (children)
+for (let i = 0; i < person.children.length; i++) {
+  console.log(person.children[i] + " is a child of " + person.name);
+}
+// Skriver ut personens bils märke och modell
+console.log(
+  person.name + " owns a " + person.car.make + " " + person.car.model
+);
+```
+
+## Kopiera objekt och arrayer
+
+Ett objekt är likt en array i att det är en avancerad typ, till skillnad från en primitiv (tex int, string, boolean).
+
+En primitiv typ håller ett värde, och sätter vi en variabel till en primitiv, och sedan en annan variabel till den första variabeln, så kopieras värdet av första variabeln.
+
+Ändrar vi nu första variabeln så ändrar vi bara den variabeln, inte den andra.
+
+Exempel;
+
+```js
+let number1 = 56;
+let number2 = number1;
+number1 = 12;
+console.log(number1); // Skriver ut 12
+console.log(number2); // Skriver ut 56
+```
+
+När vi kopierar en avancerad typ däremot, så skapas istället en referens till den instansen.
+
+```js
+let numbers = [1, 12, 56];
+let sameNumbers = numbers;
+numbers.push(96);
+console.log(numbers); // Skriver ut [1, 12, 56, 96]
+console.log(sameNumbers); // Skriver ut [1, 12, 56, 96]
+
+let myObject = {
+  name: "Felix",
+  birthyear: 1990
+};
+
+let myPerson = myObject;
+myPerson.children = ["Oliver, Erik"];
+
+console.log(myObject);
+console.log(myPerson);
+/*
+  Båda skriver ut:
+  {name: "Felix", birthyear: 1990,
+  children: ["Oliver, Erik"]}
+*/
+```
+
+## Objekt som referens
+
+Vi kan lägga in en referens till ett objekt eller array, i ett annat objekt;
+
+```js
+let greatAxe = {
+  name: "Pretty good axe",
+  damage: 20,
+  speed: 5
+};
+
+let characterSkills = ["Charismatic", "Intelligent"];
+
+let character = {
+  name: "Fractale",
+  skills: characterSkills
+};
+
+// Vi kan också komma åt/sätta en egenskap på följande sätt:
+character["weapon"] = greatAxe;
+```
+
+<h2 style="page-break-before: always;">Kopiera objekt</h2>
+
+Men säg att vi vill ha två objekt som är likadana i struktur, men har olika värden, hur gör vi då?
+
+Delvis kan vi skapa två objekt som är likadana, till exempel via en funktion:
+
+```js
+function createCharacter(name, age, race) {
+  let newCharacter = {
+    name: name,
+    age: age,
+    race: race
+  };
+
+  return newCharacter;
+}
+```
+
+Eller så kan vi använda Object.create(), och då arbetar vi med det som gör javascript till ett [prototyp-baserat programmeringsspråk](https://en.wikipedia.org/wiki/Prototype-based_programming).
+
+```js
+// Skapar vår prototyp
+const characterProto = {
+  name: "name";
+  age: 0;
+  race: "";
+}
+
+let myCharacter = Object.create(characterProto);
+
+myCharacter.name = "Fractale";
+myCharacter.age = 29;
+myCharacter.race = "Human";
+
+// Skriver ut {name: "", age: 0, race: ""}
+console.log(characterProto);
+// Skriver ut {name: "Fractale", age: 29, race: "Human"}
+console.log(myCharacter);
+```
