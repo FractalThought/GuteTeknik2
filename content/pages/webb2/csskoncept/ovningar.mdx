@@ -8,91 +8,9 @@ Det är ingen inlämning, men att ni har gjort laborationerna kommer hjälpa er 
 
 ## 1. Skapa en grund
 
-Skapa en grundläggande hemsida som har följande i body-taggen:
+Använd följande CodePen för att börja koda.
 
-### HTML
-
-```html
-<div class="wrapper">
-  <header>
-    <h1>Custom properties</h1>
-    <nav>
-      <a href='#'>Hem</a>
-      <a href='#'>Varför varabel?</a>
-      <a href='#'>Kontakt</a>
-    </nav>
-  </header>
-  <main>
-    <div class='card-wrapper'>
-      <div class='card'>
-        <h2 class='card__name'>Starter</h2>
-        <h3 class='card__price'>$0</h3>
-        <p class='card__desc'>Custom properties är ett sätt att skapa variabler i CSS som kan återanvändas.</p>
-        <a class='button button--secondary'>Select</a>
-      </div>
-      <div class='card card--suggested'>
-        <h2 class='card__name'>Business</h2>
-        <h3 class='card__price'>$20 / Month</h3>
-        <p class='card__desc'>Custom properties kan överskrivas precis som vanliga properties.</p>
-        <a class='button'>Select</a>
-      </div>
-      <div class='card'>
-        <h2 class='card__name'>Enterprise</h2>
-        <h3 class='card__price'>$100 / Month</h3>
-        <p class='card__desc'>Custom properties används för att skapa designsystem.</p>
-        <a class='button button--secondary' href='#'>Select</a>
-      </div>
-  </main>
-    <footer><p>Copyright 2020</p></footer>
-</div>
-```
-
-### CSS
-
-```css
-body {
-  font-family: Verdana, sans-serif;
-  padding: 0;
-  margin: 0;
-}
-
-.wrapper {
-  width: 75vw;
-  margin: 0 auto;
-}
-
-header > h1 {
-  margin: 0 0 20px 0;
-}
-
-main {
-  min-height: 75vh;
-}
-
-.card-wrapper {
-  display: flex;
-  margin: 20px 0px;
-  padding: 0;
-  justify-content: center;
-}
-
-.card {
-  width: 20vw;
-  border-top: 20px solid black;
-  padding: 20px;
-  margin: 20px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.06);
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-}
-
-.card > * {
-  margin: 0;
-}
-```
+https://codepen.io/GuteFelix/pen/GRqLxmx
 
 ## 2. Lägg till färger
 
@@ -153,7 +71,15 @@ Tips: Lägg till `display: inline-block` för att få a-taggen att se mer ut som
 
 Korten behöver stilas, det behövs mer utrymme. Skapa en variabel för utrymme och använd det för att skapa ett utrymme mellan elementen i kortet.
 
-## 6. Dark-mode button (JS)
+## 6. Avslutande rensning
+
+Skapa stilar för de andra elementen på hemsidan. Försök identifiera ställen där du kan återanvända variabler.
+
+Vill du så kan du testa på att använda till exempel [transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) för att göra övergången till dark mode snyggare.
+
+Avsluta med att försöka ta bort så mycket CSS du kan, utan att en slutliga stilen ändras.
+
+## 7. Bonus: Dark-mode button (JS)
 
 Skapa en knapp (`<button>`) i headern och bind den till ett javascript event med följande:
 
@@ -170,11 +96,3 @@ Inuti funktionen SwitchDarkMode lägger du till kod som ändrar din mains bakgru
 
 - Gör att när du trycker på Dark Mode knappen igen så ändras det tillbaka till ljus.
 - Gör så att texten på knappen ändras till Light Mode när Dark mode är aktiverad.
-
-## 7. Avslutande rensning
-
-Skapa stilar för de andra elementen på hemsidan. Försök identifiera ställen där du kan återanvända variabler.
-
-Vill du så kan du testa på att använda till exempel [transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) för att göra övergången till dark mode snyggare.
-
-Avsluta med att försöka ta bort så mycket CSS du kan, utan att en slutliga stilen ändras.
