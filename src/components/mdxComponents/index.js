@@ -9,6 +9,7 @@ import Pre from "./pre"
 
 import PracticeContainer from "./PracticeContainer"
 import Callout, { Warning, Error, Notice, Result } from "./Callout"
+import BoxedList from "./BoxedList"
 
 /* eslint-disable */
 export default {
@@ -29,4 +30,5 @@ export default {
   Error: Error,
   Notice: Notice,
   Result: Result,
+  BoxedList: BoxedList,
 }
