@@ -50,11 +50,11 @@ Webbapplikationen är en lista på personer som håller koll på om personernas 
 Du bör även använda funktioner, objekt, och arrayer för att hantera din data.
 
 ## <span id="lagga-till-en-person"></span> Lägga till en person
-När en person läggs till i listan så ska applikationen slumpa fram en emoji från en existerande array av emojis, hämta in namnet och ålder, och sedan lägga till i namnlistan den valda emojin, namnet, åldern.
+När en person läggs till i listan så ska applikationen slumpa fram en emoji från en existerande array av emojis, hämta in namnet och födelseår som användaren skrivit i, och sedan lägga till i namnlistan den valda emojin, namnet, och åldern (uträknad utifrån ).
 
-Om personen är 18år eller äldre så ska det också läggas till ", myndig".
+Om personen är 18 år eller äldre så ska det också läggas till ", myndig".
 
-Till exempel, om användaren skriver in Tom i namn-rutan, och 34 i ålder-rutan, så ska det skrivas ut följande (emojin är slumpmässigt vald):
+Till exempel, om användaren skriver in Tom i namn-rutan, och 1984 i ålder-rutan, så ska det skrivas ut följande (emojin är slumpmässigt vald):
 
 `😎 Tom 34 år, myndig`
 
@@ -62,22 +62,24 @@ I den här versionen behöver den nya personen inte tas bort, och behöver inte 
 
 Dessutom, eftersom det är du som skriver koden, så ska applikationen kolla om det är ditt namn som skrivs in, och i så fall ska en särskild emoji väljas (som inte behöver ingå i den existerande arrayen) istället för en slumpmässig.
 
-Slutligen ska den nya personen läggas till i en array. Du kan använda samma sträng som du använt för 
+Slutligen ska den nya personen läggas till i en array. Du kan använda samma sträng som du använt för att lägga till i HTML-listan.
 
 ```js
 /*
 Psuedokod:
 
-Hämta namn och ålder från input
+Hämta namn och födelseår från input
 Är namnet ditt namn?
     Lägg till särskild emoji
 Annars
     Lägg till random emoji
 
+Ålder = år - födelseår
 Är Åldern >= 18
     Lägg till Myndig
 
 Lägg till nytt list item i listan, med följande: ValdEmoji Namn ##år (myndig)
+Spara nya personen i addedPersons-arrayen.
 */
 ```
 
@@ -94,9 +96,11 @@ Desto mer du försöker, desto mer har jag möjlighet att bedöma och ge återko
 - Kommentera din kod väl - förklara vad som görs, vad som händer, och varför du valt att skriva på det sättet.
 - Skriv din egen pseudokod för någon funktionalitet. Du behöver inte implementera funktionaliteten, men får gärna försöka.
 - Kolla så att åldern som skrivs in är ett nummer. Om den inte är det, visa ett felmeddelande som säger till att skriva in ett nummer.
-- Istället för att du sparar en sträng för en ny person så ska den nya personen sparas i ett objekt.
+- Istället för att du sparar en sträng för en ny person så ska den nya personen sparas i ett objekt. Egenskaperna ska matcha dess 
 - Lägg till så att en ny person som läggs till har en "Ta bort"-knapp som fungerar.
 - Gör så att applikationen kollar om personen lägger till sitt helnamn, och om så, bara hämtar ut personens förnamn.
+- Istället för att använda ett konstant värde för årtalet, hämta ut det nuvarande året med [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date).
+- Ändra så att applikationen sparar alla personer i arrayen och sedan renderar om hela listan i gränssnittet från den arrayen.
 
 # <span id="bedomning"></span> Bedömning
 Denna uppgiften bedöms utifrån följande:
@@ -112,4 +116,4 @@ Denna uppgiften bedöms utifrån följande:
 
 > I sin programmering skapar eleven med konsekvent kodningsstil och tydlig namngivning korrekt, strukturerad och noggrant kommenterad källkod med tillfredsställande resultat.
 
-> Dessutom väljer eleven med viss säkerhet ett uttryckssätt som är anpassat för att på ett tillfredsställande sätt interagera med den avsedda användaren. Elevens färdiga program eller skript är utförda med tillfredsställande resultat i ett eller flera programspråk som är stabila och robusta.
+> Elevens färdiga program eller skript är utförda med tillfredsställande resultat i ett eller flera programspråk som är stabila och robusta.
