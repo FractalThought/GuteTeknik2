@@ -1,7 +1,7 @@
 ---
 title: "Projekt: Coola namnlistan"
 date: "2020-11-16"
-headings: "Lägga till en person:lagg-till-person"
+headings: "Uppgiften:uppgiften|Lägga till en person:lagga-till-en-person|Ta bort en person:ta-bort-en-person|Skriva ut emojis:skriva-ut-emojis|Extra funktionalitet:extra-funktionalitet|Bedömning:bedomning|Kunskapskraven:kunskapskraven"
 ---
 
 I den här uppgiften repeterar du vad du har lärt dig, genom att lägga till funktionalitet till en hemsida
@@ -10,7 +10,7 @@ utifrån instruktioner och psuedokod.
 Samtidigt får du öva på att följa en kodstruktur, och arbeta med en kodstandard och kommentering.
 
 # Utförande
-- Ni ska följa denna [kodstandarden](https://guteteknik.netlify.app/prog1/referenser/kodstandard).
+- Du ska följa denna [kodstandarden](https://guteteknik.netlify.app/prog1/referenser/kodstandard).
 - Använd [CodePen](https://codepen.io/your-work)
 - Använd länkarna till hjälp.
 - Uppgiften är personlig, men ni får hjälpa varandra och be om hjälp av både dem och läraren.
@@ -24,19 +24,19 @@ I den här uppgiften är det viktigt att du;
 # Inlämning
 Lämna in länken till din Codepen till kursportfolion på SchoolSoft.
 
-# Uppgiften
+# <span id="uppgiften"></span> Uppgiften
 Du ska lägga till funktionalitet till en existerande webbapplikation.
 
 Webbapplikationen är en lista på personer som håller koll på om personernas namn, ålder, och tilldelar varje person med en emoji, samt markerar om personen är myndig.
 
 <Notice>
 
-[Applikationen finns som CodePen här](https://codepen.io/GuteFelix/pen/ExyMqxw).
+[Applikationen finns som CodePen här](https://codepen.io/GuteFelix/pen/ExyMqxw)
 
 </Notice>
 
 ## Du ska lägga till följande funktionalitet:
-- [Lägga till en person till listan.](#lagg-till-person)
+- [Lägga till en person till listan.](#lagga-till-en-person)
 - Ta bort en existerande person från listan.
 - Skriva ut alla möjliga emojis.
 
@@ -49,8 +49,7 @@ Webbapplikationen är en lista på personer som håller koll på om personernas 
 
 Du bör även använda funktioner, objekt, och arrayer för att hantera din data.
 
-(#lagg-till-person)
-## Lägga till en person
+## <span id="lagga-till-en-person"></span> Lägga till en person
 När en person läggs till i listan så ska applikationen slumpa fram en emoji från en existerande array av emojis, hämta in namnet och ålder, och sedan lägga till i namnlistan den valda emojin, namnet, åldern.
 
 Om personen är 18år eller äldre så ska det också läggas till ", myndig".
@@ -62,6 +61,8 @@ Till exempel, om användaren skriver in Tom i namn-rutan, och 34 i ålder-rutan,
 I den här versionen behöver den nya personen inte tas bort, och behöver inte en "ta bort"-knappen.
 
 Dessutom, eftersom det är du som skriver koden, så ska applikationen kolla om det är ditt namn som skrivs in, och i så fall ska en särskild emoji väljas (som inte behöver ingå i den existerande arrayen) istället för en slumpmässig.
+
+Slutligen ska den nya personen läggas till i en array. Du kan använda samma sträng som du använt för 
 
 ```js
 /*
@@ -80,15 +81,35 @@ Lägg till nytt list item i listan, med följande: ValdEmoji Namn ##år (myndig)
 */
 ```
 
-## Ta bort en person
+## <span id="ta-bort-en-person"></span> Ta bort en person
 När man klickar på en "Ta bort"-knapp så ska hela raden i listan för personen tas bort.
 
-# Skriva ut alla möjliga emojis
+# <span id="skriva-ut-emojis"></span> Skriva ut alla möjliga emojis
 Loopa igenom emojiArrayen och skriv ut alla möjliga emojis i varsin span-tagg i possibleEmojisdiven. Du kan lägga till egna emojis genom att kopiera dem från [denna listan på emojis](https://unicode.org/emoji/charts/full-emoji-list.html) (kopiera emojin rakt av och klistra in den i koden).
 
-# Extra funktionalitet
-Du kan lägga till extra funktionalitet till applikationen för högre betyg (gör vad du kan):
-- Gör så att applikationen kollar om personen lägger till sitt helnamn, och om så, bara hämtar ut personens förnamn.
-- Spara alla nya tillägg i en array.
+# <span id="extra-funktionalitet"></span> Extra funktionalitet och arbete
+Den grundläggande funktionaliteten är lagd på E till D-nivå. För högre betyg ska du dessutom minst försöka göra någon av följande funktionaliteter.
+Desto mer du försöker, desto mer har jag möjlighet att bedöma och ge återkoppling på.
+
+- Kommentera din kod väl - förklara vad som görs, vad som händer, och varför du valt att skriva på det sättet.
+- Skriv din egen pseudokod för någon funktionalitet. Du behöver inte implementera funktionaliteten, men får gärna försöka.
 - Kolla så att åldern som skrivs in är ett nummer. Om den inte är det, visa ett felmeddelande som säger till att skriva in ett nummer.
+- Istället för att du sparar en sträng för en ny person så ska den nya personen sparas i ett objekt.
 - Lägg till så att en ny person som läggs till har en "Ta bort"-knapp som fungerar.
+- Gör så att applikationen kollar om personen lägger till sitt helnamn, och om så, bara hämtar ut personens förnamn.
+
+# <span id="bedomning"></span> Bedömning
+Denna uppgiften bedöms utifrån följande:
+- Hur väl du följer kodstandarden
+- Att du nyttjar olika strukturerna (kontrollsatser, iterationssatser, osv) på ett effektivt sätt
+- Hur väl applikationen beter sig utifrån instruktionerna.
+- Hur mycket av extra funktionaliteten du försökt implementera.
+
+# <span id="kunskapskraven"></span> Kunskapskraven
+> Eleven formulerar och planerar efter samråd med handledare programmeringsuppgifter med pseudokod eller diagramteknik.
+
+> I planeringen väljer eleven med viss säkerhet kontrollstrukturer, metoder, variabler, datastrukturer och algoritmer som är adekvata för uppgiften.
+
+> I sin programmering skapar eleven med konsekvent kodningsstil och tydlig namngivning korrekt, strukturerad och noggrant kommenterad källkod med tillfredsställande resultat.
+
+> Dessutom väljer eleven med viss säkerhet ett uttryckssätt som är anpassat för att på ett tillfredsställande sätt interagera med den avsedda användaren. Elevens färdiga program eller skript är utförda med tillfredsställande resultat i ett eller flera programspråk som är stabila och robusta.
