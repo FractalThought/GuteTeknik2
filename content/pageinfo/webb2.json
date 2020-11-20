@@ -3,50 +3,48 @@
   "link": "webb2",
   "chapters": [
     {
-      "title": "CSS-koncept",
-      "link": "csskoncept",
+      "title": "Utvecklingspraxis",
+      "link": "utvecklingspraxis",
       "pages": [
         {
-          "title": "CSS-variabler",
-          "link": "css-variabler",
+          "title": "Introduktion till designsystem",
+          "link": "designsystem",
           "type": "lesson"
         },
         {
-          "title": "Färger och gradienter",
-          "link": "farger-och-gradienter",
-          "type": "lesson"
-        },
-        {
-          "title": "Övningar",
-          "link": "ovningar",
+          "title": "Övning: Skapa produktkort",
+          "link": "ovning-produktkort",
           "type": "exercise"
+        },
+        {
+          "title": "Designa ett dashboard",
+          "link": "designa-ett-dashboard",
+          "type": "project"
+        },
+        {
+          "title": "BEM-metodiken",
+          "link": "bem-metodiken",
+          "type": "lesson"
+        },
+        {
+          "title": "Övning i att använda BEM",
+          "link": "ovning-bem",
+          "type": "exercise"
+        },
+        {
+          "title": "Skapa ditt dashboard",
+          "link": "skapa-ditt-dashboard",
+          "type": "project"
         }
       ],
       "referenser": [
         {
           "title": "Box-sizing",
           "link": "box-sizing"
-        }
-      ]
-    },
-    {
-      "title": "BEM metodiken",
-      "link": "bem",
-      "pages": [
-        {
-          "title": "Introduktion",
-          "link": "intro",
-          "type": "lesson"
         },
         {
-          "title": "Övningar",
-          "link": "ovningar",
-          "type": "exercise"
-        },
-        {
-          "title": "Metodik och Designsystem",
-          "link": "metodiksystem",
-          "type": "project"
+          "title": "Färger och gradienter",
+          "link": "farger-och-gradienter"
         }
       ]
     },
