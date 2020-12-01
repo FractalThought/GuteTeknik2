@@ -1,9 +1,26 @@
 ---
 title: "Testsida"
 date: "2020-10-09"
+myobject: { name: "Felix", number: 30 }
+items:
+  - value: Item 1
+  - value: Item 2
+  - value: Item 3
 ---
 
+https://zslabs.com/articles/mdx-frontmatter-in-gatsby
+
 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat neque, sapiente delectus, consectetur illo, esse mollitia eius vero in voluptatibus numquam ratione. Consequatur, laboriosam impedit.
+
+{const newobject = {name: "hello"}}
+
+{newobject.name}
+
+{myobject}
+
+{items.map(item => {
+    return (<p>{item.value}</p>)
+})}
 
 <Callout half="true">HELLO</Callout>
 
