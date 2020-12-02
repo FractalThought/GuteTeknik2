@@ -37,7 +37,9 @@ function BoxedList({ children }) {
 
   return (
     <BoxedListDiv>
-      <MDXProvider>{children}</MDXProvider>
+      <MDXProvider>
+          {children}
+      </MDXProvider>
     </BoxedListDiv>
   )
 }

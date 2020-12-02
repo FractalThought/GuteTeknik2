@@ -11,6 +11,7 @@ import PracticeContainer from "./PracticeContainer"
 import Callout, { Warning, Error, Notice, Result } from "./Callout"
 import BoxedList from "./BoxedList"
 import FlexContainer from "./FlexContainer"
+import RenderList from "./RenderList"
 
 /* eslint-disable */
 export default {
@@ -33,4 +34,5 @@ export default {
   Result: Result,
   BoxedList: BoxedList,
   FlexContainer: FlexContainer,
+  RenderList: RenderList
 }
