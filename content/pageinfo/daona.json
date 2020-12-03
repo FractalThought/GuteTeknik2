@@ -12,6 +12,17 @@
           "type": "lesson"
         }
       ]
+    },
+    {
+      "title": "Nätverk",
+      "link": "natverk",
+      "pages": [
+        {
+          "title": "Hemmanätverk",
+          "link": "hemmanatverk",
+          "type": "project"
+        }
+      ]
     }
   ]
 }
