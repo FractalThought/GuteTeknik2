@@ -10,6 +10,16 @@
           "title": "OSI-modellen",
           "link": "osi",
           "type": "lesson"
+        },
+        {
+          "title": "Diagnostik och underhåll",
+          "link": "diagnostik",
+          "type": "lesson"
+        },
+        {
+          "title": "Uppgift i diagnostik och underhåll",
+          "link": "diagnostik-uppgift",
+          "type": "project"
         }
       ]
     },

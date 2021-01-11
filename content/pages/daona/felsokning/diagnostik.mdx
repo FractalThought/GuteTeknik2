@@ -1,0 +1,80 @@
+---
+title: "Underhåll och diagnostik i Windows 10"
+date: "2020-10-02"
+---
+
+# Diagnostik
+Diagnoser använder vi för att ta reda på hur ett system beter sig. Oftast sker detta genom att vi testar en så kallad insignal som vi vet ska generera ett tillstånd i systemet, och om tillståndet inte sker, eller inte är så som vi förväntar oss, så vet vi att något (kanske till och med vad som) är fel. Diagnos är alltså ett test på systemets funktion.
+
+Om vi misstänker att något är fel på datorn, så kan vi använda olika diagnostiseringsverktyg för att undersöka allt från operativsystemet, till hårdvara och individuella program.
+
+## Tillförlitlighetsövervakaren (Reliability Monitor)
+Windows övervakar och sparar massa data om diverse fel, varningar, och händelser som sker i operativsystemet, för att på så sätt kunna presentera hur tillförlitlig systemet är. Denna övervakaren kan vi titta på för att försöka hitta eventuella fel i programvaran eller operativsystemet (och ibland även hårdvarurelaterade problem).
+
+### Gör så här för att ta fram övervakaren:
+1.	Gå in till inställningar och i sökrutan skriver du in ”underhåll” och klickar på Säkerhet och Underhåll.
+2.	Klicka sedan på Underhåll och välj Visa Tillförlitlighetsövervakaren.
+Leta i tidslinjen efter varningar, påvisningar, och fel. Klicka på en tid för att få fram information om individuella händelser.
+
+## Diagnostiseringsverktyget för DirectX (dxdiag)
+
+DirectX fungerar som ett lager mellan grafikkortet och applikationer som renderar grafik (till exempel spel). Den kommer även med ett diagnostiseringsverktyg som kan användas vid diagnos för grafikrelaterade applikationer.
+
+### Gör så här för att få fram Diagnostiseringsverktyget för DirectX (dxdiag)
+1.	Få fram Kör genom att trycka på Startknappen i Windows och sök på Kör. Du kan också få fram denna genom kortkommandot Windowstangenten+R.
+2.	Skriv in dxdiag i textrutan och tryck på knappen Ok.
+
+I dxdiag kan vi se en översikt av systemet, bildskärmarna, ljud, och indata (till exempel tangentbord och mus). Du kan se om något är inaktiverat, och programmet presenterar även anmärkningar i varje kategori.
+
+## Minnesdiagnostiseringsverktyget
+Något som tyvärr ofta kan strula i datorer är RAM-minnena. Minnesdiagnostiseringsverktyget (även kallat mdsched.exe) kör en mängd tester på dina minnen för att upptäcka och presentera problem.
+
+### Gör så här för att få fram verktyget:
+1.	Få fram Kör genom att trycka på Startknappen i Windows och sök på Kör. Du kan också få fram denna genom kortkommandot Windowstangenten+R.
+2.	Skriv in mdsched.exe i textrutan och tryck på knappen Ok.
+
+Den kommer att efterfråga att du startar om datorn, detta då minnena måste vara fria för att kunna köra testen. Du kan välja att starta om direkt, eller att testen körs nästa gång du stänger av datorn. Oavsett så kör den testen, och presenterar eventuella problem som den hittar.
+
+## Felsökare i Windows 10
+
+Windows 10 har en mängd olika felsökare för sina olika generella system. Du kommer åt dem genom att gå in i inställningar, trycka på Uppdatering och Säkerhet och sedan välja Felsök. Dessa verktyg är i stort sätt automatiserade och försöker fixa felen själva.
+
+# Underhåll
+
+Precis som allt annat så behöver en dator underhåll då och då. Här nedan hittar du diverse sätt att underhålla din dator i mjukvaran. För hårdvara så gäller främst underhåll i form av att blåsa ur damm från datorn och kolla så att komponenterna inte tar skada av varandra (till exempel att en fläkt får en sladd att slå på ett kretskort, eller att värmen från processorn blåser direkt på grafikkortet).
+
+## Windows Update
+
+I Uppdatering och Säkerhet hittar du även Windows Update. Det är viktigt att du har ett uppdaterat system, särskilt när det kommer till virusdefinitioner och säkerhetsuppdateringar, då ditt system annars kan vara sårbart för annars kända attacker.
+
+## Windows-säkerhet
+
+Windows-säkerhet hette tidigare Windows Defender, som var en brandvägg och antivirusprogram framförallt. Numera kan applikationen (som alltid körs) skydda mot diverse olika attacker, samt användas för att kolla hälsan på datorn och systemet.
+
+Applikationen används också för att ställa in familjeinställningar (till exempel begränsa användandet för barn och hämta aktivitetsrapporter), samt kontrollera vad applikationer har för begränsningar och tillåtelser.
+Du kommer åt Windows-säkerhet genom att klicka på pilen i systemfältet (längst till höger i aktivitetsfältet, precis innan klockan) och sedan på ikonen som ser ut som en vit sköld.
+
+## Systemåterställning
+
+Om något skulle hända med systemet så har Windows möjligheten att återställa sig själv till hur den var under en tidigare tidpunkt, genom en så kallad systemåterställning. Detta kan ibland behövas om det blivit något ordentligt fel i systemet eller en applikation.
+
+I inställningskategorin Uppdatering och säkerhet hittar du kategorin Återställning. Därifrån kan du återställa datorn genom en guide som tar dig igenom återställningen. Du kan även återställa datorn helt och hållet, något som ibland kallas ”ghosta” eller att man blåser datorn [ren].
+Söker du i inställningarna efter ”skapa en återställningspunkt” så kan du dessutom skapa en manuell återställningspunkt. Detta kan vara väldigt bra att göra för att säkra upp innan du utför något som potentiellt kan orsaka problem i systemet.
+
+## Program för diagnostisk och underhåll
+
+### CCleaner
+CCleaner är ett välkänt program som kan hjälpa till att rensa datorn av onödiga eller temporära filer som tar upp mycket plats, samt rensa datorns register på gamla referenser som inte längre används.
+Programmet har även massa andra verktyg som bland annat kan analysera hårddisken, hitta och uppdatera utdaterade program, samt ändra vilka program som får starta när datorn startar.
+
+### Speccy
+Speccy undersöker datorn och får fram information som annars kan vara gömd. Du kan använda Speccy för att till exempel ta reda på vad för processor du har, visa processorns temperatur, och nätverketsinformation. Den kan exportera informationen så att du kan dela det med en eventuell tredjepart som till exempel ska laga datorn.
+
+### Novabench
+Novabench testar datorn och ger poäng utifrån dess prestanda. De tillåter dig även att publicera resultatet och jämföra med andra som också laddat upp sitt resultat.
+
+### Memtest
+Memtest är ett alternativ till Windows inbyggda minnesdiagnostiseringsverktyg som ofta används av datortillverkare.
+
+### Recurva
+Recurva är egentligen inget diagnostik- eller underhållsprogram. Programmet används för att försöka återställa filer som tagits bort.
