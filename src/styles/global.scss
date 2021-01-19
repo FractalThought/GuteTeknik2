@@ -153,7 +153,10 @@ main li {
 
 @media screen and (min-width: $large-up) {
   #main-wrapper {
-    grid-template-columns: 1fr minmax(500px, 50em) 1fr;
+    grid-template-columns: minmax(200px, 1fr) minmax(500px, 70%) minmax(
+        100px,
+        1fr
+      );
     grid-template-areas: "left main right";
     grid-gap: 20px;
 
