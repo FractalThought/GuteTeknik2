@@ -43,6 +43,7 @@ const ExpandButton = styled.button`
   padding: 0.2rem 0.4rem;
   background: none;
   font-weight: bold;
+  font-size: 1.2em;
   color: rgba(155, 159, 173, 1);
 `
 
@@ -120,7 +121,7 @@ Lastly, need courseLink
           <h2>{title}</h2>
         </Link> : <h2>{title}</h2>}
         <ExpandButton expanded={!isHidden} onClick={() => toggle()}>
-          {isHidden ? ">" : "X"}
+          {isHidden ? "+" : "-"}
         </ExpandButton>
       </ChapterTitle>
       <Hidden isHidden={isHidden}>

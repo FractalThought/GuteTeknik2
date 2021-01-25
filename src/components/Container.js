@@ -12,6 +12,11 @@ const ClearDiv = styled.div`
   clear: both;
 `
 
+const ContentContainer = styled.div`
+  margin: 0 auto;
+  max-width: 50em;
+`
+
 function Container({
   url,
   pageInfo,
@@ -43,11 +48,13 @@ function Container({
         </aside>
         <main>
           <MyCrumbs crumbData={crumbData} />
-          <h1 className="page-heading">{pageTitle}</h1>
           <div className="page">
-            <h1 className="printheader">{pageTitle}</h1>
+            <ContentContainer>
+            <h1 className="page-heading">{pageTitle}</h1>
+            {/* <h1 className="printheader">{pageTitle}</h1> */}
             <MDXProvider components={mdxComponents}>{children}</MDXProvider>
             <ClearDiv></ClearDiv>
+            </ContentContainer>
           </div>
         </main>
         <aside className="right">
