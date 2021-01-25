@@ -7,17 +7,32 @@ BEM står för Block Element Modifier, och är en namnkonvention/metodik för at
 
 Metodiken går ut på att man definierar komponentens beståndsdelar i Block och Element, och deras varianter med Modifier.
 
+# Introduktion
+
+Man definierar en komponents beståndsdelar i antingen Block eller Element, och deras varianter som Modifiers. Dessa läggs in som klasser i CSS.
+
+## Varför använda det?
+- Lättare att skapa återanvändningsbara och specifika komponenter.
+- Mer tydlig CSS som har mindre risk att påverka andra delar av applikationen.
+- Lättare att underhålla när saker är separerade från varandra.
+
 ## Block
 
-Komponentens huvuddel, det element som kapslar in alla andra element, kallas i BEM för block.
+Ett block är det övergripande behållaren för komponenten, och brukar även kallas för komponent i sig (till exempel `rounded-button`, `food-card`, `input-text`).
+
+Exempel på Block är ett UI-kort, en knapp, en input, osv
 
 ## Element
 
-De element som ligger inuti komponentens block kallas i BEM för element.
+Ett element är en del av ett block, till exempel en rubrik, bild, brödtext, eller en knapp (om specifik till det blocket).
+
+Ett element definieras som en del av sitt block och får därför följande klassnamn: `.block__element`.
 
 ## Modifier
 
-Ibland vill man skapa alternativa delar som ser annorlunda ut från varandra. Då kan man modifera dem. Både block och element kan modifieras.
+För att skapa olika varianter av samma element (eller block) så skapar man modifiers, som endast modifierar det existerande utseendet på elementet/blocket.
+
+En modifierar definieras som en variant av ett element/block, och får därför följande klassnamn; `.block--modifier` för en modifiering av ett block, och `.block__element--modifier` för en modifiering på ett element.
 
 # Presentation
 
@@ -27,9 +42,7 @@ Ibland vill man skapa alternativa delar som ser annorlunda ut från varandra. D�
 
 https://codepen.io/GuteFelix/pen/BazeEjM
 
-[Presentationen för BEM (Figma)](https://www.figma.com/proto/Vn47JszfXWFq5OGxtYGHoz/BEM?node-id=1%3A2&viewport=357%2C371%2C0.41383543610572815&scaling=min-zoom)
-
-## Källor:
+## Referenser:
 
 - [GetBem.com](http://getbem.com/)
 - [CSS Tricks: BEM 101](https://css-tricks.com/bem-101/)
