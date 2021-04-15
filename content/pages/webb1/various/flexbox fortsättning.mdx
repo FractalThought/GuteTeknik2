@@ -1,0 +1,43 @@
+# CSS Flexbox fortsättning
+
+Referenser:
+
+- [CSS-Tricks: The complete guide to CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+
+Vi har tidigare använt Flexbox för att skapa en layout på hemsida, genom att först wrappa en **div** runt vår **main** och **aside-tagg**, och sätta dess display till flex. Vi kan dock använda flexbox till mer än bara sidlayout, till mindre delar.
+
+## Övning: Bildgalleri
+
+Du ska skapa ett bildgalleri på en tom sida, genom att använda CSS flexbox. Varje bild ska ha en beskrivning, och vara separerade från de andra bilderna.
+
+### Börja här:
+
+1. Skapa ett tomt HTML-dokument, lägg in standardtaggarna.
+2. I body-taggen, lägg in 5st divar, som alla har en img med src satt till "https://source.unsplash.com/random", och alt satt till "Random image from Unsplash", och efter img-taggen, en h1 och en p-tagg som innehåller information om bilden (du kan använda lorem5). Du får använda egna bilder om du vill.
+3. Lägg till en width på 450 och en height på 200 till alla img-taggar.
+
+### Grundstil:
+
+Börja med att stila din HTML. Lägg till en bakgrund till body och alla divar, samt eventuellt en border runt varje div, eller [box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow).
+
+Fixa padding och margin så det "ser snyggt ut", alltså att varje div är separarerad från varandra, och innehållet i divarna har lite utrymme mellan sig och divens gräns. **Använd kloka CCS selectors för att stila**.
+
+### Flexa:
+
+Du ska sen göra så att bilderna visas på en rad, genom att använda flexbox. Tänk igenom hur du löser det, och vilka attribut utöver display: flex som du behöver, och använd det. Använd [CSS-Tricks: A complete guide to CSS Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) till hjälp.
+
+<h3 style="page-break-before: always;">Fler bilder och radbrytning:</h3>
+
+När du har gjort det, lägg till 5 bilder till och undersök vad som händer. Hur kan du se till så att bilderna **wrappar** och bryter rad istället för att hålla sig på en rad? Testa och lägg in det.
+
+### En stor bild
+
+Lägg till attributet flex-grow: 2 till en av divarna som håller i en bild, och gör den bilden dubbelt så stor (900x200). Observera vad som händer.
+
+### Avslutning
+
+Avsluta övningen med att lägga in allt som en ny sida till din existerande receptsida, och lägg till fler bilder. Kalla sidan för Bildgalleri.
+
+Se till att uppdatera dina andra sidor så att de länkar till din nya sida.
+
+Du kan behöva minska storleken på alla bilder så det ser bättre ut i den aktuella layouten.

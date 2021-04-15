@@ -1,0 +1,80 @@
+# 2019-09-04
+
+## CSS ID
+
+```css
+#id-selector {
+  attribute: value;
+}
+```
+
+## CSS Class
+
+```css
+.class-selector {
+  attribute: value;
+}
+```
+
+## Specificity
+
+## Kommentering
+
+### Kommentering i HTML
+
+```html
+<!-- Detta är en kommentar i HTML -->
+```
+
+### Kommentering i CSS
+
+```css
+/* Detta är en kommentar i CSS */
+```
+
+## Psuedo class som selector
+
+```css
+a:hover {
+  color: red;
+}
+```
+
+## Inheritance
+
+Vissa attribut i CSS ärvs ner till alla child-element till elementet som vi selectar via CSS. Till exempel:
+
+### Kod:
+
+```css
+body {
+  color: red; /* Detta påverkar all text som finns inuti body, även om de finns i till exempel en p-tagg.*/
+}
+```
+
+```html
+<body>
+  <p>Hej jag är en paragraf</p>
+  <a href="#">Jag är en länk</a>
+</body>
+```
+
+### Resultat:
+
+<p style="color:red">Hej jag är en paragraf</p>
+<a href="#">Jag är en länk</a>
+
+## Övning
+
+## Övning: Receptsida
+
+Skapa en sida till ett recept. Sidan ska ha följande komponenter:
+
+- h1 till rubriken (titeln på receptet), h2 för underrubriker
+- ul-lista med li-element till ingredienssidan
+- ol-lista för stegen
+- img för en bild på den färdiga rätten (eller random mat-bild, om det inte finns en specifik bild till rätten)
+
+### Övning 2: Make it pretty
+
+Använd CSS för att göra receptsidan "fin".

@@ -1,0 +1,54 @@
+# HTML Forms och Input
+
+Referenser
+
+- [HTML forms (sv)](http://htmlhunden.se/dist/02-09-html-forms.html)
+- [MDN HTML forms (eng)](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms)
+
+Form, eller som vi säger på svenska, Formulär, lägger till ett sätt för användarna att interaktera med hemsidan.
+
+Vanligaste formulären idag är troligtvis ett kontaktformulär, och ett inloggningsformulär.
+
+Vi skapar ett formulär med form-taggen, och lägger in specifika element för varje sak vi vill hämta in från användaren. Dessa element är bland annat;
+
+- **Input:** Vår generella textruta som tar in ett textvärde.
+- **Label:** Används för att skapa etiketter till de andra input-elementen.
+- **Textarea:** Använder vi för att få in en större text.
+- **Select:** Används tillsammans med **Option** för att skapa en lista med val.
+- **Button:** Använder vi för att skicka informationen i formuläret (attributet type ska vara satt till "submit").
+
+## Exempel:
+
+```html
+<form>
+  <label for="username">Username: </label><input id="username" type="text" />
+</form>
+```
+
+Resultet blir följande:
+
+<form>
+  <label for="username">Username: </label><input id="username" type="text" />
+</form>
+
+<h1 style="page-break-before: always;"> Övningar</h1>
+
+## Övning 1: Your first Form
+
+Läs [MDN: Your first HTML form](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form) eller [HTMLHunden: Formulär](http://htmlhunden.se/dist/02-09-html-forms.html) och följ med i guiden på respektive sida för att skapa och stila ditt första HTML-formulär.
+
+## Övning 2: Kontaktformulär på receptsidan
+
+Till din receptsida, skapa en ny sida genom att kopiera receptsidan, länka in den som du gjorde med din tabellsida, och skapa ett kontaktformulär.
+
+Kontaktformuläret ska innehålla följande:
+
+- Namn (input)
+- Email (input type=email)
+- Ämne (select-lista med minst 3 options varav en är "Övrigt")
+- Innehåll (textarea)
+- Etiketter (label) för alla andra element.
+
+# Övning 3: Stila formuläret
+
+Använd din existerande stilmall och stila formuläret på ett sätt som gör att den passar in med resten av sidan.

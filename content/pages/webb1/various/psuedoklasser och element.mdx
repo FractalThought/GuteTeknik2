@@ -1,0 +1,41 @@
+## Attributselektor
+
+Vi kan välja element utifrån attribut, antingen om attributet finns, eller om det är satt till något specifikt.
+
+### Exempel:
+
+```css
+/* Alla a-taggar som har ett title-attribut */
+a[title] {
+}
+
+/* Alla a-taggar som har sitt href-attribut satt till "https://exemple.com" */
+a[href="https://example.com"] {
+}
+```
+
+## Pseudo-klasser
+
+Pseudo står för "fake/fusk/inte riktigt". I CSS innebär en pseudo-klass något som inte är en specifik selektor, utan snarare en andra-handsselektor utifrån särskilda regler.
+
+Pseudo-klasser gör att vi kan stila saker så som varannat element i en lista, första elementet i en container (tex första headern eller första paragrafen i en artikel), eller bara element som är ensamma i en container.
+
+Det gör också att vi kan stila olika tillstånd som element kan befinna sig i, till exempel:
+
+- **hover:** När användaren har musen över
+- **active:** När användaren klickar på elementet
+- **Focus**: När elementet har fokus
+
+Läs mer om pseudo-klasser på [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+
+## Pseudo-element
+
+Om Pseudo-klasser syftar att välja saker med fusk, så är pseudo-element helt enkelt fusk-element.
+
+I CSS så har vi möjlighet att lägga till element till en position på hemsidan som bestäms av ett element som vi väljer med valfri CSS-selektor. Specifikt kan vi lägga till ett element före, eller efter, och stila denna.
+
+### Exempel
+
+### Användningsområde
+
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements

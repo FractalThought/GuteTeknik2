@@ -1,0 +1,100 @@
+# Dokumentation av ett webbsideprojekt (Post Mortem)
+
+I ett PM har du möjlighet att reflektera kring projektet du precis avslutat. Du ska skriva ner dina tankar om din process och vad det resulterade i, och diskutera vad som var svårt, vad som var lätt, och vad du kunde ha gjort bättre.
+
+## Allra minst ska ditt PM svara på följande frågor, men det måste inte vara strukturerat utifrån frågorna;
+
+- Vad gick uppgiften ut på?
+- Vad hade du för mål med uppgiften?
+- Vad har du lärt dig?
+- Vad var svårt, vad var lätt?
+- **Vad kan du göra bättre nästa gång?**
+
+## Dessutom ska ditt PM förklara följande;
+
+- Dina tankar kring (några av) dina designval
+- Dina tankar kring processen av att översätta designen till HTML & CSS
+- Några erfarenheter du tar med dig till nästa projekt
+
+## Slutligen ska du förklara hur du arbetade med;
+
+- Validering (att du skriver korrekt HTML)
+- Tillgänglighet (att din design och utförande är tillgängligt)
+
+## Längd och allt sånt (tips)
+
+Du måste inte skriva en 30 sidors uppsats om ditt projekt. Det är mer viktigt vad du har i ditt PM, än hur lång den är.
+
+Dela upp ditt innehåll i fokuserade paragrafer som bara tar upp en sak. Du ska försöka göra det så lättläst som möjligt.
+
+<h1 style="page-break-before: always">Exempel från verkligheten</h1>
+
+**Greg Street**, dåvarande lead designer på World of Warcraft, skrev ett [Post Mortem om Cataclysm](https://worldofwarcraft.com/en-us/news/4519250). Han svarar på några frågor, reflekterar kring några specifika punkter, och vad han tror fungerade bra, mindre bra, och vad han tar med sig till framtida expansioner.
+
+# Exempel
+
+## Restauranghemsida
+
+Vi skulle göra en startsida för en restaurang. Vi skulle använda Figma för att skapa en design, och sedan översätta designen till HTML och CSS.
+
+Jag hade som mål att skapa en snygg sida till en av mina favoritrestauranger i Visby; **Celine Tacohuset**.
+
+## Designen
+
+### Inspiration
+
+Jag började med att kolla in hemsidor som andra restauranger på Gotland har, och sökte runt bland snygga restaurangsidor generellt, och så kollade jag på några logotyper. Detta resulterade i ett "moodboard" av inspiration:
+
+<img src="inspiration.png" alt="">
+
+### Designprocessen
+
+Jag började med att bestämma min huvudfärg, som jag valde att vara orange. Jag använde [Paletton](http://paletton.com/) för att hitta en bra <span style="background: #FF7A00">orange</span>, och kunde då också få ut två kompletterande färger (<span style="background: #B71598">mörklila</span> och en <span style="background: #FFEC1D">blek gul färg</span>).
+
+Sedan började jag blocka ut innehållet. En cirkel blev min logga, jag satte en meny upp till höger då jag inte ville att den skulle ta upp så mycket plats, och jag använde tekniken ["hero image"](https://en.wikipedia.org/wiki/Hero_image) för att skapa en bra landningssida (startsida) som kunde ta besökaren direkt till det som jag tyckte var viktigast (menyn och boka bord).
+
+Hittade en bakgrund på Unsplash som funkade bra - jag gjorde den lite mörkare och drog ner färgen lite så att det blev bättre kontrast mellan texten och bakgrunden. Det gör det lättare att se.
+
+Jag valde att använda min primära färg till Meny-knappen, vilket ger den mest kontrast och är lätt att se.
+
+Namnet och adressen kändes också som viktig information, så därför gjorde jag dem till en del av min hero-image och gjorde dem till stora rubriker för sidan. Loggan är mindre viktig, och fick ligga i övre vänstra hörnet.
+
+Efter det gjorde jag tre callouts; "Vi kan tacos", "Stenugnsbakat pitabröd", och "Del av Adelsgatan". Dessa är en del av restaurangens image.
+
+Slutligen gjorde jag en ny sektion som är halvt dold, och hintar till besökaren att det kommer något om man scrollar neråt. Det är inte "viktigt", och enda syftet egentligen är att teasa om att det finns mer innehåll längre ner.
+
+Resultatet blev följande:
+<img src="celine_tacohuset.png">
+
+## Översättningen
+
+När jag skulle översätta designen till HTML och CSS så gjorde jag liknande som jag gjorde när jag designade sidan;
+
+1. Blockade ut alla element och lade innehållet i elementen.
+2. Lade till klasser och IDn på saker jag visste att jag behövde styla specifikt.
+3. Hämtade ut all information jag behövde från Figma (bilder, färger, fonter).
+4. Använde CSS för att stila mina element.
+
+En svårighet jag hade var att få bilden att hamna under både headern och hero-sektionen (som i sig också innehöll mina callouts). Det löste jag genom att skapa en container-div som bara har som syfte att hålla ihop min header och hero-sektion.
+
+För att få till layouten så använde jag `display:flex`, `align-items`, `justify-content`, `align-content` på olika sätt. Ibland behövde jag ha en flexbox inuti en annan flexbox för att få till centreringen korrekt.
+
+När jag hade gjort innehållet överlag så testade jag att validera hemsidan. Jag hade missat att stänga någon sektionstagg, och fick även veta att en sektionstagg bör ha en h2-h6-tagg, så jag valde att ändra om mina sektioner till div-taggar istället.
+
+Jag tänkte över mina taggar generellt, och såg till att min sida var tillgänglig genom att jag använde till exempel `nav` användes för min navigering, och `header` för min header.
+
+När jag hade stilat sidan lite så började jag testa den i tre webbläsare; Chrome, Firefox, och Edge. Sidan funkade i alla tre, med nån mindre variation i Edge, men det var acceptabelt.
+
+## Resultatet
+
+Jag är nöjd med resultatet överlag. Dock insåg jag att det blev väldigt mycket information direkt och sidan blev lite rörig med callouts så nära hero-sektionen.
+
+Detta kan jag lösa genom att flytta ner dem "under the fold", och detta gör jag genom att se till att headern och hero-sektionen tillsammans blir 100vh.
+
+Jag spenderade också väldigt mycket tid på loggan och att leta efter ikoner som funkade, innan jag hade bestämt helt och hållet hela innehållet. Det gjorde att jag var mindre villig att ta bort mina callouts än om jag hade testat mer innan.
+
+### Lärdomar till nästa gång
+
+Nästa gång ska jag tänka på mer exakt vad som borde komma med på en landing page och vad som ska vara ["above the fold"](https://en.wikipedia.org/wiki/Above_the_fold).
+
+Jag ska dessutom arbeta mer på layouten innan jag går in i detalj och designar små element. Det gör att jag får en bättre överblick.

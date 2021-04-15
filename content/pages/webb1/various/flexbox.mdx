@@ -19,7 +19,6 @@ De är ganska enkla att förstå dess syfte;
 ### Exempel:
 
 ```html
-
 <header>
   Detta är längst upp på sidan
   <nav>Här är navigeringen</nav>
@@ -29,7 +28,6 @@ De är ganska enkla att förstå dess syfte;
   Detta är vid sidan av sidan
 </aside>
 <footer>Detta är längst ner på sidan</footer>
-
 ```
 
 Icke-semantiska taggar är taggar som inte har någon mening, de förklarar inte vad de ska innehålla. Dessa används för att påverka hemsidans utseende. Vanliga icke-semantiska taggar är Div, Span, I, och B.
@@ -73,15 +71,7 @@ För detta ska fungera så behöver du ofta skapa ett element. Dessa brukar kall
 
 Detta gör att Main och Aside kommer vara lika breda, och tillsammans göra upp hela bredden av content-wrapper.
 
-<h1 style="page-break-before:always;">Projekt: Receptsida</h1>
-
-## Steg 1: Lägg till information
-
-1. Hitta ett recept eller skriv ett själv. Receptet ska innehålla en rubrik, en lista av ingredienser, en beskrivning, och instruktioner.
-2. Skapa en ny pen och lägg in receptet.
-3. Använd HTML-taggar för att strukturera ditt recept. Till exempel **h1** för rubrik, **ul** för ingredienser, och förslagsvis **ol** för instruktioner.
-
-## Steg 2: Lägg till layout
+<h1 style="page-break-before:always;">Uppgift: Skapa en layout till din receptsida</h1>
 
 Med semantiska och icke-semantiska taggar ska du skapa en struktur för din receptsida som inkluderar en header med en nav, en main, en aside, och en footer.
 
@@ -89,18 +79,18 @@ Sedan ska du använda CSS Flexbox för att stila och skapa din layout så att de
 
 <table style="text-align:center">
   <tr>
-  <td colspan="2"><div style="border: 2px solid black">header<div style="border: 2px solid black">nav</div></div></td>
+  <td colspan="2">header<div style="border: 1px solid black">nav</div></td>
   </tr>
   <tr>
-    <td><div style="border: 2px solid black">main</div></td>
-    <td><div style="border: 2px solid black">aside</div></td>
+    <td>main</td>
+    <td>aside</td>
   </tr>
   <tr>
-  <td colspan="2"><div style="border: 2px solid black">footer</div></td>
+  <td colspan="2">footer</td>
   </tr>
 </table>
 
-## Steg 3: Övrig CSS
+## Övrig CSS
 
 Ge Header, Main, Aside, och Footer bakgrundsfärger. Det är rekommenderat att Mains bakgrund är vit eller ljus, och att Aside är grå eller ljus.
 
