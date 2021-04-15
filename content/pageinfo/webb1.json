@@ -31,6 +31,12 @@
           "link": "reflektion",
           "type": "lesson"
         }
+        ,
+        {
+          "title": "Flexbox",
+          "link": "flexbox",
+          "type": "lesson"
+        }
       ],
       "references": [
         {
