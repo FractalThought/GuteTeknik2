@@ -37,6 +37,12 @@
           "link": "flexbox",
           "type": "lesson"
         }
+        ,
+        {
+          "title": "Flexbox galleri",
+          "link": "flexbox_galleri",
+          "type": "exercise"
+        }
       ],
       "references": [
         {
