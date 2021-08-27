@@ -1,0 +1,116 @@
+---
+title: "Variabelövningar"
+date: "2020-08-20"
+headings: ""
+---
+
+# Övningar på variabler i VS Code
+
+## Information om dig
+
+1. Skapa variabler för följande värden: Ditt namn, din ålder, din ålder om 5 år.
+2. Skriv ut variablerna på följande sätt: "Hej! Jag heter ..., och jag är ... år och om 5 år är jag ..." där varje ... är en variabel.
+3. Använd nu din ålder för att ta reda på ditt födelseår och skriv ut den.
+
+## Kalle Kanin och Igge Igelkott
+
+1. Skriv ett script som ska skriva ut följande, i korrekt ordning, och använder variabler för namn och ålder:
+
+```markdown
+Hej! Jag heter Kalle Kanin och jag är 6 år gammal.
+Min bror heter Kasper Kanin och är dubbelt så gammal som jag, han är 12 år gammal.
+Min lillasyster heter Klara Kanin och är bara 3 år gammal.
+Mamma och pappa Kanin säger att när jag är 10 år så får jag åka på sommarläger.
+Det är 4 år tills dess.
+```
+
+2. Ändra sedan så att du inte skriver ut syskonens ålder i kod (utskriften kommer som ett resultat av att du lagt ihop variabler).
+
+3. Ändra nu så att det istället skrivs ut följande:
+
+```markdown
+Hej! Jag heter Kalle Kanin och jag är 6 år gammal.
+Mamma och pappa Kanin säger att när jag är 10 år så får jag åka på sommarläger.
+Det är 4 år tills dess.
+Min lillasyster heter Klara Kanin och är bara 3 år gammal.
+Min bror heter Kasper Kanin och är dubbelt så gammal som jag, han är 12 år gammal.
+```
+
+4. Lägg till en ny sektion där följande står:
+
+```markdown
+Hej! Jag heter Igge Igelkott och jag är 8 år gammal.
+Mamma och pappa Igelkott säger att när jag är 10 år så får jag åka på sommarläger.
+Det är 2 år tills dess.
+Min lillasyster heter Isabella Igelkott och är bara 4 år gammal.
+Min bror heter Isak Igelkott och är dubbelt så gammal som jag, han är 16 år gammal.
+```
+
+5. Säg att du skulle lägga till ytterligare en sektion till ett till som har en likadan familj. Hur mycket skulle du behöva ändra, och hur mycket tid kan du spara med variabler?
+
+Testa gör en ny sektion för **Saga Svala** som är **4** år gammal och har en storebror som heter **Sture**, och en lillasyster som heter **Sara**.
+
+
+```javascript
+let firstName = "Kalle";
+let lastName = "Kanin";
+let brotherName = "Kasper";
+let sisterName = "Klara";
+let age = 6;
+const summerCampAge = 10;
+
+console.log(
+  "Hej! Jag heter " +
+    firstName +
+    " " +
+    lastName +
+    " och jag är " +
+    age +
+    " år gammal."
+);
+
+console.log(
+  "Mamma och pappa " +
+    lastName +
+    " säger att när jag är " +
+    summerCampAge +
+    " år så får jag åka på sommarläger."
+);
+console.log("Det är " + summerCampAge - age + " år tills dess.");
+
+console.log(
+  "Min lillasyster heter " +
+    sisterName +
+    " " +
+    lastName +
+    " och är bara " +
+    age / 2 +
+    " år gammal."
+);
+
+console.log(
+  "Min bror heter " +
+    brotherName +
+    " " +
+    lastName +
+    " och är dubbelt så gammal som jag, han är " +
+    age * 2 +
+    " år gammal."
+);
+
+```
+
+## Tips för lösning:
+<PracticeContainer>
+Om vi sätter följande variabler:
+
+- *firstName*
+- *lastName*
+- *littleSister*
+- *bigBrother*
+- *age*
+
+Så kan vi använda dessa för att få ut all information som vi behöver skriva ut.
+
+För att skapa en ny sektion så behöver vi då bara ändra variablerna till det nya värdena, och kopiera console.log-raderna vi tidigare skrivit efter variablerna blivit ändrade.
+</PracticeContainer>
