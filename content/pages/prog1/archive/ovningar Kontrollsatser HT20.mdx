@@ -1,0 +1,93 @@
+---
+title: "Kontrollsatser"
+date: "2020-09-01"
+---
+
+## Grunden
+Fortsätt med practice.js-filen vi skapat tidigare. Lägg till variabler för Kalles höjd. Kalle är 100cm lång, det räcker att du skriver `100`.
+
+Om du saknar filen, gå till [Flow-övningen](https://guteteknik.netlify.app/prog1/flow), längst ner i lösningen så finns all kod. Kopiera in den i en fil i Visual Studio Code.
+
+<PracticeContainer>
+
+```javascript
+let height = 100;
+```
+
+</PracticeContainer>
+
+---
+
+## Får Kalle Kanin gå på sommarläger?
+1. Det har nu gått några år och Kalle är äldre. Börja med att lägg till 5 till Kalles ålder.
+2. Skapa en variabel för åldern man behöver vara för att få åka på sommarläger. Sätt variabeln till 10.
+3. Skapa en kontrollsats som kollar om Kalles ålder är högre än åldern man behöver vara för att få åka på sommarläger.
+
+<PracticeContainer>
+
+```javascript
+age += 5;
+let summerCampAge = 10;
+
+if(age >= summerCampAge) {
+  console.log("Jag får gå på sommarläger!");
+}
+```
+
+</PracticeContainer>
+
+---
+
+## Vad händer om Kalle inte får åka på sommarläger?
+Lägg till en else-sats till din if-sats, som skriver ut något liknande "Jag får inte åka på sommarläger". Som en bonus kan du skriva ut hur många år det är kvar tills Kalle får åka på sommarläger.
+
+<PracticeContainer>
+
+```javascript
+if(age >= summerCampAge) {
+  console.log("Jag får gå på sommarläger!");
+} else {
+  console.log("Det är " + summerCampAge - age " tills jag får åka på sommarläger.");
+}
+```
+
+</PracticeContainer>
+
+---
+
+## Får Kalle Kanin åka Berg- och Dalbana?
+För att få åka berg- och dalbana så behöver man vara minst 11 år, och över 90cm lång.
+
+Skapa en kontrollsats som kollar både Kalles ålder och höjd, och skriver ut om han får åka berg- och dalbana.
+
+Tips: För detta behöver du operanden `&&`
+
+<PracticeContainer>
+
+```javascript
+if(age >= 11 && height > 90) {
+  console.log("Kalle får åka berg- och dalbana!")
+}
+```
+
+</PracticeContainer>
+
+---
+
+# Får Kalle åka stora vattenrutchkanan?
+
+För att få åka vattenrutchkana så behöver man antingen vara minst 10 år gammal, eller vara 120cm eller över.
+
+Skapa en kontrollsats som kollar både Kalles ålder och höjd, och skriver ut om han får åka berg- och dalbana.
+
+Tips: För detta behöver du operanden `||`
+
+<PracticeContainer>
+
+```javascript
+if(age >= 10 || height >= 120) {
+  console.log("Kalle får åka vattenrutchkanan!");
+}
+```
+
+</PracticeContainer>
