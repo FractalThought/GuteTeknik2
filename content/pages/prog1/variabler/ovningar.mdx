@@ -35,6 +35,14 @@ console.log("Hej " + firstName);
 ## Övning 3
 Skapa en variabel som heter **saldo** och sätt den till värdet `12`.
 
+<PracticeContainer>
+
+```js
+let saldo = 12;
+```
+
+</PracticeContainer>
+
 ## Övning 4
 I konsolen, skriv ut följande: `Saldo: `, samt variabeln **saldo**'s värde, och avsluta med `kr.`.
 
@@ -54,11 +62,30 @@ Skapa tre variabler (**pay**, **subscriptionCost**, **snacksCost**) och sätt de
 - **subscriptionCost**: *6*
 - **snacksCost**: *2*
 
+<PracticeContainer>
+
+```js
+let pay = 20;
+let subscriptionCost = 6;
+let snacksCost = 2;
+```
+
+</PracticeContainer>
+
 ## Övning 6
 *Variabeln **pay** håller värdet på användarens lön/månad.*
 
 1. Sätt **saldo** till sig själv, plus **pay**.
 2. Skriv ut saldot på samma sätt som i Övning 4 (hedanefter, när du blir instruerad att skriva ut saldot, gör på detta sätt).
+
+<PracticeContainer>
+
+```js
+saldo = saldo + pay;
+console.log("Saldo: " + saldo + "kr.");
+```
+
+</PracticeContainer>
 
 ## Övning 7
 *Variabeln **subscriptionCost** syftar till kostnaden/månad för att prenumerera på en tjänst (till exempel spel, streaming-tjänst, eller liknande).*
@@ -66,9 +93,27 @@ Skapa tre variabler (**pay**, **subscriptionCost**, **snacksCost**) och sätt de
 1. Skapa en variabel som visar kostnaden för att prenumerera på tre tjänster vars kostnad är lika med **subscriptionCost**. Namnet på variabeln väljer du själv, men tänk på att namnge den så beskrivande du kan.
 2. Skriv ut i konsolen ett meddelande som säger vad kostnaden för en prenumerationstjänst kostar, och vad kostnaden för tre prenumerationstjänster kostar. Du ska använda variablernas värde i meddelande.
 
+<PracticeContainer>
+
+```js
+let totalSubCost = subscriptionCost * 3; // Ett bättre sätt hade varit att sätta 3an till en variabel också, tex numberOfSubs
+console.log("En prenumerationstjänst kostar " + subscriptionCost + "kr. 3 prenumerationer kostar därför " + totalSubCost + "kr.");
+```
+
+</PracticeContainer>
+
 ## Övning 8
 1. Sätt **saldo** till sig själv, minus variabeln du skapade för totala prenumerationskostnaden.
 2. Skriv ut saldot.
+
+<PracticeContainer>
+
+```js
+saldo = saldo - totalSubCost;
+console.log("Saldo: " + saldo + "kr.");
+```
+
+</PracticeContainer>
 
 ## Övning 9
 *Variabeln **snacksCost** är kostnaden för att köpa en bit snacks (chokladkaka, godis eller chipspåse, eller liknande).*
