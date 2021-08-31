@@ -16,6 +16,16 @@ let age = 18;
 let drivingAge = 18;
 let pensionAge = 65;
 
+// Följande kod är ett snabbare sätt att sätta flera variabler
+// Man skriver bara en "let", gör en deklaration, och sätter en kommatecken för att kunna göra en till deklaration.
+let saldo = 12,
+  pay = 20,
+  subscriptionCost = 6,
+  amountOfSubs = 3,
+  snacksCost = 2;
+
+let totalSubCost = subscriptionCost * amountOfSubs;
+
 console.log(Alfred + " är " + age + "år.");
 console.log("Man får köra bil när man är " + drivingAge);
 console.log("När man är " + pensionAge + "år kan man gå i pension.");
@@ -31,7 +41,7 @@ Skriv ut ett meddelande i konsolen om `age` är lika med `drivingAge` som säger
 
 ```javascript
 if(age == drivingAge) {
-  console.log("");
+  console.log(Alfred + " är gammal nog att skaffa körkort.");
 }
 ```
 
@@ -55,9 +65,26 @@ if(age < pensionAge) {
 </PracticeContainer>
 
 # övning 3
+1. Sätt variabeln saldo till sig själv plus pay.
+2. Skapa sedan en variabel som heter monthlyExpenses, och sätt dess värde till `totalSubCost+snacksCost*3`.
+3. Använd en kontrollsats för att kolla om Alfreds månadskostnader (monthlyExpenses) överskrider eller blir lika med hans saldo, om den gör det ska skriptet skriva ut ett meddelande om konsolen som varnar honom om detta.
+4. Ändra variablerna tills dess att ditt meddelande dyker upp i konsolen.
 
+<PracticeContainer>
+
+```javascript
+saldo += pay; // Det samma som saldo = saldo + pay;
+let montlyExpenses = totalSubCost + snacksCost * 3;
+
+if(monthlyExpenses >= saldo) {
+  console.log("Varning! Dina månadskostnader överskrider eller är lika med ditt saldo");
+}
+```
+
+</PracticeContainer>
 
 # Övning 4
+
 
 # Övning 5
 
