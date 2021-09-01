@@ -21,7 +21,6 @@ let pensionAge = 65;
 let saldo = 12,
   pay = 20,
   subscriptionCost = 6,
-  amountOfSubs = 3,
   snacksCost = 2;
 
 let totalSubCost = subscriptionCost * amountOfSubs;
@@ -68,12 +67,12 @@ if(age < pensionAge) {
 1. Sätt variabeln saldo till sig själv plus pay.
 2. Skapa sedan en variabel som heter monthlyExpenses, och sätt dess värde till `totalSubCost+snacksCost*3`.
 3. Använd en kontrollsats för att kolla om Alfreds månadskostnader (monthlyExpenses) överskrider eller blir lika med hans saldo, om den gör det ska skriptet skriva ut ett meddelande om konsolen som varnar honom om detta.
-4. Ändra variablerna tills dess att ditt meddelande dyker upp i konsolen.
+4. Ändra variablerna så att ditt meddelande dyker upp i konsolen.
 
 <PracticeContainer>
 
 ```javascript
-saldo += pay; // Det samma som saldo = saldo + pay;
+saldo += pay; // Är samma som saldo = saldo + pay;
 let montlyExpenses = totalSubCost + snacksCost * 3;
 
 if(monthlyExpenses >= saldo) {
@@ -84,13 +83,79 @@ if(monthlyExpenses >= saldo) {
 </PracticeContainer>
 
 # Övning 4
+Inuti den ifsatsen du skapade i övning 3, gör en ny ifsats som också kollar om saldot är över eller lika med pay-variabeln.
+Om den är det, skriv ut att Alfred har pengar över från förra lönen.
 
+<PracticeContainer>
+
+```javascript
+if(monthlyExpenses >= saldo) {
+  console.log("Varning! Dina månadskostnader överskrider eller är lika med ditt saldo");
+
+  if(saldo >= pay) {
+
+  }
+}
+```
+
+</PracticeContainer>
 
 # Övning 5
+*Alfred gillar att använda olika prenumerationstjänster, men det får inte bli för dyrt. Om varje tjänst kostar 6kr eller mindre så vill han prenumerera på 3 tjänster.*
+
+1. Skapa en ny variabel med namnet `amountOfSubs` och sätt dess värde till `0`.
+2. I en ny kontrollsats, kolla om subscriptionCost är 6 eller mer. Om den är det, sätt `amountOfSubs` till 3.
+3. Efter kontrollsatsen (efter ifsatsens `{}`), skapa en ny variabel med namnet `totalSubCost` och sätt den till `subscriptionCost * amountOfSubs`.
+4. Skriv ut totala kostnaden för prenumerationstjänsterna (`totalSubCost`).
+
+<PracticeContainer>
+
+```javascript
+let amountOfSubs = 0;
+if(subscriptionCost >= 6) {
+  amountOfSubs = 3;
+}
+
+let totalSubCost = subscriptionCost * amountOfSubs;
+
+console.log("Totala kostnaden för Alfreds tjänster är " + "kr/månad.")
+```
+
+</PracticeContainer>
 
 # Övning 6
+Om tjänsterna inte kostar 6kr eller mindre så vill Alfred bara prenumerera på 2 tjänster.
+
+Lägg till en else-sats till ifsatsen du skapade som sätter antalet prenumerationer (`amountOfSubs`) till 2. För detta behöver du gå upp innan där du skapar och skriver ut totala kostnaden.
+
+Bonus: Tänk ut ett sätt som gör att du inte behöver använda else-satsen alls.
+
+<PracticeContainer>
+
+```javascript
+
+let amountOfSubs = 0;
+if(subscriptionCost >= 6) {
+  amountOfSubs = 3;
+} else {
+  amountOfSubs = 2;
+}
+
+let totalSubCost = subscriptionCost * amountOfSubs;
+
+console.log("Totala kostnaden för Alfreds tjänster är " + "kr/månad.")
+```
+
+</PracticeContainer>
+
+<PracticeContainer title="Lösningen till bonusfrågan">
+
+Istället för att skapa en else-sats, sätt `amountOfSubs` till 2 direkt när variabeln skapas. Eftersom kod i en ifsats inte körs som ifsatsens villkor inte är sant så sätts variabeln `amountOfSubs` aldrig om.
+
+</PracticeContainer>
 
 # Övning 7
+
 
 # Övning 8
 
