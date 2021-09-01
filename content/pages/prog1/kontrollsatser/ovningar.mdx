@@ -5,6 +5,11 @@ date: "2021-08-30"
 
 Gör övningarna i Visual Studio Code. Skapa en ny fil, namnge den *controlExcercises.js* och gör övningarna i den filen.
 
+I alla övningarna ska du testa att ändra variablernas värden för att testa att ifsatserna fungerar. Har du till exempel en ifsats som kollar om en variabels värde är 18 eller mer så ska du testa koden med följande;
+1. Minst en gång när variabelns värde är 18
+2. Minst en gång när variabelns värde är mer än 18.
+3. Minst en gång när variabelns värde är mindre än 18.
+
 Övningar behöver inte lämnas in.
 
 # Grunden
@@ -86,6 +91,8 @@ if(monthlyExpenses >= saldo) {
 Inuti den ifsatsen du skapade i övning 3, gör en ny ifsats som också kollar om saldot är över eller lika med pay-variabeln.
 Om den är det, skriv ut att Alfred har pengar över från förra lönen.
 
+Bonus: Skriv ut hur mycket pengar Alfred har från förra månaden.
+
 <PracticeContainer>
 
 ```javascript
@@ -93,9 +100,20 @@ if(monthlyExpenses >= saldo) {
   console.log("Varning! Dina månadskostnader överskrider eller är lika med ditt saldo");
 
   if(saldo >= pay) {
-
+    console.log("Du har pengar över från förra månaden");
   }
 }
+```
+
+</PracticeContainer>
+
+<PracticeContainer title="Lösning till bonusfrågan">
+
+För att lösa bonusfrågan behöver du först lösa hur du får ut hur mycket pengar Alfred hade över från förra månaden.
+Eftersom vi i övning 3 satte saldo till saldo+pay, och i övrigt har vi inte ändrat variablerna, så vet vi att vad Alfred hade kvar innan han fick lön är saldo-pay, alltså kan vi skriva ut det i konsolen, så här:
+
+```javascript
+console.log("Alfred har " + (saldo-pay) + "kr kvar sedan förra månaden.");
 ```
 
 </PracticeContainer>
@@ -124,7 +142,7 @@ console.log("Totala kostnaden för Alfreds tjänster är " + "kr/månad.")
 </PracticeContainer>
 
 # Övning 6
-Om tjänsterna inte kostar 6kr eller mindre så vill Alfred bara prenumerera på 2 tjänster.
+*Om tjänsterna inte kostar 6kr eller mindre så vill Alfred bara prenumerera på 2 tjänster.*
 
 Lägg till en else-sats till ifsatsen du skapade som sätter antalet prenumerationer (`amountOfSubs`) till 2. För detta behöver du gå upp innan där du skapar och skriver ut totala kostnaden.
 
@@ -155,99 +173,81 @@ Istället för att skapa en else-sats, sätt `amountOfSubs` till 2 direkt när v
 </PracticeContainer>
 
 # Övning 7
+*Alfred vill helst kunna köpa 8 snacksbitar, men om han inte kan det så vill han köpa 3 så han kan spara pengar till nästa månad.*
 
+1. Se till att Alfred betalar sina prenumerationer genom att minska saldot med kostnaden för tjänsterna (`totalSubCost`).
+2. Skapa sedan en ifsats och en tillhörande elsesats som kollar om Alfred kan köpa 8 snacksbitar. Om han kan det, minska saldot med kostnaden för 8 snacksbitar. Om han inte kan det, minska saldot med kostnaden för 3 snacksbitar.
+3. Skriv ut antalet snacksbitar Alfred köper denna månaden och hur mycket pengar han har kvar i slutet av månaden.
+
+Tips: Skapa en variabel du kan kolla mot. Kom ihåg att variabeln `snacksCost` håller kostnaden för en snacksbit.
+
+<PracticeContainer>
+
+```javascript
+saldo -= totalSubCost;
+let amountOfSnacks = saldo / snacksCost;
+
+if(amountOfSnacks >= 8) {
+  saldo -= 8 * snacksCost;
+  console.log("Alfred köper 8 snacksbitar och har " + saldo + "kr kvar.");
+} else {
+  saldo -= 3 * snacksCost;
+  console.log("Alfred köper 3 snacksbitar och har " + saldo + "kr kvar.");
+}
+
+```
+
+</PracticeContainer>
 
 # Övning 8
+Dubbelkolla så att Alfred faktiskt har råd att köpa ens 3 snacksbitar. Annars ska han köpa så många snacksbitar han har råd med.
+
+<PracticeContainer>
+
+```javascript
+saldo -= totalSubCost;
+let amountOfSnacks = saldo / snacksCost;
+
+if(amountOfSnacks >= 8) {
+  saldo -= 8 * snacksCost;
+  console.log("Alfred köper 8 snacksbitar och har " + saldo + "kr kvar.");
+} else {
+  if(amountOfSnacks >= 3)
+  {
+    saldo -= 3 * snacksCost;
+    console.log("Alfred köper 3 snacksbitar och har " + saldo + "kr kvar.");
+  }
+  else {
+    saldo -= amountOfSnacks * snacksCost;
+    console.log("Alfred köper " + amountOfSnacks + " snacksbitar och har " + saldo + "kr kvar.");
+  }
+}
+
+```
+
+</PracticeContainer>
 
 # Övning 9
-
-# Övning 10
-
-Kolla om två tal är lika
-Kolla om ett tal är högre än ett annat tal
-Kolla om ett tal är lägre än ett annat tal
-
-Kolla om ett tal är högre än ett specifikt tal, men lägre än ett annat specifikt tal (&&)
-
-Kolla om ett tal är en av två tal (||)
-
-Använda modulus för att kolla om ett tal är delbart med ett annat tal
-Använda modulus för att kolla om ett tal är jämt eller inte
-
-https://www.w3resource.com/c-programming-exercises/conditional-statement/index.php
-
-https://www.w3resource.com/javascript/javascript.php
-
-## Får Kalle Kanin gå på sommarläger?
-1. Det har nu gått några år och Kalle är äldre. Börja med att lägg till 5 till Kalles ålder.
-2. Skapa en variabel för åldern man behöver vara för att få åka på sommarläger. Sätt variabeln till 10.
-3. Skapa en kontrollsats som kollar om Kalles ålder är högre än åldern man behöver vara för att få åka på sommarläger.
+Se lösningen till Övning 8. Förbättra koden så att koden upprepar sig så lite som möjligt. Med detta menas att saldot och meddelandet som skrivs ut i konsolen ska göras efter if-elsesatsen.
 
 <PracticeContainer>
 
 ```javascript
-age += 5;
-let summerCampAge = 10;
+saldo -= totalSubCost;
+let amountOfSnacks = saldo / snacksCost;
 
-if(age >= summerCampAge) {
-  console.log("Jag får gå på sommarläger!");
-}
-```
-
-</PracticeContainer>
-
----
-
-## Vad händer om Kalle inte får åka på sommarläger?
-Lägg till en else-sats till din if-sats, som skriver ut något liknande "Jag får inte åka på sommarläger". Som en bonus kan du skriva ut hur många år det är kvar tills Kalle får åka på sommarläger.
-
-<PracticeContainer>
-
-```javascript
-if(age >= summerCampAge) {
-  console.log("Jag får gå på sommarläger!");
+if(amountOfSnacks >= 8) {
+  amountOfSnacks = 8;
 } else {
-  console.log("Det är " + summerCampAge - age " tills jag får åka på sommarläger.");
+  if(amountOfSnacks >= 3)
+  {
+    amountOfSnacks = 3;
+  }
 }
-```
 
-</PracticeContainer>
+saldo -= amountOfSnacks * snacksCost;
+console.log("Alfred köper " + amountOfSnacks + " snacksbitar och har " + saldo + "kr kvar.");
 
----
-
-## Får Kalle Kanin åka Berg- och Dalbana?
-För att få åka berg- och dalbana så behöver man vara minst 11 år, och över 90cm lång.
-
-Skapa en kontrollsats som kollar både Kalles ålder och höjd, och skriver ut om han får åka berg- och dalbana.
-
-Tips: För detta behöver du operanden `&&`
-
-<PracticeContainer>
-
-```javascript
-if(age >= 11 && height > 90) {
-  console.log("Kalle får åka berg- och dalbana!")
-}
-```
-
-</PracticeContainer>
-
----
-
-# Får Kalle åka stora vattenrutchkanan?
-
-För att få åka vattenrutchkana så behöver man antingen vara minst 10 år gammal, eller vara 120cm eller över.
-
-Skapa en kontrollsats som kollar både Kalles ålder och höjd, och skriver ut om han får åka berg- och dalbana.
-
-Tips: För detta behöver du operanden `||`
-
-<PracticeContainer>
-
-```javascript
-if(age >= 10 || height >= 120) {
-  console.log("Kalle får åka vattenrutchkanan!");
-}
 ```
 
 </PracticeContainer>
