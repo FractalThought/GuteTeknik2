@@ -39,7 +39,7 @@ module.exports = {
           marker: "•",
         },
         defaultLayouts: {
-          slides: require.resolve("./src/templates/slide-template.js"),
+          // slides: require.resolve("./src/templates/slide-template.js"),
           default: require.resolve("./src/templates/page-template.js"),
         },
         extensions: [".mdx", ".md"],
@@ -58,19 +58,19 @@ module.exports = {
             },
           },
           {
-            resolve:"@weknow/gatsby-remark-codepen",
+            resolve: "@weknow/gatsby-remark-codepen",
             options: {
               theme: "dark",
-              height: 500
-            }
+              height: 500,
+            },
           },
           {
             resolve: "gatsby-remark-embed-youtube",
             options: {
               width: 800,
-              height: 400
-            }
-          }
+              height: 400,
+            },
+          },
         ],
       },
     },
