@@ -258,3 +258,62 @@ console.log("Alfred köper " + amountOfSnacks + " snacksbitar och har " + saldo 
 ```
 
 </PracticeContainer>
+
+# Lösning för samtliga övningar
+
+<PracticeContainer>
+
+```javascript
+
+// Övning 1
+if(age == drivingAge) {
+  console.log(Alfred + " är gammal nog att skaffa körkort.");
+}
+// Övning 2
+if(age < pensionAge) {
+  console.log("Alfred är inte i pensionsåldern än.");
+  console.log("Alfred har " + (pensionAge-age) + " år kvar tills pensionen."); //Bonus
+}
+
+// Övning 3-4
+if(monthlyExpenses >= saldo) {
+  console.log("Varning! Dina månadskostnader överskrider eller är lika med ditt saldo");
+
+  if(saldo >= pay) {
+    console.log("Du har pengar över från förra månaden");
+  }
+}
+
+
+
+// Övning 5-6
+let amountOfSubs = 0;
+if(subscriptionCost >= 6) {
+  amountOfSubs = 3;
+} else {
+  amountOfSubs = 2;
+}
+
+let totalSubCost = subscriptionCost * amountOfSubs;
+
+console.log("Totala kostnaden för Alfreds tjänster är " + "kr/månad.")
+
+// Övning 7-9
+saldo -= totalSubCost;
+let amountOfSnacks = saldo / snacksCost;
+
+if(amountOfSnacks >= 8) {
+  amountOfSnacks = 8;
+} else {
+  if(amountOfSnacks >= 3)
+  {
+    amountOfSnacks = 3;
+  }
+}
+
+saldo -= amountOfSnacks * snacksCost;
+console.log("Alfred köper " + amountOfSnacks + " snacksbitar och har " + saldo + "kr kvar.");
+
+```
+
+</PracticeContainer>
