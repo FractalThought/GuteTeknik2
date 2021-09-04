@@ -24,8 +24,19 @@ Det finns många sätt som vi kan använda för att manipulera text. Dessa sker 
 ## Split
 Split delar upp en sträng i mindre delar.
 
+## Substr
+Substr (ska inte förväxlas med metoden substring) gör att vi kan ta ut en del av en sträng med hjälp av en startposition och en längd. Substr är bra att använda när vi vill ta ut ett antal bokstäver från en särskild position.
+
+```javascript
+let myMessage = "Alfred gillar kexchoklad";
+let manipulatedMessage = myMessage.substr(7, 6);
+
+console.log(manipulatedMessage); // Skriver ut "gillar"
+```
+
+
 ## Slice
-Slice gör att vi kan ta ut en del av en sträng. Metoden tar in två värden, en startposition och en slutposition. Slutpositionen måste inte anges, och då kommer slice ta ut allt från startpositionen och framåt.
+Slice gör att vi kan ta ut en del av en sträng med hjälp av en startposition och en slutposition. Slutpositionen måste inte anges, och då kommer slice ta ut allt från startpositionen och framåt.
 
 ```javascript
 let myMessage = "Alfred gillar kexchoklad";
