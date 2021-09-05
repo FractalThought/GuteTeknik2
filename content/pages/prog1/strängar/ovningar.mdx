@@ -100,8 +100,33 @@ console.log("Ditt lösenord är " + password);
 
 </PracticeContainer>
 
+# Övning 5
+Nu ska vi låtsas att en användare har skrivit in sitt användarnamn och lösenord, och försöker logga in. Vi behöver kolla mot användarnamnet och lösenordet som vi har sparat (variablerna `userName` och `password`).
 
-Kolla om första bokstaven är a, b, eller c
+1. Skapa två variabler, `inputUserName` och `inputPassword`. Sätt deras värden till rätt användarnamn och lösenord (utifrån vad vi sett tidigare).
+2. I en kontrollsats, kolla om `inputUserName` har samma värde som `userName`.
+3. Gör samma för lösenordet, men lägg den kontrollsatsen inuti kontrollsatsen för användarnamnet.
+4. Skriv ut meddelanden i konsolen för följande scenarion:
+  - Användarnamnet och lösenordet är rätt (inloggningen lyckades)
+  - Användarnamnet är fel
+  - Lösenordet är fel
+5. Testa dina kontrollsatser tills du har testat att alla satser fungerar (alltså att du fått fram alla meddelanden).
+
+
+# Övning 6
+När en användaren ska skapa ett lösenord så brukar man kräva att lösenordet följer särskilda regler. Vanligt är att man har minst en siffra, en stor och en liten bokstav, och är en viss längd. Längd är lätt att kolla men de andra kräver något som kallas Regular Expressions, vilket är lite mer avancerade, så i denna övningen ska vi bara kolla längder.
+
+För att kolla längden på en sträng använder man en egenskap som alla strängar i JavaScript har, nämligen length. Det fungerar så här:
+
+```javascript
+let message = "Hej! ";
+
+```
+
+
+Kolla om två strängar är lika långa
+Hitta positionen av en bokstav
+
 
 
 
