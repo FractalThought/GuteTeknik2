@@ -114,17 +114,32 @@ Nu ska vi låtsas att en användare har skrivit in sitt användarnamn och lösen
 
 
 # Övning 6
-När en användaren ska skapa ett lösenord så brukar man kräva att lösenordet följer särskilda regler. Vanligt är att man har minst en siffra, en stor och en liten bokstav, och är en viss längd. Längd är lätt att kolla men de andra kräver något som kallas Regular Expressions, vilket är lite mer avancerade, så i denna övningen ska vi bara kolla längder.
+När en användaren ska skapa ett lösenord så brukar man kräva att lösenordet följer särskilda regler. Vanligt är att man har minst en siffra, en stor och en liten bokstav, och är en viss längd (antal tecken i strängen). Längd är lätt att kolla men de andra kräver något som kallas Regular Expressions, vilket är lite mer avancerade, så i denna övningen ska vi bara kolla längder.
 
 För att kolla längden på en sträng använder man en egenskap som alla strängar i JavaScript har, nämligen length. Det fungerar så här:
 
 ```javascript
-let message = "Hej! ";
-
+let message = "Hej!";
+console.log(message.length); // Skriver ut 4.
 ```
 
+## Att göra:
+I denna övning ska du ändra lösenordet till något annat (bara sätt om värdet på password), och sedan kolla om det lösenordet är minst 8 tecken långt. Skriv ut ett felmeddelande om lösenordet inte är långt nog.
 
-Kolla om två strängar är lika långa
+<PracticeContainer>
+
+```javascript
+password = "hejhej";
+if(password.length < 8) {
+  console.log("Fel! Lösenordet måste vara minst 8 tecken.");
+}
+```
+
+</PracticeContainer>
+
+# Övning 7
+
+
 Hitta positionen av en bokstav
 
 
