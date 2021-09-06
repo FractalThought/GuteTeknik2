@@ -1,5 +1,5 @@
 ---
-title: "Kontrollsatser"
+title: "Övningar i kontrollsatser"
 date: "2021-08-30"
 ---
 
@@ -37,7 +37,7 @@ let saldo = 12,
 
 let totalSubCost = subscriptionCost * amountOfSubs;
 
-console.log(Alfred + " är " + age + "år.");
+console.log(myName + " är " + age + "år.");
 console.log("Man får köra bil när man är " + drivingAge);
 console.log("När man är " + pensionAge + "år kan man gå i pension.");
 
@@ -52,7 +52,7 @@ Skriv ut ett meddelande i konsolen om `age` är lika med `drivingAge` som säger
 
 ```javascript
 if(age == drivingAge) {
-  console.log(Alfred + " är gammal nog att skaffa körkort.");
+  console.log(myName + " är gammal nog att skaffa körkort.");
 }
 ```
 
@@ -68,8 +68,8 @@ Bonus: Skriv ut hur många år Alfred har kvar till pensionsåldern.
 
 ```javascript
 if(age < pensionAge) {
-  console.log("Alfred är inte i pensionsåldern än.");
-  console.log("Alfred har " + (pensionAge-age) + " år kvar tills pensionen."); //Bonus
+  console.log(myName + "Alfred är inte i pensionsåldern än.");
+  console.log(myName + " har " + (pensionAge-age) + " år kvar tills pensionen."); //Bonus
 }
 ```
 
@@ -120,7 +120,7 @@ För att lösa bonusfrågan behöver du först lösa hur du får ut hur mycket p
 Eftersom vi i övning 3 satte saldo till saldo+pay, och i övrigt har vi inte ändrat variablerna, så vet vi att vad Alfred hade kvar innan han fick lön är saldo-pay, alltså kan vi skriva ut det i konsolen, så här:
 
 ```javascript
-console.log("Alfred har " + (saldo-pay) + "kr kvar sedan förra månaden.");
+console.log(myName + " har " + (saldo-pay) + "kr kvar sedan förra månaden.");
 ```
 
 </PracticeContainer>
