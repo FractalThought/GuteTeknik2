@@ -77,7 +77,29 @@
       "link": "kontrollsatser",
       "pages": [
         {
-          "title": "Introduktion till kontrollsatser?",
+          "title": "Introduktion till kontrollsatser",
+          "link": "intro",
+          "type": "lesson"
+        },
+        {
+          "title": "Övningar",
+          "link": "ovningar",
+          "type": "exercise"
+        }
+      ],
+      "references": [
+        {
+          "title": "Begrepp",
+          "link": "begrepp"
+        }
+      ]
+    },
+    {
+      "title": "Strängar",
+      "link": "strängar",
+      "pages": [
+        {
+          "title": "Strängmanipulation",
           "link": "intro",
           "type": "lesson"
         },

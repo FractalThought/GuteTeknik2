@@ -5,6 +5,8 @@ date: "2021-08-30"
 
 Gör övningarna i Visual Studio Code. Skapa en ny fil, namnge den *stringExcercises.js* och gör övningarna i den filen.
 
+Till din hjälp har du [Introduktion till strängmanipulation](https://guteteknik.netlify.app/prog1/strängar/intro).
+
 Övningar behöver inte lämnas in.
 
 # Grunden
@@ -67,7 +69,7 @@ console.log("Ditt användarnamn är: " + userName + ".");
 # Övning 3
 Användarnamnen i vårt system ska bara ha små bokstäver, men eftersom de tar med första bokstäverna i för- och efternamnet så får de alltid med minst 2 stora bokstäver.
 
-Använd metoden toLowerCase för att sätta variabeln userName till bara små bokstäver. Skriv metoden innan skriptet skriver ut till konsolen så det som skrivs ut i konsolen är rätt (bara små bokstäver).
+Använd metoden `toLowerCase` för att sätta variabeln userName till bara små bokstäver. Skriv metoden innan skriptet skriver ut till konsolen så det som skrivs ut i konsolen är rätt (bara små bokstäver).
 
 <PracticeContainer>
 
@@ -84,7 +86,7 @@ console.log("Ditt användarnamn är: " + userName + ".");
 # Övning 4
 Nu ska skriptet generera ett lösenord. Lösenordet ska bestå av de fyra sista bokstäverna i förnamnet och det aktuella årtalet (tex 2021 om året är 2021 - detta kan du hårdkoda, alltså bara lägga till `"2021"`).
 
-För att få ut de fyra sista siffrorna kan du använda strängmetoden Slice. Den använder en eller två positioner för att hämta ut delar av en sträng. Eftersom Slice kan ta in negativa nummer som startposition så kan vi välja bara bokstäver i slutet av en sträng.
+För att få ut de fyra sista siffrorna kan du använda strängmetoden `Slice`. Den använder en eller två positioner för att hämta ut delar av en sträng. Eftersom Slice kan ta in negativa nummer som startposition så kan vi välja bara bokstäver i slutet av en sträng.
 
 1. Skapa en variabel med namnet `password` och sätt dess värde till resultatet av metoden slice som körs på strängen `lastName`. Slice ska hämta ut de fyra sista bokstäverna från lastName.
 2. Lägg till årtalet (till exempel `"2021"`) till variabeln `password`. 
