@@ -47,9 +47,51 @@ console.log(manipulatedMessage); // Skriver ut "Alfred gillar kex".
 ```
 
 
-
 ## toLowerCase och toUpperCase
 Något som är ganska vanligt när man hanterar användarinput är att man vill sätta alla bokstäver till stora eller små bokstäver (versaler eller gemener). Detta är särskilt användbart när man vill jämföra texter med varandra, eftersom en sträng skriven med stora bokstäver kommer inte kännas igen som likadan som en sträng skriven med små bokstäver även om texterna egentligen innehåller samma bokstäver (`"Hej"` är alltid inte samma som `"hej"`).
+
+Därför kan man använda `toLowerCase()` eller `toUpperCase()`, så här:
+
+```javascript
+let message = "Hej!";
+messageLower = message.toLowerCase();
+console.log(messageLower); // Skriver ut "hej!"
+
+messageUpper = message.toUpperCase();
+console.log(messageUpper); // Skriver ut "HEJ!"
+
+if(message == messageLower) {
+    /* Detta kommer inte vara sant, eftersom ena är blandat stora och små bokstäver men andra är bara stora bokstäver. */
+}
+```
+
+
+## indexOf
+Om vi vill hitta en del av en sträng, till exempel se om ett ord innehåller ett specifikt tecken, eller om en mening innehåller ett ord, så kan du använda metoden indexOf. indexOf hittar första instansen och skickar tillbaka positionen på första tecknet i ordet, eller `-1` om det du letar efter inte finns.
+
+indexOf körs på en sträng, och tar ett argument för vad som ska kollas, så här:
+
+```javascript
+let message = "Hej Alfred! Hur mår du?";
+let searchName = "Alfred"
+let indexOfName = message.indexOf(searchName);
+
+console.log(indexOfName); // Skriver ut 4
+```
+
+Vi kan göra en koll på värdet som kommer tillbaka för att kolla om söktermen finns eller inte, så här;
+
+```javascript
+let message = "Hej Alfred! Hur mår du?";
+let searchName = "Kalle"
+let indexOfName = message.indexOf(searchName);
+
+if(indexOfName == -1) {
+    console.log(searchName + " finns inte i meningen " + message);
+    // skriver ut "Kalle finns inte i meningen Hej Alfred! Hur mår du?"
+}
+```
+
 
 # Källor
 [Text formatting på Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Text_formatting)

@@ -138,238 +138,25 @@ if(password.length < 8) {
 </PracticeContainer>
 
 # Övning 7
+Med metoden `indexOf` kan vi undersöka om ett ord eller tecken finns i en mening. Använd det för att göra följande:
 
+1. Skapa en variabel som håller meningen `"Alfred gillar chokladkaka, glass, och mjölk."`
+2. Skapa en kontrollsats som kollar om meningen ovan innehåller ordet `"godis"`.
+3. Skapa en kontrollsats som kollar om meningen ovan innehåller ordet `"choklad"`.
+4. Skapa en kontrollsats som kollar om meningen ovan innehåller ordet `"mjölkchoklad"`.
 
-Hitta positionen av en bokstav
-
-
-
-
-Konkatenering
-Slice
-Split?
-toLowerCase
-toUpperCase
-Compare
-IsEmpty?
-PositionOf?
-Need to do multiple operations to get the result
-Need to have do some problem solving to get their result
-
-10 övningar
-
-
-# Övning 1
-Skapa en kontrollsats (`if()`), kolla om variabeln `age` är samma som variabeln `drivingAge`.
-Skriv ut ett meddelande i konsolen om `age` är lika med `drivingAge` som säger att Alfred är gammal nog att kunna skaffa körkort.
-
-<PracticeContainer>
-
-```javascript
-if(age == drivingAge) {
-  console.log(Alfred + " är gammal nog att skaffa körkort.");
-}
-```
-
-</PracticeContainer>
-
-
-# Övning 2
-Skapa en till kontrollsats som kollar om `age` är lägre än `pensionAge`.
-Skriv ut ett meddelande i konsolen om `age` är lägre, som säger att Alfred inte är i pensionsåldern än.
-Bonus: Skriv ut hur många år Alfred har kvar till pensionsåldern.
-
-<PracticeContainer>
-
-```javascript
-if(age < pensionAge) {
-  console.log("Alfred är inte i pensionsåldern än.");
-  console.log("Alfred har " + (pensionAge-age) + " år kvar tills pensionen."); //Bonus
-}
-```
-
-</PracticeContainer>
-
-# övning 3
-1. Sätt variabeln saldo till sig själv plus pay.
-2. Skapa sedan en variabel som heter monthlyExpenses, och sätt dess värde till `totalSubCost+snacksCost*3`.
-3. Använd en kontrollsats för att kolla om Alfreds månadskostnader (monthlyExpenses) överskrider eller blir lika med hans saldo, om den gör det ska skriptet skriva ut ett meddelande om konsolen som varnar honom om detta.
-4. Ändra variablerna så att ditt meddelande dyker upp i konsolen.
-
-<PracticeContainer>
-
-```javascript
-saldo += pay; // Är samma som saldo = saldo + pay;
-let montlyExpenses = totalSubCost + snacksCost * 3;
-
-if(monthlyExpenses >= saldo) {
-  console.log("Varning! Dina månadskostnader överskrider eller är lika med ditt saldo");
-}
-```
-
-</PracticeContainer>
-
-# Övning 4
-Inuti den ifsatsen du skapade i övning 3, gör en ny ifsats som också kollar om saldot är över eller lika med pay-variabeln.
-Om den är det, skriv ut att Alfred har pengar över från förra lönen.
-
-Bonus: Skriv ut hur mycket pengar Alfred har från förra månaden.
-
-<PracticeContainer>
-
-```javascript
-if(monthlyExpenses >= saldo) {
-  console.log("Varning! Dina månadskostnader överskrider eller är lika med ditt saldo");
-
-  if(saldo >= pay) {
-    console.log("Du har pengar över från förra månaden");
-  }
-}
-```
-
-</PracticeContainer>
-
-<PracticeContainer title="Lösning till bonusfrågan">
-
-För att lösa bonusfrågan behöver du först lösa hur du får ut hur mycket pengar Alfred hade över från förra månaden.
-Eftersom vi i övning 3 satte saldo till saldo+pay, och i övrigt har vi inte ändrat variablerna, så vet vi att vad Alfred hade kvar innan han fick lön är saldo-pay, alltså kan vi skriva ut det i konsolen, så här:
-
-```javascript
-console.log("Alfred har " + (saldo-pay) + "kr kvar sedan förra månaden.");
-```
-
-</PracticeContainer>
-
-# Övning 5
-*Alfred gillar att använda olika prenumerationstjänster, men det får inte bli för dyrt. Om varje tjänst kostar 6kr eller mindre så vill han prenumerera på 3 tjänster.*
-
-1. Skapa en ny variabel med namnet `amountOfSubs` och sätt dess värde till `0`.
-2. I en ny kontrollsats, kolla om subscriptionCost är 6 eller mer. Om den är det, sätt `amountOfSubs` till 3.
-3. Efter kontrollsatsen (efter ifsatsens `{}`), skapa en ny variabel med namnet `totalSubCost` och sätt den till `subscriptionCost * amountOfSubs`.
-4. Skriv ut totala kostnaden för prenumerationstjänsterna (`totalSubCost`).
-
-<PracticeContainer>
-
-```javascript
-let amountOfSubs = 0;
-if(subscriptionCost >= 6) {
-  amountOfSubs = 3;
-}
-
-let totalSubCost = subscriptionCost * amountOfSubs;
-
-console.log("Totala kostnaden för Alfreds tjänster är " + "kr/månad.")
-```
-
-</PracticeContainer>
-
-# Övning 6
-*Om tjänsterna inte kostar 6kr eller mindre så vill Alfred bara prenumerera på 2 tjänster.*
-
-Lägg till en else-sats till ifsatsen du skapade som sätter antalet prenumerationer (`amountOfSubs`) till 2. För detta behöver du gå upp innan där du skapar och skriver ut totala kostnaden.
-
-Bonus: Tänk ut ett sätt som gör att du inte behöver använda else-satsen alls.
-
-<PracticeContainer>
-
-```javascript
-
-let amountOfSubs = 0;
-if(subscriptionCost >= 6) {
-  amountOfSubs = 3;
-} else {
-  amountOfSubs = 2;
-}
-
-let totalSubCost = subscriptionCost * amountOfSubs;
-
-console.log("Totala kostnaden för Alfreds tjänster är " + "kr/månad.")
-```
-
-</PracticeContainer>
-
-<PracticeContainer title="Lösningen till bonusfrågan">
-
-Istället för att skapa en else-sats, sätt `amountOfSubs` till 2 direkt när variabeln skapas. Eftersom kod i en ifsats inte körs som ifsatsens villkor inte är sant så sätts variabeln `amountOfSubs` aldrig om.
-
-</PracticeContainer>
-
-# Övning 7
-*Alfred vill helst kunna köpa 8 snacksbitar, men om han inte kan det så vill han köpa 3 så han kan spara pengar till nästa månad.*
-
-1. Se till att Alfred betalar sina prenumerationer genom att minska saldot med kostnaden för tjänsterna (`totalSubCost`).
-2. Skapa sedan en ifsats och en tillhörande elsesats som kollar om Alfred kan köpa 8 snacksbitar. Om han kan det, minska saldot med kostnaden för 8 snacksbitar. Om han inte kan det, minska saldot med kostnaden för 3 snacksbitar.
-3. Skriv ut antalet snacksbitar Alfred köper denna månaden och hur mycket pengar han har kvar i slutet av månaden.
-
-Tips: Skapa en variabel du kan kolla mot. Kom ihåg att variabeln `snacksCost` håller kostnaden för en snacksbit.
-
-<PracticeContainer>
-
-```javascript
-saldo -= totalSubCost;
-let amountOfSnacks = saldo / snacksCost;
-
-if(amountOfSnacks >= 8) {
-  saldo -= 8 * snacksCost;
-  console.log("Alfred köper 8 snacksbitar och har " + saldo + "kr kvar.");
-} else {
-  saldo -= 3 * snacksCost;
-  console.log("Alfred köper 3 snacksbitar och har " + saldo + "kr kvar.");
-}
-
-```
-
-</PracticeContainer>
+För alla kontrollsatser ska det skrivas ut ett meddelande i konsolen som säger om meningen innehåller ordet som du söker efter.
 
 # Övning 8
-Dubbelkolla så att Alfred faktiskt har råd att köpa ens 3 snacksbitar. Annars ska han köpa så många snacksbitar han har råd med.
-
-<PracticeContainer>
+Vi har följande variabler:
 
 ```javascript
-saldo -= totalSubCost;
-let amountOfSnacks = saldo / snacksCost;
-
-if(amountOfSnacks >= 8) {
-  saldo -= 8 * snacksCost;
-  console.log("Alfred köper 8 snacksbitar och har " + saldo + "kr kvar.");
-} else {
-  if(amountOfSnacks >= 3)
-  {
-    saldo -= 3 * snacksCost;
-    console.log("Alfred köper 3 snacksbitar och har " + saldo + "kr kvar.");
-  }
-  else {
-    saldo -= amountOfSnacks * snacksCost;
-    console.log("Alfred köper " + amountOfSnacks + " snacksbitar och har " + saldo + "kr kvar.");
-  }
-}
-
+let errorMessage = "Meddelande: Något gick fel!";
+let warningMessage = "Meddelande: Varning! Något kan gå fel!";
+let noticeMessage = "Meddelande: Allt är lugnt!";
 ```
 
-</PracticeContainer>
-
-# Övning 9
-Se lösningen till Övning 8. Förbättra koden så att koden upprepar sig så lite som möjligt. Med detta menas att saldot och meddelandet som skrivs ut i konsolen ska göras efter if-elsesatsen.
-
-<PracticeContainer>
-
-```javascript
-saldo -= totalSubCost;
-let amountOfSnacks = saldo / snacksCost;
-
-if(amountOfSnacks >= 8) {
-  amountOfSnacks = 8;
-} else {
-  if(amountOfSnacks >= 3)
-  {
-    amountOfSnacks = 3;
-  }
-}
-
-saldo -= amountOfSnacks * snacksCost;
-console.log("Alfred köper " + amountOfSnacks + " snacksbitar och har " + saldo + "kr kvar.");
-
-```
-
-</PracticeContainer>
+Du ska göra följande:
+1. Ta bort `"Meddelande: "` från alla meddelanden.
+2. Ändra `"!"` till `"."` (utropsteckena till punkter) i alla meddelanden.
+3. Skriv ut alla meddelanden i konsolen.
