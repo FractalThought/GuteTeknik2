@@ -72,7 +72,7 @@ export default function PageTemplate({ pageContext, data, location }) {
 
   const crumbData = {
     crumbs: crumbs,
-    crumbSeparator: " > ",
+    crumbSeparator: "/",
     crumbLabel: page.frontmatter.title,
   }
 

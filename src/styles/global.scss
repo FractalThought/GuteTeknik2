@@ -114,6 +114,10 @@ header {
   display: inline-block;
 }
 
+.breadcrumb__list {
+  display: flex;
+}
+
 .breadcrumb__link {
   color: $color-primary-600;
 }
@@ -123,8 +127,13 @@ header {
 }
 
 .breadcrumb__separator {
-  margin: 0 0.25em;
+  margin: 0 0.25em 0 0;
   font-weight: 800;
+}
+
+.breadcrumb__link__active {
+  font-weight: 800;
+  color: $color-primary-800;
 }
 
 .page-heading {
