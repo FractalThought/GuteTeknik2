@@ -22,7 +22,7 @@ $course-card-shadow-hover: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
 :root {
   /* Color styles */
   --primary--50: hsla(264, 45.5%, 97.8%, 1);
-  --primary--100: hsla(259, 82.4%, 93.3%, 1);
+  --primary--100: hsla(258, 86.7%, 97.1%, 1);
   --primary--200: hsla(260, 84.3%, 90%, 1);
   --primary--300: hsla(259, 85.7%, 83.5%, 1);
   --primary--400: hsla(260, 84.9%, 76.7%, 1);
@@ -32,20 +32,38 @@ $course-card-shadow-hover: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
   --primary--800: hsla(259, 85.2%, 37.1%, 1);
   --primary--900: hsla(259, 85.7%, 24.7%, 1);
   --gray--50: hsla(240, 20%, 99%, 1);
-  --gray--100: hsla(260, 15%, 92.2%, 1);
-  --gray--200: hsla(262, 14.3%, 84.9%, 1);
-  --gray--300: hsla(259, 15%, 75.1%, 1);
-  --gray--400: hsla(260, 15.1%, 64.9%, 1);
-  --gray--500: hsla(259, 14.8%, 54.9%, 1);
-  --gray--600: hsla(259, 14.8%, 45.1%, 1);
-  --gray--700: hsla(260, 20.2%, 34.9%, 1);
-  --gray--800: hsla(260, 40.2%, 24.9%, 1);
+  --gray--100: hsla(260, 20%, 97.1%, 1);
+  --gray--200: hsla(264, 12.2%, 92%, 1);
+  --gray--300: hsla(258, 13.2%, 85.1%, 1);
+  --gray--400: hsla(260, 11.7%, 64.9%, 1);
+  --gray--500: hsla(258, 10%, 55.1%, 1);
+  --gray--600: hsla(259, 12.2%, 45.1%, 1);
+  --gray--700: hsla(259, 16.2%, 35.1%, 1);
+  --gray--800: hsla(259, 29.7%, 25.1%, 1);
   --gray--900: hsla(259, 40.3%, 15.1%, 1);
-
-  --text-color: var(--gray--800);
+  --green--50: hsla(144, 45.5%, 97.8%, 1);
+  --green--100: hsla(139, 82.4%, 93.3%, 1);
+  --green--200: hsla(140, 84.3%, 90%, 1);
+  --green--300: hsla(139, 85.7%, 83.5%, 1);
+  --green--400: hsla(139, 84.9%, 76.7%, 1);
+  --green--500: hsla(139, 85.5%, 70.2%, 1);
+  --green--600: hsla(139, 84%, 63.1%, 1);
+  --green--700: hsla(139, 84.6%, 56.7%, 1);
+  --green--800: hsla(139, 85.2%, 37.1%, 1);
+  --green--900: hsla(139, 85.7%, 24.7%, 1);
+  --orange--50: hsla(24, 45.5%, 97.8%, 1);
+  --orange--100: hsla(19, 82.4%, 93.3%, 1);
+  --orange--200: hsla(20, 84.3%, 90%, 1);
+  --orange--300: hsla(19, 85.7%, 83.5%, 1);
+  --orange--400: hsla(19, 84.9%, 76.7%, 1);
+  --orange--500: hsla(19, 85.5%, 70.2%, 1);
+  --orange--600: hsla(19, 84%, 63.1%, 1);
+  --orange--700: hsla(19, 84.6%, 56.7%, 1);
+  --orange--800: hsla(19, 85.2%, 37.1%, 1);
+  --orange--900: hsla(19, 85.7%, 24.7%, 1);
 
   /* Text-size styles */
-  /* base size: base (18px) */
+  /* base size: base (16px) */
   --smaller: 0.75rem;
   --small: 0.88rem;
   --base: 1rem;
@@ -58,16 +76,21 @@ $course-card-shadow-hover: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
   --lg7: 3.75rem;
 
   /* Effect styles */
-  --shadow-md: 4px 0px 2px rgba(55, 38, 89, 0.06),
-    6px 0px 4px rgba(55, 38, 89, 0.1);
-  --shadow-lg: 6px 0px 4px rgba(55, 38, 89, 0.05),
-    15px 0px 10px rgba(55, 38, 89, 0.1);
-  --shadow-inner-md: 4px 0px 2px rgba(55, 38, 89, 0.06),
-    inset 6px 0px 4px rgba(55, 38, 89, 0.1);
-  --shadow-inner-lg: inset 6px 0px 4px rgba(55, 38, 89, 0.05),
-    inset 15px 0px 10px rgba(55, 38, 89, 0.1);
+  --shadow-md: 0px 2px 4px rgba(55, 38, 89, 0.06),
+    0px 4px 6px rgba(55, 38, 89, 0.1);
+  --shadow-lg: 0px 4px 6px rgba(55, 38, 89, 0.05),
+    0px 10px 15px rgba(55, 38, 89, 0.1);
+  --shadow-inner-md: 0px 2px 4px rgba(55, 38, 89, 0.06),
+    inset 0px 4px 6px rgba(55, 38, 89, 0.1);
+  --shadow-inner-lg: inset 0px 4px 6px rgba(55, 38, 89, 0.05),
+    inset 0px 10px 15px rgba(55, 38, 89, 0.1);
+  --shadow-lg-purple: 0px 4px 6px rgba(156, 114, 244, 0.05),
+    0px 10px 15px rgba(156, 114, 244, 0.1);
+  --shadow-lg-purple-dark: 0px 4px 6px rgba(44, 9, 117, 0.05),
+    0px 10px 15px rgba(44, 9, 117, 0.1);
 }
 
+// Old, don't use (use css var instead)
 $color-primary-900: rgba(20, 44, 91, 1);
 $color-primary-800: rgba(28, 61, 127, 1);
 $color-primary-700: rgba(36, 79, 163, 1);
@@ -77,7 +100,6 @@ $color-primary-400: rgba(104, 144, 222, 1);
 $color-primary-300: rgba(138, 169, 229, 1);
 $color-primary-200: rgba(212, 224, 247, 1);
 $color-primary-100: rgba(244, 247, 255, 1);
-// $color-primary-100: rgba(236, 241, 253, 1);
 
 $color-gray-900: rgba(230, 231, 234, 1);
 $color-gray-800: rgba(205, 207, 214, 1);
