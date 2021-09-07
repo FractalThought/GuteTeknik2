@@ -180,4 +180,261 @@ main li {
   }
 }
 
+// New layout
+
+/*
+
+#main-grid {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "aside"
+    "footer";
+  grid-template-columns: 1fr;
+  row-gap: 2em;
+  position: relative;
+}
+
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary--800);
+  padding: 0.5em;
+}
+
+.course-nav {
+  grid-area: coursenav;
+  font-size: var(--large);
+  display: none;
+}
+
+#logo {
+  font-size: var(--lg3);
+  grid-area: logo;
+}
+
+#logo * {
+  color: var(--primary--100);
+}
+
+#logo a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 0.25em;
+  color: var(--primary--100);
+}
+
+#logo path {
+  fill: currentColor;
+}
+
+#searchbar {
+  padding: 0 1em;
+  grid-area: searchbar;
+  display: none;
+}
+
+#searchbar input {
+  box-sizing: border-box;
+  border: none;
+  padding: 0.5em;
+  background: var(--gray--100);
+  font-size: var(--large);
+  border-radius: 5px;
+  width: 100%;
+}
+
+.show-menu-button {
+  background: none;
+  border: none;
+  display: flex;
+  gap: 0.25em;
+  font-size: var(--large);
+  font-family: "montserrat";
+  color: var(--primary--50);
+}
+
+.sidemenu {
+  display: none;
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background: var(--gray--50);
+  color: var(--primary--900);
+  font-family: "Open Sans", sans-serif;
+  font-size: var(--base);
+  padding-right: 1em;
+  z-index: 1;
+  width: 100%;
+  grid-area: main;
+  max-height: 80vh;
+}
+
+.sidemenu--show {
+  display: block;
+}
+
+.sidemenu a {
+  text-decoration: none;
+}
+
+.sidemenu a:hover {
+  text-decoration: underline;
+}
+
+.sidemenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidemenu__heading {
+  font-family: "Montserrat", sans-serif;
+  color: var(--primary--800);
+  font-size: var(--lg2);
+  font-weight: normal;
+}
+
+.sidemenu__shortcutlist > li {
+  padding: calc(var(--large) / 2);
+}
+
+.sidemenu__shortcutlist a {
+  color: var(--primary--900);
+  text-decoration: none;
+  font-size: var(--large);
+}
+
+.sidemenu__shortcutlist a:hover {
+  color: var(--primary--700);
+  text-decoration; underline;
+}
+
+.menu-section {
+  margin-top: 1em;
+}
+
+.menu-section__heading {
+  color: var(--gray--800);
+  font-size: var(--base);
+}
+
+.menu-section__heading:hover {
+  color: var(--primary--800);
+}
+
+.menu-section__heading h2 {
+  font-size: var(--base);
+  font-weight: normal;
+  margin-bottom: 0.5em;
+}
+
+.menu-section__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-section__list a {
+  display: inline-block;
+  color: var(--gray--700);
+  background: var(--gray--100);
+  padding: calc(var(--large) / 2) calc(var(--lg3) / 2);
+}
+
+.menu-section__list a:hover {
+  background: var(--gray--300);
+  color: var(--gray--800);
+}
+
+main {
+  grid-area: main;
+  padding: 0 1em;
+}
+
+aside {
+  grid-area: aside;
+}
+
+.page-index__heading {
+  font-size: var(--large);
+}
+
+.page-index__list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+}
+
+.page-index__list a {
+  text-decoration: none;
+  color: var(--gray--700);
+  margin-bottom: 1em;
+}
+
+.page-index__list a:hover {
+  text-decoration: underline;
+  color: var(--primary--700);
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    padding: 1em;
+  }
+  
+  #main-grid {
+    grid-template-areas:
+    "logo coursenav coursenav"
+    "menu main aside"
+    "footer footer footer";
+    grid-template-columns: 1fr minmax(500px, 800px) 1fr;
+  }
+  
+  header {
+    display: contents;
+  }
+  
+  #logo * {
+    color: var(--primary--800);
+  }
+  
+  .course-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+  }
+  
+  .course-nav__courselink {
+    text-decoration: none;
+    color: var(--gray--500);
+  }
+  
+  .course-nav__courselink:hover {
+    text-decoration: underlin;
+    color: var(--primary--700);
+  }
+  
+  .course-nav__courselink--active {
+    color: var(--primary--800);
+  }
+  
+  .show-menu-button {
+    display: none;
+  }
+  
+  .sidemenu {
+    display: block;
+    grid-area: menu;
+    position: static;
+    overflow-y: auto;
+    min-height: 80vh;
+    max-height: 85vh;
+  }
+}
+
+*/
+
 @import "print";
