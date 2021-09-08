@@ -30,18 +30,16 @@ function Header({ mainPage }) {
   function createHeaderLink(currentLink, link, key) {
     if (currentLink === link.link) {
       return (
-        <li key={key}>
-          <a className="active" href={"/" + link.link}>
-            {link.name}
-          </a>
-        </li>
+        <Link key={key} className="active" href={"/" + link.link}>
+          {link.name}
+        </Link>
       )
     }
 
     return (
-      <li key={key}>
-        <a href={"/" + link.link}>{link.name}</a>
-      </li>
+      <Link key={key} href={"/" + link.link}>
+        {link.name}
+      </Link>
     )
   }
 
@@ -63,7 +61,7 @@ function Header({ mainPage }) {
   return (
     <header id="toppen">
       <div id="logo">
-        <a href="#">
+        <Link href="#">
           <svg
             width="30"
             height="30"
@@ -85,33 +83,15 @@ function Header({ mainPage }) {
             />
           </svg>
           <h2>Tektal</h2>
-        </a>
+        </Link>
       </div>
       <div id="searchbar">
         <input type="text" placeholder="Sök" />
       </div>
       <nav class="course-nav">
-        <a
-          href="#"
-          class="course-nav__courselink course-nav__courselink--active"
-        >
-          Programmering 1
-        </a>
-        <a href="#" class="course-nav__courselink">
-          Programmering 2
-        </a>
-        <a href="#" class="course-nav__courselink">
-          Webbutveckling 1
-        </a>
-        <a href="#" class="course-nav__courselink">
-          Webbutveckling 2
-        </a>
-        <a href="#" class="course-nav__courselink">
-          Dator- och nätverksteknik
-        </a>
-        <a href="#" class="course-nav__courselink">
-          Digitalt skapande
-        </a>
+        {topPages.map((page, key) => {
+          return createHeaderLink(mainPage, page, key)
+        })}
       </nav>
 
       <button class="show-menu-button">

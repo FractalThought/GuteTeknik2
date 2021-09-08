@@ -210,7 +210,10 @@ aside {
       "logo coursenav coursenav"
       "menu main aside"
       "footer footer footer";
-    grid-template-columns: 1fr minmax(500px, 800px) 1fr;
+    grid-template-columns: minmax(min-content, 20em) auto minmax(
+        min-content,
+        10em
+      );
   }
 
   header {

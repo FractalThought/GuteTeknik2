@@ -44,15 +44,13 @@ function Container({
       <Header mainPage={mainPage} />
       <Sidebar url={urlData} currentPageData={currentPageData} />
       <main>
-        <MyCrumbs crumbData={crumbData} />
-        <div className="page">
-          <ContentContainer>
-            <h1 className="page-heading">{pageTitle}</h1>
-            {/* <h1 className="printheader">{pageTitle}</h1> */}
-            <MDXProvider components={mdxComponents}>{children}</MDXProvider>
-            <ClearDiv></ClearDiv>
-          </ContentContainer>
-        </div>
+        <ContentContainer>
+          <MyCrumbs crumbData={crumbData} />
+          <h1 className="page-heading">{pageTitle}</h1>
+          {/* <h1 className="printheader">{pageTitle}</h1> */}
+          <MDXProvider components={mdxComponents}>{children}</MDXProvider>
+          <ClearDiv></ClearDiv>
+        </ContentContainer>
       </main>
       <aside className="page-index">
         <RightStickyDiv>
