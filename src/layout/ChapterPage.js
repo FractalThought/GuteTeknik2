@@ -61,7 +61,7 @@ function ChapterPage({ course, chapter, children, url }) {
   }
 
   return (
-    <>
+    <div id="main-grid">
       <Header mainPage={course} />
       <div id="main-wrapper">
         <aside className="left">
@@ -78,7 +78,7 @@ function ChapterPage({ course, chapter, children, url }) {
         </main>
         <aside className="right"></aside>
       </div>
-    </>
+    </div>
   )
 }
 

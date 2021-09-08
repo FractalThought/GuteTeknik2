@@ -2,187 +2,7 @@
 @import "basic";
 @import "startpage";
 
-header {
-  box-shadow: $box-shadow-md;
-  background-color: $color-primary-200;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  padding: 5px 10px;
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.25rem;
-    width: 100%;
-
-    h1 {
-      margin: 0;
-      margin-right: 1rem;
-    }
-
-    ul {
-      display: flex;
-      list-style-type: none;
-      flex-wrap: wrap;
-      margin: 0;
-    }
-
-    a {
-      padding: 0.45rem;
-      margin: 0 0.25rem;
-      color: $color-primary-500;
-
-      &:hover {
-        color: $color-primary-400;
-      }
-
-      &.active {
-        color: $color-primary-400;
-        text-decoration: underline;
-        font-weight: 600;
-      }
-    }
-  }
-}
-
-#main-wrapper {
-  min-height: 100vh;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  background-color: $color-primary-100;
-
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: "main" "left" "right";
-
-  .left {
-    grid-area: left;
-    background-color: $color-gray-900;
-  }
-
-  .right {
-    grid-area: right;
-  }
-
-  main {
-    grid-area: main;
-  }
-
-  main > .page {
-    box-shadow: $box-shadow-md;
-    border-radius: $border-radius-md;
-    background-color: white;
-    margin-top: 1rem;
-    padding: 2.5rem;
-
-    a {
-      color: $color-primary-500;
-      text-decoration: underline;
-
-      &:hover {
-        color: $color-primary-400;
-      }
-    }
-  }
-
-  aside {
-    nav {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      overflow: scroll;
-      height: 100vh;
-      position: sticky;
-      top: 0;
-    }
-
-    ul {
-      margin-top: 0;
-    }
-    li {
-      list-style: none;
-    }
-
-    h2 {
-      margin: 0;
-    }
-  }
-}
-
-.breadcrumb {
-  display: inline-block;
-}
-
-.breadcrumb__list {
-  display: flex;
-}
-
-.breadcrumb__link {
-  color: $color-primary-600;
-}
-
-.breadcrumb__link:hover {
-  color: $color-primary-300;
-}
-
-.breadcrumb__separator {
-  margin: 0 0.25em 0 0;
-  font-weight: 800;
-}
-
-.breadcrumb__link__active {
-  font-weight: 800;
-  color: $color-primary-800;
-}
-
-.page-heading {
-  margin: 0;
-}
-
-main ol,
-main ul {
-  margin-bottom: 1rem;
-}
-
-main li {
-  margin-bottom: 0.25rem;
-}
-
-@media screen and (min-width: $medium-up) {
-  #main-wrapper {
-    grid-template-areas: "left" "main" "right";
-
-    .left {
-      nav {
-        flex-wrap: wrap;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: $large-up) {
-  #main-wrapper {
-    grid-template-columns: minmax(200px, 1fr) minmax(500px, 70%) minmax(
-        100px,
-        1fr
-      );
-    grid-template-areas: "left main right";
-    grid-gap: 20px;
-
-    .left {
-      nav {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-      }
-    }
-  }
-}
-
 // New layout
-
-/*
 
 #main-grid {
   display: grid;
@@ -311,7 +131,7 @@ header {
 
 .sidemenu__shortcutlist a:hover {
   color: var(--primary--700);
-  text-decoration; underline;
+  text-decoration: underline;
 }
 
 .menu-section {
@@ -384,47 +204,47 @@ aside {
   body {
     padding: 1em;
   }
-  
+
   #main-grid {
     grid-template-areas:
-    "logo coursenav coursenav"
-    "menu main aside"
-    "footer footer footer";
+      "logo coursenav coursenav"
+      "menu main aside"
+      "footer footer footer";
     grid-template-columns: 1fr minmax(500px, 800px) 1fr;
   }
-  
+
   header {
     display: contents;
   }
-  
+
   #logo * {
     color: var(--primary--800);
   }
-  
+
   .course-nav {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5em;
   }
-  
+
   .course-nav__courselink {
     text-decoration: none;
     color: var(--gray--500);
   }
-  
+
   .course-nav__courselink:hover {
     text-decoration: underlin;
     color: var(--primary--700);
   }
-  
+
   .course-nav__courselink--active {
     color: var(--primary--800);
   }
-  
+
   .show-menu-button {
     display: none;
   }
-  
+
   .sidemenu {
     display: block;
     grid-area: menu;
@@ -435,6 +255,44 @@ aside {
   }
 }
 
-*/
+// Various, might need to change where this is
+.breadcrumb {
+  display: inline-block;
+}
+
+.breadcrumb__list {
+  display: flex;
+}
+
+.breadcrumb__link {
+  color: $color-primary-600;
+}
+
+.breadcrumb__link:hover {
+  color: $color-primary-300;
+}
+
+.breadcrumb__separator {
+  margin: 0 0.25em 0 0;
+  font-weight: 800;
+}
+
+.breadcrumb__link__active {
+  font-weight: 800;
+  color: $color-primary-800;
+}
+
+.page-heading {
+  margin: 0;
+}
+
+main ol,
+main ul {
+  margin-bottom: 1rem;
+}
+
+main li {
+  margin-bottom: 0.25rem;
+}
 
 @import "print";

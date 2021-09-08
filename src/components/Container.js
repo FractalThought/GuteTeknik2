@@ -40,30 +40,26 @@ function Container({
   })[0]
 
   return (
-    <>
+    <div id="main-grid">
       <Header mainPage={mainPage} />
-      <div id="main-wrapper">
-        <aside className="left">
-          <Sidebar url={urlData} currentPageData={currentPageData} />
-        </aside>
-        <main>
-          <MyCrumbs crumbData={crumbData} />
-          <div className="page">
-            <ContentContainer>
+      <Sidebar url={urlData} currentPageData={currentPageData} />
+      <main>
+        <MyCrumbs crumbData={crumbData} />
+        <div className="page">
+          <ContentContainer>
             <h1 className="page-heading">{pageTitle}</h1>
             {/* <h1 className="printheader">{pageTitle}</h1> */}
             <MDXProvider components={mdxComponents}>{children}</MDXProvider>
             <ClearDiv></ClearDiv>
-            </ContentContainer>
-          </div>
-        </main>
-        <aside className="right">
-          <RightStickyDiv>
-            <TableOfContent listOfContent={listOfContent} />
-          </RightStickyDiv>
-        </aside>
-      </div>
-    </>
+          </ContentContainer>
+        </div>
+      </main>
+      <aside className="page-index">
+        <RightStickyDiv>
+          <TableOfContent listOfContent={listOfContent} />
+        </RightStickyDiv>
+      </aside>
+    </div>
   )
 }
 
