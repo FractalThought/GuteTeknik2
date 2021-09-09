@@ -14,7 +14,7 @@ const ClearDiv = styled.div`
 
 const ContentContainer = styled.div`
   margin: 0 auto;
-  max-width: 50em;
+  max-width: 70ch;
 `
 
 function Container({

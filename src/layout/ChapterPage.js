@@ -9,6 +9,11 @@ const ClearDiv = styled.div`
   clear: both;
 `
 
+const ContentContainer = styled.div`
+  margin: 0 auto;
+  max-width: 70ch;
+`
+
 function ChapterPage({ course, chapter, children, url }) {
   const data = useStaticQuery(graphql`
     query {
@@ -63,11 +68,9 @@ function ChapterPage({ course, chapter, children, url }) {
   return (
     <div id="main-grid">
       <Header mainPage={course} />
-      <div id="main-wrapper">
-        <aside className="left">
-          <Sidebar url={urlData} currentPageData={pageInfo} />
-        </aside>
-        <main>
+      <Sidebar url={urlData} currentPageData={pageInfo} />
+      <main>
+        <ContentContainer>
           <h1 className="page-heading">{chapterInfo.title}</h1>
           <div className="page">
             <h1 className="printheader">{chapterInfo.title}</h1>
@@ -75,9 +78,9 @@ function ChapterPage({ course, chapter, children, url }) {
             <ClearDiv></ClearDiv>
           </div>
           <ChapterMenu course={course} chapter={chapterInfo} hideTitle={true} />
-        </main>
-        <aside className="right"></aside>
-      </div>
+        </ContentContainer>
+      </main>
+      <aside className="page-index"></aside>
     </div>
   )
 }

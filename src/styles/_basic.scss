@@ -77,11 +77,12 @@ h6 {
 
 a {
   text-decoration: none;
-  color: $color-gray-900;
+  color: var(--primary--800);
 }
 
 a:hover {
-  color: $color-primary-300;
+  color: var(--primary--500);
+  text-decoration: underline;
 }
 
 ul,
@@ -96,7 +97,7 @@ p {
   -moz-font-smoothing: antialiased !important;
   text-rendering: optimizelegibility !important;
   line-height: calc(1ex / 0.32);
-  width: 60ch; // test, not sure if container should be 60/70ch or paragraphs
+  width: 70ch; // test, not sure if container should be 60/70ch or paragraphs
   max-width: 100%;
 }
 

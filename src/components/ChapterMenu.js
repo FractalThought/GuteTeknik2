@@ -14,8 +14,7 @@ const Section = Styled.section`
   border-radius: 5px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
   0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  padding: 1rem;
-  margin-top: 1rem;
+  padding: 1em;
 
   h2 {
     margin: 0;
@@ -33,46 +32,29 @@ const Section = Styled.section`
   a {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 0.5rem;
+    padding: 1em 0.5em;
+    text-decoration: none;
   }
 
   li:nth-child(odd) {
-    background: white;
+    background: var(--gray--50);
   }
-
+  
   li:nth-child(even) {
-    background: #F9F9FA;
+    background: var(--gray--100);
   }
 
   li:hover {
-    background: #E6E7EA;
-  }
-
-  .title {
-    color: #366BD3;
+    background: var(--gray--300);
   }
 
   a:hover .title {
     text-decoration: underline;
-    color: #244FA3;
   }
 
   .type {
-    color: #828798;
+    color: var(--gray--500);
   }
-`
-
-const ChapterHeading = Styled.h1`
-
-  a {
-    color: #142C5B;
-  }
-
-  a:hover {
-    color: #366BD3;
-    text-decoration: underline;
-  }
-
 `
 
 const LinkContainer = Styled.span`
@@ -111,9 +93,9 @@ function ChapterMenu({ course, chapter, hideTitle }) {
   return (
     <>
       {!hideTitle && (
-        <ChapterHeading id={chapter.link}>
+        <h1 id={chapter.link}>
           <Link to={`/${course}/${chapter.link}`}>{chapter.title}</Link>
-        </ChapterHeading>
+        </h1>
       )}
 
       <Section>

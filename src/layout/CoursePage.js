@@ -29,16 +29,11 @@ const QuickList = styled.section`
     list-style: none;
     margin: 0;
   }
+`
 
-  a {
-    color: #366bd3;
-    font-size: 1.5rem;
-  }
-
-  a:hover {
-    text-decoration: underline;
-    color: #244fa3;
-  }
+const ContentContainer = styled.div`
+  margin: 0 auto;
+  max-width: 70ch;
 `
 
 const ClearDiv = styled.div`
@@ -99,27 +94,29 @@ function CoursePage({ course, children, url }) {
       <Sidebar url={urlData} currentPageData={pageInfo} />
 
       <main>
-        <h1 className="page-heading">{pageInfo.name}</h1>
-        <div className="page">
-          <h1 className="printheader">{pageInfo.name}</h1>
-          {children}
-          <ClearDiv></ClearDiv>
-        </div>
-        <QuickList>
-          <h1>Kapitel</h1>
-          <ul>
-            {pageInfo.chapters.map((chapter, key) => {
-              return (
-                <li key={key}>
-                  <a href={`#${chapter.link}`}>{chapter.title}</a>
-                </li>
-              )
-            })}
-          </ul>
-        </QuickList>
-        {pageInfo.chapters.map((chapter, key) => {
-          return <ChapterMenu key={key} course={course} chapter={chapter} />
-        })}
+        <ContentContainer>
+          <h1 className="page-heading">{pageInfo.name}</h1>
+          <div className="page">
+            <h1 className="printheader">{pageInfo.name}</h1>
+            {children}
+            <ClearDiv></ClearDiv>
+          </div>
+          <QuickList>
+            <h1>Kapitel</h1>
+            <ul>
+              {pageInfo.chapters.map((chapter, key) => {
+                return (
+                  <li key={key}>
+                    <a href={`#${chapter.link}`}>{chapter.title}</a>
+                  </li>
+                )
+              })}
+            </ul>
+          </QuickList>
+          {pageInfo.chapters.map((chapter, key) => {
+            return <ChapterMenu key={key} course={course} chapter={chapter} />
+          })}
+        </ContentContainer>
       </main>
       <aside className="page-index">
         <RightStickyDiv>

@@ -57,16 +57,14 @@ function ReferencePage({ course, url }) {
 
   return (
     <>
-      <Header mainPage={course} />
-      <div id="main-wrapper">
-        <aside className="left">
-          <Sidebar url={urlData} currentPageData={pageInfo} />
-        </aside>
+      <div id="main-grid">
+        <Header mainPage={course} />
+        <Sidebar url={urlData} currentPageData={pageInfo} />
         <main>
           <h1 className="page-heading">Referenser</h1>
           <ReferenceCard course={course} references={referenceInfo} />
         </main>
-        <aside className="right"></aside>
+        <aside className="page-index"></aside>
       </div>
     </>
   )

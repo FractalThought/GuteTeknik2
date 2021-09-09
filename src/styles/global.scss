@@ -119,6 +119,10 @@ header {
   font-weight: normal;
 }
 
+.sidemenu__heading h2 {
+  margin: 0;
+}
+
 .sidemenu__shortcutlist > li {
   padding: calc(var(--large) / 2);
 }
@@ -158,16 +162,26 @@ header {
   flex-direction: column;
 }
 
-.menu-section__list a {
+.menu-section__link {
   display: inline-block;
   color: var(--gray--700);
   background: var(--gray--100);
   padding: calc(var(--large) / 2) calc(var(--lg3) / 2);
 }
 
-.menu-section__list a:hover {
+.menu-section__link:hover {
   background: var(--gray--300);
   color: var(--gray--800);
+}
+
+.menu-section__link--active {
+  background: var(--primary--300);
+  color: var(--primary--800);
+}
+
+.menu-section__link--active:hover {
+  background: var(--primary--200);
+  color: var(--primary--700);
 }
 
 main {
@@ -224,8 +238,13 @@ aside {
     color: var(--primary--800);
   }
 
+  #logo h2 {
+    margin: 0;
+  }
+
   .course-nav {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     gap: 0.5em;
   }
@@ -250,29 +269,29 @@ aside {
 
   .sidemenu {
     display: block;
-    grid-area: menu;
     position: static;
-    overflow-y: auto;
-    min-height: 80vh;
-    max-height: 85vh;
+    grid-area: menu;
+    overflow-y: visible;
+    overflow-x: hidden;
+    max-height: none;
+    min-height: 90vh;
   }
 }
 
 // Various, might need to change where this is
 .breadcrumb {
-  display: inline-block;
+  font-size: var(--large);
 }
 
 .breadcrumb__list {
   display: flex;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
 }
 
-.breadcrumb__link {
-  color: $color-primary-600;
-}
-
-.breadcrumb__link:hover {
-  color: $color-primary-300;
+.breadcrumb__list__item {
+  margin: 0 0.25em;
 }
 
 .breadcrumb__separator {
@@ -282,7 +301,7 @@ aside {
 
 .breadcrumb__link__active {
   font-weight: 800;
-  color: $color-primary-800;
+  color: var(--primary--800);
 }
 
 .page-heading {
@@ -296,6 +315,10 @@ main ul {
 
 main li {
   margin-bottom: 0.25rem;
+}
+
+main a {
+  text-decoration: underline;
 }
 
 @import "print";

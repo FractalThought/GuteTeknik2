@@ -5,9 +5,6 @@ import SidebarHeading from "./SidebarHeading"
 import useProjects from "../components/hooks/useProjects"
 import useReferences from "../components/hooks/useReferences"
 
-// Currently replaced with CSS in global.scss
-const CourseSection = styled.section``
-
 function extractUrlData(url) {
   let currentCourse,
     currentChapter,
@@ -44,24 +41,53 @@ function Sidebar({ url, currentPageData }) {
     pages: references,
   }
 
+  const shortcuts = [
+    {
+      name: "Planering",
+      link: "planering",
+      image: "",
+    },
+    // {
+    //   name: "Bedömning",
+    //   link: "bedömning",
+    //   image: "",
+    // },
+    {
+      name: "Referenser",
+      link: "referenser",
+      image: "",
+    },
+    // {
+    //   name: "Övningar",
+    //   link: "övningar",
+    //   image: "",
+    // },
+    // {
+    //   name: "Uppgifter",
+    //   link: "uppgifter",
+    //   image: "",
+    // },
+  ]
+
   return (
     <nav className="sidemenu">
-      <section className="menu-section">
-        <Link className="menu-section__heading" to={"/" + currentPageData.link}>
-          <h2>{currentPageData.name}</h2>
-        </Link>
-        <div className="menu-section__list">
-          <Link to={"/" + currentPageData.link + "/planering"}>Planering</Link>
-          <Link to={"/" + currentPageData.link + "/betygskriterier"}>
-            Betygskriterier
-          </Link>
-        </div>
-      </section>
+      <Link className="sidemenu__heading" to={"/" + currentPageData.link}>
+        <h2>{currentPageData.name}</h2>
+      </Link>
+      <ul className="sidemenu__shortcutlist">
+        {shortcuts.map((shortcut, index) => {
+          return (
+            <li key={index}>
+              <Link to={"/" + currentPageData.link + "/" + shortcut.link}>
+                {shortcut.name}
+              </Link>
+            </li>
+          )
+        })}
+      </ul>
       {currentPageData.chapters.map((chapter, index) => (
         <SidebarHeading key={index} headingData={chapter} urlData={urlData} />
       ))}
-      <SidebarHeading headingData={referenceData} urlData={urlData} />
-      <SidebarHeading headingData={projectData} urlData={urlData} />
     </nav>
   )
 }

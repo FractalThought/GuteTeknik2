@@ -35,9 +35,6 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         root: __dirname,
-        inlineCode: {
-          marker: "•",
-        },
         defaultLayouts: {
           // slides: require.resolve("./src/templates/slide-template.js"),
           default: require.resolve("./src/templates/page-template.js"),
