@@ -116,7 +116,7 @@ header {
   font-family: "Montserrat", sans-serif;
   color: var(--primary--800);
   font-size: var(--lg2);
-  font-weight: normal;
+  font-weight: var(--fw-regular);
 }
 
 .sidemenu__heading h2 {
@@ -143,30 +143,38 @@ header {
 }
 
 .menu-section__heading {
-  color: var(--gray--800);
-  font-size: var(--base);
-}
-
-.menu-section__heading:hover {
   color: var(--primary--800);
 }
 
+.menu-section__heading:hover {
+  color: var(--primary--700);
+}
+
+.menu-section__heading--active {
+  color: var(--primary--600);
+}
+
+.menu-section__heading--active:hover {
+  color: var(--primary--700);
+}
+
 .menu-section__heading h2 {
-  font-size: var(--base);
-  font-weight: normal;
+  font-size: var(--large);
+  font-weight: var(--fw-medium-fs);
   margin-bottom: 0.5em;
 }
 
 .menu-section__list {
   display: flex;
   flex-direction: column;
+  margin-left: var(--large);
 }
 
 .menu-section__link {
   display: inline-block;
   color: var(--gray--700);
   background: var(--gray--100);
-  padding: calc(var(--large) / 2) calc(var(--lg3) / 2);
+  padding: var(--smaller) var(--small);
 }
 
 .menu-section__link:hover {
@@ -175,8 +183,9 @@ header {
 }
 
 .menu-section__link--active {
-  background: var(--primary--300);
+  background: var(--primary--100);
   color: var(--primary--800);
+  font-weight: var(--fw-medium-fs);
 }
 
 .menu-section__link--active:hover {
@@ -296,11 +305,11 @@ aside {
 
 .breadcrumb__separator {
   margin: 0 0.25em 0 0;
-  font-weight: 800;
+  font-weight: var(--fw-bold);
 }
 
 .breadcrumb__link__active {
-  font-weight: 800;
+  font-weight: var(--fw-bold);
   color: var(--primary--800);
 }
 

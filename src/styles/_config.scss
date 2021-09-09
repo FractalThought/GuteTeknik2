@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500|Open+Sans:400,600|Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700|Open+Sans:400,600,700|Poppins:wght@700&display=swap");
 
 $codeblock-color: #999;
 
@@ -74,6 +74,12 @@ $course-card-shadow-hover: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
   --lg5: 2.25rem;
   --lg6: 3rem;
   --lg7: 3.75rem;
+
+  /* Fira+Sans:400,500,700|Open+Sans:400,600,700 */
+  --fw-regular: 400;
+  --fw-medium-fs: 500;
+  --fw-semibold-os: 600;
+  --fw-bold: 700;
 
   /* Effect styles */
   --shadow-md: 0px 2px 4px rgba(55, 38, 89, 0.06),
@@ -162,6 +168,6 @@ $color-accent-blue-200: rgba(64, 86, 98, 1);
 $color-accent-blue-100: rgba(32, 43, 49, 1);
 
 @mixin heading-font-regular {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: var(--fw-medium-fs);
 }

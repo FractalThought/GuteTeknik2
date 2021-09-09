@@ -18,6 +18,10 @@ body {
   margin: 0;
   line-height: 1.7;
   letter-spacing: 0.03em;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-font-smoothing: antialiased !important;
+  text-rendering: optimizelegibility !important;
 }
 
 h1,
@@ -37,7 +41,6 @@ h4,
 h5,
 h6 {
   margin-top: 1.5rem;
-  font-weight: 500;
 }
 
 h1,
@@ -47,8 +50,6 @@ h4,
 h5,
 h6 {
   @include heading-font-regular;
-
-  color: var(--gray--800);
 }
 
 h1 {
@@ -92,12 +93,7 @@ ol {
 
 p {
   margin: 0 0 1rem 0;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased !important;
-  -moz-font-smoothing: antialiased !important;
-  text-rendering: optimizelegibility !important;
   line-height: calc(1ex / 0.32);
-  width: 70ch; // test, not sure if container should be 60/70ch or paragraphs
   max-width: 100%;
 }
 

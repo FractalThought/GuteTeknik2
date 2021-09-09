@@ -1,8 +1,8 @@
 import React, { useEffect } from "react"
 import { Link } from "gatsby"
 import SidebarHeading from "./SidebarHeading"
-import useProjects from "../components/hooks/useProjects"
-import useReferences from "../components/hooks/useReferences"
+// import useProjects from "../components/hooks/useProjects"
+// import useReferences from "../components/hooks/useReferences"
 
 function extractUrlData(url) {
   let currentCourse,
@@ -30,10 +30,10 @@ function Sidebar({ url, currentPageData, showSidebar }) {
     document.title = `GuteTeknik  ${currentPageData.name}`
   })
 
-  const projects = useProjects(currentPageData)
+  // const projects = useProjects(currentPageData)
   // const projectData = { title: "Projekt", link: null, pages: projects }
 
-  const references = useReferences(currentPageData)
+  // const references = useReferences(currentPageData)
   // const referenceData = {
   //   title: "Referenser",
   //   link: "referenser",
