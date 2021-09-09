@@ -1,6 +1,5 @@
 import React, { useEffect } from "react"
 import { Link } from "gatsby"
-import styled from "styled-components"
 import SidebarHeading from "./SidebarHeading"
 import useProjects from "../components/hooks/useProjects"
 import useReferences from "../components/hooks/useReferences"
@@ -24,7 +23,7 @@ function extractUrlData(url) {
   return { course: currentCourse, chapter: currentChapter, page: currentPage }
 }
 
-function Sidebar({ url, currentPageData }) {
+function Sidebar({ url, currentPageData, showSidebar }) {
   const urlData = extractUrlData(url)
 
   useEffect(() => {
@@ -32,14 +31,14 @@ function Sidebar({ url, currentPageData }) {
   })
 
   const projects = useProjects(currentPageData)
-  const projectData = { title: "Projekt", link: null, pages: projects }
+  // const projectData = { title: "Projekt", link: null, pages: projects }
 
   const references = useReferences(currentPageData)
-  const referenceData = {
-    title: "Referenser",
-    link: "referenser",
-    pages: references,
-  }
+  // const referenceData = {
+  //   title: "Referenser",
+  //   link: "referenser",
+  //   pages: references,
+  // }
 
   const shortcuts = [
     {
@@ -70,7 +69,7 @@ function Sidebar({ url, currentPageData }) {
   ]
 
   return (
-    <nav className="sidemenu">
+    <nav className={showSidebar ? "sidemenu sidemenu--show" : "sidemenu"}>
       <Link className="sidemenu__heading" to={"/" + currentPageData.link}>
         <h2>{currentPageData.name}</h2>
       </Link>

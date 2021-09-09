@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./Header"
 import Sidebar from "./Sidebar"
@@ -55,11 +55,20 @@ function ReferencePage({ course, url }) {
     urlData = urlArray.filter(data => data !== "")
   }
 
+  const [showSidebar, setSideBarVisibility] = useState(false)
+
   return (
     <>
       <div id="main-grid">
-        <Header mainPage={course} />
-        <Sidebar url={urlData} currentPageData={pageInfo} />
+        <Header
+          sidebarUtility={{ showSidebar, setSideBarVisibility }}
+          mainPage={course}
+        />
+        <Sidebar
+          showSidebar={showSidebar}
+          url={urlData}
+          currentPageData={pageInfo}
+        />
         <main>
           <h1 className="page-heading">Referenser</h1>
           <ReferenceCard course={course} references={referenceInfo} />

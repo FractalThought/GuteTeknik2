@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-function Header({ mainPage }) {
+function Header({ mainPage, sidebarUtility }) {
   const topPages = [
     {
       name: "Programmering 1",
@@ -58,6 +58,10 @@ function Header({ mainPage }) {
   //   </header>
   // )
 
+  function ToggleSidebar() {
+    sidebarUtility.setSideBarVisibility(!sidebarUtility.showSidebar)
+  }
+
   return (
     <header id="toppen">
       <div id="logo">
@@ -94,7 +98,7 @@ function Header({ mainPage }) {
         })}
       </nav>
 
-      <button class="show-menu-button">
+      <button class="show-menu-button" onClick={ToggleSidebar}>
         <svg
           width="24"
           height="20"

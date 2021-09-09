@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { MDXProvider } from "@mdx-js/react"
 import styled from "styled-components"
 import Header from "../layout/Header"
@@ -39,10 +39,21 @@ function Container({
     return pageData.link === mainPage
   })[0]
 
+  const [showSidebar, setSideBarVisibility] = useState(false)
+
+  // TODO: Abstract away the Container so it is the main layout component for all views
+
   return (
     <div id="main-grid">
-      <Header mainPage={mainPage} />
-      <Sidebar url={urlData} currentPageData={currentPageData} />
+      <Header
+        sidebarUtility={{ showSidebar, setSideBarVisibility }}
+        mainPage={mainPage}
+      />
+      <Sidebar
+        showSidebar={showSidebar}
+        url={urlData}
+        currentPageData={currentPageData}
+      />
       <main>
         <ContentContainer>
           <MyCrumbs crumbData={crumbData} />

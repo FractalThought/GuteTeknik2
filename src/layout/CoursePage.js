@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import Header from "./Header"
@@ -88,10 +88,19 @@ function CoursePage({ course, children, url }) {
     urlData = urlArray.filter(data => data !== "")
   }
 
+  const [showSidebar, setSideBarVisibility] = useState(false)
+
   return (
     <div id="main-grid">
-      <Header mainPage={course} />
-      <Sidebar url={urlData} currentPageData={pageInfo} />
+      <Header
+        sidebarUtility={{ showSidebar, setSideBarVisibility }}
+        mainPage={course}
+      />
+      <Sidebar
+        showSidebar={showSidebar}
+        url={urlData}
+        currentPageData={pageInfo}
+      />
 
       <main>
         <ContentContainer>
