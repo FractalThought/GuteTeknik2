@@ -1,5 +1,5 @@
-import React from "react"
-import ChapterPage from "../../layout/ChapterPage"
+import React from "react";
+import ChapterPage from "../../layout/ChapterPage";
 
 export default ({ location }) => {
   return (
@@ -9,5 +9,5 @@ export default ({ location }) => {
         har som syfte att stycka in bitar av kod.
       </p>
     </ChapterPage>
-  )
-}
+  );
+};

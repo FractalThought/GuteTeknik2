@@ -10,10 +10,88 @@ Namnet kommer från _Iteration_, vilket betyder upprepning, och man säger att m
 
 Varför vill man köra en kod flera gånger?
 
-Ofta handlar loopar om att man vill utföra samma handling flera gånger, ibland på olika element som finns i en lista, så kallade [arrayer](https://guteteknik.netlify.app/prog1/arrayer).
+Ofta handlar loopar om att man vill utföra samma handling flera gånger, ibland på olika element som finns i en lista, så kallade [arrayer](https://guteteknik.netlify.app/prog1/arrayer). I grunden handlar det om att säga till datorn att köra en bit kod så länge ett villkor är sant (även kallat _condition_). Om villkoren inte längre är uppfyllt avslutas loopen och fortsätter köra koden efter loopen. Att notera är att när loopen körs är det endast dess kod som körs, allt annat väntar tills loopen är avslutad.
 
 # I JavaScript
 
-I JavaScript finns det flera olika sätt att loopa igenom något, och de olika sättet fungerar på lite olika sätt. I grunden handlar det om att säga till datorn att köra en bit kod tills något är uppfyllt (ett condition), och då fortsätta med resten av koden.
+I JavaScript finns det flera olika sätt att loopa igenom något, och de olika sättet fungerar på lite olika sätt.
 
 De två sätten att loopa som vi kommer börja med är _[While-loop](https://guteteknik.netlify.app/prog1/iterationssatser/while)_, och _[For-loop](https://guteteknik.netlify.app/prog1/iterationssatser/for)_. De är olika iterationssatser, och heter så för att det är det nyckelordet vi använder för att skapa dem (precis som _If-satser_). Dessa loopar kallas ibland för _while-sats_ eller _for-sats_, men det är mer vanligt att säga loop istället för sats.
+
+# Loop counter
+
+I alla typer av loopar är det vanligt att man använder en så kallad _loop counter_ (loop-räknare). En loop counter är en siffra som vanligtvis går uppåt med ett satt värde varje gång loopens kod körs. Loopens villkor brukar ofta vara kopplad till loop counterns värde.
+
+```javascript
+let i = 0;
+while (i < 3) {
+  console.log(i);
+  i++; // i++ innebär att vi lägger till 1 till variabeln i
+}
+```
+
+# Break
+
+Ibland kan man behöva bryta en loop i förtid, till exempel om ett annat villkor än iterationssatsens villkor blir uppfyllt. Då används nyckelordet `break`.
+Break bryter den aktuella loopen, och brukar användas i en ifsats, till exempel så här;
+
+```javascript
+let i = 0;
+while (true) {
+  i += 1;
+  if (i > 3) {
+    break; // bryter loopen så snart i blir 4 (mer än 3)
+  }
+}
+
+console.log(i); // Kommer skriva ut 4
+```
+
+# Nästlade loopar
+
+Precis som kontrollsatser kan en iterationssats läggs i en iterationssats. Detta kallas då att man nästlar sin loop.
+
+```javascript
+let i = 0;
+while (i < 3) {
+  let j = 0;
+  i++;
+  while (j < 3) {
+    console.log(i + "," + j);
+    j++;
+  }
+}
+```
+
+<Result>
+
+1,0
+1,1
+1,2
+2,0
+2,1
+2,2
+3,0
+3,1
+3,2
+
+</Result>
+
+# Att se upp för
+
+En loop körs verkligen tills dess att dess villkor inte längre är uppfyllt. All annan kod är "pausad". Därför måste loopen innehålla ett sätt som får loopens villkor att bli falskt (inte uppfyllt) och därmed avsluta loopen. Alternativt kan `break` användas, men effekten blir den samma.
+
+Om det inte finns ett sätt att bryta loopen så blir det en oändlig loop (infinite loop), och koden körs tills dess att den avslutas av något utanför koden i sig.
+
+Undvik att skapa oändliga loopar genom att se till att loopens villkor kan sluta bli uppfyllt.
+
+## Om du råkar skapa en oändlig loop
+Ibland råkar man göra fel, och det är helt okej! En oändlig loop är inte hela världen, men det betyder att vi behöver orsaka en tvingad avslutning på vårt skript. Detta kan vi köra med kortkommandot `Ctrl` + `C` direkt i terminalen.
+
+Så här gör du för att stänga av ett skript som hängt sig eller fastnat i en oändlig loop;
+
+1. Se till att terminalen (konsolen) där skriptet körs är markerat.
+2. Använd kortkommandot `Ctrl` + `C`.
+3. Skriptet borde nu bli avslutat.
+
+Om detta inte skulle fungera, avsluta terminalen (konsolen). Om du startade skriptet från VSCode så finns det en ikon i övre högra hörnet av terminalen som ser ut som en papperskorg. Använd den för att avsluta terminalen. När du behöver en ny terminal går du upp till huvudmenyn i VSCode och väljer Terminal > New Terminal, eller använder kortkommandot `Ctrl` + `Shift` + `Ö`.
