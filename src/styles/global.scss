@@ -87,7 +87,7 @@ header {
   color: var(--primary--900);
   font-family: "Open Sans", sans-serif;
   font-size: var(--base);
-  padding-right: 1em;
+  padding: 1em;
   z-index: 1;
   width: 100%;
   grid-area: main;
@@ -284,6 +284,8 @@ aside {
     overflow-x: hidden;
     max-height: none;
     min-height: 90vh;
+    padding: 0;
+    padding-right: 1em;
   }
 }
 
