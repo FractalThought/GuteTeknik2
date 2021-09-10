@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { Link } from "gatsby"
 import SidebarHeading from "./SidebarHeading"
 // import useProjects from "../components/hooks/useProjects"
@@ -25,10 +25,6 @@ function extractUrlData(url) {
 
 function Sidebar({ url, currentPageData, showSidebar }) {
   const urlData = extractUrlData(url)
-
-  useEffect(() => {
-    document.title = `GuteTeknik  ${currentPageData.name}`
-  })
 
   // const projects = useProjects(currentPageData)
   // const projectData = { title: "Projekt", link: null, pages: projects }

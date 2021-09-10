@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { MDXProvider } from "@mdx-js/react"
 import styled from "styled-components"
 import Header from "../layout/Header"
@@ -38,6 +38,12 @@ function Container({
   const currentPageData = pageInfo.filter(pageData => {
     return pageData.link === mainPage
   })[0]
+
+  useEffect(() => {
+    document.title = `${currentPageData.name} ${
+      pageTitle ? "/" + pageTitle : ""
+    } - Tektal`
+  })
 
   const [showSidebar, setSideBarVisibility] = useState(false)
 

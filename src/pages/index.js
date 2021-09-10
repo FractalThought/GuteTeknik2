@@ -50,7 +50,7 @@ const courses = [
 
 export default ({ data }) => {
   useEffect(() => {
-    document.title = "GuteTeknik"
+    document.title = "Tektal"
   })
 
   return (
