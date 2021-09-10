@@ -1,0 +1,53 @@
+---
+title: "Övningar med while-loopar"
+date: "2020-09-01"
+---
+
+Vi fortsätter med Kaninen Kalle, men för enkelhetens skull, skapa en ny skriptfil, förslagsvis döpt till *iterationssats.js* så du lätt kan hitta den.
+
+## Loopande tågbana
+Kalle är på tivoli och vill åka Tågbana. Runt tågbanan finns några träd, en tunnel, och två vattenfall. Tågbanan åker runt fem gånger, och Kalle ropar "Titta träd!" varje gång han ser ett träd, och "tunnel!" varje gång han kommer till tunneln, och "blött!" varje gång han kommer till vattenfallet. Slutligen ska han ropa ut hur många gånger tåget har åkt runt.
+
+**Skriv ett skript som visar Kalles utrop under en tågfärd.**
+
+<PracticeContainer title="ledtråd 1">
+Du ska se till att console.log skriver ut "titta träd! titta träd! titta träd! titta träd! titta träd!", "tunnel!", och "blött! blött!" 5 gånger.
+</PracticeContainer>
+
+<PracticeContainer title="ledtråd 2">
+Använd en while-loop och en counter för att hålla koll på antalet loopar som görs
+</PracticeContainer>
+
+<PracticeContainer>
+
+```javascript
+let counter = 0;
+while(counter < 5) {
+  console.log("titta träd!");
+  console.log("titta träd!");
+  console.log("titta träd!");
+  console.log("titta träd!");
+  console.log("tunnel!");
+  console.log("blött!");
+  console.log("blött!");
+  counter++;
+  console.log("Tåget har åkt " + counter + "gånger!");
+}
+```
+
+</PracticeContainer>
+
+---
+
+## Bättre loopande
+Kolla in lösningen för Loopande tågbana, vad kan du förbättra? Gör några exempel som du kommer på, och var redo att diskutera dem. Tips! Använd kommentarer för att anteckna, till exempel så här:
+
+```javascript
+// Skulle jag inte kunna förbättra det här på något sätt?
+console.log("titta träd!");
+console.log("titta träd!");
+console.log("titta träd!");
+console.log("titta träd!");
+console.log("titta träd!");
+```
+---
