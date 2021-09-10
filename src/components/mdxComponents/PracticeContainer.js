@@ -11,6 +11,7 @@ const Hidden = styled.section`
   animation-duration: 0.3s;
   animation-name: slidein;
   border-radius: 0 0.2rem 0.2rem 0.2rem;
+  max-width: 90vw;
 
   @keyframes slidein {
     from {
@@ -20,6 +21,10 @@ const Hidden = styled.section`
     to {
       opacity: 1;
     }
+  }
+
+  pre {
+    margin-bottom: 0;
   }
 `
 

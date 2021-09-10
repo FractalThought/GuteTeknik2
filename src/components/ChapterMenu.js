@@ -63,8 +63,11 @@ const LinkContainer = Styled.span`
 
 const Divider = Styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1rem;
+  gap: 1rem;
+
+  @media screen and (min-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `
 
 /*
