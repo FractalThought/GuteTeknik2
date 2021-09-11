@@ -22,6 +22,8 @@ De två sätten att loopa som vi kommer börja med är _[While-loop](https://gut
 
 I alla typer av loopar är det vanligt att man använder en så kallad _loop counter_ (loop-räknare). En loop counter är en siffra som vanligtvis går uppåt med ett satt värde varje gång loopens kod körs. Loopens villkor brukar ofta vara kopplad till loop counterns värde.
 
+Vanligast är att man låter loop countern börja från 0. Det mesta i programmering som har med räkning att göra börjar från 0.
+
 ```javascript
 let i = 0;
 while (i < 3) {
@@ -29,6 +31,105 @@ while (i < 3) {
   i++; // i++ innebär att vi lägger till 1 till variabeln i
 }
 ```
+
+<Result>
+
+0
+1
+2
+
+</Result>
+
+
+# Använda en egenskap i relation till en loop counter
+
+Det är vanligt att vi vill köra en loop ett antal gånger som är lika med en egenskap, till exempel längden på en sträng.
+
+Detta kan vi lösa genom att låta egenskapen vara en del av villkoret, och kolla det mot vår loop counter, så här;
+
+```javascript
+let message = "Hejsan";
+let i = 0;
+
+/*
+  Observera att length är antalet tecken i strängen.
+  Därför fungerar det bra att låta vår counter börja på 0 och köra loopen när i är mindre än length
+  Då kommer loopen köras lika många gånger som det finns tecken i strängen.
+*/
+while(i < message.length) {
+  console.log("Hej" + i);
+  i++; // Ökar värdet av i med 1
+}
+```
+
+<Result>
+
+Hej0
+Hej1
+Hej2
+Hej3
+Hej4
+Hej5
+
+</Result>
+
+# Använda en loop counter för att förändra kodens utfall
+
+Något annat vanligt är att vi använder en loop counter för att styra ett utfall. Eftersom loop countern "alltid" ändras för varje gång loopen körs så kan vi använda den för att få olika saker att hända beroende på vilket värde den har. Vi kan kolla loop counterns värde i en kontrollsats och göra något annorlunda vid särskilda värden, eller använda loop countern i en metod, till exempel `string.substr`.
+
+## Exempel: Använda Loop counter med ifsatser
+
+```javascript
+let i = 0;
+
+while(i <= 3) {
+  if(i == 0) {
+    console.log("Första gången.");
+  }
+
+  if(i == 1) {
+    console.log("Andra gången.");
+  }
+
+  if(i > 1) {
+    console.log("Alla andra gånger.");
+  }
+
+  i++;
+}
+```
+
+<Result>
+
+Första gången.
+Andra gången.
+Alla andra gånger.
+Alla andra gånger.
+
+</Result>
+
+## Exempel: Använda loop counter i metoden substr
+
+```javascript
+let i = 0;
+let message = "Hejsan";
+
+while(i < message.length) {
+  let messagePart = message.substr(i, 1);
+  console.log(messagePart);
+}
+```
+
+<Result>
+
+H
+e
+j
+s
+a
+n
+
+</Result>
 
 # Break
 
