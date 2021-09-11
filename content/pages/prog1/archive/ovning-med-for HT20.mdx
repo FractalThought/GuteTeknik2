@@ -1,0 +1,77 @@
+---
+title: "Övningar med for-loopar"
+date: "2020-09-01"
+---
+
+
+## Kasta groda
+Kalle vill spela Kasta groda. Kasta groda går ut på att man kastar en groda och försöker få den att landa på ett näckrosblad. Man får fem försök att få den att landa. Kalle är hyfsat bra på att kasta groda, och han tror han kan träffa ungefär hälften av gångerna han kastar.
+
+Skriv ett skript som använder en loop som skiver ut varje gång Kalle kastar en groda, och om den träffar eller inte. Använd [Random-funktionen](https://guteteknik.netlify.app/prog1/random/) i JavaScript för att slumpa om grodan träffar eller inte.
+
+  <PracticeContainer>
+
+```javascript
+for(let i = 0; i < 5; i++) {
+  console.log("Kalle kastar en groda...");
+  let testThrow = Math.floor(Math.random() * 2);
+  if(testThrow == 1) {
+    console.log("Grodan landar på ett näckrosblad!");
+  } else {
+    console.log("Miss.");
+  }
+}
+```
+
+</PracticeContainer>
+
+### Pris för bra kast
+Desto fler grodor som träffar näckrosorna, desto bättre pris får Kalle.
+
+- 1 till 2 träffar: Plastgroda.
+- 3 träffar: Grodgossedjur.
+- 4 till 5 träffar: Radiostyrd groda.
+
+#### Förbättra din kod och lägg till följande funktionalitet:
+1. Använd en variabel för att hålla koll på hur många gånger Kalle träffar.
+2. Skriv ut vad Kalle vinner, utifrån listan ovan.
+
+## Lottorad
+På tivolit behöver man generera lottorader. En lottorad består av 5 siffror mellan 0 och 9, alltså till exempel så här; `"1 5 3 2 9"`.
+
+**Generera en sådan lottorad och skriv ut den.**
+
+> För detta behöver du veta hur du lägger ihop strängar, så här;
+
+```javascript
+let lottorad = "";
+let randomNumber1 = Math.floor(Math.random()*10);
+let randomNumber2 = Math.floor(Math.random()*10);
+let randomNumber3 = Math.floor(Math.random()*10);
+let randomNumber4 = Math.floor(Math.random()*10);
+let randomNumber5 = Math.floor(Math.random()*10);
+lottorad += randomNumber1 + " " + randomNumber2 + " " + randomNumber3 + " " + randomNumber4 + " " + randomNumber5;
+console.log(lottorad);
+```
+
+Använd en loop för att få samma resultat som ovan, så att tivolit kan lätt ändra hur många siffror som används i raderna.
+
+<PracticeContainer>
+
+```javascript
+let lottorad = "";
+
+for (let i = 0; j < 5; i++) {
+  let randomTal = Math.floor(Math.random() * 10);
+  lottorad += randomTal + " ";
+}
+
+console.log(lottorad);
+
+```
+
+
+</PracticeContainer>
+
+### Flera lottorader
+Tivolit behöver kunna generera flera lottorader och skriva ut dem. Skriv om din kod så att flera rader skrivs ut.

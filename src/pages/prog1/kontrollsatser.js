@@ -3,8 +3,16 @@ import ChapterPage from "../../layout/ChapterPage"
 
 export default ({ location }) => {
   return (
-    <ChapterPage url={location.pathname} course="prog1" chapter="kontrollsatser">
-      <p>I det här kapitlet introducerar vi JavaScript på webben.</p>
+    <ChapterPage
+      url={location.pathname}
+      course="prog1"
+      chapter="kontrollsatser"
+    >
+      <p>
+        I det här kapitlet introducerar vi kontrollsatser. En kontrollsats låter
+        oss styra flödet av koden genom att bestämma vilka bitar av kod som ska
+        köras.
+      </p>
     </ChapterPage>
   )
 }
