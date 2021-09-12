@@ -28,6 +28,8 @@ I alla typer av loopar är det vanligt att man använder en så kallad _loop cou
 
 Vanligast är att man låter loop countern börja från 0. Det mesta i programmering som har med räkning att göra börjar från 0.
 
+Namnet på en loop counter variabel brukar traditionellt vara `i`, men ibland använder man namnet `counter` i exempel. `i` är kort för index, eller ibland iterator.
+
 ```javascript
 let i = 0;
 while (i < 3) {
@@ -170,6 +172,8 @@ console.log(i); // Kommer skriva ut 4
 # Nästlade loopar
 
 Precis som kontrollsatser kan en iterationssats läggs i en iterationssats. Detta kallas då att man nästlar sin loop.
+
+Vid användandet av nästlade loopar används vanligtvis namnen `j` och `k` för loop counter variablerna efter `i`. Det är ovanligt att vi behöver använda fler än 3 loopar i taget, men då kan man välja att gå vidare i alfabetet med `l` `m` `n`, `o`, och så vidare. En generell regel kan vara att kommer du till att du behöver använda `l`, så bör du se över din kod och se om du behöver förbättra något.
 
 ```javascript
 let i = 0;
