@@ -28,7 +28,7 @@ let saldo = 12,
 2. Skapa en while-loop vars villkor är att `i` är mindre än 5.
 3. I while-loopen, plussa på värdet på `i` med 1, och skriv ut det i konsolen.
 
-Hedanefter när du får instruktioner om att skapa en while-loop som ska loopas igenom ett antal gånger, skapa loopen på det här sättet. Tänk på att ska du använda samma variabelnamn i samma fil så ska du inte skapa om variabeln (till exempel `let i = 0;`) utan bara nollställa variabeln (`i = 0;`)
+Hedanefter när du får instruktioner om att skapa en while-loop som ska loopas igenom ett antal gånger, skapa loopen på det här sättet. Tänk på att ska du använda samma variabelnamn i samma fil så ska du inte skapa om variabeln (till exempel `let i = 0;`) utan bara nollställa variabeln (`i = 0;`).
 
 <PracticeContainer>
 
@@ -56,41 +56,134 @@ while(i < 5) {
 
 # Övning 2
 
+1. Skapa en loop som körs så länge i är mindre än 10, öka med 1. Skriv ut i.
+2. Skapa en loop som körs så länge j är mindre än 10, öka med 2. Skriv ut j.
+
+Kom ihåg att nollställa dina variabler innan de körs.
+Undersök skillnaderna mellan looparna och vad som skrivs ut i konsolen.
+
+<PracticeContainer>
+
+```javascript
+
+let i = 0;
+while(i < 10) {
+  console.log(i);
+  i += 1;
+}
+
+let j = 0;
+while(j < 10) {
+  console.log(j);
+  j += 2;
+}
+
+```
+
+<PracticeContainer/>
+
+# Övning 3
+*Du ska ta reda på vilka siffror som är jämt (jämt delbara med 2), och vilka som är udda, i siffrorna 0 till 20.*
+
+Gör så här;
+
+1. Skapa en loop som loopas 20 gånger.
+2. Använd en if-elsesats för att kontrollera om talet är jämt eller udda.
+
+Tips: För att kolla om något är jämt delbart med 2, använd modulo-operatorn (`%`).
+Modulo-operatorn gör att vi kan kolla om det blir något över efter vi delat en siffra med en annan. Om det inte blir något över (resultatet blir 0) så är den siffran vi delar jämt delbar med siffran vi delar med.
+
+Så här;
+
+```javascript
+if(10 % 2 == 0) {
+  console.log("10 är jämt delbart med 2");
+}
+```
+
+<PracticeContainer>
+
+```javascript
+i = 0;
+while(i <= 20) {
+  if(i % 2 == 0) {
+    console.log(i +  " är en jämn siffra."):
+  } else {
+    console.log(i +  " är en udda siffra."):
+  }
+}
+```
+
+</PracticeContainer>
 
 
-Enkel loop som gör en sak flera gånger
+# Övning 4
+Alfred har en lön på 20 kronor, och en månadskostnad på 12 kr. Hur många månader tar det innan han har sparat ihop till 50kr eller mer, om han börjar med 12 kr i sitt sparkonto?
 
-Gör några abstrakta övningar först, sen koppla in Alfred?
+Skapa en loop som simulerar Alfreds ekonomi i en månad i taget (så varje gång loopen körs läggs Alfreds lön till saldot, och hans månadskostnader dras ifrån saldot). Skriv ut saldots värde i konsolen för varje månad.
 
-Skapa en loop som körs så länge i är mindre än 10, öka med 1
-Skapa en loop som körs så länge i är mindre än 10, öka med 2
+När saldot är 50 eller mer ska loopen avslutas, och du ska skriva ut i konsolen hur många månader det tog.
 
-Ta reda på hur många månader det tar innan Alfred fått ihop x-pengar
-Ta reda på hur många månader det tar innan Alfred blir pank om han köper för många snacksbitar?
+Denna övning testar din problemlösningsförmåga: Bryt ner problemet, fundera kring vad du behöver göra, och testa dig fram! Det finns flera lösningar.
 
-Loopa igenom några siffror, kolla vilka som är even och vilka som är odd
+<PracticeContainer>
 
-Write a JavaScript program which iterates the integers from 1 to 100. But for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz". Go to the editor
+```javascript
+let saldo = 12;
+let pay = 20;
+let monthlyExpenses = 12;
 
-Write a JavaScript program to construct the following pattern, using a nested for loop. Go to the editor
+let months = 0;
+while(saldo <= 50) {
+  saldo += pay;
+  saldo -= monthlyExpenses;
+  console.log(saldo);
+  months++;
+}
 
--
+console.log("Det tog " + months + " månader.");
+```
 
-- -
+</PracticeContainer>
 
----
+# Övning 5
 
----
+Skriv ett skript som använder två loopar för att skriva ut följande i konsolen:
 
----
+<Result>
 
+*
+
+**
+
+***
+
+****
+
+</Result>
+
+# Övning 6
 Skapa ett meddelande med hjälp av strängmanipulation och loop
+
+Hitta antalet gånger en bokstav eller ett ord förekommer i en mening
+
+Skriv ut en bokstav i taget
+
+
+Nästlade loopar
+
+Break?
+
+
+
+
+
+
 
 let threeX = '';
 while (threeX.length < 3) {
 threeX = threeX + 'x';
 }
 
-Hitta antalet gånger en bokstav eller ett ord förekommer i en mening
 
-Skriv ut en bokstav i taget
+Write a JavaScript program which iterates the integers from 1 to 100. But for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".
