@@ -20,11 +20,13 @@ Hedanefter när du får instruktioner om att skapa en while-loop som ska loopas 
 <PracticeContainer>
 
 ```javascript
+
 let counter = 0;
 while(counter < 5) {
     counter++; // Samma som counter += 1; Eller counter = counter + 1;
     console.log(counter);
 }
+
 ```
 
 <Result>
@@ -67,7 +69,7 @@ while(j < 10) {
 
 ```
 
-<PracticeContainer/>
+</PracticeContainer>
 
 # Övning 3
 *Du ska ta reda på vilka siffror som är jämt (jämt delbara med 2), och vilka som är udda, i siffrorna 0 till 20.*
@@ -83,14 +85,17 @@ Modulo-operatorn gör att vi kan kolla om det blir något över efter vi delat e
 Så här;
 
 ```javascript
+
 if(10 % 2 == 0) {
   console.log("10 är jämt delbart med 2 (jämn siffra)");
 }
+
 ```
 
 <PracticeContainer>
 
 ```javascript
+
 i = 0;
 while(i <= 20) {
   if(i % 2 == 0) {
@@ -100,10 +105,10 @@ while(i <= 20) {
   }
   i++;
 }
+
 ```
 
 </PracticeContainer>
-
 
 # Övning 4
 Alfred har en lön på 20 kronor, och en månadskostnad på 12 kr. Hur många månader tar det innan han har sparat ihop till 50kr eller mer, om han börjar med 12 kr i sitt sparkonto?
@@ -117,6 +122,7 @@ Denna övning testar din problemlösningsförmåga: Bryt ner problemet, fundera 
 <PracticeContainer>
 
 ```javascript
+
 let saldo = 12;
 let pay = 20;
 let monthlyExpenses = 12;
@@ -130,6 +136,7 @@ while(saldo <= 50) {
 }
 
 console.log("Det tog " + months + " månader att spara ihop " + saldo + "kr.");
+
 ```
 
 </PracticeContainer>
@@ -196,10 +203,12 @@ Med metoden `substr` och en loop, skriv ut strängen `"Hejsansvejsan!"`, en boks
 <PracticeContainer>
 
 ```javascript
+
 let message = "Hejsansvejsan!";
 for(let i = 0; i < message.length; i++) {
   console.log(message.substr(i, 1));
 }
+
 ```
 
 </PracticeContainer>
@@ -220,6 +229,7 @@ Detta vet du:
 <PracticeContainer>
 
 ```javascript
+
 let message = "Wiscon är ett spelkonvent som arrangeras av spelföreningen Östans Skuggor. Vi erbjuder intressanta, utvecklande och engagerande aktiviteter inom Spelhobbyn – för barn, ungdomar och vuxna. WisCon passar lika bra för dig som har hållit på med spel länge som för dig som är nyfiken och vill veta mer om olika spel. På Wiscon kan du testa figurspel, brädspel, kortspel, rollspel, och cosplay!".toLowerCase(); // Vi kan köra metoden toLowerCase direkt när vi skapar strängen. På så sätt hittar vi alla förekomster av "spel" oavsett om det är stor eller liten bokstav.
 
 let searchTerm = "spel";
@@ -234,6 +244,7 @@ while(lastIndex != -1) { // Kör loopen tills vi inte längre hittar något
 }
 
 console.log(searchTerm + " hittades " + numberOfResults + " gånger.");
+
 ```
 
 </PracticeContainer>
