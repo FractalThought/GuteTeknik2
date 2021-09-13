@@ -10,7 +10,11 @@ Namnet kommer från _Iteration_, vilket betyder upprepning, och man säger att m
 
 Varför vill man köra en kod flera gånger?
 
-Ofta handlar loopar om att man vill utföra samma handling flera gånger, ibland på olika element som finns i en lista, så kallade [arrayer](https://guteteknik.netlify.app/prog1/arrayer). I grunden handlar det om att säga till datorn att köra en bit kod så länge ett villkor är sant (även kallat _condition_). Om villkoren inte längre är uppfyllt avslutas loopen och fortsätter köra koden efter loopen. Att notera är att när loopen körs är det endast dess kod som körs, allt annat väntar tills loopen är avslutad.
+Ofta handlar loopar om att man vill utföra samma handling flera gånger, ibland på olika element som finns i en lista, så kallade [arrayer](https://guteteknik.netlify.app/prog1/arrayer).
+
+I grunden handlar det om att säga till datorn att köra en bit kod så länge ett villkor är sant (även kallat _condition_). Om villkoren inte längre är uppfyllt avslutas loopen och fortsätter köra koden efter loopen.
+
+Att notera är att när loopen körs är det endast dess kod som körs, allt annat väntar tills loopen är avslutad.
 
 # I JavaScript
 
@@ -23,6 +27,8 @@ De två sätten att loopa som vi kommer börja med är _[While-loop](https://gut
 I alla typer av loopar är det vanligt att man använder en så kallad _loop counter_ (loop-räknare). En loop counter är en siffra som vanligtvis går uppåt med ett satt värde varje gång loopens kod körs. Loopens villkor brukar ofta vara kopplad till loop counterns värde.
 
 Vanligast är att man låter loop countern börja från 0. Det mesta i programmering som har med räkning att göra börjar från 0.
+
+Namnet på en loop counter variabel brukar traditionellt vara `i`, men ibland använder man namnet `counter` i exempel. `i` är kort för index, eller ibland iterator.
 
 ```javascript
 let i = 0;
@@ -39,44 +45,6 @@ while (i < 3) {
 1
 
 2
-
-</Result>
-
-
-# Använda en egenskap i relation till en loop counter
-
-Det är vanligt att vi vill köra en loop ett antal gånger som är lika med en egenskap, till exempel längden på en sträng.
-
-Detta kan vi lösa genom att låta egenskapen vara en del av villkoret, och kolla det mot vår loop counter, så här;
-
-```javascript
-let message = "Hejsan";
-let i = 0;
-
-/*
-  Observera att length är antalet tecken i strängen.
-  Därför fungerar det bra att låta vår counter börja på 0 och köra loopen när i är mindre än length
-  Då kommer loopen köras lika många gånger som det finns tecken i strängen.
-*/
-while(i < message.length) {
-  console.log("Hej" + i);
-  i++; // Ökar värdet av i med 1
-}
-```
-
-<Result>
-
-Hej0
-
-Hej1
-
-Hej2
-
-Hej3
-
-Hej4
-
-Hej5
 
 </Result>
 
@@ -146,6 +114,43 @@ n
 
 </Result>
 
+# Använda en egenskap i relation till en loop counter
+
+Det är vanligt att vi vill köra en loop ett antal gånger som är lika med en egenskap, till exempel längden på en sträng.
+
+Detta kan vi lösa genom att låta egenskapen vara en del av villkoret, och kolla det mot vår loop counter, så här;
+
+```javascript
+let message = "Hejsan";
+let i = 0;
+
+/*
+  Observera att length är antalet tecken i strängen.
+  Därför fungerar det bra att låta vår counter börja på 0 och köra loopen när i är mindre än length
+  Då kommer loopen köras lika många gånger som det finns tecken i strängen.
+*/
+while(i < message.length) {
+  console.log("Hej" + i);
+  i++; // Ökar värdet av i med 1
+}
+```
+
+<Result>
+
+Hej0
+
+Hej1
+
+Hej2
+
+Hej3
+
+Hej4
+
+Hej5
+
+</Result>
+
 # Break
 
 Ibland kan man behöva bryta en loop i förtid, till exempel om ett annat villkor än iterationssatsens villkor blir uppfyllt. Då används nyckelordet `break`.
@@ -166,6 +171,8 @@ console.log(i); // Kommer skriva ut 4
 # Nästlade loopar
 
 Precis som kontrollsatser kan en iterationssats läggs i en iterationssats. Detta kallas då att man nästlar sin loop.
+
+Vid användandet av nästlade loopar används vanligtvis namnen `j` och `k` för loop counter variablerna efter `i`. Det är ovanligt att vi behöver använda fler än 3 loopar i taget, men då kan man välja att gå vidare i alfabetet med `l` `m` `n`, `o`, och så vidare. En generell regel kan vara att kommer du till att du behöver använda `l`, så bör du se över din kod och se om du behöver förbättra något.
 
 ```javascript
 let i = 0;
