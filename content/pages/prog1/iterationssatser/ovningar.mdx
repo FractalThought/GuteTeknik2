@@ -3,40 +3,27 @@ title: "Övningar med while-loopar"
 date: "2021-09-10"
 ---
 
-Gör övningarna i Visual Studio Code. Skapa en ny fil, namnge den _stringExcercises.js_ och gör övningarna i den filen.
+Gör övningarna i Visual Studio Code. Skapa en ny fil, namnge den _loopExcercises.js_ och gör övningarna i den filen.
 
-Till din hjälp har du [Introduktion till loopar](https://guteteknik.netlify.app/prog1/iterationssatser/intro) och [While-loopar](https://guteteknik.netlify.app/prog1/iterationssatser/while/).
+Till din hjälp har du [Introduktion till loopar](https://guteteknik.netlify.app/prog1/iterationssatser/intro), [While-loopar](https://guteteknik.netlify.app/prog1/iterationssatser/while/), och [For-loopar](https://guteteknik.netlify.app/prog1/iterationssatser/for).
 
-Övningar behöver inte lämnas in.
-
-# Grunden
-
-Kopiera följande kod och använd den som grund till övningarna.
-
-```javascript
-let firstName = "Alfred";
-
-let saldo = 12,
-  pay = 20,
-  subscriptionCost = 6,
-  amountOfSubs = 3;
-```
+Övningar behöver inte lämnas in. Observera att flera av övningarna är klurigare och svårare än tidigare. Om du fastnar, gå vidare med en annan övning.
 
 # Övning 1
 
-1. Skapa en variabel som heter `i` och ge den värdet **0**.
-2. Skapa en while-loop vars villkor är att `i` är mindre än 5.
-3. I while-loopen, plussa på värdet på `i` med 1, och skriv ut det i konsolen.
+1. Skapa en variabel som heter `counter` och ge den värdet **0**.
+2. Skapa en while-loop vars villkor är att `counter` är mindre än 5.
+3. I while-loopen, plussa på värdet på `counter` med 1, och skriv ut det i konsolen.
 
-Hedanefter när du får instruktioner om att skapa en while-loop som ska loopas igenom ett antal gånger, skapa loopen på det här sättet. Tänk på att ska du använda samma variabelnamn i samma fil så ska du inte skapa om variabeln (till exempel `let i = 0;`) utan bara nollställa variabeln (`i = 0;`).
+Hedanefter när du får instruktioner om att skapa en while-loop som ska loopas igenom ett antal gånger, skapa loopen på det här sättet. **Tänk på att ska du använda samma variabelnamn i samma fil så ska du inte skapa om variabeln (till exempel `let i = 0;`) utan bara nollställa variabeln (`i = 0;`).**
 
 <PracticeContainer>
 
 ```javascript
-let i = 0;
-while(i < 5) {
-    i++; // Samma som i += 1; Eller i = i + 1;
-    console.log(i);
+let counter = 0;
+while(counter < 5) {
+    counter++; // Samma som counter += 1; Eller counter = counter + 1;
+    console.log(counter);
 }
 ```
 
@@ -107,10 +94,11 @@ if(10 % 2 == 0) {
 i = 0;
 while(i <= 20) {
   if(i % 2 == 0) {
-    console.log(i +  " är en jämn siffra."):
+    console.log(i +  " är en jämn siffra.");
   } else {
-    console.log(i +  " är en udda siffra."):
+    console.log(i +  " är en udda siffra.");
   }
+  i++;
 }
 ```
 
@@ -137,11 +125,11 @@ let months = 0;
 while(saldo <= 50) {
   saldo += pay;
   saldo -= monthlyExpenses;
-  console.log(saldo);
+  console.log("Saldo: " + saldo);
   months++;
 }
 
-console.log("Det tog " + months + " månader.");
+console.log("Det tog " + months + " månader att spara ihop " + saldo + "kr.");
 ```
 
 </PracticeContainer>
@@ -169,8 +157,8 @@ for(let i = 1; i <= 12; i++) { // Skapa variabeln i, satt till 1; Kör loopen s�
     multiTable += ", "; // Om det inte är sista siffran, lägg till ", "
   }
 
-  console.log(multiTable);
 }
+console.log(multiTable);
 
 ```
 
@@ -193,8 +181,8 @@ for(let i = 2; i <=8; i+=3) { // Skapa variabeln i, satt till 2; Kör loopen så
       multiTable += ", "; // Om det inte är sista siffran, lägg till ", "
     }
 
-    console.log(multiTable);
   }
+  console.log(multiTable);
 }
 
 ```
@@ -203,9 +191,18 @@ for(let i = 2; i <=8; i+=3) { // Skapa variabeln i, satt till 2; Kör loopen så
 
 # Övning 7
 
-Med metoden `substr` och en loop, skriv ut följande sträng, en bokstav i taget (en bostav per konsolmeddelande):
+Med metoden `substr` och en loop, skriv ut strängen `"Hejsansvejsan!"`, en bokstav i taget (en bostav per konsolmeddelande).
 
-`let message = "Hejsansvejsan!";`
+<PracticeContainer>
+
+```javascript
+let message = "Hejsansvejsan!";
+for(let i = 0; i < message.length; i++) {
+  console.log(message.substr(i, 1));
+}
+```
+
+</PracticeContainer>
 
 # Övning 8
 Använd en loop och metoden indexOf för att hitta antalet gånger som ordet `"spel"` förekommer i följande mening:
@@ -215,8 +212,28 @@ Använd en loop och metoden indexOf för att hitta antalet gånger som ordet `"s
 Denna övning kräver problemlösning och att pussla ihop de olika delarna du lärt dig hittills.
 
 Detta vet du:
-- Du skapar en for-loop med `for(let i = 0; i < 5; i++) { /* kör kod här */ }`
 - indexOf kan hitta en sökterm på en sträng och hittar positionen på den första gången termen hittas. Om den inte hittar något så skickar den tillbaka värdet -1
 - indexOf kan hitta positionen av nästa gång termen hittas med andra argumentet, som förslagsvis är förgående gång termen hittades, plus 1.
 - Vi kan räkna med loopar med hjälp av någon form av loop counter (måste inte vara samma som loopens villkor).
 - Man kan bryta en loop med nyckelordet `break`.
+
+<PracticeContainer>
+
+```javascript
+let message = "Wiscon är ett spelkonvent som arrangeras av spelföreningen Östans Skuggor. Vi erbjuder intressanta, utvecklande och engagerande aktiviteter inom Spelhobbyn – för barn, ungdomar och vuxna. WisCon passar lika bra för dig som har hållit på med spel länge som för dig som är nyfiken och vill veta mer om olika spel. På Wiscon kan du testa figurspel, brädspel, kortspel, rollspel, och cosplay!".toLowerCase(); // Vi kan köra metoden toLowerCase direkt när vi skapar strängen. På så sätt hittar vi alla förekomster av "spel" oavsett om det är stor eller liten bokstav.
+
+let searchTerm = "spel";
+
+let lastIndex = 0;
+let numberOfResults = 0;
+while(lastIndex != -1) { // Kör loopen tills vi inte längre hittar något
+  lastIndex = message.indexOf(searchTerm, lastIndex + 1);
+  if(lastIndex != -1) { // Räknar bara upp 1 om vi faktiskt hittar något
+    numberOfResults++;
+  }
+}
+
+console.log(searchTerm + " hittades " + numberOfResults + " gånger.");
+```
+
+</PracticeContainer>

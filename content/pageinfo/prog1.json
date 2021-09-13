@@ -131,18 +131,13 @@
           "type": "lesson"
         },
         {
-          "title": "Övningar med while-loopar",
-          "link": "ovning-med-while",
-          "type": "exercise"
-        },
-        {
           "title": "For-loopar",
           "link": "for",
           "type": "lesson"
         },
         {
-          "title": "Övningar med For-loopar",
-          "link": "ovning-med-for",
+          "title": "Övningar",
+          "link": "ovningar",
           "type": "exercise"
         }
       ],
