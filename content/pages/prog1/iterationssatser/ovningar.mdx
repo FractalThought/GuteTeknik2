@@ -208,8 +208,15 @@ Med metoden `substr` och en loop, skriv ut följande sträng, en bokstav i taget
 `let message = "Hejsansvejsan!";`
 
 # Övning 8
-Hitta antalet gånger en bokstav eller ett ord förekommer i en mening
+Använd en loop och metoden indexOf för att hitta antalet gånger som ordet `"spel"` förekommer i följande mening:
 
+> Wiscon är ett spelkonvent som arrangeras av spelföreningen Östans Skuggor. Vi erbjuder intressanta, utvecklande och engagerande aktiviteter inom Spelhobbyn – för barn, ungdomar och vuxna. WisCon passar lika bra för dig som har hållit på med spel länge som för dig som är nyfiken och vill veta mer om olika spel. På Wiscon kan du testa figurspel, brädspel, kortspel, rollspel, och cosplay!
 
+Denna övning kräver problemlösning och att pussla ihop de olika delarna du lärt dig hittills.
 
-Ändra så att det bara är en övningssida, som varvar while och for-loopar?
+Detta vet du:
+- Du skapar en for-loop med `for(let i = 0; i < 5; i++) { /* kör kod här */ }`
+- indexOf kan hitta en sökterm på en sträng och hittar positionen på den första gången termen hittas. Om den inte hittar något så skickar den tillbaka värdet -1
+- indexOf kan hitta positionen av nästa gång termen hittas med andra argumentet, som förslagsvis är förgående gång termen hittades, plus 1.
+- Vi kan räkna med loopar med hjälp av någon form av loop counter (måste inte vara samma som loopens villkor).
+- Man kan bryta en loop med nyckelordet `break`.

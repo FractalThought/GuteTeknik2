@@ -92,6 +92,23 @@ if(indexOfName == -1) {
 }
 ```
 
+Om vi letar efter andra gången en sökterm kommer så behöver vi göra följande;
+1. Hitta positionen av första gången söktermen finns.
+2. Använda andra argumentet i indexOf, vilket gör att vi börjar kolla från den positionen (tex `message.indexOf("Hej", 5) // börjar titta från position 5`).
+3. Använda positionen av första söktermen plus 1 
+
+Så här:
+
+```javascript
+let message = "Norrahammar ligger norr om Taberg";
+message = message.toLowerCase(); // vi gör om till små bokstäver så vi hittar alla oavsett stor eller liten bokstav, eftersom indexOf gör skillnad på små och stora bokstäver
+let firstIndex = message.indexOf("norr"); // hittar första gången ordet finns
+let secondIndex = message.indexOf("norr", firstIndex+1) // Hittar andra gången ordet finns
+
+console.log("Ordet norr finns på positionerna " + firstIndex + " och " + secondIndex);
+```
+
+Detta kan vi potentiellt upprepa tills vi inte längre , men det gör vi enklast med en loop.
 
 # Källor
 [Text formatting på Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Text_formatting)
