@@ -147,16 +147,67 @@ console.log("Det tog " + months + " månader.");
 </PracticeContainer>
 
 # Övning 5
-Nästlad loop - vad?
+Multiplikationstabellen kan vara knepig att hålla i huvudet.
+Med kod, räkna ut 3-ans multiplikationstabell (1 till 12), och skriv ut alla siffror på en rad, separerade med `", "` (kommatecken och mellanslag).
 
+När du är klar ska det alltså se ut så här:
+
+> 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36
+
+Tips: Du kan skapa en tom sträng utanför loopen och använda den för att spara siffrorna.
+
+<PracticeContainer>
+
+```javascript
+
+let multiTable = "";
+for(let i = 1; i <= 12; i++) { // Skapa variabeln i, satt till 1; Kör loopen så länge i är mindre eller lika med 12; Lägg till 1 till i
+  let result = 3 * i; // Hämta ut resultatet av multiplikationen
+  multiTable += result; // Lägg till resultatet i strängen
+
+  if(i != 12) { // Lite snyggare; Vi kollar om det inte är sista siffran
+    multiTable += ", "; // Om det inte är sista siffran, lägg till ", "
+  }
+
+  console.log(multiTable);
+}
+
+```
+
+</PracticeContainer>
 
 # Övning 6
+Använd en loop för att få ut multiplikationstabellen för 2, 5, 8 genom att använda koden från Övning 5.
+
+<PracticeContainer>
+
+```javascript
+
+for(let i = 2; i <=8; i+=3) { // Skapa variabeln i, satt till 2; Kör loopen så länge i är mindre eller lika med 8; Lägg till 3 till i
+  let multiTable = "";
+  for(let j = 1; j <= 12; j++) { // Skapa variabeln j, satt till 1; Kör loopen så länge j är mindre eller lika med 12; Lägg till 1 till j
+    let result = i * j; // Hämta ut resultatet av multiplikationen
+    multiTable += result; // Lägg till resultatet i strängen
+
+    if(j != 12) { // Lite snyggare; Vi kollar om det inte är sista siffran
+      multiTable += ", "; // Om det inte är sista siffran, lägg till ", "
+    }
+
+    console.log(multiTable);
+  }
+}
+
+```
+
+</PracticeContainer>
+
+# Övning 7
 
 Med metoden `substr` och en loop, skriv ut följande sträng, en bokstav i taget (en bostav per konsolmeddelande):
 
 `let message = "Hejsansvejsan!";`
 
-# Övning 7
+# Övning 8
 Hitta antalet gånger en bokstav eller ett ord förekommer i en mening
 
 
