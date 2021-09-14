@@ -95,6 +95,7 @@ let message = "Hejsan";
 while(i < message.length) {
   let messagePart = message.substr(i, 1);
   console.log(messagePart);
+  i++;
 }
 ```
 
@@ -217,12 +218,12 @@ Om det inte finns ett sätt att bryta loopen så blir det en oändlig loop (infi
 Undvik att skapa oändliga loopar genom att se till att loopens villkor kan sluta bli uppfyllt.
 
 ## Om du råkar skapa en oändlig loop
-Ibland råkar man göra fel, och det är helt okej! En oändlig loop är inte hela världen, men det betyder att vi behöver orsaka en tvingad avslutning på vårt skript. Detta kan vi köra med kortkommandot `Ctrl` + `C` direkt i terminalen.
+Ibland råkar man göra fel, och det är helt okej! En oändlig loop är inte hela världen, men det betyder att vi behöver orsaka en tvingad avslutning på vårt skript. Detta kan vi köra med kortkommandot `Ctrl` + `Alt` + `M` direkt i terminalen.
 
 Så här gör du för att stänga av ett skript som hängt sig eller fastnat i en oändlig loop;
 
 1. Se till att terminalen (konsolen) där skriptet körs är markerat.
-2. Använd kortkommandot `Ctrl` + `C`.
+2. Använd kortkommandot `Ctrl` + `Alt` + `M`.
 3. Skriptet borde nu bli avslutat.
 
-Om detta inte skulle fungera, avsluta terminalen (konsolen). Om du startade skriptet från VSCode så finns det en ikon i övre högra hörnet av terminalen som ser ut som en papperskorg. Använd den för att avsluta terminalen. När du behöver en ny terminal går du upp till huvudmenyn i VSCode och väljer Terminal > New Terminal, eller använder kortkommandot `Ctrl` + `Shift` + `Ö`.
+Om detta inte skulle fungera, avsluta VSCode och starta om VSCode.
