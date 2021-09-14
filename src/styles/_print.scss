@@ -24,7 +24,7 @@
 
       .printheader {
         display: block;
-        color: $color-primary-600;
+        color: var(--primary-600);
       }
     }
   }

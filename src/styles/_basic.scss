@@ -41,7 +41,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 1.5rem;
+  margin-top: 1.5em;
 }
 
 h1,
@@ -89,19 +89,19 @@ a:hover {
 
 ul,
 ol {
-  margin-left: 1rem;
+  margin-left: 1em;
 }
 
 p {
-  margin: 0 0 1rem 0;
+  margin: 0 0 1em 0;
   max-width: 100%;
 }
 
 blockquote {
   box-sizing: border-box;
-  margin: 1rem;
-  background: $color-gray-900;
-  padding: 0.5rem;
+  margin: 1em;
+  background: var(--gray--100);
+  padding: 0.5em;
   border-radius: 5px;
 }
 
@@ -111,7 +111,7 @@ blockquote > * {
 
 hr {
   margin: 3em 0;
-  border-top: 0.5em solid $color-gray-500;
+  border-top: 0.5em solid var(--gray--500);
   opacity: 0.1;
 }
 
@@ -127,7 +127,7 @@ table {
 
   thead {
     th {
-      padding: 0.75rem;
+      padding: 0.75em;
       text-align: left;
       @include heading-font-regular;
       font-size: 1.25em;
@@ -136,11 +136,11 @@ table {
 
   tbody {
     tr {
-      border-bottom: 1px solid $color-gray-900;
-      border-top: 1px solid $color-gray-900;
+      border-bottom: 1px solid var(--gray--900);
+      border-top: 1px solid var(--gray--900);
 
       td {
-        padding: 0.75rem;
+        padding: 0.75em;
 
         a {
           text-decoration: none;
@@ -149,7 +149,7 @@ table {
           &:hover,
           &:active,
           &:focus {
-            color: $color-primary-300;
+            color: var(--primary--300);
             border: none;
           }
         }
@@ -173,12 +173,12 @@ table {
     width: 100%;
 
     thead {
-      border-bottom: 3px solid $color-primary-500;
+      border-bottom: 3px solid var(--primary--500);
     }
 
     tbody {
       tr {
-        border-bottom: 1px solid $color-gray-900;
+        border-bottom: 1px solid var(--gray--900);
       }
     }
   }
@@ -191,7 +191,7 @@ table {
 .gatsby-highlight {
   max-width: 100%;
   box-sizing: border-box;
-  background-color: $color-gray-100;
+  background-color: var(--gray--100);
   border-radius: 0.3em;
   margin: 0.5em 0;
   padding: 0.5em;
