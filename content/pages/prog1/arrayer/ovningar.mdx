@@ -8,20 +8,49 @@ Gör övningarna i Visual Studio Code. Skapa en ny fil, namnge den _arrayExcerci
 Till din hjälp har du [Introduktion till loopar](https://guteteknik.netlify.app/prog1/iterationssatser/intro), [While-loopar](https://guteteknik.netlify.app/prog1/iterationssatser/while/), och [For-loopar](https://guteteknik.netlify.app/prog1/iterationssatser/for).
 
 # Övning 1
-Skapa en array med följande värden: `1`, `3`, `5`, `7`, `9`
+1. Skapa en array med namnet `myNumbers`, sätt den att ha följande värden: `1`, `3`, `5`, `7`, `9`.
+2. Skriv ut värdena som finns på position 2, 4, och 7. Notera vad som händer.
 # Övning 2
+Värdena i arrayen `myNumbers` du skapade följer ett mönster. Du ska nu lägg till 5 värden till den arrayen med arraymetoden `push` som följer samma mönster.
+Skriv sedan ut arrayen i konsolen med `console.log(myNumbers);` (detta skriver ut arrayen och dess värden).
+
+<PracticeContainer>
+
+Mönstret är `förgående siffra + 2`, så siffrorna som ska läggas till i arrayen är `11`, `13`, `15`, `17`, `19`.
+Därför kan du använda till exempel `myNumbers.push(11);`.
+
+</PracticeContainer>
 
 # Övning 3
-Använd en for-loop för att populera en array 
+Skapa en ny array med namnet `myOtherNumbers`, men låt den vara tom (skapa den så här; `let myOtherNumbers = [];`).
+Med kod, fyll arrayen med **50st** värden som följer mönstret `förgående siffra + 3`. **Börja på siffran 2.**
+**Du ska göra detta så effektivt som möjligt.**
+
+<PracticeContainer>
+
+Använd en loop för att lägga till värdena. Du behöver använda en variabel till som sköter värdet.
+
+```javascript
+let myOtherNumbers = [];
+let currentNumber = 2;
+for(let i = 0; i < 50; i++) {
+    myOtherNumbers.push(currentNumber);
+    currentNumber += 3;
+}
+```
+
+</PracticeContainer>
+
 # Övning 4
+Du ska nu lägga till **40st** värden till arrayen `myNumbers` som följer dess mönster.
+Skriv sedan ut arrayen i konsolen med `console.log(myNumbers);` (detta skriver ut arrayen och dess värden).
+
+Något som kan vara knepigt i detta är att få till så att din loop börjar på rätt siffra.
 
 # Övning 5
 
 # Övning 6
 
-# Övning 7
-
-# Övning 8
 
 
 # Övning 7: URL-adress
@@ -36,157 +65,33 @@ Det som kommer efter första snedstrecken (`/`) innehåller information om navig
 ## Att göra:
 Du får hela URLen: `guteteknik.netlify.app/prog1/arrayer/intro`
 Från den ska du hämta ut alla delar av navigeringen (alltså alla delar efter det första snedstrecken) och spara dem i en array.
-Skriv ut varje del i konsolen var för sig.
+Skriv sedan ut varje del i konsolen var för sig.
+
+<PracticeContainer title="Tips">
+
+Du behöver först isolera endast navigeringen, så använd metoderna `indexOf` för att hitta första snedstrecket och `slice` för att hämta ut allt efter det, så här;
+
+```javascript
+let url = "guteteknik.netlify.app/prog1/arrayer/intro";
+let nav = url.slice(url.indexOf("/")+1) // Tar ut endast navigeringen (prog1/arrayer/intro)
+// Fortsätt här
+```
+
+</PracticeContainer>
+
 
 <PracticeContainer>
 
 ```javascript
 let url = "guteteknik.netlify.app/prog1/arrayer/intro";
-// MER HÄR
+let nav = url.slice(url.indexOf("/")+1) // Tar ut endast navigeringen (prog1/arrayer/intro)
+// Fortsätt här
+
+let navArray = nav.split("/");
+
+for(let i = 0; i < navArray.length; i++) {
+    console.log(navArray[i]);
+}
 ```
 
 </PracticeContainer>
-
-
-En **array** är en variabel som innehåller flera värden av samma typ. På svenska kan vi också kalla detta för Fält, men **array** går lika bra och är det begreppet vi kommer fortsätta använda. Ett värde i en array kallas **element**.
-
-Vi kan skapa en array så här:
-
-```javascript
-let names = [];
-```
-
-I det här fallet skapar vi alltså en ny array som ska kunna hålla flera värden.  En array kan vara bra att använda i fall där vi ska lägga in mycket data, som när vi ska hantera flera namn.
-
-> I JavaScript behöver vi inte specificera hur många värden som arrayen kan hålla, men det är vanligt i andra språk att man behöver specificera antal värden i arrayen när man skapar den.
-
-Varje värde kan vi sedan komma åt genom att skriva variabelnamnet[#] där # är positionen i arrayen där värdet ska ligga. Dock ska vi komma ihåg att arrayer börjar på 0, så första värdet i en array med 20 värde i har sitt första värde på [0], och sista värde på [19].
-
-Vill vi till exempel komma åt värdet på position 5 i arrayen names använder vi  `names[4]`.
-
-Vi kan använda det precis som när vi använder en vanlig variabel, till exempel kan vi göra följande:
-
-```javascript
-
-let names = [];
-names[4] = "Felix";
-
-console.log("names[4] har värdet " + names[4]);
-
-```
-
-> **Notering:** Koden ovan gör att arrayen egentligen är 5 värden stor, men de första 4 värdena är inte definerade. I JavaScript hanteras ett värde som inte är satt som `undefined` (odefinerad). Helst ska man undvika att skapa odefinerade positioner i arrayer, då detta tar upp minne och kan leda till problem längre fram.
-
-# Lägga till värden vid skapande
-Vi kan lägga till värden direkt när vi skapar arrayen, så här;
-
-```javascript
-
-let names = ["Felix", "Anna", "Oliver", "Erik"];
-
-```
-
-Precis som tidigare så kan vi komma åt ett enskilt värde genom att specificera värdets position. Så `Oliver` i det här fallet är på position 2.
-
-> Kom ihåg att arrayer börjar alltid på positionen 0.
-
-## Använda loopar för att populera och hämta värden i arrayer
-
-Vi kan också skapa en loop för att både populera (sätta värden, från engelskas populate) en array, eller för att komma åt dem. Vi kan börja med att skapa en array som ska ta 3 värden, och vi vill hålla resultatet från några ekvationer;
-
-```javascript
-
-let results = [];
-
-```
-
-Ekvationen vi vill spara är dess position (`counter`) plus 2 gånger 6, alltså `(counter+2)*6`. Så vi skapar en while-loop för att populera arrayen med dessa värden;
-
-```javascript
-
-let counter = 0;
-while(counter < 3) {
-    // Lägg in mer här
-    counter++;
-}
-
-```
-
-I vår while-loop kan vi alltså lägga in värden, och vi kan använda det faktum att vi måste öka counter varje gång i vår loop, så värdet kommer att förändras hela tiden.
-
-Ersätt `// Lägg in mer här` med följande kod:
-
-`results[counter] = (counter+2)*6;`
-
-Vi sätter alltså värdet på position [counter] till (counter+2)*6.
-
-Vi använder parantes så additionen sker först. Från matematiken kan vi komma ihåg operationsprioriteten, alltså i vilken ordning saker sker, som bestämmer att multiplikation och division sker före addition och subtraktion – men med parenteser så ändras den ordningen till att det som är i parenteserna sker först.
-
-Vi kan ta och testa vilket värde vi får genom att eka ut det i konsolen (eka kommer från kommandot echo som är vad funktionen console.log gör när den skriver ut i konsolen) precis innan `counter++;` :
-
-```javascript
-console.log(results[counter]);
-```
-
-Utanför loopen kan vi då komma åt värdena genom att anropa positionen i arrayen, eller använda en ny loop;
-
-```javascript
-
-console.log("Results[0]: " + results[0]);
-console.log("Results[1]: " + results[1]);
-console.log("Results[2]: " + results[2]);
-counter = 0; //Eftersom vi redan har en counter så räcker det med att nollställa den
-while (counter < results.Length)
-{
-    console.log("Results[" + counter + "]: " + results[counter]);
-    counter++;
-}
-
-```
-
-Detta skriver alltså samma sak i konsolen.
-
-<PracticeContainer title="hela koden">
-
-```javascript
-let results = [];
-
-let counter = 0;
-while(counter < 3) {
-    results[counter] = (counter+2)*6;
-    console.log(results[counter]);
-    counter++;
-}
-
-console.log("Results[0]: " + results[0]);
-console.log("Results[1]: " + results[1]);
-console.log("Results[2]: " + results[2]);
-counter = 0; //Eftersom vi redan har en counter så räcker det med att nollställa den
-while (counter < results.Length)
-{
-    console.log("Results[" + counter + "]: " + results[counter]);
-    counter++;
-}
-
-```
-
-</PracticeContainer>
-
-# Söka i en array
-
-Vi kan loopa igenom en array för att hitta särskilda värden. Då är det bra att vi vet om arrayens storlek, och för det så kan vi använda egenskapen `.length`, som skriver ut hur många element som arrayen har. Arrayens sista element är alltid på positionen `.length - 1`.
-
-Något att tänka på är att en array är i sig inte ett värde, utan bara en lista som håller värden. 
-
-```javascript
-
-let names = ["Felix", "Anna", "Oliver", "Erik"];
-let nameToSearch = "Oliver";
-
-for(let i = 0; i < names.length; i++) {
-    if(names[i] == nameToSearch) {
-        console.log("Namn hittat på position " + i);
-    }
-}
-
-```
