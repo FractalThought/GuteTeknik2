@@ -146,3 +146,27 @@ for(let i = 0; i < names.length; i++) {
 }
 
 ```
+
+# Skapa en array från en sträng
+En användbar metod i datorvärlden är möjligheten att dela upp en sträng och använda värdena från den i array.
+
+För det använder vi strängmetoden `split`. `split` (engelska för *dela*) delar på en sträng. Metoden tar ett argument, en sträng, som bestämmer var strängen ska delas, och returnerar en array där varje värde är en del av den ursprungliga strängen. Ursprungliga strängen ändras inte.
+
+```javascript
+let message = "Hej Alfred hur har du det idag?";
+let words = message.split(" "); // Dela arrayen på ett mellanslag
+console.log(words[0]); // Skriver ut "Hej"
+
+for(let i = 0; i < words.length; i++) {
+console.log(words[i]); // Skriver ut varje ord på en rad
+}
+```
+
+## Exempel: URL-adresser
+
+Att skriva, skicka, och sedan dela en sträng är hur URL-adresser fungerar i webbläsare.
+
+En URL kan se ut så här:
+`guteteknik.netlify.app/prog1/arrayer/intro`
+
+Det som kommer efter första snedstrecken (`/`) innehåller information om navigeringen på sidan.
