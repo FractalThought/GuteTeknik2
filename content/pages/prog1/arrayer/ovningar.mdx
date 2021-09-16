@@ -5,7 +5,7 @@ date: "2021-09-14"
 
 Gör övningarna i Visual Studio Code. Skapa en ny fil, namnge den _arrayExcercises.js_ och gör övningarna i den filen.
 
-Till din hjälp har du [Introduktion till loopar](https://guteteknik.netlify.app/prog1/iterationssatser/intro), [While-loopar](https://guteteknik.netlify.app/prog1/iterationssatser/while/), och [For-loopar](https://guteteknik.netlify.app/prog1/iterationssatser/for).
+Till din hjälp har du samt [Introduktion till Arrayer](https://guteteknik.netlify.app/prog1/arrayer/intro) och [Introduktion till loopar](https://guteteknik.netlify.app/prog1/iterationssatser/intro) (eftersom dessa övningar ofta använder loopar).
 
 # Övning 1
 1. Skapa en array med namnet `myNumbers`, sätt den att ha följande värden: `1`, `3`, `5`, `7`, `9`.
@@ -47,15 +47,48 @@ Skriv sedan ut arrayen i konsolen med `console.log(myNumbers);` (detta skriver u
 
 Något som kan vara knepigt i detta är att få till så att din loop börjar på rätt siffra.
 
+<PracticeContainer>
+
+```javascript
+
+```
+
+</PracticeContainer>
+
 # Övning 5
+Du ska nu kolla igenom arrayen `myNumbers` och se om du kan hitta några värden.
+
+Skapa en loop som körs för varje element i arrayen och jämför värdet på elementet med följande värden (en kontrollsats för varje värde);
+
+- 25
+- 28
+- 33
+- 55
+
+Ifall värdet hittas ska det skrivas ut i konsolen.
 
 # Övning 6
+Kan du hitta några siffror i `myNumbers` och `myOtherNumbers` som är samma?
 
+Kolla igenom varje element i `myNumbers` och jämför dess värde med värdet på varje element i `myOthersNumbers`.
 
+<Notice>
+För detta behöver du först en loop för att kolla igenom elementen i `myNumbers`, och i den en till loop som kollar igenom `myOtherNumbers`. I den loopen jämför du värdena.
+</Notice>
 
-# Övning 7: URL-adress
+# Övning 7
+Med strängmetoden `split`, dela upp meningen `""` i en array där varje ord är värdet på ett element.
+Skriv ut vartannat ord i konsolen.
 
-Att skriva, skicka, och sedan dela en sträng är hur URL-adresser fungerar i webbläsare.
+<Notice>
+
+Gör det bättre: Skapa en ny sträng som bara innehåller vartannat ord och skriv ut det på en rad i konsolen, istället för att skriva ut orden på varsin rad.
+
+</Notice>
+
+# Övning 8
+
+Att skriva, skicka, och sedan dela upp en sträng är hur URL-adresser fungerar i webbläsare.
 
 En URL kan se ut så här:
 `guteteknik.netlify.app/prog1/arrayer/intro`
