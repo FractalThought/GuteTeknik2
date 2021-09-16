@@ -1,7 +1,7 @@
-import React from "react"
-import ReferencePage from "../../layout/ReferencePage"
+import React from "react";
+import ReferencePage from "../../layout/ReferencePage";
 
-export default ({ location }) => {
+const ThisPage = ({ location }) => {
   return (
     <ReferencePage url={location.pathname} course="prog1">
       <p>
@@ -10,5 +10,7 @@ export default ({ location }) => {
         oftast saker som inte passar in i ett specifikt kapitel.
       </p>
     </ReferencePage>
-  )
-}
+  );
+};
+
+export default ThisPage;

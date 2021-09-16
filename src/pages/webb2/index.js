@@ -1,7 +1,7 @@
-import React from "react"
-import CoursePage from "../../layout/CoursePage"
+import React from "react";
+import CoursePage from "../../layout/CoursePage";
 
-export default ({ location }) => {
+const ThisPage = ({ location }) => {
   return (
     <CoursePage url={location.pathname} course="webb2">
       <p>
@@ -9,5 +9,7 @@ export default ({ location }) => {
         inriktningen Information- och Medieteknik i Teknikprogrammet.
       </p>
     </CoursePage>
-  )
-}
+  );
+};
+
+export default ThisPage;

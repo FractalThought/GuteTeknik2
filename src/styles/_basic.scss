@@ -97,6 +97,18 @@ p {
   max-width: 100%;
 }
 
+.page {
+  p,
+  a,
+  li,
+  blockquote,
+  th,
+  td {
+    font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
+    letter-spacing: 0.06em;
+  }
+}
+
 blockquote {
   box-sizing: border-box;
   margin: 1em;

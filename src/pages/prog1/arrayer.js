@@ -1,7 +1,7 @@
-import React from "react"
-import ChapterPage from "../../layout/ChapterPage"
+import React from "react";
+import ChapterPage from "../../layout/ChapterPage";
 
-export default ({ location }) => {
+const ThisPage = ({ location }) => {
   return (
     <ChapterPage url={location.pathname} course="prog1" chapter="arrayer">
       <p>
@@ -10,5 +10,7 @@ export default ({ location }) => {
         fungerar, och deras användningsområde.
       </p>
     </ChapterPage>
-  )
-}
+  );
+};
+
+export default ThisPage;

@@ -1,7 +1,7 @@
-import React from "react"
-import ChapterPage from "../../layout/ChapterPage"
+import React from "react";
+import ChapterPage from "../../layout/ChapterPage";
 
-export default ({ location }) => {
+const ThisPage = ({ location }) => {
   return (
     <ChapterPage url={location.pathname} course="prog1" chapter="webben">
       <p>
@@ -9,5 +9,7 @@ export default ({ location }) => {
         lägga till iteraktion till en hemsida och skapa en webbapplikation.
       </p>
     </ChapterPage>
-  )
-}
+  );
+};
+
+export default ThisPage;

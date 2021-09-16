@@ -1,7 +1,7 @@
-import React from "react"
-import ChapterPage from "../../layout/ChapterPage"
+import React from "react";
+import ChapterPage from "../../layout/ChapterPage";
 
-export default ({ location }) => {
+const ThisPage = ({ location }) => {
   return (
     <ChapterPage url={location.pathname} course="prog1" chapter="strängar">
       <p>
@@ -9,5 +9,7 @@ export default ({ location }) => {
         till, ta bort, och på annat sätt förändra strängar.
       </p>
     </ChapterPage>
-  )
-}
+  );
+};
+
+export default ThisPage;

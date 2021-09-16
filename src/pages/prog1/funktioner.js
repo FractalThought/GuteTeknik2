@@ -1,7 +1,7 @@
 import React from "react";
 import ChapterPage from "../../layout/ChapterPage";
 
-export default ({ location }) => {
+const ThisPage = ({ location }) => {
   return (
     <ChapterPage url={location.pathname} course="prog1" chapter="funktioner">
       <p>
@@ -11,3 +11,5 @@ export default ({ location }) => {
     </ChapterPage>
   );
 };
+
+export default ThisPage;

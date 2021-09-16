@@ -1,7 +1,7 @@
-import React from "react"
-import { useEffect } from "react"
-import CourseItem from "../components/CourseItem"
-import MyImg from "../components/MyImg"
+import React from "react";
+import { useEffect } from "react";
+import CourseItem from "../components/CourseItem";
+import MyImg from "../components/MyImg";
 
 const courses = [
   {
@@ -46,12 +46,12 @@ const courses = [
       "Skapa en digital produkt från idé till färdig produkt. Vi jobbar med Unity och skapar spel under kursen.",
     shortcuts: [{ name: "", link: "" }],
   },
-]
+];
 
-export default ({ data }) => {
+const ThisPage = ({ location }) => {
   useEffect(() => {
-    document.title = "Tektal"
-  })
+    document.title = "Tektal";
+  });
 
   return (
     <React.Fragment>
@@ -74,7 +74,8 @@ export default ({ data }) => {
         ))}
       </section>
     </React.Fragment>
-  )
-}
+  );
+};
 
 // TODO: Change to using json (pageinfo)
+export default ThisPage;

@@ -1,7 +1,7 @@
-import React from "react"
-import CoursePage from "../../layout/CoursePage"
+import React from "react";
+import CoursePage from "../../layout/CoursePage";
 
-export default ({ location }) => {
+const ThisPage = ({ location }) => {
   return (
     <CoursePage url={location.pathname} course="prog2">
       <p>
@@ -12,5 +12,7 @@ export default ({ location }) => {
         som är användarvänliga och funktionella.
       </p>
     </CoursePage>
-  )
-}
+  );
+};
+
+export default ThisPage;
