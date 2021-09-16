@@ -156,6 +156,11 @@
           "title": "Introduktion till arrayer",
           "link": "intro",
           "type": "lesson"
+        },
+        {
+          "title": "Övningar",
+          "link": "ovningar",
+          "type": "exercise"
         }
       ],
       "references": [

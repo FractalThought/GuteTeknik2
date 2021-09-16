@@ -10,6 +10,18 @@ Till din hjälp har du samt [Introduktion till Arrayer](https://guteteknik.netli
 # Övning 1
 1. Skapa en array med namnet `myNumbers`, sätt den att ha följande värden: `1`, `3`, `5`, `7`, `9`.
 2. Skriv ut värdena som finns på position 2, 4, och 7. Notera vad som händer.
+3. Du kommer få ett felmeddelande någonstans. Ta bort konsolmeddelandet som orsakar felet.
+
+<PracticeContainer>
+
+```javascript
+let myNumbers = [1, 3, 5, 7, 9];
+console.log(myNumbers[2]);
+console.log(myNumbers[4]);
+console.log(myNumbers[7]);
+```
+
+</PracticeContainer>
 # Övning 2
 Värdena i arrayen `myNumbers` du skapade följer ett mönster. Du ska nu lägg till 5 värden till den arrayen med arraymetoden `push` som följer samma mönster.
 Skriv sedan ut arrayen i konsolen med `console.log(myNumbers);` (detta skriver ut arrayen och dess värden).
@@ -17,14 +29,17 @@ Skriv sedan ut arrayen i konsolen med `console.log(myNumbers);` (detta skriver u
 <PracticeContainer>
 
 Mönstret är `förgående siffra + 2`, så siffrorna som ska läggas till i arrayen är `11`, `13`, `15`, `17`, `19`.
-Därför kan du använda till exempel `myNumbers.push(11);`.
+Därför kan du använda till exempel `myNumbers.push(11);` för varje värde.
 
 </PracticeContainer>
 
 # Övning 3
 Skapa en ny array med namnet `myOtherNumbers`, men låt den vara tom (skapa den så här; `let myOtherNumbers = [];`).
+
 Med kod, fyll arrayen med **50st** värden som följer mönstret `förgående siffra + 3`. **Börja på siffran 2.**
 **Du ska göra detta så effektivt som möjligt.**
+
+Skriv sedan ut arrayen i konsolen med `console.log(myOtherNumbers);` (detta skriver ut arrayen och dess värden för testning).
 
 <PracticeContainer>
 
@@ -37,20 +52,28 @@ for(let i = 0; i < 50; i++) {
     myOtherNumbers.push(currentNumber);
     currentNumber += 3;
 }
+
+console.log(myOtherNumbers);
 ```
 
 </PracticeContainer>
 
 # Övning 4
-Du ska nu lägga till **40st** värden till arrayen `myNumbers` som följer dess mönster.
-Skriv sedan ut arrayen i konsolen med `console.log(myNumbers);` (detta skriver ut arrayen och dess värden).
+Du ska nu lägga till **40st** värden till arrayen `myNumbers` som följer dess mönster. Skriv sedan ut arrayen i konsolen.
 
 Något som kan vara knepigt i detta är att få till så att din loop börjar på rätt siffra.
 
 <PracticeContainer>
 
 ```javascript
+// återanvänder variabeln från tidigare
+currentNumber = myNumbers[myNumbers.length-1] + 2; // .length-1 hämtar ut sista elementet i arrayen. +2 för vi ska följa mönstret av förgående siffra +2
+for(let i = 0; i < 40; i++) {
+    myNumbers.push(currentNumber);
+    currentNumber += 2;
+}
 
+console.log(myNumbers);
 ```
 
 </PracticeContainer>
@@ -67,17 +90,53 @@ Skapa en loop som körs för varje element i arrayen och jämför värdet på el
 
 Ifall värdet hittas ska det skrivas ut i konsolen.
 
+<PracticeContainer>
+
+```javascript
+for(let i = 0; i < myNumbers.length; i++) { // Kolla igenom varje element
+    if(myNumbers[i] == 25) {
+        console.log("25 hittad.");
+    }
+    if(myNumbers[i] == 28) {
+        console.log("28 hittad.");
+    }
+    if(myNumbers[i] == 33) {
+        console.log("33 hittad.");
+    }
+    if(myNumbers[i] == 55) {
+        console.log("55 hittad.");
+    }
+}
+```
+
+</PracticeContainer>
+
 # Övning 6
 Kan du hitta några siffror i `myNumbers` och `myOtherNumbers` som är samma?
 
-Kolla igenom varje element i `myNumbers` och jämför dess värde med värdet på varje element i `myOthersNumbers`.
+Kolla igenom varje element i `myNumbers` och jämför dess värde med värdet på varje element i `myOthersNumbers`. Skriv ut i konsolen vilka värden som är lika.
 
 <Notice>
-För detta behöver du först en loop för att kolla igenom elementen i `myNumbers`, och i den en till loop som kollar igenom `myOtherNumbers`. I den loopen jämför du värdena.
+För detta behöver du först en loop för att kolla igenom elementen i `myNumbers`, och i den en till loop som kollar igenom `myOtherNumbers`. I den loopen jämför du värdena med en kontrollsats.
 </Notice>
 
+<PracticeContainer>
+
+```javascript
+for(let i = 0; i < myNumbers.length; i++) {
+    for(let j = 0; i < myOtherNumbers.length; j++) {
+        if(myNumbers[i] == myOtherNumbers[j]) {
+            console.log(myNumbers[i] + " finns i båda arrayerna.");
+        }
+    }
+}
+```
+
+</PracticeContainer>
+
 # Övning 7
-Med strängmetoden `split`, dela upp meningen `""` i en array där varje ord är värdet på ett element.
+Med strängmetoden `split`, dela upp meningen `"Hej alla mina glada elever. Nu Idag så är ni, jag och en stor häst inbjudna som gäster på slottet. Bordet vårt står där."` i en array där varje ord är värdet på ett element.
+
 Skriv ut vartannat ord i konsolen.
 
 <Notice>
@@ -85,6 +144,26 @@ Skriv ut vartannat ord i konsolen.
 Gör det bättre: Skapa en ny sträng som bara innehåller vartannat ord och skriv ut det på en rad i konsolen, istället för att skriva ut orden på varsin rad.
 
 </Notice>
+
+<PracticeContainer>
+
+```javascript
+let message =
+  "Hej alla mina glada elever. Nu Idag så är ni, jag och en stor häst inbjudna som gäster på slottet. Bordet vårt står där.";
+
+let messageArray = message.split(" ");
+
+let newMessage = "";
+for (let i = 0; i < messageArray.length; i += 2) {
+  console.log(messageArray[i]);
+  newMessage += messageArray[i] + "";
+}
+
+console.log(newMessage);
+
+```
+
+</PracticeContainer>
 
 # Övning 8
 
@@ -95,7 +174,7 @@ En URL kan se ut så här:
 
 Det som kommer efter första snedstrecken (`/`) innehåller information om navigeringen på webbplatsen och visar oss var vi är på hemsidan, där sista delen efter sista snedstrecken är den aktuella sidan vi är på nu, och de innan visar var den sidan ligger. Om någon del av dem ändras kommer vi till en annan plats, eventuellt till en sida som inte finns.
 
-## Att göra:
+## Vad du ska göra:
 Du får hela URLen: `guteteknik.netlify.app/prog1/arrayer/intro`
 Från den ska du hämta ut alla delar av navigeringen (alltså alla delar efter det första snedstrecken) och spara dem i en array.
 Skriv sedan ut varje del i konsolen var för sig.
@@ -118,7 +197,6 @@ let nav = url.slice(url.indexOf("/")+1) // Tar ut endast navigeringen (prog1/arr
 ```javascript
 let url = "guteteknik.netlify.app/prog1/arrayer/intro";
 let nav = url.slice(url.indexOf("/")+1) // Tar ut endast navigeringen (prog1/arrayer/intro)
-// Fortsätt här
 
 let navArray = nav.split("/");
 
