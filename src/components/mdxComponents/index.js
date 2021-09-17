@@ -1,21 +1,25 @@
-import React from "react"
+import React from "react";
 // import H from './Headings';
 // // import Heading from "../heading";
 // import Text from './text';
-import Code from "./code"
+import Code from "./code";
 // import Blockquote from './blockquote';
 // import Table from './table';
-import Pre from "./pre"
+import Pre from "./pre";
 
-import PracticeContainer from "./PracticeContainer"
-import Callout, { Warning, Error, Notice, Result } from "./Callout"
-import BoxedList from "./BoxedList"
-import FlexContainer from "./FlexContainer"
-import RenderList from "./RenderList"
+import Heading from "./Heading";
+import TopicHeading from "./TopicHeading";
+
+import PracticeContainer from "./PracticeContainer";
+import Callout, { Warning, Error, Notice, Result } from "./Callout";
+import BoxedList from "./BoxedList";
+import FlexContainer from "./FlexContainer";
+import RenderList from "./RenderList";
 
 /* eslint-disable */
 export default {
-  // h1: props => <H as="h1" {...props} />,
+  // h1: props => <Heading {...props} />,
+  TopicHeading: TopicHeading,
   // h2: props => <H as="h2" {...props} />,
   // h3: props => <H as="h3" {...props} />,
   // h4: props => <H as="h4" {...props} />,
@@ -34,5 +38,5 @@ export default {
   Result: Result,
   BoxedList: BoxedList,
   FlexContainer: FlexContainer,
-  RenderList: RenderList
-}
+  RenderList: RenderList,
+};

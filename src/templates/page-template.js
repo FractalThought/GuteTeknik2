@@ -1,10 +1,10 @@
-import React from "react"
-import { graphql, Link } from "gatsby"
-import { MDXProvider } from "@mdx-js/react"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import Container from "../components/Container"
+import React from "react";
+import { graphql, Link } from "gatsby";
+import { MDXProvider } from "@mdx-js/react";
+import { MDXRenderer } from "gatsby-plugin-mdx";
+import Container from "../components/Container";
 
-const shortcodes = { Link } // Provide common components here
+const shortcodes = { Link }; // Provide common components here
 
 export const pageQuery = graphql`
   query($id: String) {
@@ -61,33 +61,41 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
 export default function PageTemplate({ pageContext, data, location }) {
-  const page = data.mdx
-  const allInfo = data.allMdx.edges
+  const page = data.mdx;
+  const allInfo = data.allMdx.edges;
   const {
     breadcrumb: { crumbs },
-  } = pageContext
+  } = pageContext;
 
   const crumbData = {
     crumbs: crumbs,
     crumbSeparator: "/",
     crumbLabel: page.frontmatter.title,
-  }
+  };
 
   // Just remove the .node-intermediate step
   const pageInfo = data.allPageinfoJson.edges.map(page => {
-    return page.node
-  })
+    return page.node;
+  });
 
-  let listOfContent = undefined
+  let listOfContent = undefined;
   if (
     page.frontmatter.headings !== undefined &&
     page.frontmatter.headings !== null
   ) {
-    listOfContent = page.frontmatter.headings.split("|")
+    listOfContent = page.frontmatter.headings.split("|");
   }
+
+  /*
+  TODO: Need to get the children from the MDXProvider "after" it has been rendered
+  Is that possible?
+
+  https://mparavano.medium.com/find-filter-react-children-by-type-d9799fb78292
+
+  */
 
   return (
     <Container
@@ -102,5 +110,5 @@ export default function PageTemplate({ pageContext, data, location }) {
         <MDXRenderer>{page.body}</MDXRenderer>
       </MDXProvider>
     </Container>
-  )
+  );
 }
