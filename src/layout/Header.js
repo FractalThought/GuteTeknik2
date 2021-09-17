@@ -1,5 +1,5 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
 
 function Header({ mainPage, sidebarUtility }) {
   const topPages = [
@@ -23,7 +23,7 @@ function Header({ mainPage, sidebarUtility }) {
       name: "Dator- och nätverksteknik",
       link: "daona",
     },
-  ]
+  ];
 
   // map through, check which is active
 
@@ -33,14 +33,14 @@ function Header({ mainPage, sidebarUtility }) {
         <Link key={key} className="active" href={"/" + link.link}>
           {link.name}
         </Link>
-      )
+      );
     }
 
     return (
       <Link key={key} href={"/" + link.link}>
         {link.name}
       </Link>
-    )
+    );
   }
 
   // return (
@@ -59,7 +59,7 @@ function Header({ mainPage, sidebarUtility }) {
   // )
 
   function ToggleSidebar() {
-    sidebarUtility.setSideBarVisibility(!sidebarUtility.showSidebar)
+    sidebarUtility.setSideBarVisibility(!sidebarUtility.showSidebar);
   }
 
   return (
@@ -92,13 +92,13 @@ function Header({ mainPage, sidebarUtility }) {
       <div id="searchbar">
         <input type="text" placeholder="Sök" />
       </div>
-      <nav class="course-nav">
+      <nav className="course-nav">
         {topPages.map((page, key) => {
-          return createHeaderLink(mainPage, page, key)
+          return createHeaderLink(mainPage, page, key);
         })}
       </nav>
 
-      <button class="show-menu-button" onClick={ToggleSidebar}>
+      <button className="show-menu-button" onClick={ToggleSidebar}>
         {sidebarUtility.showSidebar ? (
           <svg
             width="18"
@@ -138,7 +138,7 @@ function Header({ mainPage, sidebarUtility }) {
         <span>Meny</span>
       </button>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;
