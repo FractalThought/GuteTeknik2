@@ -97,6 +97,21 @@ export default function PageTemplate({ pageContext, data, location }) {
 
   */
 
+  /*
+  # Programmatically generated content
+
+Alternatively, if you're using `MDXRenderer` you can pass any data you want in as a prop and it will be forwarded into the MDX content. So your template can do the same query as above and pass it into your content.
+
+```js
+<MDXRenderer relatedPosts={props.data.related} />
+
+https://github.com/ChristopherBiscardi/gatsby-mdx/issues/238
+
+
+https://mdxjs.com/getting-started/#mdxprovider
+
+  */
+
   return (
     <Container
       url={page.fields.slug}
