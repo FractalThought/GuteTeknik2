@@ -63,9 +63,9 @@ function Header({ mainPage, sidebarUtility }) {
   }
 
   return (
-    <header id="toppen">
+    <header>
       <div id="logo">
-        <Link href="#">
+        <Link id="toppen" to="/">
           <svg
             width="30"
             height="30"
