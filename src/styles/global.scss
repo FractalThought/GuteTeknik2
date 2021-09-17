@@ -14,6 +14,7 @@
   grid-template-columns: 1fr;
   row-gap: 2em;
   position: relative;
+  word-break: break-all;
 }
 
 header {
@@ -22,7 +23,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background: var(--primary--800);
-  padding: 0.5em;
+  padding: var(--base) var(--small);
 }
 
 .course-nav {
@@ -34,10 +35,13 @@ header {
 #logo {
   font-size: var(--lg3);
   grid-area: logo;
+  display: flex;
+  align-items: center;
 }
 
 #logo * {
   color: var(--primary--100);
+  margin: 0;
 }
 
 #logo a {
@@ -92,6 +96,7 @@ header {
   width: 100%;
   grid-area: main;
   max-height: 80vh;
+  min-height: 80vh;
 }
 
 .sidemenu--show {
@@ -237,6 +242,8 @@ aside {
         min-content,
         10em
       );
+
+    word-break: normal;
   }
 
   header {
