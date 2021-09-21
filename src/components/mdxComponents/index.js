@@ -7,7 +7,7 @@ import Code from "./code";
 // import Table from './table';
 import Pre from "./pre";
 
-import Heading from "./Heading";
+// import Heading from "./Heading";
 import TopicHeading from "./TopicHeading";
 
 import PracticeContainer from "./PracticeContainer";

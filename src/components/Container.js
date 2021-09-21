@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { MDXProvider } from "@mdx-js/react";
 import styled from "styled-components";
 import Header from "../layout/Header";
@@ -7,6 +7,7 @@ import mdxComponents from "./mdxComponents";
 import MyCrumbs from "./MyCrumbs";
 import TableOfContent from "./TableOfContent";
 import RightStickyDiv from "./RightStickyDiv";
+import { MainContext, mainInfo } from "./hooks/MainContext";
 
 const ClearDiv = styled.div`
   clear: both;
@@ -51,31 +52,42 @@ function Container({
 
   return (
     <div id="main-grid">
-      <Header
-        sidebarUtility={{ showSidebar, setSideBarVisibility }}
-        mainPage={mainPage}
-      />
-      <Sidebar
-        showSidebar={showSidebar}
-        url={urlData}
-        currentPageData={currentPageData}
-      />
-      <main>
-        <ContentContainer className="page">
-          <MyCrumbs crumbData={crumbData} />
-          <h1 className="page-heading">{pageTitle}</h1>
-          {/* <h1 className="printheader">{pageTitle}</h1> */}
-          <MDXProvider components={mdxComponents}>{children}</MDXProvider>
-          <ClearDiv></ClearDiv>
-        </ContentContainer>
-      </main>
-      <aside className="page-index">
-        <RightStickyDiv>
-          <TableOfContent listOfContent={listOfContent} />
-        </RightStickyDiv>
-      </aside>
+      <MainContext.Provider value={mainInfo}>
+        <MainLayout>
+          <Header
+            sidebarUtility={{ showSidebar, setSideBarVisibility }}
+            mainPage={mainPage}
+          />
+          <Sidebar
+            showSidebar={showSidebar}
+            url={urlData}
+            currentPageData={currentPageData}
+          />
+          <main>
+            <ContentContainer className="page">
+              <MyCrumbs crumbData={crumbData} />
+              <h1 className="page-heading">{pageTitle}</h1>
+              {/* <h1 className="printheader">{pageTitle}</h1> */}
+              <MDXProvider components={mdxComponents}>{children}</MDXProvider>
+              <ClearDiv></ClearDiv>
+            </ContentContainer>
+          </main>
+          <aside className="page-index">
+            <RightStickyDiv>
+              <TableOfContent listOfContent={listOfContent} />
+            </RightStickyDiv>
+          </aside>
+        </MainLayout>
+      </MainContext.Provider>
     </div>
   );
 }
+
+const MainLayout = ({ children }) => {
+  const CurrentMainInfo = useContext(MainContext);
+  CurrentMainInfo.currentHeadings = [];
+
+  return <>{children}</>;
+};
 
 export default Container;

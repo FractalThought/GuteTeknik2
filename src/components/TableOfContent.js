@@ -1,21 +1,28 @@
-import React from "react"
+import React, { useContext } from "react";
+import { MainContext } from "./hooks/MainContext";
+
 // import styled from "styled-components"
 
 function TableOfContent({ listOfContent }) {
+  const MainInfo = useContext(MainContext);
+
   let renderedContent = [
     {
       name: "Gå till toppen",
       link: "toppen",
     },
-  ]
+  ];
 
-  if (listOfContent !== undefined) {
-    listOfContent.forEach(content => {
-      const split = content.split(":")
-      const heading = { name: split[0], link: split[1] }
-      renderedContent.push(heading)
-    })
-  }
+  renderedContent = [...renderedContent, ...MainInfo.currentHeadings];
+
+  // Old
+  // if (listOfContent !== undefined) {
+  //   listOfContent.forEach(content => {
+  //     const split = content.split(":");
+  //     const heading = { name: split[0], link: split[1] };
+  //     renderedContent.push(heading);
+  //   });
+  // }
 
   return (
     <>
@@ -26,11 +33,11 @@ function TableOfContent({ listOfContent }) {
             <li key={key}>
               <a href={"#" + heading.link}>{heading.name}</a>
             </li>
-          )
+          );
         })}
       </ul>
     </>
-  )
+  );
 }
 
-export default TableOfContent
+export default TableOfContent;
