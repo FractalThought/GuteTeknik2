@@ -33,7 +33,8 @@ console.log("names[4] har värdet " + names[4]);
 
 > **Notering:** Koden ovan gör att arrayen egentligen är 5 värden stor, men de första 4 värdena är inte definerade. I JavaScript hanteras ett värde som inte är satt som `undefined` (odefinerad). Helst ska man undvika att skapa odefinerade positioner i arrayer, då detta tar upp minne och kan leda till problem längre fram.
 
-# Lägga till värden vid skapande
+<TopicHeading link="värden-vid-skapande">Lägga till värden vid skapande</TopicHeading>
+
 Vi kan lägga till värden direkt när vi skapar arrayen, så här;
 
 ```javascript
@@ -128,7 +129,7 @@ while (counter < results.Length)
 
 </PracticeContainer>
 
-# Söka i en array
+<TopicHeading link="söka-i-en-array">Söka i en array</TopicHeading>
 
 Vi kan loopa igenom en array för att hitta särskilda värden. Då är det bra att vi vet om arrayens storlek, och för det så kan vi använda egenskapen `.length`, som skriver ut hur många element som arrayen har. Arrayens sista element är alltid på positionen `.length - 1`.
 
@@ -147,7 +148,8 @@ for(let i = 0; i < names.length; i++) {
 
 ```
 
-# Skapa en array från en sträng
+<TopicHeading link="array-från-sträng">Skapa en array från en sträng</TopicHeading>
+
 En användbar metod i datorvärlden är möjligheten att dela upp en sträng och använda värdena från den i array.
 
 För det använder vi strängmetoden `split`. `split` (engelska för *dela*) delar på en sträng. Metoden tar ett argument, en sträng, som bestämmer var strängen ska delas, och returnerar en array där varje värde är en del av den ursprungliga strängen. Ursprungliga strängen ändras inte.
