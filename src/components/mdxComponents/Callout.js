@@ -3,6 +3,15 @@ import styled, { css } from "styled-components";
 import { MDXProvider } from "@mdx-js/react";
 import code from "./code";
 
+/*
+
+Callout (default): Blue box, used for added info that would interrupt the normal flow of the document.
+Notice: Yellow box, used to alert the reader of things to take care with, for example that substr is not the same thing as substring.
+Output: Gray box, used for showing the output of a bit of code (usually console.log).
+Failure: Red box, used both for showing failed code (errors), and high-alert warnings that Notice doesn't cover.
+Success: Green box, used for showing successful code when used in junction with Failure, or for when success needs to be shown.
+*/
+
 const CalloutBox = styled.div`
   padding: 0.25rem 1rem;
   font-size: 1rem;
