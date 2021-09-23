@@ -11,7 +11,7 @@ import Pre from "./pre";
 import TopicHeading from "./TopicHeading";
 
 import PracticeContainer from "./PracticeContainer";
-import Callout, { Warning, Error, Notice, Result } from "./Callout";
+import Callout, { Output, Failure, Notice, Success } from "./Callout";
 import BoxedList from "./BoxedList";
 import FlexContainer from "./FlexContainer";
 import RenderList from "./RenderList";
@@ -32,10 +32,10 @@ export default {
   // blockquote: Blockquote,
   PracticeContainer: PracticeContainer,
   Callout: Callout,
-  Warning: Warning,
-  Error: Error,
+  Output: Output,
+  Failure: Failure,
   Notice: Notice,
-  Result: Result,
+  Success: Success,
   BoxedList: BoxedList,
   FlexContainer: FlexContainer,
   RenderList: RenderList,
