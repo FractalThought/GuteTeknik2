@@ -13,11 +13,12 @@ html {
 body {
   padding: 0;
   font-size: var(--base);
-  font-family: "Open Sans", Verdana, sans-serif;
+  font-family: "Lato", Verdana, sans-serif;
   color: var(--gray--800);
   margin: 0;
   line-height: 1.7;
-  letter-spacing: 0.03em;
+  word-spacing: 0.025em;
+  letter-spacing: 0.015em;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased !important;
   -moz-font-smoothing: antialiased !important;
@@ -104,8 +105,7 @@ p {
   blockquote,
   th,
   td {
-    font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
-    letter-spacing: 0.06em;
+    font-family: "Lato", Verdana, sans-serif;
   }
 }
 
