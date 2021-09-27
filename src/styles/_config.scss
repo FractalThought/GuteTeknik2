@@ -148,4 +148,5 @@ $course-card-shadow-hover: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
 @mixin heading-font-regular {
   font-family: "Fira Sans", sans-serif;
   font-weight: var(--fw-medium-fs);
+  color: var(--primary--900);
 }
