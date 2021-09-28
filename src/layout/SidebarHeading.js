@@ -1,5 +1,5 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
 
 // const ChapterTitle = styled.div`
 //   display: flex;
@@ -98,11 +98,11 @@ Lastly, need courseLink
 
 // function SidebarHeading({ chapter, courseLink, currentPage, currentChapter }) {
 function SidebarHeading({ headingData, urlData }) {
-  const { pages, title, link } = headingData
+  const { pages, title, link } = headingData;
 
-  let isCurrentChapter = false
+  let isCurrentChapter = false;
   if (urlData.chapter !== undefined || urlData.chapter !== null) {
-    isCurrentChapter = urlData.chapter === link
+    isCurrentChapter = urlData.chapter === link;
   }
 
   /*
@@ -132,7 +132,7 @@ function SidebarHeading({ headingData, urlData }) {
       >
         <h2>{title}</h2>
       </Link>
-      <div class="menu-section__list">
+      <div className="menu-section__list">
         {pages.map((page, index) => (
           <Link
             key={index}
@@ -150,7 +150,7 @@ function SidebarHeading({ headingData, urlData }) {
         ))}
       </div>
     </section>
-  )
+  );
 }
 
-export default SidebarHeading
+export default SidebarHeading;

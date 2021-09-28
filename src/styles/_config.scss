@@ -1,5 +1,13 @@
 // @import url("https://fonts.googleapis.com/css?family=Fira+Sans:wght@400,500,700|Open+Sans:wght@400,600,700|Poppins:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Fira+Sans:wght@400,500,700|Merriweather:ital,wght@0,400;0,700;1,400;1,700|Open+Sans:wght@400,600,700|Fira+Code:wght@400|Poppins:wght@700&display=swap");
+//@import url("https://fonts.googleapis.com/css?family=Fira+Sans:wght@400,500,700|Merriweather:ital,wght@0,400;0,700;1,400;1,700|Open+Sans:wght@400,600,700|Fira+Code:wght@400,700|Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:wght@400,500,700|Lato:ital,wght@0,400;0,700;1,400;1,700|Fira+Code:wght@400,700|&display=swap");
+
+/*
+
+Headings: Fira Sans?
+Paragrafs: Lato (need bold, italic)
+
+*/
 
 $codeblock-color: #999;
 
@@ -108,7 +116,7 @@ $course-card-shadow-hover: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
   /* base size: base (16px) */
   --smaller: 0.75rem;
   --small: 0.88rem;
-  --base: 16px;
+  --base: 18px;
   --large: 1.12rem;
   --lg2: 1.25rem;
   --lg3: 1.5rem;
@@ -140,4 +148,5 @@ $course-card-shadow-hover: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
 @mixin heading-font-regular {
   font-family: "Fira Sans", sans-serif;
   font-weight: var(--fw-medium-fs);
+  color: var(--primary--900);
 }
