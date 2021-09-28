@@ -26,43 +26,48 @@ const CalloutBox = styled.div`
       clear: both;
     `};
 
-  color: var(-- ${props => props.color || "callout"}--900);
-  border: 2px solid var(-- ${props => props.color || "callout"}--300);
-  background: var(-- ${props => props.color || "callout"}--50);
+  color: var(${props => props.boxColor || "--callout"}--900);
+  border: 2px solid var(${props => props.boxColor || "--callout"}--300);
+  background: var(${props => props.boxColor || "--callout"}--50);
 `;
 
-function Callout({ half, color, children }) {
+function Callout({ half, boxColor = "callout", children }) {
+  boxColor = "--" + boxColor;
   return (
-    <CalloutBox color={color} half={half}>
+    <CalloutBox boxColor={boxColor} half={half}>
       <MDXProvider components={code}>{children}</MDXProvider>
     </CalloutBox>
   );
 }
 
 function Output({ half, children }) {
+  const boxColor = "gray";
   return (
-    <Callout half={half} color="gray">
+    <Callout half={half} boxColor={boxColor}>
       {children}
     </Callout>
   );
 }
 function Failure({ half, children }) {
+  const boxColor = "failure";
   return (
-    <Callout half={half} color="failure">
+    <Callout half={half} boxColor={boxColor}>
       {children}
     </Callout>
   );
 }
 function Notice({ half, children }) {
+  const boxColor = "notice";
   return (
-    <Callout half={half} color="notice">
+    <Callout half={half} boxColor={boxColor}>
       {children}
     </Callout>
   );
 }
 function Success({ half, children }) {
+  const boxColor = "success";
   return (
-    <Callout half={half} color="success">
+    <Callout half={half} boxColor={boxColor}>
       {children}
     </Callout>
   );
