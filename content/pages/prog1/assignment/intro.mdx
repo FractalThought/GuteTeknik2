@@ -5,28 +5,15 @@ date: "2021-09-23"
 
 Denna inlämningsuppgift innehåller två små uppgifter, två svårare uppgifter, och ett mindre projekt. Uppgiften testar dina kunskaper i att använda variabler, strängmanipulation, kontrollsatser, iterationssatser, och arrayer.
 
-
-
-# Att testa:
-Variabler
-Strängmanipulation
-Kontrollsatser
-Iterationssatser
-Arrayer
-
-
+**Lämna in js-filen du arbetat i, på SchoolSoft inom deadlinen som står där.**
 
 <TopicHeading link="uppgift-1">Uppgift 1</TopicHeading>
 
-Skapa variabeln `x` och sätt dess värde till 3.
-
-Skapa variablen `y` och sätt dess värde till 5 + `x`.
-
-Skapa variabeln `z` och sätt dess värde till `x` * `y`.
-
-Skriv ut variablerna i konsolen.
-
-Använd en kontrollsats (`if()`) som kollar om `z` är lika med `x`. Om de är lika, skriv ut `"Värdena är lika."` i konsolen. Om de inte är lika, skriv ut `"Värdena är olika."` istället.
+1. Skapa variabeln `x` och sätt dess värde till 3.
+2. Skapa variablen `y` och sätt dess värde till 5 + `x`.
+3. Skapa variabeln `z` och sätt dess värde till `x` * `y`.
+4. Skriv ut variablerna i konsolen.
+5. Använd en kontrollsats (`if()`) som kollar om `z` är lika med `x`. Om de är lika, skriv ut `"Värdena är lika."` i konsolen. Om de inte är lika, skriv ut `"Värdena är olika."` istället.
 
 <TopicHeading link="uppgift-2">Uppgift 2</TopicHeading>
 
@@ -34,21 +21,25 @@ Skapa arrayen `names` och fyll den med följande värden: `"Alfred", "Beata", "C
 
 Skapa en `for-loop` som kollar igenom hela arrayen och skriver ut i konsolen ett meddelande som följer detta mönstret: `"Hej " + namn + "! Du har plats" + i + " i kön."`. Där namn är namnet på personen, och i är loop countern du använder för loopen (vilket blir samma som köplatsen för personen).
 
-Bonus (för högre betyg):
+## Bonus (för högre betyg):
 
 För personen som är först i kön, skriv ut `"Hej " + namn + "! Du är först i kön!"`.
 
 För personen som är sist i kön, skriv ut `"Hej " + namn + "! Du är sist i kön."`.
 
 <TopicHeading link="uppgift-3">Uppgift 3</TopicHeading>
-Strängar och kontrollsats
+
+Du har strängen `let siffervisan = "1, 2, 75, 6, 7, 75, 6, 7, 75, 6, 7, 1, 2, 75, 6, 7, 75, 6, 7, 73, 107, 103, 102, 107, 6, 19, 47, 17, 18, 16, 15, 13, 19, 14, 17, 19, 16, 15, 11, 9, 47";`.
+
+Med strängmetoder (till exempel `substr`, `slice`, `split`), hämta ut det **4e**, **14e**, och **23e** talet som nämns i strängen och skriv ut ett meddelande som säger vilka tal som är på de platserna.
+
+<Notice>
+
+Ett tal kan bestå av en eller flera siffror. Vi är ute efter hela talen. Till exempel, sista talet i strängen är **47**, och första talet är **1**.
+
+</Notice>
 
 <TopicHeading link="uppgift-4">Uppgift 4</TopicHeading>
-Arrayer och loopar
-
-Lite mer avancerad, men framförallt lite mindre beskrivning
-
-<TopicHeading link="uppgift-5">Uppgift 5</TopicHeading>
 
 Skapa en array som har följande värden;
 
@@ -62,20 +53,17 @@ För varje värde i arrayen ska du hämta ut vad dagens rätt är, och vad dagen
 
 Dessutom ska du skriva ut i konsolen om dagens rätt matchar dagens vegetariska rätt. Om det är så, skriv ut ett meddelande i konsolen att idag är en vegetarisk dag.
 
+<TopicHeading link="uppgift-5">Uppgift 5</TopicHeading>
 
-Tre miniprojekt som använder 2-3 saker.
+Med kod, kolla igenom följande sträng och kolla vilket av namnen `"Alfred"`, `"Emil"`, och `"Ida"` kommer först, vilket som kommer på andra plats, och vilket som är sist. Skriv ut detta i konsolen (tex `"Namnet Emil kommer först."`).
 
-5 uppgifter istället? Två väldigt små och relativt enkla men som ändå klarar E?
+```javascript
+let story = "Alfred åker till Hultsfreds slätt för att exercera beväring (lära sig bli soldat). När Emils föräldrar åker iväg för att hälsa på lämnas Emil och Ida hemma hos Krösa-Maja. Emil sätter sig på hästen Jullan, och börjar ge sig av mot Hultsfred.";
+```
 
-Blir gradvis svårare
+## Bonus (för högre betyg)
 
-Första ger direkta instruktioner om vad som ska göras (skapa variabel, osv).
-
-Andra ger blandat
-
-Sista använder mer vanligt språk.
-
-Måste vara isolerade uppgifter
+Kolla ut vilket av namnen som förekommer flest gånger och skriv ut i konsolen att det namnet förekommer först.
 
 <TopicHeading link="bedömning">Bedömning</TopicHeading>
 
