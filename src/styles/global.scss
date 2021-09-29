@@ -238,9 +238,9 @@ aside {
       "logo coursenav coursenav"
       "menu main aside"
       "footer footer footer";
-    grid-template-columns: minmax(min-content, 20em) auto minmax(
+    grid-template-columns: minmax(min-content, 18rem) auto minmax(
         min-content,
-        10em
+        10rem
       );
 
     word-break: normal;
