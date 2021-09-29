@@ -233,21 +233,34 @@ aside {
     padding: 1em;
   }
 
-  #main-grid {
-    grid-template-areas:
-      "logo coursenav coursenav"
-      "menu main aside"
-      "footer footer footer";
-    grid-template-columns: minmax(min-content, 18rem) auto minmax(
-        min-content,
-        10rem
-      );
+  #main-wrapper {
+    display: block;
+    position: relative;
 
     word-break: normal;
   }
 
+  .layout-container {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    max-width: 90rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .content-container {
+    display: flex;
+  }
+
   header {
-    display: contents;
+    background: none;
+    display: flex;
+    position: sticky;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90rem;
   }
 
   #logo * {
@@ -292,7 +305,20 @@ aside {
     max-height: none;
     min-height: 90vh;
     padding: 0;
-    padding-right: 1em;
+    padding-right: 1rem;
+    width: 18rem;
+    flex: none;
+  }
+
+  .main {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    flex: 1 1 auto;
+  }
+
+  .page-index {
+    width: 18rem;
+    flex: none;
   }
 }
 
