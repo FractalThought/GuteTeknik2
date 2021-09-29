@@ -230,7 +230,7 @@ aside {
 
 @media screen and (min-width: 900px) {
   body {
-    padding: 1em;
+    padding: 0;
   }
 
   #main-wrapper {
@@ -245,6 +245,7 @@ aside {
     gap: 2rem;
     margin-top: 2rem;
     max-width: 90rem;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -304,13 +305,12 @@ aside {
     overflow-x: hidden;
     max-height: none;
     min-height: 90vh;
-    padding: 0;
-    padding-right: 1rem;
+    padding: 1.25rem;
     width: 18rem;
     flex: none;
   }
 
-  .main {
+  main {
     padding-left: 2rem;
     padding-right: 2rem;
     flex: 1 1 auto;
