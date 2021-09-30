@@ -78,28 +78,25 @@ header {
   display: flex;
   gap: 0.25em;
   font-size: var(--large);
-  font-family: "montserrat";
   color: var(--primary--50);
 }
 
-.sidemenu {
+.sidebar {
   display: none;
   position: relative;
   overflow-y: scroll;
   overflow-x: hidden;
   background: var(--gray--50);
   color: var(--primary--900);
-  font-family: "Open Sans", sans-serif;
   font-size: var(--base);
   padding: 1em;
   z-index: 1;
   width: 100%;
-  grid-area: main;
   max-height: 80vh;
   min-height: 80vh;
 }
 
-.sidemenu--show {
+.sidebar--show {
   display: block;
 }
 
@@ -118,7 +115,6 @@ header {
 }
 
 .sidemenu__heading {
-  font-family: "Montserrat", sans-serif;
   color: var(--primary--800);
   font-size: var(--lg2);
   font-weight: var(--fw-regular);
@@ -172,18 +168,14 @@ header {
 .menu-section__list {
   display: flex;
   flex-direction: column;
-  margin-left: var(--large);
 }
 
 .menu-section__link {
   display: inline-block;
   color: var(--gray--700);
-  background: var(--gray--100);
-  padding: var(--smaller) var(--small);
 }
 
 .menu-section__link:hover {
-  background: var(--gray--300);
   color: var(--gray--800);
 }
 
@@ -199,12 +191,7 @@ header {
 }
 
 main {
-  grid-area: main;
   padding: 0 1em;
-}
-
-aside {
-  grid-area: aside;
 }
 
 .page-index__heading {
@@ -257,8 +244,6 @@ aside {
   header {
     background: none;
     display: flex;
-    position: sticky;
-    top: 0;
     margin-left: auto;
     margin-right: auto;
     width: 90rem;
@@ -297,17 +282,37 @@ aside {
     display: none;
   }
 
-  .sidemenu {
+  .sidebar {
+    max-height: none;
+    min-height: none;
     display: block;
     position: static;
-    grid-area: menu;
     overflow-y: visible;
-    overflow-x: hidden;
-    max-height: none;
-    min-height: 90vh;
-    padding: 1.25rem;
+    overflow-x: visible;
+    height: auto;
+    padding: 0;
     width: 18rem;
     flex: none;
+    z-index: 40;
+  }
+
+  .sidemenu-wrapper {
+    height: auto;
+    display: block;
+    position: sticky;
+    top: 1rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .sidemenu {
+    height: 100vh;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 2.5rem;
+    padding-bottom: 3.5rem;
+    overflow-y: auto;
+    box-sizing: border-box;
   }
 
   main {
