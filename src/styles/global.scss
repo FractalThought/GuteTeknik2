@@ -280,7 +280,7 @@ main {
     height: auto;
     display: block;
     position: sticky;
-    top: 1rem;
+    top: 0;
     overflow-x: hidden;
     overflow-y: auto;
   }
@@ -289,7 +289,7 @@ main {
     height: 100vh;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
-    padding-top: 2.5rem;
+    padding-top: 1rem;
     padding-bottom: 3.5rem;
     overflow-y: auto;
     box-sizing: border-box;
@@ -319,6 +319,7 @@ main {
   aside {
     width: 18rem;
     flex: none;
+    padding-left: 2rem;
   }
 }
 
@@ -349,7 +350,7 @@ main {
 }
 
 .page-heading {
-  font-size: var(--lg7);
+  font-size: var(--lg5);
   margin: var(--lg3) 0;
 }
 
