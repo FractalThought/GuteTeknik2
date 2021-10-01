@@ -46,41 +46,43 @@ function Container({
   // TODO: Abstract away the Container so it is the main layout component for all views
 
   return (
-    <div id="main-wrapper">
-      <MainContext.Provider value={mainInfo}>
-        <ContextWrapper>
-          <Header
-            sidebarUtility={{ showSidebar, setSideBarVisibility }}
-            mainPage={mainPage}
-          />
+    <MainContext.Provider value={mainInfo}>
+      <ContextWrapper>
+        <Header
+          sidebarUtility={{ showSidebar, setSideBarVisibility }}
+          mainPage={mainPage}
+        />
+        <div id="main-wrapper">
           <div className="layout-container">
             <Sidebar
               showSidebar={showSidebar}
               url={urlData}
               currentPageData={currentPageData}
             />
-            <div className="content-container">
-              <main>
-                <div className="page">
-                  <MyCrumbs crumbData={crumbData} />
-                  <h1 className="page-heading">{pageTitle}</h1>
-                  {/* <h1 className="printheader">{pageTitle}</h1> */}
-                  <MDXProvider components={mdxComponents}>
-                    {children}
-                  </MDXProvider>
-                  <ClearDiv></ClearDiv>
-                </div>
-              </main>
-              <aside className="page-index">
-                <RightStickyDiv>
-                  <TableOfContent listOfContent={listOfContent} />
-                </RightStickyDiv>
-              </aside>
+            <div className="content-wrapper">
+              <div className="content-container">
+                <main>
+                  <div className="page">
+                    <MyCrumbs crumbData={crumbData} />
+                    <h1 className="page-heading">{pageTitle}</h1>
+                    {/* <h1 className="printheader">{pageTitle}</h1> */}
+                    <MDXProvider components={mdxComponents}>
+                      {children}
+                    </MDXProvider>
+                    <ClearDiv></ClearDiv>
+                  </div>
+                </main>
+                <aside>
+                  <RightStickyDiv>
+                    <TableOfContent listOfContent={listOfContent} />
+                  </RightStickyDiv>
+                </aside>
+              </div>
             </div>
           </div>
-        </ContextWrapper>
-      </MainContext.Provider>
-    </div>
+        </div>
+      </ContextWrapper>
+    </MainContext.Provider>
   );
 }
 

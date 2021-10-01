@@ -4,19 +4,6 @@
 
 // New layout
 
-#main-grid {
-  display: grid;
-  grid-template-areas:
-    "header"
-    "main"
-    "aside"
-    "footer";
-  grid-template-columns: 1fr;
-  row-gap: 2em;
-  position: relative;
-  word-break: break-all;
-}
-
 header {
   grid-area: header;
   display: flex;
@@ -220,28 +207,6 @@ main {
     padding: 0;
   }
 
-  #main-wrapper {
-    display: block;
-    position: relative;
-
-    word-break: normal;
-  }
-
-  .layout-container {
-    display: flex;
-    gap: 2rem;
-    margin-top: 2rem;
-    max-width: 90rem;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .content-container {
-    display: flex;
-    padding-bottom: var(--lg7);
-  }
-
   header {
     background: none;
     display: flex;
@@ -283,6 +248,20 @@ main {
     display: none;
   }
 
+  #main-wrapper {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 90rem;
+    width: 100%;
+
+    word-break: normal;
+  }
+
+  .layout-container {
+    display: flex;
+  }
+
   .sidebar {
     max-height: none;
     min-height: none;
@@ -316,13 +295,28 @@ main {
     box-sizing: border-box;
   }
 
+  .content-wrapper {
+    position: static;
+    overflow: visible;
+    flex: 1 1 auto;
+    max-height: 100%;
+    width: 100%;
+  }
+
+  .content-container {
+    display: flex;
+    width: 100%;
+  }
+
   main {
+    padding-bottom: var(--lg7);
     padding-left: 2rem;
     padding-right: 2rem;
     flex: 1 1 auto;
+    min-width: 0;
   }
 
-  .page-index {
+  aside {
     width: 18rem;
     flex: none;
   }
