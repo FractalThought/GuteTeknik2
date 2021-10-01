@@ -160,6 +160,7 @@ header {
 .menu-section__link {
   display: inline-block;
   color: var(--gray--700);
+  padding: 0.5rem 0.75rem;
 }
 
 .menu-section__link:hover {
@@ -170,6 +171,7 @@ header {
   background: var(--primary--100);
   color: var(--primary--800);
   font-weight: var(--fw-medium-fs);
+  border-radius: 0.2rem;
 }
 
 .menu-section__link--active:hover {
@@ -314,6 +316,7 @@ main {
     padding-right: 2rem;
     flex: 1 1 auto;
     min-width: 0;
+    max-width: 54rem;
   }
 
   aside {
