@@ -55,7 +55,7 @@ function ChapterPage({ course, chapter, children, url }) {
   }
 
   return (
-    <Container url={url} pageInfo={pageInfo} pageTitle={chapterInfo.name}>
+    <Container url={url} pageInfo={pageInfo} pageTitle={chapterInfo.title}>
       {children}
       <ChapterMenu course={course} chapter={chapterInfo} hideTitle={true} />
     </Container>
