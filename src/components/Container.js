@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Header from "../layout/Header";
 import Sidebar from "../layout/Sidebar";
 import mdxComponents from "./mdxComponents";
-import MyCrumbs from "./MyCrumbs";
+// import MyCrumbs from "./MyCrumbs";
 import TableOfContent from "./TableOfContent";
 import RightStickyDiv from "./RightStickyDiv";
 import { MainContext, mainInfo } from "./hooks/MainContext";
@@ -13,14 +13,7 @@ const ClearDiv = styled.div`
   clear: both;
 `;
 
-function Container({
-  url,
-  pageInfo,
-  crumbData,
-  listOfContent,
-  pageTitle,
-  children,
-}) {
+function Container({ url, pageInfo, pageTitle, children }) {
   // Use string split for url
   let urlData = null;
 
@@ -74,7 +67,7 @@ function Container({
                 </main>
                 <aside>
                   <RightStickyDiv>
-                    <TableOfContent listOfContent={listOfContent} />
+                    <TableOfContent />
                   </RightStickyDiv>
                 </aside>
               </div>
