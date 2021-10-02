@@ -13,7 +13,7 @@ Success: Green box, used for showing successful code when used in junction with 
 */
 
 const CalloutBox = styled.div`
-  padding: 0.25rem 1rem;
+  padding: 1rem;
   font-size: 1rem;
   margin: 0 0 1.5rem;
   border-radius: 0.2rem;
@@ -26,9 +26,21 @@ const CalloutBox = styled.div`
       clear: both;
     `};
 
-  color: var(${props => props.boxColor || "--callout"}--900);
-  border: 2px solid var(${props => props.boxColor || "--callout"}--300);
-  background: var(${props => props.boxColor || "--callout"}--50);
+  color: var(${props => props.boxColor || "--callout"}--text);
+  border: 2px solid var(${props => props.boxColor || "--callout"}--border);
+  background: var(${props => props.boxColor || "--callout"}--background);
+
+  * {
+    color: var(${props => props.boxColor || "--callout"}--text);
+  }
+
+  *:first-child {
+    margin-top: 0;
+  }
+
+  *:last-child {
+    margin-bottom: 0;
+  }
 `;
 
 function Callout({ half, boxColor = "callout", children }) {
@@ -41,7 +53,7 @@ function Callout({ half, boxColor = "callout", children }) {
 }
 
 function Output({ half, children }) {
-  const boxColor = "gray";
+  const boxColor = "output";
   return (
     <Callout half={half} boxColor={boxColor}>
       {children}

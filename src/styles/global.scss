@@ -4,19 +4,6 @@
 
 // New layout
 
-#main-grid {
-  display: grid;
-  grid-template-areas:
-    "header"
-    "main"
-    "aside"
-    "footer";
-  grid-template-columns: 1fr;
-  row-gap: 2em;
-  position: relative;
-  word-break: break-all;
-}
-
 header {
   grid-area: header;
   display: flex;
@@ -78,28 +65,25 @@ header {
   display: flex;
   gap: 0.25em;
   font-size: var(--large);
-  font-family: "montserrat";
   color: var(--primary--50);
 }
 
-.sidemenu {
+.sidebar {
   display: none;
   position: relative;
   overflow-y: scroll;
   overflow-x: hidden;
   background: var(--gray--50);
   color: var(--primary--900);
-  font-family: "Open Sans", sans-serif;
   font-size: var(--base);
   padding: 1em;
   z-index: 1;
   width: 100%;
-  grid-area: main;
   max-height: 80vh;
   min-height: 80vh;
 }
 
-.sidemenu--show {
+.sidebar--show {
   display: block;
 }
 
@@ -118,7 +102,6 @@ header {
 }
 
 .sidemenu__heading {
-  font-family: "Montserrat", sans-serif;
   color: var(--primary--800);
   font-size: var(--lg2);
   font-weight: var(--fw-regular);
@@ -172,18 +155,15 @@ header {
 .menu-section__list {
   display: flex;
   flex-direction: column;
-  margin-left: var(--large);
 }
 
 .menu-section__link {
   display: inline-block;
   color: var(--gray--700);
-  background: var(--gray--100);
-  padding: var(--smaller) var(--small);
+  padding: 0.5rem 0.75rem;
 }
 
 .menu-section__link:hover {
-  background: var(--gray--300);
   color: var(--gray--800);
 }
 
@@ -191,6 +171,7 @@ header {
   background: var(--primary--100);
   color: var(--primary--800);
   font-weight: var(--fw-medium-fs);
+  border-radius: 0.2rem;
 }
 
 .menu-section__link--active:hover {
@@ -199,12 +180,7 @@ header {
 }
 
 main {
-  grid-area: main;
   padding: 0 1em;
-}
-
-aside {
-  grid-area: aside;
 }
 
 .page-index__heading {
@@ -230,24 +206,15 @@ aside {
 
 @media screen and (min-width: 900px) {
   body {
-    padding: 1em;
-  }
-
-  #main-grid {
-    grid-template-areas:
-      "logo coursenav coursenav"
-      "menu main aside"
-      "footer footer footer";
-    grid-template-columns: minmax(min-content, 20em) auto minmax(
-        min-content,
-        10em
-      );
-
-    word-break: normal;
+    padding: 0;
   }
 
   header {
-    display: contents;
+    background: none;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90rem;
   }
 
   #logo * {
@@ -283,16 +250,79 @@ aside {
     display: none;
   }
 
-  .sidemenu {
+  #main-wrapper {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 90rem;
+    width: 100%;
+
+    word-break: normal;
+  }
+
+  .layout-container {
+    display: flex;
+  }
+
+  .sidebar {
+    max-height: none;
+    min-height: none;
     display: block;
     position: static;
-    grid-area: menu;
     overflow-y: visible;
-    overflow-x: hidden;
-    max-height: none;
-    min-height: 90vh;
+    overflow-x: visible;
+    height: auto;
     padding: 0;
-    padding-right: 1em;
+    width: 18rem;
+    flex: none;
+    z-index: 40;
+  }
+
+  .sidemenu-wrapper {
+    height: auto;
+    display: block;
+    position: sticky;
+    top: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .sidemenu {
+    height: 100vh;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 1rem;
+    padding-bottom: 3.5rem;
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+
+  .content-wrapper {
+    position: static;
+    overflow: visible;
+    flex: 1 1 auto;
+    max-height: 100%;
+    width: 100%;
+  }
+
+  .content-container {
+    display: flex;
+    width: 100%;
+  }
+
+  main {
+    padding-bottom: var(--lg7);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 54rem;
+  }
+
+  aside {
+    width: 18rem;
+    flex: none;
+    padding-left: 2rem;
   }
 }
 
@@ -323,7 +353,7 @@ aside {
 }
 
 .page-heading {
-  font-size: var(--lg7);
+  font-size: var(--lg5);
   margin: var(--lg3) 0;
 }
 

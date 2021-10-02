@@ -30,7 +30,6 @@ $course-card-shadow-hover: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
 
 :root {
   /* Color styles */
-  /* Color styles */
   --primary--50: hsla(264, 45.5%, 97.8%, 1);
   --primary--100: hsla(258, 86.7%, 97.1%, 1);
   --primary--200: hsla(260, 84.3%, 90%, 1);
@@ -71,52 +70,27 @@ $course-card-shadow-hover: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
   --tertiary--700: hsla(19, 84.6%, 56.7%, 1);
   --tertiary--800: hsla(19, 85.2%, 37.1%, 1);
   --tertiary--900: hsla(19, 85.7%, 24.7%, 1);
-  --failure--50: hsla(0, 45.5%, 97.8%, 1);
-  --failure--100: hsla(0, 86.7%, 97.1%, 1);
-  --failure--200: hsla(0, 84.3%, 90%, 1);
-  --failure--300: hsla(0, 85.7%, 83.5%, 1);
-  --failure--400: hsla(0, 84.9%, 76.7%, 1);
-  --failure--500: hsla(0, 85.5%, 70.2%, 1);
-  --failure--600: hsla(0, 84%, 63.1%, 1);
-  --failure--700: hsla(0, 84.6%, 56.7%, 1);
-  --failure--800: hsla(0, 85.2%, 37.1%, 1);
-  --failure--900: hsla(0, 85.7%, 24.7%, 1);
-  --success--50: hsla(96, 45.5%, 97.8%, 1);
-  --success--100: hsla(102, 86.7%, 97.1%, 1);
-  --success--200: hsla(100, 84.3%, 90%, 1);
-  --success--300: hsla(100, 85.7%, 83.5%, 1);
-  --success--400: hsla(100, 84.9%, 76.7%, 1);
-  --success--500: hsla(100, 85.5%, 70.2%, 1);
-  --success--600: hsla(100, 84%, 63.1%, 1);
-  --success--700: hsla(100, 84.3%, 45.1%, 1);
-  --success--800: hsla(100, 85.2%, 37.1%, 1);
-  --success--900: hsla(100, 85.7%, 24.7%, 1);
-  --callout--50: hsla(204, 45.5%, 97.8%, 1);
-  --callout--100: hsla(203, 86.7%, 97.1%, 1);
-  --callout--200: hsla(205, 84.3%, 90%, 1);
-  --callout--300: hsla(205, 85.7%, 83.5%, 1);
-  --callout--400: hsla(205, 84.9%, 76.7%, 1);
-  --callout--500: hsla(205, 85.5%, 70.2%, 1);
-  --callout--600: hsla(205, 84%, 63.1%, 1);
-  --callout--700: hsla(205, 84.6%, 56.7%, 1);
-  --callout--800: hsla(205, 85.2%, 37.1%, 1);
-  --callout--900: hsla(205, 85.7%, 24.7%, 1);
-  --notice--50: hsla(60, 45.5%, 97.8%, 1);
-  --notice--100: hsla(65, 86.7%, 97.1%, 1);
-  --notice--200: hsla(66, 84.3%, 90%, 1);
-  --notice--300: hsla(65, 85.7%, 83.5%, 1);
-  --notice--400: hsla(65, 84.9%, 76.7%, 1);
-  --notice--500: hsla(65, 85.5%, 70.2%, 1);
-  --notice--600: hsla(65, 84%, 63.1%, 1);
-  --notice--700: hsla(65, 84.6%, 56.7%, 1);
-  --notice--800: hsla(65, 85.2%, 37.1%, 1);
-  --notice--900: hsla(65, 85.7%, 24.7%, 1);
+  --failure--text: hsla(0, 25.3%, 17.8%, 1);
+  --failure--border: hsla(15, 86.6%, 76.7%, 1);
+  --failure--background: hsla(14, 100%, 96.7%, 1);
+  --success--text: hsla(124, 31.4%, 20.6%, 1);
+  --success--border: hsla(115, 72.3%, 74.5%, 1);
+  --success--background: hsla(113, 81.8%, 97.8%, 1);
+  --callout--text: hsla(216, 29.4%, 20%, 1);
+  --callout--border: hsla(215, 85.5%, 70.2%, 1);
+  --callout--background: hsla(216, 100%, 99%, 1);
+  --notice--text: hsla(62, 41.3%, 14.7%, 1);
+  --notice--border: hsla(65, 49.6%, 53.3%, 1);
+  --notice--background: hsla(65, 100%, 87.8%, 1);
+  --output--text: hsla(259, 28.1%, 17.5%, 1);
+  --output--border: hsla(264, 84.4%, 87.5%, 1);
+  --output--background: hsla(264, 100%, 99%, 1);
 
   /* Text-size styles */
   /* base size: base (16px) */
   --smaller: 0.75rem;
   --small: 0.88rem;
-  --base: 18px;
+  --base: 16px;
   --large: 1.12rem;
   --lg2: 1.25rem;
   --lg3: 1.5rem;

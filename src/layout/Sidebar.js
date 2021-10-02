@@ -1,30 +1,30 @@
-import React from "react"
-import { Link } from "gatsby"
-import SidebarHeading from "./SidebarHeading"
+import React from "react";
+import { Link } from "gatsby";
+import SidebarHeading from "./SidebarHeading";
 // import useProjects from "../components/hooks/useProjects"
 // import useReferences from "../components/hooks/useReferences"
 
 function extractUrlData(url) {
   let currentCourse,
     currentChapter,
-    currentPage = "index"
+    currentPage = "index";
 
   if (url.length >= 1) {
-    currentCourse = url[0]
+    currentCourse = url[0];
 
     if (url.length > 1) {
-      currentChapter = url[1]
-      currentPage = url[url.length - 1]
+      currentChapter = url[1];
+      currentPage = url[url.length - 1];
     } else {
-      currentPage = currentCourse
+      currentPage = currentCourse;
     }
   }
 
-  return { course: currentCourse, chapter: currentChapter, page: currentPage }
+  return { course: currentCourse, chapter: currentChapter, page: currentPage };
 }
 
 function Sidebar({ url, currentPageData, showSidebar }) {
-  const urlData = extractUrlData(url)
+  const urlData = extractUrlData(url);
 
   // const projects = useProjects(currentPageData)
   // const projectData = { title: "Projekt", link: null, pages: projects }
@@ -62,29 +62,37 @@ function Sidebar({ url, currentPageData, showSidebar }) {
     //   link: "uppgifter",
     //   image: "",
     // },
-  ]
+  ];
 
   return (
-    <nav className={showSidebar ? "sidemenu sidemenu--show" : "sidemenu"}>
-      <Link className="sidemenu__heading" to={"/" + currentPageData.link}>
-        <h2>{currentPageData.name}</h2>
-      </Link>
-      <ul className="sidemenu__shortcutlist">
-        {shortcuts.map((shortcut, index) => {
-          return (
-            <li key={index}>
-              <Link to={"/" + currentPageData.link + "/" + shortcut.link}>
-                {shortcut.name}
-              </Link>
-            </li>
-          )
-        })}
-      </ul>
-      {currentPageData.chapters.map((chapter, index) => (
-        <SidebarHeading key={index} headingData={chapter} urlData={urlData} />
-      ))}
-    </nav>
-  )
+    <div className={showSidebar ? "sidebar sidebar--show" : "sidebar"}>
+      <div className="sidemenu-wrapper">
+        <nav className="sidemenu">
+          <Link className="sidemenu__heading" to={"/" + currentPageData.link}>
+            <h2>{currentPageData.name}</h2>
+          </Link>
+          <ul className="sidemenu__shortcutlist">
+            {shortcuts.map((shortcut, index) => {
+              return (
+                <li key={index}>
+                  <Link to={"/" + currentPageData.link + "/" + shortcut.link}>
+                    {shortcut.name}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+          {currentPageData.chapters.map((chapter, index) => (
+            <SidebarHeading
+              key={index}
+              headingData={chapter}
+              urlData={urlData}
+            />
+          ))}
+        </nav>
+      </div>
+    </div>
+  );
 }
 
-export default Sidebar
+export default Sidebar;
