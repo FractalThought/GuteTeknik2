@@ -17,8 +17,8 @@ body {
   color: var(--gray--700);
   margin: 0;
   line-height: 1.7;
-  word-spacing: 0.025em;
-  letter-spacing: 0.015em;
+  word-spacing: 0.025rem;
+  letter-spacing: 0.015rem;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased !important;
   -moz-font-smoothing: antialiased !important;
@@ -42,7 +42,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 1.5em;
+  margin-top: 1.5rem;
 }
 
 h1,
@@ -90,11 +90,11 @@ a:hover {
 
 ul,
 ol {
-  margin-left: 1em;
+  margin-left: 1rem;
 }
 
 p {
-  margin: 0 0 1em 0;
+  margin: 0 0 1rem 0;
   max-width: 100%;
 }
 
@@ -113,7 +113,7 @@ blockquote {
   box-sizing: border-box;
   margin: 1em;
   background: var(--gray--100);
-  padding: 0.5em;
+  padding: 0.5rem;
   border-radius: 5px;
 }
 
@@ -123,7 +123,7 @@ blockquote > * {
 
 hr {
   margin: 3em 0;
-  border-top: 0.5em solid var(--gray--500);
+  border-top: 0.5rem solid var(--gray--500);
   opacity: 0.1;
 }
 
@@ -148,8 +148,8 @@ table {
 
   tbody {
     tr {
-      border-bottom: 1px solid var(--gray--900);
-      border-top: 1px solid var(--gray--900);
+      border-bottom: 0.1rem solid var(--gray--400);
+      border-top: 0.1rem solid var(--gray--400);
 
       td {
         padding: 0.75em;
@@ -185,12 +185,12 @@ table {
     width: 100%;
 
     thead {
-      border-bottom: 3px solid var(--primary--500);
+      border-bottom: 0.25rem solid var(--primary--500);
     }
 
     tbody {
       tr {
-        border-bottom: 1px solid var(--gray--900);
+        border-bottom: 0.1rem solid var(--gray--400);
       }
     }
   }
