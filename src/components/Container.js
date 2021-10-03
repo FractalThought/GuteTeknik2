@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Header from "../layout/Header";
 import Sidebar from "../layout/Sidebar";
 import mdxComponents from "./mdxComponents";
-import MyCrumbs from "./MyCrumbs";
+// import MyCrumbs from "./MyCrumbs";
 import TableOfContent from "./TableOfContent";
 import RightStickyDiv from "./RightStickyDiv";
 import { MainContext, mainInfo } from "./hooks/MainContext";
@@ -13,14 +13,7 @@ const ClearDiv = styled.div`
   clear: both;
 `;
 
-function Container({
-  url,
-  pageInfo,
-  crumbData,
-  listOfContent,
-  pageTitle,
-  children,
-}) {
+function Container({ url, pageInfo, pageTitle, children }) {
   // Use string split for url
   let urlData = null;
 
@@ -46,41 +39,43 @@ function Container({
   // TODO: Abstract away the Container so it is the main layout component for all views
 
   return (
-    <div id="main-wrapper">
-      <MainContext.Provider value={mainInfo}>
-        <ContextWrapper>
-          <Header
-            sidebarUtility={{ showSidebar, setSideBarVisibility }}
-            mainPage={mainPage}
-          />
+    <MainContext.Provider value={mainInfo}>
+      <ContextWrapper>
+        <Header
+          sidebarUtility={{ showSidebar, setSideBarVisibility }}
+          mainPage={mainPage}
+        />
+        <div id="main-wrapper">
           <div className="layout-container">
             <Sidebar
               showSidebar={showSidebar}
               url={urlData}
               currentPageData={currentPageData}
             />
-            <div className="content-container">
-              <main>
-                <div className="page">
-                  <MyCrumbs crumbData={crumbData} />
-                  <h1 className="page-heading">{pageTitle}</h1>
-                  {/* <h1 className="printheader">{pageTitle}</h1> */}
-                  <MDXProvider components={mdxComponents}>
-                    {children}
-                  </MDXProvider>
-                  <ClearDiv></ClearDiv>
-                </div>
-              </main>
-              <aside className="page-index">
-                <RightStickyDiv>
-                  <TableOfContent listOfContent={listOfContent} />
-                </RightStickyDiv>
-              </aside>
+            <div className="content-wrapper">
+              <div className="content-container">
+                <main>
+                  <div className="page">
+                    {/* <MyCrumbs crumbData={crumbData} /> */}
+                    <h1 className="page-heading">{pageTitle}</h1>
+                    {/* <h1 className="printheader">{pageTitle}</h1> */}
+                    <MDXProvider components={mdxComponents}>
+                      {children}
+                    </MDXProvider>
+                    <ClearDiv></ClearDiv>
+                  </div>
+                </main>
+                <aside>
+                  <RightStickyDiv>
+                    <TableOfContent />
+                  </RightStickyDiv>
+                </aside>
+              </div>
             </div>
           </div>
-        </ContextWrapper>
-      </MainContext.Provider>
-    </div>
+        </div>
+      </ContextWrapper>
+    </MainContext.Provider>
   );
 }
 

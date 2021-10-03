@@ -4,19 +4,6 @@
 
 // New layout
 
-#main-grid {
-  display: grid;
-  grid-template-areas:
-    "header"
-    "main"
-    "aside"
-    "footer";
-  grid-template-columns: 1fr;
-  row-gap: 2em;
-  position: relative;
-  word-break: break-all;
-}
-
 header {
   grid-area: header;
   display: flex;
@@ -173,6 +160,7 @@ header {
 .menu-section__link {
   display: inline-block;
   color: var(--gray--700);
+  padding: 0.5rem 0.75rem;
 }
 
 .menu-section__link:hover {
@@ -183,6 +171,7 @@ header {
   background: var(--primary--100);
   color: var(--primary--800);
   font-weight: var(--fw-medium-fs);
+  border-radius: 0.2rem;
 }
 
 .menu-section__link--active:hover {
@@ -218,28 +207,6 @@ main {
 @media screen and (min-width: 900px) {
   body {
     padding: 0;
-  }
-
-  #main-wrapper {
-    display: block;
-    position: relative;
-
-    word-break: normal;
-  }
-
-  .layout-container {
-    display: flex;
-    gap: 2rem;
-    margin-top: 2rem;
-    max-width: 90rem;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .content-container {
-    display: flex;
-    padding-bottom: var(--lg7);
   }
 
   header {
@@ -283,6 +250,20 @@ main {
     display: none;
   }
 
+  #main-wrapper {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 90rem;
+    width: 100%;
+
+    word-break: normal;
+  }
+
+  .layout-container {
+    display: flex;
+  }
+
   .sidebar {
     max-height: none;
     min-height: none;
@@ -301,7 +282,7 @@ main {
     height: auto;
     display: block;
     position: sticky;
-    top: 1rem;
+    top: 0;
     overflow-x: hidden;
     overflow-y: auto;
   }
@@ -310,21 +291,38 @@ main {
     height: 100vh;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
-    padding-top: 2.5rem;
+    padding-top: 1rem;
     padding-bottom: 3.5rem;
     overflow-y: auto;
     box-sizing: border-box;
   }
 
+  .content-wrapper {
+    position: static;
+    overflow: visible;
+    flex: 1 1 auto;
+    max-height: 100%;
+    width: 100%;
+  }
+
+  .content-container {
+    display: flex;
+    width: 100%;
+  }
+
   main {
+    padding-bottom: var(--lg7);
     padding-left: 2rem;
     padding-right: 2rem;
     flex: 1 1 auto;
+    min-width: 0;
+    max-width: 54rem;
   }
 
-  .page-index {
+  aside {
     width: 18rem;
     flex: none;
+    padding-left: 2rem;
   }
 }
 
@@ -355,7 +353,7 @@ main {
 }
 
 .page-heading {
-  font-size: var(--lg7);
+  font-size: var(--lg5);
   margin: var(--lg3) 0;
 }
 

@@ -1,10 +1,8 @@
-import React, { useState } from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import styled from "styled-components"
-import Header from "./Header"
-import Sidebar from "./Sidebar"
-import ChapterMenu from "../components/ChapterMenu"
-import RightStickyDiv from "../components/RightStickyDiv"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import styled from "styled-components";
+import Container from "../components/Container";
+import ChapterMenu from "../components/ChapterMenu";
 
 const QuickList = styled.section`
   background: white;
@@ -29,16 +27,7 @@ const QuickList = styled.section`
     list-style: none;
     margin: 0;
   }
-`
-
-const ContentContainer = styled.div`
-  margin: 0 auto;
-  max-width: 70ch;
-`
-
-const ClearDiv = styled.div`
-  clear: both;
-`
+`;
 
 function CoursePage({ course, children, url }) {
   const data = useStaticQuery(graphql`
@@ -65,87 +54,92 @@ function CoursePage({ course, children, url }) {
         }
       }
     }
-  `)
+  `);
 
   /*
   Remove the .node-intermediate step, filter out the currrent page,
   and reduce down to a single object
   */
 
-  const pageInfo = data.allPageinfoJson.edges
-    .map(page => {
-      return page.node
-    })
-    .filter(node => {
-      return node.link === course
-    })[0]
+  const pageInfo = data.allPageinfoJson.edges.map(page => {
+    return page.node;
+  });
+
+  const courseInfo = pageInfo.filter(node => {
+    return node.link === course;
+  })[0];
 
   // Use string split for url
-  let urlData = null
+  // let urlData = null;
 
-  if (typeof url !== "undefined" && url != null) {
-    const urlArray = url.split("/")
-    urlData = urlArray.filter(data => data !== "")
-  }
-
-  const [showSidebar, setSideBarVisibility] = useState(false)
+  // if (typeof url !== "undefined" && url != null) {
+  //   const urlArray = url.split("/");
+  //   urlData = urlArray.filter(data => data !== "");
+  // }
 
   return (
-    <div id="main-grid">
-      <Header
-        sidebarUtility={{ showSidebar, setSideBarVisibility }}
-        mainPage={course}
-      />
-      <Sidebar
-        showSidebar={showSidebar}
-        url={urlData}
-        currentPageData={pageInfo}
-      />
-
-      <main>
-        <ContentContainer>
-          <h1 className="page-heading">{pageInfo.name}</h1>
-          <div className="page">
-            <h1 className="printheader">{pageInfo.name}</h1>
-            {children}
-            <ClearDiv></ClearDiv>
-          </div>
-          <QuickList>
-            <h1>Kapitel</h1>
-            <ul>
-              {pageInfo.chapters.map((chapter, key) => {
-                return (
-                  <li key={key}>
-                    <a href={`#${chapter.link}`}>{chapter.title}</a>
-                  </li>
-                )
-              })}
-            </ul>
-          </QuickList>
-          {pageInfo.chapters.map((chapter, key) => {
-            return <ChapterMenu key={key} course={course} chapter={chapter} />
+    <Container url={url} pageInfo={pageInfo} pageTitle={courseInfo.name}>
+      {children}
+      <QuickList>
+        <h1>Kapitel</h1>
+        <ul>
+          {courseInfo.chapters.map((chapter, key) => {
+            return (
+              <li key={key}>
+                <a href={`#${chapter.link}`}>{chapter.title}</a>
+              </li>
+            );
           })}
-        </ContentContainer>
-      </main>
-      <aside className="page-index">
-        <RightStickyDiv>
-          <h2>Innehåll</h2>
-          <ul>
-            <li>
-              <a href="#toppen">Gå till toppen</a>
-            </li>
-            {pageInfo.chapters.map((chapter, key) => {
-              return (
-                <li key={key}>
-                  <a href={`#${chapter.link}`}>{chapter.title}</a>
-                </li>
-              )
-            })}
-          </ul>
-        </RightStickyDiv>
-      </aside>
-    </div>
-  )
+        </ul>
+      </QuickList>
+      {courseInfo.chapters.map((chapter, key) => {
+        return <ChapterMenu key={key} course={course} chapter={chapter} />;
+      })}
+    </Container>
+  );
+
+  // return (
+  //   <div id="main-grid">
+  //     <Header
+  //       sidebarUtility={{ showSidebar, setSideBarVisibility }}
+  //       mainPage={course}
+  //     />
+  //     <Sidebar
+  //       showSidebar={showSidebar}
+  //       url={urlData}
+  //       currentPageData={pageInfo}
+  //     />
+
+  //     <main>
+  //       <ContentContainer>
+  //         <h1 className="page-heading">{pageInfo.name}</h1>
+  //         <div className="page">
+  //           <h1 className="printheader">{pageInfo.name}</h1>
+  //           {children}
+  //           <ClearDiv></ClearDiv>
+  //         </div>
+
+  //       </ContentContainer>
+  //     </main>
+  //     <aside className="page-index">
+  //       <RightStickyDiv>
+  //         <h2>Innehåll</h2>
+  //         <ul>
+  //           <li>
+  //             <a href="#toppen">Gå till toppen</a>
+  //           </li>
+  //           {pageInfo.chapters.map((chapter, key) => {
+  //             return (
+  //               <li key={key}>
+  //                 <a href={`#${chapter.link}`}>{chapter.title}</a>
+  //               </li>
+  //             )
+  //           })}
+  //         </ul>
+  //       </RightStickyDiv>
+  //     </aside>
+  //   </div>
+  // )
 }
 
-export default CoursePage
+export default CoursePage;
