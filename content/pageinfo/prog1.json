@@ -247,6 +247,23 @@
           "link": "pseudokod"
         }
       ]
+    },
+    {
+      "title": "Uppgifter",
+      "link": "assignment",
+      "pages": [
+        {
+          "title": "Introduktionsuppgiften",
+          "link": "intro",
+          "type": "project"
+        }
+      ],
+      "references": [
+        {
+          "title": "Begrepp",
+          "link": "begrepp"
+        }
+      ]
     }
   ]
 }
