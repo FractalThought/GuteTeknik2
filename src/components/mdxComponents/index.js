@@ -15,6 +15,7 @@ import Callout, { Output, Failure, Notice, Success } from "./Callout";
 import BoxedList from "./BoxedList";
 import FlexContainer from "./FlexContainer";
 import RenderList from "./RenderList";
+import CopyButton from "./CopyButton";
 
 /* eslint-disable */
 export default {
@@ -39,4 +40,5 @@ export default {
   BoxedList: BoxedList,
   FlexContainer: FlexContainer,
   RenderList: RenderList,
+  CopyButton: CopyButton,
 };
