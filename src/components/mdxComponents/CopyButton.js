@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const Button = styled.button`
-  padding: 1rem;
-  font-size: 1rem;
-  margin: 0 0 1.5rem;
-  border-radius: 0.2rem;
+  padding: var(--smaller);
+  font-size: var(--smaller);
+  border-radius: 0.5rem;
 `;
 
 function CopyButton({ children }) {

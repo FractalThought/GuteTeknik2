@@ -16,6 +16,7 @@ import BoxedList from "./BoxedList";
 import FlexContainer from "./FlexContainer";
 import RenderList from "./RenderList";
 import CopyButton from "./CopyButton";
+import CodeContainer from "./CodeContainer";
 
 /* eslint-disable */
 export default {
@@ -41,4 +42,5 @@ export default {
   FlexContainer: FlexContainer,
   RenderList: RenderList,
   CopyButton: CopyButton,
+  CodeContainer: CodeContainer,
 };
