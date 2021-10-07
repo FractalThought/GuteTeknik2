@@ -13,6 +13,15 @@ const ClearDiv = styled.div`
   clear: both;
 `;
 
+/*
+
+Container is the main layout container.
+It should however only act as a container, and leave it up to the templates to dictate their layout.
+Container is not used for the start page, but used for all pages that are within a single course.
+Thus each page has the header and side-menu, but the main area is controlled by the template.
+
+*/
+
 function Container({ url, pageInfo, pageTitle, children }) {
   // Use string split for url
   let urlData = null;
@@ -52,6 +61,7 @@ function Container({ url, pageInfo, pageTitle, children }) {
               url={urlData}
               currentPageData={currentPageData}
             />
+            {/* Starting from here, this should be dictated by the template */}
             <div className="content-wrapper">
               <div className="content-container">
                 <main>
