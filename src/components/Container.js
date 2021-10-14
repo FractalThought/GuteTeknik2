@@ -1,17 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
-import { MDXProvider } from "@mdx-js/react";
-import styled from "styled-components";
 import Header from "../layout/Header";
 import Sidebar from "../layout/Sidebar";
-import mdxComponents from "./mdxComponents";
-// import MyCrumbs from "./MyCrumbs";
-import TableOfContent from "./TableOfContent";
-import RightStickyDiv from "./RightStickyDiv";
 import { MainContext, mainInfo } from "./hooks/MainContext";
-
-const ClearDiv = styled.div`
-  clear: both;
-`;
 
 /*
 
@@ -61,26 +51,9 @@ function Container({ url, pageInfo, pageTitle, children }) {
               url={urlData}
               currentPageData={currentPageData}
             />
-            {/* Starting from here, this should be dictated by the template */}
             <div className="content-wrapper">
-              <div className="content-container">
-                <main>
-                  <div className="page">
-                    {/* <MyCrumbs crumbData={crumbData} /> */}
-                    <h1 className="page-heading">{pageTitle}</h1>
-                    {/* <h1 className="printheader">{pageTitle}</h1> */}
-                    <MDXProvider components={mdxComponents}>
-                      {children}
-                    </MDXProvider>
-                    <ClearDiv></ClearDiv>
-                  </div>
-                </main>
-                <aside>
-                  <RightStickyDiv>
-                    <TableOfContent />
-                  </RightStickyDiv>
-                </aside>
-              </div>
+              {/* Starting from here, this should be dictated by the template */}
+              {children}
             </div>
           </div>
         </div>

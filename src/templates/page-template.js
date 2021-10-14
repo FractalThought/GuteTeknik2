@@ -1,10 +1,18 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import Container from "../components/Container";
 
-const shortcodes = { Link }; // Provide common components here
+import { MDXProvider } from "@mdx-js/react";
+import mdxComponents from "./mdxComponents";
+import styled from "styled-components";
+import TableOfContent from "./TableOfContent";
+import RightStickyDiv from "./RightStickyDiv";
+
+const ClearDiv = styled.div`
+  clear: both;
+`;
 
 export const pageQuery = graphql`
   query($id: String) {
@@ -121,9 +129,24 @@ https://mdxjs.com/getting-started/#mdxprovider
       listOfContent={listOfContent}
       pageTitle={page.frontmatter.title}
     >
-      <MDXProvider components={shortcodes}>
-        <MDXRenderer>{page.body}</MDXRenderer>
-      </MDXProvider>
+      <div className="content-container">
+        <main>
+          <div className="page">
+            {/* <MyCrumbs crumbData={crumbData} /> */}
+            <h1 className="page-heading">{pageTitle}</h1>
+            {/* <h1 className="printheader">{pageTitle}</h1> */}
+            <MDXProvider components={mdxComponents}>
+              <MDXRenderer>{page.body}</MDXRenderer>
+            </MDXProvider>
+            <ClearDiv></ClearDiv>
+          </div>
+        </main>
+        <aside>
+          <RightStickyDiv>
+            <TableOfContent />
+          </RightStickyDiv>
+        </aside>
+      </div>
     </Container>
   );
 }
