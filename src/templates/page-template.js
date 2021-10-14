@@ -4,11 +4,10 @@ import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import Container from "../components/Container";
 
-import { MDXProvider } from "@mdx-js/react";
-import mdxComponents from "./mdxComponents";
+import mdxComponents from "../components/mdxComponents";
 import styled from "styled-components";
-import TableOfContent from "./TableOfContent";
-import RightStickyDiv from "./RightStickyDiv";
+import TableOfContent from "../components/TableOfContent";
+import RightStickyDiv from "../components/RightStickyDiv";
 
 const ClearDiv = styled.div`
   clear: both;
@@ -133,7 +132,7 @@ https://mdxjs.com/getting-started/#mdxprovider
         <main>
           <div className="page">
             {/* <MyCrumbs crumbData={crumbData} /> */}
-            <h1 className="page-heading">{pageTitle}</h1>
+            <h1 className="page-heading">{page.frontmatter.title}</h1>
             {/* <h1 className="printheader">{pageTitle}</h1> */}
             <MDXProvider components={mdxComponents}>
               <MDXRenderer>{page.body}</MDXRenderer>
