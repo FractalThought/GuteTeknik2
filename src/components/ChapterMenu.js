@@ -1,7 +1,7 @@
-import React from "react"
-import { Link } from "gatsby"
-import Styled from "styled-components"
-import MyImg from "./MyImg"
+import React from "react";
+import { Link } from "gatsby";
+import Styled from "styled-components";
+import MyImg from "./MyImg";
 
 /*
 
@@ -12,9 +12,9 @@ TODO: Make chapter data into JSON to source from
 const Section = Styled.section`
   background: white;
   border-radius: 5px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-  0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  padding: 1em;
+  box-shadow: 0px 4px 6px rgba(55, 38, 89, 0.1), 0px 2px 4px rgba(55, 38, 89, 0.06);
+  padding: 1rem;
+  margin: var(--large) 0;
 
   h2 {
     margin: 0;
@@ -32,7 +32,7 @@ const Section = Styled.section`
   a {
     display: flex;
     justify-content: space-between;
-    padding: 1em 0.5em;
+    padding: 0.5rem 0.25rem;
     text-decoration: none;
   }
 
@@ -55,20 +55,17 @@ const Section = Styled.section`
   .type {
     color: var(--gray--500);
   }
-`
+`;
 
 const LinkContainer = Styled.span`
   display: flex;
-`
+`;
 
-const Divider = Styled.div`
-  display: grid;
-  gap: 1rem;
-
-  @media screen and (min-width: 900px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-`
+const Line = Styled.hr`
+  border-top: 0.15rem solid var(--primary--600);
+  margin: 0.5rem 0;
+  opacity: 1;
+`;
 
 /*
 
@@ -83,78 +80,48 @@ function ChapterMenu({ course, chapter, hideTitle }) {
     const typeNamePairs = {
       exercise: "Övning",
       project: "Projekt",
-      lesson: "Lektion",
-    }
+      lesson: "Förklaring",
+    };
 
     if (typeNamePairs[type] === undefined || typeNamePairs[type] === null) {
-      return "Lektion"
+      return "Förklaring";
     }
 
-    return typeNamePairs[type]
+    return typeNamePairs[type];
   }
 
   return (
-    <>
+    <Section>
       {!hideTitle && (
-        <h1 id={chapter.link}>
+        <h2 id={chapter.link}>
           <Link to={`/${course}/${chapter.link}`}>{chapter.title}</Link>
-        </h1>
+        </h2>
       )}
-
-      <Section>
-        <Divider>
-          <div>
-            <h2>Moment</h2>
-            <ul>
-              {chapter.pages.map((page, key) => {
-                return (
-                  <li key={key}>
-                    <Link to={`/${course}/${chapter.link}/${page.link}`}>
-                      <LinkContainer>
-                        <MyImg
-                          src={page.type + ".png"}
-                          alt={getTypeName(page.type)}
-                          width="50"
-                        />
-                        <span className="title">{page.title}</span>
-                      </LinkContainer>
-                      <span className="type">{getTypeName(page.type)}</span>
-                    </Link>
-                  </li>
-                )
-              })}
-            </ul>
-          </div>
-          <div>
-            <h2>Referenser</h2>
-            {chapter.references !== null ? (
-              <ul>
-                {chapter.references.map((reference, key) => {
-                  return (
-                    <li key={key}>
-                      <Link to={`/${course}/referenser/${reference.link}`}>
-                        <LinkContainer>
-                          <MyImg
-                            src="reference.png"
-                            alt="Referens"
-                            width="50"
-                          />
-                          <span className="title">{reference.title}</span>
-                        </LinkContainer>
-                        <span className="type">Referens</span>
-                      </Link>
-                    </li>
-                  )
-                })}
-              </ul>
-            ) : (
-              <p>Inga referenser</p>
-            )}
-          </div>
-        </Divider>
-      </Section>
-    </>
-  )
+      <Line />
+      <div>
+        <h2>Moment</h2>
+        <ul>
+          {chapter.pages.map((page, key) => {
+            return (
+              <li key={key}>
+                <Link to={`/${course}/${chapter.link}/${page.link}`}>
+                  <LinkContainer>
+                    <MyImg
+                      src={page.type + ".png"}
+                      alt={getTypeName(page.type)}
+                      width="50"
+                    />
+                    <span className="title">{page.title}</span>
+                  </LinkContainer>
+                  <span className="type">{getTypeName(page.type)}</span>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </Section>
+  );
 }
 
-export default ChapterMenu
+export default ChapterMenu;
