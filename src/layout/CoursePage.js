@@ -29,6 +29,10 @@ const QuickList = styled.section`
   }
 `;
 
+const PageContainer = styled.div`
+  padding: 2rem;
+`;
+
 function CoursePage({ course, children, url }) {
   const data = useStaticQuery(graphql`
     query {
@@ -79,22 +83,25 @@ function CoursePage({ course, children, url }) {
 
   return (
     <Container url={url} pageInfo={pageInfo} pageTitle={courseInfo.name}>
-      {children}
-      <QuickList>
-        <h1>Kapitel</h1>
-        <ul>
-          {courseInfo.chapters.map((chapter, key) => {
-            return (
-              <li key={key}>
-                <a href={`#${chapter.link}`}>{chapter.title}</a>
-              </li>
-            );
-          })}
-        </ul>
-      </QuickList>
-      {courseInfo.chapters.map((chapter, key) => {
-        return <ChapterMenu key={key} course={course} chapter={chapter} />;
-      })}
+      <PageContainer>
+        <h1>{courseInfo.name}</h1>
+        {children}
+        <QuickList>
+          <h1>Kapitel</h1>
+          <ul>
+            {courseInfo.chapters.map((chapter, key) => {
+              return (
+                <li key={key}>
+                  <a href={`#${chapter.link}`}>{chapter.title}</a>
+                </li>
+              );
+            })}
+          </ul>
+        </QuickList>
+        {courseInfo.chapters.map((chapter, key) => {
+          return <ChapterMenu key={key} course={course} chapter={chapter} />;
+        })}
+      </PageContainer>
     </Container>
   );
 

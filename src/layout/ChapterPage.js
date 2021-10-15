@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import styled from "styled-components";
 import Container from "../components/Container";
 import ChapterMenu from "../components/ChapterMenu";
 
@@ -30,6 +31,10 @@ function ChapterPage({ course, chapter, children, url }) {
     }
   `);
 
+  const PageContainer = styled.div`
+    padding: 2rem;
+  `;
+
   /*
   Remove the .node-intermediate step, filter out the currrent page,
   and reduce down to a single object
@@ -56,8 +61,11 @@ function ChapterPage({ course, chapter, children, url }) {
 
   return (
     <Container url={url} pageInfo={pageInfo} pageTitle={chapterInfo.title}>
-      {children}
-      <ChapterMenu course={course} chapter={chapterInfo} hideTitle={true} />
+      <PageContainer>
+        <h1>{chapterInfo.title}</h1>
+        {children}
+        <ChapterMenu course={course} chapter={chapterInfo} hideTitle={true} />
+      </PageContainer>
     </Container>
   );
 
