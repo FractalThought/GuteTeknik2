@@ -249,6 +249,28 @@
       ]
     },
     {
+      "title": "Unity",
+      "link": "unity",
+      "pages": [
+        {
+          "title": "Introduktion",
+          "link": "intro",
+          "type": "lesson"
+        },
+        {
+          "title": "Player avatar",
+          "link": "avatar",
+          "type": "lesson"
+        }
+      ],
+      "references": [
+        {
+          "title": "Begrepp",
+          "link": "begrepp"
+        }
+      ]
+    },
+    {
       "title": "Uppgifter",
       "link": "assignment",
       "pages": [

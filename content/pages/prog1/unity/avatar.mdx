@@ -1,0 +1,12 @@
+---
+title: "Player avatar"
+date: "2020-09-21"
+---
+
+Dags att börja göra spel! Vi kan börja med att ta **PlayerAvatar**, och dra in den i vår scen. Direkt ser vi att ett objekt med namnet PlayerAvatar skapas i Hierarkin, och vårt skepp hamnar i scenen. Om vi trycker på Play-knappen högst upp i mitten av editorn så körs spelet, och vi ser vårt skepp i spelet. Vi kan sedan stanna spelet, genom att trycka på Play-knappen igen.
+
+Om vi tar och markerar vårt skepp, antingen via **Scene** och klicka på spriten, eller i Hierarkin, så kan vi se att det objektet har två komponenter; **Transform** och **Sprite Renderer**.
+
+**Transform** är något alla objekt har oavsett vad det är för objekt. Den styr objektets position, rotation, och skala (storlek). I inspektorn kan vi ändra värden, så till exempel kan vi ändra om objektets position genom att skriva in ett nytt värde i x och/eller y.
+
+**Sprite Renderer** är det som ser till att objektet renderar (visar) en specificerad sprite. Den är satt att rendera PlayerAvatar-spriten. Som det är nu så behöver vi inte ändra något i den här komponenten, och vi kan gå vidare till att skapa ett beteende till objektet.
