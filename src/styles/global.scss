@@ -215,7 +215,8 @@ main {
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    width: 90rem;
+    max-width: 90rem;
+    width: 100%;
   }
 
   #logo * {
@@ -309,12 +310,12 @@ main {
   .content-container {
     display: flex;
     width: 100%;
+    padding: 0 2rem;
+    gap: 2rem;
   }
 
   main {
     padding-bottom: var(--lg7);
-    padding-left: 2rem;
-    padding-right: 2rem;
     flex: 1 1 auto;
     min-width: 0;
     max-width: 54rem;

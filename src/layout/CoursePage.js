@@ -18,19 +18,15 @@ const QuickList = styled.section`
 
   ul {
     margin: 0;
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
   }
 
   li {
     list-style: none;
     margin: 0;
   }
-`;
-
-const PageContainer = styled.div`
-  padding: 2rem;
 `;
 
 function CoursePage({ course, children, url }) {
@@ -83,27 +79,47 @@ function CoursePage({ course, children, url }) {
 
   return (
     <Container url={url} pageInfo={pageInfo} pageTitle={courseInfo.name}>
-      <PageContainer>
-        <h1>{courseInfo.name}</h1>
-        {children}
-        <QuickList>
-          <h1>Kapitel</h1>
-          <ul>
+      <div className="content-container">
+        <main>
+          <div className="page">
+            <h1 className="page-heading">{courseInfo.name}</h1>
+            {children}
             {courseInfo.chapters.map((chapter, key) => {
               return (
-                <li key={key}>
-                  <a href={`#${chapter.link}`}>{chapter.title}</a>
-                </li>
+                <ChapterMenu key={key} course={course} chapter={chapter} />
               );
             })}
-          </ul>
-        </QuickList>
-        {courseInfo.chapters.map((chapter, key) => {
-          return <ChapterMenu key={key} course={course} chapter={chapter} />;
-        })}
-      </PageContainer>
+          </div>
+        </main>
+        <aside>
+          <QuickList>
+            <h2>Kapitel</h2>
+            <ul>
+              {courseInfo.chapters.map((chapter, key) => {
+                return (
+                  <li key={key}>
+                    <a href={`#${chapter.link}`}>{chapter.title}</a>
+                  </li>
+                );
+              })}
+            </ul>
+          </QuickList>
+        </aside>
+      </div>
     </Container>
   );
+
+  /*
+  
+  {pageInfo.chapters.map((chapter, key) => {
+  //             return (
+  //               <li key={key}>
+  //                 <a href={`#${chapter.link}`}>{chapter.title}</a>
+  //               </li>
+  //             )
+  //           })}
+
+  */
 
   // return (
   //   <div id="main-grid">
@@ -135,13 +151,7 @@ function CoursePage({ course, children, url }) {
   //           <li>
   //             <a href="#toppen">Gå till toppen</a>
   //           </li>
-  //           {pageInfo.chapters.map((chapter, key) => {
-  //             return (
-  //               <li key={key}>
-  //                 <a href={`#${chapter.link}`}>{chapter.title}</a>
-  //               </li>
-  //             )
-  //           })}
+  //
   //         </ul>
   //       </RightStickyDiv>
   //     </aside>
