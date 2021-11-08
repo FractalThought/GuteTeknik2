@@ -68,13 +68,13 @@ function Sidebar({ url, currentPageData, showSidebar }) {
   // https://stackoverflow.com/questions/635706/how-to-scroll-to-an-element-inside-a-div
 
   setTimeout(() => {
-    const currentActiveLink = document.querySelector(
-      ".menu-section__link--active"
-    );
-    if (currentActiveLink != null) {
-      const topPos = currentActiveLink.offsetTop;
-      document.querySelector(".sidemenu").scrollTop = topPos;
-    }
+    // const currentActiveLink = document.querySelector(
+    //   ".menu-section__link--active"
+    // );
+    // if (currentActiveLink != null) {
+    //   const topPos = currentActiveLink.offsetTop;
+    //   document.querySelector(".sidemenu").scrollTop = topPos;
+    // }
   }, 1000);
 
   return (
