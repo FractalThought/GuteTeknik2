@@ -30,14 +30,14 @@ function Header({ mainPage, sidebarUtility }) {
   function createHeaderLink(currentLink, link, key) {
     if (currentLink === link.link) {
       return (
-        <Link key={key} className="active" href={"/" + link.link}>
+        <Link key={key} className="active" to={"/" + link.link}>
           {link.name}
         </Link>
       );
     }
 
     return (
-      <Link key={key} href={"/" + link.link}>
+      <Link key={key} to={"/" + link.link}>
         {link.name}
       </Link>
     );
