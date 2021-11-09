@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { Link } from "gatsby";
 import SidebarHeading from "./SidebarHeading";
 // import useProjects from "../components/hooks/useProjects"
@@ -77,10 +77,24 @@ function Sidebar({ url, currentPageData, showSidebar }) {
     // }
   }, 1000);
 
+  const currentActiveLink = useRef();
+  const sideMenu = useRef();
+  useEffect(() => {
+    if (currentActiveLink.current != null) {
+      const activeLinkElement = currentActiveLink.current;
+      const sideMenuElement = sideMenu.current;
+      const topPos = activeLinkElement.offsetTop;
+      sideMenuElement.scrollTop = topPos;
+      console.log(activeLinkElement);
+      console.log(sideMenuElement);
+      console.log(topPos);
+    }
+  }, []);
+
   return (
     <div className={showSidebar ? "sidebar sidebar--show" : "sidebar"}>
       <div className="sidemenu-wrapper">
-        <nav className="sidemenu">
+        <nav ref={sideMenu} className="sidemenu">
           <Link className="sidemenu__heading" to={"/" + currentPageData.link}>
             <h2>{currentPageData.name}</h2>
           </Link>
@@ -100,6 +114,7 @@ function Sidebar({ url, currentPageData, showSidebar }) {
               key={index}
               headingData={chapter}
               urlData={urlData}
+              activeRef={currentActiveLink}
             />
           ))}
         </nav>

@@ -97,7 +97,7 @@ Lastly, need courseLink
 */
 
 // function SidebarHeading({ chapter, courseLink, currentPage, currentChapter }) {
-function SidebarHeading({ headingData, urlData }) {
+function SidebarHeading({ headingData, urlData, activeRef }) {
   const { pages, title, link } = headingData;
 
   let isCurrentChapter = false;
@@ -122,16 +122,23 @@ function SidebarHeading({ headingData, urlData }) {
 
   return (
     <section className="menu-section">
-      <Link
-        className={
-          isCurrentChapter
-            ? "menu-section__heading menu-section__heading--active"
-            : "menu-section__heading"
-        }
-        to={"/" + urlData.course + "/" + link}
-      >
-        <h2>{title}</h2>
-      </Link>
+      {isCurrentChapter ? (
+        <Link
+          ref={activeRef}
+          className="menu-section__heading menu-section__heading--active"
+          to={"/" + urlData.course + "/" + link}
+        >
+          <h2>{title}</h2>
+        </Link>
+      ) : (
+        <Link
+          className="menu-section__heading"
+          to={"/" + urlData.course + "/" + link}
+        >
+          <h2>{title}</h2>
+        </Link>
+      )}
+
       <div className="menu-section__list">
         {pages.map((page, index) => (
           <Link
