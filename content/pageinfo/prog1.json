@@ -261,6 +261,11 @@
           "title": "Player avatar",
           "link": "avatar",
           "type": "lesson"
+        },
+        {
+          "title": "Mekanikutmaningar",
+          "link": "mekanikutmaningar",
+          "type": "project"
         }
       ],
       "references": [

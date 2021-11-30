@@ -1,0 +1,84 @@
+---
+title: "Unity: Mekanikutmaningar"
+date: "2021-11-30"
+headings: "Vad du ska göra:vad-ni-ska-gora|Vad som ska lämnas in:vad-som-ska-lämnas-in|Förslag på tillägg och ändringar:förslag-på-tillägg-och-ändringar|Bedömning:bedomning"
+---
+
+**Slutuppgift i Programmering 1**
+
+Ni har nu en grund till en space shooter. I ert spel kan spelaren röra ett skepp i alla riktningar, och kan skjuta på fiender som kommer mot dem. Er utmaning nu är att göra spelet intressantare med nyare och bättre mekaniker.
+
+<TopicHeading link="vad-du-ska-göra">Vad du ska göra</TopicHeading>
+
+Du ska lägga till beteenden till ditt spel genom att skapa nya skript, eller ändra de som redan finns.
+
+I dina skript ska du visa att du kan minst använda variabler och kontrollsatser, samt kommentera din kod.
+
+**Slutligen ska du dokumentera dina tillägg och ändringar på minst en halv A4-sida där du förklarar vad du gjort och hur du gjorde det samt reflekterar kring ditt arbete.**
+
+**Förslag på tillägg och ändringar du kan göra hittar du längre ner.**
+
+## Hur du ska arbeta
+
+Du ska i första hand skriva skripten själv utan hjälp från din handledare (lärare), men ni uppmuntras att hjälpa varandra i klassrummet. Tänk dock på att inte rakt av kopiera kod, då detta blir tydligt vid inlämning.
+
+Samma gäller när du letar efter hjälp online. Att kopiera kod rakt av ger dig ingen kunskap om hur man gör, och visar inte att det är du som skrivit koden.
+
+Du ska i första hand försöka lösa problem själv med hjälp av webbsökning, i andra hand ta hjälp av en klasskamrat, och i tredje hand ta hjälp från din handledare (lärare).
+
+## Att tänka på
+
+Namnge dina variabler för vad de har för syfte. Till exempel ska en variabel som kontrollerar hastigheten helst heta "speed" eller kanske "movementSpeed". Den ska inte heta "x", "b", eller liknande.
+
+Kommentera din kod! Använd // för att skapa en enradskommentar eller /**/ för flerradskommentar.
+
+<TopicHeading link="vad-som-ska-lämnas-in">Vad som ska lämnas in</TopicHeading>
+
+Du ska lämna in alla nya skriptfiler (.cs) du skapat, samt alla skriptfiler du har ändrat, samt en halv A4-sida som dokumenterar vad du gjort och hur du gjorde det.
+
+<TopicHeading link="förslag-på-tillägg-och-ändringar">Förslag på tillägg och ändringar</TopicHeading>
+
+### Snabb fiende
+
+För denna mekanik ska du skapa en ny Prefab på en fiende som ser annorlunda ut från de andra fienderna, och sätta dess hastighet till högre än en vanlig fiende.
+
+### Fiende som skjuter
+
+För denna mekanik behöver du skapa en ny Prefab på en fiende (se Snabb fiende), och en ny Prefab som ska fungera som ett Skott. Sedan ska du lägga till ett skript som skjuter .
+
+### Power up
+
+Skapa ett objekt som, när det krockar med spelarskeppet, ökar skeppets hastighet (alternativt om du har spelarhälsa, ökar spelarens hälsa). Objektet (powerup) ska tas bort.
+
+**Bonus:**
+
+- Få powerupen att märkas visuellt (grafik) eller med ljud.
+- Få fiender att droppa powerup då och då.
+- Få powerupen att vara temporär, så den bara håller i några sekunder.
+
+### Hälsa
+
+Lägg till hälsa till ditt spelarskepp. När spelarskeppet blir träffad av något ska den ta skada. 
+
+### Fiende med hälsa
+
+Lägg till hälsa till fiender, så att en fiende tål ett skott innan de förstörs. För detta behöver du kolla när fienden kolliderar med ett skott, och då reducera en hälsa-variabel. När hälsa-variabeln är 0 eller mindre ska fienden förstöras.
+
+### Fiende som rör sig i sidleds
+
+Skapa en fiende som rör sig långsamt nedåt, men samtidigt rör sig i ett zig-zag-mönster (till vänster, sen till höger, sen till vänster, sen till höger, osv).
+
+<TopicHeading link="bedömning">Bedömning</TopicHeading>
+
+Projektet bedöms utifrån din säkerhet i användandet av olika kodstrukturer, hur väl du dokumenterar och kommenterar din kod, samt resultatet av koden du skrivit. Stor vikt läggs vid hur mycket du arbetar självständigt och hur du kommunicerar när du efterfrågar hjälp.
+
+Du ska i första hand lösa problem själv med hjälp av webbsökning och/eller klasskompisar.
+
+<aside>
+💡 Märker jag att kod kopierats rakt av, antingen från en klasskamrat eller internet, så räknas det negativt i betygsättningen. Det är mycket bättre att ha försökt skriva kod själv och lärt sig något från detta, än att kopiera kod som fungerar men som du inte förstår hur den fungerar.
+
+</aside>
+
+## Påverkan på slutbetyget
+
+Projektet står för stor del av ditt slutliga betyg i Programmering 1, men även tidigare inlämningar, arbete under lektionstid och på övningarna, samt animationsprojektet i Webb2 inkluderas i betyget (eftersom animationsprojektet inkluderar att skriva Javascript-kod).
