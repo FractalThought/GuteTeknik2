@@ -1,0 +1,46 @@
+---
+title: "Batch-script"
+date: "2021-12-10"
+---
+
+Batch-script, ofta kallad Bat-script tack vare filändelsen som skripten använder (.bat) är ett skript som kör av Kommandotolken och innehåller flera kommandon som Kommandotolken kan använda. Namnet kommer från Batch processing som betyder att processera flera saker (batch = omgång eller sats).
+
+En bat-fil är egentligen en textfil men med filändelsen _.bat_ vilket gör att när vi öppnar filen normalt så startar Kommandotolken och kör kommandona som står i.
+
+## Skapa bat-filer
+
+För att skapa en bat-fil, öppna en vanlig så kallad plain text editor, till exempel **Anteckningar** eller **VSCode**.
+Börja skriva skriptet, och när det är dags att spara - spara filen med filändelsen .bat.
+
+Alternativt kan du skapa en bat-fil genom att högerklicka i Utforskaren i en folder där du vill ha skriptet (Skrivbordet fungerar också) och välj **Nytt > Textdokument**. Då skapas en .txt-fil, som du nu kan göra om till en .bat-fil genom att ta bort .txt och ersätta med .bat. Du kommer få en dialogruta som frågar om du menade att ändra filändelsen, tryck Ja.
+
+För att detta ska fungera så behöver du ha visningsinställningarna inställda på att inte dölja kända filändelser. Om du inte vet hur du gör det - kollade med din lärare, eller googla på hur man gör.
+
+## Öppna bat-filer
+
+För att öppna en bat-fil så vi kan redigera den så högerklickar vi på filen och väljer **Öppna med**. Man kan öppna bat-filer i en plain text editor (Anteckningar, VSCode).
+
+## Notera
+
+Bat-filer körs från foldern där du startar skriptet. Är foldern i `C:/Projekt` till exempel, så kommer den arbeta från den foldern.
+
+# Laborationen
+
+Med kommandotolken, gör följande:
+
+1. Skapa en mapp som heter TEST och till den mappen skapar du 3 underkataloger som heter TEST1, TEST2 och TEST3.
+2. Skapa 3 textfiler i C:\TEST med EDIT som du kallar fil1.txt fil2.txt och fil3.txt
+3. Kopiera in fil1.txt i mappen C:\TEST\TEST1
+4. Flytta alla textfiler i C:\TEST in i C:\TEST\TEST2 (med en kommandorad, jokertecken)
+5. Ta bort mappen TEST3 i C:\TEST
+6. Ta reda på vad kommandot ROBOCOPY gör
+7. Döp om alla textfiler i C:\TEST\TEST2 så att de börjar med bokstaven h. Detta skall göras med
+   en kommandorad (tips jokertecken)
+8. Ge 2 olika exempel på hur du löser problemet med att lista innehållet i en mapp så att det
+   blir en paus vid varje skärmbild.
+9. Ta bort C:\TEST och alla dess underkataloger med ett kommando.
+   Ta reda på vilket IP-nummer du har.
+10. Fråga efter IP-numret till din kompis. Kontrollera sedan att du har kontakt med denna adress
+    med lämpligt kommando.
+11. Gör en BAT-fil som skapar en katalog i roten på C: som heter KUL och därefter gör denna mapp till aktuell katalog.
+12. Ändra i föregående BAT-fil så att kommandona som används inte syns när BAT-filen körs samt att BAT-filen skriver ut en liten informationstext om vad som händer och vem som gjort filen. Det kanske blir nödvändigt att ta bort mappen som skapades innan först.
