@@ -1,0 +1,34 @@
+---
+title: "Nätverkskommandon"
+date: "2021-12-10"
+---
+
+Kommandotolken kan köra en rad olika nätverksrelaterade kommandon. Dessa kan användas för diagnos, felsökning, eller problemlösning.
+
+# Ping
+
+Ping följt av en IP-adress eller en adress gör att datorn skickar ut signaler till den valda adressen som i princip frågar "Hej! Är du där?", och mäter tiden det tar för signalen att komma tillbaka. Det kallas att man _pingar_ en adress.
+
+Med ping kan man kolla om en server ligger uppe, eller om ens datorn har kontakt med internet över huvudtaget.
+
+# IPConfig
+
+Visar information om nätverkskorten och deras konfiguration. Från IPConfig kan man få reda på ens IP-adress. IPConfig har diverse olika växla, till exempel;
+
+- **/ALL**: Visar all information.
+- **/RELEASE**: Får nätverkskortet att släppa sin tilldelade IP-adress.
+- **/RENEW**: Tvingar nätverkskortet att efterfråga en ny IP-adress.
+
+# Netstat
+
+Visar protokollstatistik och aktiva TCP/IP anslutningar.
+
+# tracert
+
+Står för _Traceroute_. Fungerar på liknande sätt som **Ping**, men loggar istället vägen som signalen tar från datorn till den nämnda adressen och tiden det tar mellan varje hopp.
+
+# Pathping
+
+Fungerar på liknande sätt som pathping, men gör avancerade kalkylationer
+
+Se https://www.clouddirect.net/knowledge-base/KB0011455/using-traceroute-ping-mtr-and-pathping för mer information om hur man använder pathping och tracert för att diagnostisera ens nätverk.

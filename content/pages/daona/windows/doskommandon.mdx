@@ -1,5 +1,5 @@
 ---
-title: "Doskommandon"
+title: "Kommmandotolken och doskommandon"
 date: "2021-12-07"
 ---
 
@@ -13,12 +13,59 @@ För att starta kommandotolken, öppna Startmenyn i Windows (tryck på Windows-t
 
 Använd kortkommandot Windows+R (Windowstangenten och R) för att få upp Kör (Run) och skriv in `cmd` och tryck på Ok-knappen.
 
+# Directory (folders)
+
+Kommandotolken startar alltid med fokus i en folder. Det är från den foldern den kommer att utföra kommandon du vill köra, tills dess att du väljer att byta folder. Folderstrukturen kallas för Directory, och ser ut till exempel så här; `C:/projekt/daodac/`.
+
+Tänk det som att du använder Utforskaren och har en specifik folder öppen. Du kan se filer i den foldern, gå till andra foldrar, skapa, döpa om, ta bort, eller flytta filer, osv. Allt detta och mer kan du göra i Kommandotolken.
+
 # DOSkommandon
 
 Med DOSkommandon kan man göra det mest som vi annars kan göra med Utforskaren, den applikation vi använder för att se och använda filer.
 
-Ett DOSkommando fungerar så att vi använder ett kommando följt av parametrar och växlar.
+Ett DOSkommando fungerar så att vi använder ett kommando följt av parametrar och växlar, samtliga separerade med mellanslag.
 Kommandot bestämmer vad för typ av sak vi ska göra (till exempel skapa en folder eller flytta en fil) och parametrarna bestämmer vad vi gör med det kommandot (till exempel folderns namn, filens namn, vart filen ska flyttas till).
+
+För att använda ett DOSkommmando skriver du kommandot i **Kommmandotolken**, följt av eventuella parametrar och/eller växlar. Kommandotolken tolkar dina kommandon (därav namnet), och för att den ska kunna göra det behöver du skriva "grammatiskt" korrekt. Det kallas att man följer syntaxen.
+
+Alla kommandon är uppbyggda på följande sätt:
+
+- Kommandot som säger vad Kommandotolken ska göra. Detta är oftast ett nyckelord eller en förkortning av ett kommando.
+- En eller flera parametrar som säger vad och var kommandot ska utföras på och i.
+- Så kallade växlar, tillägg som ändrar kommandots funktion på något sätt.
+
+De ser ut till exempel så här:
+
+```
+KOMMANDO parameter1 parameter2 /Växel1 /Växel2
+```
+
+<Notice>
+
+Kommandotolken i Windows är inte Case-sensitive och gör ingen skillnad på stora och små bokstäver när det kommer till kommandon. Detta är inte sant för Kommandotolkar i andra operativsystem (till exempel terminalen i Unix).
+
+</Notice>
+
+
+## Vad som sker bakomo kulliserna
+
+Det Kommmandotolken egentligen gör när den kör ett kommando är att den startar små program som finns i **PATH**, en särskild folder på datorn. Kommmandotolken kollar även i den aktiva foldern efter körbara program. Vissa program så som VSCode och Node registrerar sig själva till PATH och gör att vi kan köra dem som kommandon oavsett i vilken folder Kommandotolken är aktiv i.
+
+<Notice half="true">
+
+Om du har Node installerat, testa att starta det från Kommandotolken med kommandot `node`. Då startar du Node i REPL-läge.
+
+Om du har VSCode installerat, testa kommandot `code` för att starta VSCode, eller `code .` för att starta VSCode med den aktuella foldern öppen.
+
+</Notice>
+
+## Avbryt ett kommando
+
+En bra grej att kunna är hur man avbryter ett kommando som kanske har fastnat eller tar för lång tid. Använd kortkommmandot **CTRL+C** som avbryter det aktuella kommandot.
+
+## Lista på DOSkommandon
+
+OBS! Detta är inte en komplett lista varken i alla kommandon, eller alla växlar för kommandona och vad de kan göra. För att få en beskrivning av ett kommando så kan du köra kommandot med växeln **/?** vilket förklarar i mer detalj hur kommandot fungerar, eller så söker du efter informationen på internet.
 
 # Källa:
 
