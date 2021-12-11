@@ -72,7 +72,7 @@ Använd piltangenten Upp för att se tidigare kommandon du använt.
 OBS! Detta är inte en komplett lista varken i alla kommandon, eller alla växlar för kommandona och vad de kan göra. För att få en beskrivning av ett kommando så kan du köra kommandot med växeln **/?** vilket förklarar i mer detalj hur kommandot fungerar, eller så söker du efter informationen på internet.
 
 | Kommando | Beskrivning                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | HELP     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | DIR      | Directory. Visar den aktuella foldern som Kommandotolken är aktiv i.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | CD       | Står för Change Directory och används för att byta folder. Använd en parameter bestående av namnet på en folder i den aktuella foldern för att gå till den foldern. Ett tips är att använda Tabb-komplettering. Det fungerar på så sätt att så länge du vet början på en folders namn så kan du börja skriva det, trycka på Tabb, och Kommandotolken kompletterar med dess fulla namn.  Till exempel, om du är i användarfoldern där Kommandotolken vanligtvis startar, börja skriva in **doc** och tryck på Tabb. Det borde nu komplettera till Documents.  För att gå upp i folderstrukturen, använd **../** |
@@ -83,7 +83,80 @@ OBS! Detta är inte en komplett lista varken i alla kommandon, eller alla växla
 | CLS      | Rensar Kommandotolkens skärm.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | DEL      | Delete. Tar bort en eller flera filer.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | REN      | Rename. Byter namn på en eller flera filer.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| ECHO     | Skriver ut ett meddelande i kommandotolken.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+
+
+# Pipes
+Utan någon modifikation skriver det kommando vi valt ut ett meddelande i Kommandotolken. Detta kan vi ändra med så kallade pipes.
+
+- **|** Skickar vidare informationen till ett annat kommando. Används oftast med kommandot **MORE** som skriver ut informationen en rad i taget.
+- **>** Skriver ut till en textfil, så här; `ECHO hejsan! > hej.txt`.
+
+# Variabler
+
+Kommandot **SET** sätter en variabel som kan användas i senare skript.
+
+## Syntax:
+
+`SET /A variable-name=value`.
+- **variable-name** är variabelns namn.
+- **value** är värdet som variabeln sätts till.
+- **/A** är en växel som används om värdet måste vara en siffra, annars blir det en mening (sträng).
+
+## Exempel:
+
+```
+set message=Hello World
+echo %message%
+```
+
+Detta sätter värdet message till värdet Hello World och skriver sedan ut det i konsolen med kommandot **ECHO**. Observera att du inte ska använda mellanslag runt likamed-tecknet.
+
+<Notice half="true">
+
+När du stöter på skript med flera rader, kör en rad i taget, eller skapa ett Batch-skript.
+
+</Notice>
+
+## Numeriska värden
+
+**/A**-växeln gör att vi kan sätta numeriska värden och utföra kalkylationer på dessa, så här:
+
+
+```
+SET /A a = 5 
+SET /A b = 10 
+SET /A c = %a% + %b% 
+echo %c%
+```
+
+Samtliga aritmiska operatorer fungerar (addition `+`, subtraktion `-`, multiplikation `*`, division `/`).
+
+<Notice>
+För icke-numeriska värden konkateneras värdena istället, så resultatet av exemplet ovan hade blivit 510 istället för 15.
+</Notice>
+
+## Hämta input från användaren
+Genom att använda växeln **/P** kan vi hämta in ett värde från användaren. Detta kallas att man "promptar" användaren för ett värde.
+
+### Syntax:
+`SET /P variable-name=PromptString`
+
+PromptString i det här fallet är ett meddelande som visas för användaren, och variable-name är variabeln som lagrar användarens input.
+
+### Exempel:
+
+```
+SET /P username=Enter your username: 
+ECHO Hello %username%!
+```
+
+Första raden promptar användaren för ett värde (i det här fallet ett användarnamn), och lagrar det i variabeln *username*.
+
+Andra raden skriver ut Hello följt av värdet på variabeln *username*, och avslutar med ett utropstecken.
 
 # Källa:
 
 [https://en.wikipedia.org/wiki/List_of_DOS_commands](Wikipedias lista på DOS-kommandon).
+
+[Mer ingående om variabler](https://www.tutorialspoint.com/batch_script/batch_script_variables.htm)
