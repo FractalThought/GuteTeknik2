@@ -15,9 +15,17 @@ Använd kortkommandot Windows+R (Windowstangenten och R) för att få upp Kör (
 
 # Directory (folders)
 
-Kommandotolken startar alltid med fokus i en folder. Det är från den foldern den kommer att utföra kommandon du vill köra, tills dess att du väljer att byta folder. Folderstrukturen kallas för Directory, och ser ut till exempel så här; `C:/projekt/daodac/`. Det kallas att Kommandotolken är aktiv i den foldern.
+Kommandotolken startar alltid med fokus i en folder. Det är från den foldern den kommer att utföra kommandon du vill köra, tills dess att du väljer att byta folder. Folderstrukturen kallas för Directory, och ser ut till exempel så här; `C:/projekt/daodac/`. Det kallas att Kommandotolken är aktiv i den foldern och foldern räknas som den "aktuella foldern" (current directory).
 
 Tänk det som att du använder Utforskaren och har en specifik folder öppen. Du kan se filer i den foldern, gå till andra foldrar, skapa, döpa om, ta bort, eller flytta filer, osv. Allt detta och mer kan du göra i Kommandotolken.
+
+I kommandon kan det hända att du ska referera till filer som ligger i den aktuella foldern, eller en relaterad folder. Alla filer och foldrar som ligger i den aktuella foldern kan refereras med deras namn, men alla andra behöver antingen vara relativa till **root-directory (C:/)** eller till den aktuella foldern.
+
+För att gå uppåt i folderstrukturen använder du `../`, behöver du gå fler steg uppåt använder du fler `../` efter varandra, till exempel `../../`.
+
+För att gå nedåt i folderstrukturen refererar du till varje folder i strukturen tills du når målet. Varje folder separeras då med ett snedstreck `/`. Till exempel `Musik/rock`.
+
+Du kan kombinera dessa för att gå uppåt i strukturen och sedan gå nedåt. Detta kan vara bra om du har en grundfolder som har flera undermappar i sig och du är aktiv i en av undermapparna och vill interagera med filer i en annan undermapp. Har du till exempel en folder som heter Musik och tre undermappar som heter Rock, Hiphop, och Trance och har Kommandotolken aktiv i Rock, så kan du interagera med filer i Hiphop och Trance med `../hiphop` respektive `../trance`.
 
 # DOSkommandon
 
@@ -27,9 +35,9 @@ För att använda ett DOSkommmando skriver du kommandot i **Kommmandotolken**, f
 
 Alla kommandon är uppbyggda på följande sätt:
 
-- Kommandot som säger vad Kommandotolken ska göra (till exempel skapa en folder eller flytta en fil). Detta är oftast ett nyckelord eller en förkortning av ett kommando.
-- En eller flera parametrar som säger vad och var kommandot ska utföras på och i (till exempel folderns namn, filens namn, vart filen ska flyttas till).
-- Så kallade växlar, tillägg som ändrar kommandots funktion på något sätt (till exempel att den ska överskriva filer utan bekräftelse).
+- **Kommandot** som säger vad Kommandotolken ska göra (till exempel skapa en folder eller flytta en fil). Detta är oftast ett nyckelord eller en förkortning av ett kommando.
+- En eller flera **parametrar** som säger vad och var kommandot ska utföras på och i (till exempel folderns namn, filens namn, vart filen ska flyttas till).
+- Så kallade **växlar**, tillägg som ändrar kommandots funktion på något sätt (till exempel att den ska överskriva filer utan bekräftelse).
 
 De ser ut så här:
 
@@ -39,7 +47,7 @@ KOMMANDO parameter1 parameter2 /Växel1 /Växel2
 
 <Notice>
 
-Kommandotolken i Windows är inte Case-sensitive och gör ingen skillnad på stora och små bokstäver när det kommer till kommandon. Detta är inte sant för Kommandotolkar i andra operativsystem (till exempel terminalen i Unix).
+Kommandotolken i Windows är inte Case-sensitive och gör ingen skillnad på stora och små bokstäver när det kommer till kommandon. Detta är inte sant för Kommandotolkar i andra operativsystem (till exempel terminalen i Unix). Ordningen på parametrarna är dock viktiga.
 
 </Notice>
 
@@ -53,6 +61,8 @@ Det Kommmandotolken egentligen gör när den kör ett kommando är att den start
 Om du har Node installerat, testa att starta det från Kommandotolken med kommandot `node`. Då startar du Node i REPL-läge.
 
 Om du har VSCode installerat, testa kommandot `code` för att starta VSCode, eller `code .` för att starta VSCode med den aktuella foldern öppen.
+
+Du kan starta Utforskaren på samma sätt med kommandot **EXPLORER**. Det kan vara ett bra sätt att se mappstrukturen du skapar med Kommandotolken.
 
 </Notice>
 
@@ -74,7 +84,7 @@ OBS! Detta är inte en komplett lista varken i alla kommandon, eller alla växla
 | DIR      | Directory. Visar den aktuella foldern som Kommandotolken är aktiv i och listar alla foldrar och filer som finns i den foldern.<br/><br/>Med växeln **/S** listar den alla filer och folders i foldern och dess undermappar som matchar parametrarna. OBS! Om du kör den utan att namnge minst en parameter så listar den samtliga filer och foldrar i alla undermappar vilket kan ta väldigt lång tid.                                                                                                                                                                         |
 | CD       | Står för Change Directory och används för att byta folder. Använd en parameter bestående av namnet på en folder i den aktuella foldern för att gå till den foldern. För att gå upp i folderstrukturen, använd **../**. <br/><br/>**Tabb-komplettering:** Så länge du vet början på en folders namn kan du börja skriva det, trycka på Tabb-tangenten, och Kommandotolken kompletterar med dess fulla namn.  Till exempel om du är i användarfoldern där Kommandotolken vanligtvis startar, börja skriva in **doc** och tryck på Tabb. Det borde nu komplettera till Documents. |
 |          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| COPY     | Kopierar en eller flera filer.  `COPY test.txt C:/`: Kopierar filen text.txt till foldern C:/.  `COPY *.txt C:/`.                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| COPY     | Kopierar en eller flera filer.  `COPY fil1.txt ./test2`: Kopierar filen **fil1.txt** till foldern **test2** som ligger i den aktuella foldern.                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | MOVE     | Flyttar filer. Använder samma syntax som Copy.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | MD       | Make Dir. Skapar en folder.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | CLS      | Rensar Kommandotolkens skärm.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
