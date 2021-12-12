@@ -38,4 +38,73 @@ Batch-skript har även möjligheten att använda sig av logik så som loopar och
 
 En annan fördel är att man kan sätta så att ett Batch-skript startar när datorn startar, om man till exempel vill starta några program i samband med att datorn startar.
 
-https://www.makeuseof.com/tag/batch-rename-mass-delete-files-windows/
+# Variabler
+
+Kommandot **SET** sätter en variabel som kan användas senare.
+
+## Syntax:
+
+`SET /A variable-name=value`.
+- **variable-name** är variabelns namn.
+- **value** är värdet som variabeln sätts till.
+- **/A** är en växel som används om värdet ska vara en siffra (integer) och kunna användas i beräkningar. Annars tolkas värdet som en mening (sträng). Observera att endast heltal kan användas.
+
+## Exempel:
+
+```
+set message=Hello World
+echo %message%
+```
+
+Detta sätter värdet message till värdet Hello World och skriver sedan ut det i konsolen med kommandot **ECHO**. Observera att du inte ska använda mellanslag runt likamed-tecknet.
+
+<Notice half="true">
+
+När du stöter på skript med flera rader, kör en rad i taget, eller skapa ett Batch-skript.
+
+</Notice>
+
+## Numeriska värden
+
+**/A**-växeln gör att vi kan sätta numeriska värden och utföra kalkylationer på dessa, så här:
+
+
+```
+SET /A a = 5 
+SET /A b = 10 
+SET /A c = %a% + %b% 
+echo %c%
+```
+
+Samtliga aritmiska operatorer fungerar (addition `+`, subtraktion `-`, multiplikation `*`, division `/`).
+
+<Notice>
+För icke-numeriska värden konkateneras värdena istället, så resultatet av exemplet ovan hade blivit 510 istället för 15.
+</Notice>
+
+## Hämta input från användaren
+Genom att använda växeln **/P** kan vi hämta in ett värde från användaren. Detta kallas att man "promptar" användaren för ett värde.
+
+### Syntax:
+`SET /P variable-name=PromptString`
+
+PromptString i det här fallet är ett meddelande som visas för användaren, och variable-name är variabeln som lagrar användarens input.
+
+### Exempel:
+
+```
+SET /P username=Enter your username: 
+ECHO Hello %username%!
+```
+
+Första raden promptar användaren för ett värde (i det här fallet ett användarnamn), och lagrar det i variabeln *username*.
+
+Andra raden skriver ut Hello följt av värdet på variabeln *username*, och avslutar med ett utropstecken.
+
+# Källor
+
+[Tutorial om Batch-skript](https://www.tutorialspoint.com/batch_script/index.htm)
+
+[Mer ingående om variabler](https://www.tutorialspoint.com/batch_script/batch_script_variables.htm)
+
+[Batch-rename folders and files](https://www.makeuseof.com/tag/batch-rename-mass-delete-files-windows/)

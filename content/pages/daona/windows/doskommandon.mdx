@@ -3,7 +3,7 @@ title: "Kommmandotolken och doskommandon"
 date: "2021-12-07"
 ---
 
-Microsoft Disk Operating System, mer känt som MS-DOS eller bara DOS, var standard i datorer på 80-talet och början av 90-talet. Det är ett helt textbaserat operativsystem, ofta kallad konsolbaserat operativsystem eftersom . Sista versionen av DOS kom år 2000, men DOS lever vidare i datorer som använder Windows i form av Kommandotolken (Command Prompt). Kommandona som används för att styra Kommandotolken kallas oftast för DOS-kommandon (DOS commands).
+Microsoft Disk Operating System, mer känt som MS-DOS eller bara DOS, var standard i datorer på 80-talet och början av 90-talet. Det är ett helt textbaserat operativsystem, ofta kallad konsolbaserat eller terminalbaserat operativsystem eftersom de bara visar en konsol/terminal - ett enkelt textbaserat användargränssnitt. Sista versionen av DOS kom år 2000, men DOS lever vidare i datorer som använder Windows i form av Kommandotolken (Command Prompt). Kommandona som används för att styra Kommandotolken kallas oftast för DOS-kommandon (DOS commands).
 
 # Starta Kommandotolken
 
@@ -15,26 +15,23 @@ Använd kortkommandot Windows+R (Windowstangenten och R) för att få upp Kör (
 
 # Directory (folders)
 
-Kommandotolken startar alltid med fokus i en folder. Det är från den foldern den kommer att utföra kommandon du vill köra, tills dess att du väljer att byta folder. Folderstrukturen kallas för Directory, och ser ut till exempel så här; `C:/projekt/daodac/`.
+Kommandotolken startar alltid med fokus i en folder. Det är från den foldern den kommer att utföra kommandon du vill köra, tills dess att du väljer att byta folder. Folderstrukturen kallas för Directory, och ser ut till exempel så här; `C:/projekt/daodac/`. Det kallas att Kommandotolken är aktiv i den foldern.
 
 Tänk det som att du använder Utforskaren och har en specifik folder öppen. Du kan se filer i den foldern, gå till andra foldrar, skapa, döpa om, ta bort, eller flytta filer, osv. Allt detta och mer kan du göra i Kommandotolken.
 
 # DOSkommandon
 
-Med DOSkommandon kan man göra det mest som vi annars kan göra med Utforskaren, den applikation vi använder för att se och använda filer.
+Med DOSkommandon kan man göra det mest som vi annars kan göra med Utforskaren, den applikation vi använder för att se och använda filer. Det finns även kommandon för andra användningsområden än filer, till exempel nätverksdiagnostik.
 
-Ett DOSkommando fungerar så att vi använder ett kommando följt av parametrar och växlar, samtliga separerade med mellanslag.
-Kommandot bestämmer vad för typ av sak vi ska göra (till exempel skapa en folder eller flytta en fil) och parametrarna bestämmer vad vi gör med det kommandot (till exempel folderns namn, filens namn, vart filen ska flyttas till).
-
-För att använda ett DOSkommmando skriver du kommandot i **Kommmandotolken**, följt av eventuella parametrar och/eller växlar. Kommandotolken tolkar dina kommandon (därav namnet), och för att den ska kunna göra det behöver du skriva "grammatiskt" korrekt. Det kallas att man följer syntaxen.
+För att använda ett DOSkommmando skriver du kommandot i **Kommmandotolken**, följt av eventuella **parametrar** och/eller **växlar**, separerade med mellanslag. Kommandotolken tolkar dina kommandon (därav namnet), och för att den ska kunna göra det behöver du skriva "grammatiskt" korrekt. Det kallas att man följer syntaxen.
 
 Alla kommandon är uppbyggda på följande sätt:
 
-- Kommandot som säger vad Kommandotolken ska göra. Detta är oftast ett nyckelord eller en förkortning av ett kommando.
-- En eller flera parametrar som säger vad och var kommandot ska utföras på och i.
-- Så kallade växlar, tillägg som ändrar kommandots funktion på något sätt.
+- Kommandot som säger vad Kommandotolken ska göra (till exempel skapa en folder eller flytta en fil). Detta är oftast ett nyckelord eller en förkortning av ett kommando.
+- En eller flera parametrar som säger vad och var kommandot ska utföras på och i (till exempel folderns namn, filens namn, vart filen ska flyttas till).
+- Så kallade växlar, tillägg som ändrar kommandots funktion på något sätt (till exempel att den ska överskriva filer utan bekräftelse).
 
-De ser ut till exempel så här:
+De ser ut så här:
 
 ```
 KOMMANDO parameter1 parameter2 /Växel1 /Växel2
@@ -61,29 +58,29 @@ Om du har VSCode installerat, testa kommandot `code` för att starta VSCode, ell
 
 ## Avbryt ett kommando
 
-En bra grej att kunna är hur man avbryter ett kommando som kanske har fastnat eller tar för lång tid. Använd kortkommmandot **CTRL+C** som avbryter det aktuella kommandot.
+En bra grej att kunna är hur man avbryter ett kommando som kanske har fastnat eller tar för lång tid. Använd kortkommmandot **CTRL+C** för att avbryta det aktuella kommandot.
 
 ## Kommandohistorik
 
-Använd piltangenten Upp för att se tidigare kommandon du använt.
+Använd piltangenten Upp för att se tidigare kommandon du använt. Använd piltangenten Ner för att gå framåt i kommandohistoriken.
 
 ## Lista på DOSkommandon
 
 OBS! Detta är inte en komplett lista varken i alla kommandon, eller alla växlar för kommandona och vad de kan göra. För att få en beskrivning av ett kommando så kan du köra kommandot med växeln **/?** vilket förklarar i mer detalj hur kommandot fungerar, eller så söker du efter informationen på internet.
 
-| Kommando | Beskrivning                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| HELP     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| DIR      | Directory. Visar den aktuella foldern som Kommandotolken är aktiv i.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| CD       | Står för Change Directory och används för att byta folder. Använd en parameter bestående av namnet på en folder i den aktuella foldern för att gå till den foldern. Ett tips är att använda Tabb-komplettering. Det fungerar på så sätt att så länge du vet början på en folders namn så kan du börja skriva det, trycka på Tabb, och Kommandotolken kompletterar med dess fulla namn.  Till exempel, om du är i användarfoldern där Kommandotolken vanligtvis startar, börja skriva in **doc** och tryck på Tabb. Det borde nu komplettera till Documents.  För att gå upp i folderstrukturen, använd **../** |
-|          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| COPY     | Kopierar en eller flera filer.  `COPY test.txt C:/`: Kopierar filen text.txt till foldern C:/.  `COPY *.txt C:/`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| MOVE     | Flyttar filer. Använder samma syntax som Copy.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| MD       | Make Dir. Skapar en folder.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| CLS      | Rensar Kommandotolkens skärm.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| DEL      | Delete. Tar bort en eller flera filer.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| REN      | Rename. Byter namn på en eller flera filer.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| ECHO     | Skriver ut ett meddelande i kommandotolken.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Kommando | Beskrivning                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| HELP     | Listar och beskriver vanliga kommandon. Bra om man glömt hur något stavas. HELP finns även som en växel till andra kommandon (**/?**) och förklarar i mer detalj hur kommandot fungerar. Till exempel `mkdir /?` skriver ut vad mkdir-kommandot gör, vilka växlar den har, och hur parametrarna fungerar.                                                                                                                                                                                                                                                                      |
+| DIR      | Directory. Visar den aktuella foldern som Kommandotolken är aktiv i och listar alla foldrar och filer som finns i den foldern.                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| CD       | Står för Change Directory och används för att byta folder. Använd en parameter bestående av namnet på en folder i den aktuella foldern för att gå till den foldern. För att gå upp i folderstrukturen, använd **../**. <br/><br/>**Tabb-komplettering:** Så länge du vet början på en folders namn kan du börja skriva det, trycka på Tabb-tangenten, och Kommandotolken kompletterar med dess fulla namn.  Till exempel om du är i användarfoldern där Kommandotolken vanligtvis startar, börja skriva in **doc** och tryck på Tabb. Det borde nu komplettera till Documents. |
+|          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| COPY     | Kopierar en eller flera filer.  `COPY test.txt C:/`: Kopierar filen text.txt till foldern C:/.  `COPY *.txt C:/`.                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| MOVE     | Flyttar filer. Använder samma syntax som Copy.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| MD       | Make Dir. Skapar en folder.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| CLS      | Rensar Kommandotolkens skärm.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| DEL      | Delete. Tar bort en eller flera filer.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| REN      | Rename. Byter namn på en eller flera filer.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| ECHO     | Skriver ut ett meddelande i kommandotolken.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
 
 # Pipes
@@ -92,71 +89,6 @@ Utan någon modifikation skriver det kommando vi valt ut ett meddelande i Komman
 - **|** Skickar vidare informationen till ett annat kommando. Används oftast med kommandot **MORE** som skriver ut informationen en rad i taget.
 - **>** Skriver ut till en textfil, så här; `ECHO hejsan! > hej.txt`.
 
-# Variabler
-
-Kommandot **SET** sätter en variabel som kan användas i senare skript.
-
-## Syntax:
-
-`SET /A variable-name=value`.
-- **variable-name** är variabelns namn.
-- **value** är värdet som variabeln sätts till.
-- **/A** är en växel som används om värdet måste vara en siffra, annars blir det en mening (sträng).
-
-## Exempel:
-
-```
-set message=Hello World
-echo %message%
-```
-
-Detta sätter värdet message till värdet Hello World och skriver sedan ut det i konsolen med kommandot **ECHO**. Observera att du inte ska använda mellanslag runt likamed-tecknet.
-
-<Notice half="true">
-
-När du stöter på skript med flera rader, kör en rad i taget, eller skapa ett Batch-skript.
-
-</Notice>
-
-## Numeriska värden
-
-**/A**-växeln gör att vi kan sätta numeriska värden och utföra kalkylationer på dessa, så här:
-
-
-```
-SET /A a = 5 
-SET /A b = 10 
-SET /A c = %a% + %b% 
-echo %c%
-```
-
-Samtliga aritmiska operatorer fungerar (addition `+`, subtraktion `-`, multiplikation `*`, division `/`).
-
-<Notice>
-För icke-numeriska värden konkateneras värdena istället, så resultatet av exemplet ovan hade blivit 510 istället för 15.
-</Notice>
-
-## Hämta input från användaren
-Genom att använda växeln **/P** kan vi hämta in ett värde från användaren. Detta kallas att man "promptar" användaren för ett värde.
-
-### Syntax:
-`SET /P variable-name=PromptString`
-
-PromptString i det här fallet är ett meddelande som visas för användaren, och variable-name är variabeln som lagrar användarens input.
-
-### Exempel:
-
-```
-SET /P username=Enter your username: 
-ECHO Hello %username%!
-```
-
-Första raden promptar användaren för ett värde (i det här fallet ett användarnamn), och lagrar det i variabeln *username*.
-
-Andra raden skriver ut Hello följt av värdet på variabeln *username*, och avslutar med ett utropstecken.
-
 # Källa:
 
-[https://en.wikipedia.org/wiki/List_of_DOS_commands](Wikipedias lista på DOS-kommandon).
-
-[Mer ingående om variabler](https://www.tutorialspoint.com/batch_script/batch_script_variables.htm)
+[Wikipedias lista på DOS-kommandon](https://en.wikipedia.org/wiki/List_of_DOS_commands)
