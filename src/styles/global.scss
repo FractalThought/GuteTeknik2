@@ -73,7 +73,6 @@ header {
   position: relative;
   overflow-y: scroll;
   overflow-x: hidden;
-  background: var(--gray--50);
   color: var(--primary--900);
   font-size: var(--base);
   padding: 1em;
@@ -295,7 +294,7 @@ main {
     padding-right: 1.25rem;
     padding-top: 1rem;
     padding-bottom: 3.5rem;
-    overflow-y: auto;
+    overflow-y: scroll;
     box-sizing: border-box;
   }
 
