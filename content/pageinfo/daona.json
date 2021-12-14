@@ -54,6 +54,37 @@
           "type": "project"
         }
       ]
+    },
+    {
+      "title": "Windows",
+      "link": "windows",
+      "pages": [
+        {
+          "title": "Verktyg",
+          "link": "verktyg",
+          "type": "lesson"
+        },
+        {
+          "title": "Kortkommandon",
+          "link": "kortkommandon",
+          "type": "lesson"
+        },
+        {
+          "title": "Doskommandon",
+          "link": "doskommandon",
+          "type": "lesson"
+        },
+        {
+          "title": "Nätverkskommandon",
+          "link": "natverkskommandon",
+          "type": "lesson"
+        },
+        {
+          "title": "Batchskript",
+          "link": "batchskript",
+          "type": "lesson"
+        }
+      ]
     }
   ]
 }
