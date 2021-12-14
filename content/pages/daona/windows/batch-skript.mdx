@@ -38,6 +38,23 @@ Batch-skript har även möjligheten att använda sig av logik så som loopar och
 
 En annan fördel är att man kan sätta så att ett Batch-skript startar när datorn startar, om man till exempel vill starta några program i samband med att datorn startar.
 
+# Viktigt att veta
+
+## ECHO OFF och @
+
+Standard för Bat-skript är att kommandona som körs skrivs ut i konsolen som om användaren hade skrivit in dem själv.
+
+Detta kan man stoppa genom att skriva till ett @-tecken innan kommandot (till exempel `@mkdir test`).
+
+Alternativt kan man använda kommandot ECHO OFF längst upp i skriptet vilket stänger av alla sådana meddelanden (ECHO ON sätter igång det igen). Kombinerar du dem, till `@echo off`, så kommer inte ens kommandot att stänga av meddelanden att skrivas ut.
+## PAUSE
+
+När man kör ett Batch-skript från en fil så kommer den köra igenom skriptet och sedan stänga ner fönstret. Därför är det vanligt att se **PAUSE** i slutet av en skriptfil vilket pausar skriptet i väntan på användarens input (press any key to continue).
+
+## Kommentar
+
+Om du börjar en rad med kommandot **REM** så kommer raden hanteras som en kommentar, alltså kommer den inte att göras. Detta kan vara bra om du vill testa att köra utan en rad men vill inte ta bort den helt. Du kan också använda kommentarer för att beskriva vad ditt skript gör.
+
 # Variabler
 
 Kommandot **SET** lagrar ett värde i minnet så den kan användas senare. Detta kallas att man skapar en variabel.
