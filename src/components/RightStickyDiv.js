@@ -4,6 +4,8 @@ import styled from "styled-components";
 const StickyDiv = styled.div`
   position: sticky;
   top: 0;
+  border-left: 3px solid var(--primary--200);
+  padding-left: 1em;
 
   h2 {
     margin-top: var(--lg3);
