@@ -34,16 +34,6 @@ body {
   text-rendering: optimizelegibility !important;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  letter-spacing: -1px;
-  line-height: 1.2;
-}
-
 ul,
 h1,
 h2,
@@ -51,7 +41,8 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 1.5rem;
+  margin-top: var(--lg5);
+  margin-bottom: var(--base);
 }
 
 h1,
