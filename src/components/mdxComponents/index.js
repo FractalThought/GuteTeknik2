@@ -20,7 +20,7 @@ import CodeContainer from "./CodeContainer";
 
 /* eslint-disable */
 export default {
-  //h1: TopicHeading,
+  h1: TopicHeading,
   TopicHeading: TopicHeading,
   // h2: props => <H as="h2" {...props} />,
   // h3: props => <H as="h3" {...props} />,

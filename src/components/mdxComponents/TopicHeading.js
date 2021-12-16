@@ -28,7 +28,19 @@ const Heading = styled.h1`
 const TopicHeading = ({ children }) => {
   const MainInfo = useContext(MainContext);
 
-  const link = children.replace(/ /g, "-");
+  console.log("TopicHeading");
+  console.log(children);
+  console.log(typeof children);
+
+  const linkString = String(children);
+  const link = linkString.replaceAll(" ", "-");
+
+  // let link = "";
+  // children.forEach(child => {
+  //   link = child.props.children.replaceAll(" ", "-");
+  // });
+
+  // const link = "mylink";
 
   const topicInfo = {
     name: children,
