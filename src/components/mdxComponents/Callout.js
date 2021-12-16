@@ -1,8 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { MDXProvider } from "@mdx-js/react";
-import code from "./code";
-
+import mdxComponents from "./index";
 /*
 
 Callout (default): Blue box, used for added info that would interrupt the normal flow of the document.
@@ -47,7 +46,7 @@ function Callout({ half, boxColor = "callout", children }) {
   boxColor = "--" + boxColor;
   return (
     <CalloutBox boxColor={boxColor} half={half}>
-      <MDXProvider components={code}>{children}</MDXProvider>
+      <MDXProvider components={mdxComponents}>{children}</MDXProvider>
     </CalloutBox>
   );
 }

@@ -1,8 +1,9 @@
-import React from "react"
-import styled, { css } from "styled-components"
-import { useState } from "react"
-import { MDXProvider } from "@mdx-js/react"
-import code from "./code"
+import React from "react";
+import styled, { css } from "styled-components";
+import { useState } from "react";
+import { MDXProvider } from "@mdx-js/react";
+// import code from "./code"
+import mdxComponents from "./index";
 
 const Hidden = styled.section`
   font-size: 16px;
@@ -26,7 +27,7 @@ const Hidden = styled.section`
   pre {
     margin-bottom: 0;
   }
-`
+`;
 
 const ShowButton = styled.button`
   font-size: 1rem;
@@ -51,18 +52,18 @@ const ShowButton = styled.button`
         background: darkred;
       }
     `};
-`
+`;
 
 function HiddenDiv({ isHidden, children }) {
-  return <>{!isHidden && <Hidden>{children}</Hidden>}</>
+  return <>{!isHidden && <Hidden>{children}</Hidden>}</>;
 }
 
 function PracticeContainer({ children, title }) {
   const show = () => {
-    setHidden(!isHidden)
-  }
+    setHidden(!isHidden);
+  };
 
-  const [isHidden, setHidden] = useState(true)
+  const [isHidden, setHidden] = useState(true);
 
   return (
     <>
@@ -70,10 +71,10 @@ function PracticeContainer({ children, title }) {
         {isHidden ? "Visa" : "Dölj"} {title || "lösning"}
       </ShowButton>
       <HiddenDiv isHidden={isHidden}>
-        <MDXProvider components={code}>{children}</MDXProvider>
+        <MDXProvider components={mdxComponents}>{children}</MDXProvider>
       </HiddenDiv>
     </>
-  )
+  );
 }
 
-export default PracticeContainer
+export default PracticeContainer;
