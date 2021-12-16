@@ -28,8 +28,6 @@ const Heading = styled.h1`
 const TopicHeading = ({ children }) => {
   const MainInfo = useContext(MainContext);
 
-  console.log("TopicHeading:");
-  console.log(children);
   const link = children.replace(/ /g, "-");
 
   const topicInfo = {
