@@ -85,9 +85,6 @@ function Sidebar({ url, currentPageData, showSidebar }) {
       const sideMenuElement = sideMenu.current;
       const topPos = activeLinkElement.offsetTop;
       sideMenuElement.scrollTop = topPos;
-      console.log(activeLinkElement);
-      console.log(sideMenuElement);
-      console.log(topPos);
     }
   }, []);
 
