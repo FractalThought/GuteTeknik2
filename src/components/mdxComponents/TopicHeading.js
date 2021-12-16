@@ -21,11 +21,17 @@ const Heading = styled.h1`
   }
 `;
 
-// TODO: Make it so when you hover over, an anchor link appears so you can link that specific thing
-// TODO: Let that anchor link be the ID
+// TODO: Make so all h1s are added
+// TODO: Make it so h2s are also added but as subheadings to h1s
+// TODO: Solve what happens if there is no h1 to the first h2
 
-const TopicHeading = ({ children, link }) => {
+const TopicHeading = ({ children }) => {
   const MainInfo = useContext(MainContext);
+
+  console.log("TopicHeading:");
+  console.log(children);
+  const link = children.replace(/ /g, "-");
+
   const topicInfo = {
     name: children,
     link: link,
