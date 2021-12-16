@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
+import CourseSelection from "../components/CourseSelection";
 
 function Header({ mainPage, sidebarUtility }) {
   const topPages = [
@@ -93,9 +94,10 @@ function Header({ mainPage, sidebarUtility }) {
         <input type="text" placeholder="Sök" />
       </div>
       <nav className="course-nav">
-        {topPages.map((page, key) => {
+        <CourseSelection topPages={topPages} currentLink={mainPage} />
+        {/* {topPages.map((page, key) => {
           return createHeaderLink(mainPage, page, key);
-        })}
+        })} */}
       </nav>
 
       <button className="show-menu-button" onClick={ToggleSidebar}>
