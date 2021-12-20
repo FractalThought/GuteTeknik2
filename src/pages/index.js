@@ -54,13 +54,13 @@ const ThisPage = ({ location }) => {
   });
 
   return (
-    <React.Fragment>
+    <div id="start-container">
       <section className="hero-section">
         <div className="hero__info">
-          <h1>GuteTeknik</h1>
+          <h1>Tektal</h1>
           <p>IT-kurserna på Gutegymnasiet</p>
         </div>
-        <MyImg src="techthings.png" alt="blob of tech symbols" width="250" />
+        <MyImg src="techthings.png" alt="blob of tech symbols" width="150" />
       </section>
 
       <section className="course-card-container">
@@ -73,7 +73,7 @@ const ThisPage = ({ location }) => {
           />
         ))}
       </section>
-    </React.Fragment>
+    </div>
   );
 };
 
