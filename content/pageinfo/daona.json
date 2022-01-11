@@ -60,11 +60,6 @@
       "link": "windows",
       "pages": [
         {
-          "title": "Verktyg",
-          "link": "verktyg",
-          "type": "lesson"
-        },
-        {
           "title": "Kortkommandon",
           "link": "kortkommandon",
           "type": "lesson"
