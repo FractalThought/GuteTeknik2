@@ -22,6 +22,32 @@
           "link": "unity"
         }
       ]
+    },
+    {
+      "title": "Objektorientering",
+      "link": "objektorientering",
+      "pages": [
+        {
+          "title": "Introduktion till objekt",
+          "link": "intro",
+          "type": "lesson"
+        },
+        {
+          "title": "Övningar",
+          "link": "ovningar",
+          "type": "lesson"
+        }
+      ],
+      "references": [
+        {
+          "title": "Begrepp",
+          "link": "begrepp"
+        },
+        {
+          "title": "Unity",
+          "link": "unity"
+        }
+      ]
     }
   ]
 }
