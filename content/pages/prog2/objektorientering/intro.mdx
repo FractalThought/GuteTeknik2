@@ -1,0 +1,103 @@
+---
+title: "Introduktion till objekt"
+date: "2020-11-16"
+headings: "Vad är ett objekt:vad-ar-ett-objekt|Användningsområde:anvandningsomrade|Objekt och arrayer:objekt-och-arrayer"
+---
+
+Vanligtvis när vi ska hålla värden för en entitet så har vi skapat separata värden, till exempel för en person så har vi name, age, occupation, children, och så vidare.
+
+Detta blir problematiskt om vi ska lägga till en ny entitet. Då behöver vi ha name2, age2, occupation2, children2, eller så behöver vi skapa arrayer för alla värden.
+
+Allra helst skulle vi nog hellre vilja gruppera värdena utifrån vilken person de tillhör, och för detta behöver vi använda **Objekt**.
+
+<span id="vad-ar-ett-objekt"></span>
+
+# Vad är ett objekt?
+Ett objekt är en konstruktion som kan hålla flera värden likt en array, men till skillnad från en array har varje värde ett specifikt namn istället för ett index, vilket gör det enklare att komma åt. Ett värde inuti ett objekt kallas för egenskap, eller property på engelska. En egenskap är alltså en koppling med namn (ibland kallat nyckel/key), och ett värde.
+
+Ett objekt är alltså en samling egenskaper.
+
+Objekt skapas så här:
+
+```js
+
+const person = {
+    name: "Felix", // Notera att vi använder kolon (:) och inte likamed-tecken (=)
+    age: 29, // Notera kommatecknet efter varje egenskap för att separera egenskaper
+    children: ["Oliver", "Erik"] // Eftersom det inte kommer någon egenskap efter denna så behövs inget kommatecken i slutet
+};
+
+```
+
+<Notice>Även fast vi använder `const` så kan vi lägga till och ta bort saker från objektet. Samma gäller arrayer. `const` hindrar endast att variabelns namn inte kan sättas till något annat, till exempel kan vi inte göra följande:
+
+```js
+const person = {
+    name = "Felix";
+}
+
+person = {
+    name = "Anna";
+};
+```
+
+</Notice>
+
+För att komma åt, och för att ändra ett specifikt värde, så använder man objektets namn, följt av en punkt, och sedan egenskapen, så här;
+
+```js
+
+console.log("Persons name is " + person.name); // Skriver ut personens namn
+person.age = 30; // Ändrar personens age till 30
+person.children.push("Erik"); // Lägger till Erik till children-arrayen i person-objektet
+
+```
+
+Egenskaper kan också läggas till "on-the-fly" genom att namnge den nya egenskapen och ge den ett värde;
+
+```js
+
+person.occupation = "Teacher"; // Notera att när ett attribut skapas på det här sättet så används likamed-tecken.
+
+```
+
+<span id="anvandningsomrade"></span>
+
+# Användningsområde
+
+Objekt används i väldigt mycket i JavaScript. Till exempel i DOM-manipulering så är varje element ett objekt, som innehåller egenskaper så som innerText. Dessutom används objekt ofta när data ska hanteras.
+
+<Notice>Något att notera är att objekt och arrayer inte kopieras. Om du skapar ett objekt och sedan sätter ett annat värde till det objektet så kommer de referera till samma objekt, och ändringar du gör ändras för båda referenserna till detta objekt. För att kopiera ett objekt behöver du använda till exempel [Object.assign()-metoden](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign).</Notice>
+
+<span id="objekt-och-arrayer"></span>
+
+# Objekt och arrayer
+Objekt kan ha arrayer som egenskaper, och objekt kan existera i arrayer.
+
+```js
+
+// Objekt i arrayer
+const itemsInStore = [
+    {
+        name = "Godispåse",
+        cost = 20
+    },
+    {
+        name = "Chokladkaka",
+        cost = 15
+    }
+];
+
+const store = {
+    name = "Copa Maxi",
+    adress = "Broväg 25",
+    items: itemsInStore // man kan sätta egenskaper till existerande variabler
+}
+
+```
+
+<Notice>Notera i ovanstående exempel så sätts store.items till arrayen itemsInStore. Lägger vi till saker till itemsInStore, så kommer store.items också att innehålla dessa saker.</Notice>
+
+<!--
+Kanske ska ha med vanliga fel som kommer med objekt?
+-->
