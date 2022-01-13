@@ -3,8 +3,8 @@ import ChapterPage from "../../layout/ChapterPage";
 
 const ThisPage = ({ location }) => {
   return (
-    <ChapterPage url={location.pathname} course="webb1" chapter="intro">
-      <p>I det här kapitlet introducerar vi webbutveckling.</p>
+    <ChapterPage url={location.pathname} course="webb1" chapter="övningar">
+      <p>Här är alla introduktionsövningar samlade.</p>
     </ChapterPage>
   );
 };

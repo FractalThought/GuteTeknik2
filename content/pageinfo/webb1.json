@@ -3,127 +3,19 @@
   "link": "webb1",
   "chapters": [
     {
-      "title": "Introduktion",
-      "link": "intro",
+      "title": "Övningar",
+      "link": "övningar",
       "pages": [
         {
-          "title": "Introduktionsprojektet",
-          "link": "introprojektet",
-          "type": "lesson"
-        },
-        {
-          "title": "1. HTML",
-          "link": "html",
-          "type": "lesson"
-        },
-        {
-          "title": "2. CSS",
-          "link": "css",
-          "type": "lesson"
-        },
-        {
-          "title": "3. Layout",
-          "link": "layout",
-          "type": "lesson"
-        },
-        {
-          "title": "4. Reflektion",
-          "link": "reflektion",
-          "type": "lesson"
-        }
-        ,
-        {
-          "title": "Flexbox",
-          "link": "flexbox",
-          "type": "lesson"
-        }
-        ,
-        {
-          "title": "Flexbox galleri",
-          "link": "flexbox_galleri",
+          "title": "Introduktion",
+          "link": "intro",
           "type": "exercise"
         }
       ],
       "references": [
         {
-          "title": "Kursintro",
-          "link": "kursintro"
-        },
-        {
-          "title": "Listor",
-          "link": "listor"
-        },
-        {
-          "title": "Tabeller",
-          "link": "tabeller"
-        },
-        {
-          "title": "Introduktion till CSS",
-          "link": "css"
-        },
-        {
-          "title": "CSS Box Model",
-          "link": "cssboxmodel"
-        },
-        {
-          "title": "CSS Grundläggande koncept",
-          "link": "css_concepts"
-        },
-        {
-          "title": "Layout",
-          "link": "layout"
-        },
-        {
-          "title": "FTP",
-          "link": "ftp"
-        }
-      ]
-    },
-    {
-      "title": "Etik och lagar",
-      "link": "etik",
-      "pages": [
-        {
-          "title": "Etik och lagar",
-          "link": "etik_och_lagar",
-          "type": "lesson"
-        },
-        {
-          "title": "Etik och lagar uppgift",
-          "link": "etik_och_lagar_uppgift",
-          "type": "exercise"
-        }
-      ]
-    },
-    {
-      "title": "Teori",
-      "link": "teori",
-      "pages": [
-        {
-          "title": "Tidiga historia",
-          "link": "tidig-historia",
-          "type": "lesson"
-        },
-        {
-          "title": "Sena historia",
-          "link": "sen-historia",
-          "type": "lesson"
-        },
-        {
-          "title": "Internets teknik",
-          "link": "internets-teknik",
-          "type": "lesson"
-        }
-      ]
-    },
-    {
-      "title": "Slutprojektet",
-      "link": "slutprojektet",
-      "pages": [
-        {
-          "title": "Introduktion",
-          "link": "slutprojektet",
-          "type": "lesson"
+          "title": "HTML",
+          "link": "html"
         }
       ]
     }
