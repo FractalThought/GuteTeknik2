@@ -4,8 +4,33 @@ date: "2017-08-10"
 heading: "Om kursen"
 ---
 
-Syntax
+# HTML
+HTML står för HyperText Markup Language och är ett språk för att skriva instruktioner för hur en hemsida och dess innehåll ska visas. HTML är ett Markup-språk som innebär att den ger struktur för hur information ska presenteras och delar in informationen. Detta är skillnad från ett programmeringsspråk, till exempel JavaScript, som ger instruktioner till datorn om hur informationen ska hanteras och manipuleras. Mer om HTML hittar ni på [Mozilla Developer Network (MDN)](https://developer.mozilla.org/sv-SE/docs/Web/HTML).
 
-HTML
+HTML fungerar så att webbläsaren tolkar instruktionerna och läser av taggarna som omger informationen, och presenterar den för användaren utifrån vilka taggar som användes. Till exempel om texten `Hello world!` är omgivet av taggen `<h1>` (så här; `<h1>Hello world!</h1>`), så kommer den presentera texten som en huvudrubrik (heading 1, alltså högsta/största rubriken en sida kan ha).
 
-CSS
+# W3C (World Wide Web Consortium)
+W3C (World Wide Web Consortium)är den organisation som normalt skapar rekommenderade standarder för webbtekniker.
+
+# Syntax
+Syntax är de regler för hur ett programmeringsspråk är uppbyggt. Det är de ord, fraser, kontexter, och tecken som en människa behöver använda för att skriva koden.
+
+HTML använder så kallade taggar för att strukturera upp innehållet på webbsidan. Vi skiljer alltså innehållet (text, bilder), från strukturen (taggar).
+
+Ett HTML-dokument kan se ut så här:
+
+```html{numberLines: true}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Dokument-titel</title>
+  </head>
+  <body>
+    <h1>Detta är en rubrik</h1>
+    <p>Detta är en paragraf.</p>
+  </body>
+</html>
+```
