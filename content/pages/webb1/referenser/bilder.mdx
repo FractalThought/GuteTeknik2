@@ -1,32 +1,45 @@
 ---
-title: "HTML"
+title: "Bilder"
 date: "2022-01-13"
 ---
 
-Behöver följande referenser:
+För att länka in en bild till en hemsida behöver du använda taggen `<img>` och attributet `src`.
 
-Hur man skapar nytt dokument (inklusive bilder/gif)
+<Notice half="true">
 
-# Introduktion till HTML
+Till skillnad från många andra taggar behöver img-taggen inte stängas.
 
-- Grundläggande taggar (h1, p, h2, h3)
-- Strong, em (inkapsling)
+</Notice>
 
-# Länkar
-- Flera dokument och länka mellan dem
-- Inklusive introduktion till attribut till taggar
+# Hur man lägger in en bild
 
-# Bilder
+Skriv in img-taggen med src-attributet länkat till bilden du vill använda. Så här;
 
-Nästa steg:
-Skapa en sida specifikt om något (lägga in information)
+```html
 
-# CSS
+<img src="din_bild.png">
 
-# Layout och flexbox
+```
 
-Steg 3: CSS för att stila
+# Var är filen?
 
-Steg 4: Layout och flexbox
+Attributet `src` bestämmer vilken bild som ska visas, och fungerar på liknande sätt som attributet `href` gör i en a-tagg (länk).
 
-Steg 5: Egen sida igen
+Om sidan ligger på en server någonstans behöver
+# Hur stor är filen?
+
+Utan några andra attribut utöver `src` kommer bilden bli lika stor som dess upplösning i pixlar.
+
+![Kolla bildens storlek](check_image_size.gif)
+
+För att styra bildens storlek, använd attributen `width` och/eller `height` för att styra bredden, respektive höjden.
+
+# Alt för tillgänglighet
+
+Enligt specifikationen för HTML ska img-taggar alltid innehålla ett `alt` vars värde beskriver vad som finns på bilden.
+
+Detta är för att göra bildens innehåll tillgängligt för alla, då detta visas istället för bilden om bilden inte laddas, och beskrivningen kan användas av användare som har nedsatt syn och använder ett tillgänglighetsverktyg som läser upp beskrivningen.
+
+Alt-attributet behöver inte innehålla "bild av" eller liknande, detta brukar läggas till automatiskt.
+
+Däremot bör du ge en så bra beskrivning som möjligt. Har du till exempel en bild på en hund bör du beskriva vad hunden gör (tex "*en svart hund springer*") om det är applicerbart.
