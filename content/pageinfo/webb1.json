@@ -27,6 +27,11 @@
           "title": "Nytt dokument",
           "link": "dokument",
           "type": "lesson"
+        },
+        {
+          "title": "Bilder",
+          "link": "bilder",
+          "type": "lesson"
         }
       ],
       "references": [

@@ -5,7 +5,7 @@ date: "2022-01-13"
 
 För att länka in en bild till en hemsida behöver du använda taggen `<img>` och attributet `src`.
 
-<Notice half="true">
+<Notice>
 
 Till skillnad från många andra taggar behöver img-taggen inte stängas.
 
@@ -21,18 +21,32 @@ Skriv in img-taggen med src-attributet länkat till bilden du vill använda. Så
 
 ```
 
-# Var är filen?
+# Var är bilden?
 
 Attributet `src` bestämmer vilken bild som ska visas, och fungerar på liknande sätt som attributet `href` gör i en a-tagg (länk).
 
-Om sidan ligger på en server någonstans behöver
-# Hur stor är filen?
+Om bilden ligger på en server någonstans behöver du skriva in adressen till den, så här; `src="http://www.example.com/their_image.jpg"`.
 
-Utan några andra attribut utöver `src` kommer bilden bli lika stor som dess upplösning i pixlar.
+Om bilden ligger på din hemsida behöver du istället ange var bilden ligger i relation till var html-dokumentet är, så här; `src="my_image.png"`.
+
+Håll dessutom koll på bildens filtyp - är det en .png, en .jpg, eller någon annan typ av bild? Filändelsen (tex .png) behöver vara med i src-attributet. Filtypen visas i VSCode, men du kan även högerklicka på filen i utforskaren och välja Egenskaper för att se filändelsen.
+# Hur stor är bilden?
+
+Utan några andra attribut utöver `src` kommer bilden bli lika stor som dess upplösning i pixlar. Du kan ta reda på denna storleken genom att högerklicka på bilden i utforskaren, välja Egenskaper och sedan gå till fliken Information där storleken står.
 
 ![Kolla bildens storlek](check_image_size.gif)
 
-För att styra bildens storlek, använd attributen `width` och/eller `height` för att styra bredden, respektive höjden.
+För att styra bildens storlek, använd attributen `width` och/eller `height` för att styra bredden, respektive höjden på hur bilden visas.
+
+Storleken skriver du i pixlar och anges i ett värde. `width="300"` gör alltså att bilden visas som 300 pixlar bred.
+
+Sätter du bara antingen bredden eller höjden, så behåller bilden sitt bildförhållande (aspect ratio). Om du däremot anger både bredden och höjden finns risken att bilden blir squishad eller stretchad.
+
+<Notice>
+
+Attributen width och height ändrar bara hur bilden visas på sidan, inte storleken på den ursprungliga bilden. Det är bäst att ha ursprungliga bilden så nära i storlek som den ska visas. Är ursprungliga bilden mindre än den visas blir bilden grynig, är ursprungliga bilden för stor blir filstorleken onödigt stor vilket påverkar hur snabbt den laddas in.
+
+</Notice>
 
 # Alt för tillgänglighet
 
@@ -43,3 +57,29 @@ Detta är för att göra bildens innehåll tillgängligt för alla, då detta vi
 Alt-attributet behöver inte innehålla "bild av" eller liknande, detta brukar läggas till automatiskt.
 
 Däremot bör du ge en så bra beskrivning som möjligt. Har du till exempel en bild på en hund bör du beskriva vad hunden gör (tex "*en svart hund springer*") om det är applicerbart.
+
+# Exempel
+
+## Lokal bild på en tomte vars höjd är satt till 200 pixlar.
+
+```html
+
+<img src="tomte.png" alt="En tomte som sitter vid en eld" height="200">
+
+```
+
+## Bild på berget Fuji, hämtat från en annan hemsida, vars bredd är satt till 300 pixlar.
+
+```html
+
+<img src="http://www.example.com/fuji.jpg" alt="Berget Fuji" width="300">
+
+```
+
+## Lokal profilbild som ligger i foldern img, vars höjd och bredd är satt till 150 pixlar.
+
+```html
+
+<img src="img/bild_pa_mig.jpg" alt="Profilbild på mig" width="150" height="150">
+
+```
