@@ -18,6 +18,23 @@
           "link": "html"
         }
       ]
+    },
+    {
+      "title": "Referenser",
+      "link": "referenser",
+      "pages": [
+        {
+          "title": "Nytt dokument",
+          "link": "dokument",
+          "type": "lesson"
+        }
+      ],
+      "references": [
+        {
+          "title": "HTML",
+          "link": "html"
+        }
+      ]
     }
   ]
 }
