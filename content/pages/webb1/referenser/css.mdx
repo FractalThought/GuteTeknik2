@@ -3,6 +3,37 @@ title: "CSS"
 date: "2022-01-15"
 ---
 
+CSS står för Cascading Style Sheet och är ett sätt för oss att ändra utseendet på vår HTML.
+
+HTML bestämmer hur innehållet ska struktureras och hur de olika delarna av innehållet ska presenteras. CSS däremot bestämmer hur sidan ska se ut.
+
+# Selektorer och deklarationer bildar regler
+
+CSS bygger på att vi skapar regler som styr utseendet på HTML-elementen vi skapat på sidan.
+
+En CSS-regel består av två saker; en eller flera **Selektorer** och en eller flera **Deklarationer**.
+
+## Selektorer
+
+*Selektorer* bestämmer (väljer) **vilka** element vars utseende ska ändras.
+
+Vi kan till exempel bestämma att alla paragraf-element ska ha grön text, eller att en specifik rubrik ska ha ett annat typsnitt än andra.
+
+Man kan tänka det lite som att en selektor söker efter HTML-element som matchar deras beskrivning, och bestämmer över alla som matchar den beskrivningen.
+
+En CSS-regel kan ha flera selektorer, och betyder att regeln gäller för alla element som matchar någon av selektorerna.
+
+## Deklarationer
+
+En *deklaration* bestämmer **vad** i utseendet som ska ändras och **hur** det ska ändras.
+
+Deklarationer är i sin tur uppdelad i två delar; *Egenskap* och *Värde*.
+
+**Egenskapen** är **vad**, och är till exempel textfärgen (*color*) och textstorleken (*font-size*), eller marginalen (utrymmet) från andra element.
+
+**Värdet** är vad egenskapen ska sättas till. Vad detta är, är baserat på egenskapen - för textfärgen kan vi till exempel använda en av 140 fördefinerade webbfärgerna eller ett hexvärde som bestämmer färgen, men för textstorleken och marginalen använder vi ett mått i en bestämd enhet, till exempel pixlar (px), procent (%), eller *em* (ett typografiskt mått som är relativ till typsnittets storlek - i webben är 1em=16px).
+
+# Exempel
 ### HTML
 
 ```html
@@ -28,14 +59,15 @@ body {
 <p>Lorem ipsum dolor sit amet.</p>
 </div>
 
-## Cascading (kaskadar)
+# Cascading
+
+*(kaskadar)*
 
 _**Kaskad**: Något faller ner från en nivå till en nivå som ligger längre ner_
 
 - Regler från olika källor kombineras
 - Deklarationer från en stilmall kan överskrivas av en senare stilmall
 
----
 
 ## Olika nivåer av stilmallar
 
@@ -43,7 +75,6 @@ _**Kaskad**: Något faller ner från en nivå till en nivå som ligger längre n
 2. Användarens stilmall
 3. Författarens stilmall
 
----
 
 ```css
 body {
@@ -92,8 +123,8 @@ h2 {
 
 ---
 
-## Specificity (specifikhet, specificitet)
+# Specificity
 
----
+*(specifikhet, specificitet)*
 
 Specificitet är ordningen som **specificerar** vilken regel som har inflytande (påverkar stilen). Det som är mer specifikt har större inflytande än det som är mindre specifikt (_mer generell_).
