@@ -1,0 +1,189 @@
+---
+title: "CSS: Abstraktionsexempel"
+date: "2022-01-15"
+---
+
+Följande är ett abstraktionsexempel på hur CSS fungerar. Vissa delar är inte riktig kod utan används för att förklara konceptet.
+
+# Beskrivning
+
+Du är en person med olika intressen, som bor på Gotland, som ligger i Sverige.
+
+För att benämna dig så kan vi beskriva dig med/som:
+
+- **Boende på Gotland** (parent-element)
+- **Boende i Sverige** (parent-parent-element)
+- **Boende på Jorden** (parent-parent-parent-element)
+- **Människa** (element)
+
+---
+
+# Uttryckt i "HTML"
+
+```html
+<earth>
+  <sweden>
+    <gotland>
+      <human>
+        Felix
+      </human>
+    </gotland>
+  </sweden>
+</earth>
+```
+
+---
+
+```html
+<earth>
+  <sweden>
+    <gotland>
+      <human>
+        Felix
+      </human>
+    </gotland>
+  </sweden>
+</earth>
+```
+
+```css
+earth sweden gotland {
+  /* Stila gotland-element,
+  som ligger i sweden-element,
+  som ligger i earth-element */
+}
+```
+
+```css
+sweden {
+  /* Stila sweden-elementet */
+}
+```
+
+```css
+gotland human {
+  /* Alla human-element i Gotland-element */
+}
+```
+
+---
+
+```css
+earth sweden gotland {
+  background: lightgray;
+  color: green;
+  font-weight: bold;
+}
+```
+
+```css
+sweden {
+  background: blue;
+  color: yellow;
+}
+```
+
+```css
+gotland human {
+  color: red;
+}
+```
+
+```css
+human {
+  color: yellow;
+}
+```
+
+---
+
+
+```css
+earth sweden gotland {
+  background: lightgray;
+  color: green;
+  font-weight: bold;
+}
+```
+
+```css
+sweden {
+  background: blue;
+  color: yellow;
+}
+```
+
+```css
+gotland human {
+  color: red;
+}
+```
+
+```css
+human {
+  color: yellow;
+}
+```
+
+# Mer specifik selektion
+
+Men om vi har fler människor på Gotland då?
+
+```html
+<gotland>
+  <human>Felix</human>
+  <human>Anna</human>
+  <human>Oliver</human>
+  <human>Erik</human>
+</gotland>
+```
+
+Du är mer än bara var du bor, och fler som delar 
+
+Vi kan välja dig utifrån;
+
+- **Ditt namn/titel** (id)
+- **Intressen du har** (class)
+
+```html
+<gotland>
+  <human id="dad" class="gamer coder">Felix</human>
+  <human id="mom" class="gamer">Anna</human>
+  <human>Oliver</human>
+  <human>Erik</human>
+</gotland>
+
+<stockholm>
+  <human class="gamer">Robert</human>
+</stockholm>
+```
+
+<Notice half="true">  
+
+  ID måste vara unikt - endast ett element på sidan kan ha ett specifikt ID.
+
+  Flera element kan ha samma Klass, och ett element kan ha flera Klasser (separerat med ett mellanslag).  
+
+</Notice>
+
+I CSS kan du då till exempel...
+
+```css
+#dad {
+  /* ... Stila elementet som har IDt dad */
+}
+```
+
+```css
+.gamer {
+  /* ... Alla element som har klassen gamer */
+}
+```
+
+```css
+
+gotland > .gamer {
+  /* ... Alla element i gotland som har klassen gamer */
+}
+
+```
