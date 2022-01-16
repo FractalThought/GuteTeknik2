@@ -143,7 +143,11 @@ https://mdxjs.com/getting-started/#mdxprovider
               <MDXRenderer>{page.body}</MDXRenderer>
             </MDXProvider>
             <ClearDiv></ClearDiv>
-            <AdjacentLinks pageInfo={pageInfo} />
+            <AdjacentLinks
+              next={page.frontmatter.next}
+              previous={page.frontmatter.previous}
+              pageInfo={pageInfo}
+            />
           </div>
         </main>
         <aside>
