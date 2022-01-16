@@ -8,6 +8,7 @@ import mdxComponents from "../components/mdxComponents";
 import styled from "styled-components";
 import TableOfContent from "../components/TableOfContent";
 import RightStickyDiv from "../components/RightStickyDiv";
+import AdjacentLinks from "../components/AdjacentLinks";
 
 const ClearDiv = styled.div`
   clear: both;
@@ -28,7 +29,9 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
-        headings
+        previous
+        next
+        related
       }
     }
     allMdx(filter: { fields: { collection: { eq: "pages" } } }) {
@@ -41,7 +44,9 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            headings
+            previous
+            next
+            related
           }
         }
       }
@@ -138,6 +143,7 @@ https://mdxjs.com/getting-started/#mdxprovider
               <MDXRenderer>{page.body}</MDXRenderer>
             </MDXProvider>
             <ClearDiv></ClearDiv>
+            <AdjacentLinks pageInfo={pageInfo} />
           </div>
         </main>
         <aside>
