@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 import Container from "../components/Container";
 import ChapterMenu from "../components/ChapterMenu";
+import useUrlData from "../components/hooks/useUrlData";
 
 function ChapterPage({ course, chapter, children, url }) {
   const data = useStaticQuery(graphql`
@@ -52,12 +53,7 @@ function ChapterPage({ course, chapter, children, url }) {
       return chapterObject.link === chapter;
     })[0];
 
-  let urlData = null;
-
-  if (typeof url !== "undefined" && url != null) {
-    const urlArray = url.split("/");
-    urlData = urlArray.filter(data => data !== "");
-  }
+  let urlData = useUrlData(url);
 
   return (
     <Container url={url} pageInfo={pageInfo} pageTitle={chapterInfo.title}>

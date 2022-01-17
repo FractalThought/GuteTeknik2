@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import Header from "../layout/Header";
 import Sidebar from "../layout/Sidebar";
 import { MainContext, mainInfo } from "./hooks/MainContext";
+import useUrlData from "./hooks/useUrlData";
 
 /*
 
@@ -14,12 +15,7 @@ Thus each page has the header and side-menu, but the main area is controlled by 
 
 function Container({ url, pageInfo, pageTitle, children }) {
   // Use string split for url
-  let urlData = null;
-
-  if (typeof url !== "undefined" && url != null) {
-    const urlArray = url.split("/");
-    urlData = urlArray.filter(data => data !== "");
-  }
+  let urlData = useUrlData(url);
 
   const mainPage = urlData[0];
 
