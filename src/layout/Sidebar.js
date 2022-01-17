@@ -23,8 +23,8 @@ function extractUrlData(url) {
   return { course: currentCourse, chapter: currentChapter, page: currentPage };
 }
 
-function Sidebar({ url, currentPageData, showSidebar }) {
-  const urlData = extractUrlData(url);
+function Sidebar({ urlArray, currentPageData, showSidebar }) {
+  const urlData = extractUrlData(urlArray);
 
   // const projects = useProjects(currentPageData)
   // const projectData = { title: "Projekt", link: null, pages: projects }

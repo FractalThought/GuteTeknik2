@@ -21,7 +21,7 @@ function Container({ url, pageInfo, pageTitle, children }) {
 
   const currentPageData = pageInfo.filter(pageData => {
     return pageData.link === mainPage;
-  })[0];
+  })[0]; // Extracts the active pageInfo.json
 
   useEffect(() => {
     document.title = `${currentPageData.name} ${
@@ -44,7 +44,7 @@ function Container({ url, pageInfo, pageTitle, children }) {
           <div className="layout-container">
             <Sidebar
               showSidebar={showSidebar}
-              url={urlData}
+              urlArray={urlData}
               currentPageData={currentPageData}
             />
             <div className="content-wrapper">
