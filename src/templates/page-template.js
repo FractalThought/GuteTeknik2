@@ -34,23 +34,6 @@ export const pageQuery = graphql`
         related
       }
     }
-    allMdx(filter: { fields: { collection: { eq: "pages" } } }) {
-      edges {
-        node {
-          body
-          fields {
-            slug
-            id
-          }
-          frontmatter {
-            title
-            previous
-            next
-            related
-          }
-        }
-      }
-    }
     allPageinfoJson {
       edges {
         node {
@@ -75,9 +58,8 @@ export const pageQuery = graphql`
   }
 `;
 
-export default function PageTemplate({ pageContext, data, location }) {
+export default function PageTemplate({ pageContext, data }) {
   const page = data.mdx;
-  const allInfo = data.allMdx.edges;
   const {
     breadcrumb: { crumbs },
   } = pageContext;
@@ -93,13 +75,7 @@ export default function PageTemplate({ pageContext, data, location }) {
     return page.node;
   });
 
-  let listOfContent = undefined;
-  if (
-    page.frontmatter.headings !== undefined &&
-    page.frontmatter.headings !== null
-  ) {
-    listOfContent = page.frontmatter.headings.split("|");
-  }
+  // page.frontmatter.attribute
 
   /*
   TODO: Need to get the children from the MDXProvider "after" it has been rendered
@@ -127,10 +103,8 @@ https://mdxjs.com/getting-started/#mdxprovider
   return (
     <Container
       url={page.fields.slug}
-      pages={allInfo}
       pageInfo={pageInfo}
       crumbData={crumbData}
-      listOfContent={listOfContent}
       pageTitle={page.frontmatter.title}
     >
       <div className="content-container">
