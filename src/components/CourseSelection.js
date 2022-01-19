@@ -40,21 +40,17 @@ function CourseItem({ topPages, currentLink }) {
 
   return (
     <nav>
-      <Selection id="course-selection" onChange={e => handleCourseChange(e)}>
+      <Selection
+        id="course-selection"
+        defaultValue={currentLink}
+        onChange={e => handleCourseChange(e)}
+      >
         {topPages.map((topPage, key) => {
-          if (currentLink === topPage.link) {
-            return (
-              <option key={key} value={topPage.link} selected>
-                {topPage.name}
-              </option>
-            );
-          } else {
-            return (
-              <option key={key} value={topPage.link}>
-                {topPage.name}
-              </option>
-            );
-          }
+          return (
+            <option key={key} value={topPage.link}>
+              {topPage.name}
+            </option>
+          );
         })}
       </Selection>
     </nav>
