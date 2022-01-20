@@ -10,6 +10,11 @@
           "title": "Introduktion",
           "link": "intro",
           "type": "exercise"
+        },
+        {
+          "title": "Bilder",
+          "link": "bilder",
+          "type": "exercise"
         }
       ],
       "references": [

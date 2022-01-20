@@ -1,6 +1,6 @@
 ---
 title: "Bildövningar"
-date: "2022-01-13"
+date: "2022-01-20"
 ---
 
 Dessa övningar har som syfte att öva dig på att använda bilder i HTML.
@@ -11,6 +11,10 @@ Skapa ett HTML-dokument som heter `bilder.html`. Lägg in grunden till sidan på
 
 # 1: Hitta bilder
 
+Du ska ha minst två bilder på din hemsida. En av dessa behöver du endast ha länken till, den andra ska du ha lokalt sparad på din dator.
+
+## Bildlänk
+
 Hitta en bild på internet som du kan länka till direkt. Du behöver alltså en webbadress som går direkt till en bildfil (tex .jpg, .png, eller annan filändelse).
 
 För att hitta länken till en sådan bild, gör så här:
@@ -20,43 +24,52 @@ För att hitta länken till en sådan bild, gör så här:
 
 Bilden borde nu ha öppnats i en ny flik, och i adressfältet hittar du adressen till den bilden.
 
-Ladda ner en bild eller ta en bild du själv tagit/skapat eller på annat sätt äger och lägg den i samma folder som ditt html-dokument.
+## Lokal bild
+
+Ladda ner en bild eller ta en bild du själv tagit/skapat eller på annat sätt äger och lägg den i samma folder som ditt HTML-dokument på datorn. Tänk på att bildens filnamn inte ska ha mellanslag, och undvik tecken (tex !?%&#) och åäö, och du kan med fördel döpa om bilden till något beskrivande om bilden för att göra det lättare för dig själv.
 
 <Notice>
 
-Bilder på internet är generellt skyddande under diverse upphovsrättslagar. När du ska publicera en hemsida behöver du vanligtvis rättigheter för att använda bilderna. För dessa uppgifter, eftersom det är i utbildningssyfte och sidorna inte ska publiceras, så behöver ni inte skaffa rättigheter till bilderna.
+Bilder på internet är generellt skyddande under diverse upphovsrättslagar. När du ska publicera en hemsida behöver du vanligtvis rättigheter för att använda bilderna. För dessa uppgifter, eftersom det är i utbildningssyfte och sidorna inte ska publiceras, behöver ni inte skaffa rättigheter till bilderna.
 
 </Notice>
 
 # 2: Lägg in bilder
 
-En extern, en på sidan
+Du ska nu länka in bilder på din hemsida med `<img>`-taggen.
 
-En i en annan storlek
+## Gör följande: 
 
-En där både width och height är satta
+1. För bilden du endast har via länk, skriv in länken i `src`-attributet.
+2. För bilden du har lokalt, skriv dess namn i `src`-attributet (VSCode kommer hjälpa dig hitta rätt). Kom ihåg att ta med filändelsen - den visas i utforskaren i VSCode.
+3. Lägg in den externa bilden en gång till, och sätt dess bredd till 200.
+4. Lägg in den lokala bilden en gång till, och sätt dess bredd och höjd så att bilden som visas blir större än 
+5. Lägg in den lokala bilden en sista gång, och sätt dess bredd och höjd så att bilden som visas får ett annat bildförhållande (tex squishad eller stretchad).
+6. Slutligen, gör så att en av dina bilder på sidan blir en länk till den bilden.
 
-Samtliga ska ha en alt-text
+<Notice>
 
-En som ligger i en a-tagg (länk)
+Tänk på att alla bilder du lägger in måste ha en beskrivande text i sitt `alt`-attribut. Detta kan stå på svenska eller engelska.
+
+</Notice>
 
 # 3: Läs och skriv om bilder
 
-Du ska nu hitta information om följande:
+Som sista grej ska du hitta information om, och svara på följande frågor om bilder på webben:
 - Vad innebär det att man anpassar/optimerar en bild för användning på webben?
 - Vad gör alt-attributet i en img-tagg, och varför måste den vara med?
-- 
+- Vad betyder bildförhållande (aspect ratio)?
 
-Du ska svara på frågorna i dokumentet, använd en lämplig tagg för att skriva innehållet.
+Du svarar på frågorna i dokumentet, och använder lämpliga taggar för att skriva innehållet.
 
-Bonus: Länka in dina källor (varifrån du hittat informationen)
+**Bonus: Länka in dina källor (varifrån du hittat informationen).**
 
 # Inlämning
 
-När du är klar, ladda upp båda HTML-filerna till kursens portfolio på SchoolSoft.
+När du är klar, ladda upp HTML-dokumentet till kursens portfolio på SchoolSoft.
 
 # Vad kommer sen?
 
-Under de kommande lektionerna kommer vi arbeta med **bilder**, introducera **CSS**, och arbeta med **layout** med hjälp av **Flexbox**.
+Under de kommande lektionerna kommer vi arbeta mer med **bilder**, introducera **CSS**, och arbeta med **layout** med hjälp av **Flexbox**.
 
-Till nästa lektion, läsa på om hur bilder fungerar i HTML.
+Till nästa lektion, läsa på om vad CSS är.
