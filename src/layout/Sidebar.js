@@ -23,13 +23,13 @@ function extractUrlData(url) {
   return { course: currentCourse, chapter: currentChapter, page: currentPage };
 }
 
-function Sidebar({ url, currentPageData, showSidebar }) {
+function Sidebar({ url, currentCourse, showSidebar }) {
   const urlData = extractUrlData(url);
 
-  // const projects = useProjects(currentPageData)
+  // const projects = useProjects(currentCourse)
   // const projectData = { title: "Projekt", link: null, pages: projects }
 
-  // const references = useReferences(currentPageData)
+  // const references = useReferences(currentCourse)
   // const referenceData = {
   //   title: "Referenser",
   //   link: "referenser",
@@ -92,14 +92,14 @@ function Sidebar({ url, currentPageData, showSidebar }) {
     <div className={showSidebar ? "sidebar sidebar--show" : "sidebar"}>
       <div className="sidemenu-wrapper">
         <nav ref={sideMenu} className="sidemenu">
-          <Link className="sidemenu__heading" to={"/" + currentPageData.link}>
-            <h2>{currentPageData.name}</h2>
+          <Link className="sidemenu__heading" to={"/" + currentCourse.link}>
+            <h2>{currentCourse.name}</h2>
           </Link>
           <ul className="sidemenu__shortcutlist">
             {shortcuts.map((shortcut, index) => {
               return (
                 <li key={index}>
-                  <Link to={"/" + currentPageData.link + "/" + shortcut.link}>
+                  <Link to={"/" + currentCourse.link + "/" + shortcut.link}>
                     {shortcut.name}
                   </Link>
                 </li>

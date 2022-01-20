@@ -41,11 +41,11 @@ function ChapterPage({ course, chapter, children, url }) {
   and reduce down to a single object
   */
 
-  const pageInfo = data.allPageinfoJson.edges.map(page => {
+  const navInfo = data.allPageinfoJson.edges.map(page => {
     return page.node;
   });
 
-  const chapterInfo = pageInfo
+  const chapterInfo = navInfo
     .filter(node => {
       return node.link === course;
     })[0]
@@ -53,10 +53,15 @@ function ChapterPage({ course, chapter, children, url }) {
       return chapterObject.link === chapter;
     })[0];
 
-  let urlData = useUrlData(url);
+  const pageInfo = {
+    url: page.fields.slug,
+    urlData: useUrlData(url),
+    title: chapterInfo.title,
+    frontmatter: {},
+  };
 
   return (
-    <Container url={url} pageInfo={pageInfo} pageTitle={chapterInfo.title}>
+    <Container navInfo={navInfo} pageInfo={pageInfo}>
       <PageContainer>
         <h1>{chapterInfo.title}</h1>
         {children}

@@ -17,6 +17,8 @@ import { MainContext } from "./hooks/MainContext";
 */
 
 function AdjacentLinks({ pageInfo, next, previous }) {
+  const previous = pageInfo.frontmatter.previous;
+  const next = pageInfo.frontmatter.next;
   // console.log(pageInfo);
   // console.log(next);
   // console.log(previous);

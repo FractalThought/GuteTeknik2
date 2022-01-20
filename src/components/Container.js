@@ -13,19 +13,19 @@ Thus each page has the header and side-menu, but the main area is controlled by 
 
 */
 
-function Container({ url, pageInfo, pageTitle, children }) {
+function Container({ navInfo, pageInfo, children }) {
   // Use string split for url
   let urlData = useUrlData(url);
 
   const mainPage = urlData[0];
 
-  const currentPageData = pageInfo.filter(pageData => {
+  const currentCourse = navInfo.filter(pageData => {
     return pageData.link === mainPage;
   })[0];
 
   useEffect(() => {
-    document.title = `${currentPageData.name} ${
-      pageTitle ? "/" + pageTitle : ""
+    document.title = `${currentCourse.name} ${
+      pageInfo.title ? "/" + pageInfo.title : ""
     } - Tektal`;
   });
 
@@ -45,7 +45,7 @@ function Container({ url, pageInfo, pageTitle, children }) {
             <Sidebar
               showSidebar={showSidebar}
               url={urlData}
-              currentPageData={currentPageData}
+              currentCourse={currentCourse}
             />
             <div className="content-wrapper">
               {/* Starting from here, this should be dictated by the template */}

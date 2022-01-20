@@ -9,6 +9,7 @@ import styled from "styled-components";
 import TableOfContent from "../components/TableOfContent";
 import RightStickyDiv from "../components/RightStickyDiv";
 import AdjacentLinks from "../components/AdjacentLinks";
+import useUrlData from "../components/hooks/useUrlData";
 
 const ClearDiv = styled.div`
   clear: both;
@@ -71,7 +72,7 @@ export default function PageTemplate({ pageContext, data }) {
   };
 
   // Just remove the .node-intermediate step
-  const pageInfo = data.allPageinfoJson.edges.map(page => {
+  const navInfo = data.allPageinfoJson.edges.map(page => {
     return page.node;
   });
 
@@ -100,28 +101,34 @@ https://mdxjs.com/getting-started/#mdxprovider
 
   */
 
+  /*
+
+    Need a better name for pageInfo.
+    It holds the site navigation info as well as the categorization for all pages
+    The use is navigation, so NavInfo is probably a better name
+    Then pageInfo can be for the current page and containing frontmatter and slug
+
+  */
+
+  const pageInfo = {
+    url: page.fields.slug,
+    urlData: useUrlData(url),
+    title: page.frontmatter.title,
+    frontmatter: page.frontmatter,
+  };
+
   return (
-    <Container
-      url={page.fields.slug}
-      pageInfo={pageInfo}
-      crumbData={crumbData}
-      pageTitle={page.frontmatter.title}
-    >
+    <Container navInfo={navInfo} pageInfo={pageInfo}>
       <div className="content-container">
         <main>
           <div className="page">
-            {/* <MyCrumbs crumbData={crumbData} /> */}
-            <h1 className="page-heading">{page.frontmatter.title}</h1>
+            <h1 className="page-heading">{pageInfo.title}</h1>
             {/* <h1 className="printheader">{pageTitle}</h1> */}
             <MDXProvider components={mdxComponents}>
               <MDXRenderer>{page.body}</MDXRenderer>
             </MDXProvider>
             <ClearDiv></ClearDiv>
-            <AdjacentLinks
-              next={page.frontmatter.next}
-              previous={page.frontmatter.previous}
-              pageInfo={pageInfo}
-            />
+            <AdjacentLinks pageInfo={pageInfo} />
           </div>
         </main>
         <aside>
