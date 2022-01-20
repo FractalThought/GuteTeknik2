@@ -14,13 +14,8 @@ Thus each page has the header and side-menu, but the main area is controlled by 
 */
 
 function Container({ navInfo, pageInfo, children }) {
-  // Use string split for url
-  let urlData = useUrlData(url);
-
-  const mainPage = urlData[0];
-
   const currentCourse = navInfo.filter(pageData => {
-    return pageData.link === mainPage;
+    return pageData.link === pageInfo.urlData.course;
   })[0]; // Extracts the active pageInfo.json
 
   useEffect(() => {
@@ -44,10 +39,8 @@ function Container({ navInfo, pageInfo, children }) {
           <div className="layout-container">
             <Sidebar
               showSidebar={showSidebar}
-              url={urlData}
               currentCourse={currentCourse}
-              urlArray={urlData}
-              currentPageData={currentPageData}
+              urlData={pageInfo.urlData}
             />
             <div className="content-wrapper">
               {/* Starting from here, this should be dictated by the template */}

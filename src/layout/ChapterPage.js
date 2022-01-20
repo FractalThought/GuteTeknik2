@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 import Container from "../components/Container";
 import ChapterMenu from "../components/ChapterMenu";
-import useUrlData from "../components/hooks/useUrlData";
+import { useExtractUrlData } from "../components/hooks/useUrlData";
 
 function ChapterPage({ course, chapter, children, url }) {
   const data = useStaticQuery(graphql`
@@ -54,8 +54,7 @@ function ChapterPage({ course, chapter, children, url }) {
     })[0];
 
   const pageInfo = {
-    url: page.fields.slug,
-    urlData: useUrlData(url),
+    urlData: useExtractUrlData(url),
     title: chapterInfo.title,
     frontmatter: {},
   };

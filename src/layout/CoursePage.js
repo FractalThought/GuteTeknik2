@@ -61,11 +61,11 @@ function CoursePage({ course, children, url }) {
   and reduce down to a single object
   */
 
-  const pageInfo = data.allPageinfoJson.edges.map(page => {
+  const navInfo = data.allPageinfoJson.edges.map(page => {
     return page.node;
   });
 
-  const courseInfo = pageInfo.filter(node => {
+  const courseInfo = navInfo.filter(node => {
     return node.link === course;
   })[0];
 
@@ -78,7 +78,7 @@ function CoursePage({ course, children, url }) {
   // }
 
   return (
-    <Container url={url} pageInfo={pageInfo} pageTitle={courseInfo.name}>
+    <Container navInfo={navInfo} pageInfo={pageInfo}>
       <div className="content-container">
         <main>
           <div className="page">

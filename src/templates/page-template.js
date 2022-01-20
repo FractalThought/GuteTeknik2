@@ -9,7 +9,7 @@ import styled from "styled-components";
 import TableOfContent from "../components/TableOfContent";
 import RightStickyDiv from "../components/RightStickyDiv";
 import AdjacentLinks from "../components/AdjacentLinks";
-import useUrlData from "../components/hooks/useUrlData";
+import { useExtractUrlData } from "../components/hooks/useUrlData";
 
 const ClearDiv = styled.div`
   clear: both;
@@ -61,15 +61,6 @@ export const pageQuery = graphql`
 
 export default function PageTemplate({ pageContext, data }) {
   const page = data.mdx;
-  const {
-    breadcrumb: { crumbs },
-  } = pageContext;
-
-  const crumbData = {
-    crumbs: crumbs,
-    crumbSeparator: "/",
-    crumbLabel: page.frontmatter.title,
-  };
 
   // Just remove the .node-intermediate step
   const navInfo = data.allPageinfoJson.edges.map(page => {
@@ -111,8 +102,7 @@ https://mdxjs.com/getting-started/#mdxprovider
   */
 
   const pageInfo = {
-    url: page.fields.slug,
-    urlData: useUrlData(url),
+    urlData: useExtractUrlData(page.fields.slug),
     title: page.frontmatter.title,
     frontmatter: page.frontmatter,
   };
