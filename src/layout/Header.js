@@ -2,47 +2,47 @@ import React from "react";
 import { Link } from "gatsby";
 import CourseSelection from "../components/CourseSelection";
 
-function Header({ mainPage, sidebarUtility }) {
-  const topPages = [
-    {
-      name: "Programmering 1",
-      link: "prog1",
-    },
-    {
-      name: "Programmering 2",
-      link: "prog2",
-    },
-    {
-      name: "Webbutveckling 1",
-      link: "webb1",
-    },
-    {
-      name: "Webbutveckling 2",
-      link: "webb2",
-    },
-    {
-      name: "Dator- och nätverksteknik",
-      link: "daona",
-    },
-  ];
+function Header({ currentCourse, navInfo, sidebarUtility }) {
+  // const navInfo = [
+  //   {
+  //     name: "Programmering 1",
+  //     link: "prog1",
+  //   },
+  //   {
+  //     name: "Programmering 2",
+  //     link: "prog2",
+  //   },
+  //   {
+  //     name: "Webbutveckling 1",
+  //     link: "webb1",
+  //   },
+  //   {
+  //     name: "Webbutveckling 2",
+  //     link: "webb2",
+  //   },
+  //   {
+  //     name: "Dator- och nätverksteknik",
+  //     link: "daona",
+  //   },
+  // ];
 
   // map through, check which is active
 
-  function createHeaderLink(currentLink, link, key) {
-    if (currentLink === link.link) {
-      return (
-        <Link key={key} className="active" to={"/" + link.link}>
-          {link.name}
-        </Link>
-      );
-    }
+  // function createHeaderLink(currentLink, link, key) {
+  //   if (currentLink === link.link) {
+  //     return (
+  //       <Link key={key} className="active" to={"/" + link.link}>
+  //         {link.name}
+  //       </Link>
+  //     );
+  //   }
 
-    return (
-      <Link key={key} to={"/" + link.link}>
-        {link.name}
-      </Link>
-    );
-  }
+  //   return (
+  //     <Link key={key} to={"/" + link.link}>
+  //       {link.name}
+  //     </Link>
+  //   );
+  // }
 
   // return (
   //   <header id="toppen">
@@ -51,7 +51,7 @@ function Header({ mainPage, sidebarUtility }) {
   //         <Link to="/">GuteTeknik</Link>
   //       </h1>
   //       <ul>
-  //         {topPages.map((page, key) => {
+  //         {navInfo.map((page, key) => {
   //           return createHeaderLink(mainPage, page, key)
   //         })}
   //       </ul>
@@ -94,7 +94,7 @@ function Header({ mainPage, sidebarUtility }) {
         <input type="text" placeholder="Sök" />
       </div>
       <nav className="course-nav">
-        <CourseSelection topPages={topPages} currentLink={mainPage} />
+        <CourseSelection navInfo={navInfo} currentLink={currentCourse.link} />
         {/* {topPages.map((page, key) => {
           return createHeaderLink(mainPage, page, key);
         })} */}

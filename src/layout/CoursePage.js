@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 import Container from "../components/Container";
 import ChapterMenu from "../components/ChapterMenu";
+import { useExtractUrlData } from "../components/hooks/useUrlData";
 
 const QuickList = styled.section`
   background: white;
@@ -69,13 +70,14 @@ function CoursePage({ course, children, url }) {
     return node.link === course;
   })[0];
 
-  // Use string split for url
-  // let urlData = null;
+  const pageInfo = {
+    urlData: { course: course },
+    title: courseInfo.title,
+    frontmatter: {},
+  };
 
-  // if (typeof url !== "undefined" && url != null) {
-  //   const urlArray = url.split("/");
-  //   urlData = urlArray.filter(data => data !== "");
-  // }
+  console.table(courseInfo);
+  console.table(pageInfo);
 
   return (
     <Container navInfo={navInfo} pageInfo={pageInfo}>

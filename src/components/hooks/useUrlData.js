@@ -17,7 +17,7 @@ function useExtractUrlData(url) {
     currentPage = "index";
 
   if (urlData.length >= 1) {
-    currentCourse = url[0];
+    currentCourse = urlData[0];
 
     if (urlData.length > 1) {
       currentChapter = urlData[1];

@@ -2,6 +2,8 @@ import React, { useRef, useEffect } from "react";
 import { Link } from "gatsby";
 import SidebarHeading from "./SidebarHeading";
 
+// courseInfo not available
+
 function Sidebar({ showSidebar, urlData, courseInfo }) {
   const shortcuts = [
     {
@@ -31,19 +33,7 @@ function Sidebar({ showSidebar, urlData, courseInfo }) {
     // },
   ];
 
-  // TODO: ScrollTo active
-  // https://stackoverflow.com/questions/635706/how-to-scroll-to-an-element-inside-a-div
-
-  setTimeout(() => {
-    // const currentActiveLink = document.querySelector(
-    //   ".menu-section__link--active"
-    // );
-    // if (currentActiveLink != null) {
-    //   const topPos = currentActiveLink.offsetTop;
-    //   document.querySelector(".sidemenu").scrollTop = topPos;
-    // }
-  }, 1000);
-
+  // Scroll to active link
   const currentActiveLink = useRef();
   const sideMenu = useRef();
   useEffect(() => {
@@ -73,7 +63,7 @@ function Sidebar({ showSidebar, urlData, courseInfo }) {
               );
             })}
           </ul>
-          {currentPageData.chapters.map((chapter, index) => (
+          {courseInfo.chapters.map((chapter, index) => (
             <SidebarHeading
               key={index}
               headingData={chapter}

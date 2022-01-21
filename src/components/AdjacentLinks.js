@@ -16,7 +16,9 @@ import { MainContext } from "./hooks/MainContext";
 
 */
 
-function AdjacentLinks({ pageInfo, next, previous }) {
+// pageInfo forEach not available
+
+function AdjacentLinks({ pageInfo, navInfo }) {
   const previous = pageInfo.frontmatter.previous;
   const next = pageInfo.frontmatter.next;
   // console.log(pageInfo);
@@ -33,38 +35,39 @@ function AdjacentLinks({ pageInfo, next, previous }) {
   // Flatten pageInfo into pages with their url before checking?
   // Would make the checking simpler
 
-  const pages = [];
+  // const pages = [];
 
-  pageInfo.forEach(course => {
-    let constructedLink = course.link;
+  // navInfo.forEach(course => {
+  //   let constructedLink = course.link;
 
-    course.chapters.forEach(chapter => {
-      constructedLink += "/" + chapter.link;
+  //   course.chapters.forEach(chapter => {
+  //     constructedLink += "/" + chapter.link;
 
-      chapter.pages.forEach(page => {
-        const constructedPage = {
-          title: page.title,
-          link: constructedLink + "/" + page.link,
-          type: page.type,
-        };
+  //     chapter.pages.forEach(page => {
+  //       const constructedPage = {
+  //         title: page.title,
+  //         link: constructedLink + "/" + page.link,
+  //         type: page.type,
+  //       };
 
-        pages.push(constructedPage);
-      });
-      if (chapter.references != null) {
-        chapter.references.forEach(page => {
-          const constructedPage = {
-            title: page.title,
-            link: constructedLink + "/" + page.link,
-            type: "reference",
-          };
+  //       pages.push(constructedPage);
+  //     });
+  //     if (chapter.references != null) {
+  //       chapter.references.forEach(page => {
+  //         const constructedPage = {
+  //           title: page.title,
+  //           link: constructedLink + "/" + page.link,
+  //           type: "reference",
+  //         };
 
-          pages.push(constructedPage);
-        });
-      }
-    });
-  });
+  //         pages.push(constructedPage);
+  //       });
+  //     }
+  //   });
+  // });
 
-  console.table(pages);
+  // console.table(pages);
+
   // console.log(pages);
   /*
   

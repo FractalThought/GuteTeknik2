@@ -14,6 +14,7 @@ Thus each page has the header and side-menu, but the main area is controlled by 
 */
 
 function Container({ navInfo, pageInfo, children }) {
+  // TODO: Consider renaming to courseInfo to be more consistent
   const currentCourse = navInfo.filter(pageData => {
     return pageData.link === pageInfo.urlData.course;
   })[0]; // Extracts the active pageInfo.json
@@ -33,13 +34,14 @@ function Container({ navInfo, pageInfo, children }) {
       <ContextWrapper>
         <Header
           sidebarUtility={{ showSidebar, setSideBarVisibility }}
-          mainPage={mainPage}
+          currentCourse={currentCourse}
+          navInfo={navInfo}
         />
         <div id="main-wrapper">
           <div className="layout-container">
             <Sidebar
               showSidebar={showSidebar}
-              currentCourse={currentCourse}
+              courseInfo={currentCourse}
               urlData={pageInfo.urlData}
             />
             <div className="content-wrapper">

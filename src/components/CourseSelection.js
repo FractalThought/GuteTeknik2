@@ -33,7 +33,7 @@ const Selection = styled.select`
   text-align: right;
 `;
 
-function CourseItem({ topPages, currentLink }) {
+function CourseItem({ navInfo, currentLink }) {
   const handleCourseChange = e => {
     navigate(`/${e.target.value}/`);
   };
@@ -45,10 +45,10 @@ function CourseItem({ topPages, currentLink }) {
         defaultValue={currentLink}
         onChange={e => handleCourseChange(e)}
       >
-        {topPages.map((topPage, key) => {
+        {navInfo.map((course, key) => {
           return (
-            <option key={key} value={topPage.link}>
-              {topPage.name}
+            <option key={key} value={course.link}>
+              {course.name}
             </option>
           );
         })}
