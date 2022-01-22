@@ -118,7 +118,7 @@ https://mdxjs.com/getting-started/#mdxprovider
               <MDXRenderer>{page.body}</MDXRenderer>
             </MDXProvider>
             <ClearDiv></ClearDiv>
-            <AdjacentLinks pageInfo={pageInfo} />
+            <AdjacentLinks pageInfo={pageInfo} navInfo={navInfo} />
           </div>
         </main>
         <aside>

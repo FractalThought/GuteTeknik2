@@ -1,10 +1,35 @@
-import React, { useContext } from "react";
-import { MainContext } from "./hooks/MainContext";
+import React from "react";
+import { Link } from "gatsby";
+import styled from "styled-components";
 
-// import styled from "styled-components"
+const LinkContainer = styled.nav`
+  display: flex;
+  justify-content: space-around;
+`;
 
+const PreviousLink = styled.span`
+  ::before {
+    content: "<";
+  }
+`;
+
+const NextLink = styled.span`
+  ::after {
+    content: ">";
+  }
+`;
 //                ^
 // < Previous  Chapter   Next >
+
+/*
+
+<LinkContainer>
+  <PreviousLink><Link></Link></PreviousLink>
+  <PreviousLink><Link></Link></PreviousLink>
+  <PreviousLink><Link></Link></PreviousLink>
+</LinkContainer>
+
+*/
 
 /*
 
@@ -21,54 +46,77 @@ import { MainContext } from "./hooks/MainContext";
 function AdjacentLinks({ pageInfo, navInfo }) {
   const previous = pageInfo.frontmatter.previous;
   const next = pageInfo.frontmatter.next;
+
+  // Check if there is any slashes in next or previous
+  // If one slash, assume its a chapter in the same course, and thus add in the course from pageInfo.urlData
+  // If no slash, assume its a page in the same chapter and
+
+  // How to do next as "Next chapter"? Since that will have one slash
+  // For example it would be prog1/variabler
+  // Use another
+
+  // Create a function that constructs the links to ensure they are constructed the same?
+
   // console.log(pageInfo);
   // console.log(next);
   // console.log(previous);
 
-  const adjacents = [];
-
-  if (previous != null) {
-  }
-  if (next != null) {
-  }
-
   // Flatten pageInfo into pages with their url before checking?
   // Would make the checking simpler
 
-  // const pages = [];
+  const pages = [];
 
-  // navInfo.forEach(course => {
-  //   let constructedLink = course.link;
+  navInfo.forEach(course => {
+    let constructedLink = course.link;
 
-  //   course.chapters.forEach(chapter => {
-  //     constructedLink += "/" + chapter.link;
+    course.chapters.forEach(chapter => {
+      constructedLink += "/" + chapter.link;
 
-  //     chapter.pages.forEach(page => {
-  //       const constructedPage = {
-  //         title: page.title,
-  //         link: constructedLink + "/" + page.link,
-  //         type: page.type,
-  //       };
+      chapter.pages.forEach(page => {
+        const constructedPage = {
+          title: page.title,
+          link: constructedLink + "/" + page.link,
+          type: page.type,
+        };
 
-  //       pages.push(constructedPage);
-  //     });
-  //     if (chapter.references != null) {
-  //       chapter.references.forEach(page => {
-  //         const constructedPage = {
-  //           title: page.title,
-  //           link: constructedLink + "/" + page.link,
-  //           type: "reference",
-  //         };
+        pages.push(constructedPage);
+      });
+      if (chapter.references != null) {
+        chapter.references.forEach(page => {
+          const constructedPage = {
+            title: page.title,
+            link: constructedLink + "/" + page.link,
+            type: "reference",
+          };
 
-  //         pages.push(constructedPage);
-  //       });
-  //     }
-  //   });
-  // });
+          pages.push(constructedPage);
+        });
+      }
+    });
+  });
 
-  // console.table(pages);
+  console.log(pages);
 
-  // console.log(pages);
+  function createAdjacentLink(pages, adjacent) {
+    const adjacentPage = pages.filter(page => {
+      return page.link === adjacent;
+    });
+
+    return adjacentPage;
+  }
+
+  const adjacents = [];
+
+  if (previous != null) {
+    adjacents.push(createAdjacentLink(pages, previous););
+  }
+
+  // add prev
+
+  if (next != null) {
+    adjacents.push(createAdjacentLink(pages, next););
+  }
+
   /*
   
   pageInfo is an array with each course as an element.
