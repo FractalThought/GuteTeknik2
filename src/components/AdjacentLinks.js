@@ -5,15 +5,16 @@ import styled from "styled-components";
 const LinkContainer = styled.nav`
   display: flex;
   justify-content: space-around;
+  width: 100%;
 `;
 
-const PreviousLink = styled.span`
+const PreviousSpan = styled.span`
   ::before {
     content: "<";
   }
 `;
 
-const NextLink = styled.span`
+const NextSpan = styled.span`
   ::after {
     content: ">";
   }
@@ -108,13 +109,15 @@ function AdjacentLinks({ pageInfo, navInfo }) {
   const adjacents = [];
 
   if (previous != null) {
-    adjacents.push(createAdjacentLink(pages, previous););
+    adjacents.push(createAdjacentLink(pages, previous));
   }
 
-  // add prev
+  // add chapter
+  const chapterLink = pageInfo.urlData.course + "/" + pageInfo.urlData.chapter;
+  adjacents.push(createAdjacentLink(pages, chapterLink));
 
   if (next != null) {
-    adjacents.push(createAdjacentLink(pages, next););
+    adjacents.push(createAdjacentLink(pages, next));
   }
 
   /*
@@ -137,7 +140,7 @@ function AdjacentLinks({ pageInfo, navInfo }) {
   
   */
 
-  return <></>;
+  return <LinkContainer></LinkContainer>;
 }
 
 export default AdjacentLinks;
