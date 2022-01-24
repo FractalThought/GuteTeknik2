@@ -10,13 +10,13 @@ const LinkContainer = styled.nav`
 
 const PreviousSpan = styled.span`
   ::before {
-    content: "<";
+    content: "< ";
   }
 `;
 
 const NextSpan = styled.span`
   ::after {
-    content: ">";
+    content: " >";
   }
 `;
 
@@ -54,17 +54,26 @@ function ConditionalAdjacent({ doRender, children }) {
 // pageInfo forEach not available
 
 function AdjacentLinks({ pageInfo, navInfo }) {
-  const previous = pageInfo.frontmatter.previous;
-  const next = pageInfo.frontmatter.next;
+  let previous =
+    pageInfo.urlData.course +
+    "/" +
+    pageInfo.urlData.chapter +
+    "/" +
+    pageInfo.frontmatter.previous;
+  let next =
+    pageInfo.urlData.course +
+    "/" +
+    pageInfo.urlData.chapter +
+    "/" +
+    pageInfo.frontmatter.next;
 
-  // Check if there is any slashes in next or previous
-  // If one slash, assume its a chapter in the same course, and thus add in the course from pageInfo.urlData
-  // If no slash, assume its a page in the same chapter and
+  /*
 
-  // How to do next as "Next chapter"? Since that will have one slash
-  // For example it would be prog1/variabler
+    page
+    chapter/page
+    :chapter?
 
-  // Create a function that constructs the links to ensure they are constructed the same?
+  */
 
   // console.log(pageInfo);
   // console.log(next);
@@ -73,8 +82,15 @@ function AdjacentLinks({ pageInfo, navInfo }) {
   // Flatten pageInfo into pages with their url before checking?
   // Would make the checking simpler
 
-  // Currently this doesn't work because the links need to include the currentCourse
-  //
+  // Currently this doesn't work because the links need to include the currentCourse and chapter
+  // Essentially need to add a "Correct the Link"- function
+
+  // Check if there is any slashes in next or previous
+  // If one slash, assume its in a chapter in the same course, and thus add in the course from pageInfo.urlData
+  // If no slash, assume its a page in the same chapter and then add the course and chapter to the url
+
+  // How to do next as "Next chapter"? Since that will have one slash
+  // For example it would be prog1/variabler
 
   const pages = [];
 
@@ -114,16 +130,11 @@ function AdjacentLinks({ pageInfo, navInfo }) {
     });
   });
 
-  console.log(pages);
-
   function createAdjacentLink(isSet, pages, adjacent) {
-    console.log(adjacent);
-
     const adjacentPage = pages.filter(page => {
       return page.link === adjacent;
     })[0];
 
-    console.log(adjacentPage);
     if (adjacentPage !== undefined) {
       adjacentPage.isSet = isSet;
       return adjacentPage;
@@ -166,16 +177,18 @@ function AdjacentLinks({ pageInfo, navInfo }) {
     <LinkContainer>
       <ConditionalAdjacent doRender={adjacents.previous.isSet}>
         <PreviousSpan>
-          <Link to={adjacents.previous.link}>{adjacents.previous.title}</Link>
+          <Link to={"/" + adjacents.previous.link}>
+            {adjacents.previous.title}
+          </Link>
         </PreviousSpan>
       </ConditionalAdjacent>
       <span>
         Kapitel:
-        <Link to={adjacents.chapter.link}>{adjacents.chapter.title}</Link>
+        <Link to={"/" + adjacents.chapter.link}>{adjacents.chapter.title}</Link>
       </span>
       <ConditionalAdjacent doRender={adjacents.next.isSet}>
         <NextSpan>
-          <Link to={adjacents.next.link}>{adjacents.next.title}</Link>
+          <Link to={"/" + adjacents.next.link}>{adjacents.next.title}</Link>
         </NextSpan>
       </ConditionalAdjacent>
     </LinkContainer>
