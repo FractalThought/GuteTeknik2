@@ -105,21 +105,6 @@ function SidebarHeading({ headingData, urlData, activeRef }) {
     isCurrentChapter = urlData.chapter === link;
   }
 
-  /*
-  
-  <section class="menu-section">
-      <a class="menu-section__heading" href="#">
-        <h2>Introduktion</h2>
-      </a>
-      <div class="menu-section__list">
-        <a href="#">Folders och flöde</a>
-        <a href="#">Flödesövningar</a>
-        <a href="#">Introprojekt</a>
-      </div>
-    </section>
-  
-  */
-
   return (
     <section className="menu-section">
       {isCurrentChapter ? (

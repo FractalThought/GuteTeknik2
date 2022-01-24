@@ -2,63 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import CourseSelection from "../components/CourseSelection";
 
-function Header({ mainPage, sidebarUtility }) {
-  const topPages = [
-    {
-      name: "Programmering 1",
-      link: "prog1",
-    },
-    {
-      name: "Programmering 2",
-      link: "prog2",
-    },
-    {
-      name: "Webbutveckling 1",
-      link: "webb1",
-    },
-    {
-      name: "Webbutveckling 2",
-      link: "webb2",
-    },
-    {
-      name: "Dator- och nätverksteknik",
-      link: "daona",
-    },
-  ];
-
-  // map through, check which is active
-
-  function createHeaderLink(currentLink, link, key) {
-    if (currentLink === link.link) {
-      return (
-        <Link key={key} className="active" to={"/" + link.link}>
-          {link.name}
-        </Link>
-      );
-    }
-
-    return (
-      <Link key={key} to={"/" + link.link}>
-        {link.name}
-      </Link>
-    );
-  }
-
-  // return (
-  //   <header id="toppen">
-  //     <nav>
-  //       <h1>
-  //         <Link to="/">GuteTeknik</Link>
-  //       </h1>
-  //       <ul>
-  //         {topPages.map((page, key) => {
-  //           return createHeaderLink(mainPage, page, key)
-  //         })}
-  //       </ul>
-  //     </nav>
-  //   </header>
-  // )
-
+function Header({ currentCourse, navInfo, sidebarUtility }) {
   function ToggleSidebar() {
     sidebarUtility.setSideBarVisibility(!sidebarUtility.showSidebar);
   }
@@ -94,10 +38,7 @@ function Header({ mainPage, sidebarUtility }) {
         <input type="text" placeholder="Sök" />
       </div>
       <nav className="course-nav">
-        <CourseSelection topPages={topPages} currentLink={mainPage} />
-        {/* {topPages.map((page, key) => {
-          return createHeaderLink(mainPage, page, key);
-        })} */}
+        <CourseSelection navInfo={navInfo} currentLink={currentCourse.link} />
       </nav>
 
       <button className="show-menu-button" onClick={ToggleSidebar}>

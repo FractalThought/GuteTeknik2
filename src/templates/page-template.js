@@ -8,6 +8,8 @@ import mdxComponents from "../components/mdxComponents";
 import styled from "styled-components";
 import TableOfContent from "../components/TableOfContent";
 import RightStickyDiv from "../components/RightStickyDiv";
+import AdjacentLinks from "../components/AdjacentLinks";
+import { useExtractUrlData } from "../components/hooks/useUrlData";
 
 const ClearDiv = styled.div`
   clear: both;
@@ -28,22 +30,9 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
-        headings
-      }
-    }
-    allMdx(filter: { fields: { collection: { eq: "pages" } } }) {
-      edges {
-        node {
-          body
-          fields {
-            slug
-            id
-          }
-          frontmatter {
-            title
-            headings
-          }
-        }
+        previous
+        next
+        related
       }
     }
     allPageinfoJson {
@@ -70,31 +59,15 @@ export const pageQuery = graphql`
   }
 `;
 
-export default function PageTemplate({ pageContext, data, location }) {
+export default function PageTemplate({ pageContext, data }) {
   const page = data.mdx;
-  const allInfo = data.allMdx.edges;
-  const {
-    breadcrumb: { crumbs },
-  } = pageContext;
-
-  const crumbData = {
-    crumbs: crumbs,
-    crumbSeparator: "/",
-    crumbLabel: page.frontmatter.title,
-  };
 
   // Just remove the .node-intermediate step
-  const pageInfo = data.allPageinfoJson.edges.map(page => {
+  const navInfo = data.allPageinfoJson.edges.map(page => {
     return page.node;
   });
 
-  let listOfContent = undefined;
-  if (
-    page.frontmatter.headings !== undefined &&
-    page.frontmatter.headings !== null
-  ) {
-    listOfContent = page.frontmatter.headings.split("|");
-  }
+  // page.frontmatter.attribute
 
   /*
   TODO: Need to get the children from the MDXProvider "after" it has been rendered
@@ -119,25 +92,33 @@ https://mdxjs.com/getting-started/#mdxprovider
 
   */
 
+  /*
+
+    Need a better name for pageInfo.
+    It holds the site navigation info as well as the categorization for all pages
+    The use is navigation, so NavInfo is probably a better name
+    Then pageInfo can be for the current page and containing frontmatter and slug
+
+  */
+
+  const pageInfo = {
+    urlData: useExtractUrlData(page.fields.slug),
+    title: page.frontmatter.title,
+    frontmatter: page.frontmatter,
+  };
+
   return (
-    <Container
-      url={page.fields.slug}
-      pages={allInfo}
-      pageInfo={pageInfo}
-      crumbData={crumbData}
-      listOfContent={listOfContent}
-      pageTitle={page.frontmatter.title}
-    >
+    <Container navInfo={navInfo} pageInfo={pageInfo}>
       <div className="content-container">
         <main>
           <div className="page">
-            {/* <MyCrumbs crumbData={crumbData} /> */}
-            <h1 className="page-heading">{page.frontmatter.title}</h1>
+            <h1 className="page-heading">{pageInfo.title}</h1>
             {/* <h1 className="printheader">{pageTitle}</h1> */}
             <MDXProvider components={mdxComponents}>
               <MDXRenderer>{page.body}</MDXRenderer>
             </MDXProvider>
             <ClearDiv></ClearDiv>
+            <AdjacentLinks pageInfo={pageInfo} navInfo={navInfo} />
           </div>
         </main>
         <aside>

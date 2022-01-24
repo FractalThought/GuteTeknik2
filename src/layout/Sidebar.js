@@ -1,41 +1,10 @@
 import React, { useRef, useEffect } from "react";
 import { Link } from "gatsby";
 import SidebarHeading from "./SidebarHeading";
-// import useProjects from "../components/hooks/useProjects"
-// import useReferences from "../components/hooks/useReferences"
 
-function extractUrlData(url) {
-  let currentCourse,
-    currentChapter,
-    currentPage = "index";
+// courseInfo not available
 
-  if (url.length >= 1) {
-    currentCourse = url[0];
-
-    if (url.length > 1) {
-      currentChapter = url[1];
-      currentPage = url[url.length - 1];
-    } else {
-      currentPage = currentCourse;
-    }
-  }
-
-  return { course: currentCourse, chapter: currentChapter, page: currentPage };
-}
-
-function Sidebar({ url, currentPageData, showSidebar }) {
-  const urlData = extractUrlData(url);
-
-  // const projects = useProjects(currentPageData)
-  // const projectData = { title: "Projekt", link: null, pages: projects }
-
-  // const references = useReferences(currentPageData)
-  // const referenceData = {
-  //   title: "Referenser",
-  //   link: "referenser",
-  //   pages: references,
-  // }
-
+function Sidebar({ showSidebar, urlData, courseInfo }) {
   const shortcuts = [
     {
       name: "Planering",
@@ -64,19 +33,7 @@ function Sidebar({ url, currentPageData, showSidebar }) {
     // },
   ];
 
-  // TODO: ScrollTo active
-  // https://stackoverflow.com/questions/635706/how-to-scroll-to-an-element-inside-a-div
-
-  setTimeout(() => {
-    // const currentActiveLink = document.querySelector(
-    //   ".menu-section__link--active"
-    // );
-    // if (currentActiveLink != null) {
-    //   const topPos = currentActiveLink.offsetTop;
-    //   document.querySelector(".sidemenu").scrollTop = topPos;
-    // }
-  }, 1000);
-
+  // Scroll to active link
   const currentActiveLink = useRef();
   const sideMenu = useRef();
   useEffect(() => {
@@ -92,21 +49,21 @@ function Sidebar({ url, currentPageData, showSidebar }) {
     <div className={showSidebar ? "sidebar sidebar--show" : "sidebar"}>
       <div className="sidemenu-wrapper">
         <nav ref={sideMenu} className="sidemenu">
-          <Link className="sidemenu__heading" to={"/" + currentPageData.link}>
-            <h2>{currentPageData.name}</h2>
+          <Link className="sidemenu__heading" to={"/" + courseInfo.link}>
+            <h2>{courseInfo.name}</h2>
           </Link>
           <ul className="sidemenu__shortcutlist">
             {shortcuts.map((shortcut, index) => {
               return (
                 <li key={index}>
-                  <Link to={"/" + currentPageData.link + "/" + shortcut.link}>
+                  <Link to={"/" + courseInfo.link + "/" + shortcut.link}>
                     {shortcut.name}
                   </Link>
                 </li>
               );
             })}
           </ul>
-          {currentPageData.chapters.map((chapter, index) => (
+          {courseInfo.chapters.map((chapter, index) => (
             <SidebarHeading
               key={index}
               headingData={chapter}

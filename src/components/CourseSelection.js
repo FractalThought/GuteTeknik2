@@ -33,28 +33,24 @@ const Selection = styled.select`
   text-align: right;
 `;
 
-function CourseItem({ topPages, currentLink }) {
+function CourseItem({ navInfo, currentLink }) {
   const handleCourseChange = e => {
     navigate(`/${e.target.value}/`);
   };
 
   return (
     <nav>
-      <Selection id="course-selection" onChange={e => handleCourseChange(e)}>
-        {topPages.map((topPage, key) => {
-          if (currentLink === topPage.link) {
-            return (
-              <option key={key} value={topPage.link} selected>
-                {topPage.name}
-              </option>
-            );
-          } else {
-            return (
-              <option key={key} value={topPage.link}>
-                {topPage.name}
-              </option>
-            );
-          }
+      <Selection
+        id="course-selection"
+        defaultValue={currentLink}
+        onChange={e => handleCourseChange(e)}
+      >
+        {navInfo.map((course, key) => {
+          return (
+            <option key={key} value={course.link}>
+              {course.name}
+            </option>
+          );
         })}
       </Selection>
     </nav>

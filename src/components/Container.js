@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import Header from "../layout/Header";
 import Sidebar from "../layout/Sidebar";
 import { MainContext, mainInfo } from "./hooks/MainContext";
+import useUrlData from "./hooks/useUrlData";
 
 /*
 
@@ -12,24 +13,15 @@ Thus each page has the header and side-menu, but the main area is controlled by 
 
 */
 
-function Container({ url, pageInfo, pageTitle, children }) {
-  // Use string split for url
-  let urlData = null;
-
-  if (typeof url !== "undefined" && url != null) {
-    const urlArray = url.split("/");
-    urlData = urlArray.filter(data => data !== "");
-  }
-
-  const mainPage = urlData[0];
-
-  const currentPageData = pageInfo.filter(pageData => {
-    return pageData.link === mainPage;
-  })[0];
+function Container({ navInfo, pageInfo, children }) {
+  // TODO: Consider renaming to courseInfo to be more consistent
+  const currentCourse = navInfo.filter(pageData => {
+    return pageData.link === pageInfo.urlData.course;
+  })[0]; // Extracts the active pageInfo.json
 
   useEffect(() => {
-    document.title = `${currentPageData.name} ${
-      pageTitle ? "/" + pageTitle : ""
+    document.title = `${currentCourse.name} ${
+      pageInfo.title ? "/" + pageInfo.title : ""
     } - Tektal`;
   });
 
@@ -42,14 +34,15 @@ function Container({ url, pageInfo, pageTitle, children }) {
       <ContextWrapper>
         <Header
           sidebarUtility={{ showSidebar, setSideBarVisibility }}
-          mainPage={mainPage}
+          currentCourse={currentCourse}
+          navInfo={navInfo}
         />
         <div id="main-wrapper">
           <div className="layout-container">
             <Sidebar
               showSidebar={showSidebar}
-              url={urlData}
-              currentPageData={currentPageData}
+              courseInfo={currentCourse}
+              urlData={pageInfo.urlData}
             />
             <div className="content-wrapper">
               {/* Starting from here, this should be dictated by the template */}
