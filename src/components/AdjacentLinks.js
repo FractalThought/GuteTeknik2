@@ -20,7 +20,13 @@ const NextSpan = styled.span`
   }
 `;
 
-function ConditionalAdjacent({ adjacentCheck, children }) {}
+function ConditionalAdjacent({ doRender, children }) {
+  if (doRender) {
+    return <>{children}</>;
+  } else {
+    return <></>;
+  }
+}
 
 //                ^
 // < Previous  Chapter   Next >
@@ -57,7 +63,6 @@ function AdjacentLinks({ pageInfo, navInfo }) {
 
   // How to do next as "Next chapter"? Since that will have one slash
   // For example it would be prog1/variabler
-  // Use another
 
   // Create a function that constructs the links to ensure they are constructed the same?
 
@@ -68,13 +73,23 @@ function AdjacentLinks({ pageInfo, navInfo }) {
   // Flatten pageInfo into pages with their url before checking?
   // Would make the checking simpler
 
+  // Currently this doesn't work because the links need to include the currentCourse
+  //
+
   const pages = [];
 
   navInfo.forEach(course => {
     let constructedLink = course.link;
 
     course.chapters.forEach(chapter => {
-      constructedLink += "/" + chapter.link;
+      constructedLink = course.link + "/" + chapter.link;
+
+      const constructedChapter = {
+        title: chapter.title,
+        link: constructedLink,
+        type: "chapter",
+      };
+      pages.push(constructedChapter);
 
       chapter.pages.forEach(page => {
         const constructedPage = {
@@ -101,27 +116,31 @@ function AdjacentLinks({ pageInfo, navInfo }) {
 
   console.log(pages);
 
-  function createAdjacentLink(pages, adjacent) {
+  function createAdjacentLink(isSet, pages, adjacent) {
+    console.log(adjacent);
+
     const adjacentPage = pages.filter(page => {
       return page.link === adjacent;
-    });
+    })[0];
 
-    return adjacentPage;
+    console.log(adjacentPage);
+    if (adjacentPage !== undefined) {
+      adjacentPage.isSet = isSet;
+      return adjacentPage;
+    } else {
+      return { isSet: false };
+    }
   }
 
-  const adjacents = [];
-
-  if (previous != null) {
-    adjacents.push(createAdjacentLink(pages, previous));
-  }
-
-  // add chapter
-  const chapterLink = pageInfo.urlData.course + "/" + pageInfo.urlData.chapter;
-  adjacents.push(createAdjacentLink(pages, chapterLink));
-
-  if (next != null) {
-    adjacents.push(createAdjacentLink(pages, next));
-  }
+  const adjacents = {
+    previous: createAdjacentLink(previous != null, pages, previous),
+    chapter: createAdjacentLink(
+      true,
+      pages,
+      pageInfo.urlData.course + "/" + pageInfo.urlData.chapter
+    ),
+    next: createAdjacentLink(next != null, pages, next),
+  };
 
   /*
   
@@ -143,7 +162,24 @@ function AdjacentLinks({ pageInfo, navInfo }) {
   
   */
 
-  return <LinkContainer></LinkContainer>;
+  return (
+    <LinkContainer>
+      <ConditionalAdjacent doRender={adjacents.previous.isSet}>
+        <PreviousSpan>
+          <Link to={adjacents.previous.link}>{adjacents.previous.title}</Link>
+        </PreviousSpan>
+      </ConditionalAdjacent>
+      <span>
+        Kapitel:
+        <Link to={adjacents.chapter.link}>{adjacents.chapter.title}</Link>
+      </span>
+      <ConditionalAdjacent doRender={adjacents.next.isSet}>
+        <NextSpan>
+          <Link to={adjacents.next.link}>{adjacents.next.title}</Link>
+        </NextSpan>
+      </ConditionalAdjacent>
+    </LinkContainer>
+  );
 }
 
 export default AdjacentLinks;
