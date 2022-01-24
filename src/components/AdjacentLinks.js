@@ -19,6 +19,9 @@ const NextSpan = styled.span`
     content: ">";
   }
 `;
+
+function ConditionalAdjacent({ adjacentCheck, children }) {}
+
 //                ^
 // < Previous  Chapter   Next >
 
