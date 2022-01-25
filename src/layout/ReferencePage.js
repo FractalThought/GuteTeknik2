@@ -1,9 +1,10 @@
-import React, { useState } from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Header from "./Header"
-import Sidebar from "./Sidebar"
-import ReferenceCard from "../components/ReferenceCard"
-import useReferences from "../components/hooks/useReferences"
+import React, { useState, useEffect } from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Header from "./Header";
+import Sidebar from "./Sidebar";
+import ReferenceCard from "../components/ReferenceCard";
+import useReferences from "../components/hooks/useReferences";
+import { useExtractUrlData } from "../components/hooks/useUrlData";
 
 function ReferencePage({ course, url }) {
   const data = useStaticQuery(graphql`
@@ -30,44 +31,52 @@ function ReferencePage({ course, url }) {
         }
       }
     }
-  `)
+  `);
 
-  /*
-  Remove the .node-intermediate step, filter out the currrent page,
-  and reduce down to a single object
-  */
+  const navInfo = data.allPageinfoJson.edges.map(page => {
+    return page.node;
+  });
 
-  const pageInfo = data.allPageinfoJson.edges
+  const chapterInfo = data.allPageinfoJson.edges
     .map(page => {
-      return page.node
+      return page.node;
     })
     .filter(node => {
-      return node.link === course
-    })[0]
+      return node.link === course;
+    })[0];
 
-  const referenceInfo = useReferences(pageInfo)
+  const referenceInfo = useReferences(chapterInfo);
 
-  // Use string split for url
-  let urlData = null
+  const pageInfo = {
+    urlData: useExtractUrlData(url),
+    title: chapterInfo.title,
+    frontmatter: {},
+  };
 
-  if (typeof url !== "undefined" && url != null) {
-    const urlArray = url.split("/")
-    urlData = urlArray.filter(data => data !== "")
-  }
+  const currentCourse = navInfo.filter(pageData => {
+    return pageData.link === pageInfo.urlData.course;
+  })[0]; // Extracts the active pageInfo.json
 
-  const [showSidebar, setSideBarVisibility] = useState(false)
+  useEffect(() => {
+    document.title = `${currentCourse.name} ${
+      pageInfo.title ? "/" + pageInfo.title : ""
+    } - Tektal`;
+  });
+
+  const [showSidebar, setSideBarVisibility] = useState(false);
 
   return (
     <>
       <div id="main-grid">
         <Header
           sidebarUtility={{ showSidebar, setSideBarVisibility }}
-          mainPage={course}
+          currentCourse={currentCourse}
+          navInfo={navInfo}
         />
         <Sidebar
           showSidebar={showSidebar}
-          url={urlData}
-          currentPageData={pageInfo}
+          courseInfo={currentCourse}
+          urlData={pageInfo.urlData}
         />
         <main>
           <h1 className="page-heading">Referenser</h1>
@@ -76,7 +85,7 @@ function ReferencePage({ course, url }) {
         <aside className="page-index"></aside>
       </div>
     </>
-  )
+  );
 }
 
-export default ReferencePage
+export default ReferencePage;

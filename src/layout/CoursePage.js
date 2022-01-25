@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 import Container from "../components/Container";
 import ChapterMenu from "../components/ChapterMenu";
-import { useExtractUrlData } from "../components/hooks/useUrlData";
 
 const QuickList = styled.section`
   background: white;
@@ -75,9 +74,6 @@ function CoursePage({ course, children, url }) {
     title: courseInfo.title,
     frontmatter: {},
   };
-
-  console.table(courseInfo);
-  console.table(pageInfo);
 
   return (
     <Container navInfo={navInfo} pageInfo={pageInfo}>

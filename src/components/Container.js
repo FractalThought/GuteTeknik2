@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext } from "react";
 import Header from "../layout/Header";
 import Sidebar from "../layout/Sidebar";
 import { MainContext, mainInfo } from "./hooks/MainContext";
-import useUrlData from "./hooks/useUrlData";
 
 /*
 
