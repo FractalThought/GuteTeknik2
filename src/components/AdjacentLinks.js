@@ -31,28 +31,6 @@ function ConditionalAdjacent({ doRender, children }) {
 //                ^
 // < Previous  Chapter   Next >
 
-/*
-
-<LinkContainer>
-  <PreviousLink><Link></Link></PreviousLink>
-  <PreviousLink><Link></Link></PreviousLink>
-  <PreviousLink><Link></Link></PreviousLink>
-</LinkContainer>
-
-*/
-
-/*
-
-<nav>
-  <a>Previous</a>
-  <a>Chapter</a> // Rendered regardless
-  <a>Next</a>
-</nav>
-
-*/
-
-// pageInfo forEach not available
-
 function AdjacentLinks({ pageInfo, navInfo }) {
   let previous =
     pageInfo.urlData.course +
@@ -74,10 +52,6 @@ function AdjacentLinks({ pageInfo, navInfo }) {
     :chapter?
 
   */
-
-  // console.log(pageInfo);
-  // console.log(next);
-  // console.log(previous);
 
   // Flatten pageInfo into pages with their url before checking?
   // Would make the checking simpler
