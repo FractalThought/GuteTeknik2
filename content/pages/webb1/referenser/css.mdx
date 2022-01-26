@@ -23,9 +23,30 @@ En CSS-regel består av två saker; en eller flera **Selektorer** och en eller f
 
 Vi kan till exempel bestämma att alla paragraf-element ska ha grön text, eller att en specifik rubrik ska ha ett annat typsnitt än andra.
 
+```css
+p {
+  color: green;
+}
+
+h2 {
+  font-family: Verdana;
+}
+```
+
+
 Man kan tänka det lite som att en selektor söker efter HTML-element som matchar deras beskrivning, och bestämmer över alla som matchar den beskrivningen.
 
-En CSS-regel kan ha flera selektorer, och betyder att regeln gäller för alla element som matchar någon av selektorerna.
+## Flera selektorer
+
+En CSS-regel kan ha flera selektorer, och betyder att regeln gäller för alla element som matchar någon av selektorerna. Man separerar selektorerna med ett kommatecken.
+
+```css
+/* Får alla p, h2, och li-element att ha textfärgen röd */
+p, h2, li {
+  color: red;
+}
+```
+
 
 # Deklarationer
 
@@ -63,3 +84,4 @@ body {
 <h3 style="color: hsla(359, 85%, 50%, 1); font-size: 30px; text-transform: none; text-align:left;">Lorem Ipsum</h3>
 <p>Lorem ipsum dolor sit amet.</p>
 </div>
+
