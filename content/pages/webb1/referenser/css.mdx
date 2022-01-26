@@ -1,9 +1,11 @@
 ---
 title: "CSS"
 date: "2022-01-15"
+previous: "bilder"
+next: "cascading"
 ---
 
-CSS står för Cascading Style Sheet och är ett sätt för oss att ändra utseendet på vår HTML.
+CSS står för *Cascading Style Sheet* och är ett sätt för oss att ändra utseendet på vår HTML.
 
 HTML bestämmer hur innehållet ska struktureras och hur de olika delarna av innehållet ska presenteras. CSS däremot bestämmer hur sidan ska se ut.
 
@@ -13,7 +15,9 @@ CSS bygger på att vi skapar regler som styr utseendet på HTML-elementen vi ska
 
 En CSS-regel består av två saker; en eller flera **Selektorer** och en eller flera **Deklarationer**.
 
-## Selektorer
+![En CSS-regel är uppbyggd av en selektor och en eller flera deklarationer. En deklaration är uppdelat i egenskap och värde.](css_deklaration.png)
+
+# Selektorer
 
 *Selektorer* bestämmer (väljer) **vilka** element vars utseende ska ändras.
 
@@ -23,7 +27,7 @@ Man kan tänka det lite som att en selektor söker efter HTML-element som matcha
 
 En CSS-regel kan ha flera selektorer, och betyder att regeln gäller för alla element som matchar någon av selektorerna.
 
-## Deklarationer
+# Deklarationer
 
 En *deklaration* bestämmer **vad** i utseendet som ska ändras och **hur** det ska ändras.
 
@@ -32,6 +36,8 @@ Deklarationer är i sin tur uppdelad i två delar; *Egenskap* och *Värde*.
 **Egenskapen** är **vad**, och är till exempel textfärgen (*color*) och textstorleken (*font-size*), eller marginalen (utrymmet) från andra element.
 
 **Värdet** är vad egenskapen ska sättas till. Vad detta är, är baserat på egenskapen - för textfärgen kan vi till exempel använda en av 140 fördefinerade webbfärgerna eller ett hexvärde som bestämmer färgen, men för textstorleken och marginalen använder vi ett mått i en bestämd enhet, till exempel pixlar (px), procent (%), eller *em* (ett typografiskt mått som är relativ till typsnittets storlek - i webben är 1em=16px).
+
+# Exempel
 
 ## HTML
 

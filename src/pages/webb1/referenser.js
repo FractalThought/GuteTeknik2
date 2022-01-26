@@ -1,11 +1,11 @@
 import React from "react";
-import ReferencePage from "../../layout/ReferencePage";
+import ChapterPage from "../../layout/ChapterPage";
 
 const ThisPage = ({ location }) => {
   return (
-    <ReferencePage url={location.pathname} course="webb1">
-      <p>I det här kapitlet introducerar vi JavaScript på webben.</p>
-    </ReferencePage>
+    <ChapterPage url={location.pathname} course="webb1" chapter="referenser">
+      <p>Här är alla introduktionsövningar samlade.</p>
+    </ChapterPage>
   );
 };
 

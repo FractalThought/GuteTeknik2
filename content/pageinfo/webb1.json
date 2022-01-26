@@ -37,6 +37,21 @@
           "title": "Bilder",
           "link": "bilder",
           "type": "lesson"
+        },
+        {
+          "title": "CSS",
+          "link": "css",
+          "type": "lesson"
+        },
+        {
+          "title": "cascading",
+          "link": "cascading",
+          "type": "lesson"
+        },
+        {
+          "title": "specificity",
+          "link": "specificity",
+          "type": "lesson"
         }
       ],
       "references": [
