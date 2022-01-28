@@ -15,6 +15,11 @@
           "title": "Bilder",
           "link": "bilder",
           "type": "exercise"
+        },
+        {
+          "title": "CSS-introduktion",
+          "link": "css_intro",
+          "type": "exercise"
         }
       ],
       "references": [
@@ -41,6 +46,11 @@
         {
           "title": "CSS",
           "link": "css",
+          "type": "lesson"
+        },
+        {
+          "title": "CSS i praktiken",
+          "link": "css_praktiken",
           "type": "lesson"
         },
         {

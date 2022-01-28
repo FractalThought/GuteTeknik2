@@ -1,5 +1,5 @@
 ---
-title: "Bildövningar"
+title: "CSS: Introduktionsövningar"
 date: "2022-01-20"
 ---
 
@@ -15,7 +15,7 @@ Kopiera lite HTML-kod från ett tidigare dokument, eller skriv något nytt. Du b
 
 <Notice>
 
-**Tips:** [Lorem Ipsum](https://www.lipsum.com/) är ett sätt att skapa fake-text ifall man inte kommer på något att skriva. Du kan generera Lorem Ipsum-text direkt i VSCode med hjälp av Emmet Abreviations. Skriv `lorem` och sedan kortkommandot `Ctrl+Mellanslag` (och sedan `Enter` för att bekräfta), för att skapa en paragraf med Lorem Ipsum-text.
+**Tips:** [Lorem Ipsum](https://www.lipsum.com/) är ett sätt att skapa fake-text ifall man inte kommer på något att skriva. Du kan generera Lorem Ipsum-text direkt i VSCode med hjälp av Emmet Abreviations. Skriv `lorem` och sedan kortkommandot `Ctrl+Mellanslag` (och sedan `Enter` för att bekräfta), för att skapa en paragraf med Lorem Ipsum-text som du kan lägga i en paragraf-tagg.
 
 Du kan även använda lorem följt av ett nummer för att generera så många ord. Till exempel `lorem10` skapar 10 ord från Lorem Ipsum.
 
@@ -25,6 +25,31 @@ Du kan även använda lorem följt av ett nummer för att generera så många or
 
 I `<head>`-taggen, skapa en `<style>`-tagg. Det är i denna taggen du ska skriva all din CSS.
 
+# 3: Färgade paragrafer
+
+Lägg till en regel för att stila dina paragrafer med en valfri färg. Använd selektorn `p`, egenskapen `color`, och en valfri färg som värde (tänk på att använda engelska färgnamn - VSCode kommer hjälpa dig med förslag).
+
+# 4: Stilade rubriker
+
+Stila nu dina rubriker h1 och h2 med följande deklarationer:
+
+```css
+font-size: 32px;
+font-family: Verdana, Arial, sans-serif;
+color: #444444;
+```
+
+Försök använda en enda CSS-regel för att stila både h1 och h2-taggarna genom att använda flera selektorer i samma regel.
+
+Notera vad som ändras och skriv i kommentarer (`/**/`) vad deklarationerna gör.
+
+# 5: Body-taggen
+
+Body-taggen kan stilas på många olika sätt. Till att börja med, testa att ändra bakgrundsfärgen med egenskapen `background`.
+
+# 6: Stila em och strong
+
+Stila dina em-taggar och strong-taggar med valfria deklarationer. Läs på [MDN Web Docs om Fundamental text and font styling](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals) för tips på vad du kan stila. Tips: Du kan också stila deras bakgrundsfärger.
 
 # Inlämning
 
@@ -34,4 +59,4 @@ När du är klar, ladda upp HTML-dokumentet till kursens portfolio på SchoolSof
 
 Under de kommande lektionerna kommer vi arbeta mer med CSS och specificitet, samt med **layout** med hjälp av **Flexbox** som är en del av CSS.
 
-Till nästa lektion, läsa på om vad Specificitet är.
+Till nästa lektion, läsa på om vad Specificitet är och hur CSS-kaskaden fungerar.

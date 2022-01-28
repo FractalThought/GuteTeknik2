@@ -1,0 +1,55 @@
+---
+title: "CSS i praktiken"
+date: "2022-01-15"
+previous: "css"
+next: "cascading"
+---
+
+Tidigare har vi gått igenom hur CSS fungerar i teorin. Nu ska vi se hur man skapar CSS i praktiken.
+
+Det finns flera sätt att lägga till CSS till ett existerande HTML-dokument. Man kan lägga stilen direkt i ett individuellt element med `style`-attributet på HTML-taggen, använda `<style>`-taggen direkt i HTML-dokumentets `<head>`-tagg, eller genom att länka in en CSS-fil med en `<link>`-tagg i `<head>`-taggen.
+
+
+# style-attributet
+
+Precis som tidigare HTML-attribut så som `src`, `width`, och `alt`, läggs `style`-attributet direkt i en HTML-tagg tillsammans med ett lika-med-tecken (`=`) och två citationstecken (`"`). Inuti citationstecknena läggs värdet på attributet, som i det här fallet är CSS-deklarationer.
+
+Till exempel så här:
+
+```html
+<p style="color: green; ">
+```
+
+Fördelen med style-attributet är att vi alltid vid exakt vad vi stilar (det specifika elementet) och behöver inte använda selektorer. Nackdelen är att vi inte kan ändra till exempel alla element av samma typ och behöver då ge alla de elementen samma värde på style-attributet. Style-attributet har alltid förtur jämfört med alla andra CSS-regler som finns på andra ställen.
+
+<Notice>
+
+Att stila något via style-attributet är något man bör undvika eftersom det bryter mot utvecklingsprinciperna [Separation of Concerns](https://sv.wikipedia.org/wiki/Inkapsling_(Separation_of_Concerns)) och [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), och skapar så kallad [Technical Debt (teknisk skuld)](https://en.wikipedia.org/wiki/Technical_debt).
+
+Dessa principer kan sammanfattas som att HTML-taggar bör endast hantera strukturen på sidan, inte dess utseende/stil (Separation of Concerns), vi bör inte upprepa samma kod (DRY) och bör försöka skapa så generella CSS-regler som möjligt som kan återanvändas. Teknisk skuld kan sammanfattas som att vi gör en snabb lösning som senare kommer betyda att det blir svårare att ändra i framtiden.
+
+</Notice>
+
+# Style-taggen
+
+Style-taggen läggs in i den individuella HTML-dokumentets <head>-tagg. Detta gör att du kan skriva alla regler som det dokumentet ska ha.
+
+<Notice>
+
+Style-taggen är ett effektivt sätt att skapa regler som gäller för endast den specifika sidan, men bör även den undvikas av liknande anledningar som style-attributet; Style-taggen ligger fortfarande i HTML-dokumentet istället för att vara separerad, och den gäller endast för den specifika sidan vilket gör att har du flera sidor så behöver du uppdatera alla dessa ifall du ska byta utseende på sidan.
+
+</Notice>
+
+# Länka in en stilmallsfil med link
+
+Detta är det bästa sättet för att separera stilningen (CSS) från strukturen (HTML) - att ha all din CSS i en egen fil. Stilmallar har filändelsen `.css` och i fall där du endast använder en stilmall (vilket i sig är vanligt för enklare hemsidor) brukar denna namnges `style.css`.
+
+För att länka in en stilmall använder du `<link>`-taggen med två attribut, `rel` och `href`. `rel` ska sättas till `"stylesheet"` för att visa att filen ska användas som en stilmall. `href` används för att visa var filen är. För att detta ska fungera behöver CSS-filen ligga i samma folder som HTML-dokumentet.
+
+`<link>`-taggen ska alltid läggas i `<head>`-taggen.
+
+<Notice>
+
+**Tips:** I VSCode, börja skriva link:css så kommer Emmet Abreviations att föreslå att lägga in en `<link>`-tagg med rel satt till stylesheet och href satt till style.css (`<link rel="stylesheet" href="style.css">`). Tryck på Enter för att bekräfta.
+
+</Notice>

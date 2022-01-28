@@ -2,12 +2,12 @@
 title: "CSS"
 date: "2022-01-15"
 previous: "bilder"
-next: "cascading"
+next: "css_praktiken"
 ---
 
 CSS står för *Cascading Style Sheet* och är ett sätt för oss att ändra utseendet på vår HTML.
 
-HTML bestämmer hur innehållet ska struktureras och hur de olika delarna av innehållet ska presenteras. CSS däremot bestämmer hur sidan ska se ut.
+HTML bestämmer hur innehållet ska struktureras och hur de olika delarna av innehållet ska presenteras. CSS däremot bestämmer hur sidan ska se ut. CSS är inte ett programmeringsspråk som Javascript, och inte heller ett märkspråk som HTML. Istället kallas CSS för stilmallsspråk. Däremot använder CSS flera idéer från både märkspråk och programmeringsspråk för att göra mer avancerade saker.
 
 # Selektorer och deklarationer bildar regler
 
@@ -58,6 +58,32 @@ Deklarationer är i sin tur uppdelad i två delar; *Egenskap* och *Värde*.
 
 **Värdet** är vad egenskapen ska sättas till. Vad detta är, är baserat på egenskapen - för textfärgen kan vi till exempel använda en av 140 fördefinerade webbfärgerna eller ett hexvärde som bestämmer färgen, men för textstorleken och marginalen använder vi ett mått i en bestämd enhet, till exempel pixlar (px), procent (%), eller *em* (ett typografiskt mått som är relativ till typsnittets storlek - i webben är 1em=16px).
 
+# Syntax
+
+CSS använder ett syntax (sätt att strukturera koden) som liknar hur vi hanterar objekt i programmeringsspråk.
+
+- `{}` används för att gruppera deklarationer till dess tillhörande selektor(er).
+- Semikolon (`;`) används för att separera deklarationer från varandra.
+- Vanliga kolon (`:`) används för att separera egenskapen från värde.
+- Om en egenskap kan ta flera värden så separeras dessa vanligtvis med ett kommatecken (`,`). Kommatecken används även för att separera flera selektorer i samma CSS-regel.
+- Därför används en vanlig punkt (`.`) om du ska använda decimaltal till något (tex `1.5pt`).
+
+<Notice>
+
+Kommentarer i CSS skapas med `/* här är en kommentar */`. Allt som läggs mellan `/*` och `*/` tolkas inte av webbläsaren som en del av stilen och kan användas för kommentarer och för inaktivera kod man inte vill använda men också inte ta bort helt.
+
+</Notice>
+
+```css
+/* Selektorerna för p-element och h1-element - separerade med kommatecken för att visa att det är två selektorer */
+p, h1 {
+  color: red; /* Deklaration med egenskapen color (text-färgen) och värdet red (ett standardvärde för Röd färg) */
+  font-size: 30px; /* Deklaration med egenskapen font-size (text-storleken) med värdet 30px (30 pixlar) */
+  font-family: Verdana, Arial, sans-serif; /* Deklaration med egenskapen font-family (typsnitt) där värdena är separerade med kommatecken. */
+  line-height: 1.2; /* Deklaration med egenskapen line-height (linjehöjd) med värdet 1.2 (en siffra som multipliceras med textens storlek) */
+} /* Regelns avslut */
+```
+
 # Exempel
 
 ## HTML
@@ -73,15 +99,14 @@ Deklarationer är i sin tur uppdelad i två delar; *Egenskap* och *Värde*.
 
 ```css
 body {
-  color: hsla(359, 85%, 50%, 1);
+  color: red;
   font-size: 30px;
 }
 ```
 
 ## Resultat
 
-<div style="color: hsla(359, 85%, 50%, 1); font-size: 30px; text-transform: none; text-align:left;">
-<h3 style="color: hsla(359, 85%, 50%, 1); font-size: 30px; text-transform: none; text-align:left;">Lorem Ipsum</h3>
+<div style="color: red; font-size: 30px; text-transform: none; text-align:left;">
+<h3 style="color: red; font-size: 30px; text-transform: none; text-align:left;">Lorem Ipsum</h3>
 <p>Lorem ipsum dolor sit amet.</p>
 </div>
-
