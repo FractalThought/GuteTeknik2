@@ -3,9 +3,11 @@ title: "Strängmanipulation"
 date: "2020-09-01"
 ---
 
-Strängar i programmering kommer från engelska ordet "string", och är en förkortning på "string of characters", alltså en sträng av tecken. En sträng, eller string, är en datatyp i de flesta programmeringsspråk, och innehåller alltså ett antal tecken, vad vi i vanlig mun skulle kalla ett ord eller en mening.
+Strängar i programmering kommer från engelska ordet "string", och är en förkortning på "string of characters", alltså en sträng av tecken. En sträng, eller string, är en datatyp i de flesta programmeringsspråk, och innehåller alltså ett antal tecken, vad vi i vanlig mun skulle kalla ett ord eller en mening, eller helt enkelt *text*.
 
-Strängmanipulation (string manipulation) handlar om att hantera och ändra texter (strängar) och är ett essentiellt verktyg när man hanterar data i form av text. Detta kallas ibland för textformattering, då man ändrar formatet 
+**Strängmanipulation** (*string manipulation*) handlar om att hantera och ändra texter (strängar) och är ett essentiellt verktyg när man hanterar data i form av text. Detta kallas ibland för textformattering, då man ändrar formatet, hur texten är strukturerad. *Textformattering* på svenska brukar dock också användas när vi pratar om att göra text fetmarkerad, ändra storleken, och så vidare i en dokumentredigerare så som **Microsoft Word**.
+
+# Konkatenering
 
 Vi har gjort en grundläggande strängmanipulering redan, när vi lägger ihop texter som vi ska skriva ut i konsolen, så här;
 
@@ -19,10 +21,37 @@ Att lägga ihop strängar så här kallas Konkatenering (concatination på engel
 I JavaScript sker konatenering automatiskt när något värde läggs ihop med en sträng genom plustecknet (+), i andra språk kan du först behöva omvandla värden som inte är strängar till en sträng innan de läggs ihop, och andra språk kan använda ett annat tecken. Exempel på detta är PHP som använder punkt-tecknet (.) för att lägga ihop strängar.
 
 # Strängmetoder
-Det finns många sätt som vi kan använda för att manipulera text. Dessa sker oftast genom användandet av metoder liknande den vi använt för att skriva ut till konsolen (`console.log()`)
+Det finns många sätt som vi kan använda för att manipulera text. Dessa sker oftast genom användandet av metoder liknande den vi använt för att skriva ut till konsolen (`console.log()`). Skillnaden är att vi kör metoden "på variabeln", så här;
 
-# Split
-Split delar upp en sträng i mindre delar.
+```javascript
+let sentence = "Hej På Er Alla!";
+console.log(sentence.toLowerCase()); // Skriver ut "hej på er alla!"
+```
+
+Detta fungerar för *string*, som våra strängvariabler är, är en datatyp som är definierad i javascript och innehåller metoder och egenskaper som vi kan nyttja. datatyp kallas även primitiva värden, datastrukturer, och i javascript kallas det ibland även prototype, men det är ganska avancerat så vi kan hålla oss just nu till att **variabler vi skapar har metoder som vi kan använda**.
+
+För att köra en metod på en variabel, skriv variabelns namn efter du skapat den, och tryck på punkt, följt av metodens namn, följt av parateser och eventuellt ett eller flera argument som ska skickas med.
+
+## Argument
+
+När vi kör en metod har vi möjlighet att skicka med eventuell information som kan behövas eller som kan ändra vad metoden gör. Detta kallas att vi skickar in ett värde som argument till metoden. Begreppet parameter finns också, men vi tar det senare när vi ska skapa våra egna funktioner.
+
+Vi har redan använt argument när vi använt `console.log()`. Den mening vi skickat in mellan paranteserna är ett argument, som för den här metoden är meningen som ska skrivas ut i konsolen.
+
+# Returneringar
+
+String-datatypen i Javascript är så kallad immutable. Vad det innebär är att vi kan inte förändra den via metoder på sig själv. Vi kan sätta om texten med operatorerna `=` och `+=`, men en metod så som `.split()` förändrar inte strängen i sig. Vad den istället gör är att den manipulerar texten och *returnerar* den manipulerade texten.
+
+*Returnering* kan tänkas som att en metod skickar tillbaka ett resultat när den är färdig. Om vi tänker en funktion som ska lägga ihop två värden, så förväntar vi oss att få ett svar från den funktionen, att vi får något i retur. Detta retur är ett värde som vi kan spara i en variabel precis som om vi skulle sätta en varibel till ett fast värde.
+
+För alla strängmetoder nyttjar vi returvärdet för värdet vi vill få ut av att använda metoden. Den ursprungliga variabeln ändras aldrig.
+
+```javascript
+let sentence = "Hej På Er Alla!";
+let allLowerCase = sentence.toLowerCase();
+console.log(allLowerCase); // hej på er alla!
+console.log(sentence); // Hej På Er Alla!
+```
 
 # Substr
 Substr (ska inte förväxlas med metoden substring) gör att vi kan ta ut en del av en sträng med hjälp av en startposition och en längd. Substr är bra att använda när vi vill ta ut ett antal bokstäver från en särskild position.
@@ -110,5 +139,9 @@ console.log("Ordet norr finns på positionerna " + firstIndex + " och " + second
 
 Detta kan vi potentiellt upprepa tills vi inte längre , men det gör vi enklast med en loop.
 
-# Källor
-[Text formatting på Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Text_formatting)
+# Split
+Split delar upp en sträng i mindre delar och lägger den i en array. Man använder en sträng för att dela strängen (till exempel för att dela på ord använder du `" "`, ett mellanslag, som delare). Vi kommer använda arrayer senare, tills vidare behöver du veta att split kan användas för att dela upp en sträng så man kan till exempel skriva ut något ord för ord, eller på annat sätt separera ut värden ur en sträng.
+
+# Läs vidare
+
+På [Mozilla Developer Network finns mer information om text formatting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Text_formatting)
