@@ -20,15 +20,15 @@ Till exempel så här:
 <p style="color: green; ">
 ```
 
-Fördelen med style-attributet är att vi alltid vid exakt vad vi stilar (det specifika elementet) och behöver inte använda selektorer. Nackdelen är att vi inte kan ändra till exempel alla element av samma typ och behöver då ge alla de elementen samma värde på style-attributet. Style-attributet har alltid förtur jämfört med alla andra CSS-regler som finns på andra ställen.
+Fördelen med style-attributet är att vi alltid vet exakt vad vi stilar (det specifika elementet) och behöver inte använda selektorer. Nackdelen är att vi inte kan ändra till exempel alla element av samma typ och behöver då ge alla de elementen samma värde på style-attributet. Style-attributet har alltid förtur jämfört med alla andra CSS-regler som finns på andra ställen.
 
-<Notice>
+<Warning>
 
 Att stila något via style-attributet är något man bör undvika eftersom det bryter mot utvecklingsprinciperna [Separation of Concerns](https://sv.wikipedia.org/wiki/Inkapsling_(Separation_of_Concerns)) och [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), och skapar så kallad [Technical Debt (teknisk skuld)](https://en.wikipedia.org/wiki/Technical_debt).
 
 Dessa principer kan sammanfattas som att HTML-taggar bör endast hantera strukturen på sidan, inte dess utseende/stil (Separation of Concerns), vi bör inte upprepa samma kod (DRY) och bör försöka skapa så generella CSS-regler som möjligt som kan återanvändas. Teknisk skuld kan sammanfattas som att vi gör en snabb lösning som senare kommer betyda att det blir svårare att ändra i framtiden.
 
-</Notice>
+</Warning>
 
 # Style-taggen
 

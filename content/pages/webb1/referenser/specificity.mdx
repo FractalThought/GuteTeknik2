@@ -1,12 +1,139 @@
 ---
-title: "CSS"
+title: "Specificitet"
 date: "2022-01-15"
 previous: "cascading"
 ---
 
+Specificitet är ordningen som **specificerar** vilken regel som har mest inflytande (påverkar stilen) på individuella element. Det som är mer specifikt har mer inflytande än det som är mindre specifikt (_mer generell_).
 
-# Specificity
+Detta fungerar på liknande sätt som kaskaden - regler från olika specificitet läggs ihop till ett utseende. Till skillnad från kaskaden handlar specificiteten inte om det som kommer senast, utan det som är mer specifikt. **Om något i webbläsarens stilmall är mer specifikt än något i författarens stilmall har det alltså företräde.**
 
-*(specifikhet, specificitet)*
+Specificitet bestäms med ett poängsystem där saker mer högre specificitet ges högre poäng. [CSS Tricks har en bra artikel som förklarar grunderna i poängsystemet](https://css-tricks.com/specifics-on-css-specificity/). Ifall två regler har samma specificitetspoäng så fixar kaskaden så att det som kommer senast har prioritet.
 
-Specificitet är ordningen som **specificerar** vilken regel som har inflytande (påverkar stilen). Det som är mer specifikt har större inflytande än det som är mindre specifikt (_mer generell_).
+För att skapa mer specifika regler använder vi olika typer av **Selektorer** och **Kombinerare**. Vi kommer gå igenom universiella selektorn, typselektorn, arv-kombinator, child-kombinator, samt selektorerna Klass och ID. [MDN Docs har en genomgående lista om alla typer av selektorer](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors). De har dessutom en [introduktionsguide till selektorer](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors).
+
+```css
+h1 {
+    color: red;
+    font-size: 24px;
+}
+
+.specific-heading {
+    color: green;
+}
+
+/*
+    h1-taggar kommer bli röda med 24px i textstorlek.
+    h1-taggar med klassen specific-heading kommer bli gröna med 24px i textstorlek.
+*/
+```
+
+# Universiella selektorn
+
+\* används för att välja *Alla* element. Detta är en väldigt generell selektor och har därför väldigt låg poäng. Därför kan det vara att om du använder universiella selektorn i din författarstilmall så har webbläsaren regler som är mer specifika för vissa element som därför har prioritet.
+
+```css
+* {
+    color: red;
+    font-size: 24px;
+}
+```
+
+# Typselektorn
+
+Även kallad elementselektorn eftersom den väljer utifrån element. Så `h1` väljer alla h1-element i HTML-dokumentet.
+
+```css
+/* Alla h1-taggar ska bli röda */
+h1 {
+    color: red;
+}
+```
+
+# Kombinatorer
+
+En kombinator används för att kombinera två selektorer för att öka specifikheten för regeln. De går alltså mellan två selektorer, och bestämmer relationen dessa två selektorer har till varandra.
+
+<Notice>
+
+Kombinatorer ger i sig själva låga poäng i specificitet, men eftersom alla poäng läggs ihop så blir selektorer med kombinatorer mer specifika än endast selektorer.
+
+</Notice>
+
+## Arv-kombinatorn (decendant combinator)
+
+Denna kombinatorn används för att välja allt som finns i den första selektorn som matchar den andra selektorn.
+
+Tecknet för arv-kombinatorn är ett mellanslag (` `).
+
+```css
+/* Alla em-element som finns inuti ett div-element */
+div em {
+    color: green;
+}
+```
+
+```html
+<div>
+    <p>Detta blir inte stilat.<em>Detta blir stilat.</em></p>
+</div>
+```
+
+
+## Child-kombinatorn
+
+Även kallad Direct Descendant Combinator (direkta arvstagarkombinator) och fungerar på samma sätt som arv-kombinatorn men istället för att ta allt som finns så väljer den endast det som är direkt 
+
+Tecknet för child-kombinatorn är `>`.
+
+```css
+/* Alla p-element som är direkt i ett div-element */
+div>p {
+    margin: 1.5em;
+}
+```
+
+```html
+<div>
+    <p>Detta blir stilat.<em>Detta blir inte stilat.</em></p>
+    <p>Detta blir stilat.<em>Detta blir inte stilat.</em></p>
+    <span>
+        <p>Detta blir inte stilat.</p>
+    </span>
+</div>
+```
+
+<Notice>
+
+Universiella selektorn är vanlig att använda tillsammans med kombinatorer för att välja *"alla element som finns inuti denna selektorn"*.
+
+</Notice>
+
+# ID
+
+ID är den starkaste selektorn som finns i CSS. Den väljer det enda elementet som har attributet ID med värdet som matchar ID't vi väljer.
+
+ID-selektorn använder tecknet `#` tillsammans med namnet på IDt. Så här;
+
+```css
+#intro {
+    color: blue;
+}
+```
+
+Och väljer alltså elementet med ID-attributet vars värde matchar.
+
+```html
+<p id="intro">Detta stilas.</p>
+<p>Detta stilas inte.</p>
+```
+
+<Warning>
+
+Du kan ha flera element med olika IDn, men ett element kan bara ha ett ID, och det kan bara finnas ett element med ett specifikt ID på en sida. **Du kan alltså inte ha två eller fler element med samma ID**.
+
+</Warning>
+
+# Class
+
+Class är den näst mest specifika selektorn i sig själv (efter ID), men är mer specifik än typ/elementselektorn. Till skillnad från IDn kan ett element ha flera klasser, och flera element kan ha samma klass. Detta gör Klass-selektorn väldigt användbar.
