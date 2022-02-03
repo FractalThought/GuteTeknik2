@@ -5,21 +5,72 @@ date: "2022-02-03"
 
 Dessa övningar har som syfte att öva dig i att nyttja CSS-kaskaden och Specificiteten.
 
-Att testa:
-- Kaskad
-- Class
-- Flera Class
-- ID
-- Decendant selector
-- Kombinerad selektor
-
 # Förberedelser
 
 Skapa ett HTML-dokument som heter `css_spec.html`. Lägg in grunden till sidan på samma sätt som vi gjort tidigare (med ! och Enter-tangenten) och ge dokumentet titeln *CSS spec*.
 
-# 1: Någonting att stila
+## Någonting att stila
 
 Kopiera följande HTML-kod och lägg den i din body-tagg.
+
+```html
+<h1>Mighy Nein</h1>
+    <p>
+      <a href="https://criticalrole.fandom.com/wiki/Mighty_Nein"
+        >The Mighty Nein</a
+      >
+      was an adventuring party based in Wildemount.
+    </p>
+    <h2>Members:</h2>
+    <ul>
+      <li class="monk">Beauregard Lionett</li>
+      <li class="cleric">Caduceus Clay</li>
+      <li class="wizard">Caleb Widogast</li>
+      <li class="warlock paladin">Fjord</li>
+      <li class="cleric">Jester Lavorre</li>
+      <li class="blood-hunter">Mollymauk Tealeaf</li>
+      <li class="rogue wizard">Veth Brenatto</li>
+      <li class="barbarian">Yasha Nydoorin</li>
+    </ul>
+
+    <h2>Sample characters:</h2>
+    <div id="caleb">
+      <h2>Caleb Widogast</h2>
+      <p class="intro">
+        Caleb Widogast, born Bren Aldric Ermendrud, is a human wizard.
+      </p>
+      <p>
+        Caleb is reserved, not wanting to draw too much attention to himself or
+        his companion Nott. He showed little interest in the secrets of people
+        besides Nott, hoping to avoid answering questions about himself. Caleb's
+        generally dour and isolated manner morphs into an open and jubilant mood
+        upon purchasing new books. He does not consider himself to be remotely
+        brave.
+      </p>
+      <h3>Feats</h3>
+      <ul>
+        <li>Keen Mind</li>
+        <li><strong>Skilled</strong> (Perception, Intimidation, Persuasion)</li>
+        <li>War Caster</li>
+      </ul>
+    </div>
+    <div id="jester">
+      <h2>Jester Lavorre</h2>
+      <p class="intro">Jester Lavorre is a tiefling cleric of the Traveler.</p>
+      <p>
+        Jester is excitable and eager. According to Molly (and herself),
+        everyone tells her that she is pure of virtue, worthwhile, and a
+        creature of some repute. She delights in small acts of mischief and
+        trickery and can be plied with offerings of pastries.
+      </p>
+      <h3>Tiefling Abilities</h3>
+      <ul>
+        <li>Darkvision</li>
+        <li><strong>Hellish Resistance</strong> (<em>Cold Resistance</em>)</li>
+        <li>Infernal Legacy</li>
+      </ul>
+    </div>
+```
 
 <Notice>
 
@@ -30,50 +81,50 @@ Ovanstående kod innehåller tre nya typer av element;
 
 </Notice>
 
-# 2: Style-taggen
+# Style-taggen
 
 I `<head>`-taggen, skapa en `<style>`-tagg. Det är i denna taggen du ska skriva all din CSS. **I den här övningen ska du inte skriva någon HTML-kod alls, endast CSS**.
 
-# 3: Stilandet
+# Stilandet
 
-Följ dessa instruktioner om hur hemsidan ska stilas.
+Följ dessa instruktioner för hur hemsidan ska stilas.
 
-### Stila så all text på sidan använder följande deklaration:
+### 1. Stila så all text på sidan använder följande deklaration:
 
 ```css
 {font-family: Verdana, Arial, sans-serif;}
 ```
 
-### Ge alla element med klassen intro följande deklaration:
+### 2. Ge alla element med klassen intro följande deklaration:
 
 ```css
 {font-weight: bold;}
 ```
 
-### Stila endast diven som innehåller information om Caleb med följande deklaration:
+### 3. Stila endast diven som innehåller information om Caleb med följande deklaration:
 
 ```css
 {background: lightcoral;}
 ```
 
-### Gör samma för diven som innehåller information om Jester, men låt bakgrundsfärgen vara `lightblue` istället.
+### 4. Gör samma för diven som innehåller information om Jester, men låt bakgrundsfärgen vara `lightblue` istället.
 
 
-### Stila alla paragrafer som ligger direkt i body-taggen med följande deklaration:
+### 5. Stila alla paragrafer som ligger direkt i body-taggen med följande deklaration:
 
 ```css
     {font-style: italic;}
 ```
 
-### Stila alla paragrafer som ligger i caleb och jester-divarna med följande deklarationer:
+### 6. Stila alla paragrafer som ligger i caleb och jester-divarna med följande deklarationer:
 
 ```css
 {color: indigo;}
 ```
 
-### Varje medlem i medlemslistan har en klass, förutom Fjord och Veth som har två klasser.
+### 6. Varje medlem i medlemslistan har en klass, förutom Fjord och Veth som har två klasser.
 
-Stila klasserna **wizard**, **warlock**, **paladin**, och **rogue** (i den ordningen) med varsin färg. **Notera vilken färg karaktärens namn får.**
+Stila klasserna **wizard**, **warlock**, **paladin**, och **rogue** (i den ordningen) med varsin valfri färg. **Notera vilken färg karaktärens namn får.**
 
 # Inlämning
 
