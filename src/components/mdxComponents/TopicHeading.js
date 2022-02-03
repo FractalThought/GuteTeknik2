@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { MainContext } from "../hooks/MainContext";
 import styled from "styled-components";
 
-const Heading = styled.h1`
+const Heading = styled.h2`
   position: relative;
 
   a {

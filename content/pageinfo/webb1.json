@@ -20,6 +20,11 @@
           "title": "CSS-introduktion",
           "link": "css_intro",
           "type": "exercise"
+        },
+        {
+          "title": "CSS-introduktion",
+          "link": "css_spec",
+          "type": "exercise"
         }
       ],
       "references": [
@@ -54,12 +59,12 @@
           "type": "lesson"
         },
         {
-          "title": "Kaskadande stil",
+          "title": "CSS-kaskaden",
           "link": "cascading",
           "type": "lesson"
         },
         {
-          "title": "specificitet",
+          "title": "Specificitet",
           "link": "specificity",
           "type": "lesson"
         }

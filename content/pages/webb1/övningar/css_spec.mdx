@@ -1,0 +1,71 @@
+---
+title: "CSS: Kaskad och specificitet"
+date: "2022-02-03"
+---
+
+Dessa övningar har som syfte att öva dig i att nyttja CSS-kaskaden och Specificiteten.
+
+Att testa:
+- Kaskad
+- Class
+- Flera Class
+- ID
+- Decendant selector
+- Kombinerad selektor
+
+# Förberedelser
+
+Skapa ett HTML-dokument som heter `css_spec.html`. Lägg in grunden till sidan på samma sätt som vi gjort tidigare (med ! och Enter-tangenten) och ge dokumentet titeln *CSS spec*.
+
+# 1: Någonting att stila
+
+Kopiera följande HTML-kod och lägg den i din body-tagg.
+
+<Notice>
+
+Ovanstående kod innehåller tre nya typer av element;
+- **div**: Divider, används för att gruppera element tillsammans för stilning.
+- **li**: List item, listobjekt. I en punktlistan är ett list item en enskild punkt.
+- **ul**: Unordered list (punktlista), en behållare för list items. Visar vilka listobjekt som tillhör vilken lista.
+
+</Notice>
+
+# 2: Style-taggen
+
+I `<head>`-taggen, skapa en `<style>`-tagg. Det är i denna taggen du ska skriva all din CSS.
+
+# 3: Färgade paragrafer
+
+Lägg till en regel för att stila dina paragrafer med en valfri färg. Använd selektorn `p`, egenskapen `color`, och en valfri färg som värde (tänk på att använda engelska färgnamn - VSCode kommer hjälpa dig med förslag).
+
+# 4: Stilade rubriker
+
+Stila nu dina rubriker h1 och h2 med följande deklarationer:
+
+```css
+font-size: 32px;
+font-family: Verdana, Arial, sans-serif;
+color: #444444;
+```
+
+Försök använda en enda CSS-regel för att stila både h1 och h2-taggarna genom att använda flera selektorer i samma regel.
+
+Notera vad som ändras och skriv i kommentarer (`/**/`) vad deklarationerna gör.
+
+# 5: Body-taggen
+
+Body-taggen kan stilas på många olika sätt. Till att börja med, testa att ändra bakgrundsfärgen med egenskapen `background`.
+
+# 6: Stila em och strong
+
+Stila dina em-taggar och strong-taggar med valfria deklarationer. Läs på [MDN Web Docs om Fundamental text and font styling](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals) för tips på vad du kan stila. Tips: Du kan också stila deras bakgrundsfärger.
+
+# Inlämning
+
+När du är klar, ladda upp HTML-dokumentet till kursens portfolio på SchoolSoft.
+
+# Vad kommer sen?
+
+Under de kommande lektionerna kommer vi arbeta mer med CSS och specificitet, samt med **layout** med hjälp av **Flexbox** som är en del av CSS.
+
+Till nästa lektion, läsa på om vad Specificitet är och hur CSS-kaskaden fungerar.
