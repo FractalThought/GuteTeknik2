@@ -20,6 +20,11 @@
           "title": "CSS-introduktion",
           "link": "css_intro",
           "type": "exercise"
+        },
+        {
+          "title": "CSS-introduktion",
+          "link": "css_spec",
+          "type": "exercise"
         }
       ],
       "references": [

@@ -37,3 +37,7 @@ Denna typ av stilmall är minst vanligt och syftar till en egen stilmall som anv
 CSS kaskadar även i fall där regler sätts på samma nivå (till exempel två stilmallar på författarnivå, eller  inuti en enskild stilmall). Då överskrivs regler som kommer före av regler som kommer efter. Dessutom används [specificitet](/webb1/referenser/specificitet) mer för att styra hur element ska stilas.
 
 Generellt sett bör man försöka upprepa sig så lite som möjligt i programmering, detta gäller även i CSS. Så även fast kaskaden fixar så det blir rätt, tänk på att undvika regler som överskriver varandra i samma stilmall.
+
+# Ärvda egenskaper
+
+Vissa egenskaper i CSS ärvs vidare till element som ligger i det element vi stilar. Dessa värden kallas *inherited properties* och gäller framförallt de flesta text-attribut (font-size, color). Till exempel kommer en em-tagg som ligger i en p-tagg som vi satt text-färgen till `green` också att vara grön, därför att em-taggen ärver color-egenskapens värde från paragraf-taggen den ligger i. Läs mer om [Inheritance (arv) på MDN Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance).
