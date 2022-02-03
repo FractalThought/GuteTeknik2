@@ -134,6 +134,56 @@ Du kan ha flera element med olika IDn, men ett element kan bara ha ett ID, och d
 
 </Warning>
 
-# Class
+# Klass
 
-Class är den näst mest specifika selektorn i sig själv (efter ID), men är mer specifik än typ/elementselektorn. Till skillnad från IDn kan ett element ha flera klasser, och flera element kan ha samma klass. Detta gör Klass-selektorn väldigt användbar.
+Klass (eller class) är den näst mest specifika selektorn i sig själv (efter ID), men är mer specifik än typ/elementselektorn. Den fungerar på liknande sätt som ID i att den väljer ett element vars attribut `class` matchar klassnamnet i CSS. Till skillnad från IDn kan ett element ha flera klasser, och flera element kan ha samma klass. Detta gör Klass-selektorn väldigt användbart när vi vill strukturera och återanvända kod.
+
+Klass använder tecknet `.` och sedan klassnamnet, och påverkar element som har klassnamnet som värde på class-attributet, så här;
+
+```css
+.green-text {
+    color: green;
+}
+```
+
+```html
+<p class="green-text">Detta blir stilat!</p>
+<p>Detta blir inte stilat. <em class="green-text">Detta blir stilat!</em></p>
+```
+
+## Flera klasser på samma element
+
+HTML-attributet `class` kan ha flera klasser. Dessa är då separerade med ett mellanslag, så här;
+
+```html
+<p class="big-text green-text">Denna texten är både stor och grön!</p>
+```
+
+<Notice>
+
+Observera att om två eller fler klasser har samma specificitet och ändrar samma egenskaper (till exempel text-färg), då träder kaskaden in och det blir den klass som är definierad senast som får effekt.
+
+</Notice>
+
+# Kombinera selektorer och kombinatorer
+
+Styrkan i CSS-specificitet ligger i att kunna kombinera selektorer och att regler kan sättas både väldigt generellt, eller väldigt specifikt. Vi kan till exempel säga "alla paragrafer som har klassen `big` och ligger direkt i diven med ID't `warning` ska ha vit text", så här;
+
+```css
+#warning > p.big {
+    color: white;
+}
+```
+
+Det gör att vi kan ha paragrafer som inte blir vita, för de inte har klassen `big`, och alla paragrafer som har klassen `big` men inte ligger i diven med ID't `warning` blir inte heller vita.
+
+```html
+<div id="warning">
+    <p class="big">Blir stilad.</p>
+    <p>Blir inte stilad.</p>
+</div>
+
+<p class="big">Blir inte stilad.</p>
+```
+
+Tillsammans med kaskaden möjliggör specificiteten att vi kan bestämma exakt hur vår sida ska se ut utan att behöva upprepa oss i oändlighet.
