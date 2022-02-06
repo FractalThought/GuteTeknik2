@@ -34,7 +34,6 @@ body {
   text-rendering: optimizelegibility !important;
 }
 
-ul,
 h1,
 h2,
 h3,
@@ -90,7 +89,8 @@ a:hover {
 
 ul,
 ol {
-  margin-left: 1rem;
+  margin: var(--base);
+  margin-right: 0;
 }
 
 p {
