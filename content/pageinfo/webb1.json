@@ -67,6 +67,11 @@
           "title": "Specificitet",
           "link": "specificity",
           "type": "lesson"
+        },
+        {
+          "title": "Flexbox",
+          "link": "flexbox",
+          "type": "lesson"
         }
       ],
       "references": [
