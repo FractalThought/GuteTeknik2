@@ -1,0 +1,20 @@
+---
+title: "Hämta input från HTML till JavaScript"
+date: "2022-03-18"
+---
+
+Med input-element kan vi låta användaren skriva in eller välja värden av olika slag och hämta dessa värden till vår kod.
+
+# Vilka inputs?
+
+Input är en särskild typ av element i HTML som har med användarens input att göra. Det finns många olika typer, så som number, textarea, combobox, checkbox, osv. Default är ett vanligt enkelt textfält.
+
+<Warning>
+
+**Behandla användaren som inkompetent. **Om du ber om ett nummer och inte har några checkar på om användaren faktiskt skriver in ett nummer så kan det leda till oönskade effekter på din kod.
+
+</Warning>
+
+Behandla användarens input som farligt. Du bör göra en check på vad användaren faktiskt skickar in så att du inte råkar låta användaren skriva in vad som helst (inklusive sina egna HTML-taggar) i din kod, och använd `.innerText` istället för `.innerHTML` så att användaren inte kan injicera sin egen HTML-kod.
+
+</Warning>
