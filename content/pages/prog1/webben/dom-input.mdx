@@ -9,6 +9,61 @@ Med input-element kan vi låta användaren skriva in eller välja värden av oli
 
 Input är en särskild typ av element i HTML som har med användarens input att göra. Det finns många olika typer, så som number, textarea, combobox, checkbox, osv. Default är ett vanligt enkelt textfält.
 
+# Textfält
+
+Textfält, eller text field (även kallad single line text field) används för att hämta en bit text från användaren i en rad.
+
+<input type="text" id="name" name="name" value="my default value">
+
+```html
+
+<input type="text" id="name" name="name" value="my default value">
+
+```
+
+Istället för text kan vi använda password som type vilket har som enda effekt att dölja texten för användaren. I övrigt är textfälten likadana.
+
+Värdet vi hämtar från ett textfält hanteras som en sträng.
+
+# Label
+
+Taggen **label** används tillsammans med attributet _for_ för att sätta en etikett på ett inputelement. Etiketten blir länkad till inputelementet vars _id_-attribut matchar etikettens _for_-attribut.
+
+```html
+
+<label for="name">Namn:</label>
+<input type="text" id="name" value="my default value">
+
+```
+
+# Textarea
+
+Textarea, även kallad multi-line text field, är ett stort textfält som har flera rader. Den är till för att
+
+Skillnaden generellt är att textarea gör att man ......................
+# Checkbox
+
+En Checkbox ger oss en ruta som en användaren kan fylla/kryssa (check) i.
+
+```html
+
+<label for="member">Är du medlem?</label>
+<input type="checkbox" id="member">
+
+```
+
+Värdet vi får från en checkruta är om den är ifylld/ikryssad (checked) eller inte. Vill vi att rutan ska vara ikryssad lägger vi till attributet _checked_ till elementet.
+
+# Radio
+
+Radio liknar checkbox, men skapar en rund ruta som gör att man kan välja en eller två saker
+
+# Select
+
+
+
+[MDN: Olika input](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
+
 <Warning>
 
 **Behandla användaren som inkompetent. **Om du ber om ett nummer och inte har några checkar på om användaren faktiskt skriver in ett nummer så kan det leda till oönskade effekter på din kod.
