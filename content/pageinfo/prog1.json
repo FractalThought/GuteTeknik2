@@ -283,6 +283,11 @@
           "title": "Introduktionsuppgiften",
           "link": "intro",
           "type": "project"
+        },
+        {
+          "title": "App-idéer",
+          "link": "appideas",
+          "type": "exercise"
         }
       ],
       "references": [
