@@ -224,9 +224,9 @@
           "type": "lesson"
         },
         {
-          "title": "Coola namnlistan",
-          "link": "coola-namnlistan",
-          "type": "project"
+          "title": "Input och värden",
+          "link": "dom-input",
+          "type": "lesson"
         }
       ],
       "references": [

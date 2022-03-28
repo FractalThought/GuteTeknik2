@@ -11,11 +11,11 @@ Input är en särskild typ av element i HTML som har med användarens input att 
 
 Input-elementet har diverse olika attribut förutom type. Vissa av dessa är specifika till den typen av input (till exempel _checked_, _length_, och _placeholder_), och andra hanterar generella funktionaliteten (till exempel _disabled_, _required_ och _name_).
 
+[Se MDN för mer info om olika Input-element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
+
 # Textfält
 
 Textfält, eller text field (även kallad single line text field) används för att hämta en bit text från användaren i en rad.
-
-<input type="text" id="name" value="my default value">
 
 ```html
 
@@ -23,11 +23,18 @@ Textfält, eller text field (även kallad single line text field) används för 
 
 ```
 
+```javascript
+
+let memberName = document.getElementById("name").value;
+console.log("Name of the member is: " + memberName);
+
+```
+
 **Värdet vi hämtar från ett textfält hanteras som en sträng.**
 
 Istället för text kan vi använda password som type vilket har som enda effekt att dölja texten för användaren. I övrigt är textfälten likadana.
 
-Det finns även mer specifika textfält som ger information om vad för typ av information som ska skrivas in. Beteendet är dock upp till webbläsaren att implementera. Exempel på dessa är;
+Det finns andra specifika textfält som ger mening (semantik) om vad för typ av information som ska skrivas in. Beteendet är dock upp till webbläsaren att implementera. Exempel på dessa är;
 - **Number**: Endast siffror ska matas in.
 - **Tel**: Telefonnummer ska matas.
 - **Email**: Email ska matas in.
@@ -44,7 +51,6 @@ Taggen **label** används tillsammans med attributet _for_ för att sätta en et
 <input type="text" id="name" value="my default value">
 
 ```
-
 # Checkbox
 
 En Checkbox ger oss en ruta som en användaren kan fylla/kryssa (check) i.
@@ -57,6 +63,15 @@ En Checkbox ger oss en ruta som en användaren kan fylla/kryssa (check) i.
 ```
 
 Värdet vi får från en checkruta är om den är ifylld/ikryssad (checked) eller inte. Vill vi att rutan ska vara ikryssad lägger vi till attributet _checked_ till elementet.
+
+```javascript
+
+let isMember = document.getElementById("member").value;
+if(isMember) {
+    console.log("Användaren är medlem.");
+}
+
+```
 
 # Radio
 
@@ -82,32 +97,40 @@ console.log(fakturaValue); // Antingen epost (default) eller brev
 
 ```
 
-
-
 # Textarea
 
-Textarea, även kallad multi-line text field, är ett stort textfält som har flera rader och är till för att skriva längre texter. Syntaxen för Textarea skiljer sig från input
+Textarea, även kallad multi-line text field, är ett stort textfält som har flera rader och är till för att skriva längre texter. Syntaxen för Textarea skiljer sig från Input-element eftersom Textarea är ett eget element med en egen tagg och attribut. Främsta skillnaden är att innehållet i en textarea hamnar mellan taggarna, men värdet går fortfarande att kommas åt med `.value`.
 
 ```html
 
-<textarea></textarea>
+<textarea id="freetext">Detta landar i .value</textarea>
+
+```
+
+```javascript
+
+let freeText = document.getElementById("freetext").value;
+console.log(freeText);
 
 ```
 
 # Select
 
+Elementet **Select** används tillsammans med flera **Option** element för att bilda en så kallad _drop-down list_ som låter användaren välja ett värde från en lista av flera alternativ. Select-elementet kapslar in Option-elementen. Värdet hämtas med `.value` och blir satt till värdet på den option som användaren valt.
 
+```html
+<label for="country">Välj ett land: </label>
+<select id="country">
+    <option value="Sverige">Sverige</option>
+    <option value="Danmark">Danmark</option>
+    <option value="Finland">Finland</option>
+</select>
 
+```
 
+```javascript
 
-[MDN: Olika input](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
+let country = document.getElementById("country").value;
+console.log("Country: " + country);
 
-<Warning>
-
-**Behandla användaren som inkompetent. **Om du ber om ett nummer och inte har några checkar på om användaren faktiskt skriver in ett nummer så kan det leda till oönskade effekter på din kod.
-
-</Warning>
-
-Behandla användarens input som farligt. Du bör göra en check på vad användaren faktiskt skickar in så att du inte råkar låta användaren skriva in vad som helst (inklusive sina egna HTML-taggar) i din kod, och använd `.innerText` istället för `.innerHTML` så att användaren inte kan injicera sin egen HTML-kod.
-
-</Warning>
+```
