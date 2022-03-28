@@ -1,18 +1,12 @@
-# Tabeller och designmönster
-
-På eftermiddagen ska vi lägga till en sida till vår Recept-hemsida. På den ska vi lägga in en tabell, och vi ska länka ihop båda sidorna.
-
-Läs upp om [tabeller på MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table).
-
-### Tabeller
+# Tabeller
 
 Tabeller använder vi för att presentera data som vi inte kan presentera med en lista eller en paragraf. De är uppbyggda av kolumner och rader, och ger en god struktur till presentationen.
 
-#### ~~Tabeller som struktur~~
+# ~~Tabeller som struktur~~
 
 Läser man gamla hemsidor om att skapa struktur i HTML så finns risken att man hittar exempel på hur man använder tabeller för att skapa en layout på en hemsida. **Detta är fel**. Tabeller ska endast användas för att presentera data.
 
-#### Använda tabeller
+# Använda tabeller
 
 En tabell skapar vi med table, tr, th, och td-taggarna. Man kan också använda thead och tbody för att dela upp tabellens delar.
 
@@ -42,19 +36,19 @@ En tabell skapar vi med table, tr, th, och td-taggarna. Man kan också använda 
 ```
 
 Resultatet blir följande:
-|Namn|Alter ego|Färger|
-|---|---|---|
-|Iron Man|Tony Stark|Guld, Röd|
-|Captain America|Steve Rogers|Röd, Vit, Blå|
-|Spider-man|Peter Parker|Röd, Blå, Svart, Vit|
+| Namn            | Alter ego    | Färger               |
+| --------------- | ------------ | -------------------- |
+| Iron Man        | Tony Stark   | Guld, Röd            |
+| Captain America | Steve Rogers | Röd, Vit, Blå        |
+| Spider-man      | Peter Parker | Röd, Blå, Svart, Vit |
 
 Här har vi en tabell som förklarar vad varje tagg i ett element gör (#meta):
-|Tagg|Förklaring|
-|---|---|
-|table|Hållare för hela tabellen|
-|tr|Tabellens rad|
-|th|Kolumnen (eller radens) huvud/titel. Används för att visa en uppdelning|
-|td|Själva cellen i en tabell|
+| Tagg  | Förklaring                                                              |
+| ----- | ----------------------------------------------------------------------- |
+| table | Hållare för hela tabellen                                               |
+| tr    | Tabellens rad                                                           |
+| th    | Kolumnen (eller radens) huvud/titel. Används för att visa en uppdelning |
+| td    | Själva cellen i en tabell                                               |
 
 En tabell kan vi dela upp i **thead**, **tbody**, och **tfoot**.
 
