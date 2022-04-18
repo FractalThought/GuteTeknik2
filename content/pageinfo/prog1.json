@@ -288,6 +288,16 @@
           "title": "App-idéer",
           "link": "appideas",
           "type": "exercise"
+        },
+        {
+          "title": "Måttkonverterare",
+          "link": "mattkonverterare",
+          "type": "exercise"
+        },
+        {
+          "title": "Nummergissning",
+          "link": "nummergissning",
+          "type": "exercise"
         }
       ],
       "references": [

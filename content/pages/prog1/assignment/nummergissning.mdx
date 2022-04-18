@@ -1,0 +1,35 @@
+---
+title: "Nummergissning"
+date: "2022-04-18"
+---
+
+
+Ett enkelt spel som går ut på att gissa en siffra. Spelet slumpar en siffra mellan 1 och 50 och spelaren skriver in en gissning i ett 
+
+Spelet säger om det är rätt eller fel. Om det är fel får du gissa igen och du får veta om siffran du gissade var högre eller lägre än den rätta siffran.
+
+# Base:
+
+[Direktlänk till projektfilen](https://raw.githubusercontent.com/FractalThought/TektalLabs/main/Prog1/toy-projects/nummergissning.html)
+
+Projektet börjar med allt gränssnitt inlagt och elementen bundna till skriptet och knappen event-bunden till en funktion, samt koden för att generera ett slumpmässigt nummer. I gränssnittet finns följande:
+
+- Ett number-input för spelarens gissning samt en label till denna som säger vad fältet är till för.
+- En knapp för att skicka in gissningen.
+- En paragraf där ett meddelande kan skrivas till användaren (tips om numret är högre eller lägre, eller meddelande att gissningen var rätt).
+
+# Todo:
+
+Du behöver skriva koden som hämtar spelarens gissning och jämför den med det rätta svaret då två saker kan hända:
+
+- Om det är fel ska koden kolla om det rätta svaret är högre eller lägre än gissningen, och skriva ut ett tips i meddelande-paragrafen som hjälper spelaren (till exempel “numret är högre/lägre”).
+- Om det är rätt ska koden skriva ut meddelande-paragrafen att gissningen var rätt.
+
+# Improve:
+
+När du är färdig med grunden kan du fortsätta och förbättra projektet. Här följer några förslag på saker du kan göra:
+
+- Lägg till en variabel som räknar hur många gissningar spelaren har gjort. Visa detta i gränssnittet på något sätt (till exempel i meddelandet; “Du har gissat # gånger”).
+- Spara varje gissning i en lista så spelaren vet vilka siffror denne har gissat på. Spelet skulle också kunna använda en emoji (⬇⬆) eller text som säger om gissningen var högre eller lägre än det rätta svaret.
+- Skapa en reset-knapp och gör så att spelet går att återställa (generera ny siffra, återställa alla värden).
+- Förbättra användargränssnittet med CSS och Javascript - till exempel försök ta bort knappen och skapa koden så att man istället ska trycka på Enter-knappen för att skicka in sin gissning.
