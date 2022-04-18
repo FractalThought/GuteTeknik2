@@ -1,0 +1,49 @@
+---
+title: "Måttkonverterare"
+date: "2022-04-18"
+---
+
+En måttkonverterare är vanligt att se på receptsidor, för att konvertera till exempel Fahrenheit till Celsius, eller Mjöl i deciliter till vikt.
+
+De består av en input där användaren kan skriva in det mått de vill konvertera, och ett output där skriptet ska visa resultatet (det konverterade måttet). Slutligen behöver den något som startar konverteringen, till exempel en knapp.
+
+# Base:
+
+[Direktlänk till projektfilen](https://raw.githubusercontent.com/FractalThought/TektalLabs/main/Prog1/toy-projects/mattkonverterare.html)
+
+Projektfilen innehåller grunden för ett HTML-dokument och följande:
+
+- En h1-tagg som
+- En h2-tagg där du ska skriva vilket mått som ska konverteras till vilket annat mått (ersätt texten som redan står).
+- En div där du ska lägga in alla element för applikationen.
+
+# Todo:
+
+- Skapa ett inputfält så användaren kan skriva in numret som ska konverteras. Du kan med fördel använda ett inputfält med typen “number”.
+- Välj vilket mått som du ska konvertera (till exempel Fahrenheit till Celsius). Kolla upp formeln (uträkningen) för denna och skriv den i en kommentar i ditt skript.
+- Uppdatera h1-taggen med förklaring på vilket mått du konverterar till vilket mått.
+- Skapa tagg för ditt output. Du kan med fördel använda taggen <output>.
+- Bind elementen till ditt skript (document.getElementById).
+- Skapa en funktion som hämtar värdet från ditt input-element, konverterar värdet med formeln för måttkonverteringen, och slutligen sätter värdet på ditt output-element till det konverterade värdet.
+- Bind funktionen till din knapp (addEventListener).
+- Testa appen! Din app fungerar om du kan:
+    - Skriva in ett mått
+    - Trycka på knappen
+    - Få ut det konverterade måttet när du trycker på knappen
+
+# Improve:
+
+När du är färdig med grunden kan du fortsätta och förbättra projektet. Här följer några förslag på saker du kan göra:
+
+- Lägg till en label till ditt inputfält och förbättra ditt gränssnitt generellt (till exempel lägg till en beskrivning, kanske visa uträkningen som konverteringen gör, och liknande - eller förbättra utseendet med CSS).
+- Att klicka på en knapp för att göra en konvertering är såå 2000. Förbättra användarupplevelsen genom att göra konverteringen när man trycker på Enter-knappen. Alternativt gör att konverteringen görs automatiskt när användaren skriver in siffrorna.
+- Lägg till funktionalitet för att kunna vända konverteringen (till exempel istället för Fahrenheit till Celsius konverterar man Celsius till Fahrenheit). Du kan använda en knapp som växlar, radioknappar, en checkruta, eller annat. Uppdatera dessutom din kod så att konverteringen faktiskt blir omvänd.
+    - Förbättra detta ytterligare genom att ändra texten i ditt användargränssnitt så det tydligt visar vilken konvertering som görs.
+
+# Hjälpmaterial:
+
+[https://www.konvertera.nu/](https://www.konvertera.nu/)
+
+[https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById)
+
+[https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
