@@ -249,6 +249,23 @@
       ]
     },
     {
+      "title": "Planering",
+      "link": "planering",
+      "pages": [
+        {
+          "title": "Pseudokod",
+          "link": "pseudokod",
+          "type": "lesson"
+        }
+      ],
+      "references": [
+        {
+          "title": "Begrepp",
+          "link": "begrepp"
+        }
+      ]
+    },
+    {
       "title": "Unity",
       "link": "unity",
       "pages": [

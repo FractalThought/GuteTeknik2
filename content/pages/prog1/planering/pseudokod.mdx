@@ -1,0 +1,89 @@
+---
+title: "Pseudokod"
+date: "2022-05-30"
+---
+
+Pseudo är latin för "*skenbar*", ibland även kallad *fusk* eller *fake*. Ordet används till exempel för pseudovetenskap som då menar "inte riktig forskning". Astrologi (konsten att tyda stjärntecken) är ett exempel på pseudovetenskap.
+
+# Vad är pseudokod?
+Pseudokod är ett sätt för oss att beskriva algoritmer/kod. Det är inte specifikt för något programmeringsspråk och kan tänkas som en brygga mellan ett programmeringsspråk och mänskligt språk.
+
+
+```javascript
+/*
+    rightAnswer = random(1-10)
+    if playerGuess == rightAnswer
+        sendMessage "Correct!"
+    else if playerGuess < rightAnswer
+        sendMessage "Go higher"
+    else
+        sendMessage "Go lower"
+*/
+```
+
+```javascript
+/*
+
+Med kod, kolla igenom följande sträng och kolla vilket av namnen "Alfred", "Emil", och "Ida" kommer först, vilket som kommer på andra plats, och vilket som är sist. Skriv ut detta i konsolen (tex "Namnet Emil kommer först.").
+
+
+    story = "Alfred åker till Hultsfreds slätt för att exercera beväring (lära sig bli soldat). När Emils föräldrar åker iväg för att hälsa på lämnas Emil och Ida hemma hos Krösa-Maja. Emil sätter sig på hästen Jullan, och börjar ge sig av mot Hultsfred."
+
+    names = [Alfred, Emil, Ida]
+
+    for each name:
+        if indexOf name is lower than previous
+            set firstOccurance to name
+
+    for each name:
+        if indexOf name is higher than previous
+            set lastOccurance to name
+
+    for each name:
+        if name != firstOccurance && name != lastOccurance
+            set secondOccurance to name
+
+    write firstOccurance + " kommer först"
+    write secondOccurance + " kommer på andra plats"
+    write lastOccurance + " kommer sist"
+*/
+```
+
+
+# Pseudokodens användningsområde
+Pseudokod används för att planera koden innan du skriver den, eller för att förklara koden efter den är skriven. Pseudokod kan skrivas i extern dokumentation, eller direkt i kommentarer i kodfilen.
+
+Med pseudokod kan du enklare tänka igenom din kod logiskt, utan att behöva bry dig om specifik syntax eller att göra saker så som att deklarera variabler i förhand, bry dig om scope eller liknande, och du kan förklara din kod på ett smidigare sätt.
+
+Pseudokod används också för att kommunicera och prata kod med andra programmerare och även icke-programmerare, då pseudokod mer handlar om det logiska flödet som koden ska utföra än specifik syntax.
+
+## Varför planera?
+- Förebygger onödigt arbete
+- Förebygger eventuella fel genom att "tänka högt innan man gör"
+- Gör det enklare att klura ut hur lång tid något tar
+- Möjliggör att kunna samarbeta utan att behöva gå in på detaljer
+
+# Exempel
+
+https://codepen.io/GuteFelix/pen/yLJQQWv
+
+# Att tänka på när du skriver pseudokod
+
+1. **Härma bra kod och bra svenska/engelska.** Du borde namnge dina variabler och funktioner så att de är så beskrivande som möjligt, och lägg till kommentarer där det behövs/passar. I övrigt bör du skriva ordentligt, utan felstavningar och med korrekt grammatik, men du behöver inte skriva hela meningar.
+
+2. **Undvik onödiga detaljer.** I pseudokod behöver du inga kommatecken, inga paranteser, och inga semikolon. Gör det så enkelt som möjligt. Specifik syntax är alltså inte nödvändig. Du kan med fördel använda operatorer men du måste inte till exempel använda dubbla likamed-tecken (==) när du gör jämförelser.
+
+3. **Strunta i det uppenbara.** För psuedokod så spelar det ingen roll om en variabel är en *const* eller *let*. För språk där variabler har typer (till exempel C# har bland annat typerna `string`, `int`, `bool`) så behöver du inte skriva ut vilken typ variabeln har, så vidare du inte känner att du behöver det för att förstå kodens kontext.
+
+4. **Utnyttja förkortningar.** Använd nyckelord så som `if`, `else`, `while`, och `for` och försök så långt det går att skriva så lite så möjligt som ändå är förståeligt. En bra grej är att använda indentering (att använda mellanslag eller tabb för att få början av en rad till höger om början av förgående rad) istället för klammerparanteser/måsvingar {} för att visa var kodblock börjar och slutar.
+
+5. **Tänk på kontexten och din egen nivå.** Om du till exempel vet hur man hämtar ut ett slumpmässigt värde mellan 1 och 10 så kan du helt enkelt bara skriva `randomValue = random value between 1 to 10`. Men behöver du komma ihåg exakt hur man gör, skriv hellre `Use Math.floor(Math.random() * 10) to get a random value between 1 to 10`. På liknande sätt kan du senare använda algoritmer eller funktioner du tidigare skapat för att ytterligare minska mängden pseudokod du skriver.
+
+6. **Balansera kodens nivå.** Om du inte kan förstå och enkelt översätta pseudokoden till riktig kod så är pseudokoden skriven på en för svår (hög) nivå. Om du har för mycket onödiga detaljer är pseudokoden skriven på en för lätt (låg) nivå.
+
+I övrigt finns det ingen standard för pseudokod - det viktigaste är att man kan göra sig förstådd.
+
+# Källor
+- https://css-tricks.com/pseudo-code/
+- https://dev.to/paladique/experiences-with-pseudocode-3i70
+- https://www.khanacademy.org/computing/computer-programming/programming/good-practices/pt/planning-with-pseudo-code
