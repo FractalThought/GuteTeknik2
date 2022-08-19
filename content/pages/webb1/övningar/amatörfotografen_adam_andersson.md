@@ -1,5 +1,5 @@
 ---
-title: "Amatörfototgrafen Adam Andersson"
+title: "Amatörfotografen Adam Andersson"
 ---
 
 # Amatörfototgrafen Adam Andersson
