@@ -25,6 +25,11 @@
           "title": "CSS: Kaskad och specificitet",
           "link": "css_spec",
           "type": "exercise"
+        },
+        {
+          "title": "Amatörfotografen Adam Andersson",
+          "link": "amatörfotografen_adam_andersson",
+          "type": "exercise"
         }
       ],
       "references": [
