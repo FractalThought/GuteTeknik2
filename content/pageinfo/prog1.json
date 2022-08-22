@@ -315,6 +315,11 @@
           "title": "Nummergissning",
           "link": "nummergissning",
           "type": "exercise"
+        },
+        {
+          "title": "Matsedel",
+          "link": "matsedel",
+          "type": "project"
         }
       ],
       "references": [

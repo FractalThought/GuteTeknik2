@@ -1,0 +1,129 @@
+---
+title: "Matsedel"
+---
+
+I denna repetitionsuppgift ska du skriva kod som tar ut och delar upp en text, och sedan presentera data på en webbsida.
+
+Du behöver använda strängmetoder, kontrollsatser, loopar, och DOM-manipulering för denna uppgiften. Du ska dela in texten, manipulera den, kontrollera den, och skriva ut (skapa HTML-element) på en webbsida.
+
+## Uppdraget:
+Du kommer få veckomenyer i en löpande text. Dessa ska en användare kunna klistra in i ett textfält på webbsidan och få alla maträtter presenterade var för sig på sidan.
+
+### Presentationen:
+Maträtterna ska presenteras på följande sätt:
+En maträtt för sig, i någon form av lista. Hur denna listan ser ut får du välja själv. Texterna ska inte avslutas med punkt.
+
+Maträtter som är vegetariska (markerade i slutet med (veg)) ska vara stilade på ett eget sätt. De ska dessutom inte ha med (veg) på slutet.
+
+Användaren ska dessutom kunna välja att markera alla maträtter som innehåller ris, potatis, eller pasta genom att trycka på en knapp. Markeringen ska ske med någon form av stilning (CSS) på hemsidan.
+
+## Inlämning
+Du arbetar med ett HTML-dokument som du lämnar in på Quiculum. All din kod ska finnas där. I övrigt ska dokumentet innehålla de grundläggande taggarna som behövs för en hemsida (html, head, body). Använd kortkommandot `!` i VSCode för att generera dessa taggar.
+
+## Texten som ska klistras in
+
+```
+
+Chili con carne med ris.
+Stekt rödspätta med remouladsås och kokt potatis.
+Pasta med skinksås.
+Köttfärslimpa med gräddsås och kokt potatis.
+Kycklingwok med grönsaker och ris.
+Vegetarisk con carne med ris (veg).
+Stekt quornfilé med remouladsås och kokt potatis (veg).
+Pasta med svamp och grönsakssås (veg).
+Falafel med gräddsås och kokt potatis (veg).
+Grönsakswok med ris (veg).
+Korv i ugn serveras med pepparrotssås och kokt potatis.
+Kokt pasta serveras med vegetarisk sås.
+Kycklinggryta med smak av curry serveras med kokt ris.
+Tacofisk i ugn serveras med grönsakscouscous.
+Köttfärslimpa serveras med gräddsås och kokt potatis.
+Vego “korv” serveras med pepparrotssås och kokt potatis (veg).
+Kokt pasta serveras med vegetarisk sås (veg).
+Kikärtsgryta med smak av curry serveras med kokt ris (veg).
+Grönsakscouscous (veg).
+Vegolimpa serveras med gräddsås och kokt potatis (veg).
+Kassler a la flygande Jakob serveras med kokt ris.
+Ångad lättrimmad sejfilé serveras med ägg & persiljesås och kokt potatis.
+Linsgryta serveras med kokt bulgur.
+Stekt fläsk serveras med löksås/bruna bönor och kokt potatis.
+Lasagne.
+Aubergine a la flygande jakob serveras med kokt ris (veg).
+Ångade rotfrukter serveras med persiljesås och kokt potatis (veg).
+Linsgryta serveras med kokt bulgur (veg).
+Stekt Zucchini serveras med tomatsås samt kokt potatis (veg).
+Lasagne (veg).
+Köttbullar serveras med stuvade makaroner.
+Sprödbakad fisk serveras med remouladsås och kokt potatis.
+Bönbiffar serveras med tomatsås och grönsaksris.
+Ost och broccolisoppa serveras med mjukt bröd.
+Helstekt fläskytterfilé serveras med potatisgratäng.
+Quorn bullar serveras med stuvade makaroner (veg).
+Sprödbakade grönsaksbiffar serveras med remouladsås och kokt potatis (veg).
+Bönbiffar serveras med tomatsås och grönsaksris (veg).
+Grön ärtsoppa serveras med mjukt bröd (veg).
+Vegetariska biffar serveras med potatisgratäng (veg).
+Pasta (på gotländska råvaror) serveras med en kycklingsås (Svensk fågel).
+Linsgryta (Gotlandslinsen tillsammans med gotländska rotfrukter).
+Ångad sejfilé (MSC klassad) serveras med ramslökssås och kokt gotländsk ekologisk potatis.
+Vitkålssoppa på (gotländsk vitkål) serveras med lokalproducerat bröd.
+Helstekt Gotländsk fläskkarré serveras med gräddsås på gotländskt mejeri och kokt gotländsk ekologisk potatis.
+Pasta (på gotländska råvaror) serveras med en morotssås Gotländska morötter (veg).
+Linsgryta (Gotlandslinsen tillsammans med gotländska rotfrukter) (veg).
+Gotländsk stekt Zucchini serveras med ramslökssås och kokt gotländsk ekologisk potatis (veg).
+Vitkålssoppa på (gotländsk vitkål) serveras med lokalproducerat bröd (veg).
+Gotländsk panerad rotselleri serveras med gräddsås på gotländskt mejeri och kokt gotländsk ekologisk potatis (veg).
+Kålpudding serveras med kokt potatis och gräddsås.
+Kokt pasta serveras med ost och grönsakssås.
+Potatisbullar/blodpudding serveras med bacon och lingonsylt.
+Fiskbiffar serveras med kokt potatis och remouladsås.
+Kycklinggryta serveras med kokt ris.
+Quornbullar serveras med kokt potatis och gräddsås (veg).
+Kokt pasta serveras med grönsakssås (veg).
+Potatisbullar serveras med lingonsylt (veg).
+Grönsaksbiffar serveras med kokt potatis och remouladsås (veg).
+Quorngryta serveras med kokt ris (veg).
+Pytt i panna serveras med stekt ägg och rödbetor.
+Chili con carne serveras med kokt ris.
+Kokt pasta serveras med ratatouille.
+Kokt korv serveras med pepparrotssås och kokt potatis.
+Kebab i pitabröd med tillbehör.
+Couscous pytt serveras med stekt ägg och rödbetor (veg).
+Chili sin carne serveras med kokt ris (veg).
+Kokt pasta serveras med ratatouille (veg).
+Kokt blomkål/broccoli serveras med pepparrotssås och kokt potatis (veg).
+Oumph i pitabröd med tillbehör (veg).
+Gratinerad falukorv serveras med potatismos.
+indisk blomkålskorma serveras med kokt ris.
+Kassler med ostsås serveras med kokt potatis.
+Panerad fisk serveras med kokt potatis och remouladsås.
+Kokt pasta serveras med kalkonsås.
+Gratinerad vegkorv serveras med potatismos (veg).
+indisk blomkålskorma serveras med kokt ris (veg).
+Aubergine/zucchini med ostsås och kokt potatis (veg).
+Panerad grönsakspanett serveras med kokt potatis och remouladsås (veg).
+Kokt pasta serveras med soltorkad tomatsås (veg).
+Köttbullar serveras med kokt potatis och gräddsås.
+Ugnspanerad fisk serveras med stuvad spenat och kokt potatis.
+Köttgryta med smak av asien serveras med kokt ris.
+Ost och broccolisoppa serveras med bröd och ost.
+Örtspäckad kotlettrad serveras med potatisgratäng och örtsky.
+Quornbullar serveras med kokt potatis och gräddsås (veg).
+Panerad ugnsbakad rotselleri serveras med stuvad spenat och kokt potatis (veg).
+Quorngryta med smak av asien serveras med kokt ris (veg).
+Gul ärtsoppa serveras med bröd och ost (veg).
+Örtbakad quornfilé serveras med potatisgratäng och örtsky (veg).
+Chili con carne serveras med kokt ris.
+Panerad fisk serveras med remouladsås och kokt potatis.
+Pytt i panna serveras med stek ägg och rödbetor.
+Sopplunch med pannkaka och sylt.
+Halloween tema.
+Chili sin carne serveras med kokt ris (veg).
+Grönsaksbiff serveras med remouladsås och kokt potatis (veg).
+Couscous pytt serveras med stekt ägg och rödbetor (veg).
+Sopplunch med pannkaka och sylt (veg).
+Halloween tema (veg).
+
+```
+
