@@ -2,7 +2,35 @@
 title: "Amatörfotografen Adam Andersson"
 ---
 
-# Amatörfototgrafen Adam Andersson
+# Uppgiften
+
+Nedan finns en klient som behöver ha en hemsida. Det är din uppgift att, efter bästa förmåga, skapa en hemsida till klienten. I övningen ska du göra så gott du kan, och använda HTML-taggar och CSS-regler på ett klokt sätt.
+
+Minst ska du visa att du kan:
+- Använda HTML-taggar på ett klokt sätt.
+- Länka ihop CSS-regler (selektorer) med dina HTML-taggar.
+- Använda Class och ID där det passar.
+- Använda någon del av Flexbox.
+
+Inlämning sker via Quiculum.
+
+# Bedömning
+
+Detta är en uppgift som framförallt är formativ, alltså att jag får veta ungefär hur du ligger i kursen och du får feedback på något du kan förbättra. I slutet av kursen kommer denna räknas in i den summativa bedömningen där jag tittar på ditt arbete i helhet och jämför hur det stämmer överens med betygskriterierna för att ge ett rättvist slutbetyg.
+
+Jag kommer framförallt titta på **hemsidans helhet**, och hur du använder HTML-taggar och CSS-regler.
+
+# Att tänka på
+
+Kom ihåg att ID endast får finnas på ett element per sida. Ska flera element ha samma stilning, fundera på att använda en CSS-klass istället. Kom också ihåg att ett element kan ha flera klasser.
+
+Namngivning är viktigt - försök ge dina klasser och ID'n beskrivande namn. Undvik "container3"-liknande namn.
+
+Använd DRY-metoden. Don't Repeat Yourself. Försök hitta sätt du kan minska antalet CSS-regler genom att slå ihop regler och undvik att upprepa dig själv.
+
+Chef's KISS i webbutveckling är "Keep It Simple, Stupid!". Hitta sätt att göra din hemsida med så få taggar som möjligt som ändå får fram din design. Håll det enkelt, krångla inte till det.
+
+# Uppdraget: Amatörfototgrafen Adam Andersson
 
 Hej! Jag heter Adam Andersson. Min passion i livet har sedan några år tillbaka varit fotografi, och jag har blivit väldigt bra på det. I höstas startade jag en enskild firma för att kunna ta betalt för att ta bilder vid bröllop, dop, födelsedagar, och andra fester och tillfällen.
 
