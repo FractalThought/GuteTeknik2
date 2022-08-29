@@ -317,6 +317,11 @@
           "type": "exercise"
         },
         {
+          "title": "Palindrom",
+          "link": "palindrom",
+          "type": "exercise"
+        },
+        {
           "title": "Matsedel",
           "link": "matsedel",
           "type": "project"
