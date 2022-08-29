@@ -4,29 +4,24 @@ title: "Palindrom"
 
 I denna övning ska du i kod svara på om något en användare matar in är en palindrom eller inte.
 
-> "En palindrom är en följd av skrivtecken som, med blanksteg och skiljetecken exkluderade, förblir oförändrad om man läser den baklänges. " - [Wikipedia](https://sv.wikipedia.org/wiki/Palindrom)
+> _"En palindrom är en följd av skrivtecken som, med blanksteg och skiljetecken exkluderade, förblir oförändrad om man läser den baklänges."_ - [Wikipedia](https://sv.wikipedia.org/wiki/Palindrom)
 
-Din kod ska alltså kolla om en fras/ord så som _tacocat_ går att läsa både baklänges och framlänges. Du ska göra detta i en funktion som ska returnera antingen true (om frasen är en palindrom) eller false (om det inte är en palindrom).
+# Uppdraget
+
+Din kod ska kolla om en fras/ord så som _tacocat_ går att läsa både baklänges och framlänges. Du ska göra detta i en funktion som ska returnera antingen true (om frasen är en palindrom) eller false (om det inte är en palindrom).
 
 Funktionen ska ignorera mellanslag, så palindromen _taco cat_ är fortfarande en palindrom.
 
 Funktionen ska dessutom ignorera om det är stora eller små bokstäver, så _TacoCat_ ska returnera sant.
 
-## Bonus
+# Bonus
 När du blir färdig med grundfunktionaliteten ska du lägga till ett användargränssnitt till applikationen som låter användaren mata in en fras och få svar om frasen är en palindrom eller inte.
 
-## Testfraser
-Använd följande fraser för att testa att din funktion fungerar:
+# Grundkod
 
-### Sanna:
-- Tacocat
-- Mus rev inuits öra, sa röst i universum
-- Ni talar bra latin
+Kopiera denna koden för att börja projektet.
 
-### Icke sanna:
-- Detta är en palindrom
-- Hermitcraft
-- Etymologiskt
+Du kan antingen använda koden i en script-tagg i ett HTML-dokument, eller i en .js-skriptfil som du kör med NodeJS.
 
 ```javascript
 
@@ -43,4 +38,15 @@ function isPalindrome(phrase) {
 }
 ```
 
+# Testfraser
+Använd följande fraser för att testa att din funktion fungerar:
 
+### Sanna:
+- Tacocat
+- Mus rev inuits öra, sa röst i universum
+- Ni talar bra latin
+
+### Icke sanna:
+- Detta är en palindrom
+- Hermitcraft
+- Etymologiskt
