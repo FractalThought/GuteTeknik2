@@ -53,12 +53,12 @@ console.log(allLowerCase); // hej på er alla!
 console.log(sentence); // Hej På Er Alla!
 ```
 
-# Substr
-Substr (ska inte förväxlas med metoden substring) gör att vi kan ta ut en del av en sträng med hjälp av en startposition och en längd. Substr är bra att använda när vi vill ta ut ett antal bokstäver från en särskild position.
+# Substring
+Substring (ska inte förväxlas med metoden substr) gör att vi kan ta ut en del av en sträng med hjälp av en startposition och en slutposition. Substring är bra att använda när vi vill ta ut en del av en sträng utifrån specifika positioner.
 
 ```javascript
 let myMessage = "Alfred gillar kexchoklad";
-let manipulatedMessage = myMessage.substr(7, 6);
+let manipulatedMessage = myMessage.substr(7, 13);
 
 console.log(manipulatedMessage); // Skriver ut "gillar"
 ```
@@ -141,6 +141,19 @@ Detta kan vi potentiellt upprepa tills vi inte längre , men det gör vi enklast
 
 # Split
 Split delar upp en sträng i mindre delar och lägger den i en array. Man använder en sträng för att dela strängen (till exempel för att dela på ord använder du `" "`, ett mellanslag, som delare). Vi kommer använda arrayer senare, tills vidare behöver du veta att split kan användas för att dela upp en sträng så man kan till exempel skriva ut något ord för ord, eller på annat sätt separera ut värden ur en sträng.
+
+```javascript
+
+let input = "Emil i Lönneberga";
+let inputArray = input.split("");
+
+// Skriver ut varje ord för sig
+for (let i = 0; i < inputArray.length; i++) {
+    console.log(inputArray[i]);
+}
+
+```
+
 
 # Läs vidare
 
