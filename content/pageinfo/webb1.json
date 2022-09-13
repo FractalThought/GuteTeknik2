@@ -82,6 +82,16 @@
           "title": "Flexbox",
           "link": "flexbox",
           "type": "lesson"
+        },
+        {
+          "title": "Etik och lagar",
+          "link": "etik_och_lagar",
+          "type": "lesson"
+        },
+        {
+          "title": "Bildoptimering",
+          "link": "bildoptimering",
+          "type": "lesson"
         }
       ],
       "references": [
