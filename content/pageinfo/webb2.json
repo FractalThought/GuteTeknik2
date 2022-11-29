@@ -70,6 +70,22 @@
       ]
     },
     {
+      "title": "CSS-variabler",
+      "link": "variabler",
+      "pages": [
+        {
+          "title": "Variabelövningar",
+          "link": "css-ovningar",
+          "type": "lesson"
+        },
+        {
+          "title": "Övningar",
+          "link": "css-ovningar",
+          "type": "exercise"
+        }
+      ]
+    },
+    {
       "title": "SVG",
       "link": "svg",
       "pages": [
