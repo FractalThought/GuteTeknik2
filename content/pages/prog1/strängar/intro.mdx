@@ -94,6 +94,30 @@ if(message == messageLower) {
 }
 ```
 
+# replace och replaceAll
+
+Replace använder vi för att ersätta tecken i en sträng. Skillnaden mellan replace och replaceAll är att replace endast ersätter första instansen av tecknet den hittar i strängen, och 
+
+Båda funktionerna tar två argument; Vad den ska söka efter, och vad den ska ersätta med. Den fungerar på liknande sätt som ersättningsfunktioner i ordbehandlingsprogram så som Word eller textredigeringsprogram så som Visual Studio Code.
+
+Det du söker efter är exakt, och kan vara allt från ett enskilt tecken, till en hel mening eller mer. Notera att replace och replaceAll är case-sensitive, så tänk på om du ska ersätta en stor bokstav eller en liten bokstav.
+
+Det du ersätter kan vara en tom sträng, vilket betyder att strängen du söker efter tas bort.
+
+Tekniskt kallas det att man söker efter en substring (delsträng) i en string.
+
+## Regex
+
+Regex står för Regular Expression (reguljära uttryck) och är ett sätt att skapa mönster som funktioner så som replace kan använda för att matcha mer komplexa substrängar. Till exempel kan Regex användas för att hitta och ersätta alla instanser av olika tecken, hitta vilket av en grupp tecken som kommer först i en mening, eller mer komplexa saker så som "alla I som kommer direkt efter E" eller verifiera att en sträng är en email-adress.
+
+Regex kan vara svårt att läsa och förstå, och räknas ofta som en specialisering inom programmering/datorvetenskap. Reguljära uttryck är dock effektiva och kraftfulla, men många väljer att lära sig specifika uttryck, fråga andra, och söka efter vanliga uttryck istället för att lära sig det från grunden.
+
+Mer om Regex hittar du här:
+- https://dbwebb.se/kunskap/regex
+- https://regexr.com/
+- https://regex101.com/
+- https://medium.com/factory-mind/regex-cookbook-most-wanted-regex-aa721558c3c1
+
 
 # indexOf
 Om vi vill hitta en del av en sträng, till exempel se om ett ord innehåller ett specifikt tecken, eller om en mening innehåller ett ord, så kan du använda metoden indexOf. indexOf hittar första instansen och skickar tillbaka positionen på första tecknet i ordet, eller `-1` om det du letar efter inte finns.
