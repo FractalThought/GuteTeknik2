@@ -1,12 +1,22 @@
 ---
 title: "DOM-manipulering"
 date: "2020-10-05"
-headings: "Lägga till sida:add-to-page|Välja element:what-to-manipulate|Manipulera element:manipulera-element|Lägga till eller ta bort element:add-and-remove|Övningar:ovningar"
 ---
 
 JavaScript har sitt ursprung i webbutveckling, och utvecklades specifikt till att vara ett sätt att skapa interation till hemsidor. Den gör detta genom att manipulera Dokument Objekt Modellen.
 
-<a id="add-to-page"></a>
+# Begrepp
+
+| Begrepp                 | Betydelse                                                                                                                        |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| **HTML**                | Hyper Text Markup Language - strukturerat sätt att visa innehåll på en hemsida.                                                  |
+| **DOM**                 | Document Object Model - webbläsaren läser in HTML och lägger in varje element som ett objekt som kan manipuleras med javascript. |
+| **Gränssnitt/UI**       | User Interface, användargränssnitt. Sättet som användaren använder (interagerar) med applikationen/skriptet.                     |
+| **Element**                        | Ett element är det som skapas av att använda en tagg i HTML (tex )                                                                                                                                 |
+| **Objekt**              | Ett objekt i programmering är en grupper av egenskaper som delar samma syfte.                                                                                                                                 |
+| **Egenskap (property)** | En egenskap är som en variabel men som existerar för att definiera något hos ett objekt. Håller alltså ett värde.                                                                                                                                 |
+| **Metod (method)**      | En metod är en funktion som existerar på ett objekt. Används oftast för att förändra objektets egenskaper eller göra något med objektet.                                                                                                                                 |
+
 
 # Lägga till JavaScript till en hemsida
 
@@ -27,7 +37,6 @@ Det finns två sätt att lägga in JavaScript i ett html-dokument; Importera en 
 </script>
 ```
 
-<a id="what-to-manipulate"></a>
 
 # Välja vad som ska manipuleras
 
@@ -41,7 +50,6 @@ Vi kan välja specifika element som vi vill manipulera, och detta görs på samm
 | `document.querySelector("Selector query")`    | Väljer första elementet som matchar den query man skriver i |
 | `document.querySelectorAll("Selector query")` | Väljer alla element som matchar den query man skriver i     |
 
-<a id="manipulera-element"></a>
 
 # Manipulera element
 
@@ -49,14 +57,14 @@ Manipulera innebär att förändra ett attribut på ett element, alltså att än
 
 | Attribut/funktion                       | Förklaring                                                                           |
 | --------------------------------------- | ------------------------------------------------------------------------------------ |
-| `element.innerText`                     | Ändrar texten inuti elementet                                                        |
+| `element.textContent`                     | Ändrar texten inuti elementet                                                        |
 | `element.innerHTML`                     | Ändrar HTML-koden inuti elementet                                                    |
 | `element.style`                         | Ett objekt som vi kan läsa/skriva css från/till                                      |
 | `element.classList.add("klassnamn")`    | Lägg till en specificera klass till elementet                                        |
 | `element.classList.remove("klassnamn")` | Ta bort den specificerade klassen från elementet                                     |
 | `element.classList.toggle("klassnamn")` | Om elementet saknar den specificerade klassen så läggs den till, annars tas den bort |
 
-<a id="add-and-remove"></a>
+
 
 # Lägga till och ta bort element
 
@@ -64,7 +72,7 @@ Vi kan skapa nya element och lägga till dem till vår sida. Det gör vi genom a
 
 > När vi skapar ett element så behöver vi specificera elementets tagg-namn, till exempel `div` eller `p`.
 
-> För att lägga till innehåll till elementet vi skapat så använder vi `.innerText` eller `.innerHTML`, och sedan en sträng (mening). Med `.innerText` så kan vi bara lägga till text, men med `.innerHTML` kan vi lägga till HTML, till exempel element.
+> För att lägga till innehåll till elementet vi skapat så använder vi `.textContent` eller `.innerHTML`, och sedan en sträng (mening). Med `.textContent` så kan vi bara lägga till text, men med `.innerHTML` kan vi lägga till HTML, till exempel element.
 
 > Vi använder `.appendChild()` för att lägga till vårt nya element till dess parent element.
 
@@ -73,64 +81,44 @@ Vi kan skapa nya element och lägga till dem till vår sida. Det gör vi genom a
 ```javascript
 let newParagraph = document.createElement("p") // Det nya elementet vi skapar
 
-newParagraph.innerText = "Detta är min nya paragraf!"
+newParagraph.textContent = "Detta är min nya paragraf!"
 
 const parentElement = document.querySelector("#parentArticle") // Det element vi vill lägga det nya elementet i
 parentElement.appendChild(newParagraph)
 ```
 
-<a id="ovningar"></a>
-
 # Övningar
+Gör följande övningar enskild eller i grupp om 2-3.
+
 
 ## Övning 1
+Lägg till en paragraf med en span i sig på din sida, så här;
+```html
+<p>Coin toss: <span id="coin-result"></span></p>
+```
 
-Skapa ett html-dokument med följande element:
-
-- En h1
-- Två p med lite text
-- Två ul-lista med 3 li-element vardera
-
-Tips: Du kan använda kommandot `!` för att skapa en tom hemsida.
-Använd sedan följande kommando för att skapa dina element. Klistra in och tryck sedan
-Ctrl+Mellanslag för att få upp kommandot, och sedan Enter för att bekräfta.
+Följande kod skriver ut 0 eller 1 i konsolen. Använd och modifiera koden så att den istället ändrar spanen `coin-result` så att den antingen visar Heads eller Tails, där Heads är om result blir 1 och Tails är om resultatet blir 0.
 
 ```javascript
-h1>lorem5^p*2>lorem10^ul>li*3>lorem3^^ul>li*3>lorem3
+let result = Math.round(Math.random());
+console.log(result);
 ```
 
-Testa sedan att lägga in föjande i slutet av din body-tagg, precis efter din ul-lista. Undersök vad som
-händer med hemsidan.
-
-```html
-<script>
-  let heading = document.querySelector("h1") // Hämtar bara den första matchningen
-  heading.innerText = "Hej!"
-
-  let paragraphs = document.getElementsByTagName("p") // Hämtar alla och lägger in dem i en arr
-  paragraphs[0].innerText = "Vilken konstig text det var här innan"
-  paragraphs[1].innerText = "Andra paragrafen här"
-
-  let list = document.getElementsByTagName("ul")[0] // Hämtar alla, lägger in dem i en array, o
-
-  for (let i = 0; i < 5; i++) {
-    // Skapa ett element, sätt dess text, och lägg sedan till den till list
-    let newItem = document.createElement("li")
-    newItem.innerText = i
-    list.appendChild(newItem)
-  }
-</script>
-```
 
 ## Övning 2
 
-- Lägg till ett ID till en av dina paragrafer i HTML.
-- Med JavaScript, ändra stilen på paragrafen. Du behöver välja den med `document.getElementById("ditt-id")`, och stila den med `.style`, och sedan attributet du vill stila, till exempel `color`.
+Bing AI har genererat tre skämt som du ska lägga till i varsin paragraf på din sida med hjälp av javascript:
+
+1.  Varför var programmeraren så dålig på att simma? Han försökte använda en tangentbordsgenväg för att simma snabbare.
+2. Varför var datorn kall? Den hade öppnat Windows.
+3. Varför var spelaren så bra på att spela? Han hade övat i flera timmar varje dag.
+
+Skriv koden så effektivt som du kan, med tekniker vi gått igenom i kursen.
 
 ## Övning 3
+Skapa en counter som räknar sekunder (ditt skript ska alltså uppdatera textinnehållet i ett element en gång varje sekund) - detta krävs att du hittar information om hur man hanterar tidsintervall i javascript. Du kan använda internetsökning eller en AI för den hjälpen.
 
-Lägg till en klass till några av dina li-element och dölj dem med style.display = "none";. [Se ett
-exempel här](http://htmlhunden.se/dist/04-05-js-dom.html).
+
 
 # Källor:
 
