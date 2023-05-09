@@ -1,0 +1,107 @@
+---
+title: "Övningar: Skriva Pseudokod"
+date: "2023-05-09"
+---
+
+Hur skulle du skriva dessa kodbitar i pseudokod?
+
+Öppna ett nytt js-script, kopiera in koden och skriv i en kommentar (förslagsvis en multiline, `/* Kommentar här */`) psuedokoden för varje övning.
+
+# Övning 1
+
+```javascript
+// Övning 1
+
+let num = -5;
+if (num > 0) {
+  console.log("The number is positive.");
+} else if (num < 0) {
+  console.log("The number is negative.");
+} else {
+  console.log("The number is zero.");
+}
+
+```
+
+# Övning 2
+
+```javascript
+
+let age = 18;
+let citizen = true;
+if (age >= 18) {
+  if (citizen) {
+    console.log("You are eligible to vote.");
+  } else {
+    console.log("You are not eligible to vote because you are not a citizen.");
+  }
+} else {
+  console.log("You are not eligible to vote because you are too young.");
+}
+
+```
+
+# Övning 3
+
+```javascript
+
+// Övning 3
+let num = 5;
+let factorial = 1;
+for (let i = 1; i <= num; i++) {
+  factorial = factorial * i;
+}
+console.log("The factorial of " + num + " is " + factorial + ".");
+
+```
+
+# Övning 4
+
+OBS! Denna övning använder DOM för input och output. Abstrahera bort detta.
+
+```javascript
+
+// Övning 4
+// Get the body element from the document
+let body = document.querySelector("body");
+
+// Create a button element
+let button = document.createElement("button");
+
+// Set the text content of the button
+button.textContent = "Show color";
+
+// Create a paragraph element
+let paragraph = document.createElement("p");
+
+// Add an event listener to the button that runs a function when clicked
+button.addEventListener("click", function () {
+  // Create an array of color names
+  let colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+
+  // Generate a random index from 0 to 6
+  let randomIndex = Math.floor(Math.random() * colors.length);
+
+  // Get the color name at the random index
+  let randomColor = colors[randomIndex];
+
+  // Set the text content of the paragraph to the random color name
+  paragraph.textContent = "The color is " + randomColor + ".";
+});
+
+// Append the button and the paragraph to the body
+body.appendChild(button);
+body.appendChild(paragraph);
+
+```
+
+# Övning 5
+
+```javascript
+
+// Övning 5
+let animals = ["cat", "dog", "bird"];
+animals.push("fish");
+console.log(animals); // ["cat", "dog", "bird", "fish"]
+
+```

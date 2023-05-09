@@ -256,6 +256,11 @@
           "title": "Pseudokod",
           "link": "pseudokod",
           "type": "lesson"
+        },
+        {
+          "title": "Övningar",
+          "link": "ovningar",
+          "type": "exercise"
         }
       ],
       "references": [
