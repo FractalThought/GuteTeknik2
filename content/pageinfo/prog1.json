@@ -161,6 +161,11 @@
           "title": "Övningar",
           "link": "ovningar",
           "type": "exercise"
+        },
+        {
+          "title": "Arrayövningar med loopar",
+          "link": "ovningar_loopar",
+          "type": "exercise"
         }
       ],
       "references": [
