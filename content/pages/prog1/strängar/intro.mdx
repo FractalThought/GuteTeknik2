@@ -58,7 +58,7 @@ Substring (ska inte förväxlas med metoden substr) gör att vi kan ta ut en del
 
 ```javascript
 let myMessage = "Alfred gillar kexchoklad";
-let manipulatedMessage = myMessage.substr(7, 13);
+let manipulatedMessage = myMessage.substring(7, 13);
 
 console.log(manipulatedMessage); // Skriver ut "gillar"
 ```
@@ -69,7 +69,7 @@ Slice gör att vi kan ta ut en del av en sträng med hjälp av en startposition 
 
 ```javascript
 let myMessage = "Alfred gillar kexchoklad";
-let manipulatedMessage = myMessage.slice(0, 16); // Observera att i programmering börjar man alltid räkna från 0
+let manipulatedMessage = myMessage.slice(0, 17); // Observera att i programmering börjar man alltid räkna från 0
 
 console.log(manipulatedMessage); // Skriver ut "Alfred gillar kex".
 

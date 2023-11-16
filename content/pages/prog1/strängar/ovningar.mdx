@@ -42,11 +42,11 @@ Hej igen Alfred Stensson! Eller ska vi bara säga Alfred, eller Mr. Stensson?
 # Övning 2
 Vårt skript ska nu generera ett användarnamn till Alfred. Reglerna för användarnamnet är de 3 första bokstäverna i förnamnet och fyra första bokstäverna i efternamnet.
 
-För detta ska vi använda strängmetoden Substr, för att hämta ut delar av en sträng. Substr fungerar genom att vi kör en metod på strängen vi har, och sätter resultatet av den metoden till en ny variabel. Så här:
+För detta ska vi använda strängmetoden Slice, för att hämta ut delar av en sträng. Slice fungerar genom att vi kör en metod på strängen vi har, och sätter resultatet av den metoden till en ny variabel. Så här:
 
 ```javascript
 let fullString = "Hej på dig!";
-let greeting = fullString.substr(0, 3); // Börjar på position 0, alltså första bokstaven, och tar tre bokstäver framåt
+let greeting = fullString.slice(0, 3); // Börjar på position 0, alltså första bokstaven, och hämta ut fram till och med position 3, alltså 3e bokstaven
 console.log(greeting); // Skriver ut "Hej" i konsolen
 ```
 
@@ -59,8 +59,8 @@ console.log(greeting); // Skriver ut "Hej" i konsolen
 
 ```javascript
 let userName = "";
-userName = firstName.substr(0, 3);
-userName += lastName.substr(0, 4);
+userName = firstName.slice(0, 3);
+userName += lastName.slice(0, 4);
 console.log("Ditt användarnamn är: " + userName + ".");
 ```
 
@@ -75,8 +75,8 @@ Använd metoden `toLowerCase` för att sätta variabeln userName till bara små 
 
 ```javascript {diff}
 let userName = "";
-userName = firstName.substr(0, 3);
-userName += lastName.substr(0, 4);
+userName = firstName.slice(0, 3);
+userName += lastName.slice(0, 4);
 + userName = userName.toLowerCase();
 console.log("Ditt användarnamn är: " + userName + ".");
 ```
