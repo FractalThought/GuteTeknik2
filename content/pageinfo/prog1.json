@@ -335,6 +335,11 @@
           "title": "Matsedel",
           "link": "matsedel",
           "type": "project"
+        },
+        {
+          "title": "Använda AI",
+          "link": "anvanda-ai",
+          "type": "project"
         }
       ],
       "references": [

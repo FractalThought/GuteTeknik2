@@ -1,0 +1,83 @@
+---
+title: "Använda AI"
+date: "2023-11-19"
+---
+
+Syftet med det här projektet är att öva dig i att använda "AI" på ett effektivt och ansvarsfullt sätt, som ett verktyg och stöd i din programmering.
+
+# Vad är AI?
+Det man idag kallar AI är egentligen **generativa text-transformatorer** baserade på stora språkmodeller (*LLM, Large Language Models*). Vad det innebär är att ett program inhämtar en text (kallad *prompt*), läser av den, och gissar sedan en följd av ord som ska svara på prompten utifrån den data den blivit tränad på.
+
+Texten som genereras är **inte kontrollerad mot något** och programmet har **inga checkar mot vad sanningen är**. Det baserar sitt svar från vad den "läst", och detta kan i många anseenden vara missvisande, feltolkat, eller rent av felaktigt. **Det är användarens ansvar att kontrollera svaren man får och att använda AI'n på ett korrekt sätt**.
+
+# Projektet
+Du ska skapa en konsolapplikation som ska låta användaren svara på några frågor (en i taget) och få veta om det var rätt eller fel. Frågorna och svaren ska vara förbestämda, och användaren behöver svara exakt rätt på frågan.
+
+# Att be AI'n om hjälp
+Du ska be AI'n om följande hjälp med projektet;
+
+## 1. Generera exempeldata
+Något som AI är väldigt bra på är att generera lite exempeldata som vi kan använda. I det här fallet ska vi har frågor och svar som är länkade med varandra (så fråga nr. 1 ska vara sammanlänkad med svar nr. 1).
+
+**Be AI'n generera data så här;**
+`Fyll en array med frågor om något ämne och en annan array med svaren på frågorna. Använd javascript.`
+
+Du kan anpassa så att istället för "om något ämne" står det till exempel "om World of Warcraft lore" och du kan bestämma antalet frågor och svar som ska genereras genom att skriva till exempel så här;
+
+`Fyll en array med 10 frågor om Minecraft och en annan array med svaren på frågorna. Använd javascript.`
+
+## 2. Starta koden och göra nya saker
+AI kan även generera så kallad scaffolding, alltså kod som man kan använda för att börja ett projekt. Ett tips är att välja någon del av koden som behövs för att börja testa saker, och be AI'n skapa koden.
+
+Man kan börja genom att fråga något man vet om att man ska göra, men inte vet exakt hur man ska göra det.
+
+Applikationen ska presentera en fråga i taget och låta användaren svara på den. Då behöver vi kod för att kolla igenom varje fråga. Vi vet alltså om att vi ska gå igenom varje element i en array, och vi vet att vi behöver nog en loop för detta. Därför konstruerar vi en fråga som blir ungefär såhär;
+
+`Hur loopar jag igenom en array i javascript?`
+
+**Ställ ovanstående fråga till AI'n.** Om du får flera olika sätt att göra det på, välj det du känner igen sedan tidigare. Kopiera och anpassa koden för dina behov.
+
+## 3. Hjälp och bollplank
+AI kan inte bara användas för att generera kod åt dig. Du kan också använda den som bollplank och hjälp med hur du ska göra. När du håller på att lära dig något nytt är det bättre att du ber om förklaringar än färdig kod så du lär dig och slipper fråga nästa gång, till exempel.
+
+Du kan också få stöd på liknande sätt som du skulle kunna få från en kollega/klasskamrat eller din lärare.
+
+Exempel på promptar som ber om hjälp eller bollplank;
+
+`Kan du förklara för mig hur jag jämför användarens input i Deno med ett element i en array?`
+
+`Förklara för mig vad det är för fel på den här koden` (och skicka med koden och skriv vilket programmeringsspråk du använder).
+
+`Kan du hjälpa mig förstå hur en for-loop i javascript fungerar?`
+
+`Kan du ge mig några tips på hur jag kan lösa följande problem: Skriv ett program som beräknar summan av alla tal som är delbara med 3 eller 5 under 1000.`
+
+## 4. Testning och utvecklingsmöjligheter
+AI kan användas för att komma på grundläggande idéer. Då är det bra att beskriva vad du vill få idéer på, till exempel;
+
+`Kan du ge mig 50 idéer på små javascript-projekt som jag som gymnasieelev skulle kunna göra för att öva mig själv i att skriva javascript som fungerar i en webbläsare?`
+
+De kan också användas för att testa kod och ge förslag på eventuella förbättringar och saker man skulle kunna vidareutveckla. Så om man redan är igång eller till och med "färdig" så kan man använda AI som en del av den processen också. Till exempel så här;
+
+`Kan du testa den här koden och ge mig förslag på förbättringar och utvecklingsmöjligheter?`
+
+Eller så här;
+
+```prompt
+Matchar den här koden beskrivningen av uppgiften?
+
+Kod:
+
+Beskrivning:
+```
+
+Klistra in din kod och beskrivning i din prompt. De flesta AI accepterar också Markdown om du vill skicka i det formatet.
+
+# Noteringar:
+AI dubbelkollar inte sina svar mot någon absolut sanning. Detta gäller också för kod och kod den genererar kan lika gärna vara både felaktig, inte fungera, eller göra något konstigt.
+
+De kan också få så kallade hallucinationer där de hittar på saker som inte är verklighet, men presenterar det som om det vore sant. Därför är det upp till dig att dubbelkolla och verifiera informationen du får med andra källor. Om det är något du inte förstår kan du också fråga AI'n vad det betyder och gör.
+
+Kod som genereras kanske inte följer den standard som finns idag. Detta märks främst i javascript när den använder `var` istället för `let` eller använder utdaterade metoder så som `substr`, eller `<center>`-taggen i HTML.
+
+Att generera kod är inte begränsat till javascript eller annan programmeringskod. Du kan testa generera både HTML och CSS, antingen separat eller tillsammans.
