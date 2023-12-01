@@ -3,34 +3,44 @@ title: "Strängövningar"
 date: "2021-08-30"
 ---
 
-Gör övningarna i Visual Studio Code. Skapa folder för alla övningar, och en ny .js-fil för varje övning.
+Gör övningarna i VSCode. Skapa en folder för alla övningar, och en ny .js-fil för varje övning.
 
-Till din hjälp har du [Introduktion till strängmanipulation](https://tektal.netlify.app/prog1/strängar/intro).
+Övningarna har som syfte att utmana dig i att läsa och ta dig till information om specifika saker i programmering, och kan kräva att du letar själv efter informationen på internet.
+Det mesta av informationen hittar du på [Introduktion till strängmanipulation](https://tektal.netlify.app/prog1/strängar/intro).
+Tips är att läsa igenom hela referenssidan först, innan du läser instruktionerna till första övningen.
+
+Du gör så långt du kan på en övning. Om du fastnar, gå vidare till nästa övning.
 
 Övningar behöver inte lämnas in.
 
 # Övning 1: What's in a word?
-Skriv ett skript som låter användaren skriva in ett ord och skriver sedan ut information om ordet.
+Skriv ett skript som låter användaren skriva in ett ord, och skriver sedan ut information om ordet.
 
-Informationen som ska skrivas ut;
+**Informationen som ska skrivas ut;**
 - Hela ordet i versaler (stora bokstäver).
 - Ordets längd (hur många bokstäver ordet innehåller).
 - Om ordet innehåller bokstaven "a", skriv ut meddelandet "Du har ett a där".
 - Första och sista bokstaven i ordet.
 - Ordet med alla bokstäver i omvänd ordning.
 
+**Tips på metoder/egenskaper att använda:**
+- `.toUpperCase()`
+- `.length`
+- `.indexOf()`
+- `.charAt()`
+
 # Övning 2: Delad mening
-Skriv ett skript som låter användaren skriva in en mening och delar sedan den meningen och skriver ut följande:
-- Vartannat ord (börjar på första ordet, hoppar över andra, och så vidare).
+Skriv ett skript som låter användaren skriva in en mening, och delar sedan den meningen och skriver ut följande:
 - Hur många ord det är i meningen.
+- Vartannat ord (börjar på första ordet, hoppar över andra, och så vidare).
 - Längsta ordet i meningen.
 
+**Tips**: Att hitta längsta ordet är precis som att hitta högsta talet i en array - använd egenskapen `.length` för att ta reda på hur långt ett individuellt ord är.
 
 # Övning 3: AI Guessing Game
-Använd en AI (ChatGPT, Bing Chat, eller liknande) för att generera en javascript-array som innehåller 15 olika ord inom ett visst tema (du väljer tema).
+Använd en AI för att generera en javascript-array som innehåller 15 olika ord inom ett tema (du väljer tema).
 
-Skriv ett skript som väljer ett av orden ur arrayen och ber användaren gissa det valda ordet.
-Om användaren gissar fel ska skriptet ge en ledtråd och låta användaren gissa igen.
+Skriv ett skript som väljer ett av orden ur arrayen och ber användaren gissa det valda ordet. Om användaren gissar fel ska skriptet ge en ledtråd och låta användaren gissa igen.
 
 **En ledtråd kan vara ett av följande;**
 - Antal bokstäver i ordet.
@@ -39,3 +49,5 @@ Om användaren gissar fel ska skriptet ge en ledtråd och låta användaren giss
 - Ge en bokstav i ordet och dess position (tex för ordet Minecraft skulle det kunna stå "Bokstaven E är fjärde bokstaven").
 
 **Bonus;** Försök göra så att användaren kan göra ett begränsat antal gissningar, och får en ny typ av ledtråd för varje försök.
+
+**Tips**: Dela in övningen i flera delar och lös en del i taget.
