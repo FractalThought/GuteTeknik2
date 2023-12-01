@@ -3,162 +3,39 @@ title: "Strängövningar"
 date: "2021-08-30"
 ---
 
-Gör övningarna i Visual Studio Code. Skapa en ny fil, namnge den *stringExcercises.js* och gör övningarna i den filen.
+Gör övningarna i Visual Studio Code. Skapa folder för alla övningar, och en ny .js-fil för varje övning.
 
-Till din hjälp har du [Introduktion till strängmanipulation](https://guteteknik.netlify.app/prog1/strängar/intro).
+Till din hjälp har du [Introduktion till strängmanipulation](https://tektal.netlify.app/prog1/strängar/intro).
 
-Övningar behöver inte lämnas in, men vi kommer gå igenom dem tillsammans under nästa lektion.
+Övningar behöver inte lämnas in.
 
-# Grunden
-Klistra in följande kod i din fil och använd den för att lösa övningarna.
+# Övning 1: What's in a word?
+Skriv ett skript som låter användaren skriva in ett ord och skriver sedan ut information om ordet.
 
-```javascript {numberLines}
-let firstName = "Alfred";
-let lastName = "Stensson";
+Informationen som ska skrivas ut;
+- Hela ordet i versaler (stora bokstäver).
+- Ordets längd (hur många bokstäver ordet innehåller).
+- Om ordet innehåller bokstaven "a", skriv ut meddelandet "Du har ett a där".
+- Första och sista bokstaven i ordet.
+- Ordet med alla bokstäver i omvänd ordning.
 
-let age = 18;
-
-```
-
-# Övning 1
-1. Skapa en ny variabel med namnet `fullName`. Sätt dess värde till Alfreds hela namn, genom att lägga ihop variablerna `firstName` och `lastName`. Tänk på att det ska vara ett mellanslag mellan namnen.
-2. Skriv ut följande meddelande: `Hej igen fullName! Eller ska vi bara säga firstName, eller Mr. lastName?` där `fullName`, `firstName`, och `lastName` är värdena på variabeln fullName, respektive firstName och lastName.
-
-<PracticeContainer>
-
-```javascript
-let fullName = firstName + " " + lastName;
-console.log("Hej igen" + fullName + "! Eller ska vi bara säga " + firstName + ", eller Mr. " + lastName + "?");
-```
-
-<Output>
-
-Hej igen Alfred Stensson! Eller ska vi bara säga Alfred, eller Mr. Stensson?
-
-</Output>
-
-</PracticeContainer>
-
-# Övning 2
-Vårt skript ska nu generera ett användarnamn till Alfred. Reglerna för användarnamnet är de 3 första bokstäverna i förnamnet och fyra första bokstäverna i efternamnet.
-
-För detta ska vi använda strängmetoden Slice, för att hämta ut delar av en sträng. Slice fungerar genom att vi kör en metod på strängen vi har, och sätter resultatet av den metoden till en ny variabel. Så här:
-
-```javascript
-let fullString = "Hej på dig!";
-let greeting = fullString.slice(0, 3); // Börjar på position 0, alltså första bokstaven, och hämta ut fram till och med position 3, alltså 3e bokstaven
-console.log(greeting); // Skriver ut "Hej" i konsolen
-```
-
-1. Skapa en variabel kallad userName, sätt dess värde till `""`, alltså en tom sträng.
-2. Hämta ut de första 3 bokstäverna ur förnamnet och sätt variabeln userName till resultatet från metoden.
-3. Hämta ut de första 4 bokstäverna ur efternamnet och lägg till resultatet från metoden till variabeln userName.
-4. Skriv ut Alfreds användarnamn, skriv det som att skriptet berättar för Alfred vad hans användarnamn är.
-
-<PracticeContainer>
-
-```javascript
-let userName = "";
-userName = firstName.slice(0, 3);
-userName += lastName.slice(0, 4);
-console.log("Ditt användarnamn är: " + userName + ".");
-```
-
-</PracticeContainer>
-
-# Övning 3
-Användarnamnen i vårt system ska bara ha små bokstäver, men eftersom de tar med första bokstäverna i för- och efternamnet så får de alltid med minst 2 stora bokstäver.
-
-Använd metoden `toLowerCase` för att sätta variabeln userName till bara små bokstäver. Skriv metoden innan skriptet skriver ut till konsolen så det som skrivs ut i konsolen är rätt (bara små bokstäver).
-
-<PracticeContainer>
-
-```javascript {diff}
-let userName = "";
-userName = firstName.slice(0, 3);
-userName += lastName.slice(0, 4);
-+ userName = userName.toLowerCase();
-console.log("Ditt användarnamn är: " + userName + ".");
-```
-
-</PracticeContainer>
-
-# Övning 4
-Nu ska skriptet generera ett lösenord. Lösenordet ska bestå av de fyra sista bokstäverna i förnamnet och det aktuella årtalet (tex 2021 om året är 2021 - detta kan du hårdkoda, alltså bara lägga till `"2021"`).
-
-För att få ut de fyra sista siffrorna kan du använda strängmetoden `Slice`. Den använder en eller två positioner för att hämta ut delar av en sträng. Eftersom Slice kan ta in negativa nummer som startposition så kan vi välja bara bokstäver i slutet av en sträng.
-
-1. Skapa en variabel med namnet `password` och sätt dess värde till resultatet av metoden slice som körs på strängen `lastName`. Slice ska hämta ut de fyra sista bokstäverna från lastName.
-2. Lägg till årtalet (till exempel `"2021"`) till variabeln `password`. 
-3. Skriv ut ett meddelande till användaren som säger vad dennes lösenord är.
-
-<PracticeContainer>
-
-```javascript
-let password = lastName.slice(-4);
-password += "2021";
-console.log("Ditt lösenord är " + password);
-```
-
-</PracticeContainer>
-
-# Övning 5
-Nu ska vi låtsas att en användare har skrivit in sitt användarnamn och lösenord, och försöker logga in. Vi behöver kolla mot användarnamnet och lösenordet som vi har sparat (variablerna `userName` och `password`).
-
-1. Skapa två variabler, `inputUserName` och `inputPassword`. Sätt deras värden till rätt användarnamn och lösenord (utifrån vad vi sett tidigare).
-2. I en kontrollsats, kolla om `inputUserName` har samma värde som `userName`.
-3. Gör samma för lösenordet, men lägg den kontrollsatsen inuti kontrollsatsen för användarnamnet.
-4. Skriv ut meddelanden i konsolen för följande scenarion:
-  - Användarnamnet och lösenordet är rätt (inloggningen lyckades)
-  - Användarnamnet är fel
-  - Lösenordet är fel
-5. Testa dina kontrollsatser tills du har testat att alla satser fungerar (alltså att du fått fram alla meddelanden).
+# Övning 2: Delad mening
+Skriv ett skript som låter användaren skriva in en mening och delar sedan den meningen och skriver ut följande:
+- Vartannat ord (börjar på första ordet, hoppar över andra, och så vidare).
+- Hur många ord det är i meningen.
+- Längsta ordet i meningen.
 
 
-# Övning 6
-När en användaren ska skapa ett lösenord så brukar man kräva att lösenordet följer särskilda regler. Vanligt är att man har minst en siffra, en stor och en liten bokstav, och är en viss längd (antal tecken i strängen). Längd är lätt att kolla men de andra kräver något som kallas Regular Expressions, vilket är lite mer avancerade, så i denna övningen ska vi bara kolla längder.
+# Övning 3: AI Guessing Game
+Använd en AI (ChatGPT, Bing Chat, eller liknande) för att generera en javascript-array som innehåller 15 olika ord inom ett visst tema (du väljer tema).
 
-För att kolla längden på en sträng använder man en egenskap som alla strängar i JavaScript har, nämligen length. Det fungerar så här:
+Skriv ett skript som väljer ett av orden ur arrayen och ber användaren gissa det valda ordet.
+Om användaren gissar fel ska skriptet ge en ledtråd och låta användaren gissa igen.
 
-```javascript
-let message = "Hej!";
-console.log(message.length); // Skriver ut 4.
-```
+**En ledtråd kan vara ett av följande;**
+- Antal bokstäver i ordet.
+- Vilken bokstav ordet börjar på.
+- Vilken bokstav ordet slutar på.
+- Ge en bokstav i ordet och dess position (tex för ordet Minecraft skulle det kunna stå "Bokstaven E är fjärde bokstaven").
 
-## Att göra:
-I denna övning ska du ändra lösenordet till något annat (bara sätt om värdet på password), och sedan kolla om det lösenordet är minst 8 tecken långt. Skriv ut ett felmeddelande om lösenordet inte är långt nog.
-
-<PracticeContainer>
-
-```javascript
-password = "hejhej";
-if(password.length < 8) {
-  console.log("Fel! Lösenordet måste vara minst 8 tecken.");
-}
-```
-
-</PracticeContainer>
-
-# Övning 7
-Med metoden `indexOf` kan vi undersöka om ett ord eller tecken finns i en mening. Använd det för att göra följande:
-
-1. Skapa en variabel som håller meningen `"Alfred gillar chokladkaka, glass, och mjölk."`
-2. Skapa en kontrollsats som kollar om meningen ovan innehåller ordet `"godis"`.
-3. Skapa en kontrollsats som kollar om meningen ovan innehåller ordet `"choklad"`.
-4. Skapa en kontrollsats som kollar om meningen ovan innehåller ordet `"mjölkchoklad"`.
-
-För alla kontrollsatser ska det skrivas ut ett meddelande i konsolen som säger om meningen innehåller ordet som du söker efter.
-
-# Övning 8
-Vi har följande variabler:
-
-```javascript
-let errorMessage = "Meddelande: Något gick fel!";
-let warningMessage = "Meddelande: Varning! Något kan gå fel!";
-let noticeMessage = "Meddelande: Allt är lugnt!";
-```
-
-Du ska göra följande:
-1. Ta bort `"Meddelande: "` från alla meddelanden.
-2. Ändra `"!"` till `"."` (utropsteckena till punkter) i alla meddelanden.
-3. Skriv ut alla meddelanden i konsolen.
+**Bonus;** Försök göra så att användaren kan göra ett begränsat antal gissningar, och får en ny typ av ledtråd för varje försök.
