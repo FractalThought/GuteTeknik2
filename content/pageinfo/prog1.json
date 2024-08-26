@@ -60,6 +60,11 @@
           "title": "Övningar",
           "link": "ovningar",
           "type": "exercise"
+        },
+        {
+          "title": "Inputövningar",
+          "link": "input",
+          "type": "exercise"
         }
       ],
       "references": [
