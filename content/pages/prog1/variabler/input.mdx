@@ -1,0 +1,53 @@
+---
+title: "Övningar i att ta input"
+date: "2024-08-26"
+---
+
+För att hämta input från användaren med Deno använder man `prompt()`-funktionen. [Prompt](https://it-ord.idg.se/ord/prompt/) betyder ungefär *förfrågan* eller *fråga* och heter egentligen samma på svenska som engelska; **prompt**.
+
+Prompt pausar ditt skript och låter användaren skriva in något i konsolen. När användaren trycker på Enter-knappen fortsätter skriptet.
+
+För att faktiskt spara vad användaren skrev i konsolen behöver man spara resultatet i en variabel, så här;
+
+```js
+let userInput = prompt();
+```
+
+Du bör skicka med ett meddelande med din prompt så användaren vet vad du frågar efter, och du bör namnge din variabel med vad du förväntar dig att användaren matar in;
+
+```js
+let username = prompt("What is your username?")
+```
+
+Om du vill spara ett nummer ska du dessutom se till att konvertera till en siffra, så här;
+
+```js
+let userAge = Number(prompt("How old are you?"))
+```
+
+Om användaren inte matar in ett nummer blir variabeln satt till `NaN` som betyder *Not a Number*.
+
+# Övningar
+
+För varje övning skapar du ett nytt js-skript.
+
+## 1. Välkommen namn!
+Skriv ett skript som frågar användaren om sitt namn och hälsar dem välkomna. Till exempel, om användaren skriver “Anna”, ska skriptet skriva ut “Hej Anna, välkommen till programmering 1!”.
+
+### Bonus:
+Låt användaren fylla i flera saker efter varandra och svara först när användaren är klar. Till exempel kan du fråga efter namn, ålder, och favoritmat.
+
+## 2. Summan av skillnaden på produktens kvot
+Skriv ett skript som frågar användaren om två tal och beräknar deras summa, skillnad, produkt och kvot. Till exempel, om användaren skriver “5” och “3”, ska skriptet skriva ut “Summan är 8, skillnaden är 2, produkten är 15 och kvoten är 1.6666666666666667”.
+
+## 3. Gissa siffran
+Skriv ett skript som frågar användaren om ett tal mellan 1 och 10 och genererar ett slumpmässigt tal i samma intervall.
+
+Skriptet ska sedan jämföra de två talen och berätta för användaren om de gissade rätt eller fel, och hur nära de var. Till exempel, om användaren skriver “7” och det slumpmässiga talet är “9”, ska programmet skriva ut “Du gissade fel, det rätta talet var 9. Du var 2 enheter ifrån”.
+
+För att slumpa fram en siffra mellan 1 och 10 använder du följande kod:
+
+```js
+let randomNumber = Math.floor(Math.random() * 10 + 1);
+```
+
