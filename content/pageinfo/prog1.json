@@ -48,6 +48,52 @@
       ]
     },
     {
+      "title": "Referenser",
+      "link": "referenser",
+      "pages": [
+        {
+          "title": "Begrepp",
+          "link": "begrepp",
+          "type": "lesson"
+        },
+        {
+          "title": "Problemlösning och felsökning",
+          "link": "problemlosning-och-felsokning",
+          "type": "lesson"
+        },
+        {
+          "title": "Operatorer",
+          "link": "operatorer",
+          "type": "lesson"
+        },
+        {
+          "title": "Operatorer",
+          "link": "operatorer",
+          "type": "lesson"
+        },
+        {
+          "title": "Kodstandard",
+          "link": "kodstandard",
+          "type": "lesson"
+        },
+        {
+          "title": "Random",
+          "link": "random",
+          "type": "lesson"
+        }
+      ],
+      "references": [
+        {
+          "title": "Begrepp",
+          "link": "begrepp"
+        },
+        {
+          "title": "Kodstandard",
+          "link": "kodstandard"
+        }
+      ]
+    },
+    {
       "title": "Variabler",
       "link": "variabler",
       "pages": [
