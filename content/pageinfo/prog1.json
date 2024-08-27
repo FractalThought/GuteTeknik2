@@ -32,20 +32,7 @@
           "type": "project"
         }
       ],
-      "references": [
-        {
-          "title": "Begrepp",
-          "link": "begrepp"
-        },
-        {
-          "title": "Problemlösning och felsökning",
-          "link": "problemlosning-och-felsokning"
-        },
-        {
-          "title": "Operatorer",
-          "link": "operatorer"
-        }
-      ]
+      "references": []
     },
     {
       "title": "Referenser",
@@ -77,16 +64,7 @@
           "type": "lesson"
         }
       ],
-      "references": [
-        {
-          "title": "Begrepp",
-          "link": "begrepp"
-        },
-        {
-          "title": "Kodstandard",
-          "link": "kodstandard"
-        }
-      ]
+      "references": []
     },
     {
       "title": "Variabler",
@@ -108,20 +86,7 @@
           "type": "exercise"
         }
       ],
-      "references": [
-        {
-          "title": "Begrepp",
-          "link": "begrepp"
-        },
-        {
-          "title": "Kodstandard",
-          "link": "kodstandard"
-        },
-        {
-          "title": "Math.Random()",
-          "link": "random"
-        }
-      ]
+      "references": []
     },
     {
       "title": "Kontrollsatser",
@@ -135,6 +100,11 @@
         {
           "title": "Övningar",
           "link": "ovningar",
+          "type": "exercise"
+        },
+        {
+          "title": "Logiska operatorer",
+          "link": "logiska_operatorer",
           "type": "exercise"
         }
       ],

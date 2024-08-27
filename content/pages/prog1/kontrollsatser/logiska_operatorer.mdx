@@ -1,0 +1,34 @@
+---
+title: "Övningar i kontrollsatser"
+date: "2021-08-30"
+---
+
+Gör övningarna i Visual Studio Code. Skapa en ny fil, namnge den *controlExcercises.js* och gör övningarna i den filen.
+
+## Övning 1:
+
+[Hur man använder Confirm i Deno](https://examples.deno.land/prompts)
+
+Skriv ett skript som frågar användaren om de gillar katter och hundar. Använd `confirm` för att få fram true/false. Om användaren gillar både katter och hundar, skriv ut “Du är en djurvän!”. Om användaren gillar antingen katter eller hundar, men inte båda, skriv ut “Du föredrar {djur} över {djur}”. Om användaren inte gillar något av djuren, skriv ut “Du är inte så förtjust i fyrbenta vänner.”
+
+**Använd nästlade kontrollsatser och if/else-satser.**
+
+## Övning 2:
+Gör Övning 1, men med logiska operatorer (&& och ||).
+
+Använd `and` och `or` för att kontrollera svaren.
+
+## Övning 3: Rock, Paper & Scissors
+
+Skriv ett skript som frågarna användaren om denne vill välja Rock, Paper, eller Scissors.
+
+Slumpa fram ett svar från datorn med hjälp av Math.Random (slumpmässigt tal mellan 1 och 3). Översätt detta till antingen Rock, Paper, eller Scissors.
+
+Spara användarens svar och använd följande regler för att bestämma vem som vinner, och skriv sedan ut vem som vinner;
+
+- Rock beats Scissors
+- Scissors beats Paper
+- Paper beats Rock
+- Same choice ends in a draws
+
+Notera: Du kan jämföra två strängar med **==**, till exempel så här; `userInput == "Rocks"`, men tänk på att det är känsligt för stora och små bokstäver (case sensitive), så `"rocks"` är inte samma som `"Rocks"`.
