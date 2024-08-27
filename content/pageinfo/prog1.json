@@ -111,23 +111,6 @@
       "references": []
     },
     {
-      "title": "Strängar",
-      "link": "strängar",
-      "pages": [
-        {
-          "title": "Strängmanipulation",
-          "link": "intro",
-          "type": "lesson"
-        },
-        {
-          "title": "Övningar",
-          "link": "ovningar",
-          "type": "exercise"
-        }
-      ],
-      "references": []
-    },
-    {
       "title": "Iterationssatser",
       "link": "iterationssatser",
       "pages": [
@@ -144,6 +127,28 @@
         {
           "title": "For-loopar",
           "link": "for",
+          "type": "lesson"
+        },
+        {
+          "title": "Övningar",
+          "link": "ovningar",
+          "type": "exercise"
+        },
+        {
+          "title": "For- och Break-övningar",
+          "link": "ovningar_for_break",
+          "type": "exercise"
+        }
+      ],
+      "references": []
+    },
+    {
+      "title": "Strängar",
+      "link": "strängar",
+      "pages": [
+        {
+          "title": "Strängmanipulation",
+          "link": "intro",
           "type": "lesson"
         },
         {
