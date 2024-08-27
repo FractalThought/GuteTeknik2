@@ -108,12 +108,7 @@
           "type": "exercise"
         }
       ],
-      "references": [
-        {
-          "title": "Begrepp",
-          "link": "begrepp"
-        }
-      ]
+      "references": []
     },
     {
       "title": "Strängar",
@@ -130,12 +125,7 @@
           "type": "exercise"
         }
       ],
-      "references": [
-        {
-          "title": "Begrepp",
-          "link": "begrepp"
-        }
-      ]
+      "references": []
     },
     {
       "title": "Iterationssatser",
@@ -162,12 +152,7 @@
           "type": "exercise"
         }
       ],
-      "references": [
-        {
-          "title": "Begrepp",
-          "link": "begrepp"
-        }
-      ]
+      "references": []
     },
     {
       "title": "Arrayer",
@@ -189,12 +174,7 @@
           "type": "exercise"
         }
       ],
-      "references": [
-        {
-          "title": "Begrepp",
-          "link": "begrepp"
-        }
-      ]
+      "references": []
     },
     {
       "title": "Funktioner",
@@ -206,12 +186,7 @@
           "type": "lesson"
         }
       ],
-      "references": [
-        {
-          "title": "Begrepp",
-          "link": "begrepp"
-        }
-      ]
+      "references": []
     },
     {
       "title": "Objekt",
@@ -228,12 +203,7 @@
           "type": "project"
         }
       ],
-      "references": [
-        {
-          "title": "Begrepp",
-          "link": "begrepp"
-        }
-      ]
+      "references": []
     },
     {
       "title": "JS på Webben",
@@ -255,24 +225,7 @@
           "type": "lesson"
         }
       ],
-      "references": [
-        {
-          "title": "Begrepp",
-          "link": "begrepp"
-        },
-        {
-          "title": "Kodstandard",
-          "link": "kodstandard"
-        },
-        {
-          "title": "Problemlösning och felsökning",
-          "link": "problemlosning-och-felsokning"
-        },
-        {
-          "title": "Pseudokod",
-          "link": "pseudokod"
-        }
-      ]
+      "references": []
     },
     {
       "title": "Planering",
@@ -289,12 +242,7 @@
           "type": "exercise"
         }
       ],
-      "references": [
-        {
-          "title": "Begrepp",
-          "link": "begrepp"
-        }
-      ]
+      "references": []
     },
     {
       "title": "Unity",
@@ -316,12 +264,7 @@
           "type": "project"
         }
       ],
-      "references": [
-        {
-          "title": "Begrepp",
-          "link": "begrepp"
-        }
-      ]
+      "references": []
     },
     {
       "title": "Uppgifter",
@@ -363,12 +306,7 @@
           "type": "project"
         }
       ],
-      "references": [
-        {
-          "title": "Begrepp",
-          "link": "begrepp"
-        }
-      ]
+      "references": []
     }
   ]
 }
