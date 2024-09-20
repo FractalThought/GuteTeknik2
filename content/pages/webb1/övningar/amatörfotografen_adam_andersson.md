@@ -10,9 +10,9 @@ Minst ska du visa att du kan:
 - Använda HTML-taggar på ett klokt sätt.
 - Länka ihop CSS-regler (selektorer) med dina HTML-taggar.
 - Använda Class och ID där det passar.
-- Använda någon del av Flexbox.
+- Skapa hemsidans layout med CSS Grid.
 
-Inlämning sker via Quiculum.
+Inlämning sker via din inlämningsfolder i ditt Obsidian Vault. Det som ska lämnas in är ett HTML-dokument.
 
 # Bedömning
 
@@ -103,8 +103,3 @@ Festmiddag: [https://unsplash.com/photos/W3SEyZODn8U](https://unsplash.com/photo
 
 Mingelbild: [https://unsplash.com/photos/ZDN-G1xBWHY](https://unsplash.com/photos/ZDN-G1xBWHY)
 
-Samtliga bilder är tillgängliga via [https://source.unsplash.com/](https://source.unsplash.com/).
-
-För att använda en bild använder du [https://source.unsplash.com/](https://source.unsplash.com/){PHOTO ID}/{WIDTHxHEIGHT} där {PHOTO ID} är det som står i URLen till bilden efter sista snedstrecket, och {WIDTHxHEIGHT} är höjden och bredden på bilden.
-
-Till exempel så här, för att få fram bilden på Adam: [https://source.unsplash.com/FFHvNDCj3vI/350x250](https://source.unsplash.com/FFHvNDCj3vI/350x250)
