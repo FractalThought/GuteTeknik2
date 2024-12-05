@@ -44,7 +44,7 @@
     "gatsby-transformer-json": "^3.13.0",
     "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^3.13.0",
-    "jpeg-js": "^0.4.3",
+    "jpeg-js": "^0.4.4",
     "node-sass": "^7.0.0",
     "postcss": "^8.3.6",
     "react": "^16.14.0",
